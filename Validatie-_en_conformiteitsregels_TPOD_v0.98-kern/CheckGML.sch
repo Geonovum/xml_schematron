@@ -7,47 +7,18 @@
     xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
     xmlns:owo="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
     xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-    xmlns:man="http://www.overheid.nl/2017/lvbb"
-    xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/"
     >
     <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
         prefix="sl"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/regels/v20190901" prefix="r"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" prefix="owo"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/owobject/v20190709" prefix="ow"/>
-    <sch:ns uri="http://www.overheid.nl/2017/lvbb" prefix="man"/>
-    <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
 
     <!--    <sch:phase id="critical">
         <sch:active pattern="Regeltekstnummers_behorend_bij_RegeltekstObject"/>
     </sch:phase>
 -->
-<!--    <sch:let name="Besluit" value=""/>-->
-
-    <sch:pattern id="TPOD930">
-        <!-- find all gio's -->
-        <sch:rule context="/">
-            <xsl:variable name="xmlDocumenten" select="document('manifest.xml')//man:manifest/man:bestand/man:bestandsnaam"/>
-            <xsl:for-each select="$xmlDocumenten">
-                <sch:assert test="1=0">
-                    <sch:value-of select="string('test')" />
-                </sch:assert>
-            </xsl:for-each>
-            <xsl:for-each select="$xmlDocumenten">
-                <!--<xsl:variable name="filename" select="."/>
-                <xsl:variable name="gioDoc" select="document($filename)//stop:AanleveringGIO" />
-                <sch:assert test="1=0">
-                    <xsl:value-of select="string('.')" />
-                </sch:assert>
-                                <xsl:if test="$gioDoc">
-                    <sch:assert test="1=0">
-                        <xsl:value-of select="$gioDoc" />
-                    </sch:assert>
-                </xsl:if>
--->            </xsl:for-each>
-        </sch:rule>
-
-    </sch:pattern>
+    <!--    <sch:let name="Besluit" value=""/>-->
 
 
     <sch:pattern id="Regeltekstnummers_behorend_bij_RegeltekstObject">
