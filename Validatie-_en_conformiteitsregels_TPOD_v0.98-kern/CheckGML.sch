@@ -25,7 +25,9 @@
         <sch:rule context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
             <sch:let name="geometrie" value="tokenize(*/@srsName, ':')[last()]"/>
             <xsl:variable name="s" select="*//gml:posList/text()"/>
-            <xsl:variable name="coordinaten" select="tokenize(normalize-space($s),' ')"/>
+            <xsl:variable name="coordinaten" select="tokenize(normalize-space($s),' ')" as="xs:string*"/>
+            <sch:report test="true()"><sch:value-of select="$coordinaten"/></sch:report>
+            <sch:report test="true()"><sch:value-of select="$coordinaten[last()]"/></sch:report>
             <xsl:variable name="offendingCoordinates">
                 <xsl:for-each select="$coordinaten">
                     <xsl:variable name="cell" select="current()"/>
