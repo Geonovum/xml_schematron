@@ -7,9 +7,8 @@
     xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
     xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
     xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
-    xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/"
-    >
-    
+    xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/">
+
     <xsl:output encoding="UTF-8"/>
 
     <xsl:template match="/">
@@ -67,26 +66,24 @@
                 </xsl:element>
             </owBestand>
         </xsl:variable>
-        <xsl:call-template name="check_of_RegelTekstId_naar_bestaande_regeltekst_verwijst">
-            <xsl:with-param name="rt" select="$owBestand"/>
-        </xsl:call-template>
         <xsl:result-document href="OwTotaal.xml">
             <xsl:copy-of select="$owBestand"/>
         </xsl:result-document>
         <xsl:variable name="GIO">
-            <AanleveringGIO
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            <AanleveringGIO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 xmlns:gml="http://www.opengis.net/gml/3.2"
                 xmlns="https://standaarden.overheid.nl/lvbb/stop/"
-                xsi:schemaLocation="https://standaarden.overheid.nl/lvbb/stop/ https://raw.githubusercontent.com/Geonovum/xml_op_xsd_0.98.3-kern/master/lvbb/LVBB-stop.xsd" 
+                xsi:schemaLocation="https://standaarden.overheid.nl/lvbb/stop/ https://raw.githubusercontent.com/Geonovum/xml_op_xsd_0.98.3-kern/master/lvbb/LVBB-stop.xsd"
                 schemaversie="0.98.3-kern">
                 <xsl:variable name="xmlDocumenten"
                     select="document('manifest.xml')//lvbb:manifest/lvbb:bestand/lvbb:bestandsnaam"/>
                 <xsl:for-each select="$xmlDocumenten">
                     <xsl:variable name="filename" select="."/>
                     <xsl:if test="document($filename)//stop:AanleveringGIO">
-                        <xsl:copy-of select="document($filename)//stop:AanleveringGIO/stop:InformatieObjectVersie"/>
+                        <xsl:copy-of
+                            select="document($filename)//stop:AanleveringGIO/stop:InformatieObjectVersie"
+                        />
                     </xsl:if>
                 </xsl:for-each>
             </AanleveringGIO>
@@ -95,17 +92,47 @@
             <xsl:copy-of select="$GIO"/>
         </xsl:result-document>
         <xsl:variable name="GML">
-            <geo:FeatureCollectionGeometrie
-                xmlns:gml="http://www.opengis.net/gml/3.2"
+            <geo:FeatureCollectionGeometrie xmlns:gml="http://www.opengis.net/gml/3.2"
                 xmlns:geo="http://www.geostandaarden.nl/basisgeometrie/v20190901"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/geo/ https://raw.githubusercontent.com/Geonovum/xml_op_xsd_0.98.3-kern/master/stop/Basisgeometrie.xsd" gml:id="main" 
-                schemaversie="0.98.3-kern">
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/geo/ https://raw.githubusercontent.com/Geonovum/xml_op_xsd_0.98.3-kern/master/stop/Basisgeometrie.xsd"
+                gml:id="main" schemaversie="0.98.3-kern">
                 <xsl:variable name="xmlDocumenten"
                     select="document('manifest.xml')//lvbb:manifest/lvbb:bestand/lvbb:bestandsnaam"/>
                 <xsl:for-each select="$xmlDocumenten">
                     <xsl:variable name="filename" select="."/>
                     <xsl:if test="document($filename)//geo:FeatureCollectionGeometrie">
-                        <xsl:copy-of select="document($filename)//geo:FeatureCollectionGeometrie/geo:featureMember"/>
+                        <xsl:for-each
+                            select="document($filename)//geo:FeatureCollectionGeometrie/geo:featureMember">
+                            <xsl:element name="geo:featureMember">
+                                <xsl:element name="geo:Geometrie">
+                                    <xsl:copy-of select="*//geo:id"/>
+                                    <xsl:element name="geo:geometrie">
+                                        <xsl:for-each select="*//geo:geometrie/*">
+                                            <xsl:for-each select="descendant::gml:posList">
+                                                <xsl:variable name="geometries" select="ancestor::*/@srsName"/>
+                                                <xsl:variable name="ids" select="ancestor::*/@gml:id" as="xs:string*"/>
+                                                <xsl:variable name="geometrie" select="tokenize($geometries[1], ':')[last()]"/>
+                                                <xsl:element name="posListArray">
+                                                    <xsl:attribute name="geometrie" select="$geometrie"></xsl:attribute>
+                                                    <xsl:attribute name="id" select="$ids[last()]"></xsl:attribute>
+                                                    <xsl:attribute name="bestand" select="$filename"></xsl:attribute>
+                                                  <xsl:variable name="coordinaten"
+                                                  select="tokenize(normalize-space(text()), ' ')"
+                                                  as="xs:string*"/>
+                                                  <xsl:for-each select="$coordinaten">
+                                                    <xsl:element name="pos">
+                                                        <xsl:value-of select="."/>
+                                                    </xsl:element>
+                                                  </xsl:for-each>
+                                                </xsl:element>
+                                            </xsl:for-each>
+                                            <xsl:copy-of select="."/>
+                                        </xsl:for-each>
+                                    </xsl:element>
+                                </xsl:element>
+                            </xsl:element>
+                        </xsl:for-each>
                     </xsl:if>
                 </xsl:for-each>
             </geo:FeatureCollectionGeometrie>
@@ -113,22 +140,6 @@
         <xsl:result-document href="GMLTotaal.xml">
             <xsl:copy-of select="$GML"/>
         </xsl:result-document>
-    </xsl:template>
-
-    <xsl:template name="check_of_RegelTekstId_naar_bestaande_regeltekst_verwijst"
-        xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901">
-        <xsl:param name="rt"/>
-        <xsl:variable name="regeltekstIds">
-            <xsl:for-each select="$rt/node()/sl:standBestand/sl:stand/owo:owObject/r:Regeltekst/r:identificatie">
-                <xsl:value-of select="."/>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:for-each select="$rt/node()/sl:standBestand/sl:stand/owo:owObject">
-            <xsl:variable name="regelTekstAttribuut" select="*/@ow:regeltekstId"/>
-            <xsl:if test="not(contains($regeltekstIds,*/@ow:regeltekstId))">
-                RegeltekstId in <xsl:value-of select="*/name()"/>  (  <xsl:value-of select="*/@ow:regeltekstId"/> ) verwijst niet naar een geldige regeltekst.
-            </xsl:if>
-        </xsl:for-each>
     </xsl:template>
 
 </xsl:stylesheet>
