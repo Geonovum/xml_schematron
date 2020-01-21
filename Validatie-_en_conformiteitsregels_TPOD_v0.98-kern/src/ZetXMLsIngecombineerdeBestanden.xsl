@@ -135,107 +135,91 @@
                             </xsl:for-each>
                         </xsl:element>
                     </xsl:element>
-                    <xsl:variable name="activiteitenLijst">
+<!--                    <xsl:variable name="activiteitenLijst">
                         <xsl:for-each select="$documents">
                             <xsl:variable name="filename" select="."/>
                             <xsl:for-each
                                 select="document($filename)//sl:standBestand/sl:stand/owo:owObject/rol:Activiteit">
                                 <xsl:element name="activiteit">
                                     <xsl:value-of select="rol:identificatie"/>
-                                    <!--                                    <xsl:attribute name="boven">
-                                        <xsl:value-of
-                                            select="/rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"
-                                        />
-                                    </xsl:attribute>
--->
                                 </xsl:element>
                             </xsl:for-each>
                         </xsl:for-each>
                     </xsl:variable>
-                    <xsl:element name="bovenliggendeActiviteitenLijst">
+                    <xsl:element name="activiteitenLijst">
                         <xsl:for-each select="$documents">
                             <xsl:variable name="filename" select="."/>
                             <xsl:for-each
                                 select="document($filename)//sl:standBestand/sl:stand/owo:owObject/rol:Activiteit">
-                                <xsl:variable name="bLAct1"
+                                <xsl:variable name="bovenLiggend"
                                     select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                                <xsl:variable name="id" select="rol:identificatie"/>
-                                <xsl:if test="contains($activiteitenLijst, $bLAct1)">
-                                    <xsl:element name="parent">
-                                        <xsl:attribute name="id" select="$bLAct1"/>
-                                        <xsl:element name="child">
-                                            <xsl:attribute name="id" select="$id"/>
-                                            <xsl:for-each
-                                                select="document($filename)//sl:standBestand/sl:stand/owo:owObject/rol:Activiteit">
-                                                <xsl:variable name="oLAct1"
-                                                  select="rol:identificatie"/>
-                                                <xsl:variable name="bLAct2"
-                                                  select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                                                <xsl:if test="$bLAct2 = $id">
-                                                  <xsl:element name="activiteit">
-                                                      <xsl:attribute name="id" select="$oLAct1"/>
-                                                      <xsl:for-each
-                                                          select="document($filename)//sl:standBestand/sl:stand/owo:owObject/rol:Activiteit">
-                                                          <xsl:variable name="oLAct2"
-                                                              select="rol:identificatie"/>
-                                                          <xsl:variable name="bLAct3"
-                                                              select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                                                          <xsl:if test="$bLAct3 = $oLAct1">
-                                                              <xsl:element name="activiteit">
-                                                                  <xsl:attribute name="id" select="$oLAct2"/>
-                                                              </xsl:element>
-                                                          </xsl:if>
-                                                      </xsl:for-each>
-                                                  </xsl:element>
-                                                </xsl:if>
-                                            </xsl:for-each>
-                                        </xsl:element>
+                                <xsl:variable name="identificatie" select="rol:identificatie"/>
+                                <xsl:if test="contains($activiteitenLijst, $bovenLiggend)">
+                                    <xsl:element name="activiteit">
+                                        <xsl:attribute name="bovenLiggend" select="$bovenLiggend"/>
+                                        <xsl:attribute name="id" select="$identificatie"/>
+                                        <xsl:variable name="i1" select="$identificatie"/>
+                                        <xsl:for-each
+                                            select="document($filename)//sl:standBestand/sl:stand/owo:owObject/rol:Activiteit">
+                                            <xsl:if
+                                                test="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href = $i1">
+                                                <xsl:variable name="i2" select="rol:identificatie"/>
+                                                <xsl:choose>
+                                                    <xsl:when test="$identificatie = $i2">
+                                                        <xsl:element name="ERROR"><xsl:value-of select="$i2"/></xsl:element>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <xsl:element name="onderLiggend">
+                                                            <xsl:value-of select="$i2"/>
+                                                        </xsl:element>
+                                                        <xsl:for-each
+                                                            select="document($filename)//sl:standBestand/sl:stand/owo:owObject/rol:Activiteit">
+                                                            <xsl:if
+                                                                test="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href = $i2">
+                                                                <xsl:variable name="i3" select="rol:identificatie"/>
+                                                                <xsl:choose>
+                                                                    <xsl:when test="$identificatie = $i3">
+                                                                        <xsl:element name="ERROR">
+                                                                            <xsl:value-of select="$i3"/>
+                                                                        </xsl:element>
+                                                                    </xsl:when>
+                                                                    <xsl:otherwise>
+                                                                        <xsl:element name="onderLiggend">
+                                                                            <xsl:value-of select="$i3"/>
+                                                                        </xsl:element>
+                                                                        <xsl:for-each
+                                                                            select="document($filename)//sl:standBestand/sl:stand/owo:owObject/rol:Activiteit">
+                                                                            <xsl:if
+                                                                                test="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href = $i3">
+                                                                                <xsl:variable name="i4" select="rol:identificatie"/>
+                                                                                <xsl:choose>
+                                                                                    <xsl:when test="$identificatie = $i4">
+                                                                                        <xsl:element name="ERROR">
+                                                                                            <xsl:value-of select="$i4"/>
+                                                                                        </xsl:element>
+                                                                                    </xsl:when>
+                                                                                    <xsl:otherwise>
+                                                                                        <xsl:element name="onderLiggend">
+                                                                                            <xsl:value-of select="$i4"/>
+                                                                                        </xsl:element>
+                                                                                    </xsl:otherwise>
+                                                                                </xsl:choose>
+                                                                            </xsl:if>
+                                                                        </xsl:for-each>
+                                                                    </xsl:otherwise>
+                                                                </xsl:choose>
+                                                            </xsl:if>
+                                                        </xsl:for-each>
+                                                    </xsl:otherwise>
+                                                </xsl:choose>
+                                            </xsl:if>
+                                        </xsl:for-each>
                                     </xsl:element>
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:for-each>
                     </xsl:element>
-                    <xsl:element name="activiteitenHierarchie"> </xsl:element>
-                    <!--                    <xsl:element name="activiteitenHierarchie">
-                        <xsl:for-each select="$documents">
-                            <xsl:variable name="filename" select="."/>
-                            <xsl:for-each
-                                select="document($filename)//sl:standBestand/sl:stand/owo:owObject/rol:Activiteit/rol:identificatie">
-                                <xsl:variable name="activiteit">
-                                    <xsl:value-of select="./text()"/>
-                                </xsl:variable>
-                                <xsl:choose>
-                                    <xsl:when test="$activiteitenLijst[./text()]">
-                                        <xsl:value-of select="concat(' contains: ', ./text())"/>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:value-of select="concat(' not contains: ', ./text())"/>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </xsl:for-each>
-                            <xsl:comment>comment</xsl:comment>
-                            <xsl:for-each
-                                select="document($filename)//sl:standBestand/sl:stand/owo:owObject/rol:Activiteit/rol:bovenliggendeActiviteit">
-                                <xsl:for-each
-                                    select="rol-ref:ActiviteitRef[@xlink:href = $activiteitenLijst/text()]">
-                                    <xsl:value-of
-                                        select="concat(' contains: ', rol-ref:ActiviteitRef[@xlink:href]/text())"
-                                    />
-                                </xsl:for-each>
-                                <!-\-                                <xsl:choose>
-                                    <xsl:when test="$activiteitenLijst[rol-ref:ActiviteitRef[@xlink:href]/text()]">
-                                        <xsl:value-of select="concat(' contains: ',rol-ref:ActiviteitRef[@xlink:href]/text())"/>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:value-of select="concat(' not contains: ',rol-ref:ActiviteitRef[@xlink:href]/text())"/>
-                                    </xsl:otherwise>
-                                </xsl:choose>
--\->
-                            </xsl:for-each>
-                        </xsl:for-each>
-                    </xsl:element>
--->
-                    <xsl:for-each select="$documents">
+-->                    <xsl:for-each select="$documents">
                         <xsl:variable name="filename" select="."/>
                         <xsl:for-each select="document($filename)//sl:standBestand/sl:stand">
                             <xsl:copy-of select="."/>
@@ -248,10 +232,5 @@
             <xsl:copy-of select="$owBestand"/>
         </xsl:result-document>
     </xsl:template>
-
-    <xsl:function name="foo:vindtKinderen">
-        <xsl:param name="topElements" as="xs:string*"/>
-        <xsl:param name="activiteiten" as="xs:string"/>
-    </xsl:function>
 
 </xsl:stylesheet>

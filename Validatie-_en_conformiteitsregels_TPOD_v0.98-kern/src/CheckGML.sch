@@ -26,20 +26,22 @@
             <sch:let name="waarde" value="string(.)"/>
             <sch:assert test="string-length(substring-after(string(.),'.')) &lt; 4">waarde=<sch:value-of select="string(.)"/>, id=<sch:value-of select="$id"/>, bestand=<sch:value-of select="parent::*/@bestand"/>:ZH:TP0D930:Indien
                 gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde
-                maximaal drie decimalen achter de komma mag bevatten.:OP/OW:T:ja:ja:ja:jja:ja:ja:</sch:assert>
+                maximaal drie decimalen achter de komma mag bevatten.:OP/OW:T</sch:assert>
         </sch:rule>
 
         <sch:rule context="*//geo:geometrie/posListArray[@geometrie eq '4258']/pos">
             <sch:let name="id" value="parent::*/@id"/>
             <sch:let name="waarde" value="string(.)"/>
             <sch:assert test="string-length(substring-after(string(.),'.')) &lt; 9">waarde=<sch:value-of select="string(.)"/>, id=<sch:value-of select="$id"/>, bestand=<sch:value-of select="parent::*/@bestand"/>:ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de
-                waarde maximaal acht decimalen achter de komma mag bevatten.:OP/OW:T:ja:ja:ja:jja:ja:ja:</sch:assert>
+                waarde maximaal acht decimalen achter de komma mag bevatten.:OP/OW:T</sch:assert>
         </sch:rule>
-        
+    </sch:pattern>
+    
+    <sch:pattern id="Controleren_aantal_CRS">    
         <sch:rule context="*//geo:geometrie">
             <sch:let name="noCrs" value="count(descendant-or-self::*/@srsName)"></sch:let>
             <sch:assert test="$noCrs=1">Aantal=<sch:value-of select="$noCrs"/>, id=<sch:value-of select="parent::*/geo:id"/>, bestand=<sch:value-of select="posListArray/@bestand"/>:ZH:TP0D930: Een geometrie moet zijn opgebouwd middels één coordinate reference
-                system (crs): EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89).:OP/OW:T:ja:ja:ja:jja:ja:ja:</sch:assert>
+                system (crs): EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89).:OP/OW:T</sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>

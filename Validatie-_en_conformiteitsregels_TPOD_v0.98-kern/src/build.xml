@@ -2,45 +2,60 @@
 <project basedir="." name="main">
     
     <target name="clean">
-        <delete file="OwTotaal.xml"></delete>
-        <delete file="GMLTotaal.xml"></delete>
-        <delete file="GIOTotaal.xml"></delete>
+        <delete file="../OwTotaal.xml"></delete>
+        <delete file="../GMLTotaal.xml"></delete>
+        <delete file="../GIOTotaal.xml"></delete>
     </target>
     
     <target name="prepare">
+        <echo message="${toString:classpath}"/>
         <xslt
             style="ZetXMLsIngecombineerdeBestanden.xsl"
             destdir="."
+            excludes="* saxon9.9.1.5/* *.html *.xml"
+            classpath="saxon9.9.1.5/saxon9he.jar"
             >
         </xslt>
-        <classpath location="../lib/saxon9.9.1.5/*.jar" />
     </target>
     
     <target name="validate">
-        <schematron schema="sch/sample.sch" failonerror="false">
-        </schematron>
+        <antcall target="validateOW"></antcall>
+        <antcall target="validateGIO"></antcall>
+        <antcall target="validateGML"></antcall>
     </target>
     
     <target name="validateOW">
-        <schematron schema="CheckOw.sch" failonerror="false">
-            <fileset includes="OwTotaal.xml" />
-        </schematron>
+        <taskdef name="schematron"
+            classname="com.schematron.ant.SchematronTask"
+            classpath="*.jar"
+        />
+        <schematron schema="CheckOw.sch" failonerror="false"
+            file="../OwTotaal.xml" queryLanguageBinding="xslt2"/>
     </target>
     
     <target name="validateGIO">
-        <schematron schema="CheckGIO.sch" failonerror="false">
-            <fileset includes="GIOTotaal.xml" />
-        </schematron>
+        <taskdef name="schematron"
+            classname="com.schematron.ant.SchematronTask"
+            classpath="*.jar"
+        />
+        <schematron schema="CheckGIO.sch" failonerror="false"
+            file="../GIOTotaal.xml" queryLanguageBinding="xslt2"/>
     </target>
     
     <target name="validateGML">
-        <schematron schema="CheckGML.sch" failonerror="false">
-            <fileset includes="GMLTotaal.xml" />
-        </schematron>
+        <taskdef name="schematron"
+            classname="com.schematron.ant.SchematronTask"
+            classpath="*.jar"
+        />
+        <schematron schema="CheckGML.sch" failonerror="false"
+            file="../GMLTotaal.xml" queryLanguageBinding="xslt2"/>
+
     </target>
     
     <target name="all">
         <antcall target="prepare"></antcall>
+        <antcall target="validate"></antcall>
+        <antcall target="clean"></antcall>
     </target>
     
 </project>
