@@ -9,7 +9,9 @@
     xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
     xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
     xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:foo="http://whatever"
+    >
 
     <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
         prefix="sl"/>
@@ -17,15 +19,12 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" prefix="owo"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/owobject/v20190709" prefix="ow"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901" prefix="rol"/>
-
-    <!--    <sch:phase id="critical">
-        <sch:active pattern="Regeltekstnummers_behorend_bij_RegeltekstObject"/>
-    </sch:phase>
--->
-    <!--    <sch:let name="Besluit" value=""/>-->
-
+    <sch:ns uri="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709" prefix="rol-ref"/>
+    <sch:ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
+    <sch:ns uri="http://whatever" prefix="foo"/>
 
     <sch:pattern id="Regeltekstnummers_behorend_bij_RegeltekstObject">
+        <!-- Controleren of OwObjecten een geldige regelTekstId verwijzing hebben. -->
         <sch:rule context="/owo:owBestand/sl:standBestand/sl:stand/owo:owObject/*">
             <sch:let name="regeltekstId" value="@ow:regeltekstId"/>
             <sch:let name="itemname" value="./name()"/>
@@ -43,16 +42,19 @@
 
     <sch:pattern id="bovenliggendeActiviteitCheck">
         <sch:rule context="/owo:owBestand/sl:standBestand">
+            <!-- de activiteitenlijst bevat alle activiteiten ids -->
             <xsl:variable name="activiteitenLijst">
                 <xsl:for-each select="sl:stand/owo:owObject/rol:Activiteit">
                     <xsl:value-of select="rol:identificatie"/>
                 </xsl:for-each>
             </xsl:variable>
+            <!-- Uiteindelijk bevatten de offendingIds activiteiten die circulair over andere activiteiten naar zichzelf verwijzen -->
             <xsl:variable name="offendingIds">
                 <xsl:for-each select="sl:stand/owo:owObject/rol:Activiteit">
                     <xsl:variable name="bovenLiggend"
                         select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
                     <xsl:variable name="identificatie" select="rol:identificatie"/>
+                    <!-- hier worden de activiteiten uitgefilterd waarvan de bovenliggende activiteiten in de functionele structuur zitten -->
                     <xsl:if test="contains($activiteitenLijst, $bovenLiggend)">
                         <xsl:variable name="i1" select="$identificatie"/>
                         <xsl:for-each select="../../../sl:stand/owo:owObject/rol:Activiteit">
@@ -89,7 +91,34 @@
             <sch:assert test="string-length($offendingIds)=0">Activiteit-ids: <sch:value-of select="$offendingIds"/>: ZH:TP0D930: Een bovenliggende activiteit mag
                       niet naar een activiteit verwijzen die lager in de
               hiërarchie ligt.</sch:assert>
+            <!-- Omdat de offendingIds circuliaire verwijzingen zijn worden ze niet gebruikt bij de volgende test waarbij gekeken wordt of iedere activiteit
+            uiteindelijk bij een functionele activiteit uitkomt -->
+            <xsl:for-each select="../../../sl:stand/owo:owObject/rol:Activiteit">
+                <xsl:value-of select="foo:recursiefGaNaarFunctioneleTop($activiteitenLijst, $offendingIds, ./node())"/>
+            </xsl:for-each>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:recursiefGaNaarFunctioneleTop">
+        <xsl:param name="activiteitenLijst" as="xs:string*"></xsl:param>
+        <xsl:param name="offendingIds" as="xs:string*"></xsl:param>
+        <xsl:param name="startNode" as="node()"/>
+        <xsl:variable name="identificatie" select="startNode//rol:identificatie"/>
+        <xsl:variable name="bovenLiggend" select="startNode//rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+        <xsl:if test="not(contains($offendingIds, $identificatie)) and not(contains($offendingIds, $bovenLiggend))">
+        <xsl:choose>
+            <xsl:when test="contains($activiteitenLijst, $bovenLiggend)">
+                <xsl:for-each select="startNode">
+                    <xsl:if test="rol:identificatie = $bovenLiggend">
+                        <xsl:value-of select="foo:recursiefGaNaarFunctioneleTop($activiteitenLijst, $offendingIds, startNode)"/>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="true()" />
+            </xsl:otherwise>
+        </xsl:choose>
+        </xsl:if>
+    </xsl:function>
 
 </sch:schema>
