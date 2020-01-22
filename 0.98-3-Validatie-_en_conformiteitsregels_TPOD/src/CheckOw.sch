@@ -21,7 +21,35 @@
     <sch:ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
     <sch:ns uri="http://whatever" prefix="foo"/>
     
-    <sch:pattern id="Regeltekstnummers_behorend_bij_RegeltekstObject">
+    <sch:pattern id="TPOD1650">
+        <sch:rule context="/owo:owBestand/sl:standBestand/sl:stand/owo:owObject/rol:Omgevingswaarde">
+            <sch:assert test="(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde or rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde) and 
+                not(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde and rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"> H:TPOD1650: 
+                Het attribuut 'normwaarde' moet bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde'.
+                </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+
+    <sch:pattern id="TPOD1630">
+        <sch:rule context="/owo:owBestand/sl:standBestand/sl:stand/owo:owObject/r:Instructieregel">
+            <sch:assert test="(r:instructieregelInstrument or r:instructieregelTaakuitoefening) and 
+                not(r:instructieregelInstrument and r:instructieregelTaakuitoefening)"> H:TPOD1630: 
+                Het attribuut 'instructieregelTaakuitoefening' binnen het object 'Instructieregel' is verplicht wanneer Instructieregel gaat over de uitoefening van een taak.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1670">
+        <sch:rule context="/owo:owBestand/sl:standBestand/sl:stand/owo:owObject/r:RegelVoorIedereen">
+            <sch:assert test="  
+                (r:activiteitaanduiding) or
+                (not(r:activiteitaanduiding) and not(r:activiteitregelkwalificatie))"> H:TPOD1670: 
+                Activiteitregelkwalificatie is alleen te gebruiken wanneer het object ‘Regel voor iedereen’ is geannoteerd met Activiteit.
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+
+    <sch:pattern id="Regeltekst_ids">
         <!-- Controleren of OwObjecten een geldige regelTekstId verwijzing hebben. -->
         <sch:rule context="/owo:owBestand/sl:standBestand/sl:stand/owo:owObject/*">
             <sch:let name="regeltekstId" value="@ow:regeltekstId"/>
@@ -38,10 +66,13 @@
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern id="bovenliggendeActiviteitCheck">
-        <!-- Er wordt uitgegaan van een maximale diepte van Ow-Activiteiten-hierarchie binnen een besluit context van 6 lagen.
+    <sch:pattern id="TPOD1700_TPOD1710">
+        <!-- Er wordt uitgegaan van een maximale diepte van Ow-Activiteiten-hierarchie binnen een besluit context van 6 lagen (in werkelijkheid komen er
+            in een OW-set maar enkele lagen van hierarchie voor voordat er naar een functionele structuur wordt verwezen).
+            
+            Waarom niet in een functie?
             Dit kan eventueel ook binnen een recursieve functie worden gedaan, maar dan moet er worden gecontroleerd op circulaire structuren, 
-            dat veroorzaakt extra code, binnen schematron een ingewikkeld algoritme, voor latere optimalisatie bewaren.
+            dat veroorzaakt extra code, binnen schematron een ingewikkeld algoritme, de functie kan in latere optimalisatie worden geschreven.
         -->
         <sch:rule context="/owo:owBestand/sl:standBestand">
             <!-- de activiteitenlijst bevat alle activiteiten ids -->
@@ -79,7 +110,7 @@
                                                 test="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href = $i3">
                                                 <xsl:variable name="i4" select="rol:identificatie"/>
                                                 <xsl:if test="$identificatie = $i4">
-                                                  <xsl:value-of select="concat($i4, ', ')"/>
+                                                    <xsl:value-of select="concat($i4, ', ')"/>
                                                 </xsl:if>
                                                 <xsl:for-each
                                                     select="../../../sl:stand/owo:owObject/rol:Activiteit">
@@ -110,86 +141,93 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <sch:assert test="string-length($circulaireActivititeiten) = 0">Activiteit-ids:
-                    <sch:value-of select="$circulaireActivititeiten"/>: ZH:TP0D930: Een
-                bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de
-                hiërarchie ligt.</sch:assert>
             <!-- Omdat de offendingIds circuliaire verwijzingen zijn worden ze niet gebruikt bij de volgende test waarbij gekeken wordt of iedere activiteit
             uiteindelijk bij een functionele activiteit uitkomt -->
             <xsl:variable name="activiteitenTrajectNaarFunctioneleStructuur">
-                <xsl:for-each select="../../../sl:stand/owo:owObject/rol:Activiteit">
-                    <xsl:variable name="bovenLiggend"
-                        select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                <xsl:for-each select="sl:stand/owo:owObject/rol:Activiteit">
                     <xsl:variable name="identificatie" select="rol:identificatie"/>
+                    <xsl:variable name="bl1"
+                        select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
                     <!-- hier worden de activiteiten uitgefilterd waarvan de bovenliggende activiteiten in de functionele structuur zitten -->
-                    <xsl:if test="not(contains($activiteitenLijst, $bovenLiggend))">
-                        <xsl:variable name="bl1" select="$bovenLiggend"/>
-                        <xsl:for-each select="../../../sl:stand/owo:owObject/rol:Activiteit">
-                            <xsl:if test="rol:identificatie = $bl1">
-                                <xsl:variable name="bl2"
-                                    select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                                <xsl:choose>
-                                    <xsl:when test="not(contains($activiteitenLijst, $bl2))">
-                                        <xsl:value-of select="concat($bl1, ', ')"/>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:for-each
-                                            select="../../../sl:stand/owo:owObject/rol:Activiteit">
-                                            <xsl:if test="rol:identificatie = $bl2">
-                                                <xsl:variable name="bl3"
-                                                  select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                                                <xsl:choose>
-                                                    <xsl:when test="not(contains($activiteitenLijst, $bl3))">
-                                                    <xsl:value-of select="concat($bl2, ', ')"/>
-                                                  </xsl:when>
-                                                  <xsl:otherwise>
-                                                    <xsl:for-each
-                                                        select="../../../sl:stand/owo:owObject/rol:Activiteit">
-                                                        <xsl:if test="rol:identificatie = $bl3">
-                                                            <xsl:variable name="bl4"
+                    <xsl:if test="not(contains($circulaireActivititeiten, $identificatie))">
+                        <xsl:choose>
+                            <xsl:when test="not(contains($activiteitenLijst, $bl1))">
+                                <xsl:value-of select="concat($identificatie, ', ')"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:for-each select="../../../sl:stand/owo:owObject/rol:Activiteit">
+                                    <xsl:if test="rol:identificatie = $bl1">
+                                        <xsl:variable name="bl2"
+                                            select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                                        <xsl:choose>
+                                            <xsl:when test="not(contains($activiteitenLijst, $bl2))">
+                                                <xsl:value-of select="concat($identificatie, ', ')"/>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:for-each
+                                                    select="../../../sl:stand/owo:owObject/rol:Activiteit">
+                                                    <xsl:if test="rol:identificatie = $bl2">
+                                                        <xsl:variable name="bl3"
                                                             select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                                                            <xsl:choose>
-                                                                <xsl:when test="not(contains($activiteitenLijst, $bl4))">
-                                                                    <xsl:value-of select="concat($bl3, ', ')"/>
-                                                                </xsl:when>
-                                                                <xsl:otherwise>
-                                                                    <xsl:for-each
-                                                                        select="../../../sl:stand/owo:owObject/rol:Activiteit">
-                                                                        <xsl:if test="rol:identificatie = $bl4">
-                                                                            <xsl:variable name="bl5"
-                                                                                select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                                                                            <xsl:choose>
-                                                                                <xsl:when test="not(contains($activiteitenLijst, $bl5))">
-                                                                                    <xsl:value-of select="concat($bl4, ', ')"/>
-                                                                                </xsl:when>
-                                                                                <xsl:otherwise>
-                                                                                    <xsl:for-each
-                                                                                        select="../../../sl:stand/owo:owObject/rol:Activiteit">
-                                                                                        <xsl:if test="rol:identificatie = $bl5">
-                                                                                            <xsl:variable name="bl6"
-                                                                                                select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                                                                                            <xsl:choose>
-                                                                                                <xsl:when test="not(contains($activiteitenLijst, $bl6))">
-                                                                                                    <xsl:value-of select="concat($bl5, ', ')"/>
-                                                                                                </xsl:when>
-                                                                                            </xsl:choose>
-                                                                                        </xsl:if>
-                                                                                    </xsl:for-each>
-                                                                                </xsl:otherwise>                                                                            </xsl:choose>
-                                                                        </xsl:if>
-                                                                    </xsl:for-each>
-                                                                </xsl:otherwise>
-                                                            </xsl:choose>
-                                                        </xsl:if>
-                                                    </xsl:for-each>
-                                                  </xsl:otherwise>
-                                                </xsl:choose>
-                                            </xsl:if>
-                                        </xsl:for-each>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </xsl:if>
-                        </xsl:for-each>
+                                                        <xsl:choose>
+                                                            <xsl:when
+                                                                test="not(contains($activiteitenLijst, $bl3))">
+                                                                <xsl:value-of select="concat($identificatie, ', ')"/>
+                                                            </xsl:when>
+                                                            <xsl:otherwise>
+                                                                <xsl:for-each
+                                                                    select="../../../sl:stand/owo:owObject/rol:Activiteit">
+                                                                    <xsl:if test="rol:identificatie = $bl3">
+                                                                        <xsl:variable name="bl4"
+                                                                            select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                                                                        <xsl:choose>
+                                                                            <xsl:when
+                                                                                test="not(contains($activiteitenLijst, $bl4))">
+                                                                                <xsl:value-of select="concat($identificatie, ', ')"/>
+                                                                            </xsl:when>
+                                                                            <xsl:otherwise>
+                                                                                <xsl:for-each
+                                                                                    select="../../../sl:stand/owo:owObject/rol:Activiteit">
+                                                                                    <xsl:if test="rol:identificatie = $bl4">
+                                                                                        <xsl:variable name="bl5"
+                                                                                            select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                                                                                        <xsl:choose>
+                                                                                            <xsl:when
+                                                                                                test="not(contains($activiteitenLijst, $bl5))">
+                                                                                                <xsl:value-of select="concat($identificatie, ', ')"/>
+                                                                                            </xsl:when>
+                                                                                            <xsl:otherwise>
+                                                                                                <xsl:for-each
+                                                                                                    select="../../../sl:stand/owo:owObject/rol:Activiteit">
+                                                                                                    <xsl:if test="rol:identificatie = $bl5">
+                                                                                                        <xsl:variable name="bl6"
+                                                                                                            select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                                                                                                        <xsl:choose>
+                                                                                                            <xsl:when
+                                                                                                                test="not(contains($activiteitenLijst, $bl6))">
+                                                                                                                <xsl:value-of select="concat($identificatie, ', ')"/>
+                                                                                                            </xsl:when>
+                                                                                                        </xsl:choose>
+                                                                                                    </xsl:if>
+                                                                                                </xsl:for-each>
+                                                                                            </xsl:otherwise>
+                                                                                        </xsl:choose>
+                                                                                    </xsl:if>
+                                                                                </xsl:for-each>
+                                                                            </xsl:otherwise>
+                                                                        </xsl:choose>
+                                                                    </xsl:if>
+                                                                </xsl:for-each>
+                                                            </xsl:otherwise>
+                                                        </xsl:choose>
+                                                    </xsl:if>
+                                                </xsl:for-each>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </xsl:if>
+                                </xsl:for-each>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
@@ -197,7 +235,12 @@
                 >Activiteit-ids: <sch:value-of select="$activiteitenTrajectNaarFunctioneleStructuur"
                 />: ZH:TPOD1700: Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste
                 activiteit in de hiërarchie een bovenliggende activiteit moet hebben die reeds
-                bestaat in de functionele structuur.</sch:report>
+                bestaat in de functionele structuur. DIT LAATSTE WORDT NU NOG NIET GETEST
+            </sch:report>
+            <sch:assert test="string-length($circulaireActivititeiten) = 0">Activiteit-ids:
+                    <sch:value-of select="$circulaireActivititeiten"/>: ZH:TP0D930: Een
+                bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de
+                hiërarchie ligt.</sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>

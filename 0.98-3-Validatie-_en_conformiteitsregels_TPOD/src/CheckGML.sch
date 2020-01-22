@@ -20,7 +20,7 @@
     <sch:ns uri="http://www.opengis.net/gml/3.2" prefix="gml"/>
     <sch:ns uri="http://xml.juniper.net/junos/commit-scripts/1.0" prefix="jcs"/>
 
-    <sch:pattern id="Controleren_decimalenGML">
+    <sch:pattern id="TPOD930">
         <sch:rule context="*//geo:geometrie/posListArray[@geometrie eq '28992']/pos">
             <sch:let name="id" value="parent::*/@id"/>
             <sch:let name="waarde" value="string(.)"/>
@@ -37,7 +37,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <sch:pattern id="Controleren_aantal_CRS">    
+    <sch:pattern id="TPOD940">    
         <sch:rule context="*//geo:geometrie">
             <sch:let name="noCrs" value="count(descendant-or-self::*/@srsName)"></sch:let>
             <sch:assert test="$noCrs=1">Aantal=<sch:value-of select="$noCrs"/>, id=<sch:value-of select="parent::*/geo:id"/>, bestand=<sch:value-of select="posListArray/@bestand"/>:ZH:TP0D930: Een geometrie moet zijn opgebouwd middels één coordinate reference
