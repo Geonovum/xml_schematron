@@ -9,8 +9,7 @@
     xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
     xmlns:geo="http://www.geostandaarden.nl/basisgeometrie/v20190901"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:jcs="http://xml.juniper.net/junos/commit-scripts/1.0"
-    >
+    xmlns:jcs="http://xml.juniper.net/junos/commit-scripts/1.0">
     <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
         prefix="sl"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/regels/v20190901" prefix="r"/>
@@ -20,28 +19,88 @@
     <sch:ns uri="http://www.opengis.net/gml/3.2" prefix="gml"/>
     <sch:ns uri="http://xml.juniper.net/junos/commit-scripts/1.0" prefix="jcs"/>
 
+    <xsl:variable name="posListForCoordinateCheck">
+        <xsl:for-each select="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie">
+                <xsl:for-each select="descendant::gml:posList">
+                    <xsl:variable name="coordinaten" select="tokenize(normalize-space(text()), ' ')"
+                        as="xs:string*"/>
+                    <xsl:for-each select="$coordinaten">
+                        <xsl:element name="pos">
+                            <xsl:value-of select="."/>
+                        </xsl:element>
+                    </xsl:for-each>
+                </xsl:for-each>
+        </xsl:for-each>
+    </xsl:variable>
+
     <sch:pattern id="TPOD930">
-        <sch:rule context="*//geo:geometrie/posListArray[@geometrie eq '28992']/pos">
-            <sch:let name="id" value="parent::*/@id"/>
+        <sch:rule context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie">
+            <xsl:variable name="geometrieType"
+                select="tokenize(geo:geometrie/*/@srsName, ':')[last()]"/>
+            <xsl:variable name="decimals">
+                <xsl:choose>
+                    <xsl:when test="$geometrieType eq '28992'">
+                        <xsl:value-of select="3"/>
+                    </xsl:when>
+                    <xsl:when test="$geometrieType eq '4258'">
+                        <xsl:value-of select="8"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="0"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
+            <xsl:message>
+                <xsl:value-of select="count($posListForCoordinateCheck/*)"/>
+            </xsl:message>
+<!--            <xsl:variable name="fouteCoord">-->
+            <xsl:for-each select="$posListForCoordinateCheck/*">
+                    <xsl:message>
+                        <xsl:value-of select="text()"/>
+                    </xsl:message>
+<!--                    <xsl:value-of select="string(position())"/>
+-->                </xsl:for-each>
+            <!--</xsl:variable>-->
+<!--            <xsl:message>
+                <xsl:value-of select="$fouteCoord"/>
+            </xsl:message>
+-->
+<!--            <sch:assert test="string-length($errors) = 0"> ZH:TP0D930: Indien gebruik wordt gemaakt
+                van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden
+                opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag
+                bevatten.:OP/OW:T </sch:assert>
+-->            <sch:let name="id" value="parent::*/@id"/>
             <sch:let name="waarde" value="string(.)"/>
-            <sch:assert test="string-length(substring-after(string(.),'.')) &lt; 4">waarde=<sch:value-of select="string(.)"/>, id=<sch:value-of select="$id"/>, bestand=<sch:value-of select="parent::*/@bestand"/>:ZH:TP0D930:Indien
-                gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde
-                maximaal drie decimalen achter de komma mag bevatten.:OP/OW:T</sch:assert>
+            <sch:assert test="string-length(substring-after(string(.), '.')) &lt; 4">ZH:TP0D930:
+                    waarde=<sch:value-of select="string(.)"/>, id=<sch:value-of select="$id"/>,
+                    bestand=<sch:value-of select="parent::*/@bestand"/>:Indien gebruik wordt gemaakt
+                van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden
+                opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag
+                bevatten.:OP/OW:T</sch:assert>
         </sch:rule>
 
-        <sch:rule context="*//geo:geometrie/posListArray[@geometrie eq '4258']/pos">
+        <sch:rule
+            context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie/posListArray[@geometrie eq '4258']/pos">
             <sch:let name="id" value="parent::*/@id"/>
             <sch:let name="waarde" value="string(.)"/>
-            <sch:assert test="string-length(substring-after(string(.),'.')) &lt; 9">waarde=<sch:value-of select="string(.)"/>, id=<sch:value-of select="$id"/>, bestand=<sch:value-of select="parent::*/@bestand"/>:ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de
-                waarde maximaal acht decimalen achter de komma mag bevatten.:OP/OW:T</sch:assert>
+            <sch:assert test="string-length(substring-after(string(.), '.')) &lt; 9">ZH:TP0D930:
+                    waarde=<sch:value-of select="string(.)"/>, id=<sch:value-of select="$id"/>,
+                    bestand=<sch:value-of select="parent::*/@bestand"/>: Indien gebruik wordt
+                gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale
+                graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma
+                mag bevatten.:OP/OW:T</sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <sch:pattern id="TPOD940">    
-        <sch:rule context="*//geo:geometrie">
-            <sch:let name="noCrs" value="count(descendant-or-self::*/@srsName)"></sch:let>
-            <sch:assert test="$noCrs=1">Aantal=<sch:value-of select="$noCrs"/>, id=<sch:value-of select="parent::*/geo:id"/>, bestand=<sch:value-of select="posListArray/@bestand"/>:ZH:TP0D930: Een geometrie moet zijn opgebouwd middels één coordinate reference
-                system (crs): EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89).:OP/OW:T</sch:assert>
+
+    <sch:pattern id="TPOD940">
+        <sch:rule
+            context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
+            <sch:let name="noCrs" value="count(descendant-or-self::*/@srsName)"/>
+            <sch:assert test="$noCrs = 1">ZH:TP0D930: Aantal=<sch:value-of select="$noCrs"
+                    />id=<sch:value-of select="parent::*/geo:id"/>, bestand=<sch:value-of
+                    select="posListArray/@bestand"/>: Een geometrie moet zijn opgebouwd middels één
+                coordinate reference system (crs): EPSG:28992 (=RD new) of EPSG:4258
+                (=ETRS89).:OP/OW:T</sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
