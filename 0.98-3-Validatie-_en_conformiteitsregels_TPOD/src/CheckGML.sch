@@ -21,15 +21,15 @@
 
     <xsl:variable name="posListForCoordinateCheck">
         <xsl:for-each select="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie">
-                <xsl:for-each select="descendant::gml:posList">
-                    <xsl:variable name="coordinaten" select="tokenize(normalize-space(text()), ' ')"
-                        as="xs:string*"/>
-                    <xsl:for-each select="$coordinaten">
-                        <xsl:element name="pos">
-                            <xsl:value-of select="."/>
-                        </xsl:element>
-                    </xsl:for-each>
+            <xsl:for-each select="descendant::gml:posList">
+                <xsl:variable name="coordinaten" select="tokenize(normalize-space(text()), ' ')"
+                    as="xs:string*"/>
+                <xsl:for-each select="$coordinaten">
+                    <xsl:element name="pos">
+                        <xsl:value-of select="."/>
+                    </xsl:element>
                 </xsl:for-each>
+            </xsl:for-each>
         </xsl:for-each>
     </xsl:variable>
 
@@ -50,57 +50,40 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:variable>
-            <xsl:message>
-                <xsl:value-of select="count($posListForCoordinateCheck/*)"/>
-            </xsl:message>
-<!--            <xsl:variable name="fouteCoord">-->
-            <xsl:for-each select="$posListForCoordinateCheck/*">
-                    <xsl:message>
-                        <xsl:value-of select="text()"/>
-                    </xsl:message>
-<!--                    <xsl:value-of select="string(position())"/>
--->                </xsl:for-each>
-            <!--</xsl:variable>-->
-<!--            <xsl:message>
-                <xsl:value-of select="$fouteCoord"/>
-            </xsl:message>
--->
-<!--            <sch:assert test="string-length($errors) = 0"> ZH:TP0D930: Indien gebruik wordt gemaakt
-                van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden
-                opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag
-                bevatten.:OP/OW:T </sch:assert>
--->            <sch:let name="id" value="parent::*/@id"/>
-            <sch:let name="waarde" value="string(.)"/>
-            <sch:assert test="string-length(substring-after(string(.), '.')) &lt; 4">ZH:TP0D930:
-                    waarde=<sch:value-of select="string(.)"/>, id=<sch:value-of select="$id"/>,
-                    bestand=<sch:value-of select="parent::*/@bestand"/>:Indien gebruik wordt gemaakt
-                van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden
-                opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag
-                bevatten.:OP/OW:T</sch:assert>
-        </sch:rule>
-
-        <sch:rule
-            context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie/posListArray[@geometrie eq '4258']/pos">
-            <sch:let name="id" value="parent::*/@id"/>
-            <sch:let name="waarde" value="string(.)"/>
-            <sch:assert test="string-length(substring-after(string(.), '.')) &lt; 9">ZH:TP0D930:
-                    waarde=<sch:value-of select="string(.)"/>, id=<sch:value-of select="$id"/>,
-                    bestand=<sch:value-of select="parent::*/@bestand"/>: Indien gebruik wordt
-                gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale
-                graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma
-                mag bevatten.:OP/OW:T</sch:assert>
+            <xsl:variable name="fouteCoord">
+                <xsl:for-each select="$posListForCoordinateCheck/*">
+                    <xsl:if test="string-length(substring-after(string(.), '.')) &gt; $decimals">
+                        <xsl:value-of select="concat(text(), ', ')"/>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:variable>
+            <sch:assert test="string-length($fouteCoord) = 0"> ZH:TP0D930: Indien gebruik wordt gemaakt
+                van EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van meters worden
+                opgegeven waarbij de waarde maximaal <sch:value-of select="$decimals"/> decimalen achter de komma mag
+                bevatten.  Id=<sch:value-of select="geo:id"/>. De coordinaten waarom het gaat staan nu genoemd: <sch:value-of select="$fouteCoord"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
     <sch:pattern id="TPOD940">
         <sch:rule
             context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
-            <sch:let name="noCrs" value="count(descendant-or-self::*/@srsName)"/>
-            <sch:assert test="$noCrs = 1">ZH:TP0D930: Aantal=<sch:value-of select="$noCrs"
-                    />id=<sch:value-of select="parent::*/geo:id"/>, bestand=<sch:value-of
-                    select="posListArray/@bestand"/>: Een geometrie moet zijn opgebouwd middels één
+            <xsl:variable name="crs">
+                <xsl:for-each select="descendant-or-self::*/@srsName">
+                    <xsl:if test="position()=1">
+                        <xsl:value-of select="."/>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:variable>
+            <xsl:variable name="crsses">
+                <xsl:for-each select="descendant-or-self::*/@srsName">
+                    <xsl:if test="not($crs=.)">
+                        <xsl:value-of select="concat(., ', ')"/>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:variable>
+            <sch:assert test="string-length($crsses) = 0">ZH:TP0D930: Een geometrie moet zijn opgebouwd middels één
                 coordinate reference system (crs): EPSG:28992 (=RD new) of EPSG:4258
-                (=ETRS89).:OP/OW:T</sch:assert>
+                (=ETRS89). Id=<sch:value-of select="parent::*/geo:id"/>: </sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>

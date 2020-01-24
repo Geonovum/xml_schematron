@@ -15,7 +15,6 @@
 
     <xsl:template match="/">
         <xsl:variable name="GML">
-            
             <geo:FeatureCollectionGeometrie xmlns:gml="http://www.opengis.net/gml/3.2"
                 xmlns:geo="http://www.geostandaarden.nl/basisgeometrie/v20190901"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -29,42 +28,7 @@
                         <xsl:copy-of
                             select="document($filename)//geo:FeatureCollectionGeometrie/geo:featureMember"
                         />
-<!--                        <xsl:for-each
-                            select="document($filename)//geo:FeatureCollectionGeometrie/geo:featureMember">
-                            <xsl:element name="geo:featureMember">
-                                <xsl:element name="geo:Geometrie">
-                                    <xsl:copy-of select="*//geo:id"/>
-                                    <xsl:element name="geo:geometrie">
-                                        <xsl:for-each select="*//geo:geometrie/*">
-                                            <xsl:for-each select="descendant::gml:posList">
-                                                <xsl:variable name="geometries"
-                                                    select="ancestor::*/@srsName"/>
-                                                <xsl:variable name="ids"
-                                                    select="ancestor::*/@gml:id" as="xs:string*"/>
-                                                <xsl:variable name="geometrie"
-                                                    select="tokenize($geometries[1], ':')[last()]"/>
-                                                <xsl:element name="posListArray">
-                                                    <xsl:attribute name="geometrie"
-                                                        select="$geometrie"/>
-                                                    <xsl:attribute name="id" select="$ids[last()]"/>
-                                                    <xsl:attribute name="bestand" select="$filename"/>
-                                                    <xsl:variable name="coordinaten"
-                                                        select="tokenize(normalize-space(text()), ' ')"
-                                                        as="xs:string*"/>
-                                                    <xsl:for-each select="$coordinaten">
-                                                        <xsl:element name="pos">
-                                                            <xsl:value-of select="."/>
-                                                        </xsl:element>
-                                                    </xsl:for-each>
-                                                </xsl:element>
-                                            </xsl:for-each>
-                                            <xsl:copy-of select="."/>
-                                        </xsl:for-each>
-                                    </xsl:element>
-                                </xsl:element>
-                            </xsl:element>
-                        </xsl:for-each>
--->                    </xsl:if>
+                    </xsl:if>
                 </xsl:for-each>
             </geo:FeatureCollectionGeometrie>
         </xsl:variable>
@@ -72,6 +36,7 @@
         <xsl:result-document href="../GMLTotaal.xml">
             <xsl:copy-of select="$GML"/>
         </xsl:result-document>
+        
         <xsl:variable name="GIO">
             <AanleveringGIO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
