@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet
+    xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs" version="2.0"
     xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
@@ -60,7 +62,9 @@
             <xsl:copy-of select="$GIO"/>
         </xsl:result-document>
         <xsl:variable name="owBestand">
-            <owBestand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            <ow-dc:owBestand
+                xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
                 xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
@@ -112,7 +116,7 @@
                         </xsl:for-each>
                     </xsl:for-each>
                 </xsl:element>
-            </owBestand>
+            </ow-dc:owBestand>
         </xsl:variable>
         <xsl:result-document href="../OwTotaal.xml">
             <xsl:copy-of select="$owBestand"/>
