@@ -14,7 +14,6 @@ Id=50EA019E-3C96-4631-A76C-35BCF4D7AB6D. De coordinaten waarom het gaat staan nu
 138189.291973878, 424664.586667557,
 Startlocatie: 46:22
 
-
 Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD930_TPOD940\GML_TP0D930.xml
 Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD930_TPOD940\GML_TP0D930.xml
 Engine-naam: ISO Schematron

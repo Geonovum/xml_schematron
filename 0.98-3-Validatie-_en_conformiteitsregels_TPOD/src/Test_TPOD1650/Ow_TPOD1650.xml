@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
+	xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
+	xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
+	xmlns:owo="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+	xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
+	xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190709"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
+	xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons/v20190901"
+	xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+	xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
+	xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/" xmlns:foo="http://whatever"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/0.98.1 https://raw.githubusercontent.com/Geonovum/xml_ow_xsd_0.98.1-kern/master/xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+	<sl:standBestand>
+		<sl:dataset>Gemeentestad</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Gemeentestad</sl:gebied>
+			<sl:leveringsId>abc-20190221-0801</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Omgevingsnorm</sl:objectType>
+				<sl:objectType>Omgevingswaarde</sl:objectType>
+				<sl:objectType>Regeltekst</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<sl:stand>
+			<ow-dc:owObject>
+				<!-- Artikel -->
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.3__art_2.11">
+					<r:identificatie>nl.imow-gm0037.regeltekst.2019000009</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709">
+			<ow-dc:owObject>
+				<rol:Omgevingswaarde ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000009">
+					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>200</da:waarde>
+								<da:eenheid>μg/m3</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>fijnstof</rol:naam>
+					<rol:groep>luchtkwaliteit</rol:groep>
+				</rol:Omgevingswaarde>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709">
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000009">
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900002</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>13</da:waarde>
+								<da:eenheid>meter</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>maximum bouwhoogte</rol:naam>
+					<rol:groep>maatvoeringbouwen</rol:groep>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709">
+			<ow-dc:owObject>
+				<rol:Omgevingswaarde ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000009">
+					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900003</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>200</da:waarde>
+								<da:eenheid>μg/m3</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>fijnstof</rol:naam>
+					<rol:groep>luchtkwaliteit</rol:groep>
+				</rol:Omgevingswaarde>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709">
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000009">
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900004</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>13</da:waarde>
+								<da:eenheid>meter</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>maximum bouwhoogte</rol:naam>
+					<rol:groep>maatvoeringbouwen</rol:groep>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709">
+			<ow-dc:owObject>
+				<rol:Omgevingswaarde ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000009">
+					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900005</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>200</da:waarde>
+								<da:eenheid>μg/m3</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>fijnstof</rol:naam>
+					<rol:groep>luchtkwaliteit</rol:groep>
+				</rol:Omgevingswaarde>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709">
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000009">
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900006</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>13</da:waarde>
+								<da:eenheid>meter</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>maximum bouwhoogte</rol:naam>
+					<rol:groep>maatvoeringbouwen</rol:groep>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+	</sl:standBestand>
+</ow-dc:owBestand>

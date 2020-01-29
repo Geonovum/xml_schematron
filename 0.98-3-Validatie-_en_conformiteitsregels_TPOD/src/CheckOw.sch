@@ -11,7 +11,8 @@
     xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:foo="http://whatever"
     xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709"
-    xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901">
+    xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
+    xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901">
 
 
     <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
@@ -25,15 +26,23 @@
     <sch:ns uri="http://whatever" prefix="foo"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709" prefix="ga"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/locatie/v20190901" prefix="l"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/regels-ref/v20190901" prefix="r-ref"/>
 
     <sch:pattern id="TPOD1650">
-        <sch:rule
-            context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Omgevingswaarde">
+        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Omgevingswaarde">
             <sch:assert
                 test="
                     (rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde or rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde) and
                     not(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde and rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"
-                > H:TPOD1650: Het attribuut 'normwaarde' moet bestaan uit één van de twee mogelijke
+                > H:TPOD1650: <sch:value-of select="rol:identificatie"/>: Het attribuut 'normwaarde' moet bestaan uit één van de twee mogelijke
+                attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde'. </sch:assert>
+        </sch:rule>
+        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Omgevingsnorm">
+            <sch:assert
+                test="
+                (rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde or rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde) and
+                not(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde and rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"
+                > H:TPOD1650: <sch:value-of select="rol:identificatie"/>: Het attribuut 'normwaarde' moet bestaan uit één van de twee mogelijke
                 attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde'. </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -41,17 +50,21 @@
     <sch:pattern id="TPOD1630_TPOD1690">
         <sch:rule
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/r:Instructieregel">
+            <!-- Instructieregel is een instrument -->
             <sch:assert
                 test="
                     (r:instructieregelInstrument or r:instructieregelTaakuitoefening) and
                     not(r:instructieregelInstrument and r:instructieregelTaakuitoefening)"
-                > H:TPOD1630: Het attribuut 'instructieregelTaakuitoefening' binnen het object
+                > H:TPOD1630: behorend bij ArtikelOfLid <sch:value-of select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>:Het attribuut 'instructieregelTaakuitoefening' binnen het object
                 'Instructieregel' is verplicht wanneer Instructieregel gaat over de uitoefening van
                 een taak. </sch:assert>
-            <sch:report test="true()">REPORT: H:TPOD1690: instructieregelInstrument is alleen te
-                gebruiken wanneer de Instructie-regel zich richt tot een instrument. DEZE VALIDATIE
-                KAN NIET GEAUTOMATISEERD WOORDEN UITGEVOERD, maar dient te worden gevalideerd aan de
-                hand van het geannoteerde document. </sch:report>
+            <!-- Instructieregel is een taak -->
+            <sch:assert
+                test="
+                (r:instructieregelTaakuitoefening) and not(r:instructieregelInstrument)"
+                > H:TPOD1630: behorend bij ArtikelOfLid <sch:value-of select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>:Het attribuut 'instructieregelTaakuitoefening' binnen het object
+                'Instructieregel' is verplicht wanneer Instructieregel gaat over de uitoefening van
+                een taak. </sch:assert>
         </sch:rule>
     </sch:pattern>
 
