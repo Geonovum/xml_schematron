@@ -22,20 +22,6 @@
     <sch:ns uri="http://whatever" prefix="foo"/>
     <sch:ns uri="http://xml.juniper.net/junos/commit-scripts/1.0" prefix="jcs"/>
 
-    <xsl:variable name="posListForCoordinateCheck">
-        <xsl:for-each select="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie">
-            <xsl:for-each select="descendant::gml:posList">
-                <xsl:variable name="coordinaten" select="tokenize(normalize-space(text()), ' ')"
-                    as="xs:string*"/>
-                <xsl:for-each select="$coordinaten">
-                    <xsl:element name="pos">
-                        <xsl:value-of select="."/>
-                    </xsl:element>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:for-each>
-    </xsl:variable>
-    
     <xsl:function name="foo:posListForCoordinateCheck">
         <xsl:param name="context" as="node()"/>
         <xsl:for-each select="$context">

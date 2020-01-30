@@ -50,14 +50,11 @@
     <sch:pattern id="TPOD1630_TPOD1690">
         <sch:rule
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/r:Instructieregel">
-            <!-- Instructieregel is een instrument -->
             <sch:assert
                 test="
                     (r:instructieregelInstrument or r:instructieregelTaakuitoefening) and
                     not(r:instructieregelInstrument and r:instructieregelTaakuitoefening)"
-                > H:TPOD1630: behorend bij ArtikelOfLid <sch:value-of select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>:Het attribuut 'instructieregelTaakuitoefening' binnen het object
-                'Instructieregel' is verplicht wanneer Instructieregel gaat over de uitoefening van
-                een taak. </sch:assert>
+                > H:TPOD1630_TPOD1690: behorend bij ArtikelOfLid <sch:value-of select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>:Een instructie heeft een instructieregelInstrument of een instructieTaakUitoefening, maar nooit beiden. </sch:assert>
             <!-- Instructieregel is een taak -->
             <sch:assert
                 test="
@@ -65,6 +62,11 @@
                 > H:TPOD1630: behorend bij ArtikelOfLid <sch:value-of select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>:Het attribuut 'instructieregelTaakuitoefening' binnen het object
                 'Instructieregel' is verplicht wanneer Instructieregel gaat over de uitoefening van
                 een taak. </sch:assert>
+            <!-- Instructieregel is een instrument -->
+            <sch:assert
+                test="
+                (r:instructieregelInstrument) and not(r:instructieregelTaakuitoefening)"
+                > H:TPOD1690: behorend bij ArtikelOfLid <sch:value-of select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>:instructieregelInstrument is alleen te gebruiken wanneer de Instructieregel zich richt tot een instrument. </sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -73,7 +75,7 @@
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/r:RegelVoorIedereen">
             <sch:assert
                 test="(r:activiteitaanduiding) or (not(r:activiteitaanduiding) and not(r:activiteitregelkwalificatie))"
-                > H:TPOD1670: Activiteitregelkwalificatie is alleen te gebruiken wanneer het object
+                > H:TPOD1670: behorend bij ArtikelOfLid <sch:value-of select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>: Activiteitregelkwalificatie is alleen te gebruiken wanneer het object
                 ‘Regel voor iedereen’ is geannoteerd met Activiteit. </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -98,8 +100,9 @@
     <!-- de activiteitenlijst bevat alle activiteiten ids -->
     <xsl:variable name="activiteitenLijst">
         <xsl:for-each
-            select="/context/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+            select="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <xsl:value-of select="rol:identificatie"/>
+            <xsl:message><xsl:value-of select="rol:identificatie"/></xsl:message>
         </xsl:for-each>
     </xsl:variable>
 
@@ -212,13 +215,13 @@
             <sch:assert
                 test="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"
                 >H:TPOD1730: <sch:value-of
-                    select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/> in
-                    <sch:value-of select="rol:identificatie"/>: Gerelateerde activiteiten moeten
+                    select="rol:identificatie"/> Betreft verwijzing: 
+                <sch:value-of select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>: Gerelateerde activiteiten moeten
                 bestaan indien er naar verwezen wordt.</sch:assert>
             <!-- TPOD1740  -->
-            <sch:report test="true()"> REPORT: H:TPOD1740: <sch:value-of
-                    select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"
-                />:  in <sch:value-of select="rol:identificatie"/>: Gerelateerde
+            <sch:report test="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href))"> REPORT: H:TPOD1740: <sch:value-of
+                select="rol:identificatie"
+            />:  Betreft verwijzing: <sch:value-of select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>: Bovenliggende 
                 activiteiten moeten bestaan indien er naar verwezen wordt. DIT LAATSTE WORDT NU NOG
                 NIET GETEST</sch:report>
         </sch:rule>

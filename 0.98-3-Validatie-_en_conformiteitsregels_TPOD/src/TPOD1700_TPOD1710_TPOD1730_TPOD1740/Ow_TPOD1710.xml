@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
+	xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
+	xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
+	xmlns:owo="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+	xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
+	xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190709"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
+	xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons/v20190901"
+	xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+	xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
+	xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/" xmlns:foo="http://whatever"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/0.98.1 https://raw.githubusercontent.com/Geonovum/xml_ow_xsd_0.98.1-kern/master/xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+	<sl:standBestand>
+		<sl:dataset>Gemeentestad</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Gemeentestad</sl:gebied>
+			<sl:leveringsId>abc-20190221-0801</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Activiteit</sl:objectType>
+				<sl:objectType>Regeltekst</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
+			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
+			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+			<ow-dc:owObject>
+				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.3 -->
+					<l:identificatie>nl.imow-gm0037.gebied.2019000001</l:identificatie>
+					<l:noemer>Bedrijf categorie 2</l:noemer>
+					<!-- zelfde als een functie -->
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.2019000001</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+					<rol:identificatie>nl.imow-gm0037.activiteit.2019000242</rol:identificatie>
+					<!-- Deze activiteit is voor de 1e keer ontstaan/gecreeerd in artikel 2.4 nl.imow-gm0037.Regeltekst.2019000002 en daarom staat deze verwijzing in ow:regeltekstId. -->
+					<rol:naam>wonen in een bedrijfswoning</rol:naam>
+					<!-- Deze activiteit wordt opnieuwgebruikt in artikel 2.11 nl.imow-gm0037.Regeltekst.20190000011 -->
+					<rol:groep>gebruiksactiviteit</rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef
+							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+					<rol:identificatie>nl.imow-gm0037.activiteit.2019000243</rol:identificatie>
+					<rol:naam>aanleggen en instandhouden van nutsvoorzieningen</rol:naam>
+					<rol:groep>gebruiksactiviteit</rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000540"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+					<rol:identificatie>nl.imow-gm0037.activiteit.20190002453</rol:identificatie>
+					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
+					<rol:groep>gebruiksactiviteit</rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002451"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+					<rol:identificatie>nl.imow-gm0037.activiteit.20190002451</rol:identificatie>
+					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
+					<rol:groep>gebruiksactiviteit</rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002452"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+					<rol:identificatie>nl.imow-gm0037.activiteit.20190002452</rol:identificatie>
+					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
+					<rol:groep>gebruiksactiviteit</rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002453"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+					<rol:identificatie>nl.imow-gm0037.activiteit.2019000540</rol:identificatie>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>milieubelastende activiteit</rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef
+							xlink:href="nl.imow-mn002.activiteit.FunctioneleStructuur0001"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+	</sl:standBestand>
+</ow-dc:owBestand>
