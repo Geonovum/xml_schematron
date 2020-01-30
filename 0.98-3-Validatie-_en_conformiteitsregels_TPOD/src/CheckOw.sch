@@ -27,6 +27,36 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709" prefix="ga"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/locatie/v20190901" prefix="l"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/regels-ref/v20190901" prefix="r-ref"/>
+    
+    <xsl:variable name="regelTeksten">
+        <xsl:variable name="documents"
+            select="document('manifest-ow.xml')//Modules/RegelingVersie/Bestand/naam"/>
+        <xsl:for-each select="$documents">
+            <xsl:for-each select="document(.)//sl:standBestand/sl:stand/ow-dc:owObject/r:Regeltekst">
+                <xsl:copy-of select="."/>
+            </xsl:for-each>
+        </xsl:for-each>
+    </xsl:variable>
+    
+    <xsl:variable name="gebieden">
+        <xsl:variable name="documents"
+            select="document('manifest-ow.xml')//Modules/RegelingVersie/Bestand/naam"/>
+        <xsl:for-each select="$documents">
+            <xsl:for-each select="document(.)//sl:standBestand/sl:stand/ow-dc:owObject/l:Gebied">
+                <xsl:copy-of select="."/>
+            </xsl:for-each>
+        </xsl:for-each>
+    </xsl:variable>
+    
+    <xsl:variable name="gebiedenGroepen">
+        <xsl:variable name="documents"
+            select="document('manifest-ow.xml')//Modules/RegelingVersie/Bestand/naam"/>
+        <xsl:for-each select="$documents">
+            <xsl:for-each select="document(.)//sl:standBestand/sl:stand/ow-dc:owObject/l:Gebied">
+                <xsl:copy-of select="."/>
+            </xsl:for-each>
+        </xsl:for-each>
+    </xsl:variable>
 
     <sch:pattern id="TPOD1650">
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Omgevingswaarde">
@@ -80,22 +110,6 @@
         </sch:rule>
     </sch:pattern>
 
-    <sch:pattern id="Regeltekst_ids">
-        <!-- Controleren of OwObjecten een geldige regelTekstId verwijzing hebben. -->
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/*">
-            <sch:let name="regeltekstId" value="@ow:regeltekstId"/>
-            <sch:let name="itemname" value="./name()"/>
-            <xsl:variable name="regeltekstIds">
-                <xsl:for-each
-                    select="//sl:standBestand/sl:stand/ow-dc:owObject/r:Regeltekst/r:identificatie">
-                    <xsl:value-of select="."/>
-                </xsl:for-each>
-            </xsl:variable>
-            <sch:assert test="contains($regeltekstIds, $regeltekstId)"> ZH::OW:T:Regeltekstnummer
-                    <sch:value-of select="$regeltekstId"/> in <sch:value-of select="$itemname"/>
-                heeft geen bijbehorend regeltekst-object </sch:assert>
-        </sch:rule>
-    </sch:pattern>
 
     <!-- de activiteitenlijst bevat alle activiteiten ids -->
     <xsl:variable name="activiteitenLijst">
@@ -228,10 +242,7 @@
     </sch:pattern>
 
 <!--    <sch:pattern id="TPOD1760">
-        <sch:rule
-            context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing">
-            <sch:report test="true()"><sch:value-of select="foo:isGeometrievanTypegebied('123')"
-                /></sch:report>
+        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing">
         </sch:rule>
     </sch:pattern>
 -->
