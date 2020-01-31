@@ -57,43 +57,44 @@
         </xsl:variable>
         <xsl:copy-of select="$manifestBestand"/>
     </xsl:function>
-    
+
     <xsl:function name="foo:substring-before-last">
-        <xsl:param name="input" />
-        <xsl:param name="substr" />
+        <xsl:param name="input"/>
+        <xsl:param name="substr"/>
         <xsl:if test="$substr and contains($input, $substr)">
-            <xsl:variable name="temp" select="substring-after($input, $substr)" />
-            <xsl:value-of select="substring-before($input, $substr)" />
+            <xsl:variable name="temp" select="substring-after($input, $substr)"/>
+            <xsl:value-of select="substring-before($input, $substr)"/>
             <xsl:if test="contains($temp, $substr)">
-                <xsl:value-of select="$substr" />
-                <xsl:value-of select="foo:substring-before-last($temp, $substr)">
-                </xsl:value-of>
+                <xsl:value-of select="$substr"/>
+                <xsl:value-of select="foo:substring-before-last($temp, $substr)"> </xsl:value-of>
             </xsl:if>
         </xsl:if>
     </xsl:function>
-    
+
     <xsl:function name="foo:substring-after-last">
         <xsl:param name="input"/>
         <xsl:param name="substr"/>
-        
+
         <!-- Extract the string which comes after the first occurence -->
-        <xsl:variable name="temp" select="substring-after($input,$substr)"/>
-        
+        <xsl:variable name="temp" select="substring-after($input, $substr)"/>
+
         <xsl:choose>
             <!-- If it still contains the search string the recursively process -->
-            <xsl:when test="$substr and contains($temp,$substr)">
-                <xsl:value-of select="foo:substring-after-last($temp,$substr )"/>
+            <xsl:when test="$substr and contains($temp, $substr)">
+                <xsl:value-of select="foo:substring-after-last($temp, $substr)"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="$temp"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
-    
+
     <xsl:variable name="base-uri" select="foo:substring-before-last(base-uri(.), '/')"/>
 
     <xsl:function name="foo:manifest-ow">
-        <xsl:message><xsl:value-of select="$base-uri"/></xsl:message>
+        <xsl:message>
+            <xsl:value-of select="$base-uri"/>
+        </xsl:message>
         <xsl:variable name="manifest-ow">
             <xsl:for-each select="collection('.')">
                 <xsl:if test="Modules">
@@ -101,7 +102,8 @@
                         <xsl:for-each select="//Modules/RegelingVersie/Bestand">
                             <Bestand copy-namespaces="no" xmlns="">
                                 <xsl:element name="naam">
-                                    <xsl:value-of select="naam"/>
+                                    <xsl:value-of
+                                        select="concat(string-join($base-uri), string('/'), string(naam))"/>
                                 </xsl:element>
                                 <xsl:for-each select="objecttype">
                                     <xsl:element name="objecttype">
@@ -122,9 +124,9 @@
             <xsl:for-each select="foo:manifest()/manifest/bestand">
                 <xsl:if test="contains(contentType, 'gml+xml')">
                     <xsl:if test="document(bestandsNaam)//geo:FeatureCollectionGeometrie">
-                        <xsl:for-each select="document(bestandsNaam)//geo:FeatureCollectionGeometrie/geo:featureMember">
-                        <xsl:copy-of select="."
-                        />
+                        <xsl:for-each
+                            select="document(bestandsNaam)//geo:FeatureCollectionGeometrie/geo:featureMember">
+                            <xsl:copy-of select="."/>
                         </xsl:for-each>
                     </xsl:if>
                 </xsl:if>
@@ -132,29 +134,23 @@
         </xsl:variable>
         <xsl:copy-of select="$featureMembers"/>
     </xsl:function>
-    
+
     <xsl:function name="foo:gebieden">
-    <xsl:variable name="gebieden">
-        <xsl:for-each select="foo:manifest-ow()//Bestand">
-            <xsl:for-each select="objecttype">
-                <xsl:if test="text()='Gebied'">
-                    <xsl:for-each select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/l:Gebied">
-                        <xsl:copy-of select="."/>
-                    </xsl:for-each>
-                </xsl:if>
+        <xsl:variable name="gebieden">
+            <xsl:for-each select="foo:manifest-ow()//Bestand">
+                <xsl:for-each select="objecttype">
+                    <xsl:if test="text() = 'Gebied'">
+                        <xsl:for-each
+                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/l:Gebied">
+                            <xsl:copy-of select="."/>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
             </xsl:for-each>
-        </xsl:for-each>
-<!--        <xsl:if test="object, 'gml+xml')">-->
-<!--        <xsl:for-each select="$documents">
-            <xsl:for-each select="document(.)//sl:standBestand/sl:stand/ow-dc:owObject/l:Gebied">
-                <xsl:copy-of select="."/>
-            </xsl:for-each>
--->        <!--</xsl:for-each>-->
-    </xsl:variable>
-        <xsl:message><xsl:value-of select="$gebieden"></xsl:value-of></xsl:message>
+        </xsl:variable>
         <xsl:copy-of select="$gebieden"/>
     </xsl:function>
-    
+
     <xsl:variable name="regelTeksten">
         <xsl:variable name="documents"
             select="document('manifest-ow.xml')//Modules/RegelingVersie/Bestand/naam"/>
@@ -204,7 +200,10 @@
                     </xsl:for-each>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:message><xsl:value-of select="$context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href"></xsl:value-of></xsl:message>
+                    <xsl:message>
+                        <xsl:value-of
+                            select="$context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href"/>
+                    </xsl:message>
                     <xsl:value-of
                         select="foo:isGebiedvanTypegebied($context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href, $featureMembers)"
                     />
