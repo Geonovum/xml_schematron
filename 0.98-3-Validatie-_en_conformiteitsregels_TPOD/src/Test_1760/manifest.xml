@@ -48,7 +48,11 @@
         <contentType>application/gml+xml</contentType>
     </bestand>
     <bestand>
-        <bestandsnaam>PointGeometrie.gml</bestandsnaam>
+        <bestandsnaam>PointGeometrie1.gml</bestandsnaam>
+        <contentType>application/gml+xml</contentType>
+    </bestand>
+    <bestand>
+        <bestandsnaam>PointGeometrie2.gml</bestandsnaam>
         <contentType>application/gml+xml</contentType>
     </bestand>
     <bestand>

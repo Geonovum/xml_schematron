@@ -57,19 +57,6 @@
 		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.Regeltekst.2019000010">
-					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000003</ga:identificatie>
-					<ga:type>Functie</ga:type>
-					<ga:naam>Zuilichem industriegebied 5</ga:naam>
-					<ga:groep>Zuilichem industriegebied 5</ga:groep>
-					<ga:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000012"/>
-					</ga:locatieaanduiding>
-				</ga:Gebiedsaanwijzing>
-			</ow-dc:owObject>
-		</sl:stand>
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
-			<ow-dc:owObject>
-				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.Regeltekst.2019000010">
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000004</ga:identificatie>
 					<ga:type>Functie</ga:type>
 					<ga:naam>Zuilichem industriegebied Totaal</ga:naam>

@@ -36,6 +36,7 @@
     <sch:ns uri="http://www.overheid.nl/2017/lvbb" prefix="lvbb"/>
     <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/v20190901" prefix="geo"/>
 
+<!-- GENERIC FUNCTIONS -->
     <xsl:function name="foo:manifest">
         <xsl:variable name="manifestBestand">
             <xsl:for-each select="collection('.')">
@@ -151,6 +152,22 @@
         <xsl:copy-of select="$gebieden"/>
     </xsl:function>
 
+    <xsl:function name="foo:gebiedenGroepen">
+        <xsl:variable name="gebiedenGroepen">
+            <xsl:for-each select="foo:manifest-ow()//Bestand">
+                <xsl:for-each select="objecttype">
+                    <xsl:if test="text() = 'Gebiedengroep'">
+                        <xsl:for-each
+                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/l:Gebiedengroep">
+                            <xsl:copy-of select="."/>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:copy-of select="$gebiedenGroepen"/>
+    </xsl:function>
+
     <xsl:variable name="regelTeksten">
         <xsl:variable name="documents"
             select="document('manifest-ow.xml')//Modules/RegelingVersie/Bestand/naam"/>
@@ -161,17 +178,7 @@
         </xsl:for-each>
     </xsl:variable>
 
-    <xsl:variable name="gebiedenGroepen">
-        <xsl:variable name="documents"
-            select="document('manifest-ow.xml')//Modules/RegelingVersie/Bestand/naam"/>
-        <xsl:for-each select="$documents">
-            <xsl:for-each
-                select="document(.)//sl:standBestand/sl:stand/ow-dc:owObject/l:Gebiedengroep">
-                <xsl:copy-of select="."/>
-            </xsl:for-each>
-        </xsl:for-each>
-    </xsl:variable>
-
+<!-- TPOD1760 -->
     <sch:pattern id="TPOD1760">
         <sch:rule
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing">
@@ -190,9 +197,11 @@
         <xsl:for-each select="$context/ga:locatieaanduiding/l-ref:LocatieRef">
             <xsl:choose>
                 <xsl:when test="contains(@xlink:href, 'gebiedengroep')">
-                    <xsl:for-each select="$gebiedenGroepen">
+                    <xsl:for-each select="foo:gebiedenGroepen()">
+                        <xsl:message><xsl:value-of select="current()/l:Gebiedengroep/l:identificatie"/></xsl:message>
+                        <xsl:message><xsl:value-of select="$context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href"/></xsl:message>
                         <xsl:if
-                            test="$gebiedenGroepen/l:identificatie = $context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href">
+                            test="current()/l:identificatie = $context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href">
                             <xsl:value-of
                                 select="foo:isGebiedvanTypegebied(l:groepselement/l-ref:GebiedRef/@xlink:href, $featureMembers)"
                             />
@@ -200,10 +209,6 @@
                     </xsl:for-each>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:message>
-                        <xsl:value-of
-                            select="$context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href"/>
-                    </xsl:message>
                     <xsl:value-of
                         select="foo:isGebiedvanTypegebied($context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href, $featureMembers)"
                     />
@@ -215,9 +220,10 @@
     <xsl:function name="foo:isGebiedvanTypegebied">
         <xsl:param name="id" as="xs:string"/>
         <xsl:param name="featureMembers" as="node()*"/>
-        <xsl:for-each select="foo:gebieden()">
-            <xsl:if test="l:geometrie/g-ref:GeometrieRef/@xlink:href = $id">
-                <xsl:value-of select="foo:isGeometrievanTypegebied($id, $featureMembers)"/>
+        <xsl:variable name="gebieden" select="foo:gebieden()"/>
+        <xsl:for-each select="$gebieden/l:Gebied">
+            <xsl:if test="current()/l:identificatie = $id">
+                <xsl:value-of select="foo:isGeometrievanTypegebied(current()/l:geometrie/g-ref:GeometrieRef/@xlink:href, $featureMembers)"/>
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
@@ -225,9 +231,9 @@
     <xsl:function name="foo:isGeometrievanTypegebied">
         <xsl:param name="geoId" as="xs:string"/>
         <xsl:param name="featureMembers" as="node()*"/>
-        <xsl:for-each select="$featureMembers/geo:Geometrie/geo:id">
-            <xsl:if test=". eq $geoId">
-                <xsl:if test="not(../geo:geometrie/gml:MultiSurface)">
+        <xsl:for-each select="$featureMembers/geo:featureMember/geo:Geometrie">
+            <xsl:if test="geo:id eq $geoId">
+                <xsl:if test="not(geo:geometrie/gml:MultiSurface)">
                     <xsl:value-of select="false()"/>
                 </xsl:if>
             </xsl:if>
