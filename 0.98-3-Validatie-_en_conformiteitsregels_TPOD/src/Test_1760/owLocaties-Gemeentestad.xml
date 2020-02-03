@@ -62,7 +62,6 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000012">
-					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.9 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000004</l:identificatie>
 					<l:noemer>Centrumgebied</l:noemer>
 					<l:geometrie>
@@ -74,7 +73,6 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
-					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000007</l:identificatie>
 					<l:noemer>exploiteren speelautomatenhal</l:noemer>
 					<l:geometrie>
@@ -86,7 +84,6 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
-					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000008</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 1</l:noemer>
 					<l:geometrie>
@@ -98,7 +95,6 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
-					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000009</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 2</l:noemer>
 					<l:geometrie>
@@ -110,7 +106,6 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
-					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000010</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 3</l:noemer>
 					<l:geometrie>
@@ -122,7 +117,6 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
-					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000011</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 4</l:noemer>
 					<l:geometrie>
@@ -134,7 +128,6 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
-					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000012</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 5</l:noemer>
 					<l:geometrie>
@@ -144,6 +137,7 @@
 			</ow-dc:owObject>
 		</sl:stand>
 		<sl:stand>
+			<!-- POINT -->
 			<ow-dc:owObject>
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
@@ -156,6 +150,7 @@
 			</ow-dc:owObject>
 		</sl:stand>
 		<sl:stand>
+			<!-- POINT -->
 			<ow-dc:owObject>
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
 					<l:identificatie>nl.imow-gm0037.gebied.2019000014</l:identificatie>

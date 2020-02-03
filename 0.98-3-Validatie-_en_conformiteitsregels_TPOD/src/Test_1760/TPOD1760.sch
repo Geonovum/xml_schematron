@@ -93,9 +93,6 @@
     <xsl:variable name="base-uri" select="foo:substring-before-last(base-uri(.), '/')"/>
 
     <xsl:function name="foo:manifest-ow">
-        <xsl:message>
-            <xsl:value-of select="$base-uri"/>
-        </xsl:message>
         <xsl:variable name="manifest-ow">
             <xsl:for-each select="collection('.')">
                 <xsl:if test="Modules">
@@ -182,8 +179,9 @@
     <sch:pattern id="TPOD1760">
         <sch:rule
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing">
+            <xsl:message><xsl:value-of select="count(foo:isGebiedaanwijzingvanTypegebied(., foo:featureMembers()))"/></xsl:message>
             <sch:assert
-                test="string-length(foo:isGebiedaanwijzingvanTypegebied(., foo:featureMembers())) = 0"
+                test="count(foo:isGebiedaanwijzingvanTypegebied(., foo:featureMembers())) = 0"
                 > H:TPOD1760: Betreft <sch:value-of select="ga:identificatie"/>: Een
                 gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt,
                 puntengroep, lijn of lijnengroep zijn). </sch:assert>
@@ -198,13 +196,13 @@
             <xsl:choose>
                 <xsl:when test="contains(@xlink:href, 'gebiedengroep')">
                     <xsl:for-each select="foo:gebiedenGroepen()">
-                        <xsl:message><xsl:value-of select="current()/l:Gebiedengroep/l:identificatie"/></xsl:message>
-                        <xsl:message><xsl:value-of select="$context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href"/></xsl:message>
                         <xsl:if
-                            test="current()/l:identificatie = $context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href">
-                            <xsl:value-of
-                                select="foo:isGebiedvanTypegebied(l:groepselement/l-ref:GebiedRef/@xlink:href, $featureMembers)"
-                            />
+                            test="current()/l:Gebiedengroep/l:identificatie = $context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href">
+                            <xsl:for-each select="current()/l:Gebiedengroep/l:groepselement/l-ref:GebiedRef">
+                                <xsl:value-of
+                                    select="foo:isGebiedvanTypegebied(@xlink:href, $featureMembers)"
+                                />
+                            </xsl:for-each>
                         </xsl:if>
                     </xsl:for-each>
                 </xsl:when>
@@ -233,7 +231,9 @@
         <xsl:param name="featureMembers" as="node()*"/>
         <xsl:for-each select="$featureMembers/geo:featureMember/geo:Geometrie">
             <xsl:if test="geo:id eq $geoId">
+                <xsl:message><xsl:value-of select="$geoId"/></xsl:message>
                 <xsl:if test="not(geo:geometrie/gml:MultiSurface)">
+                    <xsl:message><xsl:value-of select="$geoId"/></xsl:message>
                     <xsl:value-of select="false()"/>
                 </xsl:if>
             </xsl:if>
