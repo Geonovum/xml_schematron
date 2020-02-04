@@ -1,0 +1,8 @@
+Verwachte foutmeldingen:
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD940\GML_TP0D940.gml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD940\GML_TP0D940.gml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: ZH:TP0D940: Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=D28AF779-7EDD-4A88-8B11-809798F53636:
+Startlocatie: 45:25

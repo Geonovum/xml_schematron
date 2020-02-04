@@ -6,7 +6,6 @@
 	xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
 	xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
 	xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-	xmlns:owo="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
 	xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
 	xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190709"
 	xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
@@ -57,12 +56,12 @@
 		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.Regeltekst.2019000010">
-					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000004</ga:identificatie>
+					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000003</ga:identificatie>
 					<ga:type>Functie</ga:type>
-					<ga:naam>Zuilichem industriegebied Totaal</ga:naam>
-					<ga:groep>Zuilichem industriegebied Totaal</ga:groep>
+					<ga:naam>Zuilichem industriegebied 5</ga:naam>
+					<ga:groep>Zuilichem industriegebied 5</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebiedengroep.2019000001"/>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000012"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>

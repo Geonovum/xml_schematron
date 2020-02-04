@@ -2,7 +2,7 @@
 <manifest 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xmlns="http://www.overheid.nl/2017/lvbb" 
-    xsi:schemaLocation="http://www.overheid.nl/2017/lvbb ../lvbb/lvbb-transport.xsd">
+    xsi:schemaLocation="http://www.overheid.nl/2017/lvbb https://raw.githubusercontent.com/Geonovum/xml_op_xsd_0.98.3-kern/master/lvbb/lvbb-transport.xsd">
     <bestand>
         <bestandsnaam>akn_nl_bill_gm0037_2019-12-01.xml</bestandsnaam>
         <contentType>application/xml</contentType>
@@ -13,26 +13,6 @@
     </bestand>
     <bestand>
         <bestandsnaam>opdracht.xml</bestandsnaam>
-        <contentType>application/xml</contentType>
-    </bestand>
-    <bestand>
-        <bestandsnaam>GIO001-Bedrijf_categorie_2.xml</bestandsnaam>
-        <contentType>application/xml</contentType>
-    </bestand>
-    <bestand>
-        <bestandsnaam>GIO002-Centrumgebied.xml</bestandsnaam>
-        <contentType>application/xml</contentType>
-    </bestand>
-    <bestand>
-        <bestandsnaam>GIO003-Zone_A.xml</bestandsnaam>
-        <contentType>application/xml</contentType>
-    </bestand>
-    <bestand>
-        <bestandsnaam>GIO004-Zone_B.xml</bestandsnaam>
-        <contentType>application/xml</contentType>
-    </bestand>
-    <bestand>
-        <bestandsnaam>GIO005-Speelhal.xml</bestandsnaam>
         <contentType>application/xml</contentType>
     </bestand>
     <bestand>
@@ -68,27 +48,11 @@
         <contentType>application/xml</contentType>
     </bestand>
     <bestand>
-        <bestandsnaam>owActiviteiten-Gemeentestad.xml</bestandsnaam>
+        <bestandsnaam>OwGrandTestExemplaar.xml</bestandsnaam>
         <contentType>application/xml</contentType>
     </bestand>
     <bestand>
-        <bestandsnaam>owGebiedsaanwijzingen-Gemeentestad.xml</bestandsnaam>
-        <contentType>application/xml</contentType>
-    </bestand>
-    <bestand>
-        <bestandsnaam>owLocaties-Gemeentestad.xml</bestandsnaam>
-        <contentType>application/xml</contentType>
-    </bestand>
-    <bestand>
-        <bestandsnaam>owOmgevingsnormOmgevingswaarde.xml</bestandsnaam>
-        <contentType>application/xml</contentType>
-    </bestand>
-    <bestand>
-        <bestandsnaam>owPons-Gemeentestad.xml</bestandsnaam>
-        <contentType>application/xml</contentType>
-    </bestand>
-    <bestand>
-        <bestandsnaam>owRegeltekst-Gemeentestad.xml</bestandsnaam>
+        <bestandsnaam>Ow_TPOD1760GebiedsaanwijzingMetgebiedenGroep.xml</bestandsnaam>
         <contentType>application/xml</contentType>
     </bestand>
 </manifest>
