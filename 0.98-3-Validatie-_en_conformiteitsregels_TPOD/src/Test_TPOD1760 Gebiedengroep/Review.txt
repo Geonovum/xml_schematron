@@ -1,3 +1,7 @@
+Schematron draaien tegen Ow_TPOD1760GebiedsaanwijzingMetgebiedenGroep
+
+er zit een groep in waarvan 1 gebied verwijst naar een pointgeometrie, die wordt gevonden.
+
 Verwachte foutmeldingen:
 
 Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1670\OwGrandTestExemplaar.xml

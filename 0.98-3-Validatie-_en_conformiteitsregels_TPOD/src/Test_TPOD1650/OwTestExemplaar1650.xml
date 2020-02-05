@@ -16,6 +16,7 @@
 	xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
 	xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
 	xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/" xmlns:foo="http://whatever"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
 	xsi:schemaLocation="http://www.geostandaarden.nl/imow/0.98.1 https://raw.githubusercontent.com/Geonovum/xml_ow_xsd_0.98.1-kern/master/xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
 	<sl:standBestand>
 		<sl:dataset>Gemeentestad</sl:dataset>
@@ -134,6 +135,68 @@
 				</rol:Omgevingswaarde>
 			</ow-dc:owObject>
 		</sl:stand>
+		<!--  Omgevingsnorm correct met kwantitatieveWaarde-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm ow:regeltekstId="">
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900001</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>abc</rol:naam>
+					<rol:groep>def</rol:groep>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!--  Omgevingsnorm correct met kwalitatieveWaarde-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm ow:regeltekstId="">
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900002</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>200</da:waarde>
+								<da:eenheid>μg/m3</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>abc</rol:naam>
+					<rol:groep>def</rol:groep>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Omgevingsnorm niet correct met kwalitatieveWaarde en kwantitatieveWaarde -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm ow:regeltekstId="">
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900003</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>200</da:waarde>
+								<da:eenheid>μg/m3</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>abc</rol:naam>
+					<rol:groep>def</rol:groep>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+		
 		<!-- RegelVoorIedereen correct + activiteitregelkwalificatie en activiteitaanduiding --> 
 		<sl:stand>
 			<ow-dc:owObject>

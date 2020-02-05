@@ -1,3 +1,6 @@
+De schematron uitvoeren met GML_TP0D930.gml.
+In de gml's zitten coordinaten die zijn toegestaan en coordinaten die teveel cijfers achter de komma hebben, zie foutmeldingen
+
 Verwachte foutmeldingen:
 
 Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD930\GML_TP0D930.gml

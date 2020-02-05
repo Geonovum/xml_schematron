@@ -1,3 +1,7 @@
+Schematron Draaien tegen Ow_TPOD1760GebiedsaanwijzingMetGebied.xml
+
+In de aangeboden gebieden zit een gebied dat verwijst naar een pointgeometrie, een aantal goede.
+
 Verwachte foutmeldingen:
 
 Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1670\OwGrandTestExemplaar.xml

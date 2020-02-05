@@ -72,7 +72,8 @@
                <gml:surfaceMember>
                   <gml:Polygon gml:id="id-33B7D2D0-BF32-4CA1-B7F6-EB0FEF30175A-1">
                      <gml:exterior>
-                        <gml:LinearRing>
+                        <gml:LinearRing gml:id="id-33B7D2D0-BF32-4CA1-B7F6-EB0FEF30175A-2"
+                           srsName="urn:ogc:def:crs:EPSG::28992">
                            <gml:posList>138189.2919738 424664.586667557 138330.1813784
                               424712.302960418 138554.555403801 424598.429074509 138934.732997256
                               424595.102643709 139068.936773216 424523.441275136 138963.90400585
@@ -83,7 +84,7 @@
                   </gml:Polygon>
                </gml:surfaceMember>
                <gml:surfaceMember>
-                  <gml:Polygon gml:id="id-33B7D2D0-BF32-4CA1-B7F6-EB0FEF30175A-2">
+                  <gml:Polygon gml:id="id-33B7D2D0-BF32-4CA1-B7F6-EB0FEF30175A-3">
                      <gml:exterior>
                         <gml:LinearRing>
                            <gml:posList>148189.2919738 424664.586667557 148330.1813784

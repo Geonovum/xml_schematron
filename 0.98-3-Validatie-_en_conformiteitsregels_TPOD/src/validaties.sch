@@ -24,11 +24,12 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/kaartrecept/v20190901" prefix="k"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/pons/v20190901" prefix="p"/>
     
-    <xsl:variable name="allDocuments" select="collection('.?select=*.xml')"/>
-
+    <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
+    <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
+    
     <!-- TPOD930_TPOD940 -->
     <sch:pattern id="TPOD930_TPOD940">
-        <sch:rule context="$allDocuments/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '28992']">
+        <sch:rule context="$gmlDocuments/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '28992']">
             <xsl:variable name="fouteCoord">
                 <xsl:for-each select="foo:posListForCoordinateCheck(.)">
                     <xsl:if test="string-length(substring-after(string(.), '.')) &gt; 3">
@@ -41,7 +42,7 @@
                 opgegeven waarbij de waarde maximaal 3 decimalen achter de komma mag
                 bevatten.  Id=<sch:value-of select="geo:id"/>. De coordinaten waarom het gaat staan nu genoemd: <sch:value-of select="$fouteCoord"/></sch:assert>
         </sch:rule>
-        <sch:rule context="$allDocuments/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '4258']">
+        <sch:rule context="$gmlDocuments/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '4258']">
             <xsl:variable name="fouteCoord">
                 <xsl:for-each select="foo:posListForCoordinateCheck(.)">
                     <xsl:if test="string-length(substring-after(string(.), '.')) &gt; 8">
@@ -55,7 +56,7 @@
                 bevatten.  Id=<sch:value-of select="geo:id"/>. De coordinaten waarom het gaat staan nu genoemd: <sch:value-of select="$fouteCoord"/></sch:assert>
         </sch:rule>
         <sch:rule
-            context="$allDocuments/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
+            context="$gmlDocuments/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
             <xsl:variable name="crs">
                 <xsl:for-each select="descendant-or-self::*/@srsName">
                     <xsl:if test="position()=1">
@@ -329,12 +330,11 @@
     </xsl:function>
     
     
-    <!-- TPOD1760 -->
     <sch:pattern id="TPOD1760">
         <sch:rule
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing">
             <sch:assert
-                test="foo:isGebiedaanwijzingvanTypegebied(., foo:featureMembers())[1] = ''"
+                test="foo:isGebiedaanwijzingvanTypegebied(., $gmlDocuments/geo:FeatureCollectionGeometrie/geo:featureMember)[1] = ''"
                 > H:TPOD1760: Betreft <sch:value-of select="ga:identificatie"/>: Een
                 gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt,
                 puntengroep, lijn of lijnengroep zijn). </sch:assert>
@@ -347,10 +347,14 @@
         <xsl:for-each select="$context/ga:locatieaanduiding/l-ref:LocatieRef">
             <xsl:choose>
                 <xsl:when test="contains(@xlink:href, 'gebiedengroep')">
-                    <xsl:for-each select="foo:gebiedenGroepen()">
+                    <xsl:variable name="gebiedengroepen" select="$xmlDocuments//ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/l:Gebiedengroep"/>
+                    <xsl:message><xsl:value-of select="$gebiedengroepen"/></xsl:message>
+                    <xsl:for-each select="$gebiedengroepen">
+                        <xsl:message><xsl:value-of select="position()"/></xsl:message>
+                        <xsl:message><xsl:value-of select="current()"/></xsl:message>
                         <xsl:if
-                            test="current()/l:Gebiedengroep/l:identificatie = $context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href">
-                            <xsl:for-each select="current()/l:Gebiedengroep/l:groepselement/l-ref:GebiedRef">
+                            test="current()/l:identificatie = $context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href">
+                            <xsl:for-each select="current()/l:groepselement/l-ref:GebiedRef">
                                 <xsl:value-of
                                     select="foo:isGebiedvanTypegebied(@xlink:href, $featureMembers)"
                                 />
@@ -370,8 +374,8 @@
     <xsl:function name="foo:isGebiedvanTypegebied">
         <xsl:param name="id" as="xs:string"/>
         <xsl:param name="featureMembers" as="node()*"/>
-        <xsl:variable name="gebieden" select="foo:gebieden()"/>
-        <xsl:for-each select="$gebieden/l:Gebied">
+        <xsl:variable name="gebieden" select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/l:Gebied"/>
+        <xsl:for-each select="$gebieden">
             <xsl:if test="current()/l:identificatie = $id">
                 <xsl:value-of select="foo:isGeometrievanTypegebied(current()/l:geometrie/g-ref:GeometrieRef/@xlink:href, $featureMembers)"/>
             </xsl:if>
@@ -391,404 +395,6 @@
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$result"></xsl:value-of>
-    </xsl:function>
-    
-    <!-- GENERIC FUNCTIONS -->
-    
-    <xsl:function name="foo:manifest-ow">
-        <xsl:variable name="manifest-ow">
-            <xsl:for-each select="$allDocuments">
-                <xsl:if test="Modules">
-                    <manifest-ow copy-namespaces="no" xmlns="">
-                        <xsl:for-each select="//Modules/RegelingVersie/Bestand">
-                            <Bestand copy-namespaces="no" xmlns="">
-                                <xsl:element name="naam">
-                                    <xsl:value-of
-                                        select="concat(string-join($base-uri), string('/'), string(naam))"/>
-                                </xsl:element>
-                                <xsl:for-each select="objecttype">
-                                    <xsl:element name="objecttype">
-                                        <xsl:value-of select="."/>
-                                    </xsl:element>
-                                </xsl:for-each>
-                            </Bestand>
-                        </xsl:for-each>
-                    </manifest-ow>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$manifest-ow"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:manifest">
-        <xsl:variable name="manifestBestand">
-            <xsl:for-each select="$allDocuments">
-                <xsl:if test="lvbb:manifest">
-                    <manifest copy-namespaces="no" xmlns="">
-                        <xsl:for-each select="//lvbb:manifest/lvbb:bestand">
-                            <bestand copy-namespaces="no" xmlns="">
-                                <xsl:element name="bestandsNaam">
-                                    <xsl:value-of select="lvbb:bestandsnaam"/>
-                                </xsl:element>
-                                <xsl:element name="contentType">
-                                    <xsl:value-of select="lvbb:contentType"/>
-                                </xsl:element>
-                            </bestand>
-                        </xsl:for-each>
-                    </manifest>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$manifestBestand"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:substring-before-last">
-        <xsl:param name="input"/>
-        <xsl:param name="substr"/>
-        <xsl:if test="$substr and contains($input, $substr)">
-            <xsl:variable name="temp" select="substring-after($input, $substr)"/>
-            <xsl:value-of select="substring-before($input, $substr)"/>
-            <xsl:if test="contains($temp, $substr)">
-                <xsl:value-of select="$substr"/>
-                <xsl:value-of select="foo:substring-before-last($temp, $substr)"> </xsl:value-of>
-            </xsl:if>
-        </xsl:if>
-    </xsl:function>
-    
-    <xsl:function name="foo:substring-after-last">
-        <xsl:param name="input"/>
-        <xsl:param name="substr"/>
-        <xsl:variable name="temp" select="substring-after($input, $substr)"/>
-        <xsl:choose>
-            <xsl:when test="$substr and contains($temp, $substr)">
-                <xsl:value-of select="foo:substring-after-last($temp, $substr)"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="$temp"/>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:function>
-    
-    <xsl:variable name="base-uri" select="foo:substring-before-last(base-uri(.), '/')"/>
-    
-    <xsl:function name="foo:featureMembers">
-        <xsl:variable name="featureMembers">
-            <xsl:for-each select="foo:manifest()/manifest/bestand">
-                <xsl:if test="contains(contentType, 'gml+xml')">
-                    <xsl:if test="document(bestandsNaam)//geo:FeatureCollectionGeometrie">
-                        <xsl:for-each
-                            select="document(bestandsNaam)//geo:FeatureCollectionGeometrie/geo:featureMember">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$featureMembers"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:gebieden">
-        <xsl:variable name="gebieden">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Gebied'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/l:Gebied">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$gebieden"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:punten">
-        <xsl:variable name="punten">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Punt'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/l:Punt">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$punten"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:lijnen">
-        <xsl:variable name="lijnen">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Lijn'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/l:Lijn">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$lijnen"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:gebiedenGroepen">
-        <xsl:variable name="gebiedenGroepen">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Gebiedengroep'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/l:Gebiedengroep">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$gebiedenGroepen"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:puntenGroepen">
-        <xsl:variable name="puntenGroepen">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Puntengroep'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/l:Puntengroep">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$puntenGroepen"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:lijnenGroepen">
-        <xsl:variable name="lijnenGroepen">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Lijnengroep'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/l:Lijnengroep">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$lijnenGroepen"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:symbolisatiecollectie">
-        <xsl:variable name="symbolisatiecollectie">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Symbolisatiecollectie'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/k:Symbolisatiecollectie">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$symbolisatiecollectie"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:kaart">
-        <xsl:variable name="kaart">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Kaart'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/k:Kaart">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$kaart"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:pons">
-        <xsl:variable name="pons">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Pons'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/p:Pons">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$pons"/>
-    </xsl:function>
-    
-    <xsl:variable name="foo:regelTeksten">
-        <xsl:variable name="regelTeksten">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Regeltekst'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/r:Regeltekst">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$regelTeksten"/>
-    </xsl:variable>
-    
-    <xsl:variable name="foo:regelsVoorIedereen">
-        <xsl:variable name="regelsVoorIedereen">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'RegelVoorIedereen'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/r:RegelVoorIedereen">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$regelsVoorIedereen"/>
-    </xsl:variable>
-    
-    <xsl:variable name="foo:omgevingswaarderegel">
-        <xsl:variable name="omgevingswaarderegel">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Omgevingswaarderegel'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/r:Omgevingswaarderegel">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$omgevingswaarderegel"/>
-    </xsl:variable>
-    
-    <xsl:function name="foo:activiteiten">
-        <xsl:variable name="activiteiten">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Activiteit'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$activiteiten"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:omgevingsnormen">
-        <xsl:variable name="omgevingsnormen">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Omgevingsnorm'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/rol:Omgevingsnorm">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$omgevingsnormen"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:omgevingswaardes">
-        <xsl:variable name="omgevingswaardes">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Omgevingswaarde'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/rol:Omgevingswaarde">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$omgevingswaardes"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:gebiedsaanwijzing">
-        <xsl:variable name="gebiedsaanwijzing">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Gebiedsaanwijzing'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/ga:Omgevingswaarde">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$gebiedsaanwijzing"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:formeleDivisies">
-        <xsl:variable name="formeleDivisies">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'FormeleDivisie'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/vt:FormeleDivisie">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$formeleDivisies"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:tekstdeel">
-        <xsl:variable name="tekstdeel">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Tekstdeel'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/vt:Tekstdeel">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$tekstdeel"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:hoofdlijn">
-        <xsl:variable name="hoofdlijn">
-            <xsl:for-each select="foo:manifest-ow()//Bestand">
-                <xsl:for-each select="objecttype">
-                    <xsl:if test="text() = 'Hoofdlijn'">
-                        <xsl:for-each
-                            select="document(../naam)//sl:standBestand/sl:stand/ow-dc:owObject/vt:Hoofdlijn">
-                            <xsl:copy-of select="."/>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:copy-of select="$hoofdlijn"/>
     </xsl:function>
     
     

@@ -1,3 +1,6 @@
+Schematron draaien tegen OwTestExemplaar1670.xml
+Een regel voor iedereen moet naar een activiteit verwijzen voordat Activiteitregelkwalificatie in kan. In testbestand zit een fout situatie en verschillende goed-situaties
+
 Verwachte foutmeldingen:
 
 Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1670\OwGrandTestExemplaar.xml

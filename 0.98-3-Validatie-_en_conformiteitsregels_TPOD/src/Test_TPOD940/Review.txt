@@ -1,3 +1,7 @@
+Schematron draaien tegen GML_TP0D940.gml
+In deze gml zit een geometrie die twee CRS's in de hierarchie heeft met tegen gestelde waarde, een geometrie die ook twee CRS's heeft maar van gelijke waarde (is toegestaan)
+En een aantal geometrieen met maar een CRS
+
 Verwachte foutmeldingen:
 
 Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD940\GML_TP0D940.gml

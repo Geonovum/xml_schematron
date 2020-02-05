@@ -1,3 +1,6 @@
+Het schematron moet gedraaid worden tegen de verschillende XML test bestanden.
+Sommige mogelijke fouten worden gemeld via een REPORT, in plaats van een fout. Dit komt omdat een API moet worden gebruikt om de functionele structuur te doorzoeken, en die API aansluiting is nog niet voorzien.
+
 Verwachte foutmeldingen:
 
 TPOD1730

@@ -12,7 +12,7 @@
       <objecttype>Gebiedsaanwijzing</objecttype>
     </Bestand>
     <Bestand>
-      <naam>OwGrandTestExemplaar.xml</naam>
+      <naam>OwTestExemplaar.xml</naam>
       <objecttype>Regeltekst</objecttype>
       <objecttype>Gebied</objecttype>
       <objecttype>Gebiedengroep</objecttype>
