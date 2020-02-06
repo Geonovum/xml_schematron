@@ -6,10 +6,10 @@
    gml:id="main">
    <geo:featureMember>
       <geo:Geometrie>
-         <geo:id>D28AF779-7EDD-4A88-8B11-809798F53612</geo:id>
+         <geo:id>C28AF779-7EDD-4A88-8B11-809798F53621</geo:id>
          <geo:geometrie>
             <gml:MultiPoint srsName="urn:ogc:def:crs:EPSG::28992"
-               gml:id="id-D28AF779-7EDD-4A88-8B11-809798F53612-0">
+               gml:id="id-C28AF779-7EDD-4A88-8B11-809798F53621-0">
                   <gml:pointMember>
                      <gml:Point>
                         <gml:coordinates>

@@ -620,7 +620,7 @@
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
 					<l:identificatie>nl.imow-gm0037.gebied.201900001</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href=""/>
+						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -631,7 +631,7 @@
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000002">
 					<l:identificatie>nl.imow-gm0037.gebied.201900002</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href=""/>
+						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -642,40 +642,77 @@
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
 					<l:identificatie>nl.imow-gm0037.gebied.201900003</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href=""/>
+						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Gebiedengroep -->
+		<!-- Gebied FOUT verwijst naar een punt-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000002">
+					<l:identificatie>nl.imow-gm0037.gebied.201900004</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied FOUT verwijst naar een lijn-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000002">
+					<l:identificatie>nl.imow-gm0037.gebied.201900005</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebiedengroep GOED Gebied 1 en 2 -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebiedengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
 					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900001</l:identificatie>
 					<l:groepselement>
-						<l-ref:GebiedRef xlink:href=""/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
 					</l:groepselement>
 				</l:Gebiedengroep>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Gebiedengroep -->
+		<!-- Gebiedengroep GOED Gebied 2 en 3 -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebiedengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000002">
 					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900002</l:identificatie>
 					<l:groepselement>
-						<l-ref:GebiedRef xlink:href=""/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
 					</l:groepselement>
 				</l:Gebiedengroep>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Gebiedengroep -->
+		<!-- Gebiedengroep FOUT verwijst naar een punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebiedengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000002">
+					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900002</l:identificatie>
+					<l:groepselement>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.punt.201900003"/>
+					</l:groepselement>
+				</l:Gebiedengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebiedengroep FOUT verwijst naar een lijn -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebiedengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
 					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900003</l:identificatie>
 					<l:groepselement>
-						<l-ref:GebiedRef xlink:href=""/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
 					</l:groepselement>
 				</l:Gebiedengroep>
 			</ow-dc:owObject>
@@ -686,7 +723,7 @@
 				<l:Punt ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
 					<l:identificatie>nl.imow-gm0037.punt.201900001</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href=""/>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
 				</l:Punt>
 			</ow-dc:owObject>
@@ -697,7 +734,7 @@
 				<l:Punt ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000002">
 					<l:identificatie>nl.imow-gm0037.punt.201900002</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href=""/>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53621"/>
 					</l:geometrie>
 				</l:Punt>
 			</ow-dc:owObject>
@@ -708,40 +745,77 @@
 				<l:Punt ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
 					<l:identificatie>nl.imow-gm0037.punt.201900003</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href=""/>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53631"/>
 					</l:geometrie>
 				</l:Punt>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Puntengroep -->
+		<!-- Punt FOUT verwijst naar een gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
+					<l:identificatie>nl.imow-gm0037.punt.201900004</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt FOUT verwijst naar een lijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
+					<l:identificatie>nl.imow-gm0037.punt.201900005</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Puntengroep GOED lijn 1 en 2 -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Puntengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
 					<l:identificatie>nl.imow-gm0037.puntengroep.201900001</l:identificatie>
 					<l:groepselement>
-						<l-ref:PuntRef xlink:href=""/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900001"/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
 					</l:groepselement>
 				</l:Puntengroep>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Puntengroep -->
+		<!-- Puntengroep GOED lijn 2 en 3 -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Puntengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000002">
 					<l:identificatie>nl.imow-gm0037.puntengroep.201900002</l:identificatie>
 					<l:groepselement>
-						<l-ref:PuntRef xlink:href=""/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900003"/>
 					</l:groepselement>
 				</l:Puntengroep>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Puntengroep -->
+		<!-- Puntengroep FOUT verwijst naar een lijn-->
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Puntengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
 					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
 					<l:groepselement>
-						<l-ref:PuntRef xlink:href=""/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+					</l:groepselement>
+				</l:Puntengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Puntengroep FOUT verwijst naar een gebied-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Puntengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
+					<l:groepselement>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
 					</l:groepselement>
 				</l:Puntengroep>
 			</ow-dc:owObject>
@@ -752,7 +826,7 @@
 				<l:Lijn ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
 					<l:identificatie>nl.imow-gm0037.lijn.201900001</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href=""/>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
 				</l:Lijn>
 			</ow-dc:owObject>
@@ -763,7 +837,7 @@
 				<l:Lijn ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000002">
 					<l:identificatie>nl.imow-gm0037.lijn.201900002</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href=""/>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53621"/>
 					</l:geometrie>
 				</l:Lijn>
 			</ow-dc:owObject>
@@ -774,40 +848,77 @@
 				<l:Lijn ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
 					<l:identificatie>nl.imow-gm0037.lijn.201900003</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href=""/>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53631"/>
 					</l:geometrie>
 				</l:Lijn>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Lijnengroep -->
+		<!-- Lijn FOUT verwijst naar een gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
+					<l:identificatie>nl.imow-gm0037.lijn.201900004</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn FOUT verwijst naar een punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
+					<l:identificatie>nl.imow-gm0037.lijn.201900005</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijnengroep GOED lijn 1 en 2-->
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Lijnengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
 					<l:identificatie>nl.imow-gm0037.lijnengroep.201900001</l:identificatie>
 					<l:groepselement>
-						<l-ref:LijnRef xlink:href=""/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900002"/>
 					</l:groepselement>
 				</l:Lijnengroep>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Lijnengroep -->
+		<!-- Lijnengroep GOED lijn 2 en 3-->
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Lijnengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000002">
 					<l:identificatie>nl.imow-gm0037.lijnengroep.201900002</l:identificatie>
 					<l:groepselement>
-						<l-ref:LijnRef xlink:href=""/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900002"/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
 					</l:groepselement>
 				</l:Lijnengroep>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Lijnengroep -->
+		<!-- Lijnengroep FOUT bevat verwijzing naar punt-->
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Lijnengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
 					<l:identificatie>nl.imow-gm0037.lijnengroep.201900003</l:identificatie>
 					<l:groepselement>
-						<l-ref:LijnRef xlink:href=""/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+					</l:groepselement>
+				</l:Lijnengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijnengroep FOUT bevat verwijzing naar gebied-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijnengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000003">
+					<l:identificatie>nl.imow-gm0037.lijnengroep.201900003</l:identificatie>
+					<l:groepselement>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
 					</l:groepselement>
 				</l:Lijnengroep>
 			</ow-dc:owObject>
@@ -816,7 +927,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<vt:FormeleDivisie wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main" wId="gm0037_1__subchp_2.2__art_2.3">
-					<identificatie>nl.imow-gm0037.formeledivisie.201900001</identificatie>
+					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900001</vt:identificatie>
 				</vt:FormeleDivisie>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -824,7 +935,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<vt:FormeleDivisie wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main" wId="gm0037_1__subchp_2.2__art_2.3">
-					<identificatie>nl.imow-gm0037.formeledivisie.201900002</identificatie>
+					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900002</vt:identificatie>
 				</vt:FormeleDivisie>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -832,7 +943,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<vt:FormeleDivisie wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main" wId="gm0037_1__subchp_2.2__art_2.3">
-					<identificatie>nl.imow-gm0037.formeledivisie.201900003</identificatie>
+					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900003</vt:identificatie>
 				</vt:FormeleDivisie>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -840,13 +951,13 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<k:Symbolisatiecollectie>
-					<symbolisatieItem>
-						<SymbolisatieItem>
-							<objecttype></objecttype>
-							<attribuut></attribuut>
-							<symboolcode></symboolcode>
-						</SymbolisatieItem>
-					</symbolisatieItem>
+					<k:symbolisatieItem>
+						<k:SymbolisatieItem>
+							<k:objecttype></k:objecttype>
+							<k:attribuut></k:attribuut>
+							<k:symboolcode></k:symboolcode>
+						</k:SymbolisatieItem>
+					</k:symbolisatieItem>
 				</k:Symbolisatiecollectie>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -854,13 +965,13 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<k:Symbolisatiecollectie>
-					<symbolisatieItem>
-						<SymbolisatieItem>
-							<objecttype></objecttype>
-							<attribuut></attribuut>
-							<symboolcode></symboolcode>
-						</SymbolisatieItem>
-					</symbolisatieItem>
+					<k:symbolisatieItem>
+						<k:SymbolisatieItem>
+							<k:objecttype></k:objecttype>
+							<k:attribuut></k:attribuut>
+							<k:symboolcode></k:symboolcode>
+						</k:SymbolisatieItem>
+					</k:symbolisatieItem>
 				</k:Symbolisatiecollectie>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -868,13 +979,13 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<k:Symbolisatiecollectie>
-					<symbolisatieItem>
-						<SymbolisatieItem>
-							<objecttype></objecttype>
-							<attribuut></attribuut>
-							<symboolcode></symboolcode>
-						</SymbolisatieItem>
-					</symbolisatieItem>
+					<k:symbolisatieItem>
+						<k:SymbolisatieItem>
+							<k:objecttype></k:objecttype>
+							<k:attribuut></k:attribuut>
+							<k:symboolcode></k:symboolcode>
+						</k:SymbolisatieItem>
+					</k:symbolisatieItem>
 				</k:Symbolisatiecollectie>
 			</ow-dc:owObject>
 		</sl:stand>

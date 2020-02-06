@@ -6,10 +6,10 @@
    gml:id="main">
    <geo:featureMember>
       <geo:Geometrie>
-         <geo:id>D28AF779-7EDD-4A88-8B11-809798F53602</geo:id>
+         <geo:id>B28AF779-7EDD-4A88-8B11-809798F53621</geo:id>
          <geo:geometrie>
             <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992"
-               gml:id="id-D28AF779-7EDD-4A88-8B11-809798F53602-0">
+               gml:id="id-BS28AF779-7EDD-4A88-8B11-809798F53621-0">
                <gml:coordinates>
                   138189.291973878 424664.586667557 138189.291973878 424664.586667557
                </gml:coordinates>
