@@ -2,7 +2,7 @@
 <geo:FeatureCollectionGeometrie xmlns:geo="http://www.geostandaarden.nl/basisgeometrie/v20190901"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xmlns:gml="http://www.opengis.net/gml/3.2"
-   xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/geo/ ../xsd/basisgeometrie/v20190901/geometrie.xsd"
+   xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/geo/ https://raw.githubusercontent.com/Geonovum/xml_ow_xsd_0.98.2-kern/master/xsd/basisgeometrie/v20190901/geometrie.xsd"
    gml:id="main">
    <geo:featureMember>
       <geo:Geometrie>
