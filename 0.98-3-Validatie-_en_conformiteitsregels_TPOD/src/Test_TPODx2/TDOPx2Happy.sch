@@ -34,10 +34,9 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <sch:assert test="string-length($nietGerefereerdeGeometrieen)=0"> xxx: Er wordt niet gerefereerd aan volgende geometrieen: <xsl:value-of select="nietGerefereerdeGeometrieen"/>
+            <sch:assert test="string-length($nietGerefereerdeGeometrieen)=0"> xxx: Er wordt in de OwObjecten niet gerefereerd aan volgende (wel bestaande) geometrieen: <xsl:value-of select="$nietGerefereerdeGeometrieen"/>
             </sch:assert>
         </sch:rule>
-        
     </sch:pattern>
     
     <xsl:function name="foo:getLocationGeoReferenceIdentifiers">
