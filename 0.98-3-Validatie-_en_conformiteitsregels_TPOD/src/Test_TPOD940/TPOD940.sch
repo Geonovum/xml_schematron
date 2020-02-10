@@ -18,21 +18,6 @@
     <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
     <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
     
-    <xsl:function name="foo:posListForCoordinateCheck">
-        <xsl:param name="context" as="node()"/>
-        <xsl:for-each select="$context">
-            <xsl:for-each select="descendant::gml:posList">
-                <xsl:variable name="coordinaten" select="tokenize(normalize-space(text()), ' ')"
-                    as="xs:string*"/>
-                <xsl:for-each select="$coordinaten">
-                    <xsl:element name="pos">
-                        <xsl:value-of select="."/>
-                    </xsl:element>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:for-each>
-    </xsl:function>
-
     <sch:pattern id="TPOD940">
         <sch:rule
             context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
