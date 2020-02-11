@@ -15,7 +15,7 @@
     
     
     
-    <sch:pattern id="TPOD1700_TPOD1710_TPOD1730">
+    <sch:pattern id="TPOD1700">
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <!-- TPOD1710  -->
             <!-- Er wordt uitgegaan van een maximale diepte van Ow-Activiteiten-hierarchie binnen een besluit context van 6 lagen (in werkelijkheid komen er
@@ -44,11 +44,11 @@
                 </xsl:if>
             </xsl:variable>
             
+            
+            
             <!-- TPOD1700  -->
-            <!-- Omdat de offendingIds circuliaire verwijzingen zijn worden ze niet gebruikt bij de volgende test waarbij gekeken wordt of iedere activiteit
-            uiteindelijk bij een functionele activiteit uitkomt -->
-            
-            
+            <!-- Omdat de offendingIds circuliaire verwijzingen zijn worden ze niet gebruikt bij de volgende test 
+                waarbij gekeken wordt of iedere activiteit uiteindelijk bij een functionele activiteit uitkomt -->
             <xsl:variable name="activiteitenTrajectNaarFunctioneleStructuur">
                 <xsl:variable name="identificatie" select="rol:identificatie"/>
                 <xsl:variable name="lokaalBovenliggend"
@@ -74,24 +74,6 @@
                 van nieuwe activiteiten geldt dat de hoogste activiteit in de hiërarchie een
                 bovenliggende activiteit moet hebben die reeds bestaat in de functionele structuur.
                 DIT LAATSTE WORDT NU NOG NIET GETEST </sch:report>
-            <!-- TPOD1710  -->
-            <sch:assert test="string-length($circulaireActivititeiten) = 0">ZH:TP0D1710:
-                Activiteit-ids: <sch:value-of select="$circulaireActivititeiten"/>: Een
-                bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de
-                hiërarchie ligt.</sch:assert>
-            <!-- TPOD1730  -->
-            <sch:assert
-                test="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"
-                >H:TPOD1730: <sch:value-of
-                    select="rol:identificatie"/> Betreft verwijzing: 
-                <sch:value-of select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>: Gerelateerde activiteiten moeten
-                bestaan indien er naar verwezen wordt.</sch:assert>
-            <!-- TPOD1740  -->
-            <sch:report test="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href))"> REPORT: H:TPOD1740: <sch:value-of
-                select="rol:identificatie"
-            />:  Betreft verwijzing: <sch:value-of select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>: Bovenliggende 
-                activiteiten moeten bestaan indien er naar verwezen wordt. DIT LAATSTE WORDT NU NOG
-                NIET GETEST</sch:report>
         </sch:rule>
     
     </sch:pattern>

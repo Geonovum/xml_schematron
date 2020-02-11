@@ -22,7 +22,7 @@
     <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
     <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
 
-    <sch:pattern id="TDOP_x1">
+    <sch:pattern id="TDOP_1930">
         <sch:rule
             context="//l:Gebiedengroep/l:groepselement">
             <xsl:variable name="notFound">
@@ -38,40 +38,6 @@
                     select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
                     <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
                 in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn. </sch:assert>
-        </sch:rule>
-        
-        <sch:rule
-            context="//l:Puntengroep/l:groepselement">
-            <xsl:variable name="notFound">
-                <xsl:for-each select="l-ref:PuntRef">
-                    <xsl:variable name="identifiers"
-                        select="foo:getIdentifiers($xmlDocuments//l:Punt/l:identificatie)"/>
-                    <xsl:if test="not(contains($identifiers, @xlink:href))">
-                        <xsl:value-of select="concat(@xlink:href, ', ')"/>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:variable>
-            <sch:assert test="string-length($notFound) = 0"> xxx: Betreft <sch:value-of
-                select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
-                <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
-                in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn. </sch:assert>
-        </sch:rule>
-        
-        <sch:rule
-            context="//l:Lijnengroep/l:groepselement">
-            <xsl:variable name="notFound">
-                <xsl:for-each select="l-ref:LijnRef">
-                    <xsl:variable name="identifiers"
-                        select="foo:getIdentifiers($xmlDocuments//l:Lijn/l:identificatie)"/>
-                    <xsl:if test="not(contains($identifiers, @xlink:href))">
-                        <xsl:value-of select="concat(@xlink:href, ', ')"/>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:variable>
-            <sch:assert test="string-length($notFound) = 0"> xxx: Betreft <sch:value-of
-                select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
-                <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
-                in een Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn. </sch:assert>
         </sch:rule>
         
         <sch:rule context="//l:Gebied/l:geometrie/g-ref:GeometrieRef">
@@ -90,41 +56,6 @@
                 vanuit een Gebied moet een gebied-geometrie zijn. 
             </sch:assert>
         </sch:rule>
-        
-        <sch:rule context="//l:Punt/l:geometrie/g-ref:GeometrieRef">
-            <xsl:variable name="href" select="string(@xlink:href)"/>
-            <xsl:variable name="geometrie">
-                <xsl:for-each select="$gmlDocuments//geo:Geometrie">
-                    <xsl:if test="string(geo:id/text())=$href">
-                        <xsl:copy-of select="."/>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:variable>
-            <sch:assert test="$geometrie//gml:MultiPoint || $geometrie//gml:Point">
-                xxx: Betreft <sch:value-of
-                    select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
-                <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject
-                vanuit een Punt moet een punt-geometrie zijn. 
-            </sch:assert>
-        </sch:rule>
-        
-        <sch:rule context="//l:Lijn/l:geometrie/g-ref:GeometrieRef">
-            <xsl:variable name="href" select="string(@xlink:href)"/>
-            <xsl:variable name="geometrie">
-                <xsl:for-each select="$gmlDocuments//geo:Geometrie">
-                    <xsl:if test="string(geo:id/text())=$href">
-                        <xsl:copy-of select="."/>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:variable>
-            <sch:assert test="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)">
-                xxx: Betreft <sch:value-of
-                    select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
-                <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject
-                vanuit een Lijn moet een lijn-geometrie zijn. 
-            </sch:assert>
-        </sch:rule>
-
     </sch:pattern>
 
     <xsl:function name="foo:getIdentifiers">
