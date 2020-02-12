@@ -1,0 +1,115 @@
+Schematron draaien tegen OwTestExemplaar1860.xml
+
+Verwachte foutmeldingen:
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft r:Regeltekst: nl.imow-gm0037.regeltekst.2019000012: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn. (gerelateerdeRegeltekst verwijst naar zichzelf)
+Startlocatie: 162:42
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft r:RegelVoorIedereen: nl.imow-gm0037.regeltekst.201900004, nl.imow-gm0037.activiteit.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 233:81
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft r:RegelVoorIedereen: nl.imow-gm0037.regeltekst.201900005, nl.imow-gm0037.gebiedsaanwijzing.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 250:94
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft r:RegelVoorIedereen: nl.imow-gm0037.regeltekst.201900006, nl.imow-gm0037.omgevingsnorm.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 267:87
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft r:RegelVoorIedereen: nl.imow-gm0037.regeltekst.2019000061, nl.imow-gm0037.regeltekst.2019000061: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 281:79
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft r:RegelVoorIedereen: , nl.imow-gm0037.gebied.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 295:71
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft r:Instructieregel: nl.imow-gm0037.regeltekst.201900001, nl.imow-gm0037.omgevingsnorm.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 377:87
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft r:Instructieregel: nl.imow-gm0037.regeltekst.201900002, nl.imow-gm0037.gebiedsaanwijzing.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 394:94
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft r:Instructieregel: , nl.imow-gm0037.gebied.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 405:71
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft r:Instructieregel: nl.imow-gm0037.regeltekst.2019000041, nl.imow-gm0037.regeltekst.2019000041: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 422:79
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft rol:Activiteit: nl.imow-gm0037.activiteit.201900003, nl.imow-gm0037.gebied.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 470:71
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft rol:Activiteit: nl.imow-gm0037.activiteit.201900004, nl.imow-gm0037.activiteit.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 489:81
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft rol:Activiteit: nl.imow-gm0037.activiteit.201900005: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn. (gerelateerdeActiviteit verwijst naar zichzelf)
+Startlocatie: 500:75
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft rol:Normwaarde: , nl.imow-gm0037.gebied.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 541:73
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft rol:Normwaarde: , nl.imow-gm0037.gebied.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 580:74
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1860\OwTestExemplaar1860.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: H:TPOD1860: Betreft ga:Gebiedsaanwijzing: , nl.imow-gm0037.gebied.2019000011: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+Startlocatie: 612:72
