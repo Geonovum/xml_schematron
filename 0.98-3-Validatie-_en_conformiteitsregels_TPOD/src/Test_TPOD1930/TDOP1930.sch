@@ -34,27 +34,10 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <sch:assert test="string-length($notFound) = 0"> xxx: Betreft <sch:value-of
+            <sch:assert test="string-length($notFound) = 0"> TDOP_1930: Betreft <sch:value-of
                     select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
                     <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
                 in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn. </sch:assert>
-        </sch:rule>
-        
-        <sch:rule context="//l:Gebied/l:geometrie/g-ref:GeometrieRef">
-            <xsl:variable name="href" select="string(@xlink:href)"/>
-            <xsl:variable name="geometrie">
-                <xsl:for-each select="$gmlDocuments//geo:Geometrie">
-                    <xsl:if test="string(geo:id/text())=$href">
-                        <xsl:copy-of select="."/>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:variable>
-            <sch:assert test="$geometrie//gml:MultiSurface">
-                xxx: Betreft <sch:value-of
-                    select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
-                <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject
-                vanuit een Gebied moet een gebied-geometrie zijn. 
-            </sch:assert>
         </sch:rule>
     </sch:pattern>
 

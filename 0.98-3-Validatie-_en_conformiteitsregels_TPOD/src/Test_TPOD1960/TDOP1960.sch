@@ -22,23 +22,24 @@
     <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
     <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
 
-    <sch:pattern id="TDOP_1940">
-        <sch:rule
-            context="//l:Puntengroep/l:groepselement">
-            <xsl:variable name="notFound">
-                <xsl:for-each select="l-ref:PuntRef">
-                    <xsl:variable name="identifiers"
-                        select="foo:getIdentifiers($xmlDocuments//l:Punt/l:identificatie)"/>
-                    <xsl:if test="not(contains($identifiers, @xlink:href))">
-                        <xsl:value-of select="concat(@xlink:href, ', ')"/>
+    <sch:pattern id="TDOP_1960">
+        <sch:rule context="//l:Lijn/l:geometrie/g-ref:GeometrieRef">
+            <xsl:variable name="href" select="string(@xlink:href)"/>
+            <xsl:variable name="geometrie">
+                <xsl:for-each select="$gmlDocuments//geo:Geometrie">
+                    <xsl:if test="string(geo:id/text())=$href">
+                        <xsl:copy-of select="."/>
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <sch:assert test="string-length($notFound) = 0"> TDOP_1940: Betreft <sch:value-of
-                select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
-                <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
-                in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn. </sch:assert>
+            <sch:assert test="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)">
+                TDOP_1960: Betreft <sch:value-of
+                    select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
+                <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject
+                vanuit een Lijn moet een lijn-geometrie zijn. 
+            </sch:assert>
         </sch:rule>
+
     </sch:pattern>
 
     <xsl:function name="foo:getIdentifiers">
