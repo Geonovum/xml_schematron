@@ -36,8 +36,8 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <sch:assert test="string-length($nietGerefereerdeGeometrieen) = 0"> TPOD_1990: Er wordt
-                in de OwObjecten niet gerefereerd aan volgende (wel bestaande) OwObjecten:
+            <sch:assert test="string-length($nietGerefereerdeGeometrieen) = 0"> 
+                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
                     <xsl:value-of select="$nietGerefereerdeGeometrieen"/>
             </sch:assert>
         </sch:rule>
@@ -51,8 +51,8 @@
                     <xsl:value-of select="concat(string(text()), ', ')"/>
                 </xsl:if>
             </xsl:variable>
-            <sch:assert test="string-length($nietGerefereerdeReferenties) = 0"> TPOD_1990: Er wordt
-                in de OwObjecten niet gerefereerd aan volgende (wel bestaande) OwObjecten:
+            <sch:assert test="string-length($nietGerefereerdeReferenties) = 0"> 
+                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
                 <xsl:value-of select="$nietGerefereerdeReferenties"/>
             </sch:assert>
         </sch:rule>
@@ -66,8 +66,8 @@
                     <xsl:value-of select="concat(string(text()), ', ')"/>
                 </xsl:if>
             </xsl:variable>
-            <sch:assert test="string-length($nietGerefereerdeReferenties) = 0"> TPOD_1990: Er wordt
-                in de OwObjecten niet gerefereerd aan volgende (wel bestaande) OwObjecten:
+            <sch:assert test="string-length($nietGerefereerdeReferenties) = 0"> 
+                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
                 <xsl:value-of select="$nietGerefereerdeReferenties"/>
             </sch:assert>
         </sch:rule>
@@ -81,8 +81,8 @@
                 <xsl:value-of select="concat(string(text()), ', ')"/>
             </xsl:if>
         </xsl:variable>
-        <sch:assert test="string-length($nietGerefereerdeReferenties) = 0"> TPOD_1990: Er wordt
-            in de OwObjecten niet gerefereerd aan volgende (wel bestaande) OwObjecten:
+            <sch:assert test="string-length($nietGerefereerdeReferenties) = 0"> 
+                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
             <xsl:value-of select="$nietGerefereerdeReferenties"/>
         </sch:assert>
     </sch:rule>

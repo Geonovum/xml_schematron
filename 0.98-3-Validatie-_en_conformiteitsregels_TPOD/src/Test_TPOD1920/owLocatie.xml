@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<owBestand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:xlink="http://www.w3.org/1999/xlink" 
+   xmlns:gml="http://www.opengis.net/gml/3.2"
+   xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
+   xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
+   xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
+   xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
+   xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+   xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901 ../xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+   <sl:standBestand>
+      <sl:dataset>Test Omgevingveroderening Gelderland 20190507_03</sl:dataset>
+      <sl:inhoud>
+         <sl:gebied>Gelderland</sl:gebied>
+         <sl:leveringsId>abc-20190001-0001</sl:leveringsId>
+         <sl:objectTypen>
+            <sl:objectType>Gebied</sl:objectType>
+         </sl:objectTypen>
+      </sl:inhoud>
+
+      <sl:stand>
+         <owObject>
+            <l:Gebied ow:regeltekstId="nl.imow-pv25.regeltekst.2019000002">
+               <l:identificatie>nl.imow-pv25.gebied.2019000004</l:identificatie>
+               <l:noemer>Tijdelijk verbod nieuwvestiging glastuinbouw</l:noemer>
+               <l:geometrie>
+                  <g-ref:GeometrieRef xlink:href="0d72dece-0c7c-4a58-9890-f7521762c9c7"/>
+               </l:geometrie>
+            </l:Gebied>
+         </owObject>
+      </sl:stand>
+   </sl:standBestand>
+</owBestand>
