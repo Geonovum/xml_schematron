@@ -3,16 +3,15 @@
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
-    xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/"
-    xmlns:lvbb="http://www.overheid.nl/2017/lvbb">
+    xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/" xmlns:foo="http://whatever">
 
-    <sch:ns uri="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901" prefix="rol"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709" prefix="rol-ref"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" prefix="ow-dc"/>
+    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/v20190901" prefix="geo"/>
     <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
         prefix="sl"/>
-    <sch:ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" prefix="ow-dc"/>
     <sch:ns uri="http://whatever" prefix="foo"/>
+    <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
 
     <!-- ====================================== GENERIC ============================================================================= -->
     <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
@@ -28,28 +27,24 @@
     <xsl:variable name="OVI_PB" select="''"/>
 
     <!-- ============================================================================================================================ -->
-    <sch:pattern id="TPOD1730">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+
+    <sch:pattern id="TPOD880">
+        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen/sl:objectType">
             <xsl:variable name="APPLICABLE"
-                select="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <xsl:variable name="activiteitenLijst">
-                <xsl:for-each
-                    select="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-                    <xsl:value-of select="rol:identificatie"/>
+                select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <xsl:variable name="objects">
+                <xsl:for-each select="../../../sl:stand/ow-dc:owObject/*">
+                    <xsl:value-of select="concat('.', local-name(), '.')"/>
                 </xsl:for-each>
             </xsl:variable>
-
-            <!-- TPOD1730  -->
-            <xsl:variable name="CONDITION" select="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"/>
+            <xsl:variable name="CONDITION" select="contains($objects, concat('.', text(), '.'))"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert
-                test="$ASSERT"
-                >H:TPOD1730: <sch:value-of select="rol:identificatie"/> Betreft verwijzing:
-                    <sch:value-of
-                    select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
-                Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.</sch:assert>
+            <sch:assert test="$ASSERT"> H:TPOD1910: De
+                objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen
+                overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand. Het
+                objecttype waarom het gaat staan nu genoemd: <xsl:value-of select="text()"/>
+            </sch:assert>
         </sch:rule>
-
     </sch:pattern>
 
 

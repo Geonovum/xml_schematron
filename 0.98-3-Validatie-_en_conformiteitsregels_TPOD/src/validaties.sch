@@ -39,7 +39,19 @@
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
     
-    <xsl:variable name="APPLICABLE" select="_"/>
     <!-- ============================================================================================================================ -->    
+    
+    <sch:pattern id="TDOP_TEMPLATE">
+        <sch:rule context="/">
+            <xsl:variable name="APPLICABLE" select="true()"/>
+            <xsl:variable name="CONDITION" select="true()"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT">
+                TDOP_TEMPLATE: Betreft <sch:value-of
+                    select="_"/>: <sch:value-of select="_"/>,
+                <sch:value-of select="_"/>: TEMPLATE. 
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     
 </sch:schema>

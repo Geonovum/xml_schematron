@@ -35,11 +35,11 @@
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
     
-    <xsl:variable name="APPLICABLE" select=""/>
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TPOD_1990">
         <sch:rule context="/">
+            <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="geoLocationGeoReferenceIdentifiers"
                 select="foo:getLocationGeoReferenceIdentifiers()"/>
             <xsl:variable name="nietGerefereerdeGeometrieen">
@@ -50,13 +50,16 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <sch:assert test="string-length($nietGerefereerdeGeometrieen) = 0"> 
+            <xsl:variable name="CONDITION" select="string-length($nietGerefereerdeGeometrieen) = 0"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT"> 
                 TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
                     <xsl:value-of select="$nietGerefereerdeGeometrieen"/>
             </sch:assert>
         </sch:rule>
 
         <sch:rule context="//r:Regeltekst/r:identificatie">
+            <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="regeltekstReferenties"
                 select="foo:getReferences(//r-ref:RegeltekstRef)"/>
             <xsl:variable name="nietGerefereerdeReferenties">
@@ -65,13 +68,16 @@
                     <xsl:value-of select="concat(string(text()), ', ')"/>
                 </xsl:if>
             </xsl:variable>
-            <sch:assert test="string-length($nietGerefereerdeReferenties) = 0"> 
+            <xsl:variable name="CONDITION" select="string-length($nietGerefereerdeReferenties) = 0"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT"> 
                 TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
                 <xsl:value-of select="$nietGerefereerdeReferenties"/>
             </sch:assert>
         </sch:rule>
         
         <sch:rule context="//(vt:FormeleDivisie|vt:Hoofdlijn)/vt:identificatie">
+            <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="formeleDivisieReferenties"
                 select="foo:getReferences(//(vt-ref:FormeleDivisieRef|vt-ref:HoofdlijnRef))"/>
             <xsl:variable name="nietGerefereerdeReferenties">
@@ -80,14 +86,17 @@
                     <xsl:value-of select="concat(string(text()), ', ')"/>
                 </xsl:if>
             </xsl:variable>
-            <sch:assert test="string-length($nietGerefereerdeReferenties) = 0"> 
+            <xsl:variable name="CONDITION" select="string-length($nietGerefereerdeReferenties) = 0"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT"> 
                 TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
                 <xsl:value-of select="$nietGerefereerdeReferenties"/>
             </sch:assert>
         </sch:rule>
 
         <sch:rule context="//l:identificatie">
-        <xsl:variable name="locatieReferenties"
+            <xsl:variable name="APPLICABLE" select="true()"/>
+            <xsl:variable name="locatieReferenties"
             select="foo:getLocationReferenceIdentifiers()"/>
         <xsl:variable name="nietGerefereerdeReferenties">
             <xsl:if
@@ -95,7 +104,9 @@
                 <xsl:value-of select="concat(string(text()), ', ')"/>
             </xsl:if>
         </xsl:variable>
-            <sch:assert test="string-length($nietGerefereerdeReferenties) = 0"> 
+            <xsl:variable name="CONDITION" select="string-length($nietGerefereerdeReferenties) = 0"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT"> 
                 TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
             <xsl:value-of select="$nietGerefereerdeReferenties"/>
         </sch:assert>

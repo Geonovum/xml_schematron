@@ -40,24 +40,28 @@
     <!-- ====================================== GENERIC ============================================================================= -->
     <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
     <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
-    <xsl:variable name="SOORT_REGELING" select="$xmlDocuments//stop:AanleveringBesluit/stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
-    
+    <xsl:variable name="SOORT_REGELING"
+        select="$xmlDocuments//stop:AanleveringBesluit/stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+
     <xsl:variable name="AMvB" select="'/join/id/stop/regelingtype_001'"/>
     <xsl:variable name="MR" select="'/join/id/stop/regelingtype_002'"/>
     <xsl:variable name="OP" select="'/join/id/stop/regelingtype_003'"/>
     <xsl:variable name="OV" select="'/join/id/stop/regelingtype_004'"/>
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
-    
-    <xsl:variable name="APPLICABLE" select=""/>
-    <!-- ============================================================================================================================ -->    
-    
-<!-- TPOD1760 -->
+
+    <!-- ============================================================================================================================ -->
+
+    <!-- TPOD1760 -->
     <sch:pattern id="TPOD1760">
         <sch:rule
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing">
+            <xsl:variable name="APPLICABLE"
+                select="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <xsl:variable name="CONDITION" select="foo:isGebiedaanwijzingvanTypegebied(., $gmlDocuments//geo:FeatureCollectionGeometrie)[1] = ''"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert
-                test="foo:isGebiedaanwijzingvanTypegebied(., $gmlDocuments//geo:FeatureCollectionGeometrie)[1] = ''"
+                test="$ASSERT"
                 > H:TPOD1760: Betreft <sch:value-of select="ga:identificatie"/>: Een
                 gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt,
                 puntengroep, lijn of lijnengroep zijn). </sch:assert>
@@ -71,7 +75,8 @@
         <xsl:for-each select="$context/ga:locatieaanduiding/l-ref:LocatieRef">
             <xsl:choose>
                 <xsl:when test="contains(@xlink:href, 'gebiedengroep')">
-                    <xsl:for-each select="$xmlDocuments//ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/l:Gebiedengroep">
+                    <xsl:for-each
+                        select="$xmlDocuments//ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/l:Gebiedengroep">
                         <xsl:if
                             test="current()/l:identificatie = $context/ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href">
                             <xsl:for-each select="current()/l:groepselement/l-ref:GebiedRef">
@@ -90,17 +95,20 @@
             </xsl:choose>
         </xsl:for-each>
     </xsl:function>
-    
+
     <xsl:function name="foo:isGebiedvanTypegebied">
         <xsl:param name="id" as="xs:string"/>
         <xsl:param name="featureMembers" as="node()*"/>
-        <xsl:for-each select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/l:Gebied">
+        <xsl:for-each
+            select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/l:Gebied">
             <xsl:if test="current()/l:identificatie = $id">
-                <xsl:value-of select="foo:isGeometrievanTypegebied(current()/l:geometrie/g-ref:GeometrieRef/@xlink:href, $featureMembers)"/>
+                <xsl:value-of
+                    select="foo:isGeometrievanTypegebied(current()/l:geometrie/g-ref:GeometrieRef/@xlink:href, $featureMembers)"
+                />
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
-    
+
     <xsl:function name="foo:isGeometrievanTypegebied">
         <xsl:param name="geoId" as="xs:string"/>
         <xsl:param name="featureMembers" as="node()*"/>
@@ -113,6 +121,6 @@
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
-        <xsl:value-of select="$result"></xsl:value-of>
+        <xsl:value-of select="$result"/>
     </xsl:function>
 </sch:schema>

@@ -21,11 +21,11 @@
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
     
-    <xsl:variable name="APPLICABLE" select=""/>
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TPOD1920">
         <sch:rule context="/Modules/RegelingVersie/Bestand">
+            <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="naam" select="naam"/>
             <xsl:variable name="notfoundFileOrObjectType">
                 <xsl:for-each select="objecttype">
@@ -47,8 +47,10 @@
                     </xsl:choose>
                 </xsl:for-each>
             </xsl:variable>
+            <xsl:variable name="CONDITION" select="string-length($notfoundFileOrObjectType)=0"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert
-                test="string-length($notfoundFileOrObjectType)=0"
+                test="$ASSERT"
                 > H:TPOD1920: De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het betreffende Ow-bestand.
                 De objecttypen waarom het gaat staan nu genoemd: <sch:value-of select="$notfoundFileOrObjectType"/>
             </sch:assert>

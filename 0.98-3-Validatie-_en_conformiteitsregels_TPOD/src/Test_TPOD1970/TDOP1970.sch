@@ -33,11 +33,11 @@
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
     
-    <xsl:variable name="APPLICABLE" select=""/>
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TDOP_1970">
         <sch:rule context="//l:Punt/l:geometrie/g-ref:GeometrieRef">
+            <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="href" select="string(@xlink:href)"/>
             <xsl:variable name="geometrie">
                 <xsl:for-each select="$gmlDocuments//geo:Geometrie">
@@ -46,7 +46,9 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <sch:assert test="$geometrie//gml:MultiPoint || $geometrie//gml:Point">
+            <xsl:variable name="CONDITION" select="$geometrie//gml:MultiPoint || $geometrie//gml:Point"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT">
                 TDOP_1970: Betreft <sch:value-of
                     select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject

@@ -23,12 +23,14 @@
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
     
-    <xsl:variable name="APPLICABLE" select=""/>
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TPOD1830">
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing/ga:type">
-            <sch:assert test="not(text()='functie')">
+            <xsl:variable name="APPLICABLE" select="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
+            <xsl:variable name="CONDITION" select="not(text()='functie')"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT">
                 H:TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘functie’ van attribuut ‘type’
                 (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het
                 gaat: <sch:value-of select="../ga:identificatie/text()"/>

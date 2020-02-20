@@ -33,13 +33,15 @@
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
     
-    <xsl:variable name="APPLICABLE" select=""/>
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TDOP_1890">
         <sch:rule context="//*:identificatie">
+            <xsl:variable name="APPLICABLE" select="true()"/>
+            <xsl:variable name="CONDITION" select="contains(text(), concat('.', lower-case(tokenize(../name(), ':')[last()]), '.'))"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert
-                test="contains(text(), concat('.', lower-case(tokenize(../name(), ':')[last()]), '.'))"
+                test="$ASSERT"
                 > H:TPOD1860: Betreft <sch:value-of select="../name()"/>: <sch:value-of
                     select="text()"/>: De identificatie van het OwObject moet de naam van het OwObject zelf bevatten.
             </sch:assert>

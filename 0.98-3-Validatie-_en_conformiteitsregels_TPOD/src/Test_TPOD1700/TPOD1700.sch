@@ -30,11 +30,14 @@
     <xsl:variable name="OV" select="'/join/id/stop/regelingtype_004'"/>
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
+    
     <!-- ============================================================================================================================ -->    
     
     
     <sch:pattern id="TPOD1700">
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+            <xsl:variable name="APPLICABLE"
+                select="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <!-- TPOD1710  -->
             <!-- Er wordt uitgegaan van een maximale diepte van Ow-Activiteiten-hierarchie binnen een besluit context van 6 lagen (in werkelijkheid komen er
             in een OW-set maar enkele lagen van hierarchie voor voordat er naar een functionele structuur wordt verwezen).
@@ -86,7 +89,9 @@
                 </xsl:if>
             </xsl:variable>
             <!-- TPOD1700  -->
-            <sch:report test="string-length($activiteitenTrajectNaarFunctioneleStructuur) > 0"
+            <xsl:variable name="CONDITION" select="string-length($activiteitenTrajectNaarFunctioneleStructuur) > 0"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:report test="$ASSERT"
                 >REPORT: ZH:TPOD1700: Activiteit-ids: <sch:value-of
                     select="$activiteitenTrajectNaarFunctioneleStructuur"/>: Voor elke hiërarchie
                 van nieuwe activiteiten geldt dat de hoogste activiteit in de hiërarchie een

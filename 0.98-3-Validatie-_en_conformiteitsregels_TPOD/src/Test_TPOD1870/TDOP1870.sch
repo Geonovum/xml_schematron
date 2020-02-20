@@ -33,13 +33,17 @@
     <xsl:variable name="OV" select="'/join/id/stop/regelingtype_004'"/>
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
+    
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TDOP_1870">
         <sch:rule context="//r:artikelOfLid">
+            <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="identifiers"
                 select="foo:getRegelTekstIdentifiers()"/>
-            <sch:assert test="contains($identifiers, r-ref:RegeltekstRef/@xlink:href)"> H:TPOD1870: Betreft
+            <xsl:variable name="CONDITION" select="contains($identifiers, r-ref:RegeltekstRef/@xlink:href)"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT"> H:TPOD1870: Betreft
                 <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of
                     select="r-ref:RegeltekstRef/@xlink:href"/>: Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid. </sch:assert>
         </sch:rule>

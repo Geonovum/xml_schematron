@@ -29,12 +29,12 @@
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
     
-    <xsl:variable name="APPLICABLE" select=""/>
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TPOD940">
         <sch:rule
             context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
+            <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="crs">
                 <xsl:for-each select="descendant-or-self::*/@srsName">
                     <xsl:if test="position() = 1">
@@ -49,7 +49,9 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <sch:assert test="string-length($crsses) = 0">ZH:TP0D940: Een geometrie moet zijn
+            <xsl:variable name="CONDITION" select="string-length($crsses) = 0"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT">ZH:TP0D940: Een geometrie moet zijn
                 opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD new) of
                 EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/geo:id"/>: </sch:assert>
         </sch:rule>

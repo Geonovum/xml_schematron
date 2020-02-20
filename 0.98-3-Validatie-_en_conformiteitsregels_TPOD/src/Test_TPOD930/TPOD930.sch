@@ -30,7 +30,6 @@
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
     
-    <xsl:variable name="APPLICABLE" select=""/>
     <!-- ============================================================================================================================ -->    
     
     <xsl:function name="foo:posListForCoordinateCheck">
@@ -50,14 +49,17 @@
 
     <sch:pattern id="TPOD930">
         <sch:rule context="//geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '28992']">
-                <xsl:variable name="fouteCoord">
+            <xsl:variable name="APPLICABLE" select="true()"/>
+            <xsl:variable name="fouteCoord">
                     <xsl:for-each select="foo:posListForCoordinateCheck(.)">
                         <xsl:if test="string-length(substring-after(string(.), '.')) &gt; 3">
                             <xsl:value-of select="concat(text(), ', ')"/>
                         </xsl:if>
                     </xsl:for-each>
                 </xsl:variable>
-                <sch:assert test="string-length($fouteCoord) = 0"> ZH:TP0D930: Indien gebruik wordt
+            <xsl:variable name="CONDITION" select="string-length($fouteCoord) = 0"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT"> ZH:TP0D930: Indien gebruik wordt
                     gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters
                     worden opgegeven waarbij de waarde maximaal 3 decimalen achter de komma mag
                     bevatten. Id=<sch:value-of select="geo:id"/>. De coordinaten waarom het gaat
@@ -72,6 +74,8 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
+            <xsl:variable name="CONDITION" select=""/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert test="string-length($fouteCoord) = 0"> ZH:TP0D930: Indien gebruik wordt
                 gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van meters worden
                 opgegeven waarbij de waarde maximaal 8 decimalen achter de komma mag bevatten.

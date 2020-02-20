@@ -22,17 +22,19 @@
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
     
-    <xsl:variable name="APPLICABLE" select=""/>
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TPOD1910">
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen/sl:objectType">
+            <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="objects">
                 <xsl:for-each select="../../../sl:stand/ow-dc:owObject/*"> 
                     <xsl:value-of select="concat('.',local-name(),'.')"/>
                 </xsl:for-each>
             </xsl:variable>
-            <sch:assert test="contains($objects, concat('.',text(),'.'))">
+            <xsl:variable name="CONDITION" select="contains($objects, concat('.',text(),'.'))"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT">
                 H:TPOD1910: De objecttypen in
                 ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met
                 de daadwerkelijke objecten in het betreffende Ow-bestand. Het objecttype waarom het

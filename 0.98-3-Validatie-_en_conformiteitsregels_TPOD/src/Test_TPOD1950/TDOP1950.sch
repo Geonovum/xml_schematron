@@ -33,12 +33,12 @@
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
     
-    <xsl:variable name="APPLICABLE" select=""/>
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TDOP_1950">
         <sch:rule
             context="//l:Lijnengroep/l:groepselement">
+            <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="notFound">
                 <xsl:for-each select="l-ref:LijnRef">
                     <xsl:variable name="identifiers"
@@ -48,7 +48,9 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <sch:assert test="string-length($notFound) = 0"> TDOP_1950: Betreft <sch:value-of
+            <xsl:variable name="CONDITION" select="string-length($notFound) = 0"/>
+            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT"> TDOP_1950: Betreft <sch:value-of
                 select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
                 <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
                 in een Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn. </sch:assert>
