@@ -3,6 +3,7 @@
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
+    xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
     xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/" xmlns:foo="http://whatever">
 
     <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/v20190901" prefix="geo"/>
@@ -12,6 +13,7 @@
     <sch:ns uri="http://whatever" prefix="foo"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
 
     <!-- ====================================== GENERIC ============================================================================= -->
     <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
@@ -29,20 +31,21 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD880">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen/sl:objectType">
+        <sch:rule context="//tekst:Hoofdstuk/tekst:Kop">
+            <xsl:variable name="found">
+            <xsl:for-each select="tekst:Nummer">
+                <xsl:if test="text()='1'">
+                    <xsl:value-of select="'found'"/>
+                </xsl:if>
+            </xsl:for-each>
+                
+            </xsl:variable>
             <xsl:variable name="APPLICABLE"
                 select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <xsl:variable name="objects">
-                <xsl:for-each select="../../../sl:stand/ow-dc:owObject/*">
-                    <xsl:value-of select="concat('.', local-name(), '.')"/>
-                </xsl:for-each>
-            </xsl:variable>
-            <xsl:variable name="CONDITION" select="contains($objects, concat('.', text(), '.'))"/>
+            <xsl:variable name="CONDITION"
+                select="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Nummer/text()) = '1') and (lower-case(tekst:Opschrift/text()) = 'algemene bepaling')"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> H:TPOD1910: De
-                objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen
-                overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand. Het
-                objecttype waarom het gaat staan nu genoemd: <xsl:value-of select="text()"/>
+            <sch:assert test="$ASSERT"> H:TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen."/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
