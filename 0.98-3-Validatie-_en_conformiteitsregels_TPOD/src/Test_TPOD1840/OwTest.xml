@@ -367,7 +367,7 @@
 		</sl:stand>
 		
 		
-		<!-- Gebiedsaanwijzing  FOUT type -->
+		<!-- Gebiedsaanwijzing  FOUT type (besluit is soortregeling AMvB) -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">

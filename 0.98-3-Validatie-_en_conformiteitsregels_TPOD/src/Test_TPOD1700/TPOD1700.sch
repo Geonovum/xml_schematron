@@ -18,11 +18,8 @@
     <!-- ====================================== GENERIC ============================================================================= -->
     <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
     <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
-    <xsl:variable name="SOORT_REGELING" select="$xmlDocuments//stop:AanleveringBesluit/stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
-    
-    <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
-    <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
-    <xsl:variable name="SOORT_REGELING" select="foo:soortRegeling()"/>
+    <xsl:variable name="SOORT_REGELING"
+        select="$xmlDocuments//stop:AanleveringBesluit/stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
     
     <xsl:variable name="AMvB" select="'/join/id/stop/regelingtype_001'"/>
     <xsl:variable name="MR" select="'/join/id/stop/regelingtype_002'"/>
@@ -38,15 +35,6 @@
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <xsl:variable name="APPLICABLE"
                 select="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <!-- TPOD1710  -->
-            <!-- Er wordt uitgegaan van een maximale diepte van Ow-Activiteiten-hierarchie binnen een besluit context van 6 lagen (in werkelijkheid komen er
-            in een OW-set maar enkele lagen van hierarchie voor voordat er naar een functionele structuur wordt verwezen).
-            
-            Waarom niet in een functie?
-            Dit kan eventueel ook binnen een recursieve functie worden gedaan, maar dan moet er worden gecontroleerd op circulaire structuren, 
-            dat veroorzaakt extra code, binnen schematron een ingewikkeld algoritme, de functie kan in latere optimalisatie worden geschreven.
-            -->
-            <!-- Uiteindelijk bevatten de offendingIds activiteiten die circulair over andere activiteiten naar zichzelf verwijzen -->
             <xsl:variable name="activiteitenLijst">
                 <xsl:for-each
                     select="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
@@ -58,23 +46,15 @@
                 <xsl:variable name="bovenLiggend"
                     select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
                 <xsl:variable name="identificatie" select="rol:identificatie"/>
-                <!-- hier worden de activiteiten uitgefilterd waarvan de bovenliggende activiteiten in de functionele structuur zitten -->
                 <xsl:if test="contains($activiteitenLijst, $bovenLiggend)">
                     <xsl:value-of
                         select="foo:circulaireActiviteiten($identificatie, $identificatie, /)"/>
                 </xsl:if>
             </xsl:variable>
-            
-            
-            
-            <!-- TPOD1700  -->
-            <!-- Omdat de offendingIds circuliaire verwijzingen zijn worden ze niet gebruikt bij de volgende test 
-                waarbij gekeken wordt of iedere activiteit uiteindelijk bij een functionele activiteit uitkomt -->
             <xsl:variable name="activiteitenTrajectNaarFunctioneleStructuur">
                 <xsl:variable name="identificatie" select="rol:identificatie"/>
                 <xsl:variable name="lokaalBovenliggend"
                     select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                <!-- hier worden de activiteiten uitgefilterd waarvan de bovenliggende activiteiten in de functionele structuur zitten -->
                 <xsl:if test="not(contains($circulaireActivititeiten, $identificatie))">
                     <xsl:choose>
                         <xsl:when test="not(contains($activiteitenLijst, $lokaalBovenliggend))">
@@ -88,7 +68,6 @@
                     </xsl:choose>
                 </xsl:if>
             </xsl:variable>
-            <!-- TPOD1700  -->
             <xsl:variable name="CONDITION" select="string-length($activiteitenTrajectNaarFunctioneleStructuur) > 0"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:report test="$ASSERT"

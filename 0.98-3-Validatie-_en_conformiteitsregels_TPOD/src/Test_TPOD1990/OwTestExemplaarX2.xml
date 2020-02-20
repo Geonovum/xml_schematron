@@ -91,7 +91,7 @@
 			<ow-dc:owObject>
 				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
 					wId="gm0037_1__subchp_2.2__art_2.3">
-					<r:identificatie>nl.imow-gm0037.regeltekst.201900005</r:identificatie>
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900005WEES</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -301,7 +301,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
-					<l:identificatie>nl.imow-gm0037.gebied.201900004</l:identificatie>
+					<l:identificatie>nl.imow-gm0037.gebied.201900004WEES</l:identificatie>
 					<l:geometrie>
 						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
@@ -324,7 +324,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebiedengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
-					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900002</l:identificatie>
+					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900002WEES</l:identificatie>
 					<l:groepselement>
 						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
 						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
@@ -358,7 +358,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Puntengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
-					<l:identificatie>nl.imow-gm0037.puntengroep.201900001</l:identificatie>
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900001WEES</l:identificatie>
 					<l:groepselement>
 						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900001"/>
 						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
@@ -370,7 +370,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Puntengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
-					<l:identificatie>nl.imow-gm0037.puntengroep.201900002</l:identificatie>
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900002WEES</l:identificatie>
 					<l:groepselement>
 						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
 						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900003"/>
@@ -404,7 +404,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Lijnengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
-					<l:identificatie>nl.imow-gm0037.lijnengroep.201900001</l:identificatie>
+					<l:identificatie>nl.imow-gm0037.lijnengroep.201900001WEES</l:identificatie>
 					<l:groepselement>
 						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
 						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900002"/>
@@ -416,7 +416,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Lijnengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
-					<l:identificatie>nl.imow-gm0037.lijnengroep.201900002</l:identificatie>
+					<l:identificatie>nl.imow-gm0037.lijnengroep.201900002WEES</l:identificatie>
 					<l:groepselement>
 						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900002"/>
 						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
@@ -452,7 +452,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<vt:FormeleDivisie wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main" wId="gm0037_1__subchp_2.2__art_2.3">
-					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900004</vt:identificatie>
+					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900004WEES</vt:identificatie>
 				</vt:FormeleDivisie>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -550,7 +550,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<vt:Hoofdlijn ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
-					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900004</vt:identificatie>
+					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900004WEES</vt:identificatie>
 					<vt:naam>abc</vt:naam>
 					<vt:soort>def</vt:soort>
 				</vt:Hoofdlijn>

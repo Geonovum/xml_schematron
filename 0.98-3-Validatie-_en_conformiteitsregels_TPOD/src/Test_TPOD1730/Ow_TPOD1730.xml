@@ -101,7 +101,7 @@
 					<rol:gerelateerdeActiviteit>
 						<!-- Regels van gerelateerde activiteit zijn contextueel relevant -->
 						<rol-ref:ActiviteitRef
-							xlink:href="nl.imow-gm0037.activiteit.2019000760123456"/>
+							xlink:href="nl.imow-gm0037.activiteit.2019000760123456BESTAAT_NIET"/>
 					</rol:gerelateerdeActiviteit>
 					<rol:bovenliggendeActiviteit>
 						<rol-ref:ActiviteitRef

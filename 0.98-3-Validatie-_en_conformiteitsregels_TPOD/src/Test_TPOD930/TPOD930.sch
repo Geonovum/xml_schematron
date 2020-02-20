@@ -67,6 +67,7 @@
         </sch:rule>
         <sch:rule
             context="//geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '4258']">
+            <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="fouteCoord">
                 <xsl:for-each select="foo:posListForCoordinateCheck(.)">
                     <xsl:if test="string-length(substring-after(string(.), '.')) &gt; 8">
@@ -74,7 +75,7 @@
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <xsl:variable name="CONDITION" select=""/>
+            <xsl:variable name="CONDITION" select="string-length($fouteCoord) = 0"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert test="string-length($fouteCoord) = 0"> ZH:TP0D930: Indien gebruik wordt
                 gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van meters worden

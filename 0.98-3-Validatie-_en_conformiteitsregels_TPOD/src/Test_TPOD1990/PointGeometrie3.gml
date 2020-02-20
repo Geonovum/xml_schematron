@@ -6,7 +6,7 @@
    gml:id="main">
    <geo:featureMember>
       <geo:Geometrie>
-         <geo:id>C28AF779-7EDD-4A88-8B11-809798F53631</geo:id>
+         <geo:id>C28AF779-7EDD-4A88-8B11-809798F53631WEES</geo:id>
          <geo:geometrie>
             <gml:MultiPoint srsName="urn:ogc:def:crs:EPSG::28992"
                gml:id="id-C28AF779-7EDD-4A88-8B11-809798F53631-0">

@@ -135,7 +135,7 @@
     
     <xsl:function name="foo:getLocationReferenceIdentifiers">
         <xsl:variable name="identifiers">
-            <xsl:for-each select="$xmlDocuments//(l-ref:LocatieRef|l-ref:GebiedRef|l-ref:Lijn|l-ref:Punt|l-ref:GebiedengroepRef|l-ref:PuntengroepRef|l-ref:LijnengroepRef)">
+            <xsl:for-each select="$xmlDocuments//(l-ref:LocatieRef|l-ref:GebiedRef|l-ref:LijnRef|l-ref:PuntRef|l-ref:GebiedengroepRef|l-ref:PuntengroepRef|l-ref:LijnengroepRef)">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
         </xsl:variable>

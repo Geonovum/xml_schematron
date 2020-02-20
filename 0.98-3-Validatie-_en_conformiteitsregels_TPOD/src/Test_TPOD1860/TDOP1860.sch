@@ -24,91 +24,82 @@
     <!-- ====================================== GENERIC ============================================================================= -->
     <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
     <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
-    <xsl:variable name="SOORT_REGELING" select="$xmlDocuments//stop:AanleveringBesluit/stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
-    
+    <xsl:variable name="SOORT_REGELING"
+        select="$xmlDocuments//stop:AanleveringBesluit/stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+
     <xsl:variable name="AMvB" select="'/join/id/stop/regelingtype_001'"/>
     <xsl:variable name="MR" select="'/join/id/stop/regelingtype_002'"/>
     <xsl:variable name="OP" select="'/join/id/stop/regelingtype_003'"/>
     <xsl:variable name="OV" select="'/join/id/stop/regelingtype_004'"/>
     <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
     <xsl:variable name="OVI_PB" select="''"/>
-    
-    <!-- ============================================================================================================================ -->    
-    
+
+    <!-- ============================================================================================================================ -->
+
     <sch:pattern id="TDOP_1860">
         <sch:rule context="//r:Regeltekst">
             <xsl:variable name="APPLICABLE" select="true()"/>
-            <xsl:variable name="CONDITION" select="not(r:gerelateerdeRegeltekst/r-ref:RegeltekstRef/@xlink:href eq r:identificatie)"/>
+            <xsl:variable name="CONDITION"
+                select="not(r:gerelateerdeRegeltekst/r-ref:RegeltekstRef/@xlink:href eq r:identificatie)"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert
-                test="$ASSERT"
-                > H:TPOD1860: Betreft <sch:value-of select="name()"/>: <sch:value-of
-                    select="r:identificatie"/>: Iedere verwijzing naar een ander OwObject moet een
-                bestaand (ander) OwObject zijn. (gerelateerdeRegeltekst verwijst naar zichzelf)
-            </sch:assert>
+            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft <sch:value-of select="name()"/>:
+                    <sch:value-of select="r:identificatie"/>: Iedere verwijzing naar een ander
+                OwObject moet een bestaand (ander) OwObject zijn. (gerelateerdeRegeltekst verwijst
+                naar zichzelf) </sch:assert>
         </sch:rule>
         <sch:rule context="//rol:Activiteit">
             <xsl:variable name="APPLICABLE" select="true()"/>
-            <xsl:variable name="CONDITION" select="not(rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
+            <xsl:variable name="CONDITION"
+                select="not(rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert
-                test="$ASSERT"
-                > H:TPOD1860: Betreft <sch:value-of select="name()"/>: <sch:value-of
-                    select="rol:identificatie"/>: Iedere verwijzing naar een ander OwObject moet een
-                bestaand (ander) OwObject zijn. (gerelateerdeActiviteit verwijst naar zichzelf)
-            </sch:assert>
+            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft <sch:value-of select="name()"/>:
+                    <sch:value-of select="rol:identificatie"/>: Iedere verwijzing naar een ander
+                OwObject moet een bestaand (ander) OwObject zijn. (gerelateerdeActiviteit verwijst
+                naar zichzelf) </sch:assert>
         </sch:rule>
-        <sch:rule
-            context="//r:artikelOfLid/r-ref:RegeltekstRef">
+        <sch:rule context="//r:artikelOfLid/r-ref:RegeltekstRef">
             <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="identifiers"
                 select="foo:getIdentifiers($xmlDocuments//r:Regeltekst/r:identificatie)"/>
             <xsl:variable name="CONDITION" select="contains($identifiers, @xlink:href)"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>, <sch:value-of
-                    select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
-                bestaand (ander) OwObject zijn. </sch:assert>
+            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                    <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
+                    <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
+                moet een bestaand (ander) OwObject zijn. </sch:assert>
         </sch:rule>
-        <sch:rule
-            context="//r:RegelVoorIedereen/r:activiteitaanduiding/rol-ref:ActiviteitRef">
+        <sch:rule context="//r:RegelVoorIedereen/r:activiteitaanduiding/rol-ref:ActiviteitRef">
             <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="identifiers"
                 select="foo:getIdentifiers($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <xsl:variable name="CONDITION" select="contains($identifiers, @xlink:href)"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>, <sch:value-of
-                    select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
-                bestaand (ander) OwObject zijn. </sch:assert>
+            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                    <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
+                    <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
+                moet een bestaand (ander) OwObject zijn. </sch:assert>
         </sch:rule>
-        <sch:rule
-            context="//r:omgevingsnormaanduiding/rol-ref:OmgevingsnormRef">
+        <sch:rule context="//r:omgevingsnormaanduiding/rol-ref:OmgevingsnormRef">
             <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="identifiers"
                 select="foo:getIdentifiers($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
             <xsl:variable name="CONDITION" select="contains($identifiers, @xlink:href)"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>, <sch:value-of
-                    select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
-                bestaand (ander) OwObject zijn. </sch:assert>
+            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                    <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
+                    <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
+                moet een bestaand (ander) OwObject zijn. </sch:assert>
         </sch:rule>
-        <sch:rule
-            context="//r:gebiedsaanwijzing/ga-ref:GebiedsaanwijzingRef">
+        <sch:rule context="//r:gebiedsaanwijzing/ga-ref:GebiedsaanwijzingRef">
             <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="identifiers"
                 select="foo:getIdentifiers($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
             <xsl:variable name="CONDITION" select="contains($identifiers, @xlink:href)"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>, <sch:value-of
-                    select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
-                bestaand (ander) OwObject zijn. </sch:assert>
+            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                    <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
+                    <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
+                moet een bestaand (ander) OwObject zijn. </sch:assert>
         </sch:rule>
         <sch:rule
             context="//l-ref:LocatieRef | l-ref:GebiedRef | l-ref:GebiedengroepRef | l-ref:PuntRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef | l-ref:LijnRef">
@@ -116,24 +107,21 @@
             <xsl:variable name="identifiers" select="foo:getLocationIdentifiers()"/>
             <xsl:variable name="CONDITION" select="contains($identifiers, @xlink:href)"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../rol:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
-                verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
-            </sch:assert>
+            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                    <sch:value-of select="../../rol:identificatie"/>, <sch:value-of
+                    select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
+                bestaand (ander) OwObject zijn. </sch:assert>
         </sch:rule>
-        <sch:rule
-            context="//rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef">
+        <sch:rule context="//rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef">
             <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="identifiers"
                 select="foo:getIdentifiers($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <xsl:variable name="CONDITION" select="contains($identifiers, @xlink:href)"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../rol:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
-                verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
-            </sch:assert>
+            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                    <sch:value-of select="../../rol:identificatie"/>, <sch:value-of
+                    select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
+                bestaand (ander) OwObject zijn. </sch:assert>
         </sch:rule>
         <sch:rule
             context="//rol:normwaarde/rol:Normwaarde/rol:locatieaanduiding/l-ref:LocatieRef | l-ref:GebiedRef | l-ref:GebiedengroepRef | l-ref:PuntRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef | l-ref:LijnRef">
@@ -141,8 +129,8 @@
             <xsl:variable name="identifiers" select="foo:getLocationIdentifiers()"/>
             <xsl:variable name="CONDITION" select="contains($identifiers, @xlink:href)"/>
             <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft
-                    <sch:value-of select="../../../../name()"/>: <sch:value-of
+            <sch:assert test="$ASSERT"> H:TPOD1860: Betreft <sch:value-of
+                    select="../../../../name()"/>: <sch:value-of
                     select="../../../../rol:identificatie"/>, <sch:value-of select="@xlink:href"/>:
                 Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
             </sch:assert>
@@ -152,7 +140,7 @@
     <xsl:function name="foo:getLocationIdentifiers">
         <xsl:variable name="identifiers">
             <xsl:for-each
-                select="$xmlDocuments//(l:Gebied|l:Gebiedengroep|l:Punt|l:Puntengroep|l:Lijn|l:Lijnengroep)/l:identificatie">
+                select="$xmlDocuments//(l:Gebied | l:Gebiedengroep | l:Punt | l:Puntengroep | l:Lijn | l:Lijnengroep)/l:identificatie">
                 <xsl:value-of select="text()"/>
             </xsl:for-each>
         </xsl:variable>

@@ -50,7 +50,7 @@
 				<sl:objectType>Hoofdlijn</sl:objectType>
 			</sl:objectTypen>
 		</sl:inhoud>
-		<!-- Regeltekst -->
+		<!-- Regeltekst FOUT in ID, moet regeltekst zijn -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"

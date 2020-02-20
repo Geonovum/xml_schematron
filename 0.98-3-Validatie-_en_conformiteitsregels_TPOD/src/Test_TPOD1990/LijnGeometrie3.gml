@@ -6,7 +6,7 @@
    gml:id="main">
    <geo:featureMember>
       <geo:Geometrie>
-         <geo:id>B28AF779-7EDD-4A88-8B11-809798F53631</geo:id>
+         <geo:id>B28AF779-7EDD-4A88-8B11-809798F53631WEES</geo:id>
          <geo:geometrie>
             <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992"
                gml:id="id-BS28AF779-7EDD-4A88-8B11-809798F53631-0">

@@ -152,7 +152,7 @@
 						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012"/>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012FOUT"/>
 					</r:artikelOfLid>
 					<r:activiteitaanduiding>
 						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
@@ -203,7 +203,7 @@
 						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012"/>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012FOUT"/>
 					</r:artikelOfLid>
 					<r:omgevingsnormaanduiding>
 						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
@@ -265,7 +265,7 @@
 						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012"/>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012FOUT"/>
 					</r:artikelOfLid>
 				</r:Omgevingswaarderegel>
 			</ow-dc:owObject>

@@ -1,4 +1,4 @@
-Schematron draaien tegen OwTestExemplaar1860.xml
+Schematron draaien tegen OwTestExemplaar1990.xml
 
 Verwachte foutmeldingen:
 

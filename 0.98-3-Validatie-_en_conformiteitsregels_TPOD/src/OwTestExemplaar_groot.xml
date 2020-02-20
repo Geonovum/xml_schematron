@@ -547,6 +547,20 @@
 				</rol:Omgevingsnorm>
 			</ow-dc:owObject>
 		</sl:stand>
+		<!-- Omgevingswaarderegel -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Omgevingswaarderegel ow:regeltekstId="">
+					<r:idealisatie>exact</r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+					</r:artikelOfLid>
+				</r:Omgevingswaarderegel>
+			</ow-dc:owObject>
+		</sl:stand>
 		<!-- Omgevingswaarde GOED locatieaanduiding -->
 		<sl:stand>
 			<ow-dc:owObject>
@@ -653,7 +667,7 @@
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
 					<l:identificatie>nl.imow-gm0037.gebied.201900004</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611PUNT"/>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -664,7 +678,7 @@
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
 					<l:identificatie>nl.imow-gm0037.gebied.201900005</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611LIJN"/>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
