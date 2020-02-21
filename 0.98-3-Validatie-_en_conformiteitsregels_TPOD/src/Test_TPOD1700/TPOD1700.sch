@@ -69,8 +69,7 @@
                 </xsl:if>
             </xsl:variable>
             <xsl:variable name="CONDITION" select="string-length($activiteitenTrajectNaarFunctioneleStructuur) > 0"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:report test="$ASSERT"
+            <sch:report test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"
                 >REPORT: ZH:TPOD1700: Activiteit-ids: <sch:value-of
                     select="$activiteitenTrajectNaarFunctioneleStructuur"/>: Voor elke hiërarchie
                 van nieuwe activiteiten geldt dat de hoogste activiteit in de hiërarchie een

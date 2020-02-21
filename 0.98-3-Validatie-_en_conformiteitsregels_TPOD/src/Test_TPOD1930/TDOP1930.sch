@@ -49,8 +49,7 @@
                 </xsl:for-each>
             </xsl:variable>
             <xsl:variable name="CONDITION" select="string-length($notFound) = 0"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> TDOP_1930: Betreft <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TDOP_1930: Betreft <sch:value-of
                     select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
                     <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
                 in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn. </sch:assert>

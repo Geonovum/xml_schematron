@@ -34,9 +34,8 @@
                 select="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <xsl:variable name="CONDITION" select="(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde or rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde) and
                 not(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde and rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert
-                test="$ASSERT"> H:TPOD1650: <sch:value-of select="rol:identificatie"/>: Het attribuut 'normwaarde'
+                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1650: <sch:value-of select="rol:identificatie"/>: Het attribuut 'normwaarde'
                 moet bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf
                 'kwantitatieveWaarde'. </sch:assert>
         </sch:rule>

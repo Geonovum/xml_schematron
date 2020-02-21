@@ -50,8 +50,7 @@
                 </xsl:for-each>
             </xsl:variable>
             <xsl:variable name="CONDITION" select="string-length($crsses) = 0"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT">ZH:TP0D940: Een geometrie moet zijn
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">ZH:TP0D940: Een geometrie moet zijn
                 opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD new) of
                 EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/geo:id"/>: </sch:assert>
         </sch:rule>

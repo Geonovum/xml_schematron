@@ -47,8 +47,7 @@
                 </xsl:for-each>
             </xsl:variable>
             <xsl:variable name="CONDITION" select="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT">
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 TDOP_1960: Betreft <sch:value-of
                     select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject

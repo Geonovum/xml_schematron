@@ -39,9 +39,8 @@
         <sch:rule context="//*:identificatie">
             <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="CONDITION" select="contains(text(), concat('.', lower-case(tokenize(../name(), ':')[last()]), '.'))"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert
-                test="$ASSERT"
+                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"
                 > H:TPOD1860: Betreft <sch:value-of select="../name()"/>: <sch:value-of
                     select="text()"/>: De identificatie van het OwObject moet de naam van het OwObject zelf bevatten.
             </sch:assert>

@@ -32,9 +32,8 @@
             <xsl:variable name="APPLICABLE"
                 select="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <xsl:variable name="CONDITION" select="(r:activiteitaanduiding) or (not(r:activiteitaanduiding) and not(r:activiteitregelkwalificatie))"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert
-                test="$ASSERT"
+                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"
                 > H:TPOD1670: behorend bij ArtikelOfLid <sch:value-of
                     select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>:
                 Activiteitregelkwalificatie is alleen te gebruiken wanneer het object ‘Regel voor

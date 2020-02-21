@@ -43,9 +43,8 @@
 
             <!-- TPOD1740  -->
             <xsl:variable name="CONDITION" select="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href))"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:report
-                test="$ASSERT"
+                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"
                 > REPORT: H:TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft
                 verwijzing: <sch:value-of
                     select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:

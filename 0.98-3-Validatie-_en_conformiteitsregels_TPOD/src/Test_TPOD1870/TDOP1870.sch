@@ -42,8 +42,7 @@
             <xsl:variable name="identifiers"
                 select="foo:getRegelTekstIdentifiers()"/>
             <xsl:variable name="CONDITION" select="contains($identifiers, r-ref:RegeltekstRef/@xlink:href)"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> H:TPOD1870: Betreft
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1870: Betreft
                 <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of
                     select="r-ref:RegeltekstRef/@xlink:href"/>: Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid. </sch:assert>
         </sch:rule>

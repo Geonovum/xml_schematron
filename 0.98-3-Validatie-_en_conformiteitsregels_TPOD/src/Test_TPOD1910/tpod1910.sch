@@ -33,8 +33,7 @@
                 </xsl:for-each>
             </xsl:variable>
             <xsl:variable name="CONDITION" select="contains($objects, concat('.',text(),'.'))"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT">
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 H:TPOD1910: De objecttypen in
                 ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met
                 de daadwerkelijke objecten in het betreffende Ow-bestand. Het objecttype waarom het

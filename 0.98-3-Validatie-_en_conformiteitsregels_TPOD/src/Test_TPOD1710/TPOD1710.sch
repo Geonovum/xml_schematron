@@ -54,8 +54,7 @@
 
             <!-- TPOD1710  -->
             <xsl:variable name="CONDITION" select="string-length($circulaireActivititeiten) = 0"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT">ZH:TP0D1710:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">ZH:TP0D1710:
                 Activiteit-ids: <sch:value-of select="$circulaireActivititeiten"/>: Een
                 bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de
                 hiërarchie ligt.</sch:assert>

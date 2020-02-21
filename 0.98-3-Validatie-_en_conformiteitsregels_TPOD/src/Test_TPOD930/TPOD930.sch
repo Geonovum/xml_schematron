@@ -76,8 +76,7 @@
                 </xsl:for-each>
             </xsl:variable>
             <xsl:variable name="CONDITION" select="string-length($fouteCoord) = 0"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="string-length($fouteCoord) = 0"> ZH:TP0D930: Indien gebruik wordt
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> ZH:TP0D930: Indien gebruik wordt
                 gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van meters worden
                 opgegeven waarbij de waarde maximaal 8 decimalen achter de komma mag bevatten.
                     Id=<sch:value-of select="geo:id"/>. De coordinaten waarom het gaat staan nu

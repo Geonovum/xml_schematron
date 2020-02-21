@@ -48,9 +48,8 @@
                 </xsl:for-each>
             </xsl:variable>
             <xsl:variable name="CONDITION" select="string-length($notfoundFileOrObjectType)=0"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert
-                test="$ASSERT"
+                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"
                 > H:TPOD1920: De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het betreffende Ow-bestand.
                 De objecttypen waarom het gaat staan nu genoemd: <sch:value-of select="$notfoundFileOrObjectType"/>
             </sch:assert>

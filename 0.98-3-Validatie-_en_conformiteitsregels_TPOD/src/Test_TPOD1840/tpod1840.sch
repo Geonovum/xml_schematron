@@ -29,8 +29,7 @@
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing/ga:type">
             <xsl:variable name="APPLICABLE" select="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
             <xsl:variable name="CONDITION" select="not(text()='beperkingengebied')"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT">
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 H:TPOD1840: Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘beperkingengebied’ van attribuut ‘type’
                 (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het
                 gaat: <sch:value-of select="../ga:identificatie/text()"/>

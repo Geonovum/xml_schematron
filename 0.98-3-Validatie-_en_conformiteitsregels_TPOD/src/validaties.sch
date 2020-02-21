@@ -45,8 +45,7 @@
         <sch:rule context="/">
             <xsl:variable name="APPLICABLE" select="true()"/>
             <xsl:variable name="CONDITION" select="true()"/>
-            <xsl:variable name="ASSERT" select="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT">
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 TDOP_TEMPLATE: Betreft <sch:value-of
                     select="_"/>: <sch:value-of select="_"/>,
                 <sch:value-of select="_"/>: TEMPLATE. 
