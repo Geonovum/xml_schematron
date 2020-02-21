@@ -31,21 +31,37 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD880">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Kop">
-            <xsl:variable name="found">
-            <xsl:for-each select="tekst:Nummer">
-                <xsl:if test="text()='1'">
-                    <xsl:value-of select="'found'"/>
-                </xsl:if>
-            </xsl:for-each>
-                
-            </xsl:variable>
+        <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']">
             <xsl:variable name="APPLICABLE"
                 select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <xsl:variable name="CONDITION"
-                select="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Nummer/text()) = '1') and (lower-case(tekst:Opschrift/text()) = 'algemene bepaling')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen."/>
-            </sch:assert>
+                select="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepaling')"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD880: Een
+                OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene
+                bepalingen."/> </sch:assert>
+        </sch:rule>
+        <sch:rule context="//tekst:Lichaam">
+            <xsl:variable name="APPLICABLE"
+                select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <xsl:variable name="nummer1">
+                <xsl:choose>
+                    <xsl:when test="tekst:Hoofdstuk/tekst:Kop">
+                        <xsl:value-of select="0"/>
+                        <xsl:for-each select="tekst:Hoofdstuk/tekst:Kop">
+                            <xsl:if test="string(tekst:Nummer) = '1'">
+                                <xsl:value-of select="tekst:Nummer"/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="-1"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
+            <xsl:variable name="CONDITION" select="$nummer1=1 or $nummer1=-1"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD880: Een
+                OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene
+                bepalingen.."/> </sch:assert>
         </sch:rule>
     </sch:pattern>
 
