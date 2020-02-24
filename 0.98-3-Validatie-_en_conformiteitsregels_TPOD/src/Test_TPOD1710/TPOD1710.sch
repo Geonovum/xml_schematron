@@ -18,7 +18,7 @@
     <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
     <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
     <xsl:variable name="SOORT_REGELING"
-        select="$xmlDocuments//stop:AanleveringBesluit/stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        select="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <xsl:variable name="AMvB" select="'/join/id/stop/regelingtype_001'"/>
     <xsl:variable name="MR" select="'/join/id/stop/regelingtype_002'"/>

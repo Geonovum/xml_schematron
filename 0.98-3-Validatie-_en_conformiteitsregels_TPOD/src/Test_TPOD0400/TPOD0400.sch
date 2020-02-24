@@ -26,6 +26,7 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/vrijetekst/v20190901" prefix="vt"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/kaartrecept/v20190901" prefix="k"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/pons/v20190901" prefix="p"/>
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
     
     <!-- ====================================== GENERIC ============================================================================= -->
     <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
@@ -41,14 +42,18 @@
     
     <!-- ============================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_TEMPLATE">
-        <sch:rule context="/">
-            <xsl:variable name="APPLICABLE" select="true()"/>
-            <xsl:variable name="CONDITION" select="true()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TDOP_TEMPLATE: Betreft <sch:value-of
-                    select="_"/>: <sch:value-of select="_"/>,
-                <sch:value-of select="_"/>: TEMPLATE. 
+    <sch:pattern id="TDOP_0400">
+        <sch:rule context="//tekst:Kop">
+            <xsl:variable name="APPLICABLE"
+                select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <xsl:variable name="CONDITION" select="tekst:Label and tekst:Opschrift and tekst:Nummer"/>
+<!--            <xsl:message select="$SOORT_REGELING"/>
+            <xsl:message select="$APPLICABLE"/>
+            <xsl:message select="$CONDITION"/>
+            <xsl:message select="tekst:Nummer"/>
+-->            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
+                TDOP_0400: Betreft (Label, Opschrift, Nummer): "<sch:value-of select="tekst:Label"/>", "<sch:value-of select="tekst:Nummer"/>", "<sch:value-of select="tekst:Opschrift"/>":
+                Een Kop moet bevatten een Label, een Nummer en een Opschrift. 
             </sch:assert>
         </sch:rule>
     </sch:pattern>

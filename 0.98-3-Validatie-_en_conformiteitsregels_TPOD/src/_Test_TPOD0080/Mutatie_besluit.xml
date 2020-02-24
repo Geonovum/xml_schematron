@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/"
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://standaarden.overheid.nl/lvbb/stop/ ../lvbb/LVBB-stop.xsd" 
+    schemaversie="0.98.3-kern">
+    <BesluitVersie>
+        <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <FRBRWork>/akn/nl/bill/gm0037/2020/1006</FRBRWork>
+            <FRBRExpression>/akn/nl/bill/gm0037/2020/1000/nld@2020-03-01</FRBRExpression>
+            <soortWork>/join/id/stop/work_003</soortWork>
+        </ExpressionIdentificatie>
+        <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/join/id/stop/gemeente/gm0037</eindverantwoordelijke>
+            <maker>/join/id/stop/gemeente/gm0037</maker>
+            <officieleTitel>Wijzigen Artikel voor Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_a6a9eddd</onderwerp><!-- bouwen en verbouwen -->
+            </onderwerpen>
+            <overheidsdomein>/tooi/def/concept/c_86b84a9d</overheidsdomein><!-- milieu, ruimte en water -->
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied><!-- ruimtelijke ordening en milieu -->
+            </rechtsgebieden>
+        </BesluitMetadata>
+        <Procedure xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <Procedureverloop>
+                <bekendOp>2020-03-01</bekendOp>
+                <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
+                <procedurestappen>
+                    <Procedurestap>
+                        <soortStap>/join/id/stop/procedure/stap_003</soortStap>
+                        <voltooidOp>2020-01-30</voltooidOp>
+                    </Procedurestap>
+                </procedurestappen>
+            </Procedureverloop>
+        </Procedure>
+        <BesluitDoel xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <BeoogdeRegelgeving>
+                <BeoogdeRegeling>
+                    <doel>/akn/ontology/event/nl/gm0037/sync/Instelling</doel>
+                    <instrumentVersie>/akn/nl/act/gm0037/2020/reg456/nld@2020-03-01</instrumentVersie>
+                    <eId>art_II</eId>
+                </BeoogdeRegeling>
+            </BeoogdeRegelgeving>
+            <Tijdstempels>
+                <Tijdstempel>
+                    <doel>/join/id/proces/gm0037/2020/Instelling</doel>
+                    <soortTijdstempel>geldigVanaf</soortTijdstempel>
+                    <datum>2020-03-01</datum>
+                    <eId></eId>
+                </Tijdstempel>
+            </Tijdstempels>
+        </BesluitDoel>
+        <Besluit xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+            <Regeling>
+                <RegelingOpschrift eId="longTitle_o_1" wId="longTitle_o_1">
+                    <Al>Wijzigen tekst Artikel 2.10 f.</Al>
+                </RegelingOpschrift>
+                <Lichaam wId="body" eId="body">
+                    <WijzigArtikel eId="art_I" wId="gm0037_1__art_I">
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>I</Nummer>
+                        </Kop>
+                        <Wat>Tekst bij Artikel 2.10 f wordt gewijzigd.</Wat>
+                    </WijzigArtikel>
+                    <Artikel eId="art_II" wId="gm0037_1__art_II">
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>II</Nummer>
+                        </Kop>
+                        <Inhoud>
+                            <Al>Dit besluit treedt in werking per 1 oktober 2020.</Al>
+                        </Inhoud>
+                    </Artikel>
+                </Lichaam>
+                <Sluiting eId="formula_2_o_1" wId="formula_2_o_1">
+                    <Al>Gegeven te Geonovum, Gemeentestad, 27 februari 2020</Al>
+                    <Ondertekening>
+                        <Al>Gedeputeerde Raad van Amersfoort tot Den Haag</Al>
+                        <Al>R. de Graaf</Al>
+                        <Al>bestuurder</Al>
+                        <Al>K. Lingbeek</Al>
+                        <Al>medewerker</Al>
+                    </Ondertekening>
+                </Sluiting>
+                <WijzigBijlage eId="cmp_A" wId="gm037_1__cmp_A">
+                    <Kop>
+                        <Label>Bijlage</Label>
+                        <Nummer>A</Nummer>
+                        <Opschrift>Bijlage bij Artikel I</Opschrift>
+                    </Kop>
+                    <RegelingMutatie FRBRwork="/akn/nl/act/gm0037/2020/reg456" 
+                                     was="/akn/nl/act/gm0037/2019/reg456/nld@2020-01-22" 
+                                     wordt="/akn/nl/act/gm0037/2020/reg456/nld@2020-03-01" 
+                                     componentnaam="wijziging_reg">
+                        <!-- Vervang is nodig omdat het eId wijzigt -->
+                        <Vervang wat="gm0037_1__subchp_2.3__art_2.10">
+                            <Nummer>A</Nummer>
+                            <Wat>Artikel 2.10 f tekst wijzigen</Wat>
+                            <Artikel eId="subchp_2.3__art_2.10" wId="gm0037_1__subchp_2.3__art_2.10">
+                                <Kop>
+                                    <Label>Artikel</Label>
+                                    <Nummer>2.10</Nummer>
+                                    <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                                </Kop>
+                                <Inhoud>
+                                    <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.3__art_2.10__ref_o_1" wId="gm0037_1__subchp_2.3__art_2.10__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1">Centrumgebied</IntIoRef>' mag de locatie in ieder geval worden gebruikt voor het verrichten van de volgende gebruiksactiviteiten:</Al>
+                                    <Lijst eId="subchp_2.3__art_2.10__list_o_1" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1" type="expliciet">
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_a" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_a">
+                                            <LiNummer>a.</LiNummer>
+                                            <Al>het exploiteren van een bedrijf;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_b" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_b">
+                                            <LiNummer>b.</LiNummer>
+                                            <Al>het exploiteren van een instelling voor cultuur en ontspanning;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_c" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_c">
+                                            <LiNummer>c.</LiNummer>
+                                            <Al>het uitoefenen van detailhandel;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_d" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_d">
+                                            <LiNummer>d.</LiNummer>
+                                            <Al>het uitoefenen van dienstverlening;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_e" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_e">
+                                            <LiNummer>e.</LiNummer>
+                                            <Al>het exploiteren van een horeca-inrichting;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_f" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_f">
+                                            <LiNummer>f.</LiNummer>
+                                            <Al>het exploiteren van een <VerwijderdeTekst>kantoor</VerwijderdeTekst><NieuweTekst>kantoorruimte</NieuweTekst>;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_g" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_g">
+                                            <LiNummer>g.</LiNummer>
+                                            <Al>het exploiteren van een instelling voor maatschappelijke voorzieningen;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_h" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_h">
+                                            <LiNummer>h.</LiNummer>
+                                            <Al>het exploiteren van een centrale voor het verwerken van huishoudelijk afval;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_i" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_i">
+                                            <LiNummer>i.</LiNummer>
+                                            <Al>het exploiteren van een speelautomatenhal, uitsluitend ter plaatse van het werkingsgebied '<IntIoRef eId="subchp_2.3__art_2.10__list_o_1__item_i__ref_o_1" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_i__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_1">exploiteren speelautomatenhal</IntIoRef>'; </Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_j" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_j">
+                                            <LiNummer>j.</LiNummer>
+                                            <Al>het aanleggen en instandhouden van openbaar groen;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_k" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_k">
+                                            <LiNummer>k.</LiNummer>
+                                            <Al>het recreëren;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_l" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_l">
+                                            <LiNummer>l.</LiNummer>
+                                            <Al>het sporten;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_m" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_m">
+                                            <LiNummer>m.</LiNummer>
+                                            <Al>het wonen;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_n" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_n">
+                                            <LiNummer>n.</LiNummer>
+                                            <Al>het uitoefenen van een beroep aan huis;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_o" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_o">
+                                            <LiNummer>o.</LiNummer>
+                                            <Al>het exploiteren van een aan de woonfunctie ondergeschikt bedrijf aan huis;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_p" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_p">
+                                            <LiNummer>p.</LiNummer>
+                                            <Al>het aanleggen en instandhouden van tuin en/of erf;</Al>
+                                        </Li>
+                                        <Li eId="subchp_2.3__art_2.10__list_o_1__item_q" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_q">
+                                            <LiNummer>q.</LiNummer>
+                                            <Al>het aanleggen en instandhouden van de openbare ruimte , waaronder in ieder geval worden begrepen voorzieningen voor de waterhuishouding, voetpaden, fietspaden, wegen en voorzieningen die het verblijf in de openbare ruimte vergemakkelijken, zoals verlichting,</Al>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Artikel>
+                        </Vervang>
+                    </RegelingMutatie>
+                </WijzigBijlage>
+            </Regeling>
+        </Besluit>
+    </BesluitVersie>
+    <RegelingVersieInformatie>
+        <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <FRBRWork>/akn/nl/act/gm0037/2020/reg456</FRBRWork>
+            <FRBRExpression>/akn/nl/act/gm0037/2020/reg456/nld@2020-03-01</FRBRExpression>
+            <soortWork>/join/id/stop/work_019</soortWork><!-- Een Regeling -->
+        </ExpressionIdentificatie>
+        <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/gemeente/gm0037</eindverantwoordelijke>
+            <maker>/tooi/id/gemeente/gm0037</maker>
+            <officieleTitel>Voorbeeldregels met uitbreiding tbv Toepasbare Regels</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_9d1917e9</onderwerp>
+            </onderwerpen>
+            <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
+            </rechtsgebieden>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling><!-- Omgevingsplan -->
+            <versienummer>8</versienummer>
+        </RegelingMetadata>
+    </RegelingVersieInformatie>    
+</AanleveringBesluit>
