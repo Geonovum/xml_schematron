@@ -43,7 +43,7 @@
     <sch:pattern id="TDOP_0400">
         <sch:rule context="//tekst:Lichaam">
             <xsl:variable name="APPLICABLE"
-                select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+                select="true()"/>
             <xsl:variable name="volgorde">
                 <xsl:for-each select="tekst:Hoofdstuk">
                     <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=string(position()))">
