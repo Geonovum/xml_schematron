@@ -40,10 +40,10 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0400">
+    <sch:pattern id="TDOP_0520">
         <sch:rule context="//tekst:Lichaam/*">
             <xsl:variable name="APPLICABLE"
-                select="true()"/>
+                select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <xsl:variable name="hoofdstuk" select="string(tekst:Kop/tekst:Nummer)"/>
             <xsl:variable name="volgorde">
                 <xsl:for-each select="tekst:Afdeling">

@@ -43,7 +43,7 @@
     <sch:pattern id="TDOP_0480">
         <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <xsl:variable name="APPLICABLE"
-                select="true()"/>
+                select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <xsl:variable name="hoofdstuk" select="string(tekst:Kop/tekst:Nummer)"/>
             <xsl:variable name="volgorde">
                 <xsl:for-each select="tekst:Titel">
@@ -54,7 +54,7 @@
             </xsl:variable>
             <xsl:variable name="CONDITION" select="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, titels):  <xsl:value-of select="$hoofdstuk"/>:  <xsl:value-of select="$volgorde"/></sch:assert>
+                TDOP_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, titels):  <xsl:value-of select="$hoofdstuk"/>:   <xsl:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 

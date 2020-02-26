@@ -43,7 +43,7 @@
     <sch:pattern id="TDOP_0400">
         <sch:rule context="//tekst:Lichaam">
             <xsl:variable name="APPLICABLE"
-                select="true()"/>
+                select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <xsl:variable name="volgorde">
                 <xsl:for-each select="tekst:Hoofdstuk">
                     <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=string(position()))">
@@ -53,7 +53,7 @@
             </xsl:variable>
             <xsl:variable name="CONDITION" select="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0420: Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken):  <xsl:value-of select="$volgorde"/></sch:assert>
+                TDOP_0420: Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken):  <xsl:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
