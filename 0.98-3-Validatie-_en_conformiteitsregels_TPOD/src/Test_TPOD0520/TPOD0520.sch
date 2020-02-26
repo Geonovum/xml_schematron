@@ -41,7 +41,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TDOP_0400">
-        <sch:rule context="//tekst:Lichaam/Hoofdstuk">
+        <sch:rule context="//tekst:Lichaam/*">
             <xsl:variable name="APPLICABLE"
                 select="true()"/>
             <xsl:variable name="hoofdstuk" select="string(tekst:Kop/tekst:Nummer)"/>
