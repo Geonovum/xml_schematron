@@ -41,20 +41,12 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TDOP_0510">
-        <sch:rule context="//tekst:Lichaam/Hoofdstuk">
+        <sch:rule context="//tekst:Afdeling/tekst:Kop[lower-case(tekst:Label) ne 'afdeling']">
             <xsl:variable name="APPLICABLE"
                 select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <xsl:variable name="hoofdstuk" select="string(tekst:Kop/tekst:Nummer)"/>
-            <xsl:variable name="volgorde">
-                <xsl:for-each select="tekst:Afdeling">
-                    <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($hoofdstuk, '.', string(position())))">
-                        <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:variable>
-            <xsl:variable name="CONDITION" select="string-length($volgorde) = 0"/>
+            <xsl:variable name="CONDITION" select="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0510: Afdelingen moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, afdelingen):  <xsl:value-of select="$hoofdstuk"/>, <xsl:value-of select="$volgorde"/></sch:assert>
+                TDOP_0510: Een Afdeling moet worden geduid met de label Afdeling. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
