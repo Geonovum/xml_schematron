@@ -40,21 +40,21 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0400">
-        <sch:rule context="//tekst:Lichaam/*">
+    <sch:pattern id="TDOP_0480">
+        <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <xsl:variable name="APPLICABLE"
                 select="true()"/>
-            <xsl:variable name="titel" select="string(tekst:Kop/tekst:Nummer)"/>
-            <xsl:variable name="volgorde">
+            <xsl:variable name="hoofdstuk" select="string(tekst:Kop/tekst:Nummer)"/>
+            <xsl:variable name="fouten">
                 <xsl:for-each select="tekst:Titel">
-                    <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($titel, '.', string(position())))">
+                    <xsl:if test="not(starts-with(tekst:Kop/tekst:Nummer, concat($hoofdstuk, '.')))">
                         <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
-            <xsl:variable name="CONDITION" select="string-length($volgorde) = 0"/>
+            <xsl:variable name="CONDITION" select="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0520: Titels moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, titels):  <xsl:value-of select="$titel"/>, <xsl:value-of select="$volgorde"/></sch:assert>
+                TDOP_0480: De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt. (betreft hoofdstukken, titels):  <xsl:value-of select="$hoofdstuk"/>: <xsl:value-of select="$fouten"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
