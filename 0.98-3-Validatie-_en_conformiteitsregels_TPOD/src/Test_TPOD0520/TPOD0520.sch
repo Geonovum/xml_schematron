@@ -41,20 +41,22 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TDOP_0520">
-        <sch:rule context="//tekst:Lichaam/*">
+        <sch:rule context="//tekst:Hoofdstuk/tekst:Titel">
             <xsl:variable name="APPLICABLE"
                 select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <xsl:variable name="hoofdstuk" select="string(tekst:Kop/tekst:Nummer)"/>
+            <xsl:variable name="hoofdstuk" select="string(../tekst:Kop/tekst:Nummer)"/>
+            <xsl:variable name="titel" select="string(tekst:Kop/tekst:Nummer)"/>
             <xsl:variable name="volgorde">
                 <xsl:for-each select="tekst:Afdeling">
-                    <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($hoofdstuk, '.', string(position())))">
+                    <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($titel, '.', string(position())))">
                         <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
             <xsl:variable name="CONDITION" select="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0520: Afdelingen moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, afdelingen):  <xsl:value-of select="$hoofdstuk"/>, <xsl:value-of select="$volgorde"/></sch:assert>
+                TDOP_0520: Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt. 
+                (betreft hoofdstukken, titels, afdelingen):  <xsl:value-of select="$hoofdstuk"/>: <xsl:value-of select="$titel"/>: <xsl:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 

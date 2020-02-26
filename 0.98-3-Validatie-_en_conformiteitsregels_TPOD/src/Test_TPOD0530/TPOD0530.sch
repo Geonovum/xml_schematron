@@ -40,8 +40,8 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0530">
-        <sch:rule context="//tekst:Lichaam/Hoofdstuk">
+    <sch:pattern id="TDOP_0480">
+        <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <xsl:variable name="APPLICABLE"
                 select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <xsl:variable name="hoofdstuk" select="string(tekst:Kop/tekst:Nummer)"/>
@@ -51,11 +51,18 @@
                         <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
                     </xsl:if>
                 </xsl:for-each>
+                <xsl:for-each select="tekst:Titel">
+                    <xsl:variable name="titel" select="string(tekst:Kop/tekst:Nummer)"/>
+                    <xsl:for-each select="tekst:Afdeling">
+                        <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($titel, '.', string(position())))">
+                            <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:for-each>
             </xsl:variable>
             <xsl:variable name="CONDITION" select="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0530: Afdelingen moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, afdelingen):  <xsl:value-of select="$hoofdstuk"/>, <xsl:value-of select="$volgorde"/></sch:assert>
+                TDOP_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, titels):  <xsl:value-of select="$hoofdstuk"/>:   <xsl:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
-
 </sch:schema>
