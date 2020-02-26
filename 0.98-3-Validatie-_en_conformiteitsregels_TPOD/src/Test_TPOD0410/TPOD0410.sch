@@ -41,7 +41,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TDOP_0400">
-        <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk/tekst:Kop[lower-case(tekst:Label) ne 'hoofdstuk']">
+        <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[lower-case(tekst:Label) ne 'hoofdstuk']">
             <xsl:variable name="APPLICABLE"
                 select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <xsl:variable name="CONDITION" select="false()"/>
