@@ -47,11 +47,7 @@
             <xsl:variable name="APPLICABLE"
                 select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <xsl:variable name="CONDITION" select="tekst:Label and tekst:Opschrift and tekst:Nummer"/>
-<!--            <xsl:message select="$SOORT_REGELING"/>
-            <xsl:message select="$APPLICABLE"/>
-            <xsl:message select="$CONDITION"/>
-            <xsl:message select="tekst:Nummer"/>
--->            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 TDOP_0400: Betreft (Label, Opschrift, Nummer): "<sch:value-of select="tekst:Label"/>", "<sch:value-of select="tekst:Nummer"/>", "<sch:value-of select="tekst:Opschrift"/>":
                 Een Kop moet bevatten een Label, een Nummer en een Opschrift. 
             </sch:assert>
