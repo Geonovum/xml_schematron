@@ -47,6 +47,9 @@
             <xsl:variable name="hoofdstuk" select="string(tekst:Kop/tekst:Nummer)"/>
             <xsl:variable name="volgorde">
                 <xsl:for-each select="tekst:Titel">
+                    <xsl:if test="not(tekst:Kop/tekst:Nummer)">
+                        <xsl:value-of select="concat(concat($hoofdstuk, '.', string(position())),', ')"/>
+                    </xsl:if>
                     <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($hoofdstuk, '.', string(position())))">
                         <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
                     </xsl:if>

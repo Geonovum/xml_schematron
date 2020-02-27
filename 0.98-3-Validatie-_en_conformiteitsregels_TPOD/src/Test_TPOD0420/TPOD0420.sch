@@ -46,6 +46,9 @@
                 select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <xsl:variable name="volgorde">
                 <xsl:for-each select="tekst:Hoofdstuk">
+                    <xsl:if test="not(tekst:Kop/tekst:Nummer)">
+                        <xsl:value-of select="concat(string(position()),', ')"/>
+                    </xsl:if>
                     <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=string(position()))">
                         <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
                     </xsl:if>
