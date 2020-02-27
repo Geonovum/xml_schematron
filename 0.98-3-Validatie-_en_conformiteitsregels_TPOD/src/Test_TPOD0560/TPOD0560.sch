@@ -48,13 +48,17 @@
             <xsl:variable name="fouten">
                 <xsl:for-each select="tekst:Afdeling">
                     <xsl:if test="not(starts-with(tekst:Kop/tekst:Nummer, concat($hoofdstuk, '.')))">
-                        <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                        <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer), ', ')"/>
                     </xsl:if>
                 </xsl:for-each>
             </xsl:variable>
             <xsl:variable name="CONDITION" select="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0560: Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt. (betreft hoofdstukken, titels):  <xsl:value-of select="$hoofdstuk"/>: <xsl:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TDOP_0560: Als
+                tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van
+                Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt,
+                gevolgd door een punt. (betreft hoofdstukken, titels): <xsl:value-of
+                    select="$hoofdstuk"/>: <xsl:value-of
+                    select="substring($fouten, 1, string-length($fouten) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
