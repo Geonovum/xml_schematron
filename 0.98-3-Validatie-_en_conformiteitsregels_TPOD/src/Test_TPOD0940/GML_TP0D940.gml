@@ -46,7 +46,7 @@
                gml:id="id-D28AF779-7EDD-4A88-8B11-809798F53636-0">
                <gml:surfaceMember>
                   <gml:Polygon gml:id="id-D28AF779-7EDD-4A88-8B11-809798F53636-1"
-                     srsName="urn:ogc:def:crs:EPSG::4">
+                     srsName="urn:ogc:def:crs:EPSG::4258">
                      <gml:exterior>
                         <gml:LinearRing gml:id="id-D28AF779-7EDD-4A88-8B11-809798F53636-2"
                            srsName="urn:ogc:def:crs:EPSG::28992">

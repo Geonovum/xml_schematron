@@ -62,18 +62,18 @@
         <xsl:for-each
             select="$context/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <xsl:if test="rol:identificatie = $bovenliggend">
-                <sch:let name="lokaalBovenliggend"
-                    value="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                <xsl:choose>
-                    <xsl:when test="not(contains($activiteitenLijst, $lokaalBovenliggend))">
+                <sch:choose>
+                    <sch:let name="lokaalBovenliggend"
+                        value="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                    <sch:when test="not(contains($activiteitenLijst, $lokaalBovenliggend))">
                         <xsl:value-of select="concat($identificatie, ', ')"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of
+                    </sch:when>
+                    <sch:otherwise>
+                        <sch:value-of
                             select="foo:activiteitenPad($identificatie, $lokaalBovenliggend, $activiteitenLijst, /)"
                         />
-                    </xsl:otherwise>
-                </xsl:choose>
+                    </sch:otherwise>
+                </sch:choose>
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
@@ -86,17 +86,17 @@
             select="$context/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <xsl:if
                 test="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href = $bovenliggend">
-                <sch:let name="lokaalBovenliggend" value="rol:identificatie"/>
-                <xsl:choose>
-                    <xsl:when test="$identificatie = $lokaalBovenliggend">
-                        <xsl:value-of select="concat($lokaalBovenliggend, ', ')"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of
+                <sch:choose>
+                    <sch:let name="lokaalBovenliggend" value="rol:identificatie"/>
+                    <sch:when test="$identificatie = $lokaalBovenliggend">
+                        <sch:value-of select="concat($lokaalBovenliggend, ', ')"/>
+                    </sch:when>
+                    <sch:otherwise>
+                        <sch:value-of
                             select="foo:circulaireActiviteiten($identificatie, $lokaalBovenliggend, /)"
                         />
-                    </xsl:otherwise>
-                </xsl:choose>
+                    </sch:otherwise>
+                </sch:choose>
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
