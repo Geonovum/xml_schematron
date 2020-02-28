@@ -1,0 +1,3 @@
+In de testdirectories staan review.txt over hoe het schematron in de test te reviewen
+
+Deze schematrons worden samengevoegd in de validatie.sch in deze directory, dit is nog niet up to date

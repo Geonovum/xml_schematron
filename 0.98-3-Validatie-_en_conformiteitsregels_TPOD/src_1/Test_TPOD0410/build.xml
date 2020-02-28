@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="">
+    <target  name="schematron-compile-test" >
+        
+        <!-- expand inclusions -->
+        <xslt basedir="."
+            style="iso_dsdl_include.xsl" in="TPOD0410.sch"  out="TPOD0410_1.sch"> 
+            <classpath>
+                <pathelement location="saxon9he.jar"/>
+            </classpath>
+        </xslt>
+        
+        <!-- expand abstract patterns -->
+        <xslt basedir="."
+            style="iso_abstract_expand.xsl" in="TPOD0410_1.sch"  out="TPOD0410_2.sch"> 
+            <classpath>
+                <pathelement location="saxon9he.jar"/>
+            </classpath>
+        </xslt>
+        
+        
+        
+        <!-- compile it -->
+        <xslt basedir="."
+            style="iso_svrl_for_xslt2.xsl" in="TPOD0410_2.sch"  out="TPOD0410.xsl"> 
+            <classpath>
+                <pathelement location="saxon9he.jar"/>
+            </classpath>
+        </xslt>
+        
+        <!-- validate -->
+        <xslt basedir="."
+            style="TPOD0410.xsl" in="Regeling_met_hoofdstuk_Label_FOUT.xml"  out="instance.svrlt"> 
+            <classpath>
+                <pathelement location="saxon9he.jar"/>
+            </classpath>
+        </xslt>
+    </target>
+</project>
