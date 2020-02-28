@@ -14,36 +14,37 @@
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
-
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
+    <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
+    
     <!-- ====================================== GENERIC ============================================================================= -->
-    <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
-    <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
-    <xsl:variable name="SOORT_REGELING"
-        select="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
-
-    <xsl:variable name="AMvB" select="'/join/id/stop/regelingtype_001'"/>
-    <xsl:variable name="MR" select="'/join/id/stop/regelingtype_002'"/>
-    <xsl:variable name="OP" select="'/join/id/stop/regelingtype_003'"/>
-    <xsl:variable name="OV" select="'/join/id/stop/regelingtype_004'"/>
-    <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
-    <xsl:variable name="OVI_PB" select="''"/>
-
+    <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
+    <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
+    <sch:let name="SOORT_REGELING" value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+    
+    <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
+    <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
+    <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>
+    <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>
+    <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
+    <sch:let name="OVI_PB" value="''"/>
+    
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD880">
         <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']">
-            <xsl:variable name="APPLICABLE"
-                select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <xsl:variable name="CONDITION"
-                select="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepaling')"/>
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION"
+                value="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepaling')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD880: Een
                 OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene
                 bepalingen."/> </sch:assert>
         </sch:rule>
         <sch:rule context="//tekst:Lichaam">
-            <xsl:variable name="APPLICABLE"
-                select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <xsl:variable name="nummer1">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="nummer1">
                 <xsl:choose>
                     <xsl:when test="tekst:Hoofdstuk/tekst:Kop">
                         <xsl:value-of select="0"/>
@@ -57,8 +58,8 @@
                         <xsl:value-of select="-1"/>
                     </xsl:otherwise>
                 </xsl:choose>
-            </xsl:variable>
-            <xsl:variable name="CONDITION" select="$nummer1=1 or $nummer1=-1"/>
+            </sch:let>
+            <sch:let name="CONDITION" value="$nummer1=1 or $nummer1=-1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD880: Een
                 OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene
                 bepalingen.."/> </sch:assert>

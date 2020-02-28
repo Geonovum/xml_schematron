@@ -24,36 +24,37 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/kaartrecept/v20190901" prefix="k"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/pons/v20190901" prefix="p"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
-
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
+    <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
+    
     <!-- ====================================== GENERIC ============================================================================= -->
-    <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
-    <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
-    <xsl:variable name="SOORT_REGELING"
-        select="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
-
-    <xsl:variable name="AMvB" select="'/join/id/stop/regelingtype_001'"/>
-    <xsl:variable name="MR" select="'/join/id/stop/regelingtype_002'"/>
-    <xsl:variable name="OP" select="'/join/id/stop/regelingtype_003'"/>
-    <xsl:variable name="OV" select="'/join/id/stop/regelingtype_004'"/>
-    <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
-    <xsl:variable name="OVI_PB" select="''"/>
-
+    <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
+    <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
+    <sch:let name="SOORT_REGELING" value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+    
+    <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
+    <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
+    <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>
+    <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>
+    <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
+    <sch:let name="OVI_PB" value="''"/>
+    
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TDOP_0520">
         <sch:rule context="//tekst:Hoofdstuk/tekst:Titel">
-            <xsl:variable name="APPLICABLE"
-                select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <xsl:variable name="hoofdstuk" select="string(../tekst:Kop/tekst:Nummer)"/>
-            <xsl:variable name="titel" select="string(tekst:Kop/tekst:Nummer)"/>
-            <xsl:variable name="volgorde">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="hoofdstuk" value="string(../tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="titel" value="string(tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="volgorde">
                 <xsl:for-each select="tekst:Afdeling">
                     <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($titel, '.', string(position())))">
                         <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
                     </xsl:if>
                 </xsl:for-each>
-            </xsl:variable>
-            <xsl:variable name="CONDITION" select="string-length($volgorde) = 0"/>
+            </sch:let>
+            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TDOP_0520: Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt. 
                 (betreft hoofdstukken, titels, afdelingen):  <xsl:value-of select="$hoofdstuk"/>: <xsl:value-of select="$titel"/>: <xsl:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
