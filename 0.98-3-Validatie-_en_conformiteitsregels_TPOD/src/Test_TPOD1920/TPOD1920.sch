@@ -13,6 +13,7 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" prefix="ow-dc"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
+    <sch:ns uri="http://whatever" prefix="foo"/>
 
     <!-- ====================================== GENERIC ============================================================================= -->
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
@@ -32,40 +33,22 @@
     <sch:pattern id="TPOD1920">
         <sch:rule context="/Modules/RegelingVersie/Bestand">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="naam" value="naam"/>
-            <sch:let name="notfoundFileOrObjectType">
-                <xsl:for-each select="objecttype">
-                    <sch:let name="objecttype" value="text()"/>
-                    <xsl:choose>
-                        <xsl:when test=". = 'Geometrie'">
-                            <xsl:if test="not(document($naam)//geo:FeatureCollectionGeometrie)">
-                                <xsl:value-of select="concat($naam, ': ', ., ', ')"/>
-                            </xsl:if>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:if
-                                test="not(document($naam)//ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen[sl:objectType = $objecttype])">
-                                <xsl:value-of select="concat($naam, ': ', ., ', ')"/>
-                            </xsl:if>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:for-each>
-            </sch:let>
-            <sch:let name="CONDITION" value="string-length($notfoundFileOrObjectType) = 0"/>
+            <sch:let name="nfFOOT" value="foo:notfoundFileOrObjectType(naam,.)"></sch:let>
+            <sch:let name="CONDITION" value="string-length($nfFOOT) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1920: De
                 objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het
                 betreffende Ow-bestand. De objecttypen waarom het gaat staan nu genoemd:
-                    <sch:value-of select="$notfoundFileOrObjectType"/>
+                    <sch:value-of select="$nfFOOT"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
 
     <xsl:function name="foo:notfoundFileOrObjectType">
         <xsl:param name="naam"/>
-        <xsl:param name="objecttype"/>
+        <xsl:param name="context" as="node()"/>
         <xsl:variable name="notfoundFileOrObjectType">
-            <xsl:for-each select="objecttype">
-                <sch:let name="objecttype" value="text()"/>
+            <xsl:for-each select="$context/objecttype">
+                <xsl:variable name="objecttype" select="text()"/>
                 <xsl:choose>
                     <xsl:when test=". = 'Geometrie'">
                         <xsl:if test="not(document($naam)//geo:FeatureCollectionGeometrie)">
