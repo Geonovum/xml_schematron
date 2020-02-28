@@ -26,25 +26,27 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/kaartrecept/v20190901" prefix="k"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/pons/v20190901" prefix="p"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
+    <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
     
     <!-- ====================================== GENERIC ============================================================================= -->
-    <xsl:variable name="xmlDocuments" select="collection('.?select=*.xml')"/>
-    <xsl:variable name="gmlDocuments" select="collection('.?select=*.gml')"/>
-    <xsl:variable name="SOORT_REGELING" select="$xmlDocuments//stop:AanleveringBesluit/stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+    <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
+    <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
+    <sch:let name="SOORT_REGELING" value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
     
-    <xsl:variable name="AMvB" select="'/join/id/stop/regelingtype_001'"/>
-    <xsl:variable name="MR" select="'/join/id/stop/regelingtype_002'"/>
-    <xsl:variable name="OP" select="'/join/id/stop/regelingtype_003'"/>
-    <xsl:variable name="OV" select="'/join/id/stop/regelingtype_004'"/>
-    <xsl:variable name="WV" select="'/join/id/stop/regelingtype_005'"/>
-    <xsl:variable name="OVI_PB" select="''"/>
+    <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
+    <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
+    <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>
+    <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>
+    <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
+    <sch:let name="OVI_PB" value="''"/>
     
     <!-- ============================================================================================================================ -->
     
     <sch:pattern id="TDOP_0400">
         <sch:rule context="//tekst:Kop">
-            <xsl:variable name="APPLICABLE" select="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <xsl:variable name="CONDITION" select="tekst:Label and tekst:Opschrift and tekst:Nummer"/>
+            <sch:let name="APPLICABLE" value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION" value="tekst:Label and tekst:Opschrift and tekst:Nummer"/>
             
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TDOP_0400: Betreft
                 (Label, Opschrift, Nummer): "<sch:value-of select="tekst:Label"/>", "<sch:value-of
