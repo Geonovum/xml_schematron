@@ -52,12 +52,12 @@
     </sch:pattern>
 
     <xsl:function name="foo:getRegelTekstIdentifiers">
-        <sch:let name="identifiers">
+        <xsl:variable name="identifiers">
             <xsl:for-each select="$xmlDocuments//r:Regeltekst">
                 <xsl:value-of select="r:identificatie/text()"/>
             </xsl:for-each>
-        </sch:let>
-        <sch:value-of select="$identifiers"/>
+        </xsl:variable>
+        <xsl:value-of select="$identifiers"/>
     </xsl:function>
 
 </sch:schema>

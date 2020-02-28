@@ -131,23 +131,23 @@
     </sch:pattern>
 
     <xsl:function name="foo:getLocationIdentifiers">
-        <sch:let name="identifiers">
+        <xsl:variable name="identifiers">
             <xsl:for-each
                 select="$xmlDocuments//(l:Gebied | l:Gebiedengroep | l:Punt | l:Puntengroep | l:Lijn | l:Lijnengroep)/l:identificatie">
                 <xsl:value-of select="text()"/>
             </xsl:for-each>
-        </sch:let>
+        </xsl:variable>
         <sch:value-of select="$identifiers"/>
     </xsl:function>
 
     <xsl:function name="foo:getIdentifiers">
         <xsl:param name="xpath" as="node()*"/>
-        <sch:let name="identifiers">
+        <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">
                 <xsl:value-of select="text()"/>
             </xsl:for-each>
-        </sch:let>
-        <sch:value-of select="$identifiers"/>
+        </xsl:variable>
+        <xsl:value-of select="$identifiers"/>
     </xsl:function>
 
 </sch:schema>
