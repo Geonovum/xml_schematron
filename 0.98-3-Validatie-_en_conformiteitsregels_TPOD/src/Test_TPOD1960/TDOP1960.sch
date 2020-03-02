@@ -42,13 +42,7 @@
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="geometrie">
-                <xsl:for-each select="$gmlDocuments//geo:Geometrie">
-                    <xsl:if test="string(geo:id/text())=$href">
-                        <xsl:copy-of select="."/>
-                    </xsl:if>
-                </xsl:for-each>
-            </sch:let>
+            <sch:let name="geometrie" value="$gmlDocuments//geo:Geometrie[geo:id/text() eq $href]"/>
             <sch:let name="CONDITION" value="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 TDOP_1960: Betreft <sch:value-of
@@ -57,17 +51,5 @@
                 vanuit een Lijn moet een lijn-geometrie zijn. 
             </sch:assert>
         </sch:rule>
-
     </sch:pattern>
-
-    <xsl:function name="foo:getIdentifiers">
-        <xsl:param name="xpath" as="node()*"/>
-        <sch:let name="identifiers">
-            <xsl:for-each select="$xpath">
-                <xsl:value-of select="text()"/>
-            </xsl:for-each>
-        </sch:let>
-        <sch:value-of select="$identifiers"/>
-    </xsl:function>
-
 </sch:schema>

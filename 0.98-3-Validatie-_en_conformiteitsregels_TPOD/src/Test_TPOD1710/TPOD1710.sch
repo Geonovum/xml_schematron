@@ -15,19 +15,20 @@
     <sch:ns uri="http://whatever" prefix="foo"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
-    
+
     <!-- ====================================== GENERIC ============================================================================= -->
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
-    <sch:let name="SOORT_REGELING" value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
-    
+    <sch:let name="SOORT_REGELING"
+        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
     <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>
     <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>
     <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
     <sch:let name="OVI_PB" value="''"/>
-    
+
     <!-- ============================================================================================================================ -->
 
 
@@ -35,26 +36,11 @@
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <xsl:variable name="activiteitenLijst">
-                <xsl:for-each
-                    select="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-                    <xsl:value-of select="rol:identificatie"/>
-                </xsl:for-each>
-            </xsl:variable>
-
-            <xsl:variable name="circulaireActivititeiten">
-                <xsl:variable name="bovenLiggend"
-                    select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                <xsl:variable name="identificatie" select="rol:identificatie"/>
-                <!-- hier worden de activiteiten uitgefilterd waarvan de bovenliggende activiteiten in de functionele structuur zitten -->
-                <xsl:if test="contains($activiteitenLijst, $bovenLiggend)">
-                    <xsl:value-of
-                        select="foo:circulaireActiviteiten($identificatie, $identificatie, /)"/>
-                </xsl:if>
-            </xsl:variable>
-
+            <sch:let name="activiteitenLijst" value="foo:activiteitenLijst(.)"/>
+            <sch:let name="circulaireActivititeiten"
+                value="foo:circulaireActivititeiten(., $activiteitenLijst)"/>
             <!-- TPOD1710  -->
-            <xsl:variable name="CONDITION" select="string-length($circulaireActivititeiten) = 0"/>
+            <sch:let name="CONDITION" value="string-length($circulaireActivititeiten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">ZH:TP0D1710:
                 Activiteit-ids: <sch:value-of select="$circulaireActivititeiten"/>: Een
                 bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de
@@ -63,27 +49,59 @@
 
     </sch:pattern>
 
-    <xsl:function name="foo:circulaireActiviteiten">
+    <xsl:function name="foo:circulaireActivititeiten">
+        <xsl:param name="context" as="node()"/>
+        <xsl:param name="activiteitenLijst"/>
+        <xsl:variable name="circulaireActivititeiten">
+            <xsl:variable name="bovenLiggend"
+                select="string($context/rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"/>
+            <xsl:variable name="identificatie" select="$context/rol:identificatie/text()"/>
+            <!-- hier worden de activiteiten uitgefilterd waarvan de bovenliggende activiteiten in de functionele structuur zitten -->
+            <xsl:if test="contains($activiteitenLijst, $bovenLiggend)">
+                <xsl:value-of
+                    select="foo:selecteerCirculaireActiviteiten($identificatie, $identificatie, $context)"
+                />
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$circulaireActivititeiten"/>
+    </xsl:function>
+
+    <xsl:function name="foo:selecteerCirculaireActiviteiten">
         <xsl:param name="identificatie" as="xs:string"/>
         <xsl:param name="bovenliggend" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
-        <xsl:for-each
-            select="$context/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-            <xsl:if
-                test="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href = $bovenliggend">
-                <xsl:variable name="lokaalBovenliggend" select="rol:identificatie"/>
-                <xsl:choose>
-                    <xsl:when test="$identificatie = $lokaalBovenliggend">
-                        <xsl:value-of select="concat($lokaalBovenliggend, ', ')"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of
-                            select="foo:circulaireActiviteiten($identificatie, $lokaalBovenliggend, /)"
-                        />
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:if>
-        </xsl:for-each>
+        <xsl:variable name="selecteerCirculaireActiviteiten">
+            <xsl:for-each
+                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+                <xsl:if
+                    test="string(rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href) = $bovenliggend">
+                    <xsl:variable name="lokaalBovenliggend" select="rol:identificatie/text()"/>
+                    <xsl:choose>
+                        <xsl:when test="$identificatie = $lokaalBovenliggend">
+                            <xsl:value-of select="concat($lokaalBovenliggend, ', ')"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of
+                                select="foo:selecteerCirculaireActiviteiten($identificatie, $lokaalBovenliggend, $context)"
+                            />
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$selecteerCirculaireActiviteiten"/>
+    </xsl:function>
+    
+
+    <xsl:function name="foo:activiteitenLijst">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="activiteitenLijst">
+            <xsl:for-each
+                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+                <xsl:value-of select="rol:identificatie/text()"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$activiteitenLijst"/>
     </xsl:function>
 
 </sch:schema>

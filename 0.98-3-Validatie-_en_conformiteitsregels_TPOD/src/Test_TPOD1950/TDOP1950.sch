@@ -42,15 +42,7 @@
             context="//l:Lijnengroep/l:groepselement">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="notFound">
-                <xsl:for-each select="l-ref:LijnRef">
-                    <sch:let name="identifiers"
-                        value="foo:getIdentifiers($xmlDocuments//l:Lijn/l:identificatie)"/>
-                    <sch:if test="not(contains($identifiers, @xlink:href))">
-                        <xsl:value-of select="concat(@xlink:href, ', ')"/>
-                    </sch:if>
-                </xsl:for-each>
-            </sch:let>
+            <sch:let name="notFound" value="foo:notFound(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TDOP_1950: Betreft <sch:value-of
                 select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
@@ -58,15 +50,29 @@
                 in een Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn. </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:notFound">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="notFound">
+            <xsl:variable name="identifiers"
+                select="foo:getIdentifiers($xmlDocuments//l:Lijn/l:identificatie)"/>
+            <xsl:for-each select="$context/l-ref:LijnRef">
+                <xsl:if test="not(contains($identifiers, @xlink:href))">
+                    <xsl:value-of select="concat(@xlink:href, ', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$notFound"/>
+    </xsl:function>
 
     <xsl:function name="foo:getIdentifiers">
         <xsl:param name="xpath" as="node()*"/>
-        <sch:let name="identifiers">
+        <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">
                 <xsl:value-of select="text()"/>
             </xsl:for-each>
-        </sch:let>
-        <sch:value-of select="$identifiers"/>
+        </xsl:variable>
+        <xsl:value-of select="$identifiers"/>
     </xsl:function>
 
 </sch:schema>

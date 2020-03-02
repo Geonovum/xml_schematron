@@ -44,7 +44,7 @@
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="geoLocationGeoReferenceIdentifiers"
-                select="foo:getLocationGeoReferenceIdentifiers()"/>
+                value="foo:getLocationGeoReferenceIdentifiers()"/>
             <sch:let name="nietGerefereerdeGeometrieen">
                 <xsl:for-each select="$gmlDocuments//geo:Geometrie">
                     <xsl:if
@@ -53,7 +53,7 @@
                     </xsl:if>
                 </xsl:for-each>
             </sch:let>
-            <sch:let name="CONDITION" select="string-length($nietGerefereerdeGeometrieen) = 0"/>
+            <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrieen) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
                     <xsl:value-of select="$nietGerefereerdeGeometrieen"/>
@@ -61,16 +61,16 @@
         </sch:rule>
 
         <sch:rule context="//r:Regeltekst/r:identificatie">
-            <sch:let name="APPLICABLE" select="true()"/>
+            <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="regeltekstReferenties"
-                select="foo:getReferences(//r-ref:RegeltekstRef)"/>
+                value="foo:getReferences(//r-ref:RegeltekstRef)"/>
             <sch:let name="nietGerefereerdeReferenties">
                 <xsl:if
                     test="not(contains($regeltekstReferenties, concat('.', text(), '.')))">
                     <xsl:value-of select="concat(string(text()), ', ')"/>
                 </xsl:if>
             </sch:let>
-            <sch:let name="CONDITION" select="string-length($nietGerefereerdeReferenties) = 0"/>
+            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
                 <xsl:value-of select="$nietGerefereerdeReferenties"/>
@@ -115,29 +115,29 @@
 
     <xsl:function name="foo:getReferences">
         <xsl:param name="xpath" as="node()*"/>
-        <sch:let name="references">
+        <xsl:variable name="references">
             <xsl:for-each select="$xmlDocuments//$xpath">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
-        </sch:let>
+        </xsl:variable>
         <xsl:value-of select="$references"/>
     </xsl:function>
 
     <xsl:function name="foo:getLocationGeoReferenceIdentifiers">
-        <sch:let name="identifiers">
+        <xsl:variable name="identifiers">
             <xsl:for-each select="$xmlDocuments//g-ref:GeometrieRef">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
-        </sch:let>
+        </xsl:variable>
         <xsl:value-of select="$identifiers"/>
     </xsl:function>
     
     <xsl:function name="foo:getLocationReferenceIdentifiers">
-        <sch:let name="identifiers">
+        <xsl:variable name="identifiers">
             <xsl:for-each select="$xmlDocuments//(l-ref:LocatieRef|l-ref:GebiedRef|l-ref:LijnRef|l-ref:PuntRef|l-ref:GebiedengroepRef|l-ref:PuntengroepRef|l-ref:LijnengroepRef)">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
-        </sch:let>
+        </xsl:variable>
         <xsl:value-of select="$identifiers"/>
     </xsl:function>
 </sch:schema>

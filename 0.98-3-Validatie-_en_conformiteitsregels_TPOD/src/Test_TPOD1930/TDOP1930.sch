@@ -54,9 +54,9 @@
     <xsl:function name="foo:notFound">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="notFound">
+            <xsl:variable name="identifiers"
+                select="foo:getIdentifiers($xmlDocuments//l:Gebied/l:identificatie)"/>
             <xsl:for-each select="$context/l-ref:GebiedRef">
-                <xsl:variable name="identifiers"
-                    select="foo:getIdentifiers($xmlDocuments//l:Gebied/l:identificatie)"/>
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
                     <xsl:value-of select="concat(@xlink:href, ', ')"/>
                 </xsl:if>
