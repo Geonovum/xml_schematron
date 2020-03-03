@@ -46,17 +46,25 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde">
-                <xsl:for-each select="tekst:Titel">
-                    <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($hoofdstuk, '.', string(position())))">
-                        <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                    </xsl:if>
-                </xsl:for-each>
-            </sch:let>
+            <sch:let name="volgorde" value="foo:volgorde($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, titels):  <xsl:value-of select="$hoofdstuk"/>:   <xsl:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TDOP_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>:   <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:volgorde">
+        <xsl:param name="hoofdstuk" as="xs:string"/>
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="volgorde">
+            <xsl:for-each select="$context/tekst:Titel">
+                <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($hoofdstuk, '.', string(position())))">
+                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$volgorde"/>
+    </xsl:function>
+    
 
 </sch:schema>

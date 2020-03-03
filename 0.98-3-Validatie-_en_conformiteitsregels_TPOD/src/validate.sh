@@ -5,20 +5,20 @@
 for dir in Test*
 do
 	cd Ant
-	echo "${dir}"
 	for schemaFile in ../${dir}/*.sch
 	do
-		echo "${schemaFile}"
 		ant compile -q -DschemaFile="${schemaFile}"
 		for xmlFile in ../${dir}/*.xml
 		do
-		  echo "${xmlFile}"
-		  ant validate -q -DxmlFile="${xmlFile}"
+		  if test -f "${xmlFile}"; then
+		      ant validate -q -DxmlFile="${xmlFile}"
+		  fi
 		done
 		for gmlFile in ../${dir}/*.gml
 		do
-		  echo "${gmlFile}"
-		  ant validate -q -DxmlFile="${gmlFile}"
+		  if test -f "${gmlFile}"; then
+		      ant validate -q -DxmlFile="${gmlFile}"
+		  fi
 		done
 		ant cleanup -q
 	done
