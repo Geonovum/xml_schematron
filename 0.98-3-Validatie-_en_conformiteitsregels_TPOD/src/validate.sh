@@ -1,5 +1,7 @@
 #!/usr/bin/sh
 
+#script om alle schematrons op bijgeleverde xml-bestanden uit te voeren
+
 for dir in Test*
 do
 	cd Ant
