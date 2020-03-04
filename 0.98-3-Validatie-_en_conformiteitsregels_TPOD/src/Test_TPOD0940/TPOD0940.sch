@@ -38,25 +38,38 @@
             context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="crs">
-                <xsl:for-each select="descendant-or-self::*/@srsName">
-                    <xsl:if test="position() = 1">
-                        <xsl:value-of select="."/>
-                    </xsl:if>
-                </xsl:for-each>
-            </sch:let>
-            <sch:let name="crsses">
-                <xsl:for-each select="descendant-or-self::*/@srsName">
-                    <xsl:if test="not($crs = .)">
-                        <xsl:value-of select="concat(., ', ')"/>
-                    </xsl:if>
-                </xsl:for-each>
-            </sch:let>
+            <sch:let name="crs" value="foo:crs(.)"/>
+            <sch:let name="crsses" value="foo:crsses($crs, .)"/>
             <sch:let name="CONDITION" value="string-length($crsses) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">ZH:TP0D940: Een geometrie moet zijn
                 opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD new) of
                 EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/geo:id"/>: </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:crs">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="crs">
+            <xsl:for-each select="$context/descendant-or-self::*/@srsName">
+                <xsl:if test="position() = 1">
+                    <xsl:value-of select="."/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$crs"/>
+    </xsl:function>
+    
+    <xsl:function name="foo:crsses">
+        <xsl:param name="crs"/>
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="crsses">
+            <xsl:for-each select="$context/descendant-or-self::*/@srsName">
+                <xsl:if test="not($crs = .)">
+                    <xsl:value-of select="concat(., ', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$crsses"/>
+    </xsl:function>
 
 </sch:schema>

@@ -34,12 +34,7 @@
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="activiteitenLijst">
-                <xsl:for-each
-                    select="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-                    <xsl:value-of select="rol:identificatie"/>
-                </xsl:for-each>
-            </sch:let>
+            <sch:let name="activiteitenLijst" value="foo:activiteitenLijst()"/>
 
             <!-- TPOD1740  -->
             <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href))"/>
@@ -53,6 +48,17 @@
         </sch:rule>
 
     </sch:pattern>
+    
+    <xsl:function name="foo:activiteitenLijst">
+        <xsl:variable name="activiteitenLijst">
+            <xsl:for-each
+                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+                <xsl:value-of select="rol:identificatie/text()"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$activiteitenLijst"/>
+    </xsl:function>
+    
 
     <xsl:function name="foo:activiteitenPad">
         <xsl:param name="identificatie" as="xs:string"/>

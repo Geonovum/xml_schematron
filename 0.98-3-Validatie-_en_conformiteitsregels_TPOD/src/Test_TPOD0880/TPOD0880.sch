@@ -44,27 +44,33 @@
         <sch:rule context="//tekst:Lichaam">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="nummer1">
-                <xsl:choose>
-                    <xsl:when test="tekst:Hoofdstuk/tekst:Kop">
-                        <xsl:value-of select="0"/>
-                        <xsl:for-each select="tekst:Hoofdstuk/tekst:Kop">
-                            <xsl:if test="string(tekst:Nummer) = '1'">
-                                <xsl:value-of select="tekst:Nummer"/>
-                            </xsl:if>
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="-1"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </sch:let>
-            <sch:let name="CONDITION" value="$nummer1=1 or $nummer1=-1"/>
+            <sch:let name="hoofdstuk1" value="foo:hoofdstuk1(.)" />
+            
+            <sch:let name="CONDITION" value="$hoofdstuk1=1 or $hoofdstuk1=-1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD880: Een
                 OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene
                 bepalingen.."/> </sch:assert>
         </sch:rule>
     </sch:pattern>
 
-
+    <xsl:function name="foo:hoofdstuk1">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="hoofdstuk1">
+            <xsl:choose>
+                <xsl:when test="$context/tekst:Hoofdstuk/tekst:Kop">
+                    <xsl:value-of select="0"/>
+                    <xsl:for-each select="$context/tekst:Hoofdstuk/tekst:Kop">
+                        <xsl:if test="string(tekst:Nummer) = '1'">
+                            <xsl:value-of select="tekst:Nummer"/>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="-1"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:value-of select="$hoofdstuk1"/>
+    </xsl:function>
+    
 </sch:schema>

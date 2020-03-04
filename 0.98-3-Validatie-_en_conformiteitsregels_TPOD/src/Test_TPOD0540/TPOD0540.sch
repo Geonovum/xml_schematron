@@ -45,25 +45,32 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten">
+            <sch:let name="fouten" value="foo:fouten(.)">
+            </sch:let>
+            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TDOP_0540: Achter het cijfer van een afdelingnummer mag geen punt worden opgenomen. (betreft hoofdstukken, afdeling):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:fouten">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="volgorde">
+            <xsl:for-each select="$context/tekst:Afdeling">
+                <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
+                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+            <xsl:for-each select="$context/tekst:Titel">
+                <sch:let name="titel" value="string(tekst:Kop/tekst:Nummer)"/>
                 <xsl:for-each select="tekst:Afdeling">
                     <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
                         <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
                     </xsl:if>
                 </xsl:for-each>
-                <xsl:for-each select="tekst:Titel">
-                    <sch:let name="titel" value="string(tekst:Kop/tekst:Nummer)"/>
-                    <xsl:for-each select="tekst:Afdeling">
-                        <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
-                            <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                        </xsl:if>
-                    </xsl:for-each>
-                </xsl:for-each>
-            </sch:let>
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0540: Achter het cijfer van een afdelingnummer mag geen punt worden opgenomen. (betreft hoofdstukken, afdeling):  <xsl:value-of select="$hoofdstuk"/>: <xsl:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
-        </sch:rule>
-    </sch:pattern>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$volgorde"/>
+    </xsl:function>
 
 </sch:schema>

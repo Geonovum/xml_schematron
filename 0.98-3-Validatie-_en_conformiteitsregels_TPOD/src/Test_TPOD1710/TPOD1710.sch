@@ -36,13 +36,13 @@
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="activiteitenLijst" value="foo:activiteitenLijst(.)"/>
+            <sch:let name="activiteitenLijst" value="foo:activiteitenLijst()"/>
             <sch:let name="circulaireActivititeiten"
                 value="foo:circulaireActivititeiten(., $activiteitenLijst)"/>
             <!-- TPOD1710  -->
             <sch:let name="CONDITION" value="string-length($circulaireActivititeiten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">ZH:TP0D1710:
-                Activiteit-ids: <sch:value-of select="$circulaireActivititeiten"/>: Een
+                Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten,1,string-length($circulaireActivititeiten)-2)"/>: Een
                 bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de
                 hiërarchie ligt.</sch:assert>
         </sch:rule>
@@ -94,7 +94,6 @@
     
 
     <xsl:function name="foo:activiteitenLijst">
-        <xsl:param name="context" as="node()"/>
         <xsl:variable name="activiteitenLijst">
             <xsl:for-each
                 select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
