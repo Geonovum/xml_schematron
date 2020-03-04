@@ -7,3 +7,5 @@ ant compile -q -DschemaFile="../Test_TPOD0400/TPOD0400.sch"
 ant validate -q -DxmlFile="../Test_TPOD0400/akn_nl_act_pv30_2019_act3.xml"
 
 ant cleanup -q
+
+Vergeet niet de CLEANUP, anders draait het een volgende keer met onverwachte resultaten.
