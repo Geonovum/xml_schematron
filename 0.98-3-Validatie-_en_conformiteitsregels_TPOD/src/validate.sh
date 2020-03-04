@@ -1,6 +1,8 @@
 #!/usr/bin/sh
 
-#script om alle schematrons op bijgeleverde xml-bestanden uit te voeren
+#script om alle Test-schematrons op bijgeleverde xml-bestanden uit te voeren
+
+echo "Dit script draait op de TestTPOD tests"
 
 for dir in Test*
 do
