@@ -41,7 +41,8 @@
             <sch:let name="fouteCoord" value="foo:fouteCoord(3,.)"/>
             <sch:let name="CONDITION" value="string-length($fouteCoord) = 0"/>
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:28992 (=RD
+            <sch:assert test="$ASSERT"> 
+                ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:28992 (=RD
                 new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de
                 waarde maximaal 3 decimalen achter de komma mag bevatten. Id=<sch:value-of
                     select="geo:id"/>. De coordinaten waarom het gaat staan nu genoemd:

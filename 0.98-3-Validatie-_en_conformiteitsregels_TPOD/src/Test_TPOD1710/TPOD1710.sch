@@ -41,7 +41,8 @@
                 value="foo:circulaireActivititeiten(., $activiteitenLijst)"/>
             <!-- TPOD1710  -->
             <sch:let name="CONDITION" value="string-length($circulaireActivititeiten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">ZH:TP0D1710:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
+                H:TP0D1710:
                 Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten,1,string-length($circulaireActivititeiten)-2)"/>: Een
                 bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de
                 hiërarchie ligt.</sch:assert>

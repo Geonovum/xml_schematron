@@ -11,7 +11,7 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" prefix="ow-dc"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
-    
+    <sch:ns uri="http://whatever" prefix="foo"/>
     <!-- ====================================== GENERIC ============================================================================= -->
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
@@ -30,11 +30,7 @@
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen/sl:objectType">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="objects">
-                <xsl:for-each select="../../../sl:stand/ow-dc:owObject/*"> 
-                    <xsl:value-of select="concat('.',local-name(),'.')"/>
-                </xsl:for-each>
-            </sch:let>
+            <sch:let name="objects" value="foo:owObjectenLijst(.)"/>
             <sch:let name="CONDITION" value="contains($objects, concat('.',text(),'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 H:TPOD1910: De objecttypen in
@@ -44,5 +40,16 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:owObjectenLijst">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="owObjectenLijst">
+            <xsl:for-each select="$context/../../../sl:stand/ow-dc:owObject/*"> 
+                <xsl:value-of select="concat('.',local-name(),'.')"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$owObjectenLijst"/>
+    </xsl:function>
+    
     
 </sch:schema>

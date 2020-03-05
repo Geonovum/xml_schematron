@@ -48,7 +48,8 @@
             <sch:let name="fouten" value="foo:fouten($hoofdstuk, .)"/>
             
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TDOP_0560: Als
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TDOP_0560: Als
                 tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van
                 Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt,
                 gevolgd door een punt. (betreft hoofdstukken, titels): <sch:value-of

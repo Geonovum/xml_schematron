@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+A simple Ant script to illustrate how to use the Schematron Ant Task.
+This Ant files uses the 'ant-schematron.jar' file which contains the implementation
+for the Ant task as well as the ISO Schematron pre-processor (XSLT).
+@author Christophe Lauret
+@author Willy Ekasalim
+@version 16 February 2007
+-->
+<project name="schematron-ant-sample" default="validate">
+<!--
+This is a task definition for Ant, it allows Ant to map the 'schematron' element
+name to the schematron task that it loads from the Jar file.
+-->
+<taskdef name="schematron" classname="com.schematron.ant.SchematronTask" classpath="lib/ant-schematron.jar"/>
+<!--
+Validate the files specified in the fileset using the 'sample.sch' schematorn file.
+Concise results will be displayed on the console for each file.
+More verbose results are generated as SVRL format and saved as 'result.xml'
+-->
+    <target name="validate" description="Test with a Fileset">
+        <schematron schema="sch/sample.sch" failonerror="false">
+        <fileset dir="xml" includes="*.xml"/>
+        </schematron>
+    </target>
+</project>

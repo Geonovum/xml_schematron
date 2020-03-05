@@ -36,7 +36,8 @@
             <sch:let name="CONDITION" value="(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde or rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde) and
                 not(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde and rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"/>
             <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1650: <sch:value-of select="rol:identificatie"/>: Het attribuut 'normwaarde'
+                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                H:TPOD1650: <sch:value-of select="rol:identificatie"/>: Het attribuut 'normwaarde'
                 moet bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf
                 'kwantitatieveWaarde'. </sch:assert>
         </sch:rule>
