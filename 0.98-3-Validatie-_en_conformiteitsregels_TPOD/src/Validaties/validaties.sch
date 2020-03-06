@@ -1187,7 +1187,6 @@
         <xsl:for-each select="$gmlDocuments">
             <xsl:value-of select="0"/>
             <xsl:if test="//geo:Geometrie[geo:id/text() eq $href]/geo:geometrie/gml:MultiSurface">
-                <xsl:message select="'gevonden'"/>
                 <xsl:value-of select="1"/>
             </xsl:if>
         </xsl:for-each>
