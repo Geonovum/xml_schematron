@@ -29,11 +29,12 @@
     <sch:let name="OVI_PB" value="''"/>
     
     <!-- ============================================================================================================================ -->
-    <sch:pattern id="TPOD1730">
+    
+    <sch:pattern id="TPOD_1730">
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="activiteitenLijst" value="foo:activiteitenLijst()"/>
+            <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1730()"/>
             <!-- TPOD1730  -->
             <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"/>
             <sch:assert
@@ -46,7 +47,7 @@
 
     </sch:pattern>
 
-    <xsl:function name="foo:activiteitenLijst">
+    <xsl:function name="foo:activiteitenLijstTPOD_1730">
         <xsl:variable name="activiteitenLijst">
             <xsl:for-each
                 select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">

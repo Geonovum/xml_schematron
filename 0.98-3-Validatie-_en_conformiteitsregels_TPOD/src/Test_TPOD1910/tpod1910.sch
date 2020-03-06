@@ -26,11 +26,11 @@
     
     <!-- ============================================================================================================================ -->    
     
-    <sch:pattern id="TPOD1910">
+    <sch:pattern id="TPOD_1910">
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen/sl:objectType">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="objects" value="foo:owObjectenLijst(.)"/>
+            <sch:let name="objects" value="foo:owObjectenLijstTPOD_1910(.)"/>
             <sch:let name="CONDITION" value="contains($objects, concat('.',text(),'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 H:TPOD1910: De objecttypen in
@@ -41,7 +41,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:owObjectenLijst">
+    <xsl:function name="foo:owObjectenLijstTPOD_1910">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="owObjectenLijst">
             <xsl:for-each select="$context/../../../sl:stand/ow-dc:owObject/*"> 

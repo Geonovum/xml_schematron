@@ -27,14 +27,14 @@
     <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>
     <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
     <sch:let name="OVI_PB" value="''"/>
+    
     <!-- ============================================================================================================================ -->
 
-
-    <sch:pattern id="TPOD1700_TPOD1710_TPOD1730">
+    <sch:pattern id="TPOD_1740">
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="activiteitenLijst" value="foo:activiteitenLijst()"/>
+            <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1740()"/>
 
             <!-- TPOD1740  -->
             <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href))"/>
@@ -49,7 +49,7 @@
 
     </sch:pattern>
     
-    <xsl:function name="foo:activiteitenLijst">
+    <xsl:function name="foo:activiteitenLijstTPOD_1740">
         <xsl:variable name="activiteitenLijst">
             <xsl:for-each
                 select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
@@ -58,53 +58,4 @@
         </xsl:variable>
         <xsl:value-of select="$activiteitenLijst"/>
     </xsl:function>
-    
-
-    <xsl:function name="foo:activiteitenPad">
-        <xsl:param name="identificatie" as="xs:string"/>
-        <xsl:param name="bovenliggend" as="xs:string"/>
-        <xsl:param name="activiteitenLijst" as="xs:string*"/>
-        <xsl:param name="context" as="node()"/>
-        <xsl:for-each
-            select="$context/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-            <xsl:if test="rol:identificatie = $bovenliggend">
-                <sch:choose>
-                    <sch:let name="lokaalBovenliggend"
-                        value="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
-                    <sch:when test="not(contains($activiteitenLijst, $lokaalBovenliggend))">
-                        <xsl:value-of select="concat($identificatie, ', ')"/>
-                    </sch:when>
-                    <sch:otherwise>
-                        <sch:value-of
-                            select="foo:activiteitenPad($identificatie, $lokaalBovenliggend, $activiteitenLijst, /)"
-                        />
-                    </sch:otherwise>
-                </sch:choose>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
-
-    <xsl:function name="foo:circulaireActiviteiten">
-        <xsl:param name="identificatie" as="xs:string"/>
-        <xsl:param name="bovenliggend" as="xs:string"/>
-        <xsl:param name="context" as="node()"/>
-        <xsl:for-each
-            select="$context/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-            <xsl:if
-                test="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href = $bovenliggend">
-                <sch:choose>
-                    <sch:let name="lokaalBovenliggend" value="rol:identificatie"/>
-                    <sch:when test="$identificatie = $lokaalBovenliggend">
-                        <sch:value-of select="concat($lokaalBovenliggend, ', ')"/>
-                    </sch:when>
-                    <sch:otherwise>
-                        <sch:value-of
-                            select="foo:circulaireActiviteiten($identificatie, $lokaalBovenliggend, /)"
-                        />
-                    </sch:otherwise>
-                </sch:choose>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
-
 </sch:schema>

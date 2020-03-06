@@ -44,7 +44,7 @@
         <sch:rule context="//tekst:Lichaam">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="hoofdstuk1" value="foo:hoofdstuk1(.)" />
+            <sch:let name="hoofdstuk1" value="foo:hoofdstuk1TPOD880(.)" />
             
             <sch:let name="CONDITION" value="$hoofdstuk1=1 or $hoofdstuk1=-1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -54,7 +54,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:hoofdstuk1">
+    <xsl:function name="foo:hoofdstuk1TPOD880">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="hoofdstuk1">
             <xsl:choose>

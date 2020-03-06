@@ -41,13 +41,13 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0400">
+    <sch:pattern id="TDOP_0570">
         <sch:rule context="//tekst:Paragraaf/tekst:Kop[(lower-case(tekst:Label) ne '§') and (lower-case(tekst:Label) ne 'paragraaf')]">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0410: Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. Betreft label: <sch:value-of select="tekst:Label"/> </sch:assert>
+                TDOP_0570: Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. Betreft label: <sch:value-of select="tekst:Label"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
 

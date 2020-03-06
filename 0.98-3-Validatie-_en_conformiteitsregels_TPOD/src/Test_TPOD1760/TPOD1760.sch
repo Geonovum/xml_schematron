@@ -54,8 +54,7 @@
     
     <!-- ============================================================================================================================ -->
 
-    <!-- TPOD1760 -->
-    <sch:pattern id="TPOD1760">
+    <sch:pattern id="TPOD_1760">
         <sch:rule
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing">
             <sch:let name="APPLICABLE"

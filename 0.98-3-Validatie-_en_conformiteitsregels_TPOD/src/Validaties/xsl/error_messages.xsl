@@ -13,9 +13,9 @@
         <xsl:for-each select="document('instance.svrlt')//svrl:schematron-output/svrl:failed-assert/svrl:text">
             <xsl:value-of select="./text()"/>
         </xsl:for-each>
-        <xsl:for-each select="document('instance.svrlt')//svrl:schematron-output/svrl:successful-report/svrl:text">
+        <!--<xsl:for-each select="document('instance.svrlt')//svrl:schematron-output/svrl:successful-report/svrl:text">
             <xsl:value-of select="./text()"/>
-        </xsl:for-each>
+        </xsl:for-each>-->
     </xsl:template>
     
 </xsl:stylesheet>

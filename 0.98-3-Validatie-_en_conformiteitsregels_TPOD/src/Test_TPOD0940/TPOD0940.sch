@@ -33,13 +33,13 @@
     
     <!-- ============================================================================================================================ -->    
     
-    <sch:pattern id="TPOD940">
+    <sch:pattern id="TPOD_0940">
         <sch:rule
             context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="crs" value="foo:crs(.)"/>
-            <sch:let name="crsses" value="foo:crsses($crs, .)"/>
+            <sch:let name="crs" value="foo:crsTPOD_0940(.)"/>
+            <sch:let name="crsses" value="foo:crssesTPOD_0940($crs, .)"/>
             <sch:let name="CONDITION" value="string-length($crsses) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 H:TP0D940: Een geometrie moet zijn
@@ -48,7 +48,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:crs">
+    <xsl:function name="foo:crsTPOD_0940">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="crs">
             <xsl:for-each select="$context/descendant-or-self::*/@srsName">
@@ -60,7 +60,7 @@
         <xsl:value-of select="$crs"/>
     </xsl:function>
     
-    <xsl:function name="foo:crsses">
+    <xsl:function name="foo:crssesTPOD_0940">
         <xsl:param name="crs"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="crsses">

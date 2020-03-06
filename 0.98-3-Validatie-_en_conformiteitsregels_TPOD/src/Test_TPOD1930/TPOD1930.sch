@@ -41,7 +41,7 @@
     <sch:pattern id="TDOP_1930">
         <sch:rule context="//l:Gebiedengroep/l:groepselement">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="notFound" value="foo:notFound(.)"/>
+            <sch:let name="notFound" value="foo:notFoundTDOP_1930(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TDOP_1930: Betreft
@@ -52,11 +52,11 @@
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:notFound">
+    <xsl:function name="foo:notFoundTDOP_1930">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="notFound">
             <xsl:variable name="identifiers"
-                select="foo:getIdentifiers($xmlDocuments//l:Gebied/l:identificatie)"/>
+                select="foo:getIdentifiersTDOP_1930($xmlDocuments//l:Gebied/l:identificatie)"/>
             <xsl:for-each select="$context/l-ref:GebiedRef">
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
                     <xsl:value-of select="concat(@xlink:href, ', ')"/>
@@ -66,7 +66,7 @@
         <xsl:value-of select="$notFound"/>
     </xsl:function>
 
-    <xsl:function name="foo:getIdentifiers">
+    <xsl:function name="foo:getIdentifiersTDOP_1930">
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">

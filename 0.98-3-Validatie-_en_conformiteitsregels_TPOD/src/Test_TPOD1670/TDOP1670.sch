@@ -27,7 +27,7 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD1670">
+    <sch:pattern id="TPOD_1670">
         <sch:rule
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/r:RegelVoorIedereen">
             <sch:let name="APPLICABLE"

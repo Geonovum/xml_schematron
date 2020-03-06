@@ -43,7 +43,8 @@
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="CONDITION" value="string-length(foo:calculateCondition($href))>0"/>
+            <sch:let name="geometrie" value="foo:geometrieTDOP_1960($href)"/>
+            <sch:let name="CONDITION" value="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 TDOP_1960: Betreft <sch:value-of
                     select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
@@ -53,29 +54,12 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:calculateCondition">
+    <xsl:function name="foo:geometrieTDOP_1960">
         <xsl:param name="href"/>
-        <xsl:variable name="context" select="$gmlDocuments//geo:Geometrie[geo:id/text() eq string($href)]"/>
-        <xsl:choose>
-            <xsl:when test="$context">
-                <xsl:variable name="C1" select="not($context//gml:MultiPoint)"/>
-                <xsl:variable name="C2" select="not($context//gml:Point)"/>
-                <xsl:variable name="C3" select="not($context//gml:MultiSurface)"/>
-                <xsl:message select="'--------------------'"/>
-                <xsl:message select="string($C1)"/>
-                <xsl:message select="string($C2)"/>
-                <xsl:message select="string($C3)"/>
-                <xsl:message select="string($C1 and $C2 and $C3)"/>
-                <xsl:if test="($C1 and $C2 and $C3)">
-                    <xsl:value-of select="'true'"/>
-                </xsl:if>
-                <xsl:if test="not($C1 and $C2 and $C3)">
-                    <xsl:value-of select="''"/>
-                </xsl:if>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="''"/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:for-each select="$gmlDocuments//geo:Geometrie">
+            <xsl:if test="string(geo:id/text())=$href">
+                <xsl:copy-of select="."/>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:function>
 </sch:schema>

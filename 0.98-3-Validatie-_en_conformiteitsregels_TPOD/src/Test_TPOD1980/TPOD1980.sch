@@ -42,7 +42,7 @@
         <sch:rule context="//l:Gebied/l:geometrie/g-ref:GeometrieRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="gebied" value="foo:calculateCondition($href)" />
+            <sch:let name="gebied" value="foo:calculateConditionTDOP_1980($href)" />
             <sch:let name="CONDITION" value="$gebied=1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TDOP_1980: Betreft <sch:value-of select="string($CONDITION)"/>
@@ -53,7 +53,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:calculateCondition">
+    <xsl:function name="foo:calculateConditionTDOP_1980">
         <xsl:param name="href"/>
         <xsl:for-each select="$gmlDocuments">
             <xsl:value-of select="0"/>

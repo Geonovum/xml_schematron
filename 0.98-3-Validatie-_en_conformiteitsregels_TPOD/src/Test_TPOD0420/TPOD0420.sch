@@ -41,11 +41,11 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0400">
+    <sch:pattern id="TDOP_0420">
         <sch:rule context="//tekst:Lichaam">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="volgorde" value="foo:volgorde(.)">
+            <sch:let name="volgorde" value="foo:volgordeTDOP_0400(.)">
             </sch:let>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -53,7 +53,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:volgorde">
+    <xsl:function name="foo:volgordeTDOP_0420">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Hoofdstuk">

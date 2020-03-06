@@ -62,7 +62,7 @@
         <sch:rule context="//r:artikelOfLid/r-ref:RegeltekstRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getIdentifiers($xmlDocuments//r:Regeltekst/r:identificatie)"/>
+                value="foo:getIdentifiersTDOP_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -73,7 +73,7 @@
         <sch:rule context="//r:RegelVoorIedereen/r:activiteitaanduiding/rol-ref:ActiviteitRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getIdentifiers($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
+                value="foo:getIdentifiersTDOP_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -84,7 +84,7 @@
         <sch:rule context="//r:omgevingsnormaanduiding/rol-ref:OmgevingsnormRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getIdentifiers($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
+                value="foo:getIdentifiersTDOP_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -95,7 +95,7 @@
         <sch:rule context="//r:gebiedsaanwijzing/ga-ref:GebiedsaanwijzingRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getIdentifiers($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
+                value="foo:getIdentifiersTDOP_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -106,7 +106,7 @@
         <sch:rule
             context="//l-ref:LocatieRef | l-ref:GebiedRef | l-ref:GebiedengroepRef | l-ref:PuntRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef | l-ref:LijnRef">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="identifiers" value="foo:getLocationIdentifiers()"/>
+            <sch:let name="identifiers" value="foo:getLocationIdentifiersTDOP_1860()"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -117,7 +117,7 @@
         <sch:rule context="//rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getIdentifiers($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
+                value="foo:getIdentifiersTDOP_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -128,7 +128,7 @@
         <sch:rule
             context="//rol:normwaarde/rol:Normwaarde/rol:locatieaanduiding/l-ref:LocatieRef | l-ref:GebiedRef | l-ref:GebiedengroepRef | l-ref:PuntRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef | l-ref:LijnRef">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="identifiers" value="foo:getLocationIdentifiers()"/>
+            <sch:let name="identifiers" value="foo:getLocationIdentifiersTDOP_1860()"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of
@@ -139,7 +139,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:getLocationIdentifiers">
+    <xsl:function name="foo:getLocationIdentifiersTDOP_1860">
         <xsl:variable name="identifiers">
             <xsl:for-each
                 select="$xmlDocuments//(l:Gebied | l:Gebiedengroep | l:Punt | l:Puntengroep | l:Lijn | l:Lijnengroep)/l:identificatie">
@@ -149,7 +149,7 @@
         <sch:value-of select="$identifiers"/>
     </xsl:function>
 
-    <xsl:function name="foo:getIdentifiers">
+    <xsl:function name="foo:getIdentifiersTDOP_1860">
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">

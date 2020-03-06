@@ -43,7 +43,7 @@
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getRegelTekstIdentifiers()"/>
+                value="foo:getRegelTekstIdentifiersTDOP_1870()"/>
             <sch:let name="CONDITION" value="contains($identifiers, r-ref:RegeltekstRef/@xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1870: Betreft
@@ -52,7 +52,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:getRegelTekstIdentifiers">
+    <xsl:function name="foo:getRegelTekstIdentifiersTDOP_1870">
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xmlDocuments//r:Regeltekst">
                 <xsl:value-of select="r:identificatie/text()"/>

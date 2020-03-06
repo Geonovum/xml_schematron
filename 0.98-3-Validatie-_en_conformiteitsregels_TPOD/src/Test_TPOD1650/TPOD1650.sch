@@ -28,7 +28,7 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD1650">
+    <sch:pattern id="TPOD_1650">
         <sch:rule
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Omgevingswaarde|rol:Omgevingsnorm">
             <sch:let name="APPLICABLE"

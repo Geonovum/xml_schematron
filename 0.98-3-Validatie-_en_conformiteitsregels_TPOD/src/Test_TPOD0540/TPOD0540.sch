@@ -45,7 +45,7 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:fouten(.)">
+            <sch:let name="fouten" value="foo:foutenTDOP_0540(.)">
             </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -53,7 +53,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:fouten">
+    <xsl:function name="foo:foutenTDOP_0540">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Afdeling">

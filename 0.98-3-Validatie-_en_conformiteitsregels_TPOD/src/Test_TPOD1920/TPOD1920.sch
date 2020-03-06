@@ -30,10 +30,10 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD1920">
+    <sch:pattern id="TPOD_1920">
         <sch:rule context="/Modules/RegelingVersie/Bestand">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="nfFOOT" value="foo:notfoundFileOrObjectType(naam,.)"></sch:let>
+            <sch:let name="nfFOOT" value="foo:notfoundFileOrObjectTypeTPOD_1920(naam,.)"></sch:let>
             <sch:let name="CONDITION" value="string-length($nfFOOT) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1920: De
@@ -44,7 +44,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:notfoundFileOrObjectType">
+    <xsl:function name="foo:notfoundFileOrObjectTypeTPOD_1920">
         <xsl:param name="naam"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="notfoundFileOrObjectType">

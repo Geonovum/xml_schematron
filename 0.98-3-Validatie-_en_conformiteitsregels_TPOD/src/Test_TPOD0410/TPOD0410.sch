@@ -41,7 +41,7 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0400">
+    <sch:pattern id="TDOP_0410">
         <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[lower-case(tekst:Label) ne 'hoofdstuk']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
