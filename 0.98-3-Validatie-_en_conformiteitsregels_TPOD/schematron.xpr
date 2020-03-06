@@ -10,6 +10,21 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>src/Validaties/Opdracht/OwTestExemplaar1650.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>instance</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>src/Test_TPOD1960/target.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -224,7 +239,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${pdu}/src/Ant/error_messages.xsl</String>
+                                    <String>${pdu}/src/Ant/target.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>

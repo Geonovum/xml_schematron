@@ -28,10 +28,13 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/pons/v20190901" prefix="p"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901" prefix="vt-ref"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/locatie/v20190901" prefix="l"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/locatie-ref/v20190901" prefix="l-ref"/>
     
     <!-- ====================================== GENERIC ============================================================================= -->
-    <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
-    <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
+    <sch:let name="xmlDocuments" value="collection('.?select=*.xml;recurse=yes')"/>
+    <sch:let name="gmlDocuments" value="collection('.?select=*.gml;recurse=yes')"/>
     <sch:let name="SOORT_REGELING" value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
     
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
@@ -43,17 +46,113 @@
     
     <!-- ============================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_TEMPLATE">
+    <sch:pattern id="TPOD_1990">
         <sch:rule context="/">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="CONDITION" value="true()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TDOP_TEMPLATE: Betreft <sch:value-of
-                    select="_"/>: <sch:value-of select="_"/>,
-                <sch:value-of select="_"/>: TEMPLATE. 
+            <sch:let name="geoLocationGeoReferenceIdentifiers"
+                value="foo:getLocationGeoReferenceIdentifiers()"/>
+            <sch:let name="nietGerefereerdeGeometrieen" value="foo:nietGerefereerdeGeometrieen($geoLocationGeoReferenceIdentifiers)"/>
+            <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrieen) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+                <sch:value-of select="substring($nietGerefereerdeGeometrieen,1,string-length($nietGerefereerdeGeometrieen)-2)"/>
             </sch:assert>
         </sch:rule>
+        
+        <sch:rule context="//r:Regeltekst/r:identificatie">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="regeltekstReferenties"
+                value="foo:getReferences(//r-ref:RegeltekstRef)"/>
+            <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferenties($regeltekstReferenties, .)"/>
+            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+                <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
+            </sch:assert>
+        </sch:rule>
+        
+        <sch:rule context="//(vt:FormeleDivisie|vt:Hoofdlijn)/vt:identificatie">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="formeleDivisieReferenties"
+                value="foo:getReferences(//(vt-ref:FormeleDivisieRef|vt-ref:HoofdlijnRef))"/>
+            <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferenties($formeleDivisieReferenties, .)"/>
+            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+                <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
+            </sch:assert>
+        </sch:rule>
+        
+        <sch:rule context="//l:identificatie">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="locatieReferenties"
+                value="foo:getLocationReferenceIdentifiers()"/>
+            <sch:let name="nietGerefereerdeReferenties">
+                <xsl:if
+                    test="not(contains($locatieReferenties, concat('.', text(), '.')))">
+                    <xsl:value-of select="concat(string(text()), ', ')"/>
+                </xsl:if>
+            </sch:let>
+            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+                <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
+            </sch:assert>
+        </sch:rule>
+        
     </sch:pattern>
     
+    <xsl:function name="foo:nietGerefereerdeGeometrieen">
+        <xsl:param name="identifiers"/>
+        <xsl:variable name="nietGerefereerdeGeometrieen">
+            <xsl:for-each select="$gmlDocuments//geo:Geometrie">
+                <xsl:if
+                    test="not(contains($identifiers, concat('.', string(geo:id/text()), '.')))">
+                    <xsl:value-of select="concat(string(geo:id/text()), ', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$nietGerefereerdeGeometrieen"/>
+    </xsl:function>
+    
+    <xsl:function name="foo:nietGerefereerdeReferenties">
+        <xsl:param name="referenties"/>
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="nietGerefereerdeReferenties">
+            <xsl:if
+                test="not(contains($referenties, concat('.', $context/text(), '.')))">
+                <xsl:value-of select="concat(string($context/text()), ', ')"/>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$nietGerefereerdeReferenties"/>
+    </xsl:function>
+    
+    <xsl:function name="foo:getReferences">
+        <xsl:param name="xpath" as="node()*"/>
+        <xsl:variable name="references">
+            <xsl:for-each select="$xmlDocuments//$xpath">
+                <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$references"/>
+    </xsl:function>
+    
+    <xsl:function name="foo:getLocationGeoReferenceIdentifiers">
+        <xsl:variable name="identifiers">
+            <xsl:for-each select="$xmlDocuments//g-ref:GeometrieRef">
+                <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$identifiers"/>
+    </xsl:function>
+    
+    <xsl:function name="foo:getLocationReferenceIdentifiers">
+        <xsl:variable name="identifiers">
+            <xsl:for-each select="$xmlDocuments//(l-ref:LocatieRef|l-ref:GebiedRef|l-ref:LijnRef|l-ref:PuntRef|l-ref:GebiedengroepRef|l-ref:PuntengroepRef|l-ref:LijnengroepRef)">
+                <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$identifiers"/>
+    </xsl:function>
 </sch:schema>

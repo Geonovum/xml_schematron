@@ -12,7 +12,10 @@ for the Ant task as well as the ISO Schematron pre-processor (XSLT).
 This is a task definition for Ant, it allows Ant to map the 'schematron' element
 name to the schematron task that it loads from the Jar file.
 -->
-<taskdef name="schematron" classname="com.schematron.ant.SchematronTask" classpath="lib/ant-schematron.jar"/>
+<taskdef name="schematron" classname="com.schematron.ant.SchematronTask" classpath="ant-schematron.jar"/>
+    
+    
+    
 <!--
 Validate the files specified in the fileset using the 'sample.sch' schematorn file.
 Concise results will be displayed on the console for each file.
