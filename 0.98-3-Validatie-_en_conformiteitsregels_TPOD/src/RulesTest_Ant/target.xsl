@@ -226,8 +226,8 @@
             <xsl:attribute name="document">
                <xsl:value-of select="document-uri(/)"/>
             </xsl:attribute>
-            <xsl:attribute name="id">TDOP_1960</xsl:attribute>
-            <xsl:attribute name="name">TDOP_1960</xsl:attribute>
+            <xsl:attribute name="id">TPOD_1960</xsl:attribute>
+            <xsl:attribute name="name">TPOD_1960</xsl:attribute>
             <xsl:apply-templates/>
          </svrl:active-pattern>
          <xsl:apply-templates select="/" mode="M27"/>
@@ -244,7 +244,7 @@
    <xsl:param name="OV" select="'/join/id/stop/regelingtype_004'"/>
    <xsl:param name="WV" select="'/join/id/stop/regelingtype_005'"/>
    <xsl:param name="OVI_PB" select="''"/>
-   <!--PATTERN TDOP_1960-->
+   <!--PATTERN TPOD_1960-->
    <!--RULE -->
    <xsl:template match="//l:Lijn/l:geometrie/g-ref:GeometrieRef"
                  priority="1000"
@@ -265,7 +265,7 @@
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
                </xsl:attribute>
                <svrl:text>
-                TDOP_1960: Betreft <xsl:text/>
+                TPOD_1960: Betreft <xsl:text/>
                   <xsl:value-of select="../../name()"/>
                   <xsl:text/>: <xsl:text/>
                   <xsl:value-of select="../../l:identificatie"/>

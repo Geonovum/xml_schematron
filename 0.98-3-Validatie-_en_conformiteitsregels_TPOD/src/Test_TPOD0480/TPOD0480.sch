@@ -41,19 +41,19 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0480">
+    <sch:pattern id="TPOD_0480">
         <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTDOP_0480($hoofdstuk, .)"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0480($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>:   <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>:   <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:volgordeTDOP_0480">
+    <xsl:function name="foo:volgordeTPOD_0480">
         <xsl:param name="hoofdstuk" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">

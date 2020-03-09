@@ -38,14 +38,14 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_1980">
+    <sch:pattern id="TPOD_1980">
         <sch:rule context="//l:Gebied/l:geometrie/g-ref:GeometrieRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="gebied" value="foo:calculateConditionTDOP_1980($href)" />
+            <sch:let name="gebied" value="foo:calculateConditionTPOD_1980($href)" />
             <sch:let name="CONDITION" value="$gebied=1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_1980: Betreft <sch:value-of select="string($CONDITION)"/>
+                TPOD_1980: Betreft <sch:value-of select="string($CONDITION)"/>
                     <sch:value-of select="../../name()"/>: <sch:value-of
                     select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
                 verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.
@@ -53,7 +53,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:calculateConditionTDOP_1980">
+    <xsl:function name="foo:calculateConditionTPOD_1980">
         <xsl:param name="href"/>
         <xsl:for-each select="$gmlDocuments">
             <xsl:value-of select="0"/>

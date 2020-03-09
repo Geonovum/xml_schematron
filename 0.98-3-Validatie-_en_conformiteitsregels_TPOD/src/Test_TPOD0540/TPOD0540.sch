@@ -40,20 +40,20 @@
     <sch:let name="OVI_PB" value="''"/>
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0540">
+    <sch:pattern id="TPOD_0540">
         <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTDOP_0540(.)">
+            <sch:let name="fouten" value="foo:foutenTPOD_0540(.)">
             </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0540: Achter het cijfer van een afdelingnummer mag geen punt worden opgenomen. (betreft hoofdstukken, afdeling):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+                TPOD_0540: Achter het cijfer van een afdelingnummer mag geen punt worden opgenomen. (betreft hoofdstukken, afdeling):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:foutenTDOP_0540">
+    <xsl:function name="foo:foutenTPOD_0540">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Afdeling">

@@ -5,7 +5,7 @@ Deze directory MOET: **Opdracht** heten met hoofdletter **O**
 
 Gebruik volgend commando in deze volgorde:
 
-Op Linux: validate.sh
+Op Linux: ./validate.sh
 
 Op Windows: validate.bat
 

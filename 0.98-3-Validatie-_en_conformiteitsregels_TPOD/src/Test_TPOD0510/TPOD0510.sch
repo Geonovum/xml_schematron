@@ -41,13 +41,13 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0510">
+    <sch:pattern id="TPOD_0510">
         <sch:rule context="//tekst:Afdeling/tekst:Kop[lower-case(tekst:Label) ne 'afdeling']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0510: Een Afdeling moet worden geduid met de label Afdeling. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
+                TPOD_0510: Een Afdeling moet worden geduid met de label Afdeling. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 

@@ -41,13 +41,13 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0460">
+    <sch:pattern id="TPOD_0460">
         <sch:rule context="//tekst:Titel/tekst:Kop[lower-case(tekst:Label) ne 'titel']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0410: Een Titel moet worden geduid met de label Titel. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
+                TPOD_0410: Een Titel moet worden geduid met de label Titel. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 

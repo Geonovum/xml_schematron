@@ -38,15 +38,15 @@
     <sch:title>title</sch:title>
     <!-- ============================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_1960">
+    <sch:pattern id="TPOD_1960">
         <sch:rule context="//l:Lijn/l:geometrie/g-ref:GeometrieRef">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="geometrie" value="foo:geometrieTDOP_1960($href)"/>
+            <sch:let name="geometrie" value="foo:geometrieTPOD_1960($href)"/>
             <sch:let name="CONDITION" value="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TDOP_1960: Betreft <sch:value-of
+                TPOD_1960: Betreft <sch:value-of
                     select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject
                 vanuit een Lijn moet een lijn-geometrie zijn. 
@@ -54,7 +54,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:geometrieTDOP_1960">
+    <xsl:function name="foo:geometrieTPOD_1960">
         <xsl:param name="href"/>
         <xsl:for-each select="$gmlDocuments//geo:Geometrie">
             <xsl:if test="string(geo:id/text())=$href">

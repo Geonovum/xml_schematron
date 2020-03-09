@@ -37,25 +37,25 @@
     
     <!-- ============================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_1940">
+    <sch:pattern id="TPOD_1940">
         <sch:rule
             context="//l:Puntengroep/l:groepselement">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="notFound" value="foo:notFoundTDOP_1940(.)"/>
+            <sch:let name="notFound" value="foo:notFoundTPOD_1940(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_1940: Betreft <sch:value-of
+                TPOD_1940: Betreft <sch:value-of
                 select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
                 <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
                 in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:notFoundTDOP_1940">
+    <xsl:function name="foo:notFoundTPOD_1940">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="identifiers"
-            select="foo:getIdentifiersTDOP_1940($xmlDocuments//l:Punt/l:identificatie)"/>
+            select="foo:getIdentifiersTPOD_1940($xmlDocuments//l:Punt/l:identificatie)"/>
         <xsl:variable name="notFound">
             <xsl:for-each select="$context/l-ref:PuntRef">
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
@@ -66,7 +66,7 @@
         <xsl:value-of select="$notFound"/>
     </xsl:function>
 
-    <xsl:function name="foo:getIdentifiersTDOP_1940">
+    <xsl:function name="foo:getIdentifiersTPOD_1940">
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">

@@ -37,7 +37,7 @@
     
     <!-- ============================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_1890">
+    <sch:pattern id="TPOD_1890">
         <sch:rule context="//*:identificatie">
             <sch:let name="APPLICABLE"
                 value="true()"/>

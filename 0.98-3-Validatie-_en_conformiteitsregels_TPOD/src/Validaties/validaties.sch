@@ -40,48 +40,48 @@
     <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
     <sch:let name="OVI_PB" value="''"/>
     
-    <!-- ============TDOP_0400================================================================================================================ -->
+    <!-- ============TPOD_0400================================================================================================================ -->
     
-    <sch:pattern id="TDOP_0400">
+    <sch:pattern id="TPOD_0400">
         <sch:rule context="//tekst:Kop">
             <sch:let name="APPLICABLE" value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="tekst:Label and tekst:Opschrift and tekst:Nummer"/>
             
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0400: Betreft
+                TPOD_0400: Betreft
                 (Label, Opschrift, Nummer): "<sch:value-of select="tekst:Label"/>", "<sch:value-of
                     select="tekst:Nummer"/>", "<sch:value-of select="tekst:Opschrift"/>": Een Kop
                 moet bevatten een Label, een Nummer en een Opschrift. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <!-- ============TDOP_0410================================================================================================================ -->
+    <!-- ============TPOD_0410================================================================================================================ -->
     
-    <sch:pattern id="TDOP_0410">
+    <sch:pattern id="TPOD_0410">
         <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[lower-case(tekst:Label) ne 'hoofdstuk']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0410: Een Hoofdstuk moet worden geduid met de label Hoofdstuk. Betreft label: <sch:value-of select="tekst:Label"/> </sch:assert>
+                TPOD_0410: Een Hoofdstuk moet worden geduid met de label Hoofdstuk. Betreft label: <sch:value-of select="tekst:Label"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <!-- =============TDOP_0420=============================================================================================================== -->
+    <!-- =============TPOD_0420=============================================================================================================== -->
     
-    <sch:pattern id="TDOP_0420">
+    <sch:pattern id="TPOD_0420">
         <sch:rule context="//tekst:Lichaam">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="volgorde" value="foo:volgordeTDOP_0420(.)">
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0420(.)">
             </sch:let>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0420: Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken):  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0420: Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken):  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:volgordeTDOP_0420">
+    <xsl:function name="foo:volgordeTPOD_0420">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Hoofdstuk">
@@ -93,34 +93,34 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
-    <!-- ============TDOP_0460================================================================================================================ -->
+    <!-- ============TPOD_0460================================================================================================================ -->
     
-    <sch:pattern id="TDOP_0460">
+    <sch:pattern id="TPOD_0460">
         <sch:rule context="//tekst:Titel/tekst:Kop[lower-case(tekst:Label) ne 'titel']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0410: Een Titel moet worden geduid met de label Titel. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
+                TPOD_0410: Een Titel moet worden geduid met de label Titel. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <!-- ============TDOP_0470================================================================================================================ -->
+    <!-- ============TPOD_0470================================================================================================================ -->
     
-    <sch:pattern id="TDOP_0470">
+    <sch:pattern id="TPOD_0470">
         <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTDOP_0470($hoofdstuk, .)"/>
+            <sch:let name="fouten" value="foo:foutenTPOD_0470($hoofdstuk, .)"/>
             
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0470: De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+                TPOD_0470: De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:foutenTDOP_0470">
+    <xsl:function name="foo:foutenTPOD_0470">
         <xsl:param name="hoofdstuk" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
@@ -133,21 +133,21 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
-    <!-- ===========TDOP_0480================================================================================================================= -->
+    <!-- ===========TPOD_0480================================================================================================================= -->
     
-    <sch:pattern id="TDOP_0480">
+    <sch:pattern id="TPOD_0480">
         <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTDOP_0480($hoofdstuk, .)"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0480($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>:   <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>:   <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:volgordeTDOP_0480">
+    <xsl:function name="foo:volgordeTPOD_0480">
         <xsl:param name="hoofdstuk" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
@@ -160,21 +160,21 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
-    <!-- ============TDOP_0490================================================================================================================ -->
+    <!-- ============TPOD_0490================================================================================================================ -->
     
-    <sch:pattern id="TDOP_0490">
+    <sch:pattern id="TPOD_0490">
         <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTDOP_0490( .)"/>
+            <sch:let name="fouten" value="foo:foutenTPOD_0490( .)"/>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0490: Achter het cijfer van een titelnummer mag geen punt worden opgenomen. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+                TPOD_0490: Achter het cijfer van een titelnummer mag geen punt worden opgenomen. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:foutenTDOP_0490">
+    <xsl:function name="foo:foutenTPOD_0490">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Titel">
@@ -186,34 +186,34 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
-    <!-- ===========TDOP_0510================================================================================================================= -->
+    <!-- ===========TPOD_0510================================================================================================================= -->
     
-    <sch:pattern id="TDOP_0510">
+    <sch:pattern id="TPOD_0510">
         <sch:rule context="//tekst:Afdeling/tekst:Kop[lower-case(tekst:Label) ne 'afdeling']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0510: Een Afdeling moet worden geduid met de label Afdeling. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
+                TPOD_0510: Een Afdeling moet worden geduid met de label Afdeling. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <!-- ============TDOP_0520================================================================================================================ -->
+    <!-- ============TPOD_0520================================================================================================================ -->
     
-    <sch:pattern id="TDOP_0520">
+    <sch:pattern id="TPOD_0520">
         <sch:rule context="//tekst:Hoofdstuk/tekst:Titel">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(../tekst:Kop/tekst:Nummer)"/>
             <sch:let name="titel" value="string(tekst:Titel/tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTDOP_0520($titel, .)"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0520($titel, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0520: Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt. (betreft hoofdstukken, titels, afdelingen):  <xsl:value-of select="$hoofdstuk"/>: <sch:value-of select="$titel"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0520: Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt. (betreft hoofdstukken, titels, afdelingen):  <xsl:value-of select="$hoofdstuk"/>: <sch:value-of select="$titel"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:volgordeTDOP_0520">
+    <xsl:function name="foo:volgordeTPOD_0520">
         <xsl:param name="titel" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
@@ -226,21 +226,21 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
-    <!-- ============TDOP_0530================================================================================================================ -->
+    <!-- ============TPOD_0530================================================================================================================ -->
     
-    <sch:pattern id="TDOP_0530">
+    <sch:pattern id="TPOD_0530">
         <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTDOP_0530($hoofdstuk, .)"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0530($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0530: Afdelingen moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, afdeling):  <sch:value-of select="$hoofdstuk"/>:   <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0530: Afdelingen moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, afdeling):  <sch:value-of select="$hoofdstuk"/>:   <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:volgordeTDOP_0530">
+    <xsl:function name="foo:volgordeTPOD_0530">
         <xsl:param name="hoofdstuk" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
@@ -261,22 +261,22 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
-    <!-- ===========TDOP_0540================================================================================================================= -->
+    <!-- ===========TPOD_0540================================================================================================================= -->
     
-    <sch:pattern id="TDOP_0540">
+    <sch:pattern id="TPOD_0540">
         <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTDOP_0540(.)">
+            <sch:let name="fouten" value="foo:foutenTPOD_0540(.)">
             </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0540: Achter het cijfer van een afdelingnummer mag geen punt worden opgenomen. (betreft hoofdstukken, afdeling):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+                TPOD_0540: Achter het cijfer van een afdelingnummer mag geen punt worden opgenomen. (betreft hoofdstukken, afdeling):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:foutenTDOP_0540">
+    <xsl:function name="foo:foutenTPOD_0540">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Afdeling">
@@ -296,18 +296,18 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
-    <!-- ============TDOP_0560================================================================================================================ -->
+    <!-- ============TPOD_0560================================================================================================================ -->
     
-    <sch:pattern id="TDOP_0560">
+    <sch:pattern id="TPOD_0560">
         <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTDOP_0560($hoofdstuk, .)"/>
+            <sch:let name="fouten" value="foo:foutenTPOD_0560($hoofdstuk, .)"/>
             
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0560: Als
+                TPOD_0560: Als
                 tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van
                 Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt,
                 gevolgd door een punt. (betreft hoofdstukken, titels): <sch:value-of
@@ -316,7 +316,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:foutenTDOP_0560">
+    <xsl:function name="foo:foutenTPOD_0560">
         <xsl:param name="hoofdstuk"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
@@ -329,15 +329,15 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
-    <!-- ===========TDOP_0570================================================================================================================= -->
+    <!-- ===========TPOD_0570================================================================================================================= -->
     
-    <sch:pattern id="TDOP_0570">
+    <sch:pattern id="TPOD_0570">
         <sch:rule context="//tekst:Paragraaf/tekst:Kop[(lower-case(tekst:Label) ne '§') and (lower-case(tekst:Label) ne 'paragraaf')]">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0570: Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. Betreft label: <sch:value-of select="tekst:Label"/> </sch:assert>
+                TPOD_0570: Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. Betreft label: <sch:value-of select="tekst:Label"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -767,9 +767,9 @@
         </sch:rule>
     </sch:pattern>
     
-    <!-- ============TDOP_1860================================================================================================================ -->
+    <!-- ============TPOD_1860================================================================================================================ -->
     
-    <sch:pattern id="TDOP_1860">
+    <sch:pattern id="TPOD_1860">
         <sch:rule context="//r:Regeltekst">
             <sch:let name="APPLICABLE"
                 value="true()"/>
@@ -794,7 +794,7 @@
         <sch:rule context="//r:artikelOfLid/r-ref:RegeltekstRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getIdentifiersTDOP_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
+                value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -805,7 +805,7 @@
         <sch:rule context="//r:RegelVoorIedereen/r:activiteitaanduiding/rol-ref:ActiviteitRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getIdentifiersTDOP_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
+                value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -816,7 +816,7 @@
         <sch:rule context="//r:omgevingsnormaanduiding/rol-ref:OmgevingsnormRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getIdentifiersTDOP_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
+                value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -827,7 +827,7 @@
         <sch:rule context="//r:gebiedsaanwijzing/ga-ref:GebiedsaanwijzingRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getIdentifiersTDOP_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
+                value="foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -838,7 +838,7 @@
         <sch:rule
             context="//l-ref:LocatieRef | l-ref:GebiedRef | l-ref:GebiedengroepRef | l-ref:PuntRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef | l-ref:LijnRef">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="identifiers" value="foo:getLocationIdentifiersTDOP_1860()"/>
+            <sch:let name="identifiers" value="foo:getLocationIdentifiersTPOD_1860()"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -849,7 +849,7 @@
         <sch:rule context="//rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getIdentifiersTDOP_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
+                value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
@@ -860,7 +860,7 @@
         <sch:rule
             context="//rol:normwaarde/rol:Normwaarde/rol:locatieaanduiding/l-ref:LocatieRef | l-ref:GebiedRef | l-ref:GebiedengroepRef | l-ref:PuntRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef | l-ref:LijnRef">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="identifiers" value="foo:getLocationIdentifiersTDOP_1860()"/>
+            <sch:let name="identifiers" value="foo:getLocationIdentifiersTPOD_1860()"/>
             <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of
@@ -871,7 +871,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:getLocationIdentifiersTDOP_1860">
+    <xsl:function name="foo:getLocationIdentifiersTPOD_1860">
         <xsl:variable name="identifiers">
             <xsl:for-each
                 select="$xmlDocuments//(l:Gebied | l:Gebiedengroep | l:Punt | l:Puntengroep | l:Lijn | l:Lijnengroep)/l:identificatie">
@@ -881,7 +881,7 @@
         <sch:value-of select="$identifiers"/>
     </xsl:function>
     
-    <xsl:function name="foo:getIdentifiersTDOP_1860">
+    <xsl:function name="foo:getIdentifiersTPOD_1860">
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">
@@ -891,14 +891,14 @@
         <xsl:value-of select="$identifiers"/>
     </xsl:function>
     
-    <!-- ============TDOP_1870================================================================================================================ -->    
+    <!-- ============TPOD_1870================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_1870">
+    <sch:pattern id="TPOD_1870">
         <sch:rule context="//r:artikelOfLid">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="identifiers"
-                value="foo:getRegelTekstIdentifiersTDOP_1870()"/>
+                value="foo:getRegelTekstIdentifiersTPOD_1870()"/>
             <sch:let name="CONDITION" value="contains($identifiers, r-ref:RegeltekstRef/@xlink:href)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1870: Betreft
@@ -907,7 +907,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:getRegelTekstIdentifiersTDOP_1870">
+    <xsl:function name="foo:getRegelTekstIdentifiersTPOD_1870">
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xmlDocuments//r:Regeltekst">
                 <xsl:value-of select="r:identificatie/text()"/>
@@ -916,9 +916,9 @@
         <xsl:value-of select="$identifiers"/>
     </xsl:function>
     
-    <!-- ============TDOP_1890================================================================================================================ -->    
+    <!-- ============TPOD_1890================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_1890">
+    <sch:pattern id="TPOD_1890">
         <sch:rule context="//*:identificatie">
             <sch:let name="APPLICABLE"
                 value="true()"/>
@@ -998,15 +998,15 @@
         <xsl:value-of select="$notfoundFileOrObjectType"/>
     </xsl:function>
     
-    <!-- ============TDOP_1930================================================================================================================ -->
+    <!-- ============TPOD_1930================================================================================================================ -->
     
-    <sch:pattern id="TDOP_1930">
+    <sch:pattern id="TPOD_1930">
         <sch:rule context="//l:Gebiedengroep/l:groepselement">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="notFound" value="foo:notFoundTDOP_1930(.)"/>
+            <sch:let name="notFound" value="foo:notFoundTPOD_1930(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_1930: Betreft
+                TPOD_1930: Betreft
                 <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"
                 />, <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject in een
                 Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.
@@ -1014,11 +1014,11 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:notFoundTDOP_1930">
+    <xsl:function name="foo:notFoundTPOD_1930">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="notFound">
             <xsl:variable name="identifiers"
-                select="foo:getIdentifiersTDOP_1930($xmlDocuments//l:Gebied/l:identificatie)"/>
+                select="foo:getIdentifiersTPOD_1930($xmlDocuments//l:Gebied/l:identificatie)"/>
             <xsl:for-each select="$context/l-ref:GebiedRef">
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
                     <xsl:value-of select="concat(@xlink:href, ', ')"/>
@@ -1028,7 +1028,7 @@
         <xsl:value-of select="$notFound"/>
     </xsl:function>
     
-    <xsl:function name="foo:getIdentifiersTDOP_1930">
+    <xsl:function name="foo:getIdentifiersTPOD_1930">
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">
@@ -1038,27 +1038,27 @@
         <xsl:value-of select="$identifiers"/>
     </xsl:function>
     
-    <!-- ============TDOP_1940================================================================================================================ -->    
+    <!-- ============TPOD_1940================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_1940">
+    <sch:pattern id="TPOD_1940">
         <sch:rule
             context="//l:Puntengroep/l:groepselement">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="notFound" value="foo:notFoundTDOP_1940(.)"/>
+            <sch:let name="notFound" value="foo:notFoundTPOD_1940(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_1940: Betreft <sch:value-of
+                TPOD_1940: Betreft <sch:value-of
                     select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
                 <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
                 in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:notFoundTDOP_1940">
+    <xsl:function name="foo:notFoundTPOD_1940">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="identifiers"
-            select="foo:getIdentifiersTDOP_1940($xmlDocuments//l:Punt/l:identificatie)"/>
+            select="foo:getIdentifiersTPOD_1940($xmlDocuments//l:Punt/l:identificatie)"/>
         <xsl:variable name="notFound">
             <xsl:for-each select="$context/l-ref:PuntRef">
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
@@ -1069,7 +1069,7 @@
         <xsl:value-of select="$notFound"/>
     </xsl:function>
     
-    <xsl:function name="foo:getIdentifiersTDOP_1940">
+    <xsl:function name="foo:getIdentifiersTPOD_1940">
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">
@@ -1079,28 +1079,28 @@
         <xsl:value-of select="$identifiers"/>
     </xsl:function>
     
-    <!-- ============TDOP_1950================================================================================================================ -->    
+    <!-- ============TPOD_1950================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_1950">
+    <sch:pattern id="TPOD_1950">
         <sch:rule
             context="//l:Lijnengroep/l:groepselement">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="notFound" value="foo:notFoundTDOP_1950(.)"/>
+            <sch:let name="notFound" value="foo:notFoundTPOD_1950(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_1950: Betreft <sch:value-of
+                TPOD_1950: Betreft <sch:value-of
                     select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
                 <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
                 in een Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:notFoundTDOP_1950">
+    <xsl:function name="foo:notFoundTPOD_1950">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="notFound">
             <xsl:variable name="identifiers"
-                select="foo:getIdentifiersTDOP_1950($xmlDocuments//l:Lijn/l:identificatie)"/>
+                select="foo:getIdentifiersTPOD_1950($xmlDocuments//l:Lijn/l:identificatie)"/>
             <xsl:for-each select="$context/l-ref:LijnRef">
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
                     <xsl:value-of select="concat(@xlink:href, ', ')"/>
@@ -1110,7 +1110,7 @@
         <xsl:value-of select="$notFound"/>
     </xsl:function>
     
-    <xsl:function name="foo:getIdentifiersTDOP_1950">
+    <xsl:function name="foo:getIdentifiersTPOD_1950">
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">
@@ -1120,17 +1120,17 @@
         <xsl:value-of select="$identifiers"/>
     </xsl:function>
     
-    <!-- ============TDOP_1960================================================================================================================ -->    
+    <!-- ============TPOD_1960================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_1960">
+    <sch:pattern id="TPOD_1960">
         <sch:rule context="//l:Lijn/l:geometrie/g-ref:GeometrieRef">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="geometrie" value="foo:geometrieTDOP_1960($href)"/>
+            <sch:let name="geometrie" value="foo:geometrieTPOD_1960($href)"/>
             <sch:let name="CONDITION" value="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TDOP_1960: Betreft <sch:value-of
+                TPOD_1960: Betreft <sch:value-of
                     select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject
                 vanuit een Lijn moet een lijn-geometrie zijn. 
@@ -1138,7 +1138,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:geometrieTDOP_1960">
+    <xsl:function name="foo:geometrieTPOD_1960">
         <xsl:param name="href"/>
         <xsl:for-each select="$gmlDocuments//geo:Geometrie">
             <xsl:if test="string(geo:id/text())=$href">
@@ -1147,9 +1147,9 @@
         </xsl:for-each>
     </xsl:function>
     
-    <!-- ============TDOP_1970================================================================================================================ -->    
+    <!-- ============TPOD_1970================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_1970">
+    <sch:pattern id="TPOD_1970">
         <sch:rule context="//l:Punt/l:geometrie/g-ref:GeometrieRef">
             <sch:let name="APPLICABLE"
                 value="true()"/>
@@ -1157,7 +1157,7 @@
             <sch:let name="geometrie" value="$gmlDocuments//geo:Geometrie[geo:id/text() eq $href]"/>
             <sch:let name="CONDITION" value="$geometrie//gml:MultiPoint || $geometrie//gml:Point"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TDOP_1970: Betreft <sch:value-of
+                TPOD_1970: Betreft <sch:value-of
                     select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject
                 vanuit een Punt moet een punt-geometrie zijn. 
@@ -1165,16 +1165,16 @@
         </sch:rule>
     </sch:pattern>
     
-    <!-- ============TDOP_1980================================================================================================================ -->
+    <!-- ============TPOD_1980================================================================================================================ -->
     
-    <sch:pattern id="TDOP_1980">
+    <sch:pattern id="TPOD_1980">
         <sch:rule context="//l:Gebied/l:geometrie/g-ref:GeometrieRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="gebied" value="foo:calculateConditionTDOP_1980($href)" />
+            <sch:let name="gebied" value="foo:calculateConditionTPOD_1980($href)" />
             <sch:let name="CONDITION" value="$gebied=1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_1980: Betreft <sch:value-of select="string($CONDITION)"/>
+                TPOD_1980: Betreft <sch:value-of select="string($CONDITION)"/>
                 <sch:value-of select="../../name()"/>: <sch:value-of
                     select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
                 verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.
@@ -1182,7 +1182,7 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:calculateConditionTDOP_1980">
+    <xsl:function name="foo:calculateConditionTPOD_1980">
         <xsl:param name="href"/>
         <xsl:for-each select="$gmlDocuments">
             <xsl:value-of select="0"/>
@@ -1192,19 +1192,19 @@
         </xsl:for-each>
     </xsl:function>
     
-    <!-- ============TDOP_1990================================================================================================================ -->
+    <!-- ============TPOD_1990================================================================================================================ -->
     
     <sch:pattern id="TPOD_1990">
-        <sch:rule context="/">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+        <sch:rule context="//geo:Geometrie">
+            <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="geoLocationGeoReferenceIdentifiers"
                 value="foo:getLocationGeoReferenceIdentifiersTPOD_1990()"/>
-            <sch:let name="nietGerefereerdeGeometrieen" value="foo:nietGerefereerdeGeometrieenTPOD_1990($geoLocationGeoReferenceIdentifiers)"/>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrieen) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
-                <sch:value-of select="substring($nietGerefereerdeGeometrieen,1,string-length($nietGerefereerdeGeometrieen)-2)"/>
+            <sch:let name="nietGerefereerdeGeometrie"
+                value="foo:nietGerefereerdeGeometrieTPOD_1990($geoLocationGeoReferenceIdentifiers, .)"/>
+            <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrie) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1990: Ieder
+                OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+                <sch:value-of select="$nietGerefereerdeGeometrie" />
             </sch:assert>
         </sch:rule>
         
@@ -1252,17 +1252,12 @@
     </sch:pattern>
     
     
-    <xsl:function name="foo:nietGerefereerdeGeometrieenTPOD_1990">
+    <xsl:function name="foo:nietGerefereerdeGeometrieTPOD_1990">
         <xsl:param name="identifiers"/>
-        <xsl:variable name="nietGerefereerdeGeometrieen">
-            <xsl:for-each select="$gmlDocuments//geo:Geometrie">
-                <xsl:if
-                    test="not(contains($identifiers, concat('.', string(geo:id/text()), '.')))">
-                    <xsl:value-of select="concat(string(geo:id/text()), ', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$nietGerefereerdeGeometrieen"/>
+        <xsl:param name="context" as="node()"/>
+        <xsl:if test="not(contains($identifiers, concat('.', string($context/geo:id/text()), '.')))">
+            <xsl:value-of select="string($context/geo:id/text())"/>
+        </xsl:if>
     </xsl:function>
     
     <xsl:function name="foo:nietGerefereerdeReferentiesTPOD_1990">

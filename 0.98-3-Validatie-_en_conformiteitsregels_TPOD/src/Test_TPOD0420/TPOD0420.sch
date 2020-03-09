@@ -41,19 +41,19 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0420">
+    <sch:pattern id="TPOD_0420">
         <sch:rule context="//tekst:Lichaam">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="volgorde" value="foo:volgordeTDOP_0400(.)">
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0400(.)">
             </sch:let>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0420: Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken):  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0420: Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken):  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:volgordeTDOP_0420">
+    <xsl:function name="foo:volgordeTPOD_0420">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Hoofdstuk">

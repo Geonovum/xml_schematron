@@ -37,26 +37,26 @@
     
     <!-- ============================================================================================================================ -->    
     
-    <sch:pattern id="TDOP_1950">
+    <sch:pattern id="TPOD_1950">
         <sch:rule
             context="//l:Lijnengroep/l:groepselement">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="notFound" value="foo:notFoundTDOP_1950(.)"/>
+            <sch:let name="notFound" value="foo:notFoundTPOD_1950(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_1950: Betreft <sch:value-of
+                TPOD_1950: Betreft <sch:value-of
                 select="../../name()"/>: <sch:value-of select="../l:identificatie"/>,
                 <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject
                 in een Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:notFoundTDOP_1950">
+    <xsl:function name="foo:notFoundTPOD_1950">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="notFound">
             <xsl:variable name="identifiers"
-                select="foo:getIdentifiersTDOP_1950($xmlDocuments//l:Lijn/l:identificatie)"/>
+                select="foo:getIdentifiersTPOD_1950($xmlDocuments//l:Lijn/l:identificatie)"/>
             <xsl:for-each select="$context/l-ref:LijnRef">
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
                     <xsl:value-of select="concat(@xlink:href, ', ')"/>
@@ -66,7 +66,7 @@
         <xsl:value-of select="$notFound"/>
     </xsl:function>
 
-    <xsl:function name="foo:getIdentifiersTDOP_1950">
+    <xsl:function name="foo:getIdentifiersTPOD_1950">
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">

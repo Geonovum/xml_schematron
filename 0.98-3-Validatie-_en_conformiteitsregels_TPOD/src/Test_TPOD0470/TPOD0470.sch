@@ -41,20 +41,20 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TDOP_0470">
+    <sch:pattern id="TPOD_0470">
         <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTDOP_0470($hoofdstuk, .)"/>
+            <sch:let name="fouten" value="foo:foutenTPOD_0470($hoofdstuk, .)"/>
             
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TDOP_0470: De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+                TPOD_0470: De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:foutenTDOP_0470">
+    <xsl:function name="foo:foutenTPOD_0470">
         <xsl:param name="hoofdstuk" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
