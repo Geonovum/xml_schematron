@@ -370,6 +370,34 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
+    <!-- ============TPOD_0590================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0590">
+        <sch:rule context="//tekst:Hoofdstuk/tekst:Afdeling">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="afdeling" value="string(tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0590($afdeling, .)"/>
+            
+            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0590: Paragrafen moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken):  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:volgordeTPOD_0590">
+        <xsl:param name="afdeling"/>
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="volgorde">
+            <xsl:for-each select="$context/tekst:Paragraaf">
+                <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($afdeling, '.', string(position())))">
+                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$volgorde"/>
+    </xsl:function>
+    
     <!-- ============TPOD880================================================================================================================ -->
     
     <sch:pattern id="TPOD880">
