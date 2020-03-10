@@ -48,7 +48,7 @@
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0620: Een Subparagraaf moet worden geduid met de label Subparagraaf. Betreft label: 
-                <sch:value-of select="tekst:Label"/></sch:assert>
+                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 

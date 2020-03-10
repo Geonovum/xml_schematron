@@ -47,7 +47,8 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0570: Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. Betreft label: <sch:value-of select="tekst:Label"/> </sch:assert>
+                TPOD_0570: Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. Betreft label: 
+                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
 

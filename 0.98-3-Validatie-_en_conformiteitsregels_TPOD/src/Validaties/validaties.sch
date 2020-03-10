@@ -63,7 +63,8 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0410: Een Hoofdstuk moet worden geduid met de label Hoofdstuk. Betreft label: <sch:value-of select="tekst:Label"/> </sch:assert>
+                TPOD_0410: Een Hoofdstuk moet worden geduid met de label Hoofdstuk. Betreft label: 
+                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -101,7 +102,8 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0410: Een Titel moet worden geduid met de label Titel. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
+                TPOD_0410: Een Titel moet worden geduid met de label Titel. Betreft label: 
+                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -194,7 +196,8 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0510: Een Afdeling moet worden geduid met de label Afdeling. Betreft label: <sch:value-of select="tekst:Label"/></sch:assert>
+                TPOD_0510: Een Afdeling moet worden geduid met de label Afdeling. Betreft label: 
+                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -337,7 +340,8 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0570: Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. Betreft label: <sch:value-of select="tekst:Label"/> </sch:assert>
+                TPOD_0570: Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. Betreft label: 
+                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -435,7 +439,7 @@
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0620: Een Subparagraaf moet worden geduid met de label Subparagraaf. Betreft label: 
-                <sch:value-of select="tekst:Label"/></sch:assert>
+                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -523,6 +527,19 @@
         </xsl:variable>
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
+    
+    <!-- ============TPOD_0670================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0670">
+        <sch:rule context="//tekst:Subparagraaf/tekst:Subsubparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'ubsubparagraaf']">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION" value="false()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. Betreft label: 
+                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
     
     <!-- ============TPOD_0880================================================================================================================ -->
     
