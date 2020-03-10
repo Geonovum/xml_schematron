@@ -398,6 +398,34 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
+    <!-- ============TPOD_0600================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0600">
+        <sch:rule context="//tekst:Hoofdstuk/tekst:Afdeling">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="afdeling" value="string(tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="fouten" value="foo:foutenTPOD_0600(.)">
+            </sch:let>
+            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0600: Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen. (betreft afdeling, paragrafen):  
+                <sch:value-of select="$afdeling"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:foutenTPOD_0600">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="volgorde">
+            <xsl:for-each select="$context/tekst:Paragraaf">
+                <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
+                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$volgorde"/>
+    </xsl:function>
+    
     <!-- ============TPOD880================================================================================================================ -->
     
     <sch:pattern id="TPOD880">
