@@ -10,6 +10,21 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>src/Test_TPOD0580/TPOD0580-compiled.xsl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>target</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>src/Validaties/Opdracht/OwTestExemplaar1650.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -408,7 +423,7 @@
                                     <String>${currentFileURL}</String>
                                 </field>
                                 <field name="inputXMLURL">
-                                    <String>${pdu}/src/Test_TPOD1960/OwTestExemplaarX1.xml</String>
+                                    <String>${pdu}/src/Test_TPOD0580/regeling_met_afdeling.xml</String>
                                 </field>
                                 <field name="defaultScenario">
                                     <Boolean>false</Boolean>
