@@ -41,26 +41,26 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0630">
-        <sch:rule context="//tekst:Afdeling/tekst:Paragraaf">
+    <sch:pattern id="TPOD_0680">
+        <sch:rule context="//tekst:Paragraaf/tekst:Subparagraaf">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="paragraaf" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0630($paragraaf, .)"/>
+            <sch:let name="subparagraaf" value="string(tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0680($subparagraaf, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0630: De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin de Paragraaf voorkomt, 
-                gevolgd door een punt. (betreft paragrafen, subparagrafen):  
-                <xsl:value-of select="$paragraaf"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0680: De nummering van Subsubparagrafen begint met het samengestelde nummer van de Subparagraaf waarin de Subsubparagraaf voorkomt, 
+                gevolgd door een punt. (betreft subparagraaf, subsubparagrafen):  
+                <xsl:value-of select="$subparagraaf"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:volgordeTPOD_0630">
-        <xsl:param name="paragraaf" as="xs:string"/>
+    <xsl:function name="foo:volgordeTPOD_0680">
+        <xsl:param name="subparagraaf" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Subparagraaf">
-                <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($paragraaf, '.', string(position())))">
+            <xsl:for-each select="$context/tekst:Subsubparagraaf">
+                <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($subparagraaf, '.', string(position())))">
                     <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
                 </xsl:if>
             </xsl:for-each>
