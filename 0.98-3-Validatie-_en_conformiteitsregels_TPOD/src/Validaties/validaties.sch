@@ -503,7 +503,7 @@
     <!-- ============TPOD_0650================================================================================================================ -->
     
     <sch:pattern id="TPOD_0650">
-        <sch:rule context="//tekst:Afdeling/tekst:Paragraaf">
+        <sch:rule context="//tekst:Paragraaf/tekst:Paragraaf">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="paragraaf" value="string(tekst:Kop/tekst:Nummer)"/>
@@ -511,7 +511,7 @@
             </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0650: Achter het cijfer van een subparagraafnummer mag geen punt worden opgenomen. (betreft paragraaf, subparagrafen):  
+                TPOD_0650: Achter het cijfer van een subparagraafnummer mag geen punt worden opgenomen. (betreft subparagraaf, subsubparagrafen):  
                 <sch:value-of select="$paragraaf"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -592,6 +592,34 @@
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Subsubparagraaf">
                 <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($subparagraaf, '.', string(position())))">
+                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$volgorde"/>
+    </xsl:function>
+    
+    <!-- ============TPOD_0700================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0700">
+        <sch:rule context="//tekst:Paragraaf/tekst:Subparagraaf">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="subparagraaf" value="string(tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="fouten" value="foo:foutenTPOD_0700(.)">
+            </sch:let>
+            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0700: Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen. (betreft subparagraaf, subsubparagrafen):  
+                <sch:value-of select="$subparagraaf"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:foutenTPOD_0700">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="volgorde">
+            <xsl:for-each select="$context/tekst:Subsubparagraaf">
+                <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
                     <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
                 </xsl:if>
             </xsl:for-each>

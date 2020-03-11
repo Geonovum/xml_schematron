@@ -49,7 +49,7 @@
             </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0650: Achter het cijfer van een subsubparagraafnummer mag geen punt worden opgenomen. (betreft paragraaf, subparagrafen):  
+                TPOD_0650: Achter het cijfer van een subparagraafnummer mag geen punt worden opgenomen. (betreft paragraaf, subparagrafen):  
                 <sch:value-of select="$paragraaf"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
