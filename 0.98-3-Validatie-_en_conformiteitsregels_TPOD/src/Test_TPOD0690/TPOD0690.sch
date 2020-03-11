@@ -50,7 +50,7 @@
             
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0690: Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken):  
+                TPOD_0690: Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers (betreft subsubparagrafen):  
                 <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
