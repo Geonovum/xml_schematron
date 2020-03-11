@@ -640,6 +640,55 @@
         </sch:rule>
     </sch:pattern>
     
+    <!-- ============TPOD_0730================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0730">
+        <sch:rule context="//tekst:Hoofdstuk">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0730($hoofdstuk, .)"/>
+            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0730: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt.
+                (betreft hoofdstuk, artikels):  
+                <xsl:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:volgordeTPOD_0730">
+        <xsl:param name="hoofdstuk" as="xs:string"/>
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="volgorde">
+            <xsl:for-each select="$context/descendant::tekst:Artikel">
+                <xsl:if test="not(foo:substring-before-lastTPOD_0730(tekst:Kop/tekst:Nummer,'.')=$hoofdstuk)">
+                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$volgorde"/>
+    </xsl:function>
+    
+    <xsl:function name="foo:substring-before-lastTPOD_0730" as="xs:string">
+        <xsl:param name="arg" as="xs:string?"/>
+        <xsl:param name="delim" as="xs:string"/>
+        <xsl:sequence select="
+            if (matches($arg, foo:escape-for-regexTPOD_0730($delim)))
+            then replace($arg,
+            concat('^(.*)', foo:escape-for-regexTPOD_0730($delim),'.*'),
+            '$1')
+            else ''
+            "/>
+    </xsl:function>
+    
+    <xsl:function name="foo:escape-for-regexTPOD_0730" as="xs:string">
+        <xsl:param name="arg" as="xs:string?"/>
+        <xsl:sequence select="
+            replace($arg,
+            '(\.|\[|\]|\\|\||\-|\^|\$|\?|\*|\+|\{|\}|\(|\))','\\$1')
+            "/>
+    </xsl:function>
+    
     <!-- ============TPOD_0880================================================================================================================ -->
     
     <sch:pattern id="TPOD_0880">
