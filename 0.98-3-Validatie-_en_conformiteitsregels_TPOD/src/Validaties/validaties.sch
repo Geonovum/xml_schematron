@@ -718,6 +718,20 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
+    <!-- ============TPOD_0750================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0750">
+        <sch:rule context="//tekst:Artikel">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="CONDITION" value="not(ends-with($artikel, '.'))"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0750: Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen. (betreft artikelen):  
+                <sch:value-of select="$artikel"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
     <!-- ============TPOD_0880================================================================================================================ -->
     
     <sch:pattern id="TPOD_0880">
