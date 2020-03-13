@@ -41,25 +41,26 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_2010">
-        <sch:rule context="//r:Regeltekst | vt:FormeleDivisie">
+    <sch:pattern id="TPOD_2040">
+        <sch:rule context="//vt:FormeleDivisie">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION"
-                value="string-length(foo:checkFBRWorkTPOD_2010(@wIdRegeling)) > 0"/>
+            <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2010: Betreft
-                <sch:value-of select="name()"/>: <sch:value-of select="@wIdRegeling"/>: het wIdRegeling van de
-                Regeltekst of FormeleDivisie in OW moet verwijzen naar een bestaande FRBRWork behorend bij Regeling in OP </sch:assert>
+                H:TPOD2040: Betreft
+                <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: het wId van de
+                FormeleDivisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:checkFBRWorkTPOD_2010">
+    <xsl:function name="foo:checkWIdTPOD_2040">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//tekst:*/@FRBRwork">
+        <xsl:for-each select="$xmlDocuments//tekst:FormeleDivisie/@wId">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
+
 
 </sch:schema>
