@@ -10,6 +10,21 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>src/Test_TPOD1860/owActiviteiten-Gemeentestad.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>instance</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>src/Test_TPOD0580/TPOD0580-compiled.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -254,7 +269,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${pdu}/src/Ant/target.xsl</String>
+                                    <String>${pdu}/src/Test_TPOD1860/TPOD1860-compiled.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
