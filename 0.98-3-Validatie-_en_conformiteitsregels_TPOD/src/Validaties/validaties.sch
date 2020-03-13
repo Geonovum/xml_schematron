@@ -1854,14 +1854,14 @@
     <!-- ============TPOD_2010================================================================================================================ -->
     
     <sch:pattern id="TPOD_2010">
-        <sch:rule context="//r:Regeltekst">
+        <sch:rule context="//r:Regeltekst | vt:FormeleDivisie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION"
                 value="string-length(foo:checkFBRWorkTPOD_2010(@wIdRegeling)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD2010: Betreft
                 <sch:value-of select="name()"/>: <sch:value-of select="@wIdRegeling"/>: het wIdRegeling van de
-                Regeltekst in OW moet verwijzen naar een bestaande FRBRWork behorend bij Regeling in OP </sch:assert>
+                Regeltekst of FormeleDivisie in OW moet verwijzen naar een bestaande FRBRWork behorend bij Regeling in OP </sch:assert>
         </sch:rule>
     </sch:pattern>
     
