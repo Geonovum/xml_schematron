@@ -1832,33 +1832,42 @@
     <sch:pattern id="TPOD_2000">
         <sch:rule context="//r:Regeltekst">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION_1" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
+            <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD2000: Betreft
                 <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: het wId van de
                 Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP
             </sch:assert>
-            <sch:let name="CONDITION_2"
-                value="string-length(foo:checkFBRWorkTPOD_2000(@wIdRegeling)) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
-                H:TPOD2000: Betreft
-                <sch:value-of select="name()"/>: <sch:value-of select="@wIdRegeling"/>: het wIdRegeling van de
-                Regeltekst in OW moet verwijzen naar een bestaande FRBRWork behorend bij Regeling in OP </sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:checkFBRWorkTPOD_2000">
+    
+    <xsl:function name="foo:checkWIdTPOD_2000">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//tekst:*/@FRBRwork">
+        <xsl:for-each select="$xmlDocuments//(tekst:Artikel | tekst:Lid)/@wId">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
     
-    <xsl:function name="foo:checkWIdTPOD_2000">
+    <!-- ============TPOD_2010================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2010">
+        <sch:rule context="//r:Regeltekst">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="CONDITION"
+                value="string-length(foo:checkFBRWorkTPOD_2010(@wIdRegeling)) > 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                H:TPOD2010: Betreft
+                <sch:value-of select="name()"/>: <sch:value-of select="@wIdRegeling"/>: het wIdRegeling van de
+                Regeltekst in OW moet verwijzen naar een bestaande FRBRWork behorend bij Regeling in OP </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkFBRWorkTPOD_2010">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//(tekst:Artikel | tekst:Lid)/@wId">
+        <xsl:for-each select="$xmlDocuments//tekst:*/@FRBRwork">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>
