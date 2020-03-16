@@ -26,6 +26,7 @@
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
+    <sch:ns uri="http://www.overheid.nl/2017/lvbb" prefix="lvbb"/>
     
     
     <!-- ====================================== GENERIC ============================================================================= -->
@@ -1940,5 +1941,36 @@
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
+    
+    <!-- ============TPOD_2050================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2050">
+        <sch:rule context="//stop:AanleveringBesluit">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="message" value="foo:existsTPOD_2050()"/>
+            <sch:let name="CONDITION" value="string-length($message)=0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                H:TPOD2050: <sch:value-of select="$message"/>
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:existsTPOD_2050">
+        <xsl:choose>
+            <xsl:when test="not(document('manifest.xml')//lvbb:manifest or document('manifest-ow.xml')//Modules)">
+                <xsl:value-of select="'Manifest.xml en manifest-ow.xml zijn niet aangetroffen.'"/>
+            </xsl:when>
+            <xsl:when test="not(document('manifest-ow.xml')//Modules)">
+                <xsl:value-of select="'Manifest-ow.xml is niet aangetroffen.'"/>
+            </xsl:when>
+            <xsl:when test="not(document('manifest.xml')//lvbb:manifest)">
+                <xsl:value-of select="'Manifest.xml is niet aangetroffen.'"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="''"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+    
     
 </sch:schema>
