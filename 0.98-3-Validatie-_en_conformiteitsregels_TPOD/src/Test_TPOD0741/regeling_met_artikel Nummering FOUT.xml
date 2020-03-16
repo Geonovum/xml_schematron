@@ -418,7 +418,7 @@
                                     wId="mnre1034_1-0__chp_1__subchp_1.2__art_1.2.1">
                                     <Kop>
                                         <Label>Artikel</Label>
-                                        <Nummer>2.1</Nummer>
+                                        <Nummer>21</Nummer>
                                         <Opschrift>(toepassingsbereik)</Opschrift>
                                     </Kop>
                                     <Inhoud>
@@ -458,6 +458,19 @@
                                     <Kop>
                                         <Label>Artikel</Label>
                                         <Nummer>1.5a</Nummer>
+                                        <Opschrift>(toepassingsbereik)</Opschrift>
+                                    </Kop>
+                                    <Inhoud>
+                                        <Al>Dit hoofdstuk is van toepassing op de aanwijzing of
+                                            geometrische begrenzing van locaties voor de toepassing van
+                                            de wet en de daarop berustende bepalingen.</Al>
+                                    </Inhoud>
+                                </Artikel>
+                                <Artikel eId="chp_1__subchp_1.2__art_1.6"
+                                    wId="mnre1034_1-0__chp_1__subchp_1.2__art_1.6">
+                                    <Kop>
+                                        <Label>Artikel</Label>
+                                        <Nummer>1.5</Nummer>
                                         <Opschrift>(toepassingsbereik)</Opschrift>
                                     </Kop>
                                     <Inhoud>

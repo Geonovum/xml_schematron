@@ -42,16 +42,16 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0780_0781">
+    <sch:pattern id="TPOD_0780">
         <sch:rule context="//tekst:Artikel">
             <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0780(.)"/>
 
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0780, TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
+                TPOD_0780: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
                 (en indien nodig, een letter). (betreft artikelen, leden): <sch:value-of
                     select="$artikel"/>: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>

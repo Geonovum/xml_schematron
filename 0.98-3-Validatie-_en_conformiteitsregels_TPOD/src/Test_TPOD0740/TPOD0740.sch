@@ -45,7 +45,7 @@
     <sch:pattern id="TPOD_0740">
         <sch:rule context="//tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0740($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>

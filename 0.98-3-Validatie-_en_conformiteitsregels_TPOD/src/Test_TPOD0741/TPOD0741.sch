@@ -26,70 +26,82 @@
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
-    
+
     <!-- ====================================== GENERIC ============================================================================= -->
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
-    <sch:let name="SOORT_REGELING" value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
-    
+    <sch:let name="SOORT_REGELING"
+        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
     <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>
     <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>
     <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
     <sch:let name="OVI_PB" value="''"/>
-    
+
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0730">
+    <sch:pattern id="TPOD_0741">
         <sch:rule context="//tekst:Hoofdstuk">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0730($hoofdstuk, .)"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0741($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0730: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt.
-                (betreft hoofdstuk, artikels):  
-                <xsl:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0730: De
+                nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
+                voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in
+                Arabische cijfers inclusief indien nodig een letter.. (betreft hoofdstuk, artikels):
+                    <xsl:value-of select="$hoofdstuk"/>: <sch:value-of
+                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:volgordeTPOD_0730">
+
+    <xsl:function name="foo:volgordeTPOD_0741">
         <xsl:param name="hoofdstuk" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/descendant::tekst:Artikel">
-                <xsl:if test="
-                    not(foo:substring-before-lastTPOD_0730(tekst:Kop/tekst:Nummer,'.')=$hoofdstuk) 
-                    or 
-                    not(string(tekst:Kop/tekst:Nummer) = concat($hoofdstuk, '.', string(position())))">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                </xsl:if>
+                <xsl:variable name="pos" select="position()"/>
+                <xsl:variable name="artikelNummer" select="string(tekst:Kop/tekst:Nummer)"/>
+                <xsl:choose>
+                    <xsl:when test="contains($artikelNummer, '.')">
+                        <xsl:variable name="nummers" select="tokenize($artikelNummer,'\.')"/>
+                        <xsl:if test="count($nummers) = 2">
+                            <xsl:variable name="nummer" select="$nummers[2]"/>
+                            <xsl:choose>
+                                <xsl:when
+                                    test="(matches($nummer, '\d{1,2}')) or (matches($nummer, '\d{1,2}[az]{1}'))">
+                                    <xsl:choose>
+                                        <xsl:when test="matches($nummer, '\d{1,2}[az]{1}')">
+                                            <xsl:if test="not(string(tokenize($nummer, '[az]{1}')[1]) = string($pos))">
+                                                <xsl:value-of select="concat($hoofdstuk,'.',$nummer, ', ')"/>
+                                            </xsl:if>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:if test="not($nummer = string($pos))">
+                                                <xsl:value-of select="concat($hoofdstuk,'.',$nummer, ', ')"/>
+                                            </xsl:if>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="concat($hoofdstuk,'.',$nummer, ', ')"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:if>
+                        <xsl:if test="count($nummers) > 2">
+                            <xsl:value-of select="concat($artikelNummer, ', ')"/>
+                        </xsl:if>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="concat($artikelNummer, ', ')"/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
-    
-    <xsl:function name="foo:substring-before-lastTPOD_0730" as="xs:string">
-        <xsl:param name="arg" as="xs:string?"/>
-        <xsl:param name="delim" as="xs:string"/>
-        <xsl:sequence select="
-            if (matches($arg, foo:escape-for-regexTPOD_0730($delim)))
-            then replace($arg,
-            concat('^(.*)', foo:escape-for-regexTPOD_0730($delim),'.*'),
-            '$1')
-            else ''
-            "/>
-    </xsl:function>
-    
-    <xsl:function name="foo:escape-for-regexTPOD_0730" as="xs:string">
-        <xsl:param name="arg" as="xs:string?"/>
-        <xsl:sequence select="
-            replace($arg,
-            '(\.|\[|\]|\\|\||\-|\^|\$|\?|\*|\+|\{|\}|\(|\))','\\$1')
-            "/>
-    </xsl:function>
-    
 
 </sch:schema>
