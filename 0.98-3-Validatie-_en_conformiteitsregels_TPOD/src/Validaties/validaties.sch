@@ -726,16 +726,41 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OV"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0741($hoofdstuk, .)"/>
+            <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
+                TPOD_0741: De nummering van Artikelen bevat letters en kan niet middels schematron op geldigheid worden gecheckt.
+                Dit moet handmatig gebeuren. (betreft hoofdstuk, artikels e.a.): 
+                <xsl:value-of select="$hoofdstuk"/>: <sch:value-of
+                    select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"/></sch:assert>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0741($hoofdstuk, .)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0730: De
-                nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
+            <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
+                TPOD_0741: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
                 voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in
                 Arabische cijfers inclusief indien nodig een letter.. (betreft hoofdstuk, artikels):
                 <xsl:value-of select="$hoofdstuk"/>: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:bevatGeletterdeNummersTPOD_0741">
+        <xsl:param name="hoofdstuk" as="xs:string"/>
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="bevatLetters">
+            <xsl:for-each select="$context/descendant::tekst:Artikel">
+                <xsl:variable name="artikelNummer" select="string(tekst:Kop/tekst:Nummer)"/>
+                <xsl:variable name="nummers" select="tokenize($artikelNummer,'\.')"/>
+                <xsl:if test="count($nummers) = 2">
+                    <xsl:variable name="nummer" select="$nummers[2]"/>
+                    <xsl:if test="matches($nummer, '\d{1,2}[az]{1,2}')">
+                        <xsl:value-of select="concat($hoofdstuk,'.',$nummer, ', ')"/>
+                    </xsl:if>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$bevatLetters"/>
+    </xsl:function>
     
     <xsl:function name="foo:volgordeTPOD_0741">
         <xsl:param name="hoofdstuk" as="xs:string"/>
@@ -830,16 +855,36 @@
     <sch:pattern id="TPOD_0781">
         <sch:rule context="//tekst:Artikel">
             <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OV"/>
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0781(.)"/>
+            <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
+                TPOD_0781: De nummering van Leden bevat letters en kan niet middels schematron op geldigheid worden gecheckt.
+                Dit moet handmatig gebeuren. (betreft artikelen, leden e.a.):<sch:value-of
+                    select="$artikel"/>: <sch:value-of
+                        select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"/></sch:assert>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0781(.)"/>
-            
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter). (betreft artikelen, leden):  
-                <sch:value-of select="$artikel"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+            <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
+                TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
+                (en indien nodig, een letter). (betreft artikelen, leden): <sch:value-of
+                    select="$artikel"/>: <sch:value-of
+                        select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:bevatGeletterdeNummersTPOD_0781">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="bevatLetters">
+            <xsl:for-each select="$context/tekst:Lid">
+                <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[az]{1,2}\.')">
+                    <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$bevatLetters"/>
+    </xsl:function>
     
     <xsl:function name="foo:volgordeTPOD_0781">
         <xsl:param name="context" as="node()"/>
@@ -944,51 +989,6 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
-    <!-- ============TPOD_0781================================================================================================================ -->
-    
-    <sch:pattern id="TPOD_0781">
-        <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
-            <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0781(.)"/>
-            
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
-                (en indien nodig, een letter). (betreft artikelen, leden): <sch:value-of
-                    select="$artikel"/>: <sch:value-of
-                        select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    
-    <xsl:function name="foo:volgordeTPOD_0781">
-        <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Lid">
-                <xsl:variable name="pos" select="position()"/>
-                <xsl:choose>
-                    <xsl:when test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[az]{1}\.'))">
-                        <xsl:if test="matches(tekst:LidNummer, '\d{1,2}\.')">
-                            <xsl:if test="not(string(tekst:LidNummer)=concat(string($pos), '.'))">
-                                <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
-                            </xsl:if>
-                        </xsl:if>
-                        <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[az]{1}\.')">
-                            <xsl:if test="not(string(tokenize(tekst:LidNummer,'[az]{1}')[1])=string($pos)) and not(ends-with(tekst:LidNummer, '.'))">
-                                <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
-                            </xsl:if>
-                        </xsl:if>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
-    </xsl:function>
-
     <!-- ============TPOD_0880================================================================================================================ -->
     
     <sch:pattern id="TPOD_0880">

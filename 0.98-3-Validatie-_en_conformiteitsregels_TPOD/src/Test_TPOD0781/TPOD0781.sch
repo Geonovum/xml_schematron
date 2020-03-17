@@ -47,16 +47,34 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
+            <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0781(.)"/>
+            <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
+                TPOD_0781: De nummering van Leden bevat letters en kan niet middels schematron op geldigheid worden gecheckt.
+                Dit moet handmatig gebeuren. (betreft artikelen, leden e.a.):<sch:value-of
+                    select="$artikel"/>: <sch:value-of
+                        select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"/></sch:assert>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0781(.)"/>
-
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+            <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
                 TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
                 (en indien nodig, een letter). (betreft artikelen, leden): <sch:value-of
                     select="$artikel"/>: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:bevatGeletterdeNummersTPOD_0781">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="bevatLetters">
+            <xsl:for-each select="$context/tekst:Lid">
+                    <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[az]{1,2}\.')">
+                            <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
+                    </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$bevatLetters"/>
+    </xsl:function>
 
     <xsl:function name="foo:volgordeTPOD_0781">
         <xsl:param name="context" as="node()"/>
