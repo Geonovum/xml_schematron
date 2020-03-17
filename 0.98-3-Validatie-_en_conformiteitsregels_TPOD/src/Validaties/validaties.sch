@@ -996,7 +996,7 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
-                value="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepaling')"/>
+                value="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD_0880: Een
                 OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene
@@ -1811,8 +1811,7 @@
             <sch:let name="gebied" value="foo:calculateConditionTPOD_1980($href)" />
             <sch:let name="CONDITION" value="$gebied=1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1980: Betreft <sch:value-of select="string($CONDITION)"/>
-                <sch:value-of select="../../name()"/>: <sch:value-of
+                TPOD_1980: Betreft <sch:value-of select="../../name()"/>: <sch:value-of
                     select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
                 verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.
             </sch:assert>
