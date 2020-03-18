@@ -10,6 +10,66 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/Tijdelijk_verbod_nieuwvestiging_glastuinbouw.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/provincie_Gelderland.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/Nieuwe_Hollandse_Waterline.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/Grote_Rivieren.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists%20Met%20gebruik%20van%20GML-snaps%20van%20Kasper/Opdracht/Grote_Rivieren.gml</String>
                                 </field>
                                 <field name="scenarioIds">
