@@ -5,7 +5,14 @@
 
     <xsl:output method="xml"/>
 
-    <xsl:variable name="baseName" select="'Grote_Rivieren'"/>
+    <!-- ============================================================================================================= -->
+    <!-- ============================================================================================================= -->
+
+    <xsl:variable name="baseName" select="'Tijdelijk_verbod_nieuwvestiging_glastuinbouw'"/>
+
+    <!-- ============================================================================================================= -->
+    <!-- ============================================================================================================= -->
+
     <xsl:variable name="IN" select="document(concat('Opdracht/', $baseName, '_snap.gml'))"/>
     <xsl:variable name="ORG" select="document(concat('Opdracht/', $baseName, '.gml'))"/>
     <xsl:variable name="OUT" select="concat($baseName, '_out.gml')"/>
