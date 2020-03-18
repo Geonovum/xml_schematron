@@ -6,6 +6,7 @@ Deze directory MOET: **Opdracht** heten met hoofdletter **O**
 Gebruik volgend commando in deze volgorde:
 
 Op Linux: ./validate.sh
+$ ./validate.sh > log.txt 2>&1
 
 Op Windows: validate.bat
 

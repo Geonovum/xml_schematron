@@ -1894,8 +1894,8 @@
             <sch:let name="nietGerefereerdeGeometrie"
                 value="foo:nietGerefereerdeGeometrieTPOD_1990($geoLocationGeoReferenceIdentifiers, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrie) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1990: Ieder
-                OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
                 <sch:value-of select="$nietGerefereerdeGeometrie" />
             </sch:assert>
         </sch:rule>

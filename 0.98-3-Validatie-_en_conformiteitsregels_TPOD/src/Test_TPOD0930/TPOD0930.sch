@@ -46,7 +46,7 @@
                 new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de
                 waarde maximaal 3 decimalen achter de komma mag bevatten. Id=<sch:value-of
                     select="geo:id"/>. De coordinaten waarom het gaat staan nu genoemd:
-                <sch:value-of select="substring($fouteCoord,1,string-length($fouteCoord)-2)"/></sch:assert>
+                <sch:value-of select="concat(substring(substring($fouteCoord,1,string-length($fouteCoord)-2),0, 30),'.....')"/></sch:assert>
         </sch:rule>
         <sch:rule
             context="//geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '4258']">
@@ -57,7 +57,7 @@
                 gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van
                 meters worden opgegeven waarbij de waarde maximaal 8 decimalen achter de komma mag
                 bevatten. Id=<sch:value-of select="geo:id"/>. De coordinaten waarom het gaat staan
-                nu genoemd: <sch:value-of select="substring($fouteCoord,1,string-length($fouteCoord)-2)"/></sch:assert>
+                nu genoemd: <sch:value-of select="concat(substring(substring($fouteCoord,1,string-length($fouteCoord)-2),0, 30),'.....')"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
