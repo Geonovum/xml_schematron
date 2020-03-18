@@ -8,7 +8,7 @@
     <xsl:variable name="baseName" select="'Nieuwe_Hollandse_Waterline'"/>
     <xsl:variable name="IN" select="document(concat('Opdracht/', $baseName, '_snap.gml'))"/>
     <xsl:variable name="ORG" select="document(concat('Opdracht/', $baseName, '.gml'))"/>
-    <xsl:variable name="OUT" select="concat('Opdracht/', $baseName, '_out.gml')"/>
+    <xsl:variable name="OUT" select="concat($baseName, '_out.gml')"/>
 
     <xsl:variable name="snap_poslists" as="element()*">
         <xsl:for-each select="$IN//gml:posList">
@@ -41,17 +41,6 @@
                 <xsl:apply-templates/>
             </xsl:copy>
         </xsl:result-document>
-
-        <xsl:variable name="out_poslists" as="element()*">
-            <xsl:for-each select="document($OUT)//gml:posList">
-                <xsl:element name="posList">
-                    <xsl:value-of select="."/>
-                </xsl:element>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:variable name="outCount" select="count($out_poslists)"/>
-        <xsl:value-of select="' OUT: '"/>
-        <xsl:value-of select="$outCount"/>
     </xsl:template>
 
     <xsl:template match="node() | @*">
