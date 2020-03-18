@@ -1035,6 +1035,62 @@
         <xsl:value-of select="$hoofdstuk1"/>
     </xsl:function>
     
+    <!-- ============TPOD_0930================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0930">
+        <sch:rule
+            context="//geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '28992']">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="fouteCoord" value="foo:fouteCoordTPOD_0930(3,.)"/>
+            <sch:let name="CONDITION" value="string-length($fouteCoord) = 0"/>
+            <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT"> 
+                ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:28992 (=RD
+                new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de
+                waarde maximaal 3 decimalen achter de komma mag bevatten. Id=<sch:value-of
+                    select="geo:id"/>. De coordinaten waarom het gaat staan nu genoemd:
+                <sch:value-of select="substring($fouteCoord,1,string-length($fouteCoord)-2)"/></sch:assert>
+        </sch:rule>
+        <sch:rule
+            context="//geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '4258']">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="fouteCoord" value="foo:fouteCoordTPOD_0930(8,.)"/>
+            <sch:let name="CONDITION" value="string-length($fouteCoord) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> ZH:TP0D930: Indien
+                gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van
+                meters worden opgegeven waarbij de waarde maximaal 8 decimalen achter de komma mag
+                bevatten. Id=<sch:value-of select="geo:id"/>. De coordinaten waarom het gaat staan
+                nu genoemd: <sch:value-of select="substring($fouteCoord,1,string-length($fouteCoord)-2)"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:fouteCoordTPOD_0930">
+        <xsl:param name="aantal"/>
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="fouteCoord">
+            <xsl:for-each select="foo:posListForCoordinateCheckTPOD_0930($context)">
+                <xsl:if test="string-length(substring-after(string(.), '.')) &gt; $aantal">
+                    <xsl:value-of select="concat(text(), ', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$fouteCoord"/>
+    </xsl:function>
+    
+    <xsl:function name="foo:posListForCoordinateCheckTPOD_0930">
+        <xsl:param name="context" as="node()"/>
+        <xsl:for-each select="$context">
+            <xsl:for-each select="descendant::gml:posList">
+                <xsl:variable name="coordinaten" select="tokenize(normalize-space(text()), ' ')" as="xs:string*"/>
+                <xsl:for-each select="$coordinaten">
+                    <xsl:element name="pos">
+                        <xsl:value-of select="."/>
+                    </xsl:element>
+                </xsl:for-each>
+            </xsl:for-each>
+        </xsl:for-each>
+    </xsl:function>
+    
     <!-- ============TPOD_0940================================================================================================================ -->    
     
     <sch:pattern id="TPOD_0940">
