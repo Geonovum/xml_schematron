@@ -1043,8 +1043,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="fouteCoord" value="foo:fouteCoordTPOD_0930(3,.)"/>
             <sch:let name="CONDITION" value="string-length($fouteCoord) = 0"/>
-            <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> 
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:28992 (=RD
                 new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de
                 waarde maximaal 3 decimalen achter de komma mag bevatten. Id=<sch:value-of
@@ -2000,7 +1999,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2000: Betreft
+                TPOD2000: Betreft
                 <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: het wId van de
                 Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP
             </sch:assert>
@@ -2025,7 +2024,7 @@
             <sch:let name="CONDITION"
                 value="string-length(foo:checkFBRWorkTPOD_2010(@wIdRegeling)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2010: Betreft
+                TPOD2010: Betreft
                 <sch:value-of select="name()"/>: <sch:value-of select="@wIdRegeling"/>: het wIdRegeling van de
                 Regeltekst of FormeleDivisie in OW moet verwijzen naar een bestaande FRBRWork behorend bij Regeling in OP </sch:assert>
         </sch:rule>
@@ -2048,7 +2047,7 @@
             <sch:let name="CONDITION"
                 value="string-length(foo:checkFBRWorkTPOD_2020(text())) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2020: Betreft
+                TPOD2020: Betreft
                 <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het FRBRWork van het manifest in OW moet verwijzen naar een bestaand FRBRWork van een Regelingversie in OP </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2070,7 +2069,7 @@
             <sch:let name="CONDITION"
                 value="string-length(foo:checkFRBRExpressionTPOD_2030(text())) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2020: Betreft
+                TPOD2030: Betreft
                 <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het FRBRExpression van het manifest in OW moet verwijzen naar een bestaand FRBRExpression van een Regelingversie in OP </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2091,7 +2090,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2040: Betreft
+                TPOD2040: Betreft
                 <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: het wId van de
                 FormeleDivisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP
             </sch:assert>
@@ -2115,7 +2114,7 @@
             <sch:let name="message" value="foo:existsTPOD_2050()"/>
             <sch:let name="CONDITION" value="string-length($message)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2050: <sch:value-of select="$message"/>
+                TPOD2050: <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
