@@ -10,6 +10,846 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/rivierbed.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/waterkwaliteit.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/rivierbed_snap2.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_radarverstoringsgebied_windturbines_Wier.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/zeewaarts_gebied.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/werelderfgoed_Stelling_van_Amsterdam.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/werelderfgoed_Romeinse_Limes.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/werelderfgoed_Nieuwe_Hollandse_Waterlinie.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/werelderfgoed_Beemster.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/waterstaatkundig_beheer.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/waterkwantiteit.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/vrijwaringsgebieden_rijksvaarwegen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/rivierbed_stroomvoerend_deel.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/rivierbed_bergend_deel.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/rijkswater_niet_beheerRijk.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/reserveringsgebieden_uitbreiding_hoofdwegen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/reserveringsgebieden_nieuwe_hoofdspoorwegen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/reserveringsgebieden_nieuwe_autowegen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/reserveringsgebied_parallelle_Kaagbaan.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/reservering_rijntakken.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/reservering_maas.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/PMR_natuur_recreatie_Schiezone.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/PMR_natuur_recreatie_Schiebroek_Zuidpolder.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/PMR_natuur_recreatie_IJsselmonde.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/PMR_landaanwinningsgebied_Maasvlakte2.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/PMR_compensatie_verlies_zeenatuur.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/PMR_compensatie_opendroog_duin.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/militaire_explosieaandachtsgebieden_zoneC.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/militaire_explosieaandachtsgebieden_zoneB.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/militaire_explosieaandachtsgebieden_zoneA.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/Locatie-NL.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/kustfundament.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/ijsselmeergebied.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/electriciteit_waarborgzones_kernenergie.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/electriciteit_vestigingsplaats_kernenergie.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/electriciteit_locaties_grootschalige_opwekking.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/electriciteit_hoogspanningsverbindingen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_verstoring_zend_ontvangstinstallaties.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_terreinen_schietbanen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_terreinen_objecten.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_radarverstoringsgebied_windturbines_Woensdrecht.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_radarverstoringsgebied_windturbines_Volkel.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_radarverstoringsgebied_windturbines_Twente.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_radarverstoringsgebied_windturbines_Soesterberg.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_radarverstoringsgebied_windturbines_Milligen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_radarverstoringsgebied_windturbines_Leeuwarden.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_radarverstoringsgebied_windturbines_Herwijnen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_radarverstoringsgebied_bouwwerken.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/defensie_laagvliegroutes_transportvliegtuigen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/civiele_explosieaandachtsgebieden_zoneC.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/civiele_explosieaandachtsgebieden_zoneB.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/civiele_explosieaandachtsgebieden_zoneA.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/buisleidingen_zoekgebieden.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/buisleidingen_reserveringsgebieden.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/Waterverbinder.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/Opdracht/defensie_radarverstoringsgebied_windturbines_Milligen.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>instance</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/Tijdelijk_verbod_nieuwvestiging_glastuinbouw.gml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -40,7 +880,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/Nieuwe_Hollandse_Waterline.gml</String>
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/Grote_Rivieren.gml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -55,7 +895,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/Grote_Rivieren.gml</String>
+                                    <String>src/Validaties_Reparatieset%20Voorbeeldbestanden/VervangPosLists_GML-snaps_Kasper/Opdracht/Nieuwe_Hollandse_Waterline.gml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -344,7 +1184,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${pdu}/src/Test_TPOD1860/TPOD1860-compiled.xsl</String>
+                                    <String>${pdu}/src/Test_TPOD1990/TPOD1990-compiled.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
