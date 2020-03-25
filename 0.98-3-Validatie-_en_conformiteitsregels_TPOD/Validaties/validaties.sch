@@ -1043,8 +1043,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="fouteCoord" value="foo:fouteCoordTPOD_0930(3,.)"/>
             <sch:let name="CONDITION" value="string-length($fouteCoord) = 0"/>
-            <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> 
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:28992 (=RD
                 new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de
                 waarde maximaal 3 decimalen achter de komma mag bevatten. Id=<sch:value-of
@@ -1877,7 +1876,11 @@
         <xsl:param name="href"/>
         <xsl:for-each select="$gmlDocuments">
             <xsl:value-of select="0"/>
-            <xsl:if test="//geo:Geometrie[geo:id/text() eq $href]/geo:geometrie/gml:MultiSurface">
+            <xsl:if test="//geo:Geometrie[geo:id/text() eq $href]/geo:geometrie/gml:MultiSurface
+                or
+                //geo:Geometrie[geo:id/text() eq $href]/geo:geometrie/gml:Polygon
+                or 
+                //geo:Geometrie[geo:id/text() eq $href]/geo:geometrie/gml:Surface/gml:patches/gml:PolygonPatch">
                 <xsl:value-of select="1"/>
             </xsl:if>
         </xsl:for-each>
