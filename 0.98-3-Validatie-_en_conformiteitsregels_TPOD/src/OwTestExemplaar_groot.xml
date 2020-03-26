@@ -1025,10 +1025,10 @@
 					<k:kaartnummer></k:kaartnummer>
 					<k:kaartuitsnede>
 						<k:Kaartextent>
-							<k:minX></k:minX>
-							<k:minY></k:minY>
-							<k:maxX></k:maxX>
-							<k:maxY></k:maxY>
+							<k:minX>1</k:minX>
+							<k:minY>1</k:minY>
+							<k:maxX>1</k:maxX>
+							<k:maxY>1</k:maxY>
 						</k:Kaartextent>
 					</k:kaartuitsnede>
 				</k:Kaart>
@@ -1043,10 +1043,10 @@
 					<k:kaartnummer></k:kaartnummer>
 					<k:kaartuitsnede>
 						<k:Kaartextent>
-							<k:minX></k:minX>
-							<k:minY></k:minY>
-							<k:maxX></k:maxX>
-							<k:maxY></k:maxY>
+							<k:minX>1</k:minX>
+							<k:minY>1</k:minY>
+							<k:maxX>1</k:maxX>
+							<k:maxY>1</k:maxY>
 						</k:Kaartextent>
 					</k:kaartuitsnede>
 				</k:Kaart>
@@ -1061,10 +1061,10 @@
 					<k:kaartnummer></k:kaartnummer>
 					<k:kaartuitsnede>
 						<k:Kaartextent>
-							<k:minX></k:minX>
-							<k:minY></k:minY>
-							<k:maxX></k:maxX>
-							<k:maxY></k:maxY>
+							<k:minX>1</k:minX>
+							<k:minY>1</k:minY>
+							<k:maxX>1</k:maxX>
+							<k:maxY>1</k:maxY>
 						</k:Kaartextent>
 					</k:kaartuitsnede>
 				</k:Kaart>
