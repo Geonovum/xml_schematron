@@ -63,7 +63,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
@@ -74,7 +74,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
@@ -85,7 +85,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
@@ -96,7 +96,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
@@ -107,7 +107,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../rol:identificatie"/>, <sch:value-of
@@ -118,13 +118,13 @@
             context="//l-ref:LocatieRef | l-ref:GebiedRef | l-ref:GebiedengroepRef | l-ref:PuntRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef | l-ref:LijnRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers" value="foo:getLocationIdentifiersTPOD_1860()"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../*:identificatie"/>, <sch:value-of
                     select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
                 bestaand (ander) OwObject zijn. (verwijzing vanuit l:ref niet aangetroffen) </sch:assert>
-            <sch:report test="true()"><sch:value-of select="$identifiers"/></sch:report>
+            
         </sch:rule>
     </sch:pattern>
     
@@ -132,7 +132,7 @@
         <xsl:variable name="identifiers">
             <xsl:for-each
                 select="$xmlDocuments//(l:Gebied | l:Gebiedengroep | l:Punt | l:Puntengroep | l:Lijn | l:Lijnengroep)/l:identificatie">
-                <xsl:value-of select="text()"/>
+                <xsl:value-of select="concat('.',text(),'.')"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$identifiers"/>
@@ -142,7 +142,7 @@
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">
-                <xsl:value-of select="text()"/>
+                <xsl:value-of select="concat('.',text(),'.')"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$identifiers"/>

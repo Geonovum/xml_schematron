@@ -39,7 +39,8 @@
     <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>
     <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>
     <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
-    <sch:let name="OVI_PB" value="''"/>
+    <sch:let name="OVI" value="''"/>
+    <sch:let name="PB" value="''"/>
     
     <!-- ============TPOD_0400================================================================================================================ -->
     
@@ -1498,7 +1499,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
@@ -1509,7 +1510,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
@@ -1520,7 +1521,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
@@ -1531,7 +1532,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
@@ -1542,7 +1543,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../rol:identificatie"/>, <sch:value-of
@@ -1553,21 +1554,21 @@
             context="//l-ref:LocatieRef | l-ref:GebiedRef | l-ref:GebiedengroepRef | l-ref:PuntRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef | l-ref:LijnRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers" value="foo:getLocationIdentifiersTPOD_1860()"/>
-            <sch:let name="CONDITION" value="contains($identifiers, @xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../*:identificatie"/>, <sch:value-of
                     select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
                 bestaand (ander) OwObject zijn. (verwijzing vanuit l:ref niet aangetroffen) </sch:assert>
-            <sch:report test="true()"><sch:value-of select="$identifiers"/></sch:report>
+            
         </sch:rule>
     </sch:pattern>
-
+    
     <xsl:function name="foo:getLocationIdentifiersTPOD_1860">
         <xsl:variable name="identifiers">
             <xsl:for-each
                 select="$xmlDocuments//(l:Gebied | l:Gebiedengroep | l:Punt | l:Puntengroep | l:Lijn | l:Lijnengroep)/l:identificatie">
-                <xsl:value-of select="text()"/>
+                <xsl:value-of select="concat('.',text(),'.')"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$identifiers"/>
@@ -1577,7 +1578,7 @@
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xpath">
-                <xsl:value-of select="text()"/>
+                <xsl:value-of select="concat('.',text(),'.')"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$identifiers"/>
@@ -2022,7 +2023,7 @@
     
     <sch:pattern id="TPOD_2010">
         <sch:rule context="//r:Regeltekst | vt:FormeleDivisie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="not($SOORT_REGELING = '')"/>
             <sch:let name="CONDITION"
                 value="string-length(foo:checkFBRWorkTPOD_2010(@wIdRegeling)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -2034,7 +2035,7 @@
     
     <xsl:function name="foo:checkFBRWorkTPOD_2010">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//tekst:*/@FRBRwork">
+        <xsl:for-each select="$xmlDocuments//data:ExpressionIdentificatie/data:FRBRWork/text()">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>
@@ -2056,7 +2057,7 @@
     
     <xsl:function name="foo:checkFBRWorkTPOD_2020">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//stop:RegelingVersieInformatie/data:ExpressionIdentificatie/data:FRBRWork/text()">
+        <xsl:for-each select="$xmlDocuments//data:ExpressionIdentificatie/data:FRBRWork/text()">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>
@@ -2078,7 +2079,7 @@
     
     <xsl:function name="foo:checkFRBRExpressionTPOD_2030">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//stop:RegelingVersieInformatie/data:ExpressionIdentificatie/data:FRBRExpression/text()">
+        <xsl:for-each select="$xmlDocuments//data:ExpressionIdentificatie/data:FRBRExpression/text()">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>
