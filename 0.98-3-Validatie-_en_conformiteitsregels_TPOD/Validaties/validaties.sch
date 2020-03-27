@@ -1068,29 +1068,18 @@
         <xsl:param name="aantal"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="fouteCoord">
-            <xsl:for-each select="foo:posListForCoordinateCheckTPOD_0930($context)">
-                <xsl:if test="string-length(substring-after(string(.), '.')) &gt; $aantal">
-                    <xsl:value-of select="concat(text(), ', ')"/>
-                </xsl:if>
+            <xsl:for-each select="$context/descendant::gml:posList">
+                <xsl:variable name="coordinaten" select="tokenize(normalize-space(text()), ' ')"/>
+                <xsl:for-each select="$coordinaten">
+                    <xsl:if test="string-length(substring-after(., '.')) &gt; $aantal">
+                        <xsl:value-of select="concat(., ', ')"/>
+                    </xsl:if>
+                </xsl:for-each>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$fouteCoord"/>
     </xsl:function>
-    
-    <xsl:function name="foo:posListForCoordinateCheckTPOD_0930">
-        <xsl:param name="context" as="node()"/>
-        <xsl:for-each select="$context">
-            <xsl:for-each select="descendant::gml:posList">
-                <xsl:variable name="coordinaten" select="tokenize(normalize-space(text()), ' ')" as="xs:string*"/>
-                <xsl:for-each select="$coordinaten">
-                    <xsl:element name="pos">
-                        <xsl:value-of select="."/>
-                    </xsl:element>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:for-each>
-    </xsl:function>
-    
+        
     <!-- ============TPOD_0940================================================================================================================ -->    
     
     <sch:pattern id="TPOD_0940">
