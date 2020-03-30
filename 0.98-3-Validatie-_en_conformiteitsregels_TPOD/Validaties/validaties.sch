@@ -8,6 +8,7 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/owobject/v20190709" prefix="ow"/>
     <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
         prefix="sl"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/owobject/v20190709" prefix="rkow"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/regels/v20190901" prefix="r"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/regels-ref/v20190901" prefix="r-ref"/>
     <sch:ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
@@ -1079,7 +1080,7 @@
         </xsl:variable>
         <xsl:value-of select="$fouteCoord"/>
     </xsl:function>
-        
+
     <!-- ============TPOD_0940================================================================================================================ -->    
     
     <sch:pattern id="TPOD_0940">
@@ -1493,6 +1494,16 @@
                 H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
+                moet een bestaand (ander) OwObject zijn. (r:Regeltekst/r:identificatie niet aangetroffen) </sch:assert>
+        </sch:rule>
+        <sch:rule context="//@rkow:regeltekstId">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="identifiers"
+                value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',.,'.'))"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                H:TPOD1860: Betreft <sch:value-of select="name()"/>:
+                <sch:value-of select="."/>: Iedere verwijzing naar een ander OwObject
                 moet een bestaand (ander) OwObject zijn. (r:Regeltekst/r:identificatie niet aangetroffen) </sch:assert>
         </sch:rule>
         <sch:rule context="//r:RegelVoorIedereen/r:activiteitaanduiding/rol-ref:ActiviteitRef">
