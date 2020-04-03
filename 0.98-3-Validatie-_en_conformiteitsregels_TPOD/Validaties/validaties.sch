@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*******************************************************************************
+ * File: 		validaties.sch
+ * Versie:		v0.98.3.3-kern
+ * Opgeleverd:	PI13 Sprint 5 03-04-2020
+ * Auteur: 		Geonovum 2020
+ *
+ * Info:
+ * Schematron Validation Document for TPOD v0.98.3
+ *
+ * History:
+ * 11-03-2020   Bert Verhees	Initial version
+ * 25-03-2020   Bert Verhees	Doorontwikkeling.
+ * 03-04-2020   Bert Verhees	Doorontwikkeling.
+ * 
+ *
+ ******************************************************************************/
+
+Opmerkingen / hints: Document is in ontwikkeling.
+
+-->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
