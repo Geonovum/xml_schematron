@@ -1,0 +1,15 @@
+
+=====================================
+Dit script draait op de TestTPOD tests
+Dit script moet vanuit de directory voor Opdracht worden opgestart
+=====================================
+
+     [echo] Compiling
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+     [echo] Validating 
+     [echo] C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Validaties\Opdracht\OwLocatie-gebied-Omgevingsregeling.xml
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
