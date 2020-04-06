@@ -47,7 +47,7 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. Betreft label: 
+                TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. Betreft subsubparagraaf, label: 
                 <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>

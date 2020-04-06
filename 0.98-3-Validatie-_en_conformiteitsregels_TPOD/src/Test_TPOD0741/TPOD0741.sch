@@ -74,7 +74,7 @@
             <xsl:variable name="nummers" select="tokenize($artikelNummer,'\.')"/>
             <xsl:if test="count($nummers) = 2">
                 <xsl:variable name="nummer" select="$nummers[2]"/>
-                <xsl:if test="matches($nummer, '\d{1,2}[az]{1,2}')">
+                <xsl:if test="matches($nummer, '\d{1,2}[a-z]{1,2}')">
                     <xsl:value-of select="concat($hoofdstuk,'.',$nummer, ', ')"/>
                 </xsl:if>
             </xsl:if>

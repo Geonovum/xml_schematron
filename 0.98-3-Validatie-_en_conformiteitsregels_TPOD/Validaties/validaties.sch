@@ -409,7 +409,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0590: Paragrafen moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken):  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0590: Paragrafen moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken, afdelingen): <sch:value-of select="../tekst:Kop/tekst:Nummer"/> : <sch:value-of select="tekst:Kop/tekst:Nummer"/> :  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -437,8 +437,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0600: Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen. (betreft afdeling, paragrafen):  
-                <sch:value-of select="$afdeling"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+                TPOD_0600: Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen.  (betreft hoofdstukken, afdelingen): <sch:value-of select="../tekst:Kop/tekst:Nummer"/> : <sch:value-of select="tekst:Kop/tekst:Nummer"/> : <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -555,12 +554,12 @@ Opmerkingen / hints: Document is in ontwikkeling.
     <!-- ============TPOD_0670================================================================================================================ -->
     
     <sch:pattern id="TPOD_0670">
-        <sch:rule context="//tekst:Subparagraaf/tekst:Subsubparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'ubsubparagraaf']">
+        <sch:rule context="//tekst:Subparagraaf/tekst:Subsubparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'subsubparagraaf']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. Betreft label: 
+                TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. Betreft subsubparagraaf, label: 
                 <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -840,7 +839,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="CONDITION" value="not(ends-with($artikel, '.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0750: Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen. (betreft artikelen):  
+                TPOD_0750: Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen. (betreft artikelen):  
                 <sch:value-of select="$artikel"/></sch:assert>
         </sch:rule>
     </sch:pattern>
