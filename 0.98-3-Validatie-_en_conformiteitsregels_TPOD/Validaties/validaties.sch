@@ -1048,6 +1048,57 @@ Opmerkingen / hints: Document is in ontwikkeling.
         <xsl:value-of select="$fout"/>
     </xsl:function>
     
+    <!-- ============TPOD_0830================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0830">
+        <sch:rule context="//tekst:Lijst">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="ancestorsFout" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
+            <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0830:
+                <sch:value-of select="$ancestorsFout"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkEersteNiveauLijstLettersTPOD_0830">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="fout">
+            <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
+            <xsl:if test="$ancestors = 1">
+                <xsl:variable name="found">
+                    <xsl:for-each select="$context/tekst:Li">
+                        <xsl:if test="not(matches(tekst:LiNummer, '[a-z]{1}\.'))">
+                            <xsl:value-of select="concat(tekst:LiNummer, ', ')"/>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:variable>
+                <xsl:if test="string-length($found)>0">
+                    <xsl:variable name="lid" select="$context/ancestor::tekst:Lid"/>
+                    <xsl:variable name="bijlage" select="$context/ancestor::tekst:Bijlage"/>
+                    <xsl:choose>
+                        <xsl:when test="$lid">
+                            <xsl:value-of
+                                select="concat('In lijst (op het eerste niveau) in artikel ', $lid/ancestor::tekst:Artikel/tekst:Kop/tekst:Nummer, ', lid ', $lid/tekst:LidNummer/text(), ' moeten onderdelen op het eerste niveau worden aangegeven met letters. (', substring($found,1,string-length($found)-2), ')')"
+                            />
+                        </xsl:when>
+                        <xsl:when test="$bijlage">
+                            <xsl:value-of
+                                select="concat('In lijst (op het eerste niveau) in bijlage ', $context/ancestor::tekst:Bijlage/tekst:Kop/tekst:Nummer, ' moeten onderdelen op het eerste niveau worden aangegeven met letters. (', substring($found,1,string-length($found)-2), ')')"
+                            />
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of
+                                select="concat('In lijst (op het eerste niveau) in artikel ', $context/ancestor::tekst:Artikel/tekst:Kop/tekst:Nummer, ' moeten onderdelen op het eerste niveau worden aangegeven met letters. (', substring($found,1,string-length($found)-2), ')')"
+                            />
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:if>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$fout"/>
+    </xsl:function>
+    
     <!-- ============TPOD_0880================================================================================================================ -->
     
     <sch:pattern id="TPOD_0880">
