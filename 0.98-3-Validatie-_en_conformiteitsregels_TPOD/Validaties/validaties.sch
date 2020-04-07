@@ -1048,15 +1048,15 @@ Opmerkingen / hints: Document is in ontwikkeling.
         <xsl:value-of select="$fout"/>
     </xsl:function>
     
-    <!-- ============TPOD_0830================================================================================================================ -->
+    <!-- ============TPOD_0830_0831================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0830">
+    <sch:pattern id="TPOD_0830_0831">
         <sch:rule context="//tekst:Lijst">
             <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="ancestorsFout" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0830:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0830/0831:
                 <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
