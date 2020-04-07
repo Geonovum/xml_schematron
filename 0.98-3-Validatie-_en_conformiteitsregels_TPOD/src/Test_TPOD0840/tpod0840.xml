@@ -73,7 +73,7 @@
                                                 <LiNummer>b.</LiNummer>
                                                 <Lijst type="" wId="" eId=""> <!-- 2 -->
                                                     <Li wId="" eId="">
-                                                        <LiNummer>1</LiNummer>
+                                                        <LiNummer>b</LiNummer>
                                                         <Al>Lijst 2</Al>
                                                     </Li>
                                                     <Li wId="" eId="">
@@ -115,7 +115,7 @@
                                                         <LiNummer>3</LiNummer>
                                                         <Lijst type="" wId="" eId=""> <!-- 3 -->
                                                             <Li wId="" eId="">
-                                                                <LiNummer>1</LiNummer>
+                                                                <LiNummer>c</LiNummer>
                                                                 <Al>bla bla bla</Al>
                                                             </Li>
                                                         </Lijst>
@@ -140,7 +140,7 @@
                                                 <LiNummer>2</LiNummer>
                                                 <Lijst type="" wId="" eId=""> <!-- 2 -->
                                                     <Li wId="" eId="">
-                                                        <LiNummer>1</LiNummer>
+                                                        <LiNummer>b</LiNummer>
                                                         <Al>Lijst 2</Al>
                                                     </Li>
                                                     <Li wId="" eId="">
@@ -151,14 +151,14 @@
                                                         <LiNummer>3</LiNummer>
                                                         <Lijst type="" wId="" eId=""> <!-- 3 -->
                                                             <Li wId="" eId="">
-                                                                <LiNummer>1</LiNummer>
+                                                                <LiNummer>c</LiNummer>
                                                                 <Al>bla bla bla</Al>
                                                             </Li>
                                                             <Li wId="" eId="">
                                                                 <LiNummer>2</LiNummer>
                                                                 <Lijst type="" wId="" eId=""> <!-- 4 -->
                                                                     <Li wId="" eId="">
-                                                                        <LiNummer>1</LiNummer>
+                                                                        <LiNummer>d</LiNummer>
                                                                         <Al>bla bla bla bla</Al>
                                                                     </Li>
                                                                 </Lijst>
