@@ -62,15 +62,15 @@
                 <xsl:if test="position() = 1">
                     <xsl:choose>
                         <xsl:when
-                            test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[az]{1}\.'))">
+                            test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
                             <xsl:if test="matches(tekst:LidNummer, '\d{1,2}\.')">
                                 <xsl:if
                                     test="not(string(tekst:LidNummer) = '1.')">
                                     <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
                                 </xsl:if>
                             </xsl:if>
-                            <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[az]{1}\.')">
-                                <xsl:variable name="first" select="tokenize(tekst:LidNummer, '[az]{1}')[1]"/>
+                            <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
+                                <xsl:variable name="first" select="tokenize(tekst:LidNummer, '[a-z]{1}')[1]"/>
                                 <xsl:if
                                     test="not(string($first) = string(1))">
                                     <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>

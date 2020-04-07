@@ -39,50 +39,55 @@
     <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>
     <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
     <sch:let name="OVI_PB" value="''"/>
-
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0780">
-        <sch:rule context="//tekst:Artikel">
+    <sch:pattern id="TPOD_0820">
+        <sch:rule context="//tekst:Lijst">
             <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
-            <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0780(.)"/>
-
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0780: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
-                (en indien nodig, een letter). (betreft artikelen, leden): <sch:value-of
-                    select="$artikel"/>: <sch:value-of
-                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="ancestorsFout" value="foo:lijstAncestorsTPOD_0820(.)"> </sch:let>
+            <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0820:
+                    <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:volgordeTPOD_0780">
+    <xsl:function name="foo:lijstAncestorsTPOD_0820">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Lid">
-                <xsl:variable name="pos" select="position()"/>
-                <xsl:choose>
-                    <xsl:when test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
-                        <xsl:if test="matches(tekst:LidNummer, '\d{1,2}\.')">
-                            <xsl:if test="not(string(tekst:LidNummer)=concat(string($pos), '.'))">
-                                <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
-                            </xsl:if>
+        <xsl:variable name="fout">
+            <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
+            <xsl:if test="$ancestors = 1">
+                <xsl:variable name="found">
+                    <xsl:for-each select="$context/tekst:Li">
+                        <xsl:if test="not(matches(tekst:LiNummer, '[a-z]{1}\.'))">
+                            <xsl:value-of select="concat(tekst:LiNummer, ', ')"/>
                         </xsl:if>
-                        <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
-                            <xsl:if test="not(string(tokenize(tekst:LidNummer,'[a-z]{1}')[1])=string($pos)) and not(ends-with(tekst:LidNummer, '.'))">
-                                <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
-                            </xsl:if>
-                        </xsl:if>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:for-each>
+                    </xsl:for-each>
+                </xsl:variable>
+                <xsl:if test="string-length($found)>0">
+                    <xsl:variable name="lid" select="$context/ancestor::tekst:Lid"/>
+                    <xsl:variable name="bijlage" select="$context/ancestor::tekst:Bijlage"/>
+                    <xsl:choose>
+                        <xsl:when test="$lid">
+                            <xsl:value-of
+                                select="concat('In lijst (op het eerste niveau) in artikel ', $lid/ancestor::tekst:Artikel/tekst:Kop/tekst:Nummer, ', lid ', $lid/tekst:LidNummer/text(), ' moeten onderdelen op het eerste niveau worden aangegeven met letters. (', substring($found,1,string-length($found)-2), ')')"
+                            />
+                        </xsl:when>
+                        <xsl:when test="$bijlage">
+                            <xsl:value-of
+                                select="concat('In lijst (op het eerste niveau) in bijlage ', $context/ancestor::tekst:Bijlage/tekst:Kop/tekst:Nummer, ' moeten onderdelen op het eerste niveau worden aangegeven met letters. (', substring($found,1,string-length($found)-2), ')')"
+                            />
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of
+                                select="concat('In lijst (op het eerste niveau) in artikel ', $context/ancestor::tekst:Artikel/tekst:Kop/tekst:Nummer, ' moeten onderdelen op het eerste niveau worden aangegeven met letters. (', substring($found,1,string-length($found)-2), ')')"
+                            />
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:if>
+            </xsl:if>
         </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
+        <xsl:value-of select="$fout"/>
     </xsl:function>
 
 </sch:schema>

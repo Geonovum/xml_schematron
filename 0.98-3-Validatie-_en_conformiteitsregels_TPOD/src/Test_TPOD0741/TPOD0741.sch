@@ -97,10 +97,10 @@
                             <xsl:variable name="nummer" select="$nummers[2]"/>
                             <xsl:choose>
                                 <xsl:when
-                                    test="(matches($nummer, '\d{1,2}')) or (matches($nummer, '\d{1,2}[az]{1}'))">
+                                    test="(matches($nummer, '\d{1,2}')) or (matches($nummer, '\d{1,2}[a-z]{1}'))">
                                     <xsl:choose>
-                                        <xsl:when test="matches($nummer, '\d{1,2}[az]{1}')">
-                                            <xsl:if test="not(string(tokenize($nummer, '[az]{1}')[1]) = string($pos))">
+                                        <xsl:when test="matches($nummer, '\d{1,2}[a-z]{1}')">
+                                            <xsl:if test="not(string(tokenize($nummer, '[a-z]{1}')[1]) = string($pos))">
                                                 <xsl:value-of select="concat($hoofdstuk,'.',$nummer, ', ')"/>
                                             </xsl:if>
                                         </xsl:when>

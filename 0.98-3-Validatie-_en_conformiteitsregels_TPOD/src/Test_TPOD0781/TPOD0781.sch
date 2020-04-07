@@ -68,7 +68,7 @@
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="bevatLetters">
             <xsl:for-each select="$context/tekst:Lid">
-                    <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[az]{1,2}\.')">
+                    <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1,2}\.')">
                             <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
                     </xsl:if>
             </xsl:for-each>
@@ -82,14 +82,14 @@
             <xsl:for-each select="$context/tekst:Lid">
                 <xsl:variable name="pos" select="position()"/>
                 <xsl:choose>
-                    <xsl:when test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[az]{1}\.'))">
+                    <xsl:when test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
                         <xsl:if test="matches(tekst:LidNummer, '\d{1,2}\.')">
                             <xsl:if test="not(string(tekst:LidNummer)=concat(string($pos), '.'))">
                                 <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
                             </xsl:if>
                         </xsl:if>
-                        <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[az]{1}\.')">
-                            <xsl:if test="not(string(tokenize(tekst:LidNummer,'[az]{1}')[1])=string($pos)) and not(ends-with(tekst:LidNummer, '.'))">
+                        <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
+                            <xsl:if test="not(string(tokenize(tekst:LidNummer,'[a-z]{1}')[1])=string($pos)) and not(ends-with(tekst:LidNummer, '.'))">
                                 <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
                             </xsl:if>
                         </xsl:if>
