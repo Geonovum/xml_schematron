@@ -49,7 +49,7 @@
                 value="foo:nietGerefereerdeGeometrie($geoLocationGeoReferenceIdentifiers, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrie) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst:
                     <sch:value-of select="$nietGerefereerdeGeometrie" />
             </sch:assert>
         </sch:rule>
@@ -60,8 +60,8 @@
             <sch:let name="nietGerefereerdeReferenties"
                 value="foo:nietGerefereerdeReferenties($regeltekstReferenties, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1990: Ieder
-                OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst:
                     <sch:value-of
                     select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
                 />
@@ -75,9 +75,24 @@
             <sch:let name="nietGerefereerdeReferenties"
                 value="foo:nietGerefereerdeReferenties($formeleDivisieReferenties, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1990: Ieder
-                OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst:
                     <sch:value-of
+                    select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
+                />
+            </sch:assert>
+        </sch:rule>
+        
+        <sch:rule context="//rol:Activiteit/rol:identificatie">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="formeleDivisieReferenties"
+                value="foo:getReferences(//rol-ref:ActiviteitRef)"/>
+            <sch:let name="nietGerefereerdeReferenties"
+                value="foo:nietGerefereerdeReferenties($formeleDivisieReferenties, .)"/>
+            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst:
+                <sch:value-of
                     select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
                 />
             </sch:assert>
@@ -92,8 +107,8 @@
                 </xsl:if>
             </sch:let>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1990: Ieder
-                OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst:
                     <sch:value-of
                     select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
                 />

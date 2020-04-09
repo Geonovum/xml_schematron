@@ -42,9 +42,8 @@
             <sch:let name="crsses" value="foo:crssesTPOD_0940($crs, .)"/>
             <sch:let name="CONDITION" value="string-length($crsses) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TP0D940: Een geometrie moet zijn
-                opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD new) of
-                EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/geo:id"/>: </sch:assert>
+                H:TP0D940: Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): 
+                EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/geo:id"/> bevat een combinatie van beiden. </sch:assert>
         </sch:rule>
     </sch:pattern>
     

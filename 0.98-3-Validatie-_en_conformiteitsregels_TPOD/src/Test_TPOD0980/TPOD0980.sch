@@ -31,44 +31,41 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD880">
+    <sch:pattern id="TPOD_0980">
         <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
-                value="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD880: Een
-                OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen. </sch:assert>
-        </sch:rule>
-        <sch:rule context="//tekst:Lichaam">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="hoofdstuk1" value="foo:hoofdstuk1TPOD880(.)" />
-            
-            <sch:let name="CONDITION" value="$hoofdstuk1=1 or $hoofdstuk1=-1"/>
+                value="string-length(foo:opschriftTPOD0980(..))>0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen. </sch:assert>
+                TPOD_0980: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met artikel met opschrift Begripsbepaling of een specifieke Bijlage met Begripsbepaling. </sch:assert>
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:hoofdstuk1TPOD880">
+    <xsl:function name="foo:opschriftTPOD0980">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="hoofdstuk1">
+        <xsl:variable name="artikelOpschrift">
+            <xsl:for-each select="$context/descendant::tekst:Artikel">
+                <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepaling'">
+                    <xsl:value-of select="tekst:Kop/tekst:Opschrift/text()"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="result">
             <xsl:choose>
-                <xsl:when test="$context/tekst:Hoofdstuk/tekst:Kop">
-                    <xsl:value-of select="0"/>
-                    <xsl:for-each select="$context/tekst:Hoofdstuk/tekst:Kop">
-                        <xsl:if test="string(tekst:Nummer) = '1'">
-                            <xsl:value-of select="tekst:Nummer"/>
-                        </xsl:if>
-                    </xsl:for-each>
+                <xsl:when test="string-length($artikelOpschrift)>0">
+                    <xsl:value-of select="$artikelOpschrift"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="-1"/>
+                    <xsl:for-each select="$context/../../descendant::tekst:Bijlage">
+                        <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepaling'">
+                            <xsl:value-of select="tekst:Kop/tekst:Opschrift/text()"/>
+                        </xsl:if>
+                    </xsl:for-each>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:value-of select="$hoofdstuk1"/>
+        <xsl:value-of select="$result"/>
     </xsl:function>
     
 </sch:schema>

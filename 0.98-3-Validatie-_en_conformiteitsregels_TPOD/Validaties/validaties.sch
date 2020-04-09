@@ -1333,6 +1333,46 @@ Opmerkingen / hints: Document is in ontwikkeling.
         <xsl:value-of select="$crsses"/>
     </xsl:function>
     
+    <!-- ============TPOD_0980================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0980">
+        <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION"
+                value="string-length(foo:opschriftTPOD0980(..))>0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0980: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met artikel met opschrift Begripsbepaling of een specifieke Bijlage met Begripsbepaling. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:opschriftTPOD0980">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="artikelOpschrift">
+            <xsl:for-each select="$context/descendant::tekst:Artikel">
+                <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepaling'">
+                    <xsl:value-of select="tekst:Kop/tekst:Opschrift/text()"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="result">
+            <xsl:choose>
+                <xsl:when test="string-length($artikelOpschrift)>0">
+                    <xsl:value-of select="$artikelOpschrift"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:for-each select="$context/../../descendant::tekst:Bijlage">
+                        <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepaling'">
+                            <xsl:value-of select="tekst:Kop/tekst:Opschrift/text()"/>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:value-of select="$result"/>
+    </xsl:function>
+    
+    
     <!-- ============TPOD_1650================================================================================================================ -->
     
     <sch:pattern id="TPOD_1650">
@@ -2137,6 +2177,21 @@ Opmerkingen / hints: Document is in ontwikkeling.
             </sch:assert>
         </sch:rule>
         
+        <sch:rule context="//rol:Activiteit/rol:identificatie">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="formeleDivisieReferenties"
+                value="foo:getReferencesTPOD_1990(//rol-ref:ActiviteitRef)"/>
+            <sch:let name="nietGerefereerdeReferenties"
+                value="foo:nietGerefereerdeReferentiesTPOD_1990($formeleDivisieReferenties, .)"/>
+            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst:
+                <sch:value-of
+                    select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
+                />
+            </sch:assert>
+        </sch:rule>
+
         <sch:rule context="//l:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="locatieReferenties"
