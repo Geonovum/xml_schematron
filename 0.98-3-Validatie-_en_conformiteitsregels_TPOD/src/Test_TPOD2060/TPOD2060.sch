@@ -42,29 +42,49 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_2050">
-        <sch:rule context="//stop:AanleveringBesluit">
+    <sch:pattern id="TPOD_2060">
+        <sch:rule context="//tekst:Artikel">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="message" value="foo:existsTPOD_2050()"/>
-            <sch:let name="CONDITION" value="string-length($message)=0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2050: <sch:value-of select="$message"/>
+            <sch:let name="message" value="foo:checkFouteArtikelLidCombinatieTPOD_2060(.)"/>
+            <sch:let name="CONDITION" value="string-length($message) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD2050:
+                    <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:existsTPOD_2050">
-        <xsl:choose>
-            <xsl:when test="(not((document('manifest-ow.xml')) or (document('Manifest-ow.xml')))) and (not((document('manifest.xml')) or (document('Manifest.xml'))))">
-                <xsl:value-of select="'(M|m)anifest-ow.xml en (M|m)anifest.xml zijn niet aangetroffen of niet valide.'"/>
-            </xsl:when>
-            <xsl:when test="not((document('manifest-ow.xml')) or (document('Manifest-ow.xml')))">
-                <xsl:value-of select="'(M|m)anifest-ow.xml is niet aangetroffen of niet valide.'"/>
-            </xsl:when>
-            <xsl:when test="not((document('manifest.xml')) or (document('Manifest.xml')))">
-                <xsl:value-of select="'(M|m)anifest.xml is niet aangetroffen of niet valide.'"/>
-            </xsl:when>
-        </xsl:choose>
+
+    <xsl:function name="foo:checkFouteArtikelLidCombinatieTPOD_2060">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="artikelWiD" select="string($context/@wId)"/>
+        <xsl:variable name="wIds">
+            <xsl:for-each select="$xmlDocuments//r:Regeltekst/@wId">
+                <xsl:value-of select="concat('.', string(.), '.')"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name='newline'><xsl:text>&#10;</xsl:text></xsl:variable>
+        <xsl:variable name="results">
+            <xsl:for-each select="$context/tekst:Lid">
+                <xsl:variable name="lidWiD" select="string(./@wId)"/>
+                <xsl:variable name="rlidWiD" select="contains($wIds, concat('.', $lidWiD, '.'))"/>
+                <xsl:variable name="rartikelWiD"
+                    select="contains($wIds, concat('.', $artikelWiD, '.'))"/>
+                <xsl:if
+                    test="contains($wIds, concat('.', $lidWiD, '.')) and contains($wIds, concat('.', $artikelWiD, '.'))">
+                    <xsl:value-of
+                        select="concat('artikel-wId: ', $artikelWiD, ' --&gt; lid-wId: ', $lidWiD, ', ', $newline)"  disable-output-escaping="no"
+                    />
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="message">
+            <xsl:if test="string-length($results) > 0">
+                <xsl:value-of
+                    select="
+                    concat('Als een verwijzing naar een Lid is gemaakt mag er geen verwijzing meer gemaakt worden naar het artikel dat boven dit Lid hangt.',$newline,'Betreft: ',
+                    $results)"  disable-output-escaping="no"/>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$message"/>
     </xsl:function>
-    
+
 </sch:schema>

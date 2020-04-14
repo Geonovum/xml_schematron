@@ -1056,8 +1056,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="ancestorsFout" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0830/0831:
-                <sch:value-of select="$ancestorsFout"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0830/0831: <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1107,8 +1107,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="ancestorsFout" value="foo:checkEersteNiveauLijstLettersTPOD_0840(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0840/0841:
-                <sch:value-of select="$ancestorsFout"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0840/0841: <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1158,8 +1158,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="ancestorsFout" value="foo:checkEersteNiveauLijstLettersTPOD_0850(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0850/0851:
-                <sch:value-of select="$ancestorsFout"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0850/0851: <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1210,9 +1210,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="CONDITION"
                 value="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD_0880: Een
-                OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene
-                bepalingen. </sch:assert>
+                H:TPOD_0880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen. </sch:assert>
         </sch:rule>
         <sch:rule context="//tekst:Lichaam">
             <sch:let name="APPLICABLE"
@@ -1221,9 +1219,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             
             <sch:let name="CONDITION" value="$hoofdstuk1=1 or $hoofdstuk1=-1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD_0880: Een
-                OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene
-                bepalingen. </sch:assert>
+                H:TPOD_0880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1350,7 +1346,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="artikelOpschrift">
             <xsl:for-each select="$context/descendant::tekst:Artikel">
-                <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepaling'">
+                <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepalingen'">
                     <xsl:value-of select="tekst:Kop/tekst:Opschrift/text()"/>
                 </xsl:if>
             </xsl:for-each>
@@ -1362,7 +1358,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:for-each select="$context/../../descendant::tekst:Bijlage">
-                        <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepaling'">
+                        <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepalingen'">
                             <xsl:value-of select="tekst:Kop/tekst:Opschrift/text()"/>
                         </xsl:if>
                     </xsl:for-each>
@@ -2148,50 +2144,46 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="foo:nietGerefereerdeGeometrieTPOD_1990($geoLocationGeoReferenceIdentifiers, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrie) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
-                <sch:value-of select="$nietGerefereerdeGeometrie" />
+                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="geo:id/text()" />
             </sch:assert>
         </sch:rule>
         
         <sch:rule context="//r:Regeltekst/r:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="regeltekstReferenties"
-                value="foo:getReferencesTPOD_1990(//r-ref:RegeltekstRef)"/>
+                value="foo:getReferencesTPOD_1990($xmlDocuments//r-ref:RegeltekstRef)"/>
             <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($regeltekstReferenties, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
-                <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
+                TPOD_1990: Iedere Regeltekst heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
             </sch:assert>
         </sch:rule>
         
         <sch:rule context="//(vt:FormeleDivisie|vt:Hoofdlijn)/vt:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="formeleDivisieReferenties"
-                value="foo:getReferencesTPOD_1990(//(vt-ref:FormeleDivisieRef|vt-ref:HoofdlijnRef))"/>
+                value="foo:getReferencesTPOD_1990($xmlDocuments//(vt-ref:FormeleDivisieRef|vt-ref:HoofdlijnRef))"/>
             <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($formeleDivisieReferenties, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
-                <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
+                TPOD_1990: Iedere FormeleDivisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
             </sch:assert>
         </sch:rule>
         
         <sch:rule context="//rol:Activiteit/rol:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="formeleDivisieReferenties"
-                value="foo:getReferencesTPOD_1990(//rol-ref:ActiviteitRef)"/>
+            <sch:let name="activiteitRefs"
+                value="foo:getReferencesTPOD_1990($xmlDocuments//rol-ref:ActiviteitRef)"/>
             <sch:let name="nietGerefereerdeReferenties"
-                value="foo:nietGerefereerdeReferentiesTPOD_1990($formeleDivisieReferenties, .)"/>
+                value="foo:nietGerefereerdeReferentiesTPOD_1990($activiteitRefs, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst:
-                <sch:value-of
+                TPOD_1990: Iedere Activiteit heeft minstens een OwObject dat ernaar verwijst: <sch:value-of
                     select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
                 />
             </sch:assert>
         </sch:rule>
-
+        
         <sch:rule context="//l:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="locatieReferenties"
@@ -2204,13 +2196,12 @@ Opmerkingen / hints: Document is in ontwikkeling.
             </sch:let>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1990: Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.:
+                TPOD_1990: Iedere Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst:
                 <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
             </sch:assert>
         </sch:rule>
         
     </sch:pattern>
-    
     
     <xsl:function name="foo:nietGerefereerdeGeometrieTPOD_1990">
         <xsl:param name="identifiers"/>
@@ -2224,8 +2215,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
         <xsl:param name="referenties"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="nietGerefereerdeReferenties">
-            <xsl:if
-                test="not(contains($referenties, concat('.', $context/text(), '.')))">
+            <xsl:if test="not(contains($referenties, concat('.', $context/text(), '.')))">
                 <xsl:value-of select="concat(string($context/text()), ', ')"/>
             </xsl:if>
         </xsl:variable>
@@ -2235,7 +2225,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
     <xsl:function name="foo:getReferencesTPOD_1990">
         <xsl:param name="xpath" as="node()*"/>
         <xsl:variable name="references">
-            <xsl:for-each select="$xmlDocuments//$xpath">
+            <xsl:for-each select="$xpath">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
         </xsl:variable>
@@ -2253,7 +2243,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
     
     <xsl:function name="foo:getLocationReferenceIdentifiersTPOD_1990">
         <xsl:variable name="identifiers">
-            <xsl:for-each select="$xmlDocuments//(l-ref:LocatieRef|l-ref:GebiedRef|l-ref:LijnRef|l-ref:PuntRef|l-ref:GebiedengroepRef|l-ref:PuntengroepRef|l-ref:LijnengroepRef)">
+            <xsl:for-each
+                select="$xmlDocuments//(l-ref:LocatieRef | l-ref:GebiedRef | l-ref:LijnRef | l-ref:PuntRef | l-ref:GebiedengroepRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef)">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
         </xsl:variable>
@@ -2382,27 +2373,70 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="message" value="foo:existsTPOD_2050()"/>
             <sch:let name="CONDITION" value="string-length($message)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2050: <sch:value-of select="$message"/>
+                H:TPOD2050: <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:existsTPOD_2050">
         <xsl:choose>
-            <xsl:when test="not(document('manifest.xml')//lvbb:manifest or document('manifest-ow.xml')//Modules)">
-                <xsl:value-of select="'Manifest.xml en manifest-ow.xml zijn niet aangetroffen.'"/>
+            <xsl:when test="(not((document('manifest-ow.xml')) or (document('Manifest-ow.xml')))) and (not((document('manifest.xml')) or (document('Manifest.xml'))))">
+                <xsl:value-of select="'(M|m)anifest-ow.xml en (M|m)anifest.xml zijn niet aangetroffen of niet valide.'"/>
             </xsl:when>
-            <xsl:when test="not(document('manifest-ow.xml')//Modules)">
-                <xsl:value-of select="'Manifest-ow.xml is niet aangetroffen.'"/>
+            <xsl:when test="not((document('manifest-ow.xml')) or (document('Manifest-ow.xml')))">
+                <xsl:value-of select="'(M|m)anifest-ow.xml is niet aangetroffen of niet valide.'"/>
             </xsl:when>
-            <xsl:when test="not(document('manifest.xml')//lvbb:manifest)">
-                <xsl:value-of select="'Manifest.xml is niet aangetroffen.'"/>
+            <xsl:when test="not((document('manifest.xml')) or (document('Manifest.xml')))">
+                <xsl:value-of select="'(M|m)anifest.xml is niet aangetroffen of niet valide.'"/>
             </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="''"/>
-            </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
     
+    <!-- ============TPOD_2060================================================================================================================ -->
     
+    <sch:pattern id="TPOD_2060">
+        <sch:rule context="//tekst:Artikel">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="message" value="foo:checkFouteArtikelLidCombinatieTPOD_2060(.)"/>
+            <sch:let name="CONDITION" value="string-length($message) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD2060:
+                <sch:value-of select="$message"/>
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkFouteArtikelLidCombinatieTPOD_2060">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="artikelWiD" select="string($context/@wId)"/>
+        <xsl:variable name="wIds">
+            <xsl:for-each select="$xmlDocuments//r:Regeltekst/@wId">
+                <xsl:value-of select="concat('.', string(.), '.')"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name='newline'><xsl:text>&#10;</xsl:text></xsl:variable>
+        <xsl:variable name="results">
+            <xsl:for-each select="$context/tekst:Lid">
+                <xsl:variable name="lidWiD" select="string(./@wId)"/>
+                <xsl:variable name="rlidWiD" select="contains($wIds, concat('.', $lidWiD, '.'))"/>
+                <xsl:variable name="rartikelWiD"
+                    select="contains($wIds, concat('.', $artikelWiD, '.'))"/>
+                <xsl:if
+                    test="contains($wIds, concat('.', $lidWiD, '.')) and contains($wIds, concat('.', $artikelWiD, '.'))">
+                    <xsl:value-of
+                        select="concat('artikel-wId: ', $artikelWiD, ' --&gt; lid-wId: ', $lidWiD, ', ', $newline)"  disable-output-escaping="no"
+                    />
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="message">
+            <xsl:if test="string-length($results) > 0">
+                <xsl:value-of
+                    select="
+                    concat('Als een verwijzing naar een Lid is gemaakt mag er geen verwijzing meer gemaakt worden naar het artikel dat boven dit Lid hangt.',$newline,'Betreft: ',
+                    $results)"  disable-output-escaping="no"/>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$message"/>
+    </xsl:function>
+
 </sch:schema>

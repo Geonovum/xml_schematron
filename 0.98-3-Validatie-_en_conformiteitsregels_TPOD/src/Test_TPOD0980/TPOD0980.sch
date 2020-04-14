@@ -46,7 +46,7 @@
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="artikelOpschrift">
             <xsl:for-each select="$context/descendant::tekst:Artikel">
-                <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepaling'">
+                <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepalingen'">
                     <xsl:value-of select="tekst:Kop/tekst:Opschrift/text()"/>
                 </xsl:if>
             </xsl:for-each>
@@ -58,7 +58,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:for-each select="$context/../../descendant::tekst:Bijlage">
-                        <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepaling'">
+                        <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepalingen'">
                             <xsl:value-of select="tekst:Kop/tekst:Opschrift/text()"/>
                         </xsl:if>
                     </xsl:for-each>
