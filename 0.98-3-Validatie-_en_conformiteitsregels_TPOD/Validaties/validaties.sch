@@ -1841,6 +1841,20 @@ Opmerkingen / hints: Document is in ontwikkeling.
         </sch:rule>
     </sch:pattern>
     
+    <!-- ============TPOD_1790================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1790">
+        <sch:rule
+            context="//r:Instructieregel">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION"
+                value="false()"/>    
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                H:TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing.</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
     <!-- ============TPOD_1830================================================================================================================ -->
 
     <sch:pattern id="TPOD_1830">
