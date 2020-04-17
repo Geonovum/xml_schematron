@@ -1433,7 +1433,70 @@ Opmerkingen / hints: Document is in ontwikkeling.
         </xsl:variable>
         <xsl:value-of select="$result"/>
     </xsl:function>
+    
+    <!-- ============TPOD_1000================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1000">
+        <sch:rule context="//tekst:Begrip">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="items"
+                value="foo:checkBegripTPOD1000(.)"/>
+            <sch:let name="CONDITION"
+                value="string-length($items)=0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1000: Een Begrip moet bestaan uit één term en één definitie. Begrip met wId: <sch:value-of select="string(@wId)"/> bevat geen <sch:value-of select="$items"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkBegripTPOD1000">
+        <xsl:param name="context" as="node()"/>
+        <xsl:choose>
+            <xsl:when  test="not($context/tekst:Term) and not($context/tekst:Definitie)">
+                <xsl:value-of select="'Term en Definitie'"/>
+            </xsl:when>
+            <xsl:when  test="not($context/tekst:Term)">
+                <xsl:value-of select="'Term'"/>
+            </xsl:when>
+            <xsl:when  test="not($context/tekst:Definitie)">
+                <xsl:value-of select="'Definitie'"/>
+            </xsl:when>
+        </xsl:choose>
+        
+    </xsl:function>
 
+    <!-- ============TPOD_1010================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1010">
+        <sch:rule context="//tekst:Begrippenlijst">
+            <sch:let name="APPLICABLE"
+                value="true()"/>
+            <sch:let name="items"
+                value="foo:checkBegripTPOD1010(.)"/>
+            <sch:let name="CONDITION"
+                value="string-length($items)=0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1010: Een Begriplijst moet gesorteerd zijn, de Begrippenlijst met wId: "<sch:value-of select="$items"/>" is dat niet</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkBegripTPOD1010">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="list">
+            <xsl:for-each select="$context/tekst:Begrip">
+                <xsl:value-of select="tekst:Term"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="sortedList">
+            <xsl:for-each select="$context/tekst:Begrip">
+                <xsl:sort select="tekst:Term"/>
+                <xsl:value-of select="tekst:Term"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:if test="not($sortedList=$list)">
+            <xsl:value-of select="string($context/@wId)"/>            
+        </xsl:if>
+    </xsl:function>
 
     <!-- ============TPOD_1650================================================================================================================ -->
 
@@ -2525,16 +2588,16 @@ Opmerkingen / hints: Document is in ontwikkeling.
 
     <xsl:function name="foo:checkOwObjectenTPOD_2070">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="collection">
-            <xsl:for-each
-                select="$xmlDocuments//(r:RegelVoorIedereen | rol:Activiteit | l:Gebiedengroep | l:Puntengroep | l:Lijnengroep | l:Gebied | l:Punt | l:Lijn)">
-                <xsl:copy-of select="."/>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:variable name="node_list" select="$collection/element()"/>
-        <xsl:variable name="actId" select="$context/rol:identificatie/text()"/>
         <xsl:variable name="regelId" select="$context/@ow:regeltekstId"/>
         <xsl:if test="not(string($regelId) = '')">
+            <xsl:variable name="collection">
+                <xsl:for-each
+                    select="$xmlDocuments//(r:RegelVoorIedereen | rol:Activiteit | l:Gebiedengroep | l:Puntengroep | l:Lijnengroep | l:Gebied | l:Punt | l:Lijn)">
+                    <xsl:copy-of select="."/>
+                </xsl:for-each>
+            </xsl:variable>
+            <xsl:variable name="node_list" select="$collection/element()"/>
+            <xsl:variable name="actId" select="$context/rol:identificatie/text()"/>
             <xsl:variable name="messages"
                 select="foo:recursieveActiviteitTPOD_2070($node_list, $actId, $regelId, $context)"/>
             <xsl:value-of select="$messages"/>
