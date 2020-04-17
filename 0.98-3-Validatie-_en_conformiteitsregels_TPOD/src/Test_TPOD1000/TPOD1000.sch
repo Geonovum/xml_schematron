@@ -31,7 +31,7 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_1000">
+    <sch:pattern id="TPOD_1000_1050">
         <sch:rule context="//tekst:Begrip">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
@@ -40,7 +40,7 @@
             <sch:let name="CONDITION"
                 value="string-length($items)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1000: Een Begrip moet bestaan uit één term en één definitie. Begrip met wId: <sch:value-of select="string(@wId)"/> bevat geen <sch:value-of select="$items"/></sch:assert>
+                TPOD_1000_1050: Een Begrip moet bestaan uit één term en één definitie. Begrip met wId: <sch:value-of select="string(@wId)"/> bevat geen <sch:value-of select="$items"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 

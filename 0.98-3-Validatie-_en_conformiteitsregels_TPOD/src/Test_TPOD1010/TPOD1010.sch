@@ -31,7 +31,7 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_1010">
+    <sch:pattern id="TPOD_1010_1060">
         <sch:rule context="//tekst:Begrippenlijst">
             <sch:let name="APPLICABLE"
                 value="true()"/>
@@ -40,7 +40,7 @@
             <sch:let name="CONDITION"
                 value="string-length($items)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1010: Een Begriplijst moet gesorteerd zijn, de Begrippenlijst met wId: "<sch:value-of select="$items"/>" is dat niet</sch:assert>
+                TPOD_1010_1060: Een Begriplijst moet gesorteerd zijn, de Begrippenlijst met wId: "<sch:value-of select="$items"/>" is dat niet</sch:assert>
         </sch:rule>
     </sch:pattern>
 
