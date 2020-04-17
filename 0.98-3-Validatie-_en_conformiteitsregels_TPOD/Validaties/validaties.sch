@@ -1434,6 +1434,27 @@ Opmerkingen / hints: Document is in ontwikkeling.
         <xsl:value-of select="$result"/>
     </xsl:function>
     
+    <!-- ============TPOD_0990================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0990">
+        <sch:rule context="//tekst:Kop[string(tekst:Opschrift) = 'Begripsbepalingen']">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="fouten" value="foo:inleidendezinBegripsBepalingTPOD0980(..)"/>
+            <sch:let name="CONDITION"
+                value="string-length($fouten)=0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0990: Het artikel Begripsbepalingen dan wel de bijlage met begripsbepalingen moet met beginnen met een introducerende zin. Dit is niet zo in: <sch:value-of select="$fouten"/> </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:inleidendezinBegripsBepalingTPOD0980">
+        <xsl:param name="context" as="node()"/>
+        <xsl:if test="not(name($context/tekst:Inhoud/*[1])='Al')">
+            <xsl:value-of select="concat($context/tekst:Kop/tekst:Label/text(),' ',$context/tekst:Kop/tekst:Nummer/text(),' ', $context/tekst:Kop/tekst:Opschrift/text())"/>
+        </xsl:if>
+    </xsl:function>
+    
     <!-- ============TPOD_1000================================================================================================================ -->
     
     <sch:pattern id="TPOD_1000">
