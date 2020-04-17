@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
+	xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
+	xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709"
+	xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
+	xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190709"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
+	xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901"
+	xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons/v20190901"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst/v20190901"
+	xmlns:vt-ref="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaartrecept/v20190901"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
+	xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+	xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
+	xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/" xmlns:foo="http://whatever"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/0.98.1 https://raw.githubusercontent.com/Geonovum/xml_ow_xsd_0.98.2-kern/master/xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+	<sl:standBestand>
+		<sl:dataset>Gemeentestad</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Gemeentestad</sl:gebied>
+			<sl:leveringsId>abc-20190221-0801</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Regeltekst"</sl:objectType>
+				<sl:objectType>RegelVoorIedereen</sl:objectType>
+				<sl:objectType>Instructieregel</sl:objectType>
+				<sl:objectType>Omgevingswaarderegel</sl:objectType>
+				<sl:objectType>Activiteit</sl:objectType>
+				<sl:objectType>Omgevingsnorm</sl:objectType>
+				<sl:objectType>Omgevingswaarde</sl:objectType>
+				<sl:objectType>Gebiedsaanwijzing</sl:objectType>
+				<sl:objectType>Gebied</sl:objectType>
+				<sl:objectType>Gebiedengroep</sl:objectType>
+				<sl:objectType>Punt</sl:objectType>
+				<sl:objectType>Puntengroep</sl:objectType>
+				<sl:objectType>Lijn</sl:objectType>
+				<sl:objectType>Lijnengroep</sl:objectType>
+				<sl:objectType>FormeleDivisie</sl:objectType>
+				<sl:objectType>Symbolisatiecollectie</sl:objectType>
+				<sl:objectType>Kaart</sl:objectType>
+				<sl:objectType>Pons</sl:objectType>
+				<sl:objectType>Tekstdeel</sl:objectType>
+				<sl:objectType>Hoofdlijn</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900001</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900002</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900003</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900004</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900005</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900006</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900007</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900008</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900009</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst met gerelateerde regeltekst GOED -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.2019000010</r:identificatie>
+					<r:gerelateerdeRegeltekst>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+					</r:gerelateerdeRegeltekst>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst met gerelateerde regeltekst FOUT (bestaat niet) -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.2019000011</r:identificatie>
+					<r:gerelateerdeRegeltekst>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000021"/>
+					</r:gerelateerdeRegeltekst>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst met gerelateerde regeltekst FOUT (verwijst naar zichzelf) -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.2019000012</r:identificatie>
+					<r:gerelateerdeRegeltekst>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012"/>
+					</r:gerelateerdeRegeltekst>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- RegelVoorIedereen GOEDE Activiteitsaanduiding -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:RegelVoorIedereen ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+					</r:artikelOfLid>
+					<r:activiteitaanduiding>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
+					</r:activiteitaanduiding>
+				</r:RegelVoorIedereen>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- RegelVoorIedereen GOEDE gebiedsaanwijzing -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:RegelVoorIedereen ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+					</r:artikelOfLid>
+					<r:gebiedsaanwijzing>
+						<ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
+					</r:gebiedsaanwijzing>
+				</r:RegelVoorIedereen>
+			</ow-dc:owObject>
+		</sl:stand>		
+		<!-- RegelVoorIedereen GOEDE omgevingsnorm -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:RegelVoorIedereen ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+					</r:artikelOfLid>
+					<r:omgevingsnormaanduiding>
+						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
+					</r:omgevingsnormaanduiding>
+				</r:RegelVoorIedereen>
+			</ow-dc:owObject>
+		</sl:stand>	
+		<!-- RegelVoorIedereen FOUTE niet bestaande Activiteitsaanduiding -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:RegelVoorIedereen ow:regeltekstId="nl.imow-gm0037.regeltekst.201900004">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900004"/>
+					</r:artikelOfLid>
+					<r:activiteitaanduiding>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000011"/>
+					</r:activiteitaanduiding>
+				</r:RegelVoorIedereen>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- RegelVoorIedereen FOUTE niet bestaande gebiedsaanwijzing -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:RegelVoorIedereen ow:regeltekstId="nl.imow-gm0037.regeltekst.201900005">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900005"/>
+					</r:artikelOfLid>
+					<r:gebiedsaanwijzing>
+						<ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000011"/>
+					</r:gebiedsaanwijzing>
+				</r:RegelVoorIedereen>
+			</ow-dc:owObject>
+		</sl:stand>		
+		<!-- RegelVoorIedereen FOUTE niet bestaande omgevingsnorm -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:RegelVoorIedereen ow:regeltekstId="nl.imow-gm0037.regeltekst.201900006">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900006"/>
+					</r:artikelOfLid>
+					<r:omgevingsnormaanduiding>
+						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.2019000011"/>
+					</r:omgevingsnormaanduiding>
+				</r:RegelVoorIedereen>
+			</ow-dc:owObject>
+		</sl:stand>	
+		<!-- RegelVoorIedereen FOUTE niet bestaande regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:RegelVoorIedereen ow:regeltekstId="nl.imow-gm0037.regeltekst.201900007">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000061"/>
+					</r:artikelOfLid>
+					<r:omgevingsnormaanduiding>
+						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
+					</r:omgevingsnormaanduiding>
+				</r:RegelVoorIedereen>
+			</ow-dc:owObject>
+		</sl:stand>	
+		<!-- RegelVoorIedereen FOUTE niet bestaande locatieaanduiding -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:RegelVoorIedereen ow:regeltekstId="nl.imow-gm0037.regeltekst.201900008">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900008"/>
+					</r:artikelOfLid>
+				</r:RegelVoorIedereen>
+			</ow-dc:owObject>
+		</sl:stand>	
+		<!-- Instructieregel GOED omgevingsnorm -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+					</r:artikelOfLid>
+					<r:omgevingsnormaanduiding>
+						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
+					</r:omgevingsnormaanduiding>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel GOED gebiedsaanwijzing -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+					</r:artikelOfLid>
+					<r:instructieregelTaakuitoefening></r:instructieregelTaakuitoefening>
+					<r:gebiedsaanwijzing>
+						<ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
+					</r:gebiedsaanwijzing>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel GOED gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
+					</r:artikelOfLid>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel GOED regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900004">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900004"/>
+					</r:artikelOfLid>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel FOUT omgevingsnorm bestaat niet -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+					</r:artikelOfLid>
+					<r:omgevingsnormaanduiding>
+						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.2019000011"/>
+					</r:omgevingsnormaanduiding>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel FOUT gebiedsaanwijzing bestaat niet -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+					</r:artikelOfLid>
+					<r:gebiedsaanwijzing>
+						<ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000011"/>
+					</r:gebiedsaanwijzing>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel FOUT gebied bestaat niet -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
+					</r:artikelOfLid>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel FOUT regeltekst bestaat niet -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900004">
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000041"/>
+					</r:artikelOfLid>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Activiteit GOED locatieaanduiding -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900001</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<!-- Activiteit GOED gerelateerde activiteit-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900002</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</rol:locatieaanduiding>
+					<rol:gerelateerdeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
+					</rol:gerelateerdeActiviteit>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<!-- Activiteit FOUT locatieaanduiding bestaat niet -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900003</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<!-- Activiteit FOUT gerelateerde activiteit bestaat niet -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900004</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</rol:locatieaanduiding>
+					<rol:gerelateerdeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000011"/>
+					</rol:gerelateerdeActiviteit>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<!-- Activiteit FOUT gerelateerde activiteit verwijst naar zichzelf -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900005</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</rol:locatieaanduiding>
+					<rol:gerelateerdeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900005"/>
+					</rol:gerelateerdeActiviteit>
+					<rol:bovenliggendeActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<!-- Omgevingsnorm GOED gebiedref-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900001</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:locatieaanduiding>
+								<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>abc</rol:naam>
+					<rol:groep>cde</rol:groep>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Omgevingsnorm FOUT gebiedref bestaat niet -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900002</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:locatieaanduiding>
+								<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>abc</rol:naam>
+					<rol:groep>cde</rol:groep>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Omgevingswaarderegel -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Omgevingswaarderegel ow:regeltekstId="">
+					<r:idealisatie>exact</r:idealisatie>
+					<r:locatieaanduiding>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+					</r:artikelOfLid>
+				</r:Omgevingswaarderegel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Omgevingswaarde GOED locatieaanduiding -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingswaarde ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>200</da:waarde>
+								<da:eenheid>μg/m3</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>fijnstof</rol:naam>
+					<rol:groep>luchtkwaliteit</rol:groep>
+				</rol:Omgevingswaarde>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Omgevingswaarde FOUT gebiedref bestaat niet -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingswaarde ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900002</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>fijnstof</rol:naam>
+					<rol:groep>luchtkwaliteit</rol:groep>
+				</rol:Omgevingswaarde>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebiedsaanwijzing GOED locatieaanduiding -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.201900001</ga:identificatie>
+					<ga:type></ga:type>
+					<ga:naam>abc</ga:naam>
+					<ga:groep></ga:groep>
+					<ga:locatieaanduiding>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</ga:locatieaanduiding>
+				</ga:Gebiedsaanwijzing>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebiedsaanwijzing FOUT gebiedref bestaat niet -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.201900002</ga:identificatie>
+					<ga:type></ga:type>
+					<ga:naam>abc</ga:naam>
+					<ga:groep></ga:groep>
+					<ga:locatieaanduiding>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+					</ga:locatieaanduiding>
+				</ga:Gebiedsaanwijzing>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<l:identificatie>nl.imow-gm0037.gebied.201900001</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<l:identificatie>nl.imow-gm0037.gebied.201900002</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.gebied.201900003</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied FOUT verwijst naar een punt-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<l:identificatie>nl.imow-gm0037.gebied.201900004</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied FOUT verwijst naar een lijn-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<l:identificatie>nl.imow-gm0037.gebied.201900005</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebiedengroep GOED Gebied 1 en 2 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebiedengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900001</l:identificatie>
+					<l:groepselement>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+					</l:groepselement>
+				</l:Gebiedengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebiedengroep GOED Gebied 2 en 3 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebiedengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900002</l:identificatie>
+					<l:groepselement>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
+					</l:groepselement>
+				</l:Gebiedengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebiedengroep FOUT verwijst naar een punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebiedengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900003</l:identificatie>
+					<l:groepselement>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.punt.201900003"/>
+					</l:groepselement>
+				</l:Gebiedengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebiedengroep FOUT verwijst naar een lijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebiedengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900004</l:identificatie>
+					<l:groepselement>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+					</l:groepselement>
+				</l:Gebiedengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebiedengroep FOUT verwijst naar 2 lijnen -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebiedengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900005</l:identificatie>
+					<l:groepselement>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+					</l:groepselement>
+				</l:Gebiedengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<l:identificatie>nl.imow-gm0037.punt.201900001</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<l:identificatie>nl.imow-gm0037.punt.201900002</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53621"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.punt.201900003</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53631"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt FOUT verwijst naar een gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.punt.201900004</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt FOUT verwijst naar een lijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.punt.201900005</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Puntengroep GOED lijn 1 en 2 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Puntengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900001</l:identificatie>
+					<l:groepselement>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900001"/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+					</l:groepselement>
+				</l:Puntengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Puntengroep GOED lijn 2 en 3 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Puntengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900002</l:identificatie>
+					<l:groepselement>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900003"/>
+					</l:groepselement>
+				</l:Puntengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Puntengroep FOUT verwijst naar een lijn-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Puntengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
+					<l:groepselement>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+					</l:groepselement>
+				</l:Puntengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Puntengroep FOUT verwijst naar een gebied-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Puntengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
+					<l:groepselement>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l-ref:PuntRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
+					</l:groepselement>
+				</l:Puntengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<l:identificatie>nl.imow-gm0037.lijn.201900001</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<l:identificatie>nl.imow-gm0037.lijn.201900002</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53621"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.lijn.201900003</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53631"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn FOUT verwijst naar een gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.lijn.201900004</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn FOUT verwijst naar een punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.lijn.201900005</l:identificatie>
+					<l:geometrie>
+						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijnengroep GOED lijn 1 en 2-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijnengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<l:identificatie>nl.imow-gm0037.lijnengroep.201900001</l:identificatie>
+					<l:groepselement>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900002"/>
+					</l:groepselement>
+				</l:Lijnengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijnengroep GOED lijn 2 en 3-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijnengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<l:identificatie>nl.imow-gm0037.lijnengroep.201900002</l:identificatie>
+					<l:groepselement>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900002"/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+					</l:groepselement>
+				</l:Lijnengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijnengroep FOUT bevat verwijzing naar punt-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijnengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.lijnengroep.201900003</l:identificatie>
+					<l:groepselement>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+					</l:groepselement>
+				</l:Lijnengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijnengroep FOUT bevat verwijzing naar gebied-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijnengroep ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<l:identificatie>nl.imow-gm0037.lijnengroep.201900003</l:identificatie>
+					<l:groepselement>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
+						<l-ref:LijnRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+					</l:groepselement>
+				</l:Lijnengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- FormeleDivisie -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:FormeleDivisie wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main" wId="gm0037_1__subchp_2.2__art_2.3">
+					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900001</vt:identificatie>
+				</vt:FormeleDivisie>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- FormeleDivisie -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:FormeleDivisie wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main" wId="gm0037_1__subchp_2.2__art_2.3">
+					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900002</vt:identificatie>
+				</vt:FormeleDivisie>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- FormeleDivisie -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:FormeleDivisie wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main" wId="gm0037_1__subchp_2.2__art_2.3">
+					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900003</vt:identificatie>
+				</vt:FormeleDivisie>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Symbolisatiecollectie -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<k:Symbolisatiecollectie>
+					<k:symbolisatieItem>
+						<k:SymbolisatieItem>
+							<k:objecttype></k:objecttype>
+							<k:attribuut></k:attribuut>
+							<k:symboolcode></k:symboolcode>
+						</k:SymbolisatieItem>
+					</k:symbolisatieItem>
+				</k:Symbolisatiecollectie>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Symbolisatiecollectie -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<k:Symbolisatiecollectie>
+					<k:symbolisatieItem>
+						<k:SymbolisatieItem>
+							<k:objecttype></k:objecttype>
+							<k:attribuut></k:attribuut>
+							<k:symboolcode></k:symboolcode>
+						</k:SymbolisatieItem>
+					</k:symbolisatieItem>
+				</k:Symbolisatiecollectie>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Symbolisatiecollectie -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<k:Symbolisatiecollectie>
+					<k:symbolisatieItem>
+						<k:SymbolisatieItem>
+							<k:objecttype></k:objecttype>
+							<k:attribuut></k:attribuut>
+							<k:symboolcode></k:symboolcode>
+						</k:SymbolisatieItem>
+					</k:symbolisatieItem>
+				</k:Symbolisatiecollectie>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Kaart -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<k:Kaart ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<k:identificatie>nl.imow-gm0037.kaart.201900001</k:identificatie>
+					<k:kaartnaam></k:kaartnaam>
+					<k:kaartnummer></k:kaartnummer>
+					<k:kaartuitsnede>
+						<k:Kaartextent>
+							<k:minX>1</k:minX>
+							<k:minY>1</k:minY>
+							<k:maxX>1</k:maxX>
+							<k:maxY>1</k:maxY>
+						</k:Kaartextent>
+					</k:kaartuitsnede>
+				</k:Kaart>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Kaart -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<k:Kaart ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<k:identificatie>nl.imow-gm0037.kaart.201900002</k:identificatie>
+					<k:kaartnaam></k:kaartnaam>
+					<k:kaartnummer></k:kaartnummer>
+					<k:kaartuitsnede>
+						<k:Kaartextent>
+							<k:minX>1</k:minX>
+							<k:minY>1</k:minY>
+							<k:maxX>1</k:maxX>
+							<k:maxY>1</k:maxY>
+						</k:Kaartextent>
+					</k:kaartuitsnede>
+				</k:Kaart>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Kaart -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<k:Kaart ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<k:identificatie>nl.imow-gm0037.kaart.201900003</k:identificatie>
+					<k:kaartnaam></k:kaartnaam>
+					<k:kaartnummer></k:kaartnummer>
+					<k:kaartuitsnede>
+						<k:Kaartextent>
+							<k:minX>1</k:minX>
+							<k:minY>1</k:minY>
+							<k:maxX>1</k:maxX>
+							<k:maxY>1</k:maxY>
+						</k:Kaartextent>
+					</k:kaartuitsnede>
+				</k:Kaart>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Pons -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<p:Pons ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<p:identificatie>nl.imow-gm0037.pons.201900001</p:identificatie>
+					<p:locatieaanduiding></p:locatieaanduiding>
+				</p:Pons>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Pons -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<p:Pons ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<p:identificatie>nl.imow-gm0037.pons.201900002</p:identificatie>
+					<p:locatieaanduiding></p:locatieaanduiding>
+				</p:Pons>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Pons -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<p:Pons ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<p:identificatie>nl.imow-gm0037.pons.201900003</p:identificatie>
+					<p:locatieaanduiding></p:locatieaanduiding>
+				</p:Pons>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Tekstdeel -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:Tekstdeel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900001</vt:identificatie>
+					<vt:idealisatie></vt:idealisatie>
+					<vt:formeleDivisie>
+						<vt-ref:FormeleDivisieRef xlink:href=""/>
+					</vt:formeleDivisie>
+				</vt:Tekstdeel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Tekstdeel -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:Tekstdeel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900002</vt:identificatie>
+					<vt:idealisatie></vt:idealisatie>
+					<vt:formeleDivisie>
+						<vt-ref:FormeleDivisieRef xlink:href=""/>
+					</vt:formeleDivisie>
+				</vt:Tekstdeel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Tekstdeel -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:Tekstdeel ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900003</vt:identificatie>
+					<vt:idealisatie></vt:idealisatie>
+					<vt:formeleDivisie>
+						<vt-ref:FormeleDivisieRef xlink:href=""/>
+					</vt:formeleDivisie>
+				</vt:Tekstdeel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Hoofdlijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:Hoofdlijn ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900001</vt:identificatie>
+					<vt:naam></vt:naam>
+					<vt:soort></vt:soort>
+				</vt:Hoofdlijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Hoofdlijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:Hoofdlijn ow:regeltekstId="nl.imow-gm0037.regeltekst.201900002">
+					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900002</vt:identificatie>
+					<vt:naam></vt:naam>
+					<vt:soort></vt:soort>
+				</vt:Hoofdlijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Hoofdlijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:Hoofdlijn ow:regeltekstId="nl.imow-gm0037.regeltekst.201900003">
+					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900003</vt:identificatie>
+					<vt:naam></vt:naam>
+					<vt:soort></vt:soort>
+				</vt:Hoofdlijn>
+			</ow-dc:owObject>
+		</sl:stand>
+	</sl:standBestand>
+</ow-dc:owBestand>
