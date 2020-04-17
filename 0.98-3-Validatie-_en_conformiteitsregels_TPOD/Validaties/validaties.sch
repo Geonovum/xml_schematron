@@ -1827,6 +1827,20 @@ Opmerkingen / hints: Document is in ontwikkeling.
         </sch:rule>
     </sch:pattern>
 
+    <!-- ============TPOD_1780================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1780">
+        <sch:rule
+            context="/stop:AanleveringBesluit">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION"
+                value="(count(//tekst:Artikel)>0 and count(//tekst:Hoofdstuk/descendant::tekst:Artikel)>0) or count(//Artikel)=0"/>    
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                H:TPOD1780: Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
     <!-- ============TPOD_1830================================================================================================================ -->
 
     <sch:pattern id="TPOD_1830">

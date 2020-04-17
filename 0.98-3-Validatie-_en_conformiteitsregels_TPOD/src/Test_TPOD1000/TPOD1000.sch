@@ -14,7 +14,6 @@
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
-    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
     
     <!-- ====================================== GENERIC ============================================================================= -->

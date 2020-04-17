@@ -328,6 +328,7 @@
 					<r:artikelOfLid>
 						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
 					</r:artikelOfLid>
+					<r:instructieregelTaakuitoefening></r:instructieregelTaakuitoefening>
 					<r:gebiedsaanwijzing>
 						<ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
 					</r:gebiedsaanwijzing>
