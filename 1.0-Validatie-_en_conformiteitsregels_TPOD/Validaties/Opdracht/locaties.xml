@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!-- created by OpenOmgevingswet -->
+<ow-dc:owBestand xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709" xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901" xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709" xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901" xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901" xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901" xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901" xmlns:rkow="http://www.geostandaarden.nl/imow/owobject/v20190709" xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901" xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709" xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901 ../xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+  <sl:standBestand>
+    <sl:dataset>OOW Voorbeeldregels Projectbesluit aansluiting net op Zee</sl:dataset>
+    <sl:inhoud>
+      <sl:gebied>Beverwijk en Wijk aan Zee</sl:gebied>
+      <sl:leveringsId>OOWbBNOZ006</sl:leveringsId>
+      <sl:objectTypen>
+        <sl:objectType>Gebied</sl:objectType>
+      </sl:objectTypen>
+    </sl:inhoud>
+    <sl:stand>
+      <ow-dc:owObject>
+        <l:Gebied rkow:regeltekstId="nl.imow-mnre1045.regeltekst.OOWbHoofdstuk4">
+          <l:identificatie>nl.imow-mnre1045.gebied.OOWbTm</l:identificatie>
+          <l:noemer>Tijdelijke Maatregelen</l:noemer>
+          <l:geometrie>
+            <g-ref:GeometrieRef xlink:href="OOWbTm"/>
+          </l:geometrie>
+        </l:Gebied>
+      </ow-dc:owObject>
+    </sl:stand>
+    <sl:stand>
+      <ow-dc:owObject>
+        <l:Gebied rkow:regeltekstId="nl.imow-mnre1045.regeltekst.OOWbHoofdstuk5">
+          <l:identificatie>nl.imow-mnre1045.gebied.OOWbMng</l:identificatie>
+          <l:noemer>Maatregelen nadelige gevolgen</l:noemer>
+          <l:geometrie>
+            <g-ref:GeometrieRef xlink:href="OOWbMng"/>
+          </l:geometrie>
+        </l:Gebied>
+      </ow-dc:owObject>
+    </sl:stand>
+    <sl:stand>
+      <ow-dc:owObject>
+        <l:Gebied rkow:regeltekstId="nl.imow-mnre1045.regeltekst.OOWbHoofdstuk1">
+          <l:identificatie>nl.imow-mnre1045.gebied.OOWbWerkingsgebied</l:identificatie>
+          <l:noemer>Werkingsgebied</l:noemer>
+          <l:geometrie>
+            <g-ref:GeometrieRef xlink:href="OOWbWerkingsgebied"/>
+          </l:geometrie>
+        </l:Gebied>
+      </ow-dc:owObject>
+    </sl:stand>
+  </sl:standBestand>
+</ow-dc:owBestand>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AanleveringInformatieObject schemaversie="0.98.3-kern" xmlns="https://standaarden.overheid.nl/lvbb/stop/"
+  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <InformatieObjectVersie>
+    <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+      <FRBRWork>/join/id/regdata/gm0037/2019/Zone_A</FRBRWork>
+      <FRBRExpression>/join/id/regdata/gm0037/2019/Zone_A/nld@2019-06-18;3520</FRBRExpression>
+      <soortWork>/join/id/stop/work_003</soortWork>
+    </ExpressionIdentificatie>
+    <InformatieObjectMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+      <eindverantwoordelijke>/join/id/stop/gemeente/gm0037</eindverantwoordelijke>
+      <maker>/join/id/stop/gemeente/gm0037</maker>
+      <noemer>Zone_A</noemer>
+      <officieleTitel>Zone_A</officieleTitel>
+      <publicatieinstructie>TeConsolideren</publicatieinstructie>
+      <soortInformatieobject>/join/id/stop/informatieobject/gio_001</soortInformatieobject>
+      <!-- Koppeling naar het gml-bestand -->
+      <heeftBestanden>
+        <heeftBestand>
+          <Bestand>
+            <bestandsnaam>Zone_A.gml</bestandsnaam>
+            <hash>0629f57c0e0d7d075ea426ee8cdca71b6197b6fc522690823d2fbc33a328c5ef02d248df78feaa02367e7cd9ce59468766a25f25bb4104a8703eb0253fbbb4d4</hash>
+          </Bestand>
+        </heeftBestand>
+      </heeftBestanden>
+    </InformatieObjectMetadata>
+  </InformatieObjectVersie>
+</AanleveringInformatieObject>

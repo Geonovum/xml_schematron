@@ -73,10 +73,11 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="tekst:Label and tekst:Opschrift and tekst:Nummer"/>
 
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0400: Betreft
-                (Label, Opschrift, Nummer): "<sch:value-of select="tekst:Label"/>", "<sch:value-of
-                    select="tekst:Nummer"/>", "<sch:value-of select="tekst:Opschrift"/>": Een Kop
-                moet bevatten een Label, een Nummer en een Opschrift. </sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0400: Een Kop moet bevatten een Label, een Nummer en een Opschrift. 
+                Betreft (Label, Opschrift, Nummer): "<sch:value-of select="tekst:Label"/>", "<sch:value-of
+                    select="tekst:Nummer"/>", "<sch:value-of select="tekst:Opschrift"/>"
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -87,9 +88,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0410: Een
-                Hoofdstuk moet worden geduid met de label Hoofdstuk. Betreft label: <sch:value-of
-                    select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0410: Een Hoofdstuk moet worden geduid met de label Hoofdstuk. 
+                Betreft label: <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -102,10 +103,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0420(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0420:
-                Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers (betreft
-                hoofdstukken): <sch:value-of
-                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0420: Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers.
+                Betreft hoofdstukken): <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -128,9 +128,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0410: Een
-                Titel moet worden geduid met de label Titel. Betreft label: <sch:value-of
-                    select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0410: Een Titel moet worden geduid met de label Titel. 
+                Betreft label: <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -144,10 +144,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="fouten" value="foo:foutenTPOD_0470($hoofdstuk, .)"/>
 
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0470: De
-                nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel
-                voorkomt. (betreft hoofdstukken, titels): <sch:value-of select="$hoofdstuk"/>:
-                    <sch:value-of select="substring($fouten, 1, string-length($fouten) - 2)"
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0470: De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt. 
+                Betreft hoofdstukken, titels: <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten, 1, string-length($fouten) - 2)"
                 /></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -174,10 +173,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0480($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0480: Titels
-                moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken,
-                titels): <sch:value-of select="$hoofdstuk"/>: <sch:value-of
-                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. 
+                Betreft hoofdstukken, titels: <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -204,10 +202,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="fouten" value="foo:foutenTPOD_0490(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0490: Achter
-                het cijfer van een titelnummer mag geen punt worden opgenomen. (betreft
-                hoofdstukken, titels): <sch:value-of select="$hoofdstuk"/>: <sch:value-of
-                    select="substring($fouten, 1, string-length($fouten) - 2)"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0490: Achter het cijfer van een titelnummer mag geen punt worden opgenomen. 
+                Betreft hoofdstukken, titels: <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten, 1, string-length($fouten) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -230,9 +227,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0510: Een
-                Afdeling moet worden geduid met de label Afdeling. Betreft label: <sch:value-of
-                    select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0510: Een Afdeling moet worden geduid met de label Afdeling. 
+                Betreft label: <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -246,11 +243,10 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="titel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0520($titel, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0520: Als
-                tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen
-                beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt,
-                gevolgd door een punt. (betreft hoofdstukken, titels, afdelingen): <xsl:value-of
-                    select="$hoofdstuk"/>: <sch:value-of select="$titel"/>: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0520: Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen
+                beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt. 
+                Betreft hoofdstukken, titels, afdelingen: <xsl:value-of select="$hoofdstuk"/>: <sch:value-of select="$titel"/>: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -278,10 +274,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0530($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0530:
-                Afdelingen moeten oplopend worden genummerd in Arabische cijfers. (betreft
-                hoofdstukken, afdeling): <sch:value-of select="$hoofdstuk"/>: <sch:value-of
-                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0530: Afdelingen moeten oplopend worden genummerd in Arabische cijfers. 
+                Betreft hoofdstukken, afdeling: <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -317,9 +312,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="fouten" value="foo:foutenTPOD_0540(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0540: Achter
-                het cijfer van een afdelingnummer mag geen punt worden opgenomen. (betreft
-                hoofdstukken, afdeling): <sch:value-of select="$hoofdstuk"/>: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0540: Achter het cijfer van een afdelingnummer mag geen punt worden opgenomen. 
+                Betreft hoofdstukken, afdeling: <sch:value-of select="$hoofdstuk"/>: <sch:value-of
                     select="substring($fouten, 1, string-length($fouten) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -354,12 +349,10 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="fouten" value="foo:foutenTPOD_0560($hoofdstuk, .)"/>
 
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0560: Als
-                tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van
-                Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt,
-                gevolgd door een punt. (betreft hoofdstukken, titels): <sch:value-of
-                    select="$hoofdstuk"/>: <sch:value-of
-                    select="substring($fouten, 1, string-length($fouten) - 2)"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0560: Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van
+                Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt. 
+                Betreft hoofdstukken, titels: <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten, 1, string-length($fouten) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -384,9 +377,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0570: Een
-                Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. Betreft
-                label: <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0570: Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. 
+                Betreft label: <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -400,11 +393,10 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="afdeling" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0580($afdeling, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0580: De
-                nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin
-                de Paragraaf voorkomt, gevolgd door een punt. (betreft afdelingen, paragrafen):
-                    <xsl:value-of select="$afdeling"/>: <sch:value-of
-                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0580: De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin
+                de Paragraaf voorkomt, gevolgd door een punt. 
+                Betreft afdelingen, paragrafen: <xsl:value-of select="$afdeling"/>: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -432,10 +424,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="volgorde" value="foo:volgordeTPOD_0590($afdeling, .)"/>
 
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0590:
-                Paragrafen moeten oplopend worden genummerd in Arabische cijfers (betreft
-                hoofdstukken, afdelingen): <sch:value-of select="../tekst:Kop/tekst:Nummer"/> :
-                    <sch:value-of select="tekst:Kop/tekst:Nummer"/> : <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0590: Paragrafen moeten oplopend worden genummerd in Arabische cijfers 
+                Betreft  hoofdstukken, afdelingen: <sch:value-of select="../tekst:Kop/tekst:Nummer"/>: <sch:value-of select="tekst:Kop/tekst:Nummer"/> : <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -463,9 +454,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="afdeling" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="fouten" value="foo:foutenTPOD_0600(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0600: Achter
-                het cijfer van een paragraafnummer mag geen punt worden opgenomen. (betreft
-                hoofdstukken, afdelingen): <sch:value-of select="../tekst:Kop/tekst:Nummer"/> :
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0600: Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen. 
+                Betreft hoofdstukken, afdelingen: <sch:value-of select="../tekst:Kop/tekst:Nummer"/> :
                     <sch:value-of select="tekst:Kop/tekst:Nummer"/> : <sch:value-of
                     select="substring($fouten, 1, string-length($fouten) - 2)"/></sch:assert>
         </sch:rule>
@@ -491,9 +482,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0620: Een
-                Subparagraaf moet worden geduid met de label Subparagraaf. Betreft label:
-                    <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0620: Een Subparagraaf moet worden geduid met de label Subparagraaf. 
+                Betreft label: <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"
                 /></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -507,10 +498,10 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="paragraaf" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0630($paragraaf, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0630: De
-                nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin
-                de Paragraaf voorkomt, gevolgd door een punt. (betreft paragrafen, subparagrafen):
-                    <xsl:value-of select="$paragraaf"/>: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0630: De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin
+                de Paragraaf voorkomt, gevolgd door een punt. 
+                Betreft paragrafen, subparagrafen: <xsl:value-of select="$paragraaf"/>: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -539,10 +530,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="volgorde" value="foo:volgordeTPOD_0640($paragraaf, .)"/>
 
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0640:
-                Subparagrafen moeten oplopend worden genummerd in Arabische cijfers (betreft
-                hoofdstukken): <sch:value-of
-                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0640: Subparagrafen moeten oplopend worden genummerd in Arabische cijfers 
+                betreft hoofdstukken: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -569,9 +559,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="paragraaf" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="fouten" value="foo:foutenTPOD_0650(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0650: Achter
-                het cijfer van een subparagraafnummer mag geen punt worden opgenomen. (betreft
-                subparagraaf, subsubparagrafen): <sch:value-of select="$paragraaf"/>: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0650: Achter het cijfer van een subparagraafnummer mag geen punt worden opgenomen. 
+                Betreft subparagraaf, subsubparagrafen: <sch:value-of select="$paragraaf"/>: <sch:value-of
                     select="substring($fouten, 1, string-length($fouten) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -596,9 +586,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0670: Een
-                Subsubparagraaf moet worden geduid met de label Subsubparagraaf. Betreft
-                subsubparagraaf, label: <sch:value-of select="tekst:Nummer"/>:<sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. 
+                Betreft subsubparagraaf, label: <sch:value-of select="tekst:Nummer"/>:<sch:value-of
                     select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -612,10 +602,10 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="subparagraaf" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0680($subparagraaf, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0680: De
-                nummering van Subsubparagrafen begint met het samengestelde nummer van de
-                Subparagraaf waarin de Subsubparagraaf voorkomt, gevolgd door een punt. (betreft
-                subparagraaf, subsubparagrafen): <xsl:value-of select="$subparagraaf"/>:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0680: De nummering van Subsubparagrafen begint met het samengestelde nummer van de
+                Subparagraaf waarin de Subsubparagraaf voorkomt, gevolgd door een punt. 
+                Betreft subparagraaf, subsubparagrafen: <xsl:value-of select="$subparagraaf"/>:
                     <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"
                 /></sch:assert>
         </sch:rule>
@@ -645,9 +635,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="volgorde" value="foo:volgordeTPOD_0690($subparagraaf, .)"/>
 
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0690:
-                Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers (betreft
-                hoofdstukken): <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0690: Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers 
+                Betreft hoofdstukken: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -675,9 +665,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="subparagraaf" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="fouten" value="foo:foutenTPOD_0700(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0700: Achter
-                het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen.
-                (betreft subparagraaf, subsubparagrafen): <sch:value-of select="$subparagraaf"/>:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0700: Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen.
+                Betreft subparagraaf, subsubparagrafen: <sch:value-of select="$subparagraaf"/>:
                     <sch:value-of select="substring($fouten, 1, string-length($fouten) - 2)"
                 /></sch:assert>
         </sch:rule>
@@ -702,9 +692,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0720: Een
-                Artikel moet worden geduid met de label Artikel. Betreft label: <sch:value-of
-                    select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0720: Een Artikel moet worden geduid met de label Artikel. 
+                Betreft label: <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -717,10 +707,10 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0730($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0730: De
-                nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
-                voorkomt, gevolgd door een punt. (betreft hoofdstuk, artikels): <xsl:value-of
-                    select="$hoofdstuk"/>: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0730: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
+                voorkomt, gevolgd door een punt. 
+                Betreft hoofdstuk, artikels): <xsl:value-of select="$hoofdstuk"/>: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -773,9 +763,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0740($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0740:
-                Artikelnummers moeten oplopend worden genummerd in Arabische cijfers (betreft
-                hoofdstuk, artikelen): <sch:value-of select="$hoofdstuk"/>:<sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0740: Artikelnummers moeten oplopend worden genummerd in Arabische cijfers. 
+                Betreft hoofdstuk, artikelen: <sch:value-of select="$hoofdstuk"/>:<sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -802,19 +792,19 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0741($hoofdstuk, .)"/>
             <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> TPOD_0741: De
-                nummering van Artikelen bevat letters en kan niet middels schematron op geldigheid
-                worden gecheckt. Dit moet handmatig gebeuren. (betreft hoofdstuk, artikels e.a.):
-                    <xsl:value-of select="$hoofdstuk"/>: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
+                TPOD_0741: De nummering van Artikelen bevat letters en kan niet middels schematron op geldigheid
+                worden gecheckt. Dit moet handmatig gebeuren. 
+                Betreft hoofdstuk, artikels e.a.): <xsl:value-of select="$hoofdstuk"/>: <sch:value-of
                     select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"
                 /></sch:assert>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0741($hoofdstuk, .)"/>
             <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> TPOD_0741: De
-                nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
+            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
+                TPOD_0741: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
                 voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in
-                Arabische cijfers inclusief indien nodig een letter.. (betreft hoofdstuk, artikels):
-                    <xsl:value-of select="$hoofdstuk"/>: <sch:value-of
+                Arabische cijfers inclusief indien nodig een letter. 
+                Betreft hoofdstuk, artikels): <xsl:value-of select="$hoofdstuk"/>: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -894,9 +884,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="CONDITION" value="not(ends-with($artikel, '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0750: Achter
-                het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen. (betreft
-                artikelen): <sch:value-of select="$artikel"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0750: Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen. 
+                Betreft artikelen: <sch:value-of select="$artikel"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -909,9 +899,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="volgorde" value="foo:volgordeTPOD_0780(.)"/>
 
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0780: Leden
-                moeten per artikel oplopend genummerd worden in Arabische cijfers. (betreft
-                artikelen, leden): <sch:value-of select="$artikel"/>: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0780: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers. 
+                Betreft artikelen, leden: <sch:value-of select="$artikel"/>: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -936,17 +926,18 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0781(.)"/>
             <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> TPOD_0781: De
-                nummering van Leden bevat letters en kan niet middels schematron op geldigheid
-                worden gecheckt. Dit moet handmatig gebeuren. (betreft artikelen, leden
-                    e.a.):<sch:value-of select="$artikel"/>: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
+                TPOD_0781: De nummering van Leden bevat letters en kan niet middels schematron op geldigheid
+                worden gecheckt. Dit moet handmatig gebeuren. 
+                Betreft artikelen, leden e.a.:<sch:value-of select="$artikel"/>: <sch:value-of
                     select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"
                 /></sch:assert>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0781(.)"/>
             <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> TPOD_0781: Leden
-                moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig,
-                een letter). (betreft artikelen, leden): <sch:value-of select="$artikel"/>:
+            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
+                TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig,
+                een letter). 
+                Betreft artikelen, leden: <sch:value-of select="$artikel"/>:
                     <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"
                 /></sch:assert>
         </sch:rule>
@@ -1003,9 +994,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="volgorde" value="foo:volgordeTPOD_0790(.)"/>
 
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0790: Het
-                eerste lid van ieder artikel krijgt het nummer 1. (betreft artikelen, leden):
-                    <sch:value-of select="$artikel"/>: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0790: Het eerste lid van ieder artikel krijgt het nummer 1. 
+                Betreft artikelen, leden: <sch:value-of select="$artikel"/>: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1050,9 +1041,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="fouten" value="foo:foutenTPOD_0800(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0800: Achter
-                het lidnummer moet een punt worden opgenomen. (betreft artikel, lidnummers):
-                    <sch:value-of select="$artikel"/>: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0800: Achter het lidnummer moet een punt worden opgenomen. 
+                Betreft artikel, lidnummers: <sch:value-of select="$artikel"/>: <sch:value-of
                     select="substring($fouten, 1, string-length($fouten) - 2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1069,6 +1060,19 @@ Opmerkingen / hints: Document is in ontwikkeling.
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
 
+    <!-- ============TPOD_0810================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0810">
+        <sch:rule context="//tekst:Lijst">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION" value="name(*[1])='Lijstaanhef'"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0810: Een Lijst moet worden voorafgegaan door een alinea met inleidende tekst.
+                Betreft: Lijst met wId: <sch:value-of select="string(./@wId)"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+
     <!-- ============TPOD_0820================================================================================================================ -->
 
     <sch:pattern id="TPOD_0820">
@@ -1076,8 +1080,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="ancestorsFout" value="foo:lijstAncestorsTPOD_0820(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0820:
-                    <sch:value-of select="$ancestorsFout"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0820: <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -1117,8 +1121,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="ancestorsFout" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0830/0831:
-                    <sch:value-of select="$ancestorsFout"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0830/0831: <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -1167,8 +1171,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="ancestorsFout" value="foo:checkEersteNiveauLijstLettersTPOD_0840(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0840/0841:
-                    <sch:value-of select="$ancestorsFout"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0840/0841: <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -1218,8 +1222,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="ancestorsFout" value="foo:checkEersteNiveauLijstLettersTPOD_0850(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0850/0851:
-                    <sch:value-of select="$ancestorsFout"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0850/0851: <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -1270,9 +1274,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
                 value="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD_0880: Een
-                OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene
-                bepalingen. </sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen. </sch:assert>
         </sch:rule>
         <sch:rule context="//tekst:Lichaam">
             <sch:let name="APPLICABLE"
@@ -1280,9 +1283,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="hoofdstuk1" value="foo:hoofdstuk1TPOD_0880(.)"/>
 
             <sch:let name="CONDITION" value="$hoofdstuk1 = 1 or $hoofdstuk1 = -1"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD_0880: Een
-                OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene
-                bepalingen. </sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen. </sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -1314,12 +1316,10 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="fouteCoord" value="foo:fouteCoordTPOD_0930(3, .)"/>
             <sch:let name="CONDITION" value="string-length($fouteCoord) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> ZH:TP0D930: Indien
-                gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden
                 van meters worden opgegeven waarbij de waarde maximaal 3 decimalen achter de komma
-                mag bevatten. Id=<sch:value-of select="geo:id"/>. De coordinaten waarom het gaat
-                staan nu genoemd: <sch:value-of
-                    select="concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 30), '.....')"
+                mag bevatten. Id=<sch:value-of select="geo:id"/>. <sch:value-of select="concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 30), '.....')"
                 /></sch:assert>
         </sch:rule>
         <sch:rule
@@ -1327,12 +1327,10 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="fouteCoord" value="foo:fouteCoordTPOD_0930(8, .)"/>
             <sch:let name="CONDITION" value="string-length($fouteCoord) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> ZH:TP0D930: Indien
-                gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van
                 meters worden opgegeven waarbij de waarde maximaal 8 decimalen achter de komma mag
-                bevatten. Id=<sch:value-of select="geo:id"/>. De coordinaten waarom het gaat staan
-                nu genoemd: <sch:value-of
-                    select="concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 30), '.....')"
+                bevatten. Id=<sch:value-of select="geo:id"/>. <sch:value-of select="concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 30), '.....')"
                 /></sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1362,8 +1360,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="crs" value="foo:crsTPOD_0940(.)"/>
             <sch:let name="crsses" value="foo:crssesTPOD_0940($crs, .)"/>
             <sch:let name="CONDITION" value="string-length($crsses) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TP0D940: Een
-                geometrie moet zijn opgebouwd middels één coordinate reference system (crs):
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                H:TP0D940: Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs):
                 EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=<sch:value-of
                     select="parent::*/geo:id"/>: </sch:assert>
         </sch:rule>
@@ -1401,8 +1399,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="string-length(foo:opschriftTPOD0980(..)) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0980: Een
-                OW-besluit moet minimaal één hoofdstuk 1 bevatten met artikel met opschrift
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0980: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met artikel met opschrift
                 Begripsbepaling of een specifieke Bijlage met Begripsbepaling. </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1444,7 +1442,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="CONDITION"
                 value="string-length($fouten)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0990: Het artikel Begripsbepalingen dan wel de bijlage met begripsbepalingen moet met beginnen met een introducerende zin. Dit is niet zo in: <sch:value-of select="$fouten"/> </sch:assert>
+                TPOD_0990: Het artikel Begripsbepalingen dan wel de bijlage met begripsbepalingen moet met beginnen met een introducerende zin. 
+                Dit is niet zo in: <sch:value-of select="$fouten"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1466,7 +1465,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="CONDITION"
                 value="string-length($items)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1000_1050: Een Begrip moet bestaan uit één term en één definitie. Begrip met wId: <sch:value-of select="string(@wId)"/> bevat geen <sch:value-of select="$items"/></sch:assert>
+                TPOD_1000_1050: Een Begrip moet bestaan uit één term en één definitie. 
+                Begrip met wId: <sch:value-of select="string(@wId)"/> bevat geen <sch:value-of select="$items"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1497,7 +1497,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="CONDITION"
                 value="string-length($items)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1010_1060: Een Begriplijst moet gesorteerd zijn, de Begrippenlijst met wId: "<sch:value-of select="$items"/>" is dat niet</sch:assert>
+                TPOD_1010_1060: Een Begriplijst moet gesorteerd zijn, de Begrippenlijst met wId: "<sch:value-of select="$items"/>" is dat niet
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1530,10 +1531,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="
                     (rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde or rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde) and
                     not(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde and rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1650:
-                    <sch:value-of select="rol:identificatie"/>: Het attribuut 'normwaarde' moet
-                bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf
-                'kwantitatieveWaarde'. </sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1650: Het attribuut 'normwaarde' moet bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde'. 
+                Betreft: <sch:value-of select="rol:identificatie"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -1546,11 +1546,11 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
                 value="(r:activiteitaanduiding) or (not(r:activiteitaanduiding) and not(r:activiteitregelkwalificatie))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1670:
-                behorend bij ArtikelOfLid <sch:value-of
-                    select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>:
-                Activiteitregelkwalificatie is alleen te gebruiken wanneer het object ‘Regel voor
-                iedereen’ is geannoteerd met Activiteit. </sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1670: Activiteitregelkwalificatie is alleen te gebruiken wanneer het object ‘Regel voor
+                iedereen’ is geannoteerd met Activiteit.
+                Betreft: ArtikelOfLid <sch:value-of select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -1573,7 +1573,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="foo:activiteitenTrajectNaarFunctioneleStructuurTPOD_1700($circulaireActivititeiten, $activiteitenLijst, $identificatie, $lokaalBovenliggend)"/>
             <sch:let name="CONDITION"
                 value="string-length($activiteitenTrajectNaarFunctioneleStructuur) > 0"/>
-            <sch:report test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> REPORT: H:TPOD1700:
+            <sch:report test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> REPORT: TPOD1700:
                 Activiteit-ids: <sch:value-of
                     select="substring($activiteitenTrajectNaarFunctioneleStructuur, 1, string-length($activiteitenTrajectNaarFunctioneleStructuur) - 2)"
                 />: Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in
@@ -1690,11 +1690,12 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="foo:circulaireActivititeitenTPOD_1710(., $activiteitenLijst)"/>
             <!-- TPOD1710  -->
             <sch:let name="CONDITION" value="string-length($circulaireActivititeiten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TP0D1710:
-                Activiteit-ids: <sch:value-of
-                    select="substring($circulaireActivititeiten, 1, string-length($circulaireActivititeiten) - 2)"
-                />: Een bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in
-                de hiërarchie ligt.</sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                H:TP0D1710: Een bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in
+                de hiërarchie ligt.
+                Betreft: Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten, 1, string-length($circulaireActivititeiten) - 2)"
+                />
+            </sch:assert>
         </sch:rule>
 
     </sch:pattern>
@@ -1763,10 +1764,11 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <!-- TPOD1730  -->
             <sch:let name="CONDITION"
                 value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1730:
-                    <sch:value-of select="rol:identificatie"/> Betreft verwijzing: <sch:value-of
-                    select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
-                Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.</sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1730: Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.
+                <sch:value-of select="rol:identificatie"/> Betreft verwijzing: <sch:value-of select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
+            </sch:assert>
+            
         </sch:rule>
 
     </sch:pattern>
@@ -1792,7 +1794,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <!-- TPOD1740  -->
             <sch:let name="CONDITION"
                 value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href))"/>
-            <sch:report test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> REPORT: H:TPOD1740:
+            <sch:report test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> REPORT: TPOD1740:
                     <sch:value-of select="rol:identificatie"/>: Betreft verwijzing: <sch:value-of
                     select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
                 Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt. DIT LAATSTE
@@ -1820,9 +1822,9 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
                 value="contains(ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebied.')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1760: Betreft
-                    <sch:value-of select="ga:identificatie"/>: Een gebiedsaanwijzing moet een gebied
-                of gebiedengroep zijn (en mag geen punt, puntengroep, lijn of lijnengroep zijn).
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1760: Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt, puntengroep, lijn of lijnengroep zijn).
+                Betreft <sch:value-of select="ga:identificatie"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1837,7 +1839,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="CONDITION"
                 value="(count(//tekst:Artikel)>0 and count(//tekst:Hoofdstuk/descendant::tekst:Artikel)>0) or count(//Artikel)=0"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1780: Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel. </sch:assert>
+                TPOD1780: Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1851,7 +1853,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="CONDITION"
                 value="false()"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing.</sch:assert>
+                TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing.</sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1862,10 +1864,10 @@ Opmerkingen / hints: Document is in ontwikkeling.
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing/ga:type">
             <sch:let name="APPLICABLE" value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
             <sch:let name="CONDITION" value="not(text() = 'functie')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1830: Binnen
-                het object ‘Gebiedsaanwijzing’ is de waarde ‘functie’ van attribuut ‘type’ (datatype
-                TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het gaat: <sch:value-of
-                    select="../ga:identificatie/text()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘functie’ van attribuut ‘type’ (datatype
+                TypeGebiedsaanwijzing) niet toegestaan. 
+                Betreft: <sch:value-of select="../ga:identificatie/text()"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1877,10 +1879,10 @@ Opmerkingen / hints: Document is in ontwikkeling.
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing/ga:type">
             <sch:let name="APPLICABLE" value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
             <sch:let name="CONDITION" value="not(text() = 'beperkingengebied')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1840: Binnen
-                het object ‘Gebiedsaanwijzing’ is de waarde ‘beperkingengebied’ van attribuut ‘type’
-                (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het gaat:
-                    <sch:value-of select="../ga:identificatie/text()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1840: Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘beperkingengebied’ van attribuut ‘type’
+                (datatype TypeGebiedsaanwijzing) niet toegestaan. 
+                Betreft: <sch:value-of select="../ga:identificatie/text()"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1893,8 +1895,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="fouten" value="foo:CheckFouteConstructiesTPOD_1850(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TPOD1850: Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; Regel voor iedereen, Instructieregel of Omgevingswaarderegel. 
-                Het Regeltekst waarom het gaat: <sch:value-of select="$fouten"/>
+                TPOD1850: Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; Regel voor iedereen, Instructieregel of Omgevingswaarderegel. 
+                Betreft Regeltekst: <sch:value-of select="$fouten"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1918,16 +1920,17 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION"
                 value="not(r:gerelateerdeRegeltekst/r-ref:RegeltekstRef/@xlink:href eq r:identificatie)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1860: Betreft
-                    <sch:value-of select="name()"/>: <sch:value-of select="r:identificatie"/>:
-                Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
-                (gerelateerdeRegeltekst verwijst naar zichzelf) </sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1860: Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
+                (gerelateerdeRegeltekst verwijst naar zichzelf) 
+                Betreft <sch:value-of select="name()"/>: <sch:value-of select="r:identificatie"/>
+            </sch:assert>
         </sch:rule>
         <sch:rule context="//rol:Activiteit">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION"
                 value="not(rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1860: Betreft
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD1860: Betreft
                     <sch:value-of select="name()"/>: <sch:value-of select="rol:identificatie"/>:
                 Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
                 (gerelateerdeActiviteit verwijst naar zichzelf) </sch:assert>
@@ -1937,7 +1940,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.', @xlink:href, '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1860: Betreft
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD1860: Betreft
                     <sch:value-of select="../../name()"/>: <sch:value-of
                     select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>, <sch:value-of
                     select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
@@ -1949,7 +1952,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.', ., '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1860: Betreft
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD1860: Betreft
                     <sch:value-of select="name()"/>: <sch:value-of select="."/>: Iedere verwijzing
                 naar een ander OwObject moet een bestaand (ander) OwObject zijn.
                 (r:Regeltekst/r:identificatie niet aangetroffen) </sch:assert>
@@ -1959,7 +1962,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.', @xlink:href, '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1860: Betreft
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD1860: Betreft
                     <sch:value-of select="../../name()"/>: <sch:value-of
                     select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>, <sch:value-of
                     select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
@@ -1971,7 +1974,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.', @xlink:href, '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1860: Betreft
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD1860: Betreft
                     <sch:value-of select="../../name()"/>: <sch:value-of
                     select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>, <sch:value-of
                     select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
@@ -1983,7 +1986,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.', @xlink:href, '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1860: Betreft
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD1860: Betreft
                     <sch:value-of select="../../name()"/>: <sch:value-of
                     select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>, <sch:value-of
                     select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
@@ -1995,7 +1998,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.', @xlink:href, '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1860: Betreft
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD1860: Betreft
                     <sch:value-of select="../../name()"/>: <sch:value-of
                     select="../../rol:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
                 verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
@@ -2006,9 +2009,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers" value="foo:getLocationIdentifiersTPOD_1860()"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.', @xlink:href, '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1860: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../*:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1860: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../*:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
                 verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.
                 (verwijzing vanuit l:ref niet aangetroffen) </sch:assert>
 
@@ -2043,9 +2045,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="identifiers" value="foo:getRegelTekstIdentifiersTPOD_1870()"/>
             <sch:let name="CONDITION"
                 value="contains($identifiers, r-ref:RegeltekstRef/@xlink:href)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1870: Betreft
-                    <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"
-                />, <sch:value-of select="r-ref:RegeltekstRef/@xlink:href"/>: Een verwijzing naar
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1870: Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of select="r-ref:RegeltekstRef/@xlink:href"/>: Een verwijzing naar
                 ArtikelOfLid moet verwijzen naar een bestaand artikel of lid. </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2066,8 +2067,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION"
                 value="contains(text(), concat('.', lower-case(tokenize(../name(), ':')[last()]), '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1890: Betreft
-                    <sch:value-of select="../name()"/>: <sch:value-of select="text()"/>: De
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1890: Betreft <sch:value-of select="../name()"/>: <sch:value-of select="text()"/>: De
                 identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten.
             </sch:assert>
         </sch:rule>
@@ -2080,8 +2081,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="objects" value="foo:owObjectenLijstTPOD_1910(.)"/>
             <sch:let name="CONDITION" value="contains($objects, concat('.', text(), '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1910: De
-                objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1910: De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen
                 overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand. Het
                 objecttype waarom het gaat staan nu genoemd: <sch:value-of select="text()"/>
             </sch:assert>
@@ -2105,8 +2106,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="nfFOOT" value="foo:notfoundFileOrObjectTypeTPOD_1920(naam, .)"/>
             <sch:let name="CONDITION" value="string-length($nfFOOT) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD1920: De
-                objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1920: De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het
                 betreffende Ow-bestand. De objecttypen waarom het gaat staan nu genoemd:
                     <sch:value-of select="$nfFOOT"/>
             </sch:assert>
@@ -2144,8 +2145,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="notFound" value="foo:notFoundTPOD_1930(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1930: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1930: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"
                 />, <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject in een
                 Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.
             </sch:assert>
@@ -2183,9 +2184,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="notFound" value="foo:notFoundTPOD_1940(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1940: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"
-                />, <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject in een
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1940: Betreft  <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject in een
                 Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn. </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2221,9 +2221,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="notFound" value="foo:notFoundTPOD_1950(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1950: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"
-                />, <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject in een
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1950: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject in een
                 Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn. </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2261,9 +2260,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="geometrie" value="foo:geometrieTPOD_1960($href)"/>
             <sch:let name="CONDITION"
                 value="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1960: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1960: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
                 verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn.
             </sch:assert>
         </sch:rule>
@@ -2286,9 +2284,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="href" value="string(@xlink:href)"/>
             <sch:let name="geometrie" value="$gmlDocuments//geo:Geometrie[geo:id/text() eq $href]"/>
             <sch:let name="CONDITION" value="$geometrie//gml:MultiPoint || $geometrie//gml:Point"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1970: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1970: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
                 verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.
             </sch:assert>
         </sch:rule>
@@ -2301,9 +2298,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
             <sch:let name="CONDITION" value="foo:calculateConditionTPOD_1980($href) = 1"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1980: Betreft
-                    <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1980: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
                 verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.
             </sch:assert>
         </sch:rule>
@@ -2335,8 +2331,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="nietGerefereerdeGeometrie"
                 value="foo:nietGerefereerdeGeometrieTPOD_1990($geoLocationGeoReferenceIdentifiers, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrie) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1990: Ieder
-                OwObject heeft minstens een OwObject dat ernaar verwijst: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst: <sch:value-of
                     select="geo:id/text()"/>
             </sch:assert>
         </sch:rule>
@@ -2348,8 +2344,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="nietGerefereerdeReferenties"
                 value="foo:nietGerefereerdeReferentiesTPOD_1990($regeltekstReferenties, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1990: Iedere
-                Regeltekst heeft minstens een OwObject dat ernaar verwijst: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Iedere Regeltekst heeft minstens een OwObject dat ernaar verwijst: <sch:value-of
                     select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
                 />
             </sch:assert>
@@ -2362,8 +2358,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="nietGerefereerdeReferenties"
                 value="foo:nietGerefereerdeReferentiesTPOD_1990($formeleDivisieReferenties, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1990: Iedere
-                FormeleDivisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Iedere FormeleDivisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst:
                     <sch:value-of
                     select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
                 />
@@ -2377,8 +2373,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="nietGerefereerdeReferenties"
                 value="foo:nietGerefereerdeReferentiesTPOD_1990($activiteitRefs, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1990: Iedere
-                Activiteit heeft minstens een OwObject dat ernaar verwijst: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Iedere Activiteit heeft minstens een OwObject dat ernaar verwijst: <sch:value-of
                     select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
                 />
             </sch:assert>
@@ -2394,8 +2390,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
                 </xsl:if>
             </sch:let>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_1990: Iedere
-                Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst: <sch:value-of
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1990: Iedere Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst: <sch:value-of
                     select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
                 />
             </sch:assert>
@@ -2457,8 +2453,8 @@ Opmerkingen / hints: Document is in ontwikkeling.
         <sch:rule context="//r:Regeltekst">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD2000: Betreft
-                    <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: het wId van de
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2000: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: het wId van de
                 Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP
             </sch:assert>
         </sch:rule>
@@ -2572,7 +2568,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="message" value="foo:existsTPOD_2050()"/>
             <sch:let name="CONDITION" value="string-length($message) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD2050:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD2050:
                     <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
@@ -2602,7 +2598,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="message" value="foo:checkFouteArtikelLidCombinatieTPOD_2060(.)"/>
             <sch:let name="CONDITION" value="string-length($message) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD2060:
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD2060:
                     <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
@@ -2652,7 +2648,7 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="fouten" value="foo:checkOwObjectenTPOD_2070(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD2070: Vanuit
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD2070: Vanuit
                 volgende Ow-objecten wordt er van of naar Activiteit: <sch:value-of
                     select="rol:identificatie/text()"/> verwezen, terwijl de regelTekstIds niet
                 overeen komen: <sch:value-of

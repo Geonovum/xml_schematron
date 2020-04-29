@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   schemaversie="0.98.3-kern"
+   xsi:schemaLocation="http://www.overheid.nl/imop/def# ../lvbb/LVBB-stop.xsd">
+   <BesluitVersie>
+      <Besluit xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <Regeling>
+            <WijzigBijlage eId="cmp_A" wId="pv26_311__cmp_A">
+               <Kop>
+                  <Label>Bijlage</Label>
+                  <Nummer>A</Nummer>
+                  <Opschrift>Bijlage bij artikel I</Opschrift>
+               </Kop>
+               <MaakInitieleRegeling FRBRwork="/akn/nl/act/pv26/2020/act3"
+                  wordt="/akn/nl/act/pv26/2020/act3/nld@2020-03-05"
+                  componentnaam="component_01">
+                  <Lichaam eId="body_o_1" wId="body_o_1">
+                     <Hoofdstuk eId="chp_1" wId="pv26_311__chp_1">
+                        <Kop>
+                           <Label>Hoofdstuk</Label>
+                           <Nummer>1</Nummer>
+                           <Opschrift>Inleidende regels</Opschrift>
+                        </Kop>
+                        <Artikel eId="chp_1__art_1.1" wId="pv26_311__chp_1__art_1.1">
+                           <Kop>
+                              <Label>Artikel</Label>
+                              <Nummer>1.1</Nummer>
+                              <Opschrift>Begripsbepalingen</Opschrift>
+                           </Kop>
+                           <Inhoud>
+                              <Begrippenlijst eId="chp_1__art_1.1__list_o_1" wId="pv26_311__chp_1__art_1.1__list_o_1">
+                                 <Begrip eId="chp_1__art_1.1__list_o_1__item_o_1"
+                                    wId="pv26_311__chp_1__art_1.1__list_o_1__item_o_1">
+                                    <Term>bebouwingsenclave</Term>
+                                    <Definitie>
+                                       <Al>geconcentreerde bebouwing kleiner dan 5 hectare, waarvoor geen rode contour is opgenomen</Al>
+                                    </Definitie>
+                                 </Begrip>
+                                 <Begrip eId="chp_1__art_1.1__list_o_1__item_o_2"
+                                    wId="pv26_311__chp_1__art_1.1__list_o_1__item_o_2">
+                                    <Term>bebouwingslint</Term>
+                                    <Definitie>
+                                       <Al>aaneengesloten bebouwing in een langgerekte vorm, waarvoor geen rode contour is opgenomen</Al>
+                                    </Definitie>
+                                 </Begrip>
+                                 <Begrip eId="chp_1__art_1.1__list_o_1__item_o_3"
+                                    wId="pv26_311__chp_1__art_1.1__list_o_1__item_o_3">
+                                    <Term>beeldkwaliteitsparagraaf</Term>
+                                    <Definitie>
+                                       <Al>een onderdeel van de ruimtelijke onderbouwing dat aangeeft op welke wijze de beoogde ruimtelijke ontwikkeling optimaal in de omgeving wordt ingepast. Basis daarvoor is een analyse van de kwaliteiten van het omringende landschap. Uitgewerkt volgt in een schets of beschrijving, waarop de bouwmassa’s (bestaand en beoogd, zo mogelijk met kapvorm en -richting), het beoogde grondgebruik, de beplanting en wegenstructuur zijn aangegeven</Al>
+                                    </Definitie>
+                                 </Begrip>
+                                 <Begrip eId="chp_1__art_1.1__list_o_1__item_o_4"
+                                    wId="pv26_311__chp_1__art_1.1__list_o_1__item_o_4">
+                                    <Term>kernrandactiviteiten</Term>
+                                    <Definitie>
+                                       <Al>stedelijke functies gericht op recreatief, sportief of maatschappelijk gebruik op lokale schaal, waarbij de gronden merendeels onbebouwd zijn;</Al>
+                                    </Definitie>
+                                 </Begrip>
+                                 <Begrip eId="chp_1__art_1.1__list_o_1__item_o_5"
+                                    wId="pv26_311__chp_1__art_1.1__list_o_1__item_o_5">
+                                    <Term>kernrandzone</Term>
+                                    <Definitie>
+                                       <Al>zone gelegen in het landelijk gebied rondom en direct aansluitend op bebouwingskernen met een zogenoemde rode contour (stedelijk gebied). Hieronder vallen ook dorpskernen. De omvang van deze zone is indicatief aangegeven en kan variëren, onder meer afhankelijk van de al aanwezige functies, de kwaliteiten en de aanwezige bebouwings­dichtheid. In deze zone komen, naast agrarische activiteiten, kernrandactiviteiten voor;</Al>
+                                    </Definitie>
+                                 </Begrip>
+                                 <Begrip eId="chp_1__art_1.1__list_o_1__item_o_6"
+                                    wId="pv26_311__chp_1__art_1.1__list_o_1__item_o_6">
+                                    <Term>recreatiewoning</Term>
+                                    <Definitie>
+                                       <Al>woning, caravan, stacaravan of bouwwerk ten behoeve van recreatief verblijf, inclusief overnachting;</Al>
+                                    </Definitie>
+                                 </Begrip>
+                                 <Begrip eId="chp_1__art_1.1__list_o_1__item_o_7"
+                                    wId="pv26_311__chp_1__art_1.1__list_o_1__item_o_7">
+                                    <Term>verstedelijking</Term>
+                                    <Definitie>
+                                       <Al>van verstedelijking is sprake als een ruimtelijk besluit ten opzichte van het vigerende planologische regime nieuwe mogelijkheden biedt voor vestiging of uitbreiding van stedelijke functies;</Al>
+                                    </Definitie>
+                                 </Begrip>
+                              </Begrippenlijst>
+                           </Inhoud>
+                        </Artikel>
+                     </Hoofdstuk>
+                     <Bijlage eId="cmp_I" wId="pv26_311__cmp_I">
+                        <Kop>
+                           <Label>Bijlage</Label>
+                           <Nummer>I</Nummer>
+                           <Opschrift>Begripsbepalingen</Opschrift>
+                        </Kop>
+                        <Inhoud>
+                           <Begrippenlijst eId="cmp_I__list_o_1" wId="pv26_311__cmp_I__list_o_1">
+                              <Begrip eId="cmp_I__list_o_1__item_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_1">
+                                 <Term>Boringsvrijezone</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_1__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_1__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040">/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_2"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_2">
+                                 <Term>Bufferzonestiltegebied</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_2__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044">/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_3"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_3">
+                                 <Term>Concentratiegebiedglastuinbouw</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_3__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_3__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045">/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_4"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_4">
+                                 <Term>Grondwaterbeschermingsgebied</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_4__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039">/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_5"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_5">
+                                 <Term>Kernrandzone</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_5__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051">/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_6"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_6">
+                                 <Term>Kwetsbarestrategischegrondwatervoorraad</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_6__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_6__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053">/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_7"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_7">
+                                 <Term>Landelijkgebied</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_7__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_7__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047">/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_8"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_8">
+                                 <Term>Matigkwetsbarestrategischegrondwatervoorraad</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_8__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_8__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043">/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_9"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_9">
+                                 <Term>Recreatiewoningen</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_9__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_9__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042">/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_10"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_10">
+                                 <Term>Slaperdijk</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_10__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_10__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054">/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_11"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_11">
+                                 <Term>Stedelijkgebied</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_11__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_11__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057">/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_12"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_12">
+                                 <Term>Stillekern</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_12__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_12__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062">/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_13"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_13">
+                                 <Term>Stiltegebied</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_13__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_13__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060">/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_14"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_14">
+                                 <Term>Strategischegrondwatervoorraad</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_14__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_14__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058">/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_15"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_15">
+                                 <Term>Vrijwaringszonestiltegebied</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_15__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_15__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055">/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_16"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_16">
+                                 <Term>Waterwingebied</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_16__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_16__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061">/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_17"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_17">
+                                 <Term>WaterwingebiedBethunepolder</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_17__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_17__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063">/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_18"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_18">
+                                 <Term>WeginbeheerbijdeProvincie</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_18__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_18__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059">/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_19"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_19">
+                                 <Term>beperkingengebiedmetbetrekkingtoteenprovincialeweg</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_19__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_19__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056">/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                              <Begrip eId="cmp_I__list_o_1__item_o_20"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_20">
+                                 <Term>xxx-jaaraandachtsgebied</Term>
+                                 <Definitie>
+                                    <Al>
+                                       <ExtIoRef eId="cmp_I__list_o_1__item_o_20__ref_o_1"
+                                          wId="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1"
+                                          doel="/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049">/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</ExtIoRef>
+                                    </Al>
+                                 </Definitie>
+                              </Begrip>
+                           </Begrippenlijst>
+                        </Inhoud>
+                     </Bijlage>
+                  </Lichaam>
+               </MaakInitieleRegeling>
+            </WijzigBijlage>
+         </Regeling>
+      </Besluit>
+   </BesluitVersie>
+   <RegelingVersieInformatie>
+      <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+      </RegelingMetadata>
+   </RegelingVersieInformatie>
+</AanleveringBesluit>

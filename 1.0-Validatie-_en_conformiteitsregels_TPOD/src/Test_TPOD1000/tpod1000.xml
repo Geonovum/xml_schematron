@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AanleveringBesluit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://standaarden.overheid.nl/lvbb/stop/"
+    xsi:schemaLocation="https://standaarden.overheid.nl/lvbb/stop/ https://raw.githubusercontent.com/Geonovum/xml_op_xsd_0.98.3-kern/master/lvbb/LVBB-stop.xsd"
+    schemaversie="0.98.3-kern">
+    <BesluitVersie>
+        
+        
+        
+        
+        <Besluit xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+            <Regeling>
+                
+                
+                
+                <WijzigBijlage eId="cmp_A" wId="gm0037_1__cmp_A">
+                    
+                    <MaakInitieleRegeling FRBRwork="/akn/nl/act/gm0037/2018/reg456" wordt="/akn/nl/act/gm0037/2019/reg456/nld@main" componentnaam="component_01">
+                        
+                        
+                        <Bijlage eId="cmp_I" wId="gm0037_1__cmp_I">
+                            <Kop>
+                                <Label>Bijlage</Label>
+                                <Nummer>I</Nummer>
+                                <Opschrift>Overzicht Informatieobjecten</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Begrippenlijst eId="cmp_I__list_o_1" wId="gm0037_1__cmp_I__list_o_1">
+                                    <Begrip eId="cmp_I__list_o_1__item_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_1">
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__list_o_1__item_o_2" wId="gm0037_1__cmp_I__list_o_1__item_o_2">
+                                        <Term>Centrumgebied</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1" doel="/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520">/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__list_o_1__item_o_3" wId="gm0037_1__cmp_I__list_o_1__item_o_3">
+                                        <Term>Zone A</Term>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__list_o_1__item_o_4" wId="gm0037_1__cmp_I__list_o_1__item_o_4">
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_1" doel="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520">/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__list_o_1__item_o_5" wId="gm0037_1__cmp_I__list_o_1__item_o_5">
+                                        <Term>Exploiteren speelautomatenhal</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_1" doel="/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520">/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                </Begrippenlijst>
+                            </Inhoud>
+                        </Bijlage>
+                    </MaakInitieleRegeling>
+                </WijzigBijlage>
+            </Regeling>
+        </Besluit>
+    </BesluitVersie>
+    <RegelingVersieInformatie>
+        <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+        </RegelingMetadata>
+    </RegelingVersieInformatie>
+</AanleveringBesluit>

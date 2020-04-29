@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!-- created by OpenOmgevingswet -->
+<AanleveringGIO schemaversie="0.98.3-kern" xmlns="https://standaarden.overheid.nl/lvbb/stop/" xmlns:cons="https://standaarden.overheid.nl/stop/imop/consolidatie/" xmlns:data="https://standaarden.overheid.nl/stop/imop/data/" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:id="https://standaarden.overheid.nl/stop/imop/identificatie/" xmlns:meta="https://standaarden.overheid.nl/stop/imop/metadata/" xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/" xmlns:tooi="https://standaarden.overheid.nl/stop/imop/tooi/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://standaarden.overheid.nl/lvbb/stop/ ../stop/LVBB-stop.xsd">
+  <InformatieObjectVersie>
+    <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+      <FRBRWork>/join/id/regdata/mnre1045/2020/OOWbTm</FRBRWork>
+      <FRBRExpression>/join/id/regdata/mnre1045/2020/OOWbTm/nld@2020-02-05</FRBRExpression>
+      <soortWork>/join/id/stop/work_007</soortWork>
+    </ExpressionIdentificatie>
+    <InformatieObjectMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+      <eindverantwoordelijke>/tooi/id/ministerie/mnre1045</eindverantwoordelijke>
+      <maker>/tooi/id/ministerie/mnre1045</maker>
+      <noemer>Tijdelijke Maatregelen</noemer>
+      <officieleTitel>Tijdelijke Maatregelen</officieleTitel>
+      <publicatieinstructie>TeConsolideren</publicatieinstructie>
+      <soortInformatieobject>/join/id/stop/informatieobject/gio_001</soortInformatieobject>
+      <heeftBestanden>
+        <heeftBestand>
+          <Bestand>
+            <bestandsnaam>Tm.gml</bestandsnaam>
+            <hash>06dfbb45572c9741e87aef29a110c47555974c39ee4dec23f38019bed85bf77d38daa469a8c8981f96ac661fcc905a8e7baaa69765c79de1b47dc809d8f085b5</hash>
+          </Bestand>
+        </heeftBestand>
+      </heeftBestanden>
+    </InformatieObjectMetadata>
+    <GeoInformatie gml:id="id-OOWbTm" xmlns="https://standaarden.overheid.nl/stop/imop/geo/">
+      <featureMember>
+        <Locatie gml:id="OOWbTm">
+          <wId>OOWbTm</wId>
+          <naam>Tijdelijke Maatregelen</naam>
+          <geometrie xlink:href="Tm.gml#OOWbTm"/>
+        </Locatie>
+      </featureMember>
+    </GeoInformatie>
+    <Achtergrond xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+      <bronbeschrijving>top10nl</bronbeschrijving>
+      <brontype>achtergrond</brontype>
+      <bronactualiteit>2020-01-31</bronactualiteit>
+    </Achtergrond>
+  </InformatieObjectVersie>
+</AanleveringGIO>

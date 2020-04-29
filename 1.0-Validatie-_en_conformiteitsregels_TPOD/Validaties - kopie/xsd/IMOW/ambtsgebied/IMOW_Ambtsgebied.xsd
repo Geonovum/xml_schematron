@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:a="http://www.geostandaarden.nl/imow/ambtsgebied"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+           xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref"
+           targetNamespace="http://www.geostandaarden.nl/imow/ambtsgebied"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="0.99-1">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/ambtsgebied</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">0.99</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">1</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20200401</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-03-13T07:38:52Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/ambtsgebied/v20200401/IMOW_Ambtsgebied.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+              schemaLocation="../../IMOW/datatypenalgemeen/IMOW_DatatypenAlgemeen.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/locatie-ref"
+              schemaLocation="../../IMOW/locatie-ref/IMOW_LocatieRef.xsd"/>
+   <xs:element name="Ambtsgebied" type="a:Ambtsgebied" abstract="false"/>
+   <xs:complexType name="Ambtsgebied" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     type="da:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="locatieaanduiding" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="1">
+                  <xs:element ref="l-ref:LocatieRef"/>
+                  <xs:element ref="l-ref:GebiedRef"/>
+                  <xs:element ref="l-ref:GebiedengroepRef"/>
+                  <xs:element ref="l-ref:PuntRef"/>
+                  <xs:element ref="l-ref:PuntengroepRef"/>
+                  <xs:element ref="l-ref:LijnengroepRef"/>
+                  <xs:element ref="l-ref:LijnRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

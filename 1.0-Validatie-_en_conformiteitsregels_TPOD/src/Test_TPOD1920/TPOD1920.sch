@@ -7,10 +7,10 @@
     xmlns:foo="http://whatever"
     >
 
-    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/geo/" prefix="geo"/>
-    <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/v20190901" prefix="geo"/>
+    <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
         prefix="sl"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand" prefix="ow-dc"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" prefix="ow-dc"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
     <sch:ns uri="http://whatever" prefix="foo"/>
@@ -52,7 +52,7 @@
                 <xsl:variable name="objecttype" select="text()"/>
                 <xsl:choose>
                     <xsl:when test=". = 'Geometrie'">
-                        <xsl:if test="not(document($naam)//geo:GeoInformatieObjectVaststelling)">
+                        <xsl:if test="not(document($naam)//geo:FeatureCollectionGeometrie)">
                             <xsl:value-of select="concat($naam, ': ', ., ', ')"/>
                         </xsl:if>
                     </xsl:when>

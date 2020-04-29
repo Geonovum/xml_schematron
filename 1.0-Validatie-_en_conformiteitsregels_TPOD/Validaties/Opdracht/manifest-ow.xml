@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!-- created by OpenOmgevingswet -->
+<Modules xmlns="https://standaarden.overheid.nl/stop/DSO-PI10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://standaarden.overheid.nl/stop/DSO-PI10/       https://standaarden.overheid.nl/stop/DSO-PI10/manifest-ow.xsd">
+  <domein>omgevingswet</domein>
+  <RegelingVersie>
+    <FRBRwork>/akn/nl/act/mnre1045/2020/OOW001OOWb</FRBRwork>
+    <FRBRExpression>/akn/nl/act/mnre1045/2020/OOW001OOWb/nld@2020-02-05;1</FRBRExpression>
+    <Bestand>
+      <naam>tekstdelen.xml</naam>
+      <objecttype>Tekstdeel</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Mng.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Tm.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>divisies.xml</naam>
+      <objecttype>FormeleDivisie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>gebiedsaanwijzingen.xml</naam>
+      <objecttype>Gebiedsaanwijzing</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Werkingsgebied.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>locaties.xml</naam>
+      <objecttype>Gebied</objecttype>
+    </Bestand>
+  </RegelingVersie>
+</Modules>
