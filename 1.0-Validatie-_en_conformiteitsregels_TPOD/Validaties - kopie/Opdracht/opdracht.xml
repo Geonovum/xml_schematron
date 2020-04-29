@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<publicatieOpdracht xmlns="http://www.overheid.nl/2017/lvbb"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.overheid.nl/2017/lvbb ../../../xsd/lvbb/lvbb-transport.xsd">
-  <idLevering>id-publicatie-1234</idLevering>
-  <publicatie>akn_nl_bill_gm0037-3520-01.xml</publicatie>
-  <datumBekendmaking>2019-06-27</datumBekendmaking>
-</publicatieOpdracht>

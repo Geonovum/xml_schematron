@@ -1,1 +1,0 @@
-kopie van uitgeleverde STOP-schema's 0.99.200210.1832
