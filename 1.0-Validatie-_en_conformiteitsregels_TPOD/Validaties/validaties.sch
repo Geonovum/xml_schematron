@@ -991,6 +991,19 @@
         <xsl:value-of select="$volgorde"/>
     </xsl:function>
     
+    <!-- ============TPOD_0810================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0810">
+        <sch:rule context="//tekst:Lijst">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION" value="name(*[1])='Lijstaanhef'"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0810: Een Lijst moet worden voorafgegaan door een alinea met inleidende tekst.
+                Betreft: Lijst met wId: <sch:value-of select="string(./@wId)"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
     <!-- ============TPOD_0880================================================================================================================ -->
     
     <sch:pattern id="TPOD_0880">
