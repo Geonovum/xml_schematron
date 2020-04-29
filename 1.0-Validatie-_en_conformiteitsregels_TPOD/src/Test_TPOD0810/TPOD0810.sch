@@ -48,7 +48,7 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="name(*[1])='Lijstaanhef'"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0810: Een Lijst moet worden voorafgegaan door een alinea met inleidende tekst.
+                TPOD_0810: Een Lijst wordt altijd voorafgegaan door een inleidende tekst, oftewel de aanhef.
                 Betreft: Lijst met wId: <sch:value-of select="string(./@wId)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
