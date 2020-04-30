@@ -32,7 +32,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1310">
-        <sch:rule context="//l:Gebied/l:hoogte[lower-case(da:eenheid) ne 'meter']">
+        <sch:rule context="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid']">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="CONDITION" value="false()"/>
