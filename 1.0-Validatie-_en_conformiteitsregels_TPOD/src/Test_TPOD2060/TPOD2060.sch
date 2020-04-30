@@ -48,7 +48,7 @@
             <sch:let name="message" value="foo:checkFouteArtikelLidCombinatieTPOD_2060(.)"/>
             <sch:let name="CONDITION" value="string-length($message) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2050:
+                H:TPOD2060:
                     <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
@@ -56,32 +56,40 @@
 
     <xsl:function name="foo:checkFouteArtikelLidCombinatieTPOD_2060">
         <xsl:param name="context" as="node()"/>
+        <!-- Ophalen wId uit stop-bestand -->
         <xsl:variable name="artikelWiD" select="string($context/@wId)"/>
+        <!-- Verzamelen alle wIds uit regelteksten (omgeven door punten om contains foutloos te kunnen doen) -->
         <xsl:variable name="wIds">
             <xsl:for-each select="$xmlDocuments//r:Regeltekst/@wId">
                 <xsl:value-of select="concat('.', string(.), '.')"/>
             </xsl:for-each>
         </xsl:variable>
-        <xsl:variable name='newline'><xsl:text>&#10;</xsl:text></xsl:variable>
+        <!-- Alle wids van Lid (leden) uit stop bestand en ontstane fouten verzamelen in results -->
         <xsl:variable name="results">
             <xsl:for-each select="$context/tekst:Lid">
+                <!-- ophalen wId van lid -->
                 <xsl:variable name="lidWiD" select="string(./@wId)"/>
-                <xsl:variable name="rlidWiD" select="contains($wIds, concat('.', $lidWiD, '.'))"/>
-                <xsl:variable name="rartikelWiD"
-                    select="contains($wIds, concat('.', $artikelWiD, '.'))"/>
+                <!-- CONTROLE: Als de lijst van wIds in Regelteksten zowel het artikel nummer bevat alsmede ook een lidnummer, dan is dat fout. -->
                 <xsl:if
                     test="contains($wIds, concat('.', $lidWiD, '.')) and contains($wIds, concat('.', $artikelWiD, '.'))">
+                    <!-- HIER is het dus FOUT -->
+                    <!-- Ophalen regeltekstId behorend bij artikelwId -->
+                    <xsl:variable name="regelTekstIdArtikel" select="$xmlDocuments//r:Regeltekst[@wId=$artikelWiD]/r:identificatie"/>
+                    <!-- Ophalen regeltekstId behorend bij lid-wId -->
+                    <xsl:variable name="regelTekstIdLid" select="$xmlDocuments//r:Regeltekst[@wId=$lidWiD]/r:identificatie"/>
+                    <!-- Het ID part van de Foutmelding wordt geconstrueerd en in Results gezet. -->
                     <xsl:value-of
-                        select="concat('artikel-wId: ', $artikelWiD, ' --&gt; lid-wId: ', $lidWiD, ', ', $newline)"  disable-output-escaping="no"
+                        select="concat('artikel-wId: ', $artikelWiD, ' (',$regelTekstIdArtikel,')  --&gt; lid-wId: ', $lidWiD, ' (',$regelTekstIdLid,') ')"  disable-output-escaping="no"
                     />
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
         <xsl:variable name="message">
+            <!-- Als Results inhoud heeft (lengte) dan wordt er nog een tekst voorgevoegd en dat vormt het resultaat van de functie -->
             <xsl:if test="string-length($results) > 0">
                 <xsl:value-of
                     select="
-                    concat('Als een verwijzing naar een Lid is gemaakt mag er geen verwijzing meer gemaakt worden naar het artikel dat boven dit Lid hangt.',$newline,'Betreft: ',
+                    concat('Als een Regeltekst van een Lid is gemaakt mag er geen Regeltekst meer gemaakt worden van het artikel dat boven dit Lid hangt. Betreft: ',
                     $results)"  disable-output-escaping="no"/>
             </xsl:if>
         </xsl:variable>

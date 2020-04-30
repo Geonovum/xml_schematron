@@ -19,6 +19,7 @@
     <sch:ns uri="http://whatever" prefix="foo"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709" prefix="ga"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709" prefix="ga-ref"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709" prefix="da"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901" prefix="g-ref"/>
     <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/v20190901" prefix="geo"/>
     <sch:ns uri="http://www.opengis.net/gml/3.2" prefix="gml"/>
@@ -1136,6 +1137,18 @@
         <xsl:value-of select="$crsses"/>
     </xsl:function>
     
+    <!-- ============TPOD_1310================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1310">
+        <sch:rule context="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter']">
+            <sch:let name="APPLICABLE"
+                value="true()"/>
+            <sch:let name="CONDITION" value="false()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1310: De grootheid waarin de hoogte wordt uitgedrukt; in het geval van hoogte dient altijd de eenheid meter gekozen te worden. Dit is niet zo in Gebied: <sch:value-of select="../l:identificatie"/> </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
     <!-- ============TPOD_1650================================================================================================================ -->
     
     <sch:pattern id="TPOD_1650">
@@ -2150,6 +2163,54 @@
                 <xsl:value-of select="''"/>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:function>
+    
+    <!-- ============TPOD_2060================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2060">
+        <sch:rule context="//tekst:Artikel">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="message" value="foo:checkFouteArtikelLidCombinatieTPOD_2060(.)"/>
+            <sch:let name="CONDITION" value="string-length($message) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                H:TPOD2060:
+                <sch:value-of select="$message"/>
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkFouteArtikelLidCombinatieTPOD_2060">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="artikelWiD" select="string($context/@wId)"/>
+        <xsl:variable name="wIds">
+            <xsl:for-each select="$xmlDocuments//r:Regeltekst/@wId">
+                <xsl:value-of select="concat('.', string(.), '.')"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name='newline'><xsl:text>&#10;</xsl:text></xsl:variable>
+        <xsl:variable name="results">
+            <xsl:for-each select="$context/tekst:Lid">
+                <xsl:variable name="lidWiD" select="string(./@wId)"/>
+                <xsl:variable name="rlidWiD" select="contains($wIds, concat('.', $lidWiD, '.'))"/>
+                <xsl:variable name="rartikelWiD"
+                    select="contains($wIds, concat('.', $artikelWiD, '.'))"/>
+                <xsl:if
+                    test="contains($wIds, concat('.', $lidWiD, '.')) and contains($wIds, concat('.', $artikelWiD, '.'))">
+                    <xsl:value-of
+                        select="concat('artikel-wId: ', $artikelWiD, ' --&gt; lid-wId: ', $lidWiD, ', ', $newline)"  disable-output-escaping="no"
+                    />
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="message">
+            <xsl:if test="string-length($results) > 0">
+                <xsl:value-of
+                    select="
+                    concat('Als een verwijzing naar een Lid is gemaakt mag er geen verwijzing meer gemaakt worden naar het artikel dat boven dit Lid hangt.',$newline,'Betreft: ',
+                    $results)"  disable-output-escaping="no"/>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$message"/>
     </xsl:function>
     
     

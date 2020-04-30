@@ -276,7 +276,7 @@
 					<!-- zelfde als een functie -->
 					<l:hoogte>
 						<da:waarde>1</da:waarde>
-						<da:eenheid>meter</da:eenheid>
+						<da:eenheid>http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid</da:eenheid>
 					</l:hoogte>
 					<l:geometrie>
 						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
@@ -293,7 +293,7 @@
 					<!-- zelfde als een functie -->
 					<l:hoogte>
 						<da:waarde>1</da:waarde>
-						<da:eenheid>centimeter</da:eenheid>
+						<da:eenheid>http://standaarden.omgevingswet.overheid.nl/datatypenalgemeen/id/concept/Cm</da:eenheid>
 					</l:hoogte>
 					<l:geometrie>
 						<g-ref:GeometrieRef xlink:href="B3AF6AF7-5EFA-4A87-9C66-BFB046DD89AC"/>
