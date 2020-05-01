@@ -1642,7 +1642,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="not($SOORT_REGELING=$WV)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2070: De IMOW-objecten 'Omgevingswaarde' zijn niet van toepassing op de Waterschapsverordening.: 
+                TPOD1880: De IMOW-objecten 'Omgevingswaarde' zijn niet van toepassing op de Waterschapsverordening.: 
                 Identificatie: <sch:value-of select="rol:identificatie/text()"/>
             </sch:assert>
         </sch:rule>
@@ -1650,7 +1650,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="not($SOORT_REGELING=$WV)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2070: De IMOW-objecten 'Omgevingswaarderegel' zijn niet van toepassing op de Waterschapsverordening.: 
+                TPOD1880: De IMOW-objecten 'Omgevingswaarderegel' zijn niet van toepassing op de Waterschapsverordening.: 
                 Regeltekst-referentie: <sch:value-of select="string(r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href)"/>
             </sch:assert>
         </sch:rule>
