@@ -43,7 +43,7 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_2070">
+    <sch:pattern id="TPOD_1">
         <sch:rule context="//rol:Activiteit/@ow:regeltekstId">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="foo:checkOwRegeltekstIdverwijzingTPOD_2070(.)=true()"/>
