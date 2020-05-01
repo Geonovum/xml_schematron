@@ -2221,5 +2221,47 @@
         <xsl:value-of select="$message"/>
     </xsl:function>
     
+    <!-- ============TPOD_2070================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2070">
+        <sch:rule context="//rol:Activiteit/@ow:regeltekstId">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="CONDITION" value="foo:checkOwRegeltekstIdverwijzingTPOD_2070(.)=true()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2070: Alleen v0.98 | Als de activiteit een bepaalde regeltekstID heeft dan moet deze overeenkomen met de ID die je via de Activiteit --> RegelVoorIedereen --> Regeltekst vindt.: 
+                ActiviteitId: <sch:value-of select="../rol:identificatie/text()"/>, ow:regeltekstId: <sch:value-of select="string(.)"/>
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    
+    <xsl:function name="foo:checkOwRegeltekstIdverwijzingTPOD_2070">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="regelId" select="string($context)"/>
+        <xsl:variable name="activiteitId" select="$context/../rol:identificatie/text()"/>
+        <xsl:variable name="foundRegelTekst">
+            <xsl:if test="not(string($regelId) = '')">
+                <xsl:for-each select="$xmlDocuments//r:RegelVoorIedereen">
+                    <xsl:if test="
+                        string(r:activiteitaanduiding/rol-ref:ActiviteitRef/@xlink:href)=$activiteitId 
+                        and 
+                        string(r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href)=$regelId
+                        ">
+                        <xsl:value-of select="$activiteitId"/>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:choose>
+            <xsl:when test="$foundRegelTekst=$activiteitId">
+                <xsl:value-of select="true()"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="false()"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+    
+    
     
 </sch:schema>
