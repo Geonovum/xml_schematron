@@ -49,7 +49,8 @@
             <sch:let name="fouten" value="foo:foutenTPOD_0490( .)"/>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0490: Achter het cijfer van een titelnummer mag geen punt worden opgenomen. (betreft hoofdstukken, titels):  <sch:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+                TPOD_0490: Achter het cijfer van een titelnummer mag geen punt worden opgenomen. 
+                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, titels: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
     
