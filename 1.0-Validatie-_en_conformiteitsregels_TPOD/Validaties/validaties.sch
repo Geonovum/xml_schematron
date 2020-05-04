@@ -44,21 +44,6 @@
     <sch:let name="OVI" value="''"/>
     <sch:let name="PB" value="''"/>
     
-    <!-- ============TPOD_0400================================================================================================================ -->
-    
-    <sch:pattern id="TPOD_0400">
-        <sch:rule context="//tekst:Kop">
-            <sch:let name="APPLICABLE" value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="CONDITION" value="tekst:Label and tekst:Opschrift and tekst:Nummer"/>
-            
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0400: Betreft
-                (Label, Opschrift, Nummer): "<sch:value-of select="tekst:Label"/>", "<sch:value-of
-                    select="tekst:Nummer"/>", "<sch:value-of select="tekst:Opschrift"/>": Een Kop
-                moet bevatten een Label, een Nummer en een Opschrift. </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    
     <!-- ============TPOD_0410================================================================================================================ -->
     
     <sch:pattern id="TPOD_0410">

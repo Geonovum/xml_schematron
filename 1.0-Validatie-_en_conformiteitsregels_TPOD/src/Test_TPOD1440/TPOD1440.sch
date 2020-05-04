@@ -43,9 +43,8 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="foo:zoekJuridischeRegelTerugTPOD_1440(.)='RegelVoorIedereen'"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1440: De annotatie met de Gebiedsaanwijzing Beperkingengebied wordt alleen gebruikt voor (rechtstreeks werkende) regels (voor iedereen) 
-                die daadwerkelijk een beperkingengebied in het leven roepen en daar nadere regels over stellen, 
-                niet voor instructieregels die bepalen dat in een ander omgevingsdocument een bepaald beperkingengebied moet worden opgenomen. Dit is niet zo in Gebiedsaanwijzing: <sch:value-of select="../ga:identificatie"/> </sch:assert>
+                TPOD_1440: Als het type gebiedsaanwijzing gelijk is aan beperkingengebied, dan mag deze alleen gerelateerd zijn aan een RegelVoorIedereen.
+                Dit is niet zo in Gebiedsaanwijzing: <sch:value-of select="../ga:identificatie"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -58,7 +57,6 @@
                 <xsl:value-of select="local-name(.)"/>
             </xsl:if>    
         </xsl:for-each>
-        
     </xsl:function>
     
 </sch:schema>

@@ -30,7 +30,7 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_1000_1050">
+    <sch:pattern id="TPOD_1000">
         <sch:rule context="//tekst:Begrip">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
