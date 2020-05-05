@@ -49,8 +49,8 @@
             </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0700: Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen. (betreft subparagraaf, subsubparagrafen):  
-                <sch:value-of select="$subparagraaf"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+                TPOD_0700: Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen. 
+                (betreft subparagraaf: <xsl:value-of select="$subparagraaf"/>,subsubparagrafen: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
     
