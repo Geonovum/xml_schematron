@@ -445,9 +445,8 @@
             <sch:let name="volgorde" value="foo:volgordeTPOD_0630($paragraaf, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0630: De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin de Paragraaf voorkomt, 
-                gevolgd door een punt. (betreft paragrafen, subparagrafen):  
-                <xsl:value-of select="$paragraaf"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0630: De nummering van Subparagrafen begint met het samengestelde nummer van de Paragraaf waarin de Subparagraaf voorkomt, gevolgd door een punt. 
+                (betreft paragraaf: <xsl:value-of select="$paragraaf"/>, subparagrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
