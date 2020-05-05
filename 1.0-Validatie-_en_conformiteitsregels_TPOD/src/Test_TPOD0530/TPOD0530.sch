@@ -49,10 +49,11 @@
             <sch:let name="volgorde" value="foo:volgordeTPOD_0530($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0530: Afdelingen moeten oplopend worden genummerd in Arabische cijfers. (betreft hoofdstukken, afdeling):  <sch:value-of select="$hoofdstuk"/>:   <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0530: Afdelingen moeten oplopend worden genummerd in Arabische cijfers. 
+                (betreft hoofdstukken: <sch:value-of select="$hoofdstuk"/>, afdelingen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
-    
+        
     <xsl:function name="foo:volgordeTPOD_0530">
         <xsl:param name="hoofdstuk" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
