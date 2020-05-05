@@ -523,13 +523,13 @@
     <!-- ============TPOD_0670================================================================================================================ -->
     
     <sch:pattern id="TPOD_0670">
-        <sch:rule context="//tekst:Subparagraaf/tekst:Subsubparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'ubsubparagraaf']">
+        <sch:rule context="//tekst:Subparagraaf/tekst:Subsubparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'subsubparagraaf']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. Betreft label: 
-                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
+                TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. 
+                (betreft subsubparagraaf-nummer: <sch:value-of select="tekst:Nummer"/>, label: <sch:value-of select="tekst:Label"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
     
