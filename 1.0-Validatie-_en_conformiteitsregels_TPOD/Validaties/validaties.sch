@@ -495,7 +495,7 @@
     <!-- ============TPOD_0650================================================================================================================ -->
     
     <sch:pattern id="TPOD_0650">
-        <sch:rule context="//tekst:Paragraaf/tekst:Paragraaf">
+        <sch:rule context="//tekst:Afdeling/tekst:Paragraaf">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="paragraaf" value="string(tekst:Kop/tekst:Nummer)"/>
@@ -503,8 +503,8 @@
             </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0650: Achter het cijfer van een subparagraafnummer mag geen punt worden opgenomen. (betreft subparagraaf, subsubparagrafen):  
-                <sch:value-of select="$paragraaf"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+                TPOD_0650: Achter het cijfer van een subparagraafnummer mag geen punt worden opgenomen. 
+                (betreft paragraaf: <sch:value-of select="$paragraaf"/>, subparagrafen: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
     
