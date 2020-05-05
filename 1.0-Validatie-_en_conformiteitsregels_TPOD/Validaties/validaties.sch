@@ -375,7 +375,8 @@
             
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0590: Paragrafen moeten oplopend worden genummerd in Arabische cijfers (betreft hoofdstukken):  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0590: Paragrafen moeten oplopend worden genummerd in Arabische cijfers.
+                (betreft hoofdstuk: <sch:value-of select="../tekst:Kop/tekst:Nummer"/>, afdeling: <sch:value-of select="tekst:Kop/tekst:Nummer"/>, paragrafen:  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
     
