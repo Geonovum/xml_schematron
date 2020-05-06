@@ -643,11 +643,10 @@
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0730: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt.
-                (betreft hoofdstuk, artikels):  
-                <xsl:value-of select="$hoofdstuk"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                (betreft hoofdstuk: <xsl:value-of select="$hoofdstuk"/>, artikels: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
-    
+        
     <xsl:function name="foo:volgordeTPOD_0730">
         <xsl:param name="hoofdstuk" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
