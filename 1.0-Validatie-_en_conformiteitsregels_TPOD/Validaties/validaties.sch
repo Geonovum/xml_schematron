@@ -974,8 +974,8 @@
             </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0800: Achter het lidnummer moet een punt worden opgenomen. (betreft artikel, lidnummers):  
-                <sch:value-of select="$artikel"/>: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/></sch:assert>
+                TPOD_0800: Achter het lidnummer moet een punt worden opgenomen. 
+                (betreft artikel: <sch:value-of select="$artikel"/>, lidnummers: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
     
