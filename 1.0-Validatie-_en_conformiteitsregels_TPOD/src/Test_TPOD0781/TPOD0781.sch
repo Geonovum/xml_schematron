@@ -44,63 +44,70 @@
 
     <sch:pattern id="TPOD_0781">
         <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OV"/>
+            <sch:let name="APPLICABLE" value="$SOORT_REGELING = $OV"/>
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0781(.)"/>
             <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
-                TPOD_0781: De nummering van Leden bevat letters en kan niet middels schematron op geldigheid worden gecheckt.
-                Dit moet handmatig gebeuren. (betreft artikelen, leden e.a.):<sch:value-of
-                    select="$artikel"/>: <sch:value-of
-                        select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"/></sch:assert>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0781(.)"/>
+            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> TPOD_0781: De
+                nummering van Leden bevat letters en kan niet middels schematron op geldigheid
+                worden gecheckt. Dit moet handmatig gebeuren. 
+                (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
+                    select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"
+                />)</sch:assert> 
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0781($bevatLetters,.)"/>
             <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
-                TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
-                (en indien nodig, een letter). (betreft artikelen, leden): <sch:value-of
-                    select="$artikel"/>: <sch:value-of
-                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> TPOD_0781: Leden
+                moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig,
+                een letter). 
+                (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
+                    select="substring($volgorde, 1, string-length($volgorde) - 2)"
+                />)</sch:assert>
         </sch:rule>
     </sch:pattern>
-    
+
     <xsl:function name="foo:bevatGeletterdeNummersTPOD_0781">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="bevatLetters">
             <xsl:for-each select="$context/tekst:Lid">
-                    <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1,2}\.')">
-                            <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
-                    </xsl:if>
+                <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1,2}\.')">
+                    <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
+                </xsl:if>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$bevatLetters"/>
     </xsl:function>
 
     <xsl:function name="foo:volgordeTPOD_0781">
+        <xsl:param name="bevatLetters"/>
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Lid">
-                <xsl:variable name="pos" select="position()"/>
-                <xsl:choose>
-                    <xsl:when test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
-                        <xsl:if test="matches(tekst:LidNummer, '\d{1,2}\.')">
-                            <xsl:if test="not(string(tekst:LidNummer)=concat(string($pos), '.'))">
-                                <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
+        <xsl:if test="string-length($bevatLetters) = 0">
+            <xsl:variable name="volgorde">
+                <xsl:for-each select="$context/tekst:Lid">
+                    <xsl:variable name="pos" select="position()"/>
+                    <xsl:choose>
+                        <xsl:when
+                            test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
+                            <xsl:if test="matches(tekst:LidNummer, '\d{1,2}\.')">
+                                <xsl:if
+                                    test="not(string(tekst:LidNummer) = concat(string($pos), '.'))">
+                                    <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
+                                </xsl:if>
                             </xsl:if>
-                        </xsl:if>
-                        <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
-                            <xsl:if test="not(string(tokenize(tekst:LidNummer,'[a-z]{1}')[1])=string($pos)) and not(ends-with(tekst:LidNummer, '.'))">
-                                <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
+                            <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
+                                <xsl:if
+                                    test="not(string(tokenize(tekst:LidNummer, '[a-z]{1}')[1]) = string($pos)) and not(ends-with(tekst:LidNummer, '.'))">
+                                    <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
+                                </xsl:if>
                             </xsl:if>
-                        </xsl:if>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
+            </xsl:variable>
+            <xsl:value-of select="$volgorde"/>
+        </xsl:if>
     </xsl:function>
 
 </sch:schema>

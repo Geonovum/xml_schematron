@@ -34,7 +34,35 @@
                                     <Nummer>1.3</Nummer>
                                     <Opschrift>(wederzijdse erkenning)</Opschrift>
                                 </Kop>
-                                
+                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_1"
+                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_1">
+                                    <!-- nummer op posiitie fout -->
+                                    <LidNummer>1.</LidNummer>
+                                    
+                                </Lid>
+                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_2"
+                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_2">
+                                    <!-- goed (nummer, positie + 1 letter -->
+                                    <LidNummer>3.</LidNummer>
+                                    
+                                </Lid>
+                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_3"
+                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_3">
+                                    <!-- goed, positie alleen nummer en punt -->
+                                    <LidNummer>3.</LidNummer>
+                                    
+                                </Lid>
+                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_4"
+                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_4">
+                                    <!-- fout twee letters -->
+                                    <LidNummer>4</LidNummer>
+                                    
+                                </Lid>
+                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_5"
+                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_5">
+                                    <!-- goed (nummer, positie + 1 letter -->
+                                    <LidNummer>5.</LidNummer>
+                                </Lid> 
                             </Artikel>
                         </Afdeling>
                         <Afdeling eId="chp_1__subchp_1.4" wId="mnre1034_1-0__chp_1__subchp_1.4">
