@@ -826,8 +826,10 @@
             
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0780: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers. (betreft artikelen, leden):  
-                <sch:value-of select="$artikel"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                TPOD_0780: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
+                (en indien nodig, een letter). 
+                (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
+                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
     
