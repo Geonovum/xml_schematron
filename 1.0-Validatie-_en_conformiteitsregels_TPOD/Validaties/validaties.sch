@@ -627,8 +627,8 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0720: Een Artikel moet worden geduid met de label Artikel. Betreft label: 
-                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
+                TPOD_0720: Een Artikel moet worden geduid met de label Artikel. 
+                (betreft artikel: <sch:value-of select="tekst:Nummer"/>, label:<sch:value-of select="tekst:Label"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
     
