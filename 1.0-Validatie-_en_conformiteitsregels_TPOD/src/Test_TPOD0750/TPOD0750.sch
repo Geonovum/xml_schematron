@@ -47,8 +47,8 @@
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="CONDITION" value="not(ends-with($artikel, '.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0750: Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen. (betreft artikelen):  
-                <sch:value-of select="$artikel"/></sch:assert>
+                TPOD_0750: Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen. 
+                (betreft artikel: <sch:value-of select="$artikel"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
 
