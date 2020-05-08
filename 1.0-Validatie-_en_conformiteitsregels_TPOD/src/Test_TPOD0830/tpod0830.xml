@@ -290,14 +290,14 @@
                                 <Al>Lijst 1</Al>
                             </Li>
                             <Li wId="" eId="">
-                                <LiNummer>2</LiNummer>
+                                <LiNummer>b</LiNummer>
                                 <Lijst type="" wId="" eId=""> <!-- 2 -->
                                     <Li wId="" eId="">
                                         <LiNummer>1</LiNummer>
                                         <Al>Lijst 2</Al>
                                     </Li>
                                     <Li wId="" eId="">
-                                        <LiNummer>2</LiNummer>
+                                        <LiNummer>b</LiNummer>
                                         <Al>bla bla</Al>
                                     </Li>
                                     <Li wId="" eId="">
