@@ -12,7 +12,8 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/regels/v20190901" prefix="r"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" prefix="owo"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/owobject/v20190709" prefix="ow"/>
-    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/v20190901" prefix="geo"/>
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/geo/" prefix="geo"/>
+    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/1.0" prefix="basisgeo"/>
     <sch:ns uri="http://www.opengis.net/gml/3.2" prefix="gml"/>
     <sch:ns uri="http://whatever" prefix="foo"/>
     <sch:ns uri="http://xml.juniper.net/junos/commit-scripts/1.0" prefix="jcs"/>
@@ -35,7 +36,7 @@
     
     <sch:pattern id="TPOD_0940">
         <sch:rule
-            context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
+            context="//basisgeo:geometrie">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="crs" value="foo:crsTPOD_0940(.)"/>
@@ -43,7 +44,7 @@
             <sch:let name="CONDITION" value="string-length($crsses) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 H:TP0D940: Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): 
-                EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/geo:id"/> bevat een combinatie van beiden. </sch:assert>
+                EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/basisgeo:id"/> bevat een combinatie van beiden. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
