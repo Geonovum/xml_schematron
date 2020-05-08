@@ -12,7 +12,8 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/regels/v20190901" prefix="r"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" prefix="owo"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/owobject/v20190709" prefix="ow"/>
-    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/v20190901" prefix="geo"/>
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/geo/" prefix="geo"/>
+    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/1.0" prefix="basisgeo"/>
     <sch:ns uri="http://www.opengis.net/gml/3.2" prefix="gml"/>
     <sch:ns uri="http://whatever" prefix="foo"/>
     <sch:ns uri="http://xml.juniper.net/junos/commit-scripts/1.0" prefix="jcs"/>
@@ -35,32 +36,43 @@
     <!-- ============TPOD_0930================================================================================================================ -->
 
     <sch:pattern id="TPOD_0930">
-        <sch:rule
-            context="//geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '28992']">
+        <sch:rule context="//basisgeo:geometrie">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="fouteCoord" value="foo:fouteCoordTPOD_0930(3,.)"/>
-            <sch:let name="CONDITION" value="string-length($fouteCoord) = 0"/>
+            <sch:let name="fout" value="foo:aantalTPOD_0930(.)"/>
+            <sch:let name="CONDITION" value="string-length($fout) = 0"/>
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"> 
-                ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de
-                waarde maximaal 3 decimalen achter de komma mag bevatten. Id=<sch:value-of select="geo:id"/>. 
-                De coordinaten waarom het gaat staan nu genoemd: <sch:value-of select="concat(substring(substring($fouteCoord,1,string-length($fouteCoord)-2),0, 50),'.....')"/></sch:assert>
-        </sch:rule>
-        <sch:rule
-            context="//geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie[tokenize(geo:geometrie/*/@srsName, ':')[last()] eq '4258']">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="fouteCoord" value="foo:fouteCoordTPOD_0930(8,.)"/>
-            <sch:let name="CONDITION" value="string-length($fouteCoord) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                ZH:TP0D930: Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de 
-                waarde maximaal 8 decimalen achter de komma mag bevatten. Id=<sch:value-of select="geo:id"/>. 
-                De coordinaten waarom het gaat staan nu genoemd: <sch:value-of select="concat(substring(substring($fouteCoord,1,string-length($fouteCoord)-2),0, 50),'.....')"/></sch:assert>
+            <sch:assert test="$ASSERT"><sch:value-of select="$fout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:fouteCoordTPOD_0930">
-        <xsl:param name="aantal"/>
+
+    <xsl:function name="foo:aantalTPOD_0930">
         <xsl:param name="context" as="node()"/>
+        <xsl:variable name="fout">
+            <xsl:for-each select="$context/*">
+                <xsl:variable name="srsName" select="string(./@srsName)"/>
+                <xsl:choose>
+                    <xsl:when test="tokenize(string(./@srsName), ':')[last()] = '28992'">
+                        <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 3)"/>
+                        <xsl:value-of
+                            select="concat(' TP0D0930: EPSG:28992 (=RD new), coördinaten in meters, maximaal 3 decimalen. gml:id=',./@gml:id,', coördinaten: ',
+                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"/>
+                    </xsl:when>
+                    <xsl:when test="tokenize(string(./@srsName), ':')[last()] = '4258'">
+                        <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 8)"/>
+                        <xsl:value-of
+                            select="
+                            concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten graden, maximaal 8 decimalen. gml:id=',./@gml:id,', coördinaten: ',
+                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"/>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$fout"/>
+    </xsl:function>
+
+    <xsl:function name="foo:fouteCoordTPOD_0930">
+        <xsl:param name="context" as="node()"/>
+        <xsl:param name="aantal" as="xs:integer"/>
         <xsl:variable name="fouteCoord">
             <xsl:for-each select="$context/descendant::gml:posList">
                 <xsl:variable name="coordinaten" select="tokenize(normalize-space(text()), ' ')"/>
@@ -73,5 +85,5 @@
         </xsl:variable>
         <xsl:value-of select="$fouteCoord"/>
     </xsl:function>
-    
+
 </sch:schema>
