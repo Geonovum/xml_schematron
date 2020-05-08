@@ -46,14 +46,14 @@
         <sch:rule context="//tekst:Lijst">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
-            <sch:let name="ancestorsFout" value="foo:checkEersteNiveauLijstLettersTPOD_0840(.)"> </sch:let>
+            <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0840(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0840/0841:
                     <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:checkEersteNiveauLijstLettersTPOD_0840">
+    <xsl:function name="foo:checkTweedeNiveauLijstCijfersTPOD_0840">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="fout">
             <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
