@@ -37,13 +37,15 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
                 value="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD880: Een
-                OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen. </sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                H:TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen.
+                (opschrift is hier: "<sch:value-of select="tekst:Opschrift/text()"/>")
+            </sch:assert>
         </sch:rule>
         <sch:rule context="//tekst:Lichaam">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="hoofdstuk1" value="foo:hoofdstuk1TPOD880(.)" />
+            <sch:let name="hoofdstuk1" value="foo:hoofdstuk1TPOD_0880(.)" />
             
             <sch:let name="CONDITION" value="$hoofdstuk1=1 or $hoofdstuk1=-1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -51,7 +53,7 @@
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:hoofdstuk1TPOD880">
+    <xsl:function name="foo:hoofdstuk1TPOD_0880">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="hoofdstuk1">
             <xsl:choose>
