@@ -38,7 +38,7 @@
             <sch:let name="CONDITION"
                 value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1020-1070: Begrippen mogen niet worden genummerd, 
+                TPOD_1020-1070:  Begrippen mogen niet worden genummerd, 
                 de Begrippenlijst met wId: "<sch:value-of select="@wId"/>" is dat wel</sch:assert>
         </sch:rule>
     </sch:pattern>
