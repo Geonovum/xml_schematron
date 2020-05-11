@@ -39,7 +39,8 @@
             <sch:let name="CONDITION"
                 value="string-length($fouten)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0990: Het artikel Begripsbepalingen dan wel de bijlage met begripsbepalingen moet met beginnen met een introducerende zin. Dit is niet zo in: <sch:value-of select="$fouten"/> </sch:assert>
+                TPOD_0990: Het artikel Begripsbepalingen dan wel de bijlage met begripsbepalingen moet met beginnen met een introducerende zin. 
+                Dit is niet zo in: <sch:value-of select="$fouten"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
 
