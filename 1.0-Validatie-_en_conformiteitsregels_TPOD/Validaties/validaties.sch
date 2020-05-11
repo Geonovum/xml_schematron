@@ -1439,12 +1439,13 @@
     <!-- ============TPOD_1310================================================================================================================ -->
     
     <sch:pattern id="TPOD_1310">
-        <sch:rule context="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter']">
+        <sch:rule context="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid']">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1310: De grootheid waarin de hoogte wordt uitgedrukt; in het geval van hoogte dient altijd de eenheid meter gekozen te worden. Dit is niet zo in Gebied: <sch:value-of select="../l:identificatie"/> </sch:assert>
+                TPOD_1310: De grootheid waarin de hoogte wordt uitgedrukt; in het geval van hoogte dient altijd de eenheid meter gekozen te worden. 
+                Dit is niet zo in Gebied: <sch:value-of select="../l:identificatie"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
     
