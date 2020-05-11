@@ -1356,6 +1356,39 @@
         </xsl:for-each>
     </xsl:function>
     
+    <!-- ============TPOD_1000================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1000">
+        <sch:rule context="//tekst:Begrip">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="items"
+                value="foo:checkBegripTPOD1000(.)"/>
+            <sch:let name="CONDITION"
+                value="string-length($items)=0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1000_1050: Een Begrip moet bestaan uit één term en één definitie. 
+                Begrip met wId: <sch:value-of select="string(@wId)"/> bevat geen <sch:value-of select="$items"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkBegripTPOD1000">
+        <xsl:param name="context" as="node()"/>
+        <xsl:choose>
+            <xsl:when  test="not($context/tekst:Term) and not($context/tekst:Definitie)">
+                <xsl:value-of select="'Term en Definitie'"/>
+            </xsl:when>
+            <xsl:when  test="not($context/tekst:Term)">
+                <xsl:value-of select="'Term'"/>
+            </xsl:when>
+            <xsl:when  test="not($context/tekst:Definitie)">
+                <xsl:value-of select="'Definitie'"/>
+            </xsl:when>
+        </xsl:choose>
+        
+    </xsl:function>
+    
+    
     <!-- ============TPOD_1310================================================================================================================ -->
     
     <sch:pattern id="TPOD_1310">
