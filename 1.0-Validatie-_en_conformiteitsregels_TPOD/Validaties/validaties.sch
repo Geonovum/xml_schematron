@@ -1266,7 +1266,7 @@
                         <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 8)"/>
                         <xsl:value-of
                             select="
-                            concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten graden, maximaal 8 decimalen. gml:id=',./@gml:id,', coördinaten: ',
+                            concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten in graden, maximaal 8 decimalen. gml:id=',./@gml:id,', coördinaten: ',
                             concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"/>
                     </xsl:when>
                 </xsl:choose>
@@ -1332,6 +1332,28 @@
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$crsses"/>
+    </xsl:function>
+    
+    <!-- ============TPOD_0980======================================================================================================= -->
+    
+    <sch:pattern id="TPOD_0980">
+        <sch:rule context="//tekst:Hoofdstuk[tekst:Kop/tekst:Nummer/text() eq '1']">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)) > 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0980: Een
+                OW-besluit moet minimaal één hoofdstuk 1 bevatten met artikel met opschrift
+                Begripsbepaling. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:opschriftTPOD0980">
+        <xsl:param name="context" as="node()"/>
+        <xsl:for-each select="$context/descendant::tekst:Artikel">
+            <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepalingen'">
+                <xsl:value-of select="tekst:Kop/tekst:Opschrift/text()"/>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:function>
     
     <!-- ============TPOD_1310================================================================================================================ -->

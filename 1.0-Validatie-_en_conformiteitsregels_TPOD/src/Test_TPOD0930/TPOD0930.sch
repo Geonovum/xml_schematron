@@ -61,7 +61,7 @@
                         <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 8)"/>
                         <xsl:value-of
                             select="
-                            concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten graden, maximaal 8 decimalen. gml:id=',./@gml:id,', coördinaten: ',
+                            concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten in graden, maximaal 8 decimalen. gml:id=',./@gml:id,', coördinaten: ',
                             concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"/>
                     </xsl:when>
                 </xsl:choose>
