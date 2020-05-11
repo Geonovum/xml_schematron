@@ -1422,6 +1422,21 @@
         </xsl:if>
     </xsl:function>
     
+    
+    <!-- ============TPOD_1020-1070================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1020-1070">
+        <sch:rule context="//tekst:Begrippenlijst[tekst:Begrip/tekst:LiNummer]">
+            <sch:let name="APPLICABLE"
+                value="true()"/>
+            <sch:let name="CONDITION"
+                value="false()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1020-1070: Begrippen mogen niet worden genummerd, 
+                de Begrippenlijst met wId: "<sch:value-of select="@wId"/>" is dat wel</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
     <!-- ============TPOD_1310================================================================================================================ -->
     
     <sch:pattern id="TPOD_1310">
