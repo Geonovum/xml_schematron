@@ -1387,7 +1387,40 @@
         </xsl:choose>
         
     </xsl:function>
+        
+    <!-- ============TPOD_1010================================================================================================================ -->
     
+    <sch:pattern id="TPOD_1010">
+        <sch:rule context="//tekst:Begrippenlijst">
+            <sch:let name="APPLICABLE"
+                value="true()"/>
+            <sch:let name="items"
+                value="foo:checkBegripTPOD1010(.)"/>
+            <sch:let name="CONDITION"
+                value="string-length($items)=0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1010_1060: Een Begriplijst moet gesorteerd zijn, 
+                de Begrippenlijst met wId: "<sch:value-of select="$items"/>" is dat niet</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkBegripTPOD1010">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="list">
+            <xsl:for-each select="$context/tekst:Begrip">
+                <xsl:value-of select="tekst:Term"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="sortedList">
+            <xsl:for-each select="$context/tekst:Begrip">
+                <xsl:sort select="tekst:Term"/>
+                <xsl:value-of select="tekst:Term"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:if test="not($sortedList=$list)">
+            <xsl:value-of select="string($context/@wId)"/>            
+        </xsl:if>
+    </xsl:function>
     
     <!-- ============TPOD_1310================================================================================================================ -->
     

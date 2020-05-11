@@ -31,7 +31,7 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_1010_1060">
+    <sch:pattern id="TPOD_1010">
         <sch:rule context="//tekst:Begrippenlijst">
             <sch:let name="APPLICABLE"
                 value="true()"/>
