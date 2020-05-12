@@ -1477,16 +1477,25 @@
     
     <sch:pattern id="TPOD_1650">
         <sch:rule
-            context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Omgevingswaarde|rol:Omgevingsnorm">
+            context="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde/rol:Normwaarde">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="CONDITION" value="(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde or rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde) and
-                not(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde and rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"/>
+            <sch:let name="CONDITION" value="
+                (rol:kwantitatieveWaarde or rol:kwalitatieveWaarde or rol:waardeInRegeltekst) 
+                and
+                not((rol:kwantitatieveWaarde and rol:kwalitatieveWaarde)
+                or
+                (rol:waardeInRegeltekst and rol:kwalitatieveWaarde)
+                or
+                (rol:kwantitatieveWaarde and rol:waardeInRegeltekst)
+                or
+                (rol:kwantitatieveWaarde and rol:waardeInRegeltekst and rol:kwalitatieveWaarde))
+                "/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1650: <sch:value-of select="rol:identificatie"/>: Het attribuut 'normwaarde'
-                moet bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf
-                'kwantitatieveWaarde'. </sch:assert>
+                TPOD_1650: <sch:value-of select="../../rol:identificatie"/>: Het attribuut 'normwaarde'
+                moet bestaan uit één van de drie mogelijke attributen; 'kwalitatieveWaarde' óf
+                'kwantitatieveWaarde' óf waardeInRegeltekst. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1496,14 +1505,14 @@
         <sch:rule context="//ga:Gebiedsaanwijzing[string(ga:type) eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="CONDITION" value="foo:zoekJuridischeRegelTerugTPOD_1440(.)='RegelVoorIedereen'"/>
+            <sch:let name="CONDITION" value="foo:zoekJuridischeRegelTerugTPOD_1660(.)='RegelVoorIedereen'"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_1440: Als het type gebiedsaanwijzing gelijk is aan beperkingengebied, dan mag deze alleen gerelateerd zijn aan een RegelVoorIedereen.
                 Dit is niet zo voor Gebiedsaanwijzing: <sch:value-of select="ga:identificatie"/> </sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:zoekJuridischeRegelTerugTPOD_1440">
+    <xsl:function name="foo:zoekJuridischeRegelTerugTPOD_1660">
         <xsl:param name="context" as="node()"/>
         <xsl:for-each select="$xmlDocuments//ow-dc:owObject/*">
             <xsl:if test="string(r:gebiedsaanwijzing/ga-ref:GebiedsaanwijzingRef/@xlink:href)=$context/ga:identificatie/text()">

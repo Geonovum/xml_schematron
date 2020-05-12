@@ -30,16 +30,25 @@
 
     <sch:pattern id="TPOD_1650">
         <sch:rule
-            context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Omgevingswaarde|rol:Omgevingsnorm">
+            context="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde/rol:Normwaarde">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="CONDITION" value="(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde or rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde) and
-                not(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde and rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"/>
+            <sch:let name="CONDITION" value="
+                (rol:kwantitatieveWaarde or rol:kwalitatieveWaarde or rol:waardeInRegeltekst) 
+                and
+                not((rol:kwantitatieveWaarde and rol:kwalitatieveWaarde)
+                or
+                (rol:waardeInRegeltekst and rol:kwalitatieveWaarde)
+                or
+                (rol:kwantitatieveWaarde and rol:waardeInRegeltekst)
+                or
+                (rol:kwantitatieveWaarde and rol:waardeInRegeltekst and rol:kwalitatieveWaarde))
+                "/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1650: <sch:value-of select="rol:identificatie"/>: Het attribuut 'normwaarde'
-                moet bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf
-                'kwantitatieveWaarde'. </sch:assert>
+                TPOD_1650: <sch:value-of select="../../rol:identificatie"/>: Het attribuut 'normwaarde'
+                moet bestaan uit één van de drie mogelijke attributen; 'kwalitatieveWaarde' óf
+                'kwantitatieveWaarde' óf waardeInRegeltekst. </sch:assert>
         </sch:rule>
     </sch:pattern>
 
