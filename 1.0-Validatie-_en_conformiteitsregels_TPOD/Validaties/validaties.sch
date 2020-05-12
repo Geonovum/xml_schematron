@@ -1523,23 +1523,6 @@
         </xsl:for-each>
     </xsl:function>
     
-    <!-- ============TPOD_1670================================================================================================================ -->
-    
-    <sch:pattern id="TPOD_1670">
-        <sch:rule
-            context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/r:RegelVoorIedereen">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="CONDITION" value="(r:activiteitaanduiding) or (not(r:activiteitaanduiding) and not(r:activiteitregelkwalificatie))"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"
-                > H:TPOD1670: behorend bij ArtikelOfLid <sch:value-of
-                    select="r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>:
-                Activiteitregelkwalificatie is alleen te gebruiken wanneer het object ‘Regel voor
-                iedereen’ is geannoteerd met Activiteit. </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    
     <!-- ============TPOD_1700================================================================================================================ -->
     
     <sch:pattern id="TPOD_1700">
