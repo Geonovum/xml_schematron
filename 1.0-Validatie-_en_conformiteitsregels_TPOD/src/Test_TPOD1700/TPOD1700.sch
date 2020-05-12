@@ -51,7 +51,7 @@
                 Activiteit-ids: <sch:value-of select="substring($activiteitenTrajectNaarFunctioneleStructuur,1,string-length($activiteitenTrajectNaarFunctioneleStructuur)-2)"/>: 
                 Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in
                 de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de
-                functionele structuur. DIT LAATSTE WORDT NU NOG NIET GETEST </sch:report>
+                functionele structuur. DIT LAATSTE WORDT NU NOG NIET GETEST!</sch:report>
         </sch:rule>
     </sch:pattern>
 
