@@ -39,9 +39,8 @@
             <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TPOD1730: <sch:value-of select="rol:identificatie"/> Betreft verwijzing:
-                    <sch:value-of
-                    select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
+                TPOD1730: <sch:value-of select="rol:identificatie"/> 
+                Betreft verwijzing: <sch:value-of select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
                 Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.</sch:assert>
         </sch:rule>
 

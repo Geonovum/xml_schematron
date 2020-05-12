@@ -1303,7 +1303,7 @@
             <sch:let name="crsses" value="foo:crssesTPOD_0940($crs, .)"/>
             <sch:let name="CONDITION" value="string-length($crsses) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TP0D940: Een geometrie moet zijn
+                TPOD940: Een geometrie moet zijn
                 opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD new) of
                 EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/geo:id"/>: </sch:assert>
         </sch:rule>
@@ -1659,7 +1659,7 @@
             <!-- TPOD1710  -->
             <sch:let name="CONDITION" value="string-length($circulaireActivititeiten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TP0D1710: Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten,1,string-length($circulaireActivititeiten)-2)"/>: Een
+                TPOD1710: Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten,1,string-length($circulaireActivititeiten)-2)"/>: Een
                 bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt.</sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1728,9 +1728,8 @@
             <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TPOD1730: <sch:value-of select="rol:identificatie"/> Betreft verwijzing:
-                <sch:value-of
-                    select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
+                TPOD_1730: <sch:value-of select="rol:identificatie"/> 
+                Betreft verwijzing: <sch:value-of select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
                 Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.</sch:assert>
         </sch:rule>
         
@@ -1758,8 +1757,7 @@
             <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href))"/>
             <sch:report
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                REPORT: H:TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft
-                verwijzing: <sch:value-of
+                REPORT: TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft verwijzing: <sch:value-of
                     select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
                 Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt. DIT LAATSTE
                 WORDT NU NOG NIET GETEST</sch:report>
