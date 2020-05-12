@@ -38,7 +38,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1440">
-        <sch:rule context="//ga:Gebiedsaanwijzing[string(ga:type) eq 'http://standaarden.omgevingswet.overheid.nl/type%20gebiedsaanwijzing/id/concept/Beperkingengebied']">
+        <sch:rule context="//ga:Gebiedsaanwijzing[string(ga:type) eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="foo:zoekJuridischeRegelTerugTPOD_1440(.)='RegelVoorIedereen'"/>
@@ -53,8 +53,6 @@
         <xsl:for-each select="$xmlDocuments//ow-dc:owObject/*">
             <xsl:if test="string(r:gebiedsaanwijzing/ga-ref:GebiedsaanwijzingRef/@xlink:href)=$context/ga:identificatie/text()">
                 <xsl:if test="not(local-name(.)='RegelVoorIedereen')">
-                    <xsl:message select="local-name(.)"/>
-                    <xsl:message select="$context/ga:identificatie/text()"/>
                     <xsl:value-of select="local-name(.)"/>
                 </xsl:if>
             </xsl:if>    

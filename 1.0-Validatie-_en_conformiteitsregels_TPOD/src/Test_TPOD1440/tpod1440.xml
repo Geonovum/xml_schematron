@@ -799,7 +799,7 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.Regeltekst.2019000002">
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000001</ga:identificatie>
-					<ga:type>http://standaarden.omgevingswet.overheid.nl/type%20gebiedsaanwijzing/id/concept/Beperkingengebied</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied</ga:type>
 					<ga:naam>Bedrijf categorie 2</ga:naam>
 					<ga:groep>bedrijf</ga:groep>
 					<ga:locatieaanduiding>
@@ -812,7 +812,7 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.Regeltekst.2019000010">
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000002</ga:identificatie>
-					<ga:type>http://standaarden.omgevingswet.overheid.nl/type%20gebiedsaanwijzing/id/concept/Beperkingengebied</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied</ga:type>
 					<ga:naam>naam</ga:naam>
 					<ga:groep>centrumgebied</ga:groep>
 					<ga:locatieaanduiding>
@@ -825,7 +825,7 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.Regeltekst.2019000010">
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000003</ga:identificatie>
-					<ga:type>http://standaarden.omgevingswet.overheid.nl/type%20gebiedsaanwijzing/id/concept/Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie</ga:type>
 					<ga:naam>naam</ga:naam>
 					<ga:groep>centrumgebied</ga:groep>
 					<ga:locatieaanduiding>
@@ -838,7 +838,7 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.Regeltekst.2019000010">
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.201900000</ga:identificatie>
-					<ga:type>http://standaarden.omgevingswet.overheid.nl/type%20gebiedsaanwijzing/id/concept/Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie</ga:type>
 					<ga:naam>naam</ga:naam>
 					<ga:groep>centrumgebied</ga:groep>
 					<ga:locatieaanduiding>

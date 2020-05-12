@@ -1452,7 +1452,7 @@
     <!-- ============TPOD_1440================================================================================================================ -->
     
     <sch:pattern id="TPOD_1440">
-        <sch:rule context="//ga:Gebiedsaanwijzing[string(ga:type) eq 'http://standaarden.omgevingswet.overheid.nl/type%20gebiedsaanwijzing/id/concept/Beperkingengebied']">
+        <sch:rule context="//ga:Gebiedsaanwijzing[string(ga:type) eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="foo:zoekJuridischeRegelTerugTPOD_1440(.)='RegelVoorIedereen'"/>
@@ -1467,8 +1467,6 @@
         <xsl:for-each select="$xmlDocuments//ow-dc:owObject/*">
             <xsl:if test="string(r:gebiedsaanwijzing/ga-ref:GebiedsaanwijzingRef/@xlink:href)=$context/ga:identificatie/text()">
                 <xsl:if test="not(local-name(.)='RegelVoorIedereen')">
-                    <xsl:message select="local-name(.)"/>
-                    <xsl:message select="$context/ga:identificatie/text()"/>
                     <xsl:value-of select="local-name(.)"/>
                 </xsl:if>
             </xsl:if>    
@@ -1491,6 +1489,30 @@
                 'kwantitatieveWaarde'. </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <!-- ============TPOD_1660================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1660">
+        <sch:rule context="//ga:Gebiedsaanwijzing[string(ga:type) eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie']">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION" value="foo:zoekJuridischeRegelTerugTPOD_1440(.)='RegelVoorIedereen'"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_1440: Als het type gebiedsaanwijzing gelijk is aan beperkingengebied, dan mag deze alleen gerelateerd zijn aan een RegelVoorIedereen.
+                Dit is niet zo voor Gebiedsaanwijzing: <sch:value-of select="ga:identificatie"/> </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:zoekJuridischeRegelTerugTPOD_1440">
+        <xsl:param name="context" as="node()"/>
+        <xsl:for-each select="$xmlDocuments//ow-dc:owObject/*">
+            <xsl:if test="string(r:gebiedsaanwijzing/ga-ref:GebiedsaanwijzingRef/@xlink:href)=$context/ga:identificatie/text()">
+                <xsl:if test="not(local-name(.)='RegelVoorIedereen')">
+                    <xsl:value-of select="local-name(.)"/>
+                </xsl:if>
+            </xsl:if>    
+        </xsl:for-each>
+    </xsl:function>
     
     <!-- ============TPOD_1670================================================================================================================ -->
     
