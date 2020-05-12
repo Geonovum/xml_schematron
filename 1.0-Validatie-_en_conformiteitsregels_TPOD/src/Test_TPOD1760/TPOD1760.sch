@@ -60,9 +60,13 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
-                value="contains(ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebied.')"/>    
+                value="
+                contains(ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebied.')
+                or
+                contains(ga:locatieaanduiding/l-ref:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l-ref:GebiedRef/@xlink:href, '.gebied.')                
+                "/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1760: Betreft <sch:value-of select="ga:identificatie"
+                TPOD1760: Betreft <sch:value-of select="ga:identificatie"
                 />: Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt,
                 puntengroep, lijn of lijnengroep zijn). </sch:assert>
         </sch:rule>
