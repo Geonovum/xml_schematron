@@ -38,7 +38,7 @@
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_1310: De grootheid waarin de hoogte wordt uitgedrukt; in het geval van hoogte dient altijd de eenheid meter gekozen te worden. 
-                Dit is niet zo in Gebied: <sch:value-of select="../l:identificatie"/> </sch:assert>
+                Dit is niet zo in Gebied: <sch:value-of select="../l:identificatie"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
