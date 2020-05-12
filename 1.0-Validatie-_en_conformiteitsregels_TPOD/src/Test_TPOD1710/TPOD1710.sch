@@ -43,10 +43,8 @@
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 H:TP0D1710:
                 Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten,1,string-length($circulaireActivititeiten)-2)"/>: Een
-                bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de
-                hiërarchie ligt.</sch:assert>
+                bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt.</sch:assert>
         </sch:rule>
-
     </sch:pattern>
 
     <xsl:function name="foo:circulaireActivititeitenTPOD_1710">
@@ -92,7 +90,6 @@
         <xsl:value-of select="$selecteerCirculaireActiviteiten"/>
     </xsl:function>
     
-
     <xsl:function name="foo:activiteitenLijstTPOD_1710">
         <xsl:variable name="activiteitenLijst">
             <xsl:for-each
