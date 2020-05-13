@@ -1830,29 +1830,29 @@
     <!-- ============TPOD_1830================================================================================================================ -->    
     
     <sch:pattern id="TPOD1830">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing/ga:type">
+        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
-            <sch:let name="CONDITION" value="not(text()='http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie')"/>
+            <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ in AMvB/MR is de waarde ‘Functie’ van attribuut ‘type’
                 (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het
-                gaat: <sch:value-of select="../ga:identificatie/text()"/>
+                gaat: <sch:value-of select="ga:identificatie/text()"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <!-- ============TPOD_1840================================================================================================================ -->    
     
-    <sch:pattern id="TPOD_1840">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing/ga:type">
+    <sch:pattern id="TPOD1840">
+        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
-            <sch:let name="CONDITION" value="not(text()='http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied')"/>
+            <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TPOD1840: Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘beperkingengebied’ van attribuut ‘type’
+                TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ in AMvB/MR is de waarde ‘Beperkingengebied’ van attribuut ‘type’
                 (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het
-                gaat: <sch:value-of select="../ga:identificatie/text()"/>
+                gaat: <sch:value-of select="ga:identificatie/text()"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
