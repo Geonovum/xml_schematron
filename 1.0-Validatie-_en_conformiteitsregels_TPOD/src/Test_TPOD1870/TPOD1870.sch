@@ -44,7 +44,7 @@
                 value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getRegelTekstIdentifiersTPOD_1870()"/>
-            <sch:let name="CONDITION" value="contains($identifiers, r-ref:RegeltekstRef/@xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',r-ref:RegeltekstRef/@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 H:TPOD1870: Betreft
                 <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of
@@ -55,7 +55,7 @@
     <xsl:function name="foo:getRegelTekstIdentifiersTPOD_1870">
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xmlDocuments//r:Regeltekst">
-                <xsl:value-of select="r:identificatie/text()"/>
+                <xsl:value-of select="concat('.',r:identificatie/text(),'.')"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$identifiers"/>
