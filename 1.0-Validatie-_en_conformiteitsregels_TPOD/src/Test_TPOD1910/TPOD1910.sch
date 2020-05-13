@@ -33,10 +33,8 @@
             <sch:let name="objects" value="foo:owObjectenLijstTPOD_1910(.)"/>
             <sch:let name="CONDITION" value="contains($objects, concat('.',text(),'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TPOD1910: De objecttypen in
-                ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met
-                de daadwerkelijke objecten in het betreffende Ow-bestand. Het objecttype waarom het
-                gaat staan nu genoemd: <sch:value-of select="text()"/>
+                TPOD1910: De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met
+                de daadwerkelijke objecten in het betreffende Ow-bestand. Het objecttype waarom het gaat: <sch:value-of select="text()"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
