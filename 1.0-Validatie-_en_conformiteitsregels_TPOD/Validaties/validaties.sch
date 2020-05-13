@@ -1779,6 +1779,20 @@
         </sch:rule>
     </sch:pattern>
     
+    <!-- ============TPOD_1790================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1790">
+        <sch:rule
+            context="//r:Instructieregel">
+            <sch:let name="APPLICABLE"
+                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
+            <sch:let name="CONDITION"
+                value="false()"/>    
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing. Betreft:<sch:value-of select="string(r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href)"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
     <!-- ============TPOD_1830================================================================================================================ -->    
     
     <sch:pattern id="TPOD1830">
