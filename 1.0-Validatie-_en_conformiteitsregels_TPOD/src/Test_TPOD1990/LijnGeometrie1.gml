@@ -21,7 +21,7 @@
             <geo:Locatie>
                <geo:geometrie>
                   <basisgeo:Geometrie gml:id="id-B28AF779-7EDD-4A88-8B11-809798F53611-xx">
-                     <basisgeo:id>B28AF779-7EDD-4A88-8B11-809798F53611</basisgeo:id>
+                     <basisgeo:id>B28AF779-7EDD-4A88-8B11-809798F53611LIJN</basisgeo:id>
                      <basisgeo:geometrie>
                         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992"
                            gml:id="id-B28AF779-7EDD-4A88-8B11-809798F53611-0">

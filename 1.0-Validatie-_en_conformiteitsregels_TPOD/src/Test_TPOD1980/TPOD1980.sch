@@ -18,7 +18,7 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709" prefix="ga"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709" prefix="ga-ref"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901" prefix="g-ref"/>
-    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/v20190901" prefix="geo"/>
+    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/1.0" prefix="basisgeo"/>
     <sch:ns uri="http://www.opengis.net/gml/3.2" prefix="gml"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
@@ -44,9 +44,8 @@
             <sch:let name="href" value="string(@xlink:href)"/>
             <sch:let name="CONDITION" value="foo:calculateConditionTPOD_1980($href)=1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1980: Betreft <sch:value-of select="../../name()"/>: <sch:value-of
-                    select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
-                verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.
+                TPOD_1980: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: 
+                Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -55,9 +54,9 @@
         <xsl:param name="href"/>
         <xsl:for-each select="$gmlDocuments">
             <xsl:value-of select="0"/>
-            <xsl:if test="//geo:Geometrie[geo:id/text() eq $href]/geo:geometrie/gml:MultiSurface 
+            <xsl:if test="//basisgeo:Geometrie[basisgeo:id/text() eq $href]/basisgeo:geometrie/gml:MultiSurface 
                 or 
-                /geo:Geometrie[geo:id/text() eq $href]/geo:geometrie/gml:Surface/gml:patches/gml:PolygonPatch">
+                /basisgeo:Geometrie[basisgeo:id/text() eq $href]/basisgeo:geometrie/gml:Surface/gml:patches/gml:PolygonPatch">
                         <xsl:value-of select="1"/>
             </xsl:if>
         </xsl:for-each>

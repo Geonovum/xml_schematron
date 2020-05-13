@@ -620,7 +620,7 @@
 				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
 					<l:identificatie>nl.imow-gm0037.gebied.201900001</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
+						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11GEBIED"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
