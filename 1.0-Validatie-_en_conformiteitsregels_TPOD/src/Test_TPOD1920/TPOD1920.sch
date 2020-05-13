@@ -36,10 +36,8 @@
             <sch:let name="nfFOOT" value="foo:notfoundFileOrObjectTypeTPOD_1920(naam,.)"></sch:let>
             <sch:let name="CONDITION" value="string-length($nfFOOT) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1920: De
-                objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het
-                betreffende Ow-bestand. De objecttypen waarom het gaat staan nu genoemd:
-                    <sch:value-of select="$nfFOOT"/>
+                TPOD1920: De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het
+                betreffende Ow-bestand. Het gaat om deze objecttypen: <sch:value-of select="$nfFOOT"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
