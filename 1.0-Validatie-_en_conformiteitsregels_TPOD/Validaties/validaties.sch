@@ -2092,9 +2092,7 @@
             <sch:let name="notFound" value="foo:notFoundTPOD_1930(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1930: Betreft
-                <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"
-                />, <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject in een
+                TPOD_1930: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject in een
                 Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.
             </sch:assert>
         </sch:rule>
