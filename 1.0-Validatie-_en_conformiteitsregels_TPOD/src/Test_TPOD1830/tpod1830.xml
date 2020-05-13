@@ -362,7 +362,7 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.4560000123</ga:identificatie>
-					<ga:type>functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie</ga:type>
 					<ga:naam>abc</ga:naam>
 					<ga:groep></ga:groep>
 					<ga:locatieaanduiding>

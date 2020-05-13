@@ -1829,13 +1829,13 @@
     
     <!-- ============TPOD_1830================================================================================================================ -->    
     
-    <sch:pattern id="TPOD_1830">
+    <sch:pattern id="TPOD1830">
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing/ga:type">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
-            <sch:let name="CONDITION" value="not(text()='functie')"/>
+            <sch:let name="CONDITION" value="not(text()='http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘functie’ van attribuut ‘type’
+                TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ in AMvB/MR is de waarde ‘Functie’ van attribuut ‘type’
                 (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het
                 gaat: <sch:value-of select="../ga:identificatie/text()"/>
             </sch:assert>
