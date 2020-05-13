@@ -2010,10 +2010,10 @@
         <sch:rule context="//*:identificatie">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="CONDITION" value="contains(text(), concat('.', lower-case(tokenize(../name(), ':')[last()]), '.'))"/>
+            <sch:let name="CONDITION" value="contains(text(), concat('.', lower-case(../local-name()), '.'))"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1890: Betreft <sch:value-of select="../name()"/>: <sch:value-of
+                TPOD1890: Betreft <sch:value-of select="../name()"/>: <sch:value-of
                     select="text()"/>: De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten.
             </sch:assert>
         </sch:rule>
