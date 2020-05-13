@@ -18,7 +18,7 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709" prefix="ga"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709" prefix="ga-ref"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901" prefix="g-ref"/>
-    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/v20190901" prefix="geo"/>
+    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/1.0" prefix="basisgeo"/>
     <sch:ns uri="http://www.opengis.net/gml/3.2" prefix="gml"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/vrijetekst/v20190901" prefix="vt"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901" prefix="vt-ref"/>
@@ -41,7 +41,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1990">
-        <sch:rule context="//geo:Geometrie">
+        <sch:rule context="//basisgeo:Geometrie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="geoLocationGeoReferenceIdentifiers"
                 value="foo:getLocationGeoReferenceIdentifiersTPOD_1990()"/>
@@ -49,7 +49,7 @@
                 value="foo:nietGerefereerdeGeometrieTPOD_1990($geoLocationGeoReferenceIdentifiers, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrie) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="geo:id/text()" />
+                TPOD_1990: Ieder OwObject heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="basisgeo:id/text()" />
             </sch:assert>
         </sch:rule>
         
@@ -111,8 +111,8 @@
     <xsl:function name="foo:nietGerefereerdeGeometrieTPOD_1990">
         <xsl:param name="identifiers"/>
         <xsl:param name="context" as="node()"/>
-        <xsl:if test="not(contains($identifiers, concat('.', string($context/geo:id/text()), '.')))">
-            <xsl:value-of select="string($context/geo:id/text())"/>
+        <xsl:if test="not(contains($identifiers, concat('.', string($context/basisgeo:id/text()), '.')))">
+            <xsl:value-of select="string($context/basisgeo:id/text())"/>
         </xsl:if>
     </xsl:function>
 
