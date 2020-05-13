@@ -2207,25 +2207,14 @@
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="geometrie" value="foo:geometrieTPOD_1960($href)"/>
+            <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq $href]"/>
             <sch:let name="CONDITION" value="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TPOD_1960: Betreft <sch:value-of
-                    select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
-                <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject
-                vanuit een Lijn moet een lijn-geometrie zijn. 
+                TPOD_1960: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>. 
+                Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn. 
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:geometrieTPOD_1960">
-        <xsl:param name="href"/>
-        <xsl:for-each select="$gmlDocuments//geo:Geometrie">
-            <xsl:if test="string(geo:id/text())=$href">
-                <xsl:copy-of select="."/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
     
     <!-- ============TPOD_1970================================================================================================================ -->    
     
@@ -2234,13 +2223,11 @@
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="geometrie" value="$gmlDocuments//geo:Geometrie[geo:id/text() eq $href]"/>
+            <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq $href]"/>
             <sch:let name="CONDITION" value="$geometrie//gml:MultiPoint || $geometrie//gml:Point"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TPOD_1970: Betreft <sch:value-of
-                    select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>,
-                <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een gmlObject
-                vanuit een Punt moet een punt-geometrie zijn. 
+                TPOD_1970: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: 
+                Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn. 
             </sch:assert>
         </sch:rule>
     </sch:pattern>
