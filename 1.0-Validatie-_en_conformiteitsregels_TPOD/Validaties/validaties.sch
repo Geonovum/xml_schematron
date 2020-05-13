@@ -1845,7 +1845,7 @@
             <sch:let name="CONDITION"
                 value="not(r:gerelateerdeRegeltekst/r-ref:RegeltekstRef/@xlink:href eq r:identificatie)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1860: Betreft <sch:value-of select="name()"/>:
+                TPOD1860: Betreft <sch:value-of select="name()"/>:
                 <sch:value-of select="r:identificatie"/>: Iedere verwijzing naar een ander
                 OwObject moet een bestaand (ander) OwObject zijn. (gerelateerdeRegeltekst verwijst
                 naar zichzelf) </sch:assert>
@@ -1855,7 +1855,7 @@
             <sch:let name="CONDITION"
                 value="not(rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1860: Betreft <sch:value-of select="name()"/>:
+                TPOD1860: Betreft <sch:value-of select="name()"/>:
                 <sch:value-of select="rol:identificatie"/>: Iedere verwijzing naar een ander
                 OwObject moet een bestaand (ander) OwObject zijn. (gerelateerdeActiviteit verwijst
                 naar zichzelf) </sch:assert>
@@ -1866,7 +1866,7 @@
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
                 moet een bestaand (ander) OwObject zijn. (r:Regeltekst/r:identificatie niet aangetroffen) </sch:assert>
@@ -1877,7 +1877,7 @@
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',.,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1860: Betreft <sch:value-of select="name()"/>:
+                TPOD1860: Betreft <sch:value-of select="name()"/>:
                 <sch:value-of select="."/>: Iedere verwijzing naar een ander OwObject
                 moet een bestaand (ander) OwObject zijn. (r:Regeltekst/r:identificatie niet aangetroffen) </sch:assert>
         </sch:rule>
@@ -1887,7 +1887,7 @@
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
                 moet een bestaand (ander) OwObject zijn. (rol:Activiteit/rol:identificatie niet aangetroffen)</sch:assert>
@@ -1898,7 +1898,7 @@
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
                 moet een bestaand (ander) OwObject zijn. (rol:Omgevingsnorm/rol:identificatie niet aangetroffen) </sch:assert>
@@ -1909,7 +1909,7 @@
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
                 moet een bestaand (ander) OwObject zijn. (ga:Gebiedsaanwijzing/ga:identificatie niet aangetroffen) </sch:assert>
@@ -1920,7 +1920,7 @@
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../rol:identificatie"/>, <sch:value-of
                     select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
                 bestaand (ander) OwObject zijn. (rol:Activiteit/rol:identificatie niet aangetroffen) </sch:assert>
@@ -1931,11 +1931,10 @@
             <sch:let name="identifiers" value="foo:getLocationIdentifiersTPOD_1860()"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1860: Betreft <sch:value-of select="../../name()"/>:
+                TPOD1860: Betreft <sch:value-of select="../../name()"/>:
                 <sch:value-of select="../../*:identificatie"/>, <sch:value-of
                     select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
                 bestaand (ander) OwObject zijn. (verwijzing vanuit l:ref niet aangetroffen) </sch:assert>
-            
         </sch:rule>
     </sch:pattern>
     
