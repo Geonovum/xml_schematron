@@ -1857,6 +1857,33 @@
         </sch:rule>
     </sch:pattern>
     
+    <!-- ============TPOD_1850================================================================================================================ -->    
+    
+    <sch:pattern id="TPOD1850">
+        <sch:rule context="//r:Regeltekst">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="fouten" value="foo:CheckFouteConstructiesTPOD_1850(.)"/>
+            <sch:let name="CONDITION" value="string-length($fouten)=0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
+                TPOD1850: Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel. 
+                Het Regeltekst waarom het gaat: <sch:value-of select="$fouten"/>
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:CheckFouteConstructiesTPOD_1850">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="regeltekstId" select="$context/r:identificatie/text()"/>
+        <xsl:variable name="ct" select="count($xmlDocuments//r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="cr" select="count($xmlDocuments//r:RegelVoorIedereen/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="ci" select="count($xmlDocuments//r:Instructieregel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:if test="not($ct=$cr or $ct=$ci or $ct=$co)">
+            <xsl:value-of select="$regeltekstId"/>
+        </xsl:if>                
+    </xsl:function>
+    
     <!-- ============TPOD_1860================================================================================================================ -->
     
     <sch:pattern id="TPOD_1860">

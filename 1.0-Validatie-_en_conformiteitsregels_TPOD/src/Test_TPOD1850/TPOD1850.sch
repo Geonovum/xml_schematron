@@ -37,7 +37,7 @@
             <sch:let name="fouten" value="foo:CheckFouteConstructiesTPOD_1850(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TPOD1850: Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; Regel voor iedereen, Instructieregel of Omgevingswaarderegel. 
+                TPOD1850: Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel. 
                 Het Regeltekst waarom het gaat: <sch:value-of select="$fouten"/>
             </sch:assert>
         </sch:rule>
@@ -49,6 +49,7 @@
         <xsl:variable name="ct" select="count($xmlDocuments//r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
         <xsl:variable name="cr" select="count($xmlDocuments//r:RegelVoorIedereen/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
         <xsl:variable name="ci" select="count($xmlDocuments//r:Instructieregel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
         <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
         <xsl:if test="not($ct=$cr or $ct=$ci or $ct=$co)">
             <xsl:value-of select="$regeltekstId"/>
