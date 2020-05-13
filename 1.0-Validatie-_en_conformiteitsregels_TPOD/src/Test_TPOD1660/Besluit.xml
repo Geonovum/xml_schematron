@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stop:AanleveringBesluit 
+    xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
+    xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/">
+    <stop:RegelingVersieInformatie>
+        <data:RegelingMetadata>
+            <data:soortRegeling>/join/id/stop/regelingtype_003</data:soortRegeling>
+        </data:RegelingMetadata>
+    </stop:RegelingVersieInformatie>
+</stop:AanleveringBesluit>
