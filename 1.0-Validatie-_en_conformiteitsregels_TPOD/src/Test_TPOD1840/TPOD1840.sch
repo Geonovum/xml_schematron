@@ -33,7 +33,7 @@
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
             <sch:let name="CONDITION" value="not(text()='beperkingengebied')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TPOD1840: Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘beperkingengebied’ van attribuut ‘type’
+                H:TPOD1840: Binnen het object ‘Gebiedsaanwijzing’ in AMvB/MR is de waarde ‘Beperkingengebied’ van attribuut ‘type’
                 (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het
                 gaat: <sch:value-of select="../ga:identificatie/text()"/>
             </sch:assert>

@@ -1848,7 +1848,7 @@
         <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing/ga:type">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
-            <sch:let name="CONDITION" value="not(text()='beperkingengebied')"/>
+            <sch:let name="CONDITION" value="not(text()='http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 H:TPOD1840: Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘beperkingengebied’ van attribuut ‘type’
                 (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het
