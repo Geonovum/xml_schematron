@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ow-dc:owBestand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xmlns:xlink="http://www.w3.org/1999/xlink" 
-   xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709" 
-   xmlns:gml="http://www.opengis.net/gml/3.2" 
-   xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901" 
-   xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-   xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709" 
-   xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709" 
-   xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301" 
-   xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901" 
-   xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901" 
-   xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709" 
-   xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190709" 
-   xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901" 
-   xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709"
-   xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-   xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
-   xsi:schemaLocation="http://www.geostandaarden.nl/imow https://register.geostandaarden.nl/xmlschema/tpod/v0.98.3-kern/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+   xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+   xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+   xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+   xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+   xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+   xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+   xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+   xmlns:p="http://www.geostandaarden.nl/imow/pons"
+   xmlns:r="http://www.geostandaarden.nl/imow/regels"
+   xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+   xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
    <sl:standBestand>
       <sl:dataset>Omgevingsvisie Rotterdam</sl:dataset>
       <sl:inhoud>
@@ -30,7 +27,7 @@
       <!-- Uitstralingsgebied Binnenstad Rotterdam -->
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.2019000001</l:identificatie>
                <l:noemer>Uitstralingsgebied Binnenstad Rotterdam</l:noemer>
                <l:geometrie>
@@ -42,7 +39,7 @@
       <!-- Versterken toplocaties -->
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebiedengroep ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebiedengroep>
                <l:identificatie>nl.imow-gm0599.gebiedengroep.2019000002</l:identificatie>
                <l:noemer>Versterken toplocaties</l:noemer>
                <l:groepselement>
@@ -56,7 +53,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000201</l:identificatie>
                <l:noemer>Versterken toplocaties</l:noemer>
                <l:geometrie>
@@ -67,7 +64,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000202</l:identificatie>
                <l:noemer>Versterken toplocaties</l:noemer>
                <l:geometrie>
@@ -78,7 +75,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000203</l:identificatie>
                <l:noemer>Versterken toplocaties</l:noemer>
                <l:geometrie>
@@ -89,7 +86,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000204</l:identificatie>
                <l:noemer>Versterken toplocaties</l:noemer>
                <l:geometrie>
@@ -101,7 +98,7 @@
       <!-- Versterken stedelijke knooppunten -->
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebiedengroep ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebiedengroep>
                <l:identificatie>nl.imow-gm0599.gebiedengroep.2019000003</l:identificatie>
                <l:noemer>Versterken stedelijke knooppunten</l:noemer>
                <l:groepselement>
@@ -116,7 +113,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000301</l:identificatie>
                <l:noemer>Versterken stedelijke knooppunten</l:noemer>
                <l:geometrie>
@@ -127,7 +124,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000302</l:identificatie>
                <l:noemer>Versterken stedelijke knooppunten</l:noemer>
                <l:geometrie>
@@ -138,7 +135,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000303</l:identificatie>
                <l:noemer>Versterken stedelijke knooppunten</l:noemer>
                <l:geometrie>
@@ -149,7 +146,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000304</l:identificatie>
                <l:noemer>Versterken stedelijke knooppunten</l:noemer>
                <l:geometrie>
@@ -160,7 +157,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000002">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000305</l:identificatie>
                <l:noemer>Versterken stedelijke knooppunten</l:noemer>
                <l:geometrie>
@@ -172,7 +169,7 @@
       <!-- Maasvlakte -->
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000003">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.2019000004</l:identificatie>
                <l:noemer>Maasvlakte</l:noemer>
                <l:geometrie>
@@ -184,7 +181,7 @@
       <!-- Europort & Botlek -->
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebiedengroep ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000003">
+            <l:Gebiedengroep>
                <l:identificatie>nl.imow-gm0599.gebiedengroep.2019000005</l:identificatie>
                <l:noemer>Europort &amp; Botlek</l:noemer>
                <l:groepselement>
@@ -198,7 +195,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000003">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000501</l:identificatie>
                <l:noemer>Europort &amp; Botlek</l:noemer>
                <l:geometrie>
@@ -209,7 +206,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000003">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000502</l:identificatie>
                <l:noemer>Europort &amp; Botlek</l:noemer>
                <l:geometrie>
@@ -220,7 +217,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000003">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000504</l:identificatie>
                <l:noemer>Europort &amp; Botlek</l:noemer>
                <l:geometrie>
@@ -231,7 +228,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000003">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000503</l:identificatie>
                <l:noemer>Europort &amp; Botlek</l:noemer>
                <l:geometrie>
@@ -243,7 +240,7 @@
       <!-- M4H en RDM -->
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebiedengroep ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000003">
+            <l:Gebiedengroep>
                <l:identificatie>nl.imow-gm0599.gebiedengroep.2019000007</l:identificatie>
                <l:noemer>M4H en RDM</l:noemer>
                <l:groepselement>
@@ -255,7 +252,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000003">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000701</l:identificatie>
                <l:noemer>M4H en RDM</l:noemer>
                <l:geometrie>
@@ -266,7 +263,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000003">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000702</l:identificatie>
                <l:noemer>M4H en RDM</l:noemer>
                <l:geometrie>
@@ -278,7 +275,7 @@
       <!-- Versterken stedelijke structuur -->
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebiedengroep ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebiedengroep>
                <l:identificatie>nl.imow-gm0599.gebiedengroep.2019000008</l:identificatie>
                <l:noemer>Versterken stedelijke structuur</l:noemer>
                <l:groepselement>
@@ -297,7 +294,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000801</l:identificatie>
                <l:noemer>Versterken stedelijke structuur</l:noemer>
                <l:geometrie>
@@ -308,7 +305,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000802</l:identificatie>
                <l:noemer>Versterken stedelijke structuur</l:noemer>
                <l:geometrie>
@@ -319,7 +316,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000803</l:identificatie>
                <l:noemer>Versterken stedelijke structuur</l:noemer>
                <l:geometrie>
@@ -330,7 +327,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000804</l:identificatie>
                <l:noemer>Versterken stedelijke structuur</l:noemer>
                <l:geometrie>
@@ -341,7 +338,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000805</l:identificatie>
                <l:noemer>Versterken stedelijke structuur</l:noemer>
                <l:geometrie>
@@ -352,7 +349,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000806</l:identificatie>
                <l:noemer>Versterken stedelijke structuur</l:noemer>
                <l:geometrie>
@@ -363,7 +360,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000807</l:identificatie>
                <l:noemer>Versterken stedelijke structuur</l:noemer>
                <l:geometrie>
@@ -374,7 +371,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000808</l:identificatie>
                <l:noemer>Versterken stedelijke structuur</l:noemer>
                <l:geometrie>
@@ -385,7 +382,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.201900000809</l:identificatie>
                <l:noemer>Versterken stedelijke structuur</l:noemer>
                <l:geometrie>
@@ -397,7 +394,7 @@
       <!-- Nieuwe maas als stedelijk parklandschap -->
       <sl:stand>
          <ow-dc:owObject>
-            <l:Gebied ow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <l:Gebied>
                <l:identificatie>nl.imow-gm0599.gebied.2019000009</l:identificatie>
                <l:noemer>Nieuwe maas als stedelijk parklandschap</l:noemer>
                <l:geometrie>

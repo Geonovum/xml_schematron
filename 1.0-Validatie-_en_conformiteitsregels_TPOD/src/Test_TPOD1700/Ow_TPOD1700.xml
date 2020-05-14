@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ow-dc:owBestand xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
-	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
-	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
-	xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
-	xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
-	xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-	xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
-	xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190709"
-	xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
-	xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901"
-	xmlns:p="http://www.geostandaarden.nl/imow/pons/v20190901"
-	xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
-	xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
-	xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/" xmlns:foo="http://whatever"
-	xsi:schemaLocation="http://www.geostandaarden.nl/imow/0.98.1 https://raw.githubusercontent.com/Geonovum/xml_ow_xsd_0.98.1-kern/master/xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
 	<sl:standBestand>
 		<sl:dataset>Gemeentestad</sl:dataset>
 		<sl:inhoud>
@@ -29,7 +28,7 @@
 			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
 			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
 			<ow-dc:owObject>
-				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.3 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000001</l:identificatie>
 					<l:noemer>Bedrijf categorie 2</l:noemer>
@@ -42,7 +41,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+				<r:Regeltekst
 					wId="gm0037_1__subchp_2.2__art_2.3">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019000001</r:identificatie>
 				</r:Regeltekst>
@@ -50,7 +49,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000241</rol:identificatie>
 					<!-- Deze activiteit is voor de 1e keer ontstaan/gecreeerd in artikel 2.4 nl.imow-gm0037.Regeltekst.2019000002 -->
 					<rol:naam>uitoefenen van bedrijfstypen van categorie 2</rol:naam>
@@ -69,9 +68,9 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000242</rol:identificatie>
-					<!-- Deze activiteit is voor de 1e keer ontstaan/gecreeerd in artikel 2.4 nl.imow-gm0037.Regeltekst.2019000002 en daarom staat deze verwijzing in ow:regeltekstId. -->
+					<!-- Deze activiteit is>
 					<rol:naam>wonen in een bedrijfswoning</rol:naam>
 					<!-- Deze activiteit wordt opnieuwgebruikt in artikel 2.11 nl.imow-gm0037.Regeltekst.20190000011 -->
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -87,7 +86,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000243</rol:identificatie>
 					<rol:naam>aanleggen en instandhouden van nutsvoorzieningen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -102,7 +101,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.20190002431111</rol:identificatie>
 					<rol:naam>aanleggen en instandhouden van nutsvoorzieningen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -117,7 +116,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000244</rol:identificatie>
 					<rol:naam>aanleggen en instandhouden van voorzieningen voor de waterhuishouding</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -133,7 +132,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.20190002453</rol:identificatie>
 					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -148,7 +147,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.20190002451</rol:identificatie>
 					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -163,7 +162,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.20190002452</rol:identificatie>
 					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -178,7 +177,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000246</rol:identificatie>
 					<rol:naam>uitoefenen van detailhandel in ter plaatse vervaardigde goederen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -194,7 +193,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000730</rol:identificatie>
 					<rol:naam>exploiteren van inrichtingen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -210,7 +209,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000740</rol:identificatie>
 					<rol:naam>exploiteren van risicovolle inrichtingen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -226,7 +225,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000750</rol:identificatie>
 					<rol:naam>opslagterrein</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
@@ -242,7 +241,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000540</rol:identificatie>
 					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>milieubelastende activiteit</rol:groep>
@@ -263,7 +262,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000760</rol:identificatie>
 					<rol:naam>opslaan van motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>milieubelastende activiteit</rol:groep>
@@ -279,7 +278,7 @@
 		</sl:stand>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000660</rol:identificatie>
 					<rol:naam>exploiteren van een speelautomatenhal</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>

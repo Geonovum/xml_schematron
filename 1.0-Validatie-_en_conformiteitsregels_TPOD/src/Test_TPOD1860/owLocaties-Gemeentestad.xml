@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<owBestand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xlink="http://www.w3.org/1999/xlink" 
-	xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901" 
-	xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-	xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709" 
-	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301" 
-	xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901" 
-	xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709" 
-	xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709"
-	xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-	xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" 
-	xsi:schemaLocation="http://www.geostandaarden.nl/imow/0.98.1 ../xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+<owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
 	<sl:standBestand>
 		<sl:dataset>Gemeentestad</sl:dataset>
 		<sl:inhoud>
@@ -23,7 +26,7 @@
 		</sl:inhoud>
 		<sl:stand>
 			<owObject>
-				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000001">
+				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.3 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000001</l:identificatie>
 					<l:noemer>Bedrijf categorie 2</l:noemer>
@@ -36,7 +39,7 @@
 		</sl:stand>
 		<sl:stand>
 			<owObject>
-				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000002">
+				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.4 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000002</l:identificatie>
 					<l:noemer>zone A</l:noemer>
@@ -49,7 +52,7 @@
 		</sl:stand>
 		<sl:stand>
 			<owObject>
-				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000005">
+				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - art 2.6 lid 1 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000003</l:identificatie>
 					<l:noemer>zone B</l:noemer>
@@ -61,7 +64,7 @@
 		</sl:stand>
 		<sl:stand>
 			<owObject>
-				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000012">
+				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.9 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000004</l:identificatie>
 					<l:noemer>Centrumgebied</l:noemer>
@@ -73,7 +76,7 @@
 		</sl:stand>
 		<sl:stand>
 			<owObject>
-				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
+				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000007</l:identificatie>
 					<l:noemer>exploiteren speelautomatenhal</l:noemer>
@@ -85,7 +88,7 @@
 		</sl:stand>
 		<sl:stand>
 			<owObject>
-				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
+				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000008</l:identificatie>
 					<!-- uurgemiddelde -->
@@ -98,7 +101,7 @@
 		</sl:stand>
 		<sl:stand>
 			<owObject>
-				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
+				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000009</l:identificatie>
 					<!-- kalenderjaargemiddelde -->
@@ -111,7 +114,7 @@
 		</sl:stand>
 		<sl:stand>
 			<owObject>
-				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
+				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000010</l:identificatie>
 					<!-- maximum bouwhoogte bedrijfsgebouw 13 meter -->
@@ -124,7 +127,7 @@
 		</sl:stand>
 		<sl:stand>
 			<owObject>
-				<l:Gebied ow:regeltekstId="nl.imow-gm0037.regeltekst.2019000008">
+				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
 					<l:identificatie>nl.imow-gm0037.gebied.2019000011</l:identificatie>
 					<!-- maximum bouwhoogte bedrijfsgebouw 7 meter -->

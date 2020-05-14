@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ow-dc:owBestand xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+    xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+    xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+    xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+    xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+    xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+    xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+    xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+    xmlns:p="http://www.geostandaarden.nl/imow/pons"
+    xmlns:r="http://www.geostandaarden.nl/imow/regels"
+    xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+    xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-    xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709"
-    xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
-    xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
-    xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
-    xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
-    xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-    xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
-    xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
-    xmlns:rkow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-    xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
-    xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901 ../xsd-imow-0.98.2-kern/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+    xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
     <sl:standBestand>
         <sl:dataset>Omgevingsregeling_201912011101001</sl:dataset>
         <sl:inhoud>
@@ -36,7 +34,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101FOUT" 
                     wId="pv25_1__chp_4__subsec_4.1__art_4.1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101001</r:identificatie>
                 </r:Regeltekst>
@@ -45,7 +42,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="pv25_1__chp_4__subsec_4.1__art_4.2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101002</r:identificatie>
                 </r:Regeltekst>
@@ -54,7 +50,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="pv25_1__chp_4__subsec_4.1__art_4.1__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101003</r:identificatie>
                 </r:Regeltekst>
@@ -63,7 +58,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="pv25_1__chp_4__subsec_4.1__art_4.1__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101004</r:identificatie>
                 </r:Regeltekst>

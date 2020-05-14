@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ow-dc:owBestand xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
-	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
-	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
-	xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
-	xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-	xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
-	xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709"
-	xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
-	xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190709"
-	xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
-	xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901"
-	xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-	xmlns:p="http://www.geostandaarden.nl/imow/pons/v20190901"
-	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst/v20190901"
-	xmlns:vt-ref="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901"
-	xmlns:k="http://www.geostandaarden.nl/imow/kaartrecept/v20190901"
-	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
-	xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
-	xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
-	xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/" xmlns:foo="http://whatever"
-	xsi:schemaLocation="http://www.geostandaarden.nl/imow/0.98.1 https://raw.githubusercontent.com/Geonovum/xml_ow_xsd_0.98.2-kern/master/xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
 	<sl:standBestand>
 		<sl:dataset>Gemeentestad</sl:dataset>
 		<sl:inhoud>
@@ -53,7 +45,7 @@
 		<!-- R 1 -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wIdRegeling="/akn/nl/act/gm0037/2019/reg456/!main"
+				<r:Regeltekst
 					wId="gm0037_1__subchp_2.2__art_2.3">
 					<r:identificatie>nl.imow-gm0037.regeltekst.201900001</r:identificatie>
 				</r:Regeltekst>
@@ -62,7 +54,7 @@
 		<!-- RVR 1 -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:RegelVoorIedereen ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
 						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
@@ -76,10 +68,10 @@
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- ACT 1 Lege ow:regeltekstId GOED -->
+		<!-- ACT 1 Lege>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.201900001</rol:identificatie>
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
@@ -92,7 +84,7 @@
 				</rol:Activiteit>
 			</ow-dc:owObject>	
 		</sl:stand>
-		<!-- ACT 2 Geen ow:regeltekstId GOED -->
+		<!-- ACT 2 Geen>
 		<sl:stand>
 			<ow-dc:owObject>
 				<rol:Activiteit>
@@ -111,10 +103,10 @@
 				</rol:Activiteit>
 			</ow-dc:owObject>	
 		</sl:stand>
-		<!-- ACT 3 Goede ow:regeltekstId GOED  -->
+		<!-- ACT 3 Goede>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.201900003</rol:identificatie>
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
@@ -127,10 +119,10 @@
 				</rol:Activiteit>
 			</ow-dc:owObject>	
 		</sl:stand>
-		<!-- ACT 4 Foute ow:regeltekstId->Verwijzing in RegelvoorIedereen FOUT   -->
+		<!-- ACT 4 Foute>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.201900004</rol:identificatie>
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
@@ -143,10 +135,10 @@
 				</rol:Activiteit>
 			</ow-dc:owObject>	
 		</sl:stand>
-		<!-- ACT 5 Foute ow:regeltekstId->Foute in RegelvoorIedereen-id FOUT   -->
+		<!-- ACT 5 Foute>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit ow:regeltekstId="nl.imow-gm0037.regeltekst.201900001FOUT">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.201900005</rol:identificatie>
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>

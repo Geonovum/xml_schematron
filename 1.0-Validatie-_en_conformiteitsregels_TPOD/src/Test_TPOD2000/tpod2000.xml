@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ow-dc:owBestand xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+    xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+    xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+    xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+    xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+    xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+    xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+    xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+    xmlns:p="http://www.geostandaarden.nl/imow/pons"
+    xmlns:r="http://www.geostandaarden.nl/imow/regels"
+    xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+    xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-    xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709"
-    xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
-    xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
-    xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
-    xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
-    xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-    xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
-    xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
-    xmlns:rkow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-    xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
-    xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901 ../xsd-imow-0.98.2-kern/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+    xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
     <sl:standBestand>
         <sl:dataset>Omgevingsregeling_201912011101001</sl:dataset>
         <sl:inhoud>
@@ -30,7 +28,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101FOUT" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_1_LID_FOUT">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101001</r:identificatie>
                 </r:Regeltekst>
@@ -38,7 +35,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101001">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -54,7 +51,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101002</r:identificatie>
                 </r:Regeltekst>
@@ -62,7 +58,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101002">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -78,7 +74,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_3">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101003</r:identificatie>
                 </r:Regeltekst>
@@ -86,7 +81,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101003">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -102,7 +97,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.1__art_2.3__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101004</r:identificatie>
                 </r:Regeltekst>
@@ -110,7 +104,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101004">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -126,7 +120,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.4__art_2.7_ARTIKEL_FOUT">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101005</r:identificatie>
                 </r:Regeltekst>
@@ -134,7 +127,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101005">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -150,7 +143,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.5__art_2.8__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101006</r:identificatie>
                 </r:Regeltekst>
@@ -158,7 +150,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101006">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -174,7 +166,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.5__art_2.8__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101007</r:identificatie>
                 </r:Regeltekst>
@@ -182,7 +173,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101007">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -198,7 +189,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.5__art_2.8__para_3">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101008</r:identificatie>
                 </r:Regeltekst>
@@ -206,7 +196,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101008">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -222,7 +212,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.5__art_2.9__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101009</r:identificatie>
                 </r:Regeltekst>
@@ -230,7 +219,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101009">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -246,7 +235,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.5__art_2.9__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101010</r:identificatie>
                 </r:Regeltekst>
@@ -254,7 +242,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101010">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -270,7 +258,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.6__art_2.10">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101011</r:identificatie>
                 </r:Regeltekst>
@@ -278,7 +265,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101011">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -294,7 +281,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.8__art_2.12">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101012</r:identificatie>
                 </r:Regeltekst>
@@ -302,7 +288,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101012">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -318,7 +304,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.10__art_2.21">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101013</r:identificatie>
                 </r:Regeltekst>
@@ -326,7 +311,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101013">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -342,7 +327,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.1__art_2.26__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101014</r:identificatie>
                 </r:Regeltekst>
@@ -350,7 +334,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101014">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -366,7 +350,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.1__art_2.26__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101015</r:identificatie>
                 </r:Regeltekst>
@@ -374,7 +357,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101015">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -390,7 +373,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.1__art_2.26__para_3">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101016</r:identificatie>
                 </r:Regeltekst>
@@ -398,7 +380,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101016">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -414,7 +396,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.1__art_2.27__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101017</r:identificatie>
                 </r:Regeltekst>
@@ -422,7 +403,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101017">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -438,7 +419,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.1__art_2.27__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101018</r:identificatie>
                 </r:Regeltekst>
@@ -446,7 +426,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101018">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -462,7 +442,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.1__art_2.27__para_3">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101019</r:identificatie>
                 </r:Regeltekst>
@@ -470,7 +449,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101019">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -486,7 +465,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.2__art_2.28__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101020</r:identificatie>
                 </r:Regeltekst>
@@ -494,7 +472,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101020">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -510,7 +488,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.2__art_2.28__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101021</r:identificatie>
                 </r:Regeltekst>
@@ -518,7 +495,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101021">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -534,7 +511,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.2__art_2.28__para_3">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101022</r:identificatie>
                 </r:Regeltekst>
@@ -542,7 +518,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101022">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -558,7 +534,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.6__art_2.32__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101023</r:identificatie>
                 </r:Regeltekst>
@@ -566,7 +541,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101023">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -582,7 +557,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.6__art_2.32__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101024</r:identificatie>
                 </r:Regeltekst>
@@ -590,7 +564,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101024">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -606,7 +580,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.7__art_2.33__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101025</r:identificatie>
                 </r:Regeltekst>
@@ -614,7 +587,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101025">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -630,7 +603,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.7__art_2.33__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101026</r:identificatie>
                 </r:Regeltekst>
@@ -638,7 +610,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101026">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -654,7 +626,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.7__art_2.33__para_3">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101027</r:identificatie>
                 </r:Regeltekst>
@@ -662,7 +633,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101027">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -678,7 +649,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.7__art_2.34__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101028</r:identificatie>
                 </r:Regeltekst>
@@ -686,7 +656,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101028">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -702,7 +672,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.7__art_2.34__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101029</r:identificatie>
                 </r:Regeltekst>
@@ -710,7 +679,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101029">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -726,7 +695,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.7__art_2.34__para_3">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101030</r:identificatie>
                 </r:Regeltekst>
@@ -734,7 +702,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101030">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -750,7 +718,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.8__art_2.35">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101031</r:identificatie>
                 </r:Regeltekst>
@@ -758,7 +725,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101031">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -774,7 +741,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.9__art_2.36__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101032</r:identificatie>
                 </r:Regeltekst>
@@ -782,7 +748,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101032">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -798,7 +764,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.9__art_2.36__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101033</r:identificatie>
                 </r:Regeltekst>
@@ -806,7 +771,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101033">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -822,7 +787,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.9__art_2.36__para_3">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101034</r:identificatie>
                 </r:Regeltekst>
@@ -830,7 +794,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101034">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -846,7 +810,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.3__subsec_2.3.9__art_2.36__para_4">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101035</r:identificatie>
                 </r:Regeltekst>
@@ -854,7 +817,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101035">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -870,7 +833,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.6__art_2.41__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101036</r:identificatie>
                 </r:Regeltekst>
@@ -878,7 +840,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101036">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -894,7 +856,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.6__art_2.41__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101037</r:identificatie>
                 </r:Regeltekst>
@@ -902,7 +863,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101037">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -918,7 +879,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.6__art_2.41__para_3">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101038</r:identificatie>
                 </r:Regeltekst>
@@ -926,7 +886,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101038">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -942,7 +902,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.6__art_2.41__para_4">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101039</r:identificatie>
                 </r:Regeltekst>
@@ -950,7 +909,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101039">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -966,7 +925,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.6__art_2.41__para_5">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101040</r:identificatie>
                 </r:Regeltekst>
@@ -974,7 +932,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101040">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -990,7 +948,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.6__art_2.41__para_6">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101041</r:identificatie>
                 </r:Regeltekst>
@@ -999,7 +956,7 @@
         <!-- 2.41.6	Geometrische begrenzing van gebieden waar windturbines het radarbeeld kunnen verstoren Kamp Aocs BW Milligen -->
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101041">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
                         <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.201912011101041"/>
@@ -1013,7 +970,7 @@
         <!-- 2.41.6	Geometrische begrenzing van gebieden waar windturbines het radarbeeld kunnen verstoren Mass-Radarcomplex Soesterberg -->
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101041">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
                         <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.201912011101042"/>
@@ -1027,7 +984,7 @@
         <!-- 2.41.6	Geometrische begrenzing van gebieden waar windturbines het radarbeeld kunnen verstoren Mass-Radarcomplex Twente -->
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101041">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
                         <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.201912011101043"/>
@@ -1041,7 +998,7 @@
         <!-- 2.41.6	Geometrische begrenzing van gebieden waar windturbines het radarbeeld kunnen verstoren Radarpost Noord te Wier -->
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101041">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
                         <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.201912011101044"/>
@@ -1055,7 +1012,7 @@
         <!-- 2.41.6	Geometrische begrenzing van gebieden waar windturbines het radarbeeld kunnen verstoren Radarstation Herwijnen -->
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101041">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
                         <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.201912011101045"/>
@@ -1069,7 +1026,7 @@
         <!-- 2.41.6	Geometrische begrenzing van gebieden waar windturbines het radarbeeld kunnen verstoren Vliegbasis Leeuwarden -->
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101041">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
                         <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.201912011101046"/>
@@ -1083,7 +1040,7 @@
         <!-- 2.41.6	Geometrische begrenzing van gebieden waar windturbines het radarbeeld kunnen verstoren Vliegbasis Volkel -->
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101041">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
                         <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.201912011101047"/>
@@ -1097,7 +1054,7 @@
         <!-- 2.41.6	Geometrische begrenzing van gebieden waar windturbines het radarbeeld kunnen verstoren Vliegbasis Woensdrecht -->
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101041">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
                         <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.201912011101048"/>
@@ -1112,7 +1069,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.7__art_2.42__para_1">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101042</r:identificatie>
                 </r:Regeltekst>
@@ -1120,7 +1076,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101042">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
                         <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.201912011101049"/>
@@ -1135,7 +1091,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.7__art_2.42__para_2">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101043</r:identificatie>
                 </r:Regeltekst>
@@ -1143,7 +1098,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101043">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -1159,7 +1114,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.7__art_2.42__para_3">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101044</r:identificatie>
                 </r:Regeltekst>
@@ -1167,7 +1121,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101044">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     
                     <r:locatieaanduiding>
@@ -1183,7 +1137,6 @@
         <sl:stand>
             <ow-dc:owObject>
                 <r:Regeltekst 
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101" 
                     wId="mnre1034_1-0__chp_2__subchp_2.7__art_2.42__para_4">
                     <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101045</r:identificatie>
                 </r:Regeltekst>
@@ -1191,7 +1144,7 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <r:RegelVoorIedereen rkow:regeltekstId="nl.imow-mnre1034.regeltekst.201912011101045">
+                <r:RegelVoorIedereen>
                     <r:idealisatie>indicatief</r:idealisatie>
                     
                     <r:locatieaanduiding>

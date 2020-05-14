@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/"
-                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                    schemaversie="0.98.3-kern"
-                    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../lvbb/LVBB-stop.xsd">
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+   xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/LVBB-stop.xsd">
    <BesluitVersie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
          <FRBRWork>/akn/nl/bill/pv26/2020/311</FRBRWork>

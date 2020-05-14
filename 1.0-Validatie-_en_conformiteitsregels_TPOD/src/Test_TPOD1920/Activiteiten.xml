@@ -15,7 +15,7 @@
 	xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
 	xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.geostandaarden.nl/imow https://register.geostandaarden.nl/xmlschema/tpod/v0.98.2-kern/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">	
 	<sl:standBestand>
 		<sl:dataset>Omgevingsplan Hillegom</sl:dataset>
 		<sl:inhoud>
@@ -27,7 +27,7 @@
 		</sl:inhoud>
 		<sl:stand>
 			<ow-dc:owObject>
-				<rol:Activiteit rkow:regeltekstId="nl.imow-gm0534.regeltekst.112">
+				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0534.activiteit.7</rol:identificatie>
 					<rol:naam>beperkingengebiedactiviteit waterstaatswerk</rol:naam>
 					<rol:groep>wateractiviteit</rol:groep>

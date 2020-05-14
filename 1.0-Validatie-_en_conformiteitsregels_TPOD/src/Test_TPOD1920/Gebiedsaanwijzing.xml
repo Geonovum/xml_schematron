@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<!-- OP BG Hillegom by Visma | Roxit -->
-<owBestand 
-	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
-	xmlns:g="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709"
-	xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
-	xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
+<owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
-	xsi:schemaLocation="http://www.geostandaarden.nl/imow https://register.geostandaarden.nl/xmlschema/tpod/v0.98.2-kern/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd"
-	xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
 	<sl:standBestand>
 		<sl:dataset>Omgevingsplan Hillegom</sl:dataset>
 		<sl:inhoud>
@@ -20,7 +26,7 @@
 		</sl:inhoud>
 		<sl:stand>
 			<owObject>
-				<g:Gebiedsaanwijzing ow:regeltekstId="nl.imow-gm0534.regeltekst.152">
+				<g:Gebiedsaanwijzing>
 					<g:identificatie>nl.imow-gm0534.gebiedsaanwijzing.10</g:identificatie>
 					<g:type>Functie</g:type>
 					<g:naam>duurzame bloementuin</g:naam>

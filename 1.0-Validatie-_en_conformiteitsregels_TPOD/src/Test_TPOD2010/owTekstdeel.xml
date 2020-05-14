@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ow-dc:owBestand 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+    xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+    xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+    xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+    xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+    xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+    xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+    xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+    xmlns:p="http://www.geostandaarden.nl/imow/pons"
+    xmlns:r="http://www.geostandaarden.nl/imow/regels"
+    xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+    xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
-    xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
-    xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst/v20190901"
-    xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-    xmlns:vt-ref="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901"
-    xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
-    xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
-    xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901 ../xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
     <sl:standBestand>
         <sl:dataset>Zuidasdok</sl:dataset>
         <sl:inhoud>
@@ -17,27 +21,27 @@
             <sl:leveringsId>projectbesluit-zuidasdok</sl:leveringsId>
             <sl:objectTypen>
                 <sl:objectType>Tekstdeel</sl:objectType>
-                <sl:objectType>FormeleDivisie</sl:objectType>
+                <sl:objectType>Divisie</sl:objectType>
                 <sl:objectType>Hoofdlijn</sl:objectType>
             </sl:objectTypen>
         </sl:inhoud>
         <!-- Vrije tekst Inleiding, Tracébesluit en bestemmingsplan-->
         <sl:stand>
             <ow-dc:owObject>
-                <vt:FormeleDivisie wIdRegeling="/akn/nl/act/pv27/2019/3520" wId="pv27_1__fdvs_o_1__fdvs_o_1__fdvs_o_2">
-                    <vt:identificatie>nl.imow-pv27.formeledivisie.2019000001</vt:identificatie>
-                </vt:FormeleDivisie>
+                <vt:Divisie wId="pv27_1__fdvs_o_1__fdvs_o_1__fdvs_o_2">
+                    <vt:identificatie>nl.imow-pv27.divisie.2019000001</vt:identificatie>
+                </vt:Divisie>
             </ow-dc:owObject>
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <vt:Tekstdeel ow:regeltekstId="nl.imow-pv27.formeledivisie.2019000001">
+                <vt:Tekstdeel>
                     <vt:identificatie>nl.imow-pv27.tekstdeel.2019000001</vt:identificatie>
                     <vt:idealisatie>exact</vt:idealisatie>
                     <vt:thema>Algemeen</vt:thema>
-                    <vt:formeleDivisie>
-                        <vt-ref:FormeleDivisieRef xlink:href="nl.imow-pv27.formeleinhoud.2019000001"/>
-                    </vt:formeleDivisie>
+                    <vt:divisie>
+                        <vt-ref:DivisieRef xlink:href="nl.imow-pv27.formeleinhoud.2019000001"/>
+                    </vt:divisie>
                     <vt:locatieaanduiding>
                         <l-ref:LocatieRef xlink:href="nl.imow-pv27.gebied.2019000001"/>
                     </vt:locatieaanduiding>
@@ -47,7 +51,7 @@
         <!-- Hoofdstuk 2 -->
         <sl:stand>
             <ow-dc:owObject>
-                <vt:Hoofdlijn ow:regeltekstId="nl.imow-pv27.formeledivisie.2019000002">
+                <vt:Hoofdlijn>
                     <vt:identificatie>nl.imow-pv27.hoofdlijn.2019000001</vt:identificatie>
                     <vt:naam>Geluid</vt:naam>
                     <vt:soort>Maatregel</vt:soort>
@@ -56,29 +60,29 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <vt:FormeleDivisie wIdRegeling="/akn/nl/act/pv27/2019/3520FOUT" wId="pv27_1__fdvs_o_1__fdvs_o_3">
-                    <vt:identificatie>nl.imow-pv27.formeledivisie.2019000002</vt:identificatie>
-                </vt:FormeleDivisie>
+                <vt:Divisie wId="pv27_1__fdvs_o_1__fdvs_o_3">
+                    <vt:identificatie>nl.imow-pv27.divisie.2019000002</vt:identificatie>
+                </vt:Divisie>
             </ow-dc:owObject>
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <vt:Tekstdeel ow:regeltekstId="nl.imow-pv27.formeledivisie.2019000002">
+                <vt:Tekstdeel>
                     <vt:identificatie>nl.imow-pv27.tekstdeel.2019000002</vt:identificatie>
                     <vt:idealisatie>exact</vt:idealisatie>
                     <vt:hoofdlijnaanduiding>
                         <vt-ref:HoofdlijnRef xlink:href="nl.imow-pv27.hoofdlijn.2019000001"/>
                     </vt:hoofdlijnaanduiding>
-                    <vt:formeleDivisie>
-                        <vt-ref:FormeleDivisieRef xlink:href="nl.imow-pv27.formeledivisie.2019000002"/>
-                    </vt:formeleDivisie>
+                    <vt:divisie>
+                        <vt-ref:DivisieRef xlink:href="nl.imow-pv27.divisie.2019000002"/>
+                    </vt:divisie>
                 </vt:Tekstdeel>
             </ow-dc:owObject>
         </sl:stand>
         <!-- Hoofdstuk 3 -->
         <sl:stand>
             <ow-dc:owObject>
-                <vt:Hoofdlijn ow:regeltekstId="nl.imow-pv27.formeledivisie.2019000003">
+                <vt:Hoofdlijn>
                     <vt:identificatie>nl.imow-pv27.hoofdlijn.2019000002</vt:identificatie>
                     <vt:naam>Verkeer</vt:naam>
                     <vt:soort>Maatregel</vt:soort>
@@ -87,42 +91,42 @@
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <vt:FormeleDivisie wIdRegeling="/akn/nl/act/pv27/2019/3520" wId="pv27_1__fdvs_o_1__fdvs_o_4">
-                    <vt:identificatie>nl.imow-pv27.formeledivisie.2019000003</vt:identificatie>
-                </vt:FormeleDivisie>
+                <vt:Divisie wId="pv27_1__fdvs_o_1__fdvs_o_4">
+                    <vt:identificatie>nl.imow-pv27.divisie.2019000003</vt:identificatie>
+                </vt:Divisie>
             </ow-dc:owObject>
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <vt:Tekstdeel ow:regeltekstId="nl.imow-pv27.formeledivisie.2019000003">
+                <vt:Tekstdeel>
                     <vt:identificatie>nl.imow-pv27.tekstdeel.2019000003</vt:identificatie>
                     <vt:idealisatie>exact</vt:idealisatie>
                     <vt:hoofdlijnaanduiding>
                         <vt-ref:HoofdlijnRef xlink:href="nl.imow-pv27.hoofdlijn.2019000002"/>
                     </vt:hoofdlijnaanduiding>
-                    <vt:formeleDivisie>
-                        <vt-ref:FormeleDivisieRef xlink:href="nl.imow-pv27.formeledivisie.2019000003"/>
-                    </vt:formeleDivisie>
+                    <vt:divisie>
+                        <vt-ref:DivisieRef xlink:href="nl.imow-pv27.divisie.2019000003"/>
+                    </vt:divisie>
                 </vt:Tekstdeel>
             </ow-dc:owObject>
         </sl:stand>
         <!-- Hoofdstuk 9 -->
         <sl:stand>
             <ow-dc:owObject>
-                <vt:FormeleDivisie wIdRegeling="/akn/nl/act/pv27/2019/3520" wId="pv27_1__fdvs_o_1__fdvs_o_6">
-                    <vt:identificatie>nl.imow-pv27.formeledivisie.2019000004</vt:identificatie>
-                </vt:FormeleDivisie>
+                <vt:Divisie wId="pv27_1__fdvs_o_1__fdvs_o_6">
+                    <vt:identificatie>nl.imow-pv27.divisie.2019000004</vt:identificatie>
+                </vt:Divisie>
             </ow-dc:owObject>
         </sl:stand>
         <sl:stand>
             <ow-dc:owObject>
-                <vt:Tekstdeel ow:regeltekstId="nl.imow-pv27.formeledivisie.2019000004">
+                <vt:Tekstdeel>
                     <vt:identificatie>nl.imow-pv27.tekstdeel.2019000004</vt:identificatie>
                     <vt:idealisatie>exact</vt:idealisatie>
                     <vt:thema>Verkeer</vt:thema>
-                    <vt:formeleDivisie>
-                        <vt-ref:FormeleDivisieRef xlink:href="nl.imow-pv27.formeledivisie.2019000004"/>
-                    </vt:formeleDivisie>
+                    <vt:divisie>
+                        <vt-ref:DivisieRef xlink:href="nl.imow-pv27.divisie.2019000004"/>
+                    </vt:divisie>
                     <vt:gebiedsaanwijzing>
                         <ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-pv27.gebiedsaanwijzing.2019000001"/>
                     </vt:gebiedsaanwijzing>

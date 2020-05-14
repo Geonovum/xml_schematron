@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://standaarden.overheid.nl/lvbb/stop/"
-    xsi:schemaLocation="https://standaarden.overheid.nl/lvbb/stop/ https://raw.githubusercontent.com/Geonovum/xml_op_xsd_0.98.3-kern/master/lvbb/LVBB-stop.xsd"
-    schemaversie="0.98.3-kern">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/LVBB-stop.xsd">
     <BesluitVersie>
-        
-        
-        
-        
         <Besluit xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
             <Regeling>
-                
-                
-                
                 <WijzigBijlage eId="cmp_A" wId="gm0037_1__cmp_A">
-                    
                     <MaakInitieleRegeling FRBRwork="/akn/nl/act/gm0037/2018/reg456" wordt="/akn/nl/act/gm0037/2019/reg456/nld@main" componentnaam="component_01">
-                        
-                        
                         <Bijlage eId="cmp_I" wId="gm0037_1__cmp_I">
                             <Kop>
                                 <Label>Bijlage</Label>

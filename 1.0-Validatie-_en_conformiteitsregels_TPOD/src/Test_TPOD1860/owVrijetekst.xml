@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ow-dc:owBestand xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
-      xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
-      xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-      xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709"
-      xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
-      xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
-      xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
-      xmlns:k-ref="http://www.geostandaarden.nl/imow/kaartrecept-ref/v20190901"
-      xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
-      xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-      xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
-      xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
-      xmlns:rkow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-      xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
-      xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst/v20190901"
-      xmlns:vt-ref="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901"
-      xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901 ../xsd/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+   xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+   xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+   xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+   xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+   xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+   xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+   xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+   xmlns:p="http://www.geostandaarden.nl/imow/pons"
+   xmlns:r="http://www.geostandaarden.nl/imow/regels"
+   xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+   xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
    <sl:standBestand>
       <sl:dataset>Omgevingsvisie Rotterdam</sl:dataset>
       <sl:inhoud>
@@ -29,14 +25,14 @@
       </sl:inhoud>
       <sl:stand>
          <ow-dc:owObject>
-            <vt:FormeleDivisie wIdRegeling="/akn/nl/bill/gm0599/2019/4515/nld@2019-10-01" wId="gm0599_1__fdvs_3__fcontent_1">
+            <vt:FormeleDivisie wId="gm0599_1__fdvs_3__fcontent_1">
                <vt:identificatie>nl.imow-gm0599.formeledivisie.2019000001</vt:identificatie>
             </vt:FormeleDivisie>
          </ow-dc:owObject>
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <vt:Tekstdeel rkow:regeltekstId="nl.imow-gm0599.formeledivisie.2019000001">
+            <vt:Tekstdeel>
                <vt:identificatie>nl.imow-gm0599.tekstdeel.2019000001</vt:identificatie>
                <vt:idealisatie>exact</vt:idealisatie>
                <vt:thema>verkeer en vervoer</vt:thema>
@@ -48,14 +44,14 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <vt:FormeleDivisie wIdRegeling="/akn/nl/bill/gm0599/2019/4515/nld@2019-10-01" wId="gm0599_1__fdvs_3__fcontent_1">
+            <vt:FormeleDivisie wId="gm0599_1__fdvs_3__fcontent_1">
                <vt:identificatie>nl.imow-gm0599.formeledivisie.2019000001</vt:identificatie>
             </vt:FormeleDivisie>
          </ow-dc:owObject>
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <vt:Tekstdeel rkow:regeltekstId="nl.imow-gm0599.formeledivisie.2019000002">
+            <vt:Tekstdeel>
                <vt:identificatie>nl.imow-gm0599.tekstdeel.2019000002</vt:identificatie>
                <vt:idealisatie>indicatief</vt:idealisatie>
                <vt:thema>verkeer en vervoer</vt:thema>
@@ -72,14 +68,14 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <vt:FormeleDivisie wIdRegeling="/akn/nl/bill/gm0599/2019/4515/nld@2019-10-01" wId="gm0599_1__fdvs_5__fcontent_1">
+            <vt:FormeleDivisie wId="gm0599_1__fdvs_5__fcontent_1">
                <vt:identificatie>nl.imow-gm0599.formeledivisie.2019000003</vt:identificatie>
             </vt:FormeleDivisie>
          </ow-dc:owObject>
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <vt:Tekstdeel rkow:regeltekstId="nl.imow-gm0599.formeledivisie.2019000003">
+            <vt:Tekstdeel>
                <vt:identificatie>nl.imow-gm0599.tekstdeel.2019000002</vt:identificatie>
                <vt:idealisatie>indicatief</vt:idealisatie>
                <vt:thema>verkeer en vervoer</vt:thema>
@@ -97,14 +93,14 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <vt:FormeleDivisie wIdRegeling="/akn/nl/bill/gm0599/2019/4515/nld@2019-10-01" wId="gm0599_1__fdvs_6__fcontent_1">
+            <vt:FormeleDivisie wId="gm0599_1__fdvs_6__fcontent_1">
                <vt:identificatie>nl.imow-gm0599.formeledivisie.2019000004</vt:identificatie>
             </vt:FormeleDivisie>
          </ow-dc:owObject>
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <vt:Tekstdeel rkow:regeltekstId="nl.imow-gm0599.formeleinhoud.2019000004">
+            <vt:Tekstdeel>
                <vt:identificatie>nl.imow-gm0599.tekstdeel.2019000003</vt:identificatie>
                <vt:idealisatie>indicatief</vt:idealisatie>
                <vt:thema>verkeer en vervoer</vt:thema>
@@ -123,14 +119,14 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <vt:FormeleDivisie wIdRegeling="/akn/nl/bill/gm0599/2019/4515/nld@2019-10-01" wId="gm0599_1__fdvs_o_2">
+            <vt:FormeleDivisie wId="gm0599_1__fdvs_o_2">
                <vt:identificatie>nl.imow-gm0599.formeledivisie.2019000005</vt:identificatie>
             </vt:FormeleDivisie>
          </ow-dc:owObject>
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <vt:Tekstdeel rkow:regeltekstId="nl.imow-gm0599.formeledivisie.2019000005">
+            <vt:Tekstdeel>
                <vt:identificatie>nl.imow-gm0599.tekstdeel.2019000004</vt:identificatie>
                <vt:idealisatie>indicatief</vt:idealisatie>
                <vt:thema>Stedelijke functies</vt:thema>
