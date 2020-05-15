@@ -15,6 +15,7 @@
     
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
     xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
+    xmlns:stop="https://standaarden.overheid.nl/stop/imop/stop/"
     xmlns:aanlevering="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
     
     xmlns:basisgeo="http://www.geostandaarden.nl/basisgeometrie/1.0"
@@ -23,7 +24,6 @@
     xmlns:geo="https://standaarden.overheid.nl/stop/imop/geo/"
     
     xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
-    xmlns:stop="http://www.overheid.nl/2017/stop"
     xmlns:tns="http://www.logius.nl/digikoppeling/gb/2010/10"
     
     xmlns:ow-manifest="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
-   xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/LVBB-stop.xsd">
+   xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
    <BesluitVersie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
          <FRBRWork>/akn/nl/bill/ws0659/2019/WvL01</FRBRWork>
@@ -44,8 +44,8 @@
             </BeoogdeRegeling>
          </BeoogdeRegelgeving>
       </BesluitDoel>
-      <Besluit xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
-         <NieuweRegeling FRBRwork="/akn/nl/act/ws0659/2019/WvL01"
+      <BesluitKlassiek xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <RegelingKlassiek FRBRwork="/akn/nl/act/ws0659/2019/WvL01"
                          componentnaam="main"
                          wordt="/akn/nl/act/ws0659/2019/WvL01/nld@2019-10-31">
             <RegelingOpschrift eId="longTitle_1" wId="longTitle_1">
@@ -5294,8 +5294,8 @@
                   </Divisie>
                </Divisie>
             </Bijlage>
-         </NieuweRegeling>
-      </Besluit>
+         </RegelingKlassiek>
+      </BesluitKlassiek>
    </BesluitVersie>
    <RegelingVersieInformatie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">

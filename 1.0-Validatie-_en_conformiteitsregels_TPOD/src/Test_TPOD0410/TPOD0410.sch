@@ -15,6 +15,7 @@
     
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
     xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
+    xmlns:stop="https://standaarden.overheid.nl/stop/imop/stop/"
     xmlns:aanlevering="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
     
     xmlns:basisgeo="http://www.geostandaarden.nl/basisgeometrie/1.0"
@@ -23,7 +24,6 @@
     xmlns:geo="https://standaarden.overheid.nl/stop/imop/geo/"
     
     xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
-    xmlns:stop="http://www.overheid.nl/2017/stop"
     xmlns:tns="http://www.logius.nl/digikoppeling/gb/2010/10"
     
     xmlns:ow-manifest="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
@@ -47,6 +47,7 @@
     
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/stop/" prefix="stop"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/aanlevering/" prefix="aanlevering"/>
     
     <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/1.0" prefix="basisgeo"/>
@@ -55,7 +56,6 @@
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/geo/" prefix="geo"/>
     
     <sch:ns uri="http://www.overheid.nl/2017/lvbb" prefix="lvbb"/>
-    <sch:ns uri="http://www.overheid.nl/2017/stop" prefix="stop"/>
     <sch:ns uri="http://www.logius.nl/digikoppeling/gb/2010/10" prefix="tns"/>
     
     <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/manifest-ow" prefix="ow-manifest"/>
@@ -65,7 +65,7 @@
     <!-- ====================================== GENERIC ============================================================================= -->
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
-    <sch:let name="SOORT_REGELING" value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+    <sch:let name="SOORT_REGELING" value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
     
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
@@ -81,6 +81,7 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
+            <sch:report test="false()">asa</sch:report>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0410: Een Hoofdstuk moet worden geduid met de label Hoofdstuk. 
                 (betreft hoofdstuk: <sch:value-of select="tekst:Nummer"/>, label: <sch:value-of select="tekst:Label"/>) </sch:assert> 
