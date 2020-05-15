@@ -6,7 +6,7 @@
    targetNamespace="http://www.geostandaarden.nl/imow/geometrie-ref"
    elementFormDefault="qualified"
    attributeFormDefault="unqualified"
-           version="1.0-">
+   version="1.0-">
    <xs:annotation>
       <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/geometrie-ref</xs:appinfo>
       <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0</xs:appinfo>
@@ -16,11 +16,11 @@
       <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
       <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/geometrie-ref/v20190901/IMOW_GeometrieRef.xsd</xs:documentation>
       <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
-        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
-    </xs:documentation>
+         This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+      </xs:documentation>
    </xs:annotation>
    <xs:import namespace="http://www.w3.org/1999/xlink"
-            schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+      schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
    <xs:element name="GeometrieRef" type="g-ref:GeometrieRef" abstract="false"/>
    <xs:complexType name="GeometrieRef" abstract="false">
       <xs:attribute name="type" type="xs:string" fixed="simple"/>

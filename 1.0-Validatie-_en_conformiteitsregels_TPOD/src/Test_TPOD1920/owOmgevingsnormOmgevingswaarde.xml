@@ -35,7 +35,7 @@
 								<da:eenheid>μg/m3</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -55,7 +55,7 @@
 								<da:eenheid>μg/m3</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000009"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000009"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -75,7 +75,7 @@
 								<da:eenheid>meter</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 						<rol:Normwaarde>
@@ -84,7 +84,7 @@
 								<da:eenheid>meter</da:eenheid>
 							</rol:kwantitatieveWaarde>					
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>

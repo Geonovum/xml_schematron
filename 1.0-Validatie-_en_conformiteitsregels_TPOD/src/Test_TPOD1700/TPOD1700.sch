@@ -83,12 +83,12 @@
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1700()"/>
             <sch:let name="bovenLiggend"
-                value="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                value="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>
             <sch:let name="identificatie" value="rol:identificatie"/>
             <sch:let name="circulaireActivititeiten" value="foo:circulaireActiviteitenAanzetTPOD_1700($activiteitenLijst, $bovenLiggend, $identificatie, $identificatie)"/>
             <sch:let name="identificatie" value="rol:identificatie"/>
             <sch:let name="lokaalBovenliggend"
-                value="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                value="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>
             <sch:let name="activiteitenTrajectNaarFunctioneleStructuur" value="foo:activiteitenTrajectNaarFunctioneleStructuurTPOD_1700($circulaireActivititeiten, $activiteitenLijst, $identificatie, $lokaalBovenliggend)"/>
             <sch:let name="CONDITION"
                 value="string-length($activiteitenTrajectNaarFunctioneleStructuur) > 0"/>
@@ -145,7 +145,7 @@
             <xsl:for-each
                 select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
                 <xsl:if
-                    test="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href = $bovenLiggend">
+                    test="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href = $bovenLiggend">
                     <xsl:variable name="lokaalBovenliggend" select="rol:identificatie"/>
                     <xsl:choose>
                         <xsl:when test="$identificatie = $lokaalBovenliggend">
@@ -182,7 +182,7 @@
                 select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
                 <xsl:if test="rol:identificatie = $bovenliggend">
                     <xsl:variable name="lokaalBovenliggend"
-                        select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                        select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>
                     <xsl:choose>
                         <xsl:when test="not(contains($activiteitenLijst, $lokaalBovenliggend))">
                             <xsl:value-of select="concat($identificatie, ', ')"/>

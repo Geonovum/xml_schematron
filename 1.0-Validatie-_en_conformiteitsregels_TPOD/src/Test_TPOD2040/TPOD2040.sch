@@ -66,7 +66,7 @@
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
@@ -78,13 +78,12 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_2040">
-        <sch:rule context="//vt:FormeleDivisie">
+        <sch:rule context="//vt:Divisie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2040: Betreft
-                <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: het wId van de
-                FormeleDivisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP
+                H:TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
+                Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP
             </sch:assert>
         </sch:rule>
     </sch:pattern>

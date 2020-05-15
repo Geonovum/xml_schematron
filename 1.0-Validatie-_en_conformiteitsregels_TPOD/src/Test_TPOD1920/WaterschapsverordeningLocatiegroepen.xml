@@ -30,10 +30,10 @@
                <l:identificatie>nl.imow-ws0659.gebiedengroep.1</l:identificatie>
                <l:noemer>groep1</l:noemer>
                <l:groepselement>
-                  <l-ref:GebiedRef xlink:href="nl.imow-ws0659.gebied.gml00"/>
-                  <l-ref:GebiedRef xlink:href="nl.imow-ws0659.gebied.gml03"/>
-                  <l-ref:GebiedRef xlink:href="nl.imow-ws0659.gebied.gml07"/>
-                  <l-ref:GebiedRef xlink:href="nl.imow-ws0659.gebied.gml08"/>
+                  <l:GebiedRef xlink:href="nl.imow-ws0659.gebied.gml00"/>
+                  <l:GebiedRef xlink:href="nl.imow-ws0659.gebied.gml03"/>
+                  <l:GebiedRef xlink:href="nl.imow-ws0659.gebied.gml07"/>
+                  <l:GebiedRef xlink:href="nl.imow-ws0659.gebied.gml08"/>
                </l:groepselement>
             </l:Gebiedengroep>
          </ow-dc:owObject>

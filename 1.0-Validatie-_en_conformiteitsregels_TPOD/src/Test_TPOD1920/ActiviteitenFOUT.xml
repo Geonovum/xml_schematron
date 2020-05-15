@@ -30,10 +30,10 @@
 					<rol:naam>beperkingengebiedactiviteit waterstaatswerk</rol:naam>
 					<rol:groep>wateractiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0534.gebiedengroep.201911221101000"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0534.gebiedengroep.201911221101000"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0534.activiteit.Omgevingsplanactiviteit"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0534.activiteit.Omgevingsplanactiviteit"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>

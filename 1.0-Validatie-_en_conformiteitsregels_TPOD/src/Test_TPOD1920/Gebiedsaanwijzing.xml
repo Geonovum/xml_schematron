@@ -26,15 +26,15 @@
 		</sl:inhoud>
 		<sl:stand>
 			<owObject>
-				<g:Gebiedsaanwijzing>
-					<g:identificatie>nl.imow-gm0534.gebiedsaanwijzing.10</g:identificatie>
-					<g:type>Functie</g:type>
-					<g:naam>duurzame bloementuin</g:naam>
-					<g:groep>agrarisch</g:groep>
-					<g:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="cb027ed1-0aaa-4303-9cad-cee79999a001"/>
-					</g:locatieaanduiding>
-				</g:Gebiedsaanwijzing>
+				<ga:Gebiedsaanwijzing>
+					<ga:identificatie>nl.imow-gm0534.gebiedsaanwijzing.10</ga:identificatie>
+					<ga:type>Functie</ga:type>
+					<ga:naam>duurzame bloementuin</ga:naam>
+					<ga:groep>agrarisch</ga:groep>
+					<ga:locatieaanduiding>
+						<l:LocatieRef xlink:href="cb027ed1-0aaa-4303-9cad-cee79999a001"/>
+					</ga:locatieaanduiding>
+				</ga:Gebiedsaanwijzing>
 			</owObject>
 		</sl:stand>
 	</sl:standBestand>

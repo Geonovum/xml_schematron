@@ -82,7 +82,7 @@
 								<da:eenheid>μg/m3</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -100,7 +100,7 @@
 						<rol:Normwaarde>
 							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -122,7 +122,7 @@
 								<da:eenheid>μg/m3</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -140,7 +140,7 @@
 						<rol:Normwaarde>
 							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -162,7 +162,7 @@
 								<da:eenheid>μg/m3</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -183,7 +183,7 @@
 								<da:eenheid>μg/m3</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -199,14 +199,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -217,10 +217,10 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 				</r:RegelVoorIedereen>
@@ -232,13 +232,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000003"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000003"/>
 					</r:artikelOfLid>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -252,11 +252,11 @@
 					<rol:naam>uitoefenen van bedrijfstypen van categorie 2</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 						<!-- Deze activiteit geldt bij de 1e keer dat deze ontstaat alleen voor locatie 1 -->
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 						<!-- Deze activiteit is van het rijk en zit daarom niet in dit bestand maar is opgenomen in de Functionele Structuur -->
 					</rol:bovenliggendeActiviteit>
@@ -275,7 +275,7 @@
 						<da:eenheid>http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid</da:eenheid>
 					</l:hoogte>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
+						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -292,7 +292,7 @@
 						<da:eenheid>http://standaarden.omgevingswet.overheid.nl/datatypenalgemeen/id/concept/Cm</da:eenheid>
 					</l:hoogte>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="B3AF6AF7-5EFA-4A87-9C66-BFB046DD89AC"/>
+						<l:GeometrieRef xlink:href="B3AF6AF7-5EFA-4A87-9C66-BFB046DD89AC"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -304,7 +304,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000003</l:identificatie>
 					<l:noemer>zone B</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="0868A0B1-DA79-4C33-8305-1BDE0126FA9A"/>
+						<l:GeometrieRef xlink:href="0868A0B1-DA79-4C33-8305-1BDE0126FA9A"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -315,7 +315,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000004</l:identificatie>
 					<l:noemer>Centrumgebied</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="D28AF779-7EDD-4A88-8B11-809798F53636"/>
+						<l:GeometrieRef xlink:href="D28AF779-7EDD-4A88-8B11-809798F53636"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -326,7 +326,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000007</l:identificatie>
 					<l:noemer>exploiteren speelautomatenhal</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="33B7D2D0-BF32-4CA1-B7F6-EB0FEF30175A"/>
+						<l:GeometrieRef xlink:href="33B7D2D0-BF32-4CA1-B7F6-EB0FEF30175A"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -337,7 +337,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000008</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 1</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="772B4B37-69F8-4671-B92E-3BCED242409D"/>
+						<l:GeometrieRef xlink:href="772B4B37-69F8-4671-B92E-3BCED242409D"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -348,7 +348,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000009</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 2</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="D24C3416-4790-461C-A4D0-A82BA60CA7D6"/>
+						<l:GeometrieRef xlink:href="D24C3416-4790-461C-A4D0-A82BA60CA7D6"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -359,7 +359,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000010</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 3</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="954BA8CC-6E90-4698-BEEC-005A65C63E98"/>
+						<l:GeometrieRef xlink:href="954BA8CC-6E90-4698-BEEC-005A65C63E98"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -370,7 +370,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000011</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 4</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="EFAAD5E9-B181-4C22-9C3B-B290F4586D82"/>
+						<l:GeometrieRef xlink:href="EFAAD5E9-B181-4C22-9C3B-B290F4586D82"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -381,7 +381,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000012</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 5</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="D28AF779-7EDD-4A88-8B11-809798F53637"/>
+						<l:GeometrieRef xlink:href="D28AF779-7EDD-4A88-8B11-809798F53637"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -394,7 +394,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000013</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 5</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="D28AF779-7EDD-4A88-8B11-809798F53637"/>
+						<l:GeometrieRef xlink:href="D28AF779-7EDD-4A88-8B11-809798F53637"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -406,7 +406,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000014</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 6</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="D28AF779-7EDD-4A88-8B11-809798F53638"/>
+						<l:GeometrieRef xlink:href="D28AF779-7EDD-4A88-8B11-809798F53638"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -416,8 +416,8 @@
 				<l:Gebiedengroep>
 					<l:identificatie>nl.imow-gm0037.gebiedengroep.2019000001</l:identificatie>
 					<l:groepselement>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000013"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000013"/>
 					</l:groepselement>
 				</l:Gebiedengroep>
 			</ow-dc:owObject>
@@ -430,10 +430,10 @@
 				<r:Instructieregel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
 					</r:artikelOfLid>
 				</r:Instructieregel>
 			</ow-dc:owObject>
@@ -443,10 +443,10 @@
 				<r:Instructieregel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
 					</r:artikelOfLid>
 				</r:Instructieregel>
 			</ow-dc:owObject>
@@ -457,10 +457,10 @@
 				<r:Omgevingswaarderegel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href=""/>
+						<r:RegeltekstRef xlink:href=""/>
 					</r:artikelOfLid>
 				</r:Omgevingswaarderegel>
 			</ow-dc:owObject>
@@ -471,10 +471,10 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href=""/>
+						<r:RegeltekstRef xlink:href=""/>
 					</r:artikelOfLid>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -488,11 +488,11 @@
 					<rol:naam>uitoefenen van bedrijfstypen van categorie 2</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 						<!-- Deze activiteit geldt bij de 1e keer dat deze ontstaat alleen voor locatie 1 -->
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 						<!-- Deze activiteit is van het rijk en zit daarom niet in dit bestand maar is opgenomen in de Functionele Structuur -->
 					</rol:bovenliggendeActiviteit>
@@ -505,16 +505,16 @@
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000242</rol:identificatie>
 					<!-- Deze activiteit is>
 					<rol:naam>wonen in een bedrijfswoning</rol:naam>
-					<!-- Deze activiteit wordt opnieuwgebruikt in artikel 2.11 nl.imow-gm0037.Regeltekst.20190000011 -->
+					Deze activiteit wordt opnieuwgebruikt in artikel 2.11 nl.imow-gm0037.Regeltekst.20190000011 -->
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 						<!-- art 2.4 -->
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000004"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000004"/>
 						<!-- art 2.11 -->
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -527,10 +527,10 @@
 					<rol:naam>aanleggen en instandhouden van nutsvoorzieningen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000540"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000540"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>
@@ -542,10 +542,10 @@
 					<rol:naam>aanleggen en instandhouden van nutsvoorzieningen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000243"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000243"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>
@@ -557,10 +557,10 @@
 					<rol:naam>aanleggen en instandhouden van voorzieningen voor de waterhuishouding</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -573,10 +573,10 @@
 					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002451"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002451"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>
@@ -588,10 +588,10 @@
 					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002452"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002452"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>
@@ -603,10 +603,10 @@
 					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002453"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002453"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>
@@ -618,10 +618,10 @@
 					<rol:naam>uitoefenen van detailhandel in ter plaatse vervaardigde goederen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000002"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000002"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -634,10 +634,10 @@
 					<rol:naam>exploiteren van inrichtingen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -650,10 +650,10 @@
 					<rol:naam>exploiteren van risicovolle inrichtingen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -666,10 +666,10 @@
 					<rol:naam>opslagterrein</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -682,14 +682,14 @@
 					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>milieubelastende activiteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:gerelateerdeActiviteit>
 						<!-- Regels van gerelateerde activiteit zijn contextueel relevant -->
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000760123456"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000760123456"/>
 					</rol:gerelateerdeActiviteit>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.FunctioneleStructuur0001"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -702,10 +702,10 @@
 					<rol:naam>opslaan van motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>milieubelastende activiteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.FunctioneleStructuur0001"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -718,10 +718,10 @@
 					<rol:naam>exploiteren van een speelautomatenhal</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -735,7 +735,7 @@
 					<ga:naam>Bedrijf categorie 2</ga:naam>
 					<ga:groep>bedrijf</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
@@ -748,7 +748,7 @@
 					<ga:naam>Centrumgebied</ga:naam>
 					<ga:groep>centrumgebied</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000004"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000004"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
@@ -760,7 +760,7 @@
 					<p:identificatie>nl.imow-gm0037.pons.2019000001</p:identificatie>
 					<p:leidendVanaf>2019-07-19</p:leidendVanaf>
 					<p:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</p:locatieaanduiding>
 				</p:Pons>
 			</ow-dc:owObject>
@@ -772,7 +772,7 @@
 					<p:identificatie>nl.imow-gm0037.pons.2019000002</p:identificatie>
 					<p:leidendVanaf>2019-07-19</p:leidendVanaf>
 					<p:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000002"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000002"/>
 					</p:locatieaanduiding>
 				</p:Pons>
 			</ow-dc:owObject>
@@ -783,7 +783,7 @@
 					<p:identificatie>nl.imow-gm0037.pons.2019000003</p:identificatie>
 					<p:leidendTot>2019-09-03</p:leidendTot>
 					<p:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000002"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000002"/>
 					</p:locatieaanduiding>
 				</p:Pons>
 			</ow-dc:owObject>
@@ -795,7 +795,7 @@
 					<p:identificatie>nl.imow-gm0037.pons.2019000004</p:identificatie>
 					<p:leidendVanaf>2021-01-01</p:leidendVanaf>
 					<p:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000003"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000003"/>
 					</p:locatieaanduiding>
 				</p:Pons>
 			</ow-dc:owObject>
@@ -807,7 +807,7 @@
 					<p:identificatie>nl.imow-gm0037.pons.2019000005</p:identificatie>
 					<p:leidendVanaf>2019-01-07</p:leidendVanaf>
 					<p:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
 					</p:locatieaanduiding>
 				</p:Pons>
 			</ow-dc:owObject>
@@ -818,7 +818,7 @@
 					<p:identificatie>nl.imow-gm0037.pons.2019000005</p:identificatie>
 					<p:leidendTot>2019-06-01</p:leidendTot>
 					<p:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
 					</p:locatieaanduiding>
 				</p:Pons>
 			</ow-dc:owObject>
@@ -829,7 +829,7 @@
 					<p:identificatie>nl.imow-gm0037.pons.2019000005</p:identificatie>
 					<p:leidendVanaf>2019-10-31</p:leidendVanaf>
 					<p:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
 					</p:locatieaanduiding>
 				</p:Pons>
 			</ow-dc:owObject>
@@ -845,7 +845,7 @@
 								<da:eenheid>μg/m3</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -865,8 +865,8 @@
 								<da:eenheid>meter</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 						<rol:Normwaarde>
@@ -875,8 +875,8 @@
 								<da:eenheid>meter</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000009"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000009"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -895,7 +895,7 @@
 					<l:noemer>Bedrijf categorie 2</l:noemer>
 					<!-- zelfde als een functie -->
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
+						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -910,7 +910,7 @@
 					<l:noemer>zone A</l:noemer>
 					<!-- zelfde als een functie -->
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="B3AF6AF7-5EFA-4A87-9C66-BFB046DD89AC"/>
+						<l:GeometrieRef xlink:href="B3AF6AF7-5EFA-4A87-9C66-BFB046DD89AC"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -924,7 +924,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000003</l:identificatie>
 					<l:noemer>zone B</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="0868A0B1-DA79-4C33-8305-1BDE0126FA9A"/>
+						<l:GeometrieRef xlink:href="0868A0B1-DA79-4C33-8305-1BDE0126FA9A"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -938,7 +938,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000004</l:identificatie>
 					<l:noemer>Centrumgebied</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="D28AF779-7EDD-4A88-8B11-809798F53636"/>
+						<l:GeometrieRef xlink:href="D28AF779-7EDD-4A88-8B11-809798F53636"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -952,7 +952,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000007</l:identificatie>
 					<l:noemer>exploiteren speelautomatenhal</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="33B7D2D0-BF32-4CA1-B7F6-EB0FEF30175A"/>
+						<l:GeometrieRef xlink:href="33B7D2D0-BF32-4CA1-B7F6-EB0FEF30175A"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -966,7 +966,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000008</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 1</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="772B4B37-69F8-4671-B92E-3BCED242409D"/>
+						<l:GeometrieRef xlink:href="772B4B37-69F8-4671-B92E-3BCED242409D"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -980,7 +980,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000009</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 2</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="D24C3416-4790-461C-A4D0-A82BA60CA7D6"/>
+						<l:GeometrieRef xlink:href="D24C3416-4790-461C-A4D0-A82BA60CA7D6"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -994,7 +994,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000010</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 3</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="954BA8CC-6E90-4698-BEEC-005A65C63E98"/>
+						<l:GeometrieRef xlink:href="954BA8CC-6E90-4698-BEEC-005A65C63E98"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -1008,7 +1008,7 @@
 					<l:identificatie>nl.imow-gm0037.gebied.2019000011</l:identificatie>
 					<l:noemer>Zuilichem industriegebied 4</l:noemer>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="EFAAD5E9-B181-4C22-9C3B-B290F4586D82"/>
+						<l:GeometrieRef xlink:href="EFAAD5E9-B181-4C22-9C3B-B290F4586D82"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -1026,13 +1026,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
 					</r:artikelOfLid>
 					<r:gebiedsaanwijzing>
-						<ga-ref:GebiedsaanwijzingRef
+						<ga:GebiedsaanwijzingRef
 							xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000001"/>
 					</r:gebiedsaanwijzing>
 				</r:RegelVoorIedereen>
@@ -1051,14 +1051,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1068,14 +1068,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000242"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000242"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1085,14 +1085,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000243"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000243"/>
 						<!-- deze activiteit heeft ook een regel vanuit art 2.11 lid 1 -->
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
@@ -1103,14 +1103,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000244"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000244"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1120,14 +1120,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000245"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000245"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1137,14 +1137,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002451"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002451"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1154,14 +1154,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002452"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002452"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1171,14 +1171,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002453"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002453"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1188,14 +1188,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000246"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000246"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1213,14 +1213,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000003"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000003"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>verbod</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000730"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000730"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1230,14 +1230,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000003"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000003"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>verbod</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000740"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000740"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1247,14 +1247,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000003"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000003"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>verbod</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000750"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000750"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1274,14 +1274,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000004"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000004"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>meldingsplicht</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000246"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000246"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1299,14 +1299,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.20190000007"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.20190000007"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>vergunningplicht</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000540"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000540"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1324,13 +1324,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000004"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000004"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012"/>
 					</r:artikelOfLid>
 					<r:gebiedsaanwijzing>
-						<ga-ref:GebiedsaanwijzingRef
+						<ga:GebiedsaanwijzingRef
 							xlink:href="nl.imow-gm0037.Gebiedsaanwijzing.2019000002"/>
 					</r:gebiedsaanwijzing>
 				</r:RegelVoorIedereen>
@@ -1349,14 +1349,14 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000004"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000004"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000008"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000008"/>
 					</r:artikelOfLid>
 					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000660"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000660"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -1375,13 +1375,13 @@
 				<r:Omgevingswaarderegel>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000009"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000009"/>
 					</r:artikelOfLid>
 					<r:omgevingswaardeaanduiding>
-						<rol-ref:OmgevingswaardeRef
+						<rol:OmgevingswaardeRef
 							xlink:href="nl.imow-gm0037.omgevingswaarde.201900001"/>
 					</r:omgevingswaardeaanduiding>
 				</r:Omgevingswaarderegel>
@@ -1401,16 +1401,16 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000009"/>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000009"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000010"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000010"/>
 					</r:artikelOfLid>
 					<r:omgevingsnormaanduiding>
-						<rol-ref:OmgevingsnormRef
+						<rol:OmgevingsnormRef
 							xlink:href="nl.imow-gm0037.omgevingsnorm.201900002"/>
 					</r:omgevingsnormaanduiding>
 				</r:RegelVoorIedereen>
@@ -1430,16 +1430,16 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000009"/>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000009"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000011"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000011"/>
 					</r:artikelOfLid>
 					<r:omgevingsnormaanduiding>
-						<rol-ref:OmgevingsnormRef
+						<rol:OmgevingsnormRef
 							xlink:href="nl.imow-gm0037.omgevingsnorm.201900002"/>
 					</r:omgevingsnormaanduiding>
 				</r:RegelVoorIedereen>

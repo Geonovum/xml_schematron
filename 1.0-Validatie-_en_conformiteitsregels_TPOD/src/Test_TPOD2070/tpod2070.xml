@@ -57,13 +57,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
 					</r:artikelOfLid>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900003"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900003"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -76,10 +76,10 @@
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	
@@ -92,13 +92,13 @@
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
 					</rol:locatieaanduiding>
 					<rol:gerelateerdeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
 					</rol:gerelateerdeActiviteit>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	
@@ -111,10 +111,10 @@
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.201900001"/>
+						<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.201900001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	
@@ -127,10 +127,10 @@
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	
@@ -143,10 +143,10 @@
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	

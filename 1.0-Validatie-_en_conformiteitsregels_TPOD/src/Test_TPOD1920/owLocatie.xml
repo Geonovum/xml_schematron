@@ -30,7 +30,7 @@
                <l:identificatie>nl.imow-pv25.gebied.2019000004</l:identificatie>
                <l:noemer>Tijdelijk verbod nieuwvestiging glastuinbouw</l:noemer>
                <l:geometrie>
-                  <g-ref:GeometrieRef xlink:href="0d72dece-0c7c-4a58-9890-f7521762c9c7"/>
+                  <l:GeometrieRef xlink:href="0d72dece-0c7c-4a58-9890-f7521762c9c7"/>
                </l:geometrie>
             </l:Gebied>
          </owObject>

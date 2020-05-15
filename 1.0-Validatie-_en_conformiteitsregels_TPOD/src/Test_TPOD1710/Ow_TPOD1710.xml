@@ -34,7 +34,7 @@
 					<l:noemer>Bedrijf categorie 2</l:noemer>
 					<!-- zelfde als een functie -->
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
+						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -53,13 +53,13 @@
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000242</rol:identificatie>
 					<!-- Deze activiteit is>
 					<rol:naam>wonen in een bedrijfswoning</rol:naam>
-					<!-- Deze activiteit wordt opnieuwgebruikt in artikel 2.11 nl.imow-gm0037.Regeltekst.20190000011 -->
+					Deze activiteit wordt opnieuwgebruikt in artikel 2.11 nl.imow-gm0037.Regeltekst.20190000011 -->
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -72,10 +72,10 @@
 					<rol:naam>aanleggen en instandhouden van nutsvoorzieningen</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000540"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000540"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>
@@ -87,10 +87,10 @@
 					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002451"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002451"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>
@@ -102,10 +102,10 @@
 					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002452"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002452"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>
@@ -117,10 +117,10 @@
 					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002453"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002453"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>
@@ -132,10 +132,10 @@
 					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>milieubelastende activiteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.FunctioneleStructuur0001"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>

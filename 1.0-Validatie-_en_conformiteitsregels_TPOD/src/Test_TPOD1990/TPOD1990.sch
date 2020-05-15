@@ -93,7 +93,7 @@
         <sch:rule context="//r:Regeltekst/r:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="regeltekstReferenties"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//r-ref:RegeltekstRef)"/>
+                value="foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef)"/>
             <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($regeltekstReferenties, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -104,7 +104,7 @@
         <sch:rule context="//(vt:FormeleDivisie|vt:Hoofdlijn)/vt:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="formeleDivisieReferenties"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//(vt-ref:FormeleDivisieRef|vt-ref:HoofdlijnRef))"/>
+                value="foo:getReferencesTPOD_1990($xmlDocuments//(vt:FormeleDivisieRef|vt:HoofdlijnRef))"/>
             <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($formeleDivisieReferenties, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -115,7 +115,7 @@
         <sch:rule context="//rol:Activiteit/rol:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="activiteitRefs"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//rol-ref:ActiviteitRef)"/>
+                value="foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef)"/>
             <sch:let name="nietGerefereerdeReferenties"
                 value="foo:nietGerefereerdeReferentiesTPOD_1990($activiteitRefs, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
@@ -176,7 +176,7 @@
 
     <xsl:function name="foo:getLocationGeoReferenceIdentifiersTPOD_1990">
         <xsl:variable name="identifiers">
-            <xsl:for-each select="$xmlDocuments//g-ref:GeometrieRef">
+            <xsl:for-each select="$xmlDocuments//l:GeometrieRef">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
         </xsl:variable>
@@ -186,7 +186,7 @@
     <xsl:function name="foo:getLocationReferenceIdentifiersTPOD_1990">
         <xsl:variable name="identifiers">
             <xsl:for-each
-                select="$xmlDocuments//(l-ref:LocatieRef | l-ref:GebiedRef | l-ref:LijnRef | l-ref:PuntRef | l-ref:GebiedengroepRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef)">
+                select="$xmlDocuments//(l:LocatieRef | l:GebiedRef | l:LijnRef | l:PuntRef | l:GebiedengroepRef | l:PuntengroepRef | l:LijnengroepRef)">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
         </xsl:variable>

@@ -94,7 +94,7 @@
         <xsl:variable name="notFound">
             <xsl:variable name="identifiers"
                 select="foo:getIdentifiersTPOD_1950($xmlDocuments//l:Lijn/l:identificatie)"/>
-            <xsl:for-each select="$context/l-ref:LijnRef">
+            <xsl:for-each select="$context/l:LijnRef">
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
                     <xsl:value-of select="concat(@xlink:href, ', ')"/>
                 </xsl:if>

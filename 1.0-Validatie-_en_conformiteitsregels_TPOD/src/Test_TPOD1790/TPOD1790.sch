@@ -84,7 +84,7 @@
             <sch:let name="CONDITION"
                 value="false()"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing. Betreft:<sch:value-of select="string(r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href)"/></sch:assert>
+                TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing. Betreft:<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>

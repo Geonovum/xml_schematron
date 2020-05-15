@@ -77,7 +77,7 @@
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TPOD_1970">
-        <sch:rule context="//l:Punt/l:geometrie/g-ref:GeometrieRef">
+        <sch:rule context="//l:Punt/l:geometrie/l:GeometrieRef">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>

@@ -39,10 +39,10 @@
                     <vt:idealisatie>exact</vt:idealisatie>
                     <vt:thema>Algemeen</vt:thema>
                     <vt:formeleDivisie>
-                        <vt-ref:FormeleDivisieRef xlink:href="nl.imow-pv27.formeleinhoud.2019000001"/>
+                        <vt:FormeleDivisieRef xlink:href="nl.imow-pv27.formeleinhoud.2019000001"/>
                     </vt:formeleDivisie>
                     <vt:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-pv27.gebied.2019000001"/>
+                        <l:LocatieRef xlink:href="nl.imow-pv27.gebied.2019000001"/>
                     </vt:locatieaanduiding>
                 </vt:Tekstdeel>
             </ow-dc:owObject>

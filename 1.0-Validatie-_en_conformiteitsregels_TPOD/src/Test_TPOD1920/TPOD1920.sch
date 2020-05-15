@@ -66,7 +66,7 @@
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
@@ -97,7 +97,7 @@
                 <xsl:variable name="objecttype" select="text()"/>
                 <xsl:choose>
                     <xsl:when test=". = 'Geometrie'">
-                        <xsl:if test="not(document($naam)//geo:FeatureCollectionGeometrie)">
+                        <xsl:if test="not(document($naam)//geo:GeoInformatieObjectVaststelling)">
                             <xsl:value-of select="concat($naam, ': ', ., ', ')"/>
                         </xsl:if>
                     </xsl:when>

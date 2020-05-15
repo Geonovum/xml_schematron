@@ -43,7 +43,7 @@
 					<l:noemer>Bedrijf categorie 2</l:noemer>
 					<!-- zelfde als een functie -->
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
+						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -55,14 +55,14 @@
 					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>milieubelastende activiteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:gerelateerdeActiviteit>
 						<!-- Regels van gerelateerde activiteit zijn contextueel relevant -->
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000760123456"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000760123456"/>
 					</rol:gerelateerdeActiviteit>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.FunctioneleStructuur0001"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -75,14 +75,14 @@
 					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>milieubelastende activiteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</rol:locatieaanduiding>
 					<rol:gerelateerdeActiviteit>
 						<!-- Regels van gerelateerde activiteit zijn contextueel relevant -->
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
 					</rol:gerelateerdeActiviteit>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.FunctioneleStructuur0001"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
@@ -96,11 +96,11 @@
 					<rol:naam>uitoefenen van bedrijfstypen van categorie 2</rol:naam>
 					<rol:groep>gebruiksactiviteit</rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 						<!-- Deze activiteit geldt bij de 1e keer dat deze ontstaat alleen voor locatie 1 -->
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef
+						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
 						<!-- Deze activiteit is van het rijk en zit daarom niet in dit bestand maar is opgenomen in de Functionele Structuur -->
 					</rol:bovenliggendeActiviteit>

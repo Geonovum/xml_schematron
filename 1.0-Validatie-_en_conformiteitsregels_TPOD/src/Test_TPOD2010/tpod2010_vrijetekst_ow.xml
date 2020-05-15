@@ -20,7 +20,7 @@
          <sl:gebied>[onbekend]</sl:gebied>
          <sl:leveringsId>abc-20200001-0001</sl:leveringsId>
          <sl:objectTypen>
-            <sl:objectType>divisie</sl:objectType>
+            <sl:objectType>Divisie</sl:objectType>
             <sl:objectType>Tekstdeel</sl:objectType>
          </sl:objectTypen>
       </sl:inhoud>

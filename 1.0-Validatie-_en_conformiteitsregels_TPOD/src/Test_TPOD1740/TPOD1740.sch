@@ -83,10 +83,10 @@
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1740()"/>
 
             <!-- TPOD1740  -->
-            <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href))"/>
+            <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
             <sch:report
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                REPORT: TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft verwijzing: <sch:value-of select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
+                REPORT: TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft verwijzing: <sch:value-of select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>:
                 Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt. DIT LAATSTE
                 WORDT NU NOG NIET GETEST</sch:report>
         </sch:rule>

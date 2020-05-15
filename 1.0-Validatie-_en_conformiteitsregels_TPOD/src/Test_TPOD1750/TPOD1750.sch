@@ -83,9 +83,9 @@
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
                 value="
-                contains(rol:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebied.')
+                contains(rol:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
                 or
-                contains(rol:locatieaanduiding/l-ref:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l-ref:GebiedRef/@xlink:href, '.gebied.')
+                contains(rol:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')
                 "/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1750: Betreft <sch:value-of select="rol:identificatie"

@@ -90,32 +90,6 @@
             </r:RegelVoorIedereen>
          </ow-dc:owObject>
       </sl:stand>
-      <!--        <!-\-art 1.4-\->
-        <sl:stand>
-            <ow-dc:owObject>
-                <r:Regeltekst
-                    wIdRegeling="/akn/nl/act/mnre1034/2019/201912011101"
-                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4">
-                    <r:identificatie>nl.imow-mnre1034.regeltekst.2019120111010004</r:identificatie>
-                </r:Regeltekst>
-            </ow-dc:owObject>
-        </sl:stand>
-        <sl:stand>
-            <ow-dc:owObject>
-                <r:RegelVoorIedereen>
-                    <r:idealisatie>exact</r:idealisatie>
-                    <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
-                    </r:locatieaanduiding>
-                    <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010004"
-                        />
-                    </r:artikelOfLid>
-                </r:RegelVoorIedereen>
-            </ow-dc:owObject>
-        </sl:stand>
--->
-      <!--art 1.4__para_1-->
       <sl:stand>
          <ow-dc:owObject>
             <r:Regeltekst wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_1">
@@ -812,10 +786,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010036"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010036"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -969,10 +943,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010043"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010043"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -1060,10 +1034,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010047"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010047"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -1151,10 +1125,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010051"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010051"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -1286,10 +1260,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010057"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010057"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -1421,10 +1395,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010063"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010063"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -1534,10 +1508,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010068"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010068"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -1625,10 +1599,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010072"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010072"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -1716,10 +1690,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010076"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010076"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -1807,10 +1781,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010080"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010080"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -1920,10 +1894,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010085"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010085"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -2077,10 +2051,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010092"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010092"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -2212,10 +2186,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010098"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010098"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -2303,10 +2277,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010102"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010102"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -2394,10 +2368,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010106"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010106"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -2485,10 +2459,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010110"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010110"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -2554,10 +2528,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010113"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010113"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -2777,10 +2751,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010123"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010123"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -2868,10 +2842,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010127"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010127"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -2981,10 +2955,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010132"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010132"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -3138,10 +3112,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010139"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010139"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -3251,10 +3225,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010144"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010144"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -3320,10 +3294,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010147"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010147"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -3411,10 +3385,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010151"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010151"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -3502,10 +3476,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010155"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010155"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -3571,10 +3545,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010158"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010158"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -3706,10 +3680,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010164"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010164"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -3907,10 +3881,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010173"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010173"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -3998,10 +3972,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010177"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010177"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -4155,10 +4129,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010184"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010184"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -4444,10 +4418,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010197"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010197"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -4513,10 +4487,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010200"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010200"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -4780,10 +4754,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010212"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010212"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -4871,10 +4845,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010216"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010216"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -4984,10 +4958,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010221"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010221"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -5053,10 +5027,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010224"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010224"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -5122,10 +5096,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010227"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010227"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -5213,10 +5187,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010231"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010231"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -5304,10 +5278,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010235"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010235"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -5439,10 +5413,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010241"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010241"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -5530,10 +5504,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010245"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010245"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -5621,10 +5595,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010249"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010249"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -5712,10 +5686,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010253"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010253"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -5847,10 +5821,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010259"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010259"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -5960,10 +5934,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010264"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010264"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -6359,10 +6333,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010282"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010282"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -6450,10 +6424,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010286"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010286"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -6541,10 +6515,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010290"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010290"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -6610,10 +6584,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010293"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010293"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -6701,10 +6675,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010297"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010297"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -6792,10 +6766,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010301"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010301"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -6949,10 +6923,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010308"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010308"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -7062,10 +7036,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010313"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010313"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -7857,10 +7831,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010349"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010349"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -7970,10 +7944,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010354"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010354"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -8039,10 +8013,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010357"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010357"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -8306,10 +8280,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010369"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010369"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -8397,10 +8371,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010373"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010373"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -8620,10 +8594,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010383"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010383"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -8733,10 +8707,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010388"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010388"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -8846,10 +8820,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010393"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010393"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -9025,10 +8999,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010401"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010401"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -9182,10 +9156,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010408"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010408"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -9691,10 +9665,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010431"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010431"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -9848,10 +9822,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010438"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010438"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -9917,10 +9891,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010441"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010441"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -9986,10 +9960,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010444"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010444"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -10055,10 +10029,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010447"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010447"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -10168,10 +10142,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010452"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010452"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -10281,10 +10255,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010457"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010457"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -10394,10 +10368,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010462"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010462"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -10661,10 +10635,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010474"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010474"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -10730,10 +10704,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010477"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010477"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -10821,10 +10795,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010481"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010481"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -10890,10 +10864,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010484"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010484"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -10959,10 +10933,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010487"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010487"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -11050,10 +11024,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010491"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010491"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -11251,10 +11225,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010500"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010500"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -11408,10 +11382,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010507"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010507"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -11609,10 +11583,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010516"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010516"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -11766,10 +11740,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010523"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010523"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -11835,10 +11809,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010526"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010526"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -11904,10 +11878,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010529"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010529"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -12017,10 +11991,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010534"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010534"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -12086,10 +12060,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010537"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010537"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -12221,10 +12195,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010543"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010543"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -12356,10 +12330,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010549"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010549"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -12425,10 +12399,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010552"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010552"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -12626,10 +12600,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010561"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010561"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -12695,10 +12669,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010564"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010564"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -12830,10 +12804,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010570"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010570"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -12899,10 +12873,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010573"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010573"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -13166,10 +13140,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010585"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010585"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -13477,10 +13451,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010599"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010599"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -13568,10 +13542,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010603"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010603"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -13703,10 +13677,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010609"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010609"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -13794,10 +13768,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010613"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010613"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -13907,10 +13881,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010618"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010618"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -13976,10 +13950,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010621"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010621"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -14089,10 +14063,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010626"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010626"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -14224,10 +14198,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010632"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010632"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -14337,10 +14311,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010637"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010637"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -14450,10 +14424,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010642"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010642"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -14541,10 +14515,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010646"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010646"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -14676,10 +14650,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010652"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010652"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -14745,10 +14719,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010655"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010655"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -14836,10 +14810,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010659"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010659"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -14971,10 +14945,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010665"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010665"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -15084,10 +15058,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010670"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010670"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -15175,10 +15149,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010674"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010674"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -15266,10 +15240,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010678"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010678"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -15423,10 +15397,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010685"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010685"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -15514,10 +15488,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010689"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010689"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -15583,10 +15557,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010692"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010692"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -15718,10 +15692,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010698"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010698"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -15831,10 +15805,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010703"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010703"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -15988,10 +15962,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010710"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010710"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -16101,10 +16075,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010715"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010715"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -16192,10 +16166,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010719"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010719"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -16305,10 +16279,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010724"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010724"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -16418,10 +16392,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010729"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010729"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -16509,10 +16483,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010733"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010733"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -16600,10 +16574,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010737"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010737"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -16691,10 +16665,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010741"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010741"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -16782,10 +16756,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010745"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010745"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -16873,10 +16847,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010749"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010749"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -17030,10 +17004,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010756"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010756"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -17121,10 +17095,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010760"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010760"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -17190,10 +17164,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010763"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010763"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -17259,10 +17233,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010766"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010766"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -17350,10 +17324,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010770"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010770"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -17485,10 +17459,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010776"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010776"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -17554,10 +17528,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010779"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010779"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -17733,10 +17707,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010787"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010787"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -17890,10 +17864,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010794"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010794"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -17959,10 +17933,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010797"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010797"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -18050,10 +18024,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010801"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010801"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -18185,10 +18159,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010807"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010807"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -18320,10 +18294,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010813"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010813"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -18477,10 +18451,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010820"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010820"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -18634,10 +18608,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010827"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010827"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -18703,10 +18677,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010830"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010830"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -18860,10 +18834,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010837"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010837"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -18973,10 +18947,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010842"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010842"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -19042,10 +19016,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010845"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010845"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -19133,10 +19107,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010849"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010849"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -19246,10 +19220,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010854"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010854"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -19359,10 +19333,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010859"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010859"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -19494,10 +19468,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010865"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010865"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -19563,10 +19537,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010868"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010868"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -19654,10 +19628,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010872"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010872"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -19723,10 +19697,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010875"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010875"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -20122,10 +20096,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010893"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010893"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -20191,10 +20165,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010896"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010896"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -20260,10 +20234,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010899"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010899"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -20571,10 +20545,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010913"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010913"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -20640,10 +20614,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010916"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010916"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -20951,10 +20925,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010930"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010930"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -21020,10 +20994,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010933"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010933"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>
@@ -21419,10 +21393,10 @@
                 <r:RegelVoorIedereen>
                     <r:idealisatie>exact</r:idealisatie>
                     <r:locatieaanduiding>
-                        <l-ref:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
+                        <l:LocatieRef xlink:href="nl.imow-mnre1034.gebiedengroep.2019120111010001"/>
                     </r:locatieaanduiding>
                     <r:artikelOfLid>
-                        <r-ref:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010951"
+                        <r:RegeltekstRef xlink:href="nl.imow-mnre1034.regeltekst.2019120111010951"
                         />
                     </r:artikelOfLid>
                 </r:RegelVoorIedereen>

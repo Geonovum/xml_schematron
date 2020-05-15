@@ -66,7 +66,7 @@
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
@@ -98,7 +98,7 @@
         <xsl:param name="activiteitenLijst"/>
         <xsl:variable name="circulaireActivititeiten">
             <xsl:variable name="bovenLiggend"
-                select="string($context/rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"/>
+                select="string($context/rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
             <xsl:variable name="identificatie" select="$context/rol:identificatie/text()"/>
             <!-- hier worden de activiteiten uitgefilterd waarvan de bovenliggende activiteiten in de functionele structuur zitten -->
             <xsl:if test="contains($activiteitenLijst, $bovenLiggend)">
@@ -118,7 +118,7 @@
             <xsl:for-each
                 select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
                 <xsl:if
-                    test="string(rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href) = $bovenliggend">
+                    test="string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href) = $bovenliggend">
                     <xsl:variable name="lokaalBovenliggend" select="rol:identificatie/text()"/>
                     <xsl:choose>
                         <xsl:when test="$identificatie = $lokaalBovenliggend">

@@ -130,7 +130,7 @@
 					wId="gm0037_1__subchp_2.2__art_2.3">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019000010</r:identificatie>
 					<r:gerelateerdeRegeltekst>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
 					</r:gerelateerdeRegeltekst>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -142,7 +142,7 @@
 					wId="gm0037_1__subchp_2.2__art_2.3">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019000011</r:identificatie>
 					<r:gerelateerdeRegeltekst>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000021"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000021"/>
 					</r:gerelateerdeRegeltekst>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -154,7 +154,7 @@
 					wId="gm0037_1__subchp_2.2__art_2.3">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019000012</r:identificatie>
 					<r:gerelateerdeRegeltekst>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012"/>
 					</r:gerelateerdeRegeltekst>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -165,13 +165,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
 					</r:artikelOfLid>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -182,13 +182,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
 					</r:artikelOfLid>
 					<r:gebiedsaanwijzing>
-						<ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
+						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
 					</r:gebiedsaanwijzing>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -199,13 +199,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
 					</r:artikelOfLid>
 					<r:omgevingsnormaanduiding>
-						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
+						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
 					</r:omgevingsnormaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -216,13 +216,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900004"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900004"/>
 					</r:artikelOfLid>
 					<r:activiteitaanduiding>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000011"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000011"/>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -233,13 +233,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900005"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900005"/>
 					</r:artikelOfLid>
 					<r:gebiedsaanwijzing>
-						<ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000011"/>
+						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000011"/>
 					</r:gebiedsaanwijzing>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -250,13 +250,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900006"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900006"/>
 					</r:artikelOfLid>
 					<r:omgevingsnormaanduiding>
-						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.2019000011"/>
+						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.2019000011"/>
 					</r:omgevingsnormaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -267,13 +267,13 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000061"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000061"/>
 					</r:artikelOfLid>
 					<r:omgevingsnormaanduiding>
-						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
+						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
 					</r:omgevingsnormaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -284,10 +284,10 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900008"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900008"/>
 					</r:artikelOfLid>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
@@ -298,13 +298,13 @@
 				<r:Instructieregel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
 					</r:artikelOfLid>
 					<r:omgevingsnormaanduiding>
-						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
+						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
 					</r:omgevingsnormaanduiding>
 				</r:Instructieregel>
 			</ow-dc:owObject>
@@ -315,13 +315,13 @@
 				<r:Instructieregel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
 					</r:artikelOfLid>
 					<r:gebiedsaanwijzing>
-						<ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
+						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
 					</r:gebiedsaanwijzing>
 				</r:Instructieregel>
 			</ow-dc:owObject>
@@ -332,10 +332,10 @@
 				<r:Instructieregel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
 					</r:artikelOfLid>
 				</r:Instructieregel>
 			</ow-dc:owObject>
@@ -346,10 +346,10 @@
 				<r:Instructieregel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900004"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900004"/>
 					</r:artikelOfLid>
 				</r:Instructieregel>
 			</ow-dc:owObject>
@@ -360,13 +360,13 @@
 				<r:Instructieregel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
 					</r:artikelOfLid>
 					<r:omgevingsnormaanduiding>
-						<rol-ref:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.2019000011"/>
+						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.2019000011"/>
 					</r:omgevingsnormaanduiding>
 				</r:Instructieregel>
 			</ow-dc:owObject>
@@ -377,13 +377,13 @@
 				<r:Instructieregel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
 					</r:artikelOfLid>
 					<r:gebiedsaanwijzing>
-						<ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000011"/>
+						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000011"/>
 					</r:gebiedsaanwijzing>
 				</r:Instructieregel>
 			</ow-dc:owObject>
@@ -394,10 +394,10 @@
 				<r:Instructieregel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
 					</r:artikelOfLid>
 				</r:Instructieregel>
 			</ow-dc:owObject>
@@ -408,10 +408,10 @@
 				<r:Instructieregel>
 					<r:idealisatie></r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000041"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000041"/>
 					</r:artikelOfLid>
 				</r:Instructieregel>
 			</ow-dc:owObject>
@@ -424,10 +424,10 @@
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	
@@ -440,13 +440,13 @@
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</rol:locatieaanduiding>
 					<rol:gerelateerdeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
 					</rol:gerelateerdeActiviteit>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	
@@ -459,10 +459,10 @@
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 					</rol:locatieaanduiding>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	
@@ -475,13 +475,13 @@
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</rol:locatieaanduiding>
 					<rol:gerelateerdeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000011"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000011"/>
 					</rol:gerelateerdeActiviteit>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	
@@ -494,13 +494,13 @@
 					<rol:naam></rol:naam>
 					<rol:groep></rol:groep>
 					<rol:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</rol:locatieaanduiding>
 					<rol:gerelateerdeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900005"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900005"/>
 					</rol:gerelateerdeActiviteit>
 					<rol:bovenliggendeActiviteit>
-						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	
@@ -513,7 +513,7 @@
 					<rol:normwaarde>
 						<rol:Normwaarde>
 							<rol:locatieaanduiding>
-								<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -530,7 +530,7 @@
 					<rol:normwaarde>
 						<rol:Normwaarde>
 							<rol:locatieaanduiding>
-								<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -551,7 +551,7 @@
 								<da:eenheid>μg/m3</da:eenheid>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -569,7 +569,7 @@
 						<rol:Normwaarde>
 							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
 							<rol:locatieaanduiding>
-								<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
@@ -587,7 +587,7 @@
 					<ga:naam>abc</ga:naam>
 					<ga:groep></ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
@@ -601,7 +601,7 @@
 					<ga:naam>abc</ga:naam>
 					<ga:groep></ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
@@ -612,7 +612,7 @@
 				<l:Gebied>
 					<l:identificatie>nl.imow-gm0037.gebied.201900001</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
+						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -623,7 +623,7 @@
 				<l:Gebied>
 					<l:identificatie>nl.imow-gm0037.gebied.201900002</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
+						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -634,7 +634,7 @@
 				<l:Gebied>
 					<l:identificatie>nl.imow-gm0037.gebied.201900003</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
+						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -645,7 +645,7 @@
 				<l:Gebied>
 					<l:identificatie>nl.imow-gm0037.gebied.201900004</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
+						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -656,7 +656,7 @@
 				<l:Gebied>
 					<l:identificatie>nl.imow-gm0037.gebied.201900005</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
 				</l:Gebied>
 			</ow-dc:owObject>
@@ -667,8 +667,8 @@
 				<l:Gebiedengroep>
 					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900001</l:identificatie>
 					<l:groepselement>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
 					</l:groepselement>
 				</l:Gebiedengroep>
 			</ow-dc:owObject>
@@ -679,8 +679,8 @@
 				<l:Gebiedengroep>
 					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900002</l:identificatie>
 					<l:groepselement>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
 					</l:groepselement>
 				</l:Gebiedengroep>
 			</ow-dc:owObject>
@@ -691,8 +691,8 @@
 				<l:Gebiedengroep>
 					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900003</l:identificatie>
 					<l:groepselement>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.punt.201900003"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.punt.201900003"/>
 					</l:groepselement>
 				</l:Gebiedengroep>
 			</ow-dc:owObject>
@@ -703,8 +703,8 @@
 				<l:Gebiedengroep>
 					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900004</l:identificatie>
 					<l:groepselement>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
 					</l:groepselement>
 				</l:Gebiedengroep>
 			</ow-dc:owObject>
@@ -715,9 +715,9 @@
 				<l:Gebiedengroep>
 					<l:identificatie>nl.imow-gm0037.gebiedengroep.201900005</l:identificatie>
 					<l:groepselement>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
 					</l:groepselement>
 				</l:Gebiedengroep>
 			</ow-dc:owObject>
@@ -728,7 +728,7 @@
 				<l:Punt>
 					<l:identificatie>nl.imow-gm0037.punt.201900001</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
+						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
 				</l:Punt>
 			</ow-dc:owObject>
@@ -739,7 +739,7 @@
 				<l:Punt>
 					<l:identificatie>nl.imow-gm0037.punt.201900002</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53621"/>
+						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53621"/>
 					</l:geometrie>
 				</l:Punt>
 			</ow-dc:owObject>
@@ -750,7 +750,7 @@
 				<l:Punt>
 					<l:identificatie>nl.imow-gm0037.punt.201900003</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53631"/>
+						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53631"/>
 					</l:geometrie>
 				</l:Punt>
 			</ow-dc:owObject>
@@ -761,7 +761,7 @@
 				<l:Punt>
 					<l:identificatie>nl.imow-gm0037.punt.201900004</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
+						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
 					</l:geometrie>
 				</l:Punt>
 			</ow-dc:owObject>
@@ -772,7 +772,7 @@
 				<l:Punt>
 					<l:identificatie>nl.imow-gm0037.punt.201900005</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
 				</l:Punt>
 			</ow-dc:owObject>
@@ -783,8 +783,8 @@
 				<l:Puntengroep>
 					<l:identificatie>nl.imow-gm0037.puntengroep.201900001</l:identificatie>
 					<l:groepselement>
-						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900001"/>
-						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900001"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
 					</l:groepselement>
 				</l:Puntengroep>
 			</ow-dc:owObject>
@@ -795,8 +795,8 @@
 				<l:Puntengroep>
 					<l:identificatie>nl.imow-gm0037.puntengroep.201900002</l:identificatie>
 					<l:groepselement>
-						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
-						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900003"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900003"/>
 					</l:groepselement>
 				</l:Puntengroep>
 			</ow-dc:owObject>
@@ -807,8 +807,8 @@
 				<l:Puntengroep>
 					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
 					<l:groepselement>
-						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
-						<l-ref:PuntRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
 					</l:groepselement>
 				</l:Puntengroep>
 			</ow-dc:owObject>
@@ -819,8 +819,8 @@
 				<l:Puntengroep>
 					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
 					<l:groepselement>
-						<l-ref:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
-						<l-ref:PuntRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
 					</l:groepselement>
 				</l:Puntengroep>
 			</ow-dc:owObject>
@@ -831,7 +831,7 @@
 				<l:Lijn>
 					<l:identificatie>nl.imow-gm0037.lijn.201900001</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
 				</l:Lijn>
 			</ow-dc:owObject>
@@ -842,7 +842,7 @@
 				<l:Lijn>
 					<l:identificatie>nl.imow-gm0037.lijn.201900002</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53621"/>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53621"/>
 					</l:geometrie>
 				</l:Lijn>
 			</ow-dc:owObject>
@@ -853,7 +853,7 @@
 				<l:Lijn>
 					<l:identificatie>nl.imow-gm0037.lijn.201900003</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53631"/>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53631"/>
 					</l:geometrie>
 				</l:Lijn>
 			</ow-dc:owObject>
@@ -864,7 +864,7 @@
 				<l:Lijn>
 					<l:identificatie>nl.imow-gm0037.lijn.201900004</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
+						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
 					</l:geometrie>
 				</l:Lijn>
 			</ow-dc:owObject>
@@ -875,7 +875,7 @@
 				<l:Lijn>
 					<l:identificatie>nl.imow-gm0037.lijn.201900005</l:identificatie>
 					<l:geometrie>
-						<g-ref:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
+						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
 					</l:geometrie>
 				</l:Lijn>
 			</ow-dc:owObject>
@@ -886,8 +886,8 @@
 				<l:Lijnengroep>
 					<l:identificatie>nl.imow-gm0037.lijnengroep.201900001</l:identificatie>
 					<l:groepselement>
-						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
-						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900002"/>
+						<l:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
+						<l:LijnRef xlink:href="nl.imow-gm0037.lijn.201900002"/>
 					</l:groepselement>
 				</l:Lijnengroep>
 			</ow-dc:owObject>
@@ -898,8 +898,8 @@
 				<l:Lijnengroep>
 					<l:identificatie>nl.imow-gm0037.lijnengroep.201900002</l:identificatie>
 					<l:groepselement>
-						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900002"/>
-						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+						<l:LijnRef xlink:href="nl.imow-gm0037.lijn.201900002"/>
+						<l:LijnRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
 					</l:groepselement>
 				</l:Lijnengroep>
 			</ow-dc:owObject>
@@ -910,8 +910,8 @@
 				<l:Lijnengroep>
 					<l:identificatie>nl.imow-gm0037.lijnengroep.201900003</l:identificatie>
 					<l:groepselement>
-						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
-						<l-ref:LijnRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
+						<l:LijnRef xlink:href="nl.imow-gm0037.punt.201900002"/>
 					</l:groepselement>
 				</l:Lijnengroep>
 			</ow-dc:owObject>
@@ -922,8 +922,8 @@
 				<l:Lijnengroep>
 					<l:identificatie>nl.imow-gm0037.lijnengroep.201900003</l:identificatie>
 					<l:groepselement>
-						<l-ref:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
-						<l-ref:LijnRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
+						<l:LijnRef xlink:href="nl.imow-gm0037.lijn.201900001"/>
+						<l:LijnRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
 					</l:groepselement>
 				</l:Lijnengroep>
 			</ow-dc:owObject>
@@ -1082,7 +1082,7 @@
 					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900001</vt:identificatie>
 					<vt:idealisatie></vt:idealisatie>
 					<vt:formeleDivisie>
-						<vt-ref:FormeleDivisieRef xlink:href=""/>
+						<vt:FormeleDivisieRef xlink:href=""/>
 					</vt:formeleDivisie>
 				</vt:Tekstdeel>
 			</ow-dc:owObject>
@@ -1094,7 +1094,7 @@
 					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900002</vt:identificatie>
 					<vt:idealisatie></vt:idealisatie>
 					<vt:formeleDivisie>
-						<vt-ref:FormeleDivisieRef xlink:href=""/>
+						<vt:FormeleDivisieRef xlink:href=""/>
 					</vt:formeleDivisie>
 				</vt:Tekstdeel>
 			</ow-dc:owObject>
@@ -1106,7 +1106,7 @@
 					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900003</vt:identificatie>
 					<vt:idealisatie></vt:idealisatie>
 					<vt:formeleDivisie>
-						<vt-ref:FormeleDivisieRef xlink:href=""/>
+						<vt:FormeleDivisieRef xlink:href=""/>
 					</vt:formeleDivisie>
 				</vt:Tekstdeel>
 			</ow-dc:owObject>

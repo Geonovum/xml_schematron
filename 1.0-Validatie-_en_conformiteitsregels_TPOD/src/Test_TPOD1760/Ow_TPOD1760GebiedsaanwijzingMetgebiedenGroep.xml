@@ -26,7 +26,7 @@
 				<sl:objectType>Regeltekst</sl:objectType>
 			</sl:objectTypen>
 		</sl:inhoud>
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000001</ga:identificatie>
@@ -34,12 +34,12 @@
 					<ga:naam>Bedrijf categorie 2</ga:naam>
 					<ga:groep>bedrijf</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000002FOUT</ga:identificatie>
@@ -47,12 +47,12 @@
 					<ga:naam>Centrumgebied</ga:naam>
 					<ga:groep>centrumgebied</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebiedje.2019000004"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebiedje.2019000004"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000003</ga:identificatie>
@@ -60,12 +60,12 @@
 					<ga:naam>Zuilichem industriegebied Totaal</ga:naam>
 					<ga:groep>Zuilichem industriegebied Totaal</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebiedengroep.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebiedengroep.2019000001"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000004FOUT</ga:identificatie>
@@ -73,14 +73,14 @@
 					<ga:naam>Zuilichem industriegebied Totaal</ga:naam>
 					<ga:groep>Zuilichem industriegebied Totaal</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0037.gebiedengroepje.2019000001"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebiedengroepje.2019000001"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
 		</sl:stand>
 
 
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000005</ga:identificatie>
@@ -88,12 +88,12 @@
 					<ga:naam>Bedrijf categorie 2</ga:naam>
 					<ga:groep>bedrijf</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000006FOUT</ga:identificatie>
@@ -101,12 +101,12 @@
 					<ga:naam>Centrumgebied</ga:naam>
 					<ga:groep>centrumgebied</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebiedje.2019000004"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebiedje.2019000004"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000007</ga:identificatie>
@@ -114,12 +114,12 @@
 					<ga:naam>Zuilichem industriegebied Totaal</ga:naam>
 					<ga:groep>Zuilichem industriegebied Totaal</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebiedengroep.2019000001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebiedengroep.2019000001"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000008FOUT</ga:identificatie>
@@ -127,7 +127,7 @@
 					<ga:naam>Zuilichem industriegebied Totaal</ga:naam>
 					<ga:groep>Zuilichem industriegebied Totaal</ga:groep>
 					<ga:locatieaanduiding>
-						<l-ref:GebiedRef xlink:href="nl.imow-gm0037.gebiedengroepje.2019000001"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebiedengroepje.2019000001"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>

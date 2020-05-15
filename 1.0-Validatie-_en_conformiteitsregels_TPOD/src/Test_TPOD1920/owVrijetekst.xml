@@ -40,7 +40,7 @@
                <vt:idealisatie>exact</vt:idealisatie>
                <vt:thema>verkeer en vervoer</vt:thema>
                <vt:formeleDivisie>
-                  <vt-ref:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000001"/>
+                  <vt:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000001"/>
                </vt:formeleDivisie>
             </vt:Tekstdeel>
          </ow-dc:owObject>

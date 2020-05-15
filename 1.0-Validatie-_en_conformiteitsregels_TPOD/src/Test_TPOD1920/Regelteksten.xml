@@ -37,10 +37,10 @@
 				<r:RegelVoorIedereen>
 					<r:idealisatie>exact</r:idealisatie>
 					<r:locatieaanduiding>
-						<l-ref:LocatieRef xlink:href="nl.imow-gm0534.gebied.gml78"/>
+						<l:LocatieRef xlink:href="nl.imow-gm0534.gebied.gml78"/>
 					</r:locatieaanduiding>
 					<r:artikelOfLid>
-						<r-ref:RegeltekstRef xlink:href="nl.imow-gm0534.regeltekst.64"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0534.regeltekst.64"/>
 					</r:artikelOfLid>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>

@@ -91,11 +91,11 @@
     <xsl:function name="foo:CheckFouteConstructiesTPOD_1850">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="regeltekstId" select="$context/r:identificatie/text()"/>
-        <xsl:variable name="ct" select="count($xmlDocuments//r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
-        <xsl:variable name="cr" select="count($xmlDocuments//r:RegelVoorIedereen/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
-        <xsl:variable name="ci" select="count($xmlDocuments//r:Instructieregel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
-        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
-        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="ct" select="count($xmlDocuments//r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="cr" select="count($xmlDocuments//r:RegelVoorIedereen/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="ci" select="count($xmlDocuments//r:Instructieregel/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
         <xsl:if test="not($ct=$cr or $ct=$ci or $ct=$co)">
             <xsl:value-of select="$regeltekstId"/>
         </xsl:if>                

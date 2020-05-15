@@ -66,7 +66,7 @@
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
@@ -78,7 +78,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_2050">
-        <sch:rule context="//stop:AanleveringBesluit">
+        <sch:rule context="//aanlevering:AanleveringBesluit">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="message" value="foo:existsTPOD_2050()"/>
             <sch:let name="CONDITION" value="string-length($message)=0"/>

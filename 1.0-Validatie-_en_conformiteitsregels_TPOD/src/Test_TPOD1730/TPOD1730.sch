@@ -82,11 +82,11 @@
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1730()"/>
             <!-- TPOD1730  -->
-            <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"/>
+            <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 TPOD1730: <sch:value-of select="rol:identificatie"/> 
-                Betreft verwijzing: <sch:value-of select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
+                Betreft verwijzing: <sch:value-of select="rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href"/>:
                 Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.</sch:assert>
         </sch:rule>
 

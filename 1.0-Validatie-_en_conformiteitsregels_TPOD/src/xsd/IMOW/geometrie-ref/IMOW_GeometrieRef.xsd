@@ -21,7 +21,7 @@
    </xs:annotation>
    <xs:import namespace="http://www.w3.org/1999/xlink"
             schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
-   <xs:element name="GeometrieRef" type="g-ref:GeometrieRef" abstract="false"/>
+   <xs:element name="GeometrieRef" type="g:GeometrieRef" abstract="false"/>
    <xs:complexType name="GeometrieRef" abstract="false">
       <xs:attribute name="type" type="xs:string" fixed="simple"/>
       <xs:attribute ref="xlink:href" use="required"/>

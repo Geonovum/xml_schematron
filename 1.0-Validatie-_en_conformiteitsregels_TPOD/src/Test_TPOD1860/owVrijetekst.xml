@@ -37,7 +37,7 @@
                <vt:idealisatie>exact</vt:idealisatie>
                <vt:thema>verkeer en vervoer</vt:thema>
                <vt:formeleDivisie>
-                  <vt-ref:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000001"/>
+                  <vt:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000001"/>
                </vt:formeleDivisie>
             </vt:Tekstdeel>
          </ow-dc:owObject>
@@ -56,12 +56,12 @@
                <vt:idealisatie>indicatief</vt:idealisatie>
                <vt:thema>verkeer en vervoer</vt:thema>
                <vt:formeleDivisie>
-                  <vt-ref:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000002"/>
+                  <vt:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000002"/>
                </vt:formeleDivisie>
                <vt:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000001"/>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000002"/>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000003"/>
+                  <l:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000001"/>
+                  <l:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000002"/>
+                  <l:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000003"/>
                </vt:locatieaanduiding>
             </vt:Tekstdeel>
          </ow-dc:owObject>
@@ -80,13 +80,13 @@
                <vt:idealisatie>indicatief</vt:idealisatie>
                <vt:thema>verkeer en vervoer</vt:thema>
                <vt:formeleDivisie>
-                  <vt-ref:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000003"/>
+                  <vt:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000003"/>
                </vt:formeleDivisie>
                <vt:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000004"/>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000005"/>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000006"/>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000007"/>
+                  <l:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000004"/>
+                  <l:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000005"/>
+                  <l:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000006"/>
+                  <l:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000007"/>
                </vt:locatieaanduiding>
             </vt:Tekstdeel>
          </ow-dc:owObject>
@@ -105,14 +105,14 @@
                <vt:idealisatie>indicatief</vt:idealisatie>
                <vt:thema>verkeer en vervoer</vt:thema>
                <vt:formeleDivisie>
-                  <vt-ref:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeleinhoud.2019000004"/>
+                  <vt:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeleinhoud.2019000004"/>
                </vt:formeleDivisie>
                <vt:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000008"/>
+                  <l:LocatieRef xlink:href="nl.imow-gm0599.gebied.2019000008"/>
                </vt:locatieaanduiding>
                <vt:gebiedsaanwijzing>
-                  <ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0599.gebiedsaanwijzing.2019000001"/>
-                  <ga-ref:GebiedsaanwijzingRef xlink:href="nl.imow-gm0599.gebiedsaanwijzing.2019000002"/>
+                  <ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0599.gebiedsaanwijzing.2019000001"/>
+                  <ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0599.gebiedsaanwijzing.2019000002"/>
                </vt:gebiedsaanwijzing>
             </vt:Tekstdeel>
          </ow-dc:owObject>
@@ -131,10 +131,10 @@
                <vt:idealisatie>indicatief</vt:idealisatie>
                <vt:thema>Stedelijke functies</vt:thema>
                <vt:formeleDivisie>
-                  <vt-ref:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000005"/>
+                  <vt:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000005"/>
                </vt:formeleDivisie>
                <vt:kaartaanduiding>
-                  <k-ref:KaartRef xlink:href="nl.imow-gm0599.kaart.2019000001"/>
+                  <k:KaartRef xlink:href="nl.imow-gm0599.kaart.2019000001"/>
                </vt:kaartaanduiding>
             </vt:Tekstdeel>
          </ow-dc:owObject>

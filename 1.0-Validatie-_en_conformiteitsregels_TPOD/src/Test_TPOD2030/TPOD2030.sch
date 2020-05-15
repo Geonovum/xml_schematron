@@ -66,7 +66,7 @@
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
@@ -90,7 +90,7 @@
 
     <xsl:function name="foo:checkFRBRExpressionTPOD_2030">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//stop:RegelingVersieInformatie/data:ExpressionIdentificatie/data:FRBRExpression/text()">
+        <xsl:for-each select="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:ExpressionIdentificatie/data:FRBRExpression/text()">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>

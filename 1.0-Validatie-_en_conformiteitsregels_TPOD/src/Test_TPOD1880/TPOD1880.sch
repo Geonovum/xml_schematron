@@ -66,7 +66,7 @@
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
@@ -91,7 +91,7 @@
             <sch:let name="CONDITION" value="not($SOORT_REGELING=$WV)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1880: De IMOW-objecten 'Omgevingswaarderegel' zijn niet van toepassing op de Waterschapsverordening.: 
-                Regeltekst-referentie: <sch:value-of select="string(r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href)"/>
+                Regeltekst-referentie: <sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>

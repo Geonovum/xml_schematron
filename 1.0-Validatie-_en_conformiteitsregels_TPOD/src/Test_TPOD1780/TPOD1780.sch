@@ -78,7 +78,7 @@
 
     <sch:pattern id="TPOD_1780">
         <sch:rule
-            context="/stop:AanleveringBesluit">
+            context="//aanlevering:AanleveringBesluit">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"

@@ -67,7 +67,7 @@
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
@@ -98,9 +98,9 @@
             <xsl:if test="not(string($regelId) = '')">
                 <xsl:for-each select="$xmlDocuments//r:RegelVoorIedereen">
                     <xsl:if test="
-                        string(r:activiteitaanduiding/rol-ref:ActiviteitRef/@xlink:href)=$activiteitId 
+                        string(r:activiteitaanduiding/rol:ActiviteitRef/@xlink:href)=$activiteitId 
                         and 
-                        string(r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href)=$regelId
+                        string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)=$regelId
                         ">
                         <xsl:value-of select="$activiteitId"/>
                     </xsl:if>

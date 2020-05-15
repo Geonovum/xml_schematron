@@ -78,7 +78,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1980">
-        <sch:rule context="//l:Gebied/l:geometrie/g-ref:GeometrieRef">
+        <sch:rule context="//l:Gebied/l:geometrie/l:GeometrieRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
             <sch:let name="CONDITION" value="foo:calculateConditionTPOD_1980($href)=1"/>
