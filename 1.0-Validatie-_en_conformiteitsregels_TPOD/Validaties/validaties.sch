@@ -2499,30 +2499,27 @@
     <!-- ============TPOD_2050================================================================================================================ -->
     
     <sch:pattern id="TPOD_2050">
-        <sch:rule context="//stop:AanleveringBesluit">
+        <sch:rule context="//aanlevering:AanleveringBesluit">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="message" value="foo:existsTPOD_2050()"/>
             <sch:let name="CONDITION" value="string-length($message)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2050: <sch:value-of select="$message"/>
+                H:TPOD2050: <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:existsTPOD_2050">
         <xsl:choose>
-            <xsl:when test="not(document('manifest.xml')//lvbb:manifest or document('manifest-ow.xml')//Modules)">
-                <xsl:value-of select="'Manifest.xml en manifest-ow.xml zijn niet aangetroffen.'"/>
+            <xsl:when test="(not((document('manifest-ow.xml')) or (document('Manifest-ow.xml')))) and (not((document('manifest.xml')) or (document('Manifest.xml'))))">
+                <xsl:value-of select="'(M|m)anifest-ow.xml en (M|m)anifest.xml zijn niet aangetroffen of niet valide.'"/>
             </xsl:when>
-            <xsl:when test="not(document('manifest-ow.xml')//Modules)">
-                <xsl:value-of select="'Manifest-ow.xml is niet aangetroffen.'"/>
+            <xsl:when test="not((document('manifest-ow.xml')) or (document('Manifest-ow.xml')))">
+                <xsl:value-of select="'(M|m)anifest-ow.xml is niet aangetroffen of niet valide.'"/>
             </xsl:when>
-            <xsl:when test="not(document('manifest.xml')//lvbb:manifest)">
-                <xsl:value-of select="'Manifest.xml is niet aangetroffen.'"/>
+            <xsl:when test="not((document('manifest.xml')) or (document('Manifest.xml')))">
+                <xsl:value-of select="'(M|m)anifest.xml is niet aangetroffen of niet valide.'"/>
             </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="''"/>
-            </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
     
