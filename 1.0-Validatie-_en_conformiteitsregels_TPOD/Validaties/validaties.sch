@@ -1,41 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
-    xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+    xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+    xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+    xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+    xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+    xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+    xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+    xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+    xmlns:p="http://www.geostandaarden.nl/imow/pons"
+    xmlns:r="http://www.geostandaarden.nl/imow/regels"
+    xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+    xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
-    xmlns:stop="https://standaarden.overheid.nl/lvbb/stop/"
+    xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
+    xmlns:stop="https://standaarden.overheid.nl/stop/imop/stop/"
+    xmlns:aanlevering="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+    
+    xmlns:basisgeo="http://www.geostandaarden.nl/basisgeometrie/1.0"
+    xmlns:gio="https://standaarden.overheid.nl/stop/imop/gio/"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:geo="https://standaarden.overheid.nl/stop/imop/geo/"
+    
+    xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
+    xmlns:tns="http://www.logius.nl/digikoppeling/gb/2010/10"
+    
+    xmlns:ow-manifest="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
+    
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901" prefix="ow-dc"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/owobject/v20190709" prefix="ow"/>
-    <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
-        prefix="sl"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/owobject/v20190709" prefix="rkow"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/regels/v20190901" prefix="r"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/regels-ref/v20190901" prefix="r-ref"/>
-    <sch:ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/locatie/v20190901" prefix="l"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/locatie-ref/v20190901" prefix="l-ref"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901" prefix="rol"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709" prefix="rol-ref"/>
+    
     <sch:ns uri="http://whatever" prefix="foo"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709" prefix="ga"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709" prefix="ga-ref"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709" prefix="da"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901" prefix="g-ref"/>
-    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/geo/" prefix="geo"/>
-    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/1.0" prefix="basisgeo"/>
-    <sch:ns uri="http://www.opengis.net/gml/3.2" prefix="gml"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/vrijetekst/v20190901" prefix="vt"/>
-    <sch:ns uri="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901" prefix="vt-ref"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand" prefix="ow-dc"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/owobject" prefix="ow"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/datatypenalgemeen" prefix="da"/>
+    <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek" prefix="sl"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/gebiedsaanwijzing" prefix="ga"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/kaart" prefix="k"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/locatie" prefix="l"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/pons" prefix="p"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/regels" prefix="r"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/regelsoplocatie" prefix="rol"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/vrijetekst" prefix="vt"/>
+    <sch:ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
+    
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
-    <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/" prefix="stop"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
+    <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/aanlevering/" prefix="aanlevering"/>
+    
+    <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/1.0" prefix="basisgeo"/>
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/gio/" prefix="gio"/>
+    <sch:ns uri="http://www.opengis.net/gml/3.2" prefix="gml"/>
+    <sch:ns uri="https://standaarden.overheid.nl/stop/imop/geo/" prefix="geo"/>
+    
     <sch:ns uri="http://www.overheid.nl/2017/lvbb" prefix="lvbb"/>
+    <sch:ns uri="http://www.overheid.nl/2017/stop" prefix="stop"/>
+    <sch:ns uri="http://www.logius.nl/digikoppeling/gb/2010/10" prefix="tns"/>
+    
+    <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/manifest-ow" prefix="ow-manifest"/>
+    
+    <sch:ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
     
     
     <!-- ====================================== GENERIC ============================================================================= -->
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml;recurse=yes')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml;recurse=yes')"/>
-    <sch:let name="SOORT_REGELING" value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+    <sch:let name="SOORT_REGELING" value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
     
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
@@ -1483,12 +1514,12 @@
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1700()"/>
             <sch:let name="bovenLiggend"
-                value="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                value="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>
             <sch:let name="identificatie" value="rol:identificatie"/>
             <sch:let name="circulaireActivititeiten" value="foo:circulaireActiviteitenAanzetTPOD_1700($activiteitenLijst, $bovenLiggend, $identificatie, $identificatie)"/>
             <sch:let name="identificatie" value="rol:identificatie"/>
             <sch:let name="lokaalBovenliggend"
-                value="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                value="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>
             <sch:let name="activiteitenTrajectNaarFunctioneleStructuur" value="foo:activiteitenTrajectNaarFunctioneleStructuurTPOD_1700($circulaireActivititeiten, $activiteitenLijst, $identificatie, $lokaalBovenliggend)"/>
             <sch:let name="CONDITION"
                 value="string-length($activiteitenTrajectNaarFunctioneleStructuur) > 0"/>
@@ -1545,7 +1576,7 @@
             <xsl:for-each
                 select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
                 <xsl:if
-                    test="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href = $bovenLiggend">
+                    test="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href = $bovenLiggend">
                     <xsl:variable name="lokaalBovenliggend" select="rol:identificatie"/>
                     <xsl:choose>
                         <xsl:when test="$identificatie = $lokaalBovenliggend">
@@ -1582,7 +1613,7 @@
                 select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
                 <xsl:if test="rol:identificatie = $bovenliggend">
                     <xsl:variable name="lokaalBovenliggend"
-                        select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>
+                        select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>
                     <xsl:choose>
                         <xsl:when test="not(contains($activiteitenLijst, $lokaalBovenliggend))">
                             <xsl:value-of select="concat($identificatie, ', ')"/>
@@ -1611,7 +1642,8 @@
             <!-- TPOD1710  -->
             <sch:let name="CONDITION" value="string-length($circulaireActivititeiten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TPOD1710: Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten,1,string-length($circulaireActivititeiten)-2)"/>: Een
+                H:TP0D1710:
+                Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten,1,string-length($circulaireActivititeiten)-2)"/>: Een
                 bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt.</sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1621,7 +1653,7 @@
         <xsl:param name="activiteitenLijst"/>
         <xsl:variable name="circulaireActivititeiten">
             <xsl:variable name="bovenLiggend"
-                select="string($context/rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"/>
+                select="string($context/rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
             <xsl:variable name="identificatie" select="$context/rol:identificatie/text()"/>
             <!-- hier worden de activiteiten uitgefilterd waarvan de bovenliggende activiteiten in de functionele structuur zitten -->
             <xsl:if test="contains($activiteitenLijst, $bovenLiggend)">
@@ -1641,7 +1673,7 @@
             <xsl:for-each
                 select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
                 <xsl:if
-                    test="string(rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href) = $bovenliggend">
+                    test="string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href) = $bovenliggend">
                     <xsl:variable name="lokaalBovenliggend" select="rol:identificatie/text()"/>
                     <xsl:choose>
                         <xsl:when test="$identificatie = $lokaalBovenliggend">
@@ -1658,36 +1690,8 @@
         </xsl:variable>
         <xsl:value-of select="$selecteerCirculaireActiviteiten"/>
     </xsl:function>
-        
+    
     <xsl:function name="foo:activiteitenLijstTPOD_1710">
-        <xsl:variable name="activiteitenLijst">
-            <xsl:for-each
-                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-                <xsl:value-of select="rol:identificatie/text()"/>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$activiteitenLijst"/>
-    </xsl:function>
-    
-    <!-- ============TPOD_1730================================================================================================================ -->
-    
-    <sch:pattern id="TPOD_1730">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1730()"/>
-            <!-- TPOD1730  -->
-            <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href)"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TPOD_1730: <sch:value-of select="rol:identificatie"/> 
-                Betreft verwijzing: <sch:value-of select="rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
-                Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.</sch:assert>
-        </sch:rule>
-        
-    </sch:pattern>
-    
-    <xsl:function name="foo:activiteitenLijstTPOD_1730">
         <xsl:variable name="activiteitenLijst">
             <xsl:for-each
                 select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
@@ -1706,13 +1710,14 @@
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1740()"/>
             
             <!-- TPOD1740  -->
-            <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href))"/>
+            <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
             <sch:report
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                REPORT: TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft verwijzing: <sch:value-of select="rol:bovenliggendeActiviteit/rol-ref:ActiviteitRef/@xlink:href"/>:
+                REPORT: TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft verwijzing: <sch:value-of select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>:
                 Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt. DIT LAATSTE
                 WORDT NU NOG NIET GETEST</sch:report>
         </sch:rule>
+        
     </sch:pattern>
     
     <xsl:function name="foo:activiteitenLijstTPOD_1740">
@@ -1734,9 +1739,9 @@
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
                 value="
-                contains(rol:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebied.')
+                contains(rol:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
                 or
-                contains(rol:locatieaanduiding/l-ref:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l-ref:GebiedRef/@xlink:href, '.gebied.')
+                contains(rol:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')
                 "/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1750: Betreft <sch:value-of select="rol:identificatie"
@@ -1744,7 +1749,7 @@
                 puntengroep, lijn of lijnengroep zijn). </sch:assert>
         </sch:rule>
     </sch:pattern>
-
+    
     <!-- ============TPOD_1760================================================================================================================ -->
     
     <sch:pattern id="TPOD_1760">
@@ -1754,9 +1759,9 @@
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
                 value="
-                contains(ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l-ref:LocatieRef/@xlink:href, '.gebied.')
+                contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
                 or
-                contains(ga:locatieaanduiding/l-ref:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l-ref:GebiedRef/@xlink:href, '.gebied.')                
+                contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')                
                 "/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1760: Betreft <sch:value-of select="ga:identificatie"
@@ -1789,7 +1794,7 @@
             <sch:let name="CONDITION"
                 value="false()"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing. Betreft:<sch:value-of select="string(r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href)"/></sch:assert>
+                TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing. Betreft:<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1840,11 +1845,11 @@
     <xsl:function name="foo:CheckFouteConstructiesTPOD_1850">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="regeltekstId" select="$context/r:identificatie/text()"/>
-        <xsl:variable name="ct" select="count($xmlDocuments//r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
-        <xsl:variable name="cr" select="count($xmlDocuments//r:RegelVoorIedereen/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
-        <xsl:variable name="ci" select="count($xmlDocuments//r:Instructieregel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
-        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
-        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r-ref:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="ct" select="count($xmlDocuments//r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="cr" select="count($xmlDocuments//r:RegelVoorIedereen/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="ci" select="count($xmlDocuments//r:Instructieregel/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
+        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
         <xsl:if test="not($ct=$cr or $ct=$ci or $ct=$co)">
             <xsl:value-of select="$regeltekstId"/>
         </xsl:if>                
@@ -1857,7 +1862,7 @@
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="CONDITION"
-                value="not(r:gerelateerdeRegeltekst/r-ref:RegeltekstRef/@xlink:href eq r:identificatie)"/>
+                value="not(r:gerelateerdeRegeltekst/r:RegeltekstRef/@xlink:href eq r:identificatie)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1860: Betreft <sch:value-of select="name()"/>:
                 <sch:value-of select="r:identificatie"/>: Iedere verwijzing naar een ander
@@ -1867,68 +1872,58 @@
         <sch:rule context="//rol:Activiteit">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION"
-                value="not(rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
+                value="not(rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1860: Betreft <sch:value-of select="name()"/>:
                 <sch:value-of select="rol:identificatie"/>: Iedere verwijzing naar een ander
                 OwObject moet een bestaand (ander) OwObject zijn. (gerelateerdeActiviteit verwijst
                 naar zichzelf) </sch:assert>
         </sch:rule>
-        <sch:rule context="//r:artikelOfLid/r-ref:RegeltekstRef">
+        <sch:rule context="//r:artikelOfLid/r:RegeltekstRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1860: Betreft <sch:value-of select="../../name()"/>:
-                <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
+                <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
                 moet een bestaand (ander) OwObject zijn. (r:Regeltekst/r:identificatie niet aangetroffen) </sch:assert>
         </sch:rule>
-        <sch:rule context="//@rkow:regeltekstId">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="identifiers"
-                value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, concat('.',.,'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD1860: Betreft <sch:value-of select="name()"/>:
-                <sch:value-of select="."/>: Iedere verwijzing naar een ander OwObject
-                moet een bestaand (ander) OwObject zijn. (r:Regeltekst/r:identificatie niet aangetroffen) </sch:assert>
-        </sch:rule>
-        <sch:rule context="//r:RegelVoorIedereen/r:activiteitaanduiding/rol-ref:ActiviteitRef">
+        <sch:rule context="//r:RegelVoorIedereen/r:activiteitaanduiding/rol:ActiviteitRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1860: Betreft <sch:value-of select="../../name()"/>:
-                <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
+                <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
                 moet een bestaand (ander) OwObject zijn. (rol:Activiteit/rol:identificatie niet aangetroffen)</sch:assert>
         </sch:rule>
-        <sch:rule context="//r:omgevingsnormaanduiding/rol-ref:OmgevingsnormRef">
+        <sch:rule context="//r:omgevingsnormaanduiding/rol:OmgevingsnormRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1860: Betreft <sch:value-of select="../../name()"/>:
-                <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
+                <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
                 moet een bestaand (ander) OwObject zijn. (rol:Omgevingsnorm/rol:identificatie niet aangetroffen) </sch:assert>
         </sch:rule>
-        <sch:rule context="//r:gebiedsaanwijzing/ga-ref:GebiedsaanwijzingRef">
+        <sch:rule context="//r:gebiedsaanwijzing/ga:GebiedsaanwijzingRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1860: Betreft <sch:value-of select="../../name()"/>:
-                <sch:value-of select="../../r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href"/>,
+                <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
                 moet een bestaand (ander) OwObject zijn. (ga:Gebiedsaanwijzing/ga:identificatie niet aangetroffen) </sch:assert>
         </sch:rule>
-        <sch:rule context="//rol:gerelateerdeActiviteit/rol-ref:ActiviteitRef">
+        <sch:rule context="//rol:gerelateerdeActiviteit/rol:ActiviteitRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
@@ -1940,7 +1935,7 @@
                 bestaand (ander) OwObject zijn. (rol:Activiteit/rol:identificatie niet aangetroffen) </sch:assert>
         </sch:rule>
         <sch:rule
-            context="//l-ref:LocatieRef | l-ref:GebiedRef | l-ref:GebiedengroepRef | l-ref:PuntRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef | l-ref:LijnRef">
+            context="//l:LocatieRef | l:GebiedRef | l:GebiedengroepRef | l:PuntRef | l:PuntengroepRef | l:LijnengroepRef | l:LijnRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="identifiers" value="foo:getLocationIdentifiersTPOD_1860()"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -1980,11 +1975,11 @@
                 value="true()"/>
             <sch:let name="identifiers"
                 value="foo:getRegelTekstIdentifiersTPOD_1870()"/>
-            <sch:let name="CONDITION" value="contains($identifiers, concat('.',r-ref:RegeltekstRef/@xlink:href,'.'))"/>
+            <sch:let name="CONDITION" value="contains($identifiers, concat('.',r:RegeltekstRef/@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1870: Betreft
                 <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of
-                    select="r-ref:RegeltekstRef/@xlink:href"/>: Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid. </sch:assert>
+                    select="r:RegeltekstRef/@xlink:href"/>: Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -2013,7 +2008,7 @@
             <sch:let name="CONDITION" value="not($SOORT_REGELING=$WV)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1880: De IMOW-objecten 'Omgevingswaarderegel' zijn niet van toepassing op de Waterschapsverordening.: 
-                Regeltekst-referentie: <sch:value-of select="string(r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href)"/>
+                Regeltekst-referentie: <sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2117,7 +2112,7 @@
         <xsl:variable name="notFound">
             <xsl:variable name="identifiers"
                 select="foo:getIdentifiersTPOD_1930($xmlDocuments//l:Gebied/l:identificatie)"/>
-            <xsl:for-each select="$context/l-ref:GebiedRef">
+            <xsl:for-each select="$context/l:GebiedRef">
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
                     <xsl:value-of select="concat(@xlink:href, ', ')"/>
                 </xsl:if>
@@ -2156,7 +2151,7 @@
         <xsl:variable name="identifiers"
             select="foo:getIdentifiersTPOD_1940($xmlDocuments//l:Punt/l:identificatie)"/>
         <xsl:variable name="notFound">
-            <xsl:for-each select="$context/l-ref:PuntRef">
+            <xsl:for-each select="$context/l:PuntRef">
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
                     <xsl:value-of select="concat(@xlink:href, ', ')"/>
                 </xsl:if>
@@ -2195,7 +2190,7 @@
         <xsl:variable name="notFound">
             <xsl:variable name="identifiers"
                 select="foo:getIdentifiersTPOD_1950($xmlDocuments//l:Lijn/l:identificatie)"/>
-            <xsl:for-each select="$context/l-ref:LijnRef">
+            <xsl:for-each select="$context/l:LijnRef">
                 <xsl:if test="not(contains($identifiers, @xlink:href))">
                     <xsl:value-of select="concat(@xlink:href, ', ')"/>
                 </xsl:if>
@@ -2217,7 +2212,7 @@
     <!-- ============TPOD_1960================================================================================================================ -->    
     
     <sch:pattern id="TPOD_1960">
-        <sch:rule context="//l:Lijn/l:geometrie/g-ref:GeometrieRef">
+        <sch:rule context="//l:Lijn/l:geometrie/l:GeometrieRef">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
@@ -2233,7 +2228,7 @@
     <!-- ============TPOD_1970================================================================================================================ -->    
     
     <sch:pattern id="TPOD_1970">
-        <sch:rule context="//l:Punt/l:geometrie/g-ref:GeometrieRef">
+        <sch:rule context="//l:Punt/l:geometrie/l:GeometrieRef">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
@@ -2249,7 +2244,7 @@
     <!-- ============TPOD_1980================================================================================================================ -->
     
     <sch:pattern id="TPOD_1980">
-        <sch:rule context="//l:Gebied/l:geometrie/g-ref:GeometrieRef">
+        <sch:rule context="//l:Gebied/l:geometrie/l:GeometrieRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
             <sch:let name="CONDITION" value="foo:calculateConditionTPOD_1980($href)=1"/>
@@ -2290,7 +2285,7 @@
         <sch:rule context="//r:Regeltekst/r:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="regeltekstReferenties"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//r-ref:RegeltekstRef)"/>
+                value="foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef)"/>
             <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($regeltekstReferenties, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -2298,10 +2293,10 @@
             </sch:assert>
         </sch:rule>
         
-        <sch:rule context="//(vt:FormeleDivisie|vt:Hoofdlijn)/vt:identificatie">
+        <sch:rule context="//(vt:Divisie|vt:Hoofdlijn)/vt:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="formeleDivisieReferenties"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//(vt-ref:FormeleDivisieRef|vt-ref:HoofdlijnRef))"/>
+                value="foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef))"/>
             <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($formeleDivisieReferenties, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -2312,7 +2307,7 @@
         <sch:rule context="//rol:Activiteit/rol:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="activiteitRefs"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//rol-ref:ActiviteitRef)"/>
+                value="foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef)"/>
             <sch:let name="nietGerefereerdeReferenties"
                 value="foo:nietGerefereerdeReferentiesTPOD_1990($activiteitRefs, .)"/>
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
@@ -2373,7 +2368,7 @@
     
     <xsl:function name="foo:getLocationGeoReferenceIdentifiersTPOD_1990">
         <xsl:variable name="identifiers">
-            <xsl:for-each select="$xmlDocuments//g-ref:GeometrieRef">
+            <xsl:for-each select="$xmlDocuments//l:GeometrieRef">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
         </xsl:variable>
@@ -2383,7 +2378,7 @@
     <xsl:function name="foo:getLocationReferenceIdentifiersTPOD_1990">
         <xsl:variable name="identifiers">
             <xsl:for-each
-                select="$xmlDocuments//(l-ref:LocatieRef | l-ref:GebiedRef | l-ref:LijnRef | l-ref:PuntRef | l-ref:GebiedengroepRef | l-ref:PuntengroepRef | l-ref:LijnengroepRef)">
+                select="$xmlDocuments//(l:LocatieRef | l:GebiedRef | l:LijnRef | l:PuntRef | l:GebiedengroepRef | l:PuntengroepRef | l:LijnengroepRef)">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
         </xsl:variable>
@@ -2460,19 +2455,19 @@
     <!-- ============TPOD_2030================================================================================================================ -->
     
     <sch:pattern id="TPOD_2030">
-        <sch:rule context="//Modules/RegelingVersie/FRBRExpression">
+        <sch:rule context="//FRBRExpression">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION"
                 value="string-length(foo:checkFRBRExpressionTPOD_2030(text())) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2030: Betreft
+                H:TPOD2020: Betreft
                 <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het FRBRExpression van het manifest in OW moet verwijzen naar een bestaand FRBRExpression van een Regelingversie in OP </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:checkFRBRExpressionTPOD_2030">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//data:ExpressionIdentificatie/data:FRBRExpression/text()">
+        <xsl:for-each select="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:ExpressionIdentificatie/data:FRBRExpression/text()">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>
@@ -2482,13 +2477,12 @@
     <!-- ============TPOD_2040================================================================================================================ -->
     
     <sch:pattern id="TPOD_2040">
-        <sch:rule context="//vt:FormeleDivisie">
+        <sch:rule context="//vt:Divisie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2040: Betreft
-                <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: het wId van de
-                FormeleDivisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP
+                H:TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
+                Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2610,9 +2604,9 @@
             <xsl:if test="not(string($regelId) = '')">
                 <xsl:for-each select="$xmlDocuments//r:RegelVoorIedereen">
                     <xsl:if test="
-                        string(r:activiteitaanduiding/rol-ref:ActiviteitRef/@xlink:href)=$activiteitId 
+                        string(r:activiteitaanduiding/rol:ActiviteitRef/@xlink:href)=$activiteitId 
                         and 
-                        string(r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href)=$regelId
+                        string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)=$regelId
                         ">
                         <xsl:value-of select="$activiteitId"/>
                     </xsl:if>

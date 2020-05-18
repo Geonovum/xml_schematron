@@ -78,7 +78,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_2030">
-        <sch:rule context="//Modules/RegelingVersie/FRBRExpression">
+        <sch:rule context="//FRBRExpression">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION"
                 value="string-length(foo:checkFRBRExpressionTPOD_2030(text())) > 0"/>
