@@ -2611,4 +2611,25 @@
         </sch:rule>
     </sch:pattern>
     
+    <!-- ============TPOD_2100================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2100">
+        <sch:rule context="//rol:Omgevingsnorm/rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde/da:eenheid">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="CONDITION" value="false()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2100: Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.. 
+                Betreft Normwaarde: <sch:value-of select="../../rol:identificatie"/>
+            </sch:assert>
+        </sch:rule>
+        <sch:rule context="//rol:Omgevingsnorm/rol:normwaarde/rol:Normwaarde/rol:waardeInRegeltekst/da:eenheid">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="CONDITION" value="false()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2100: Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.. 
+                Betreft Normwaarde: <sch:value-of select="../../rol:identificatie"/>
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+
 </sch:schema>
