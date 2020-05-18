@@ -984,7 +984,7 @@
     </BesluitVersie>
     <RegelingVersieInformatie>
         <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-            <FRBRWork>/akn/nl/act/pv27/2020/3520</FRBRWork>
+            <FRBRWork>/akn/nl/bill/pv27/2019/3520</FRBRWork>
             <FRBRExpression>/akn/nl/act/pv27/2019/3520/nld@2019-12-01</FRBRExpression>
             <soortWork>/join/id/stop/work_019</soortWork>
         </ExpressionIdentificatie>
