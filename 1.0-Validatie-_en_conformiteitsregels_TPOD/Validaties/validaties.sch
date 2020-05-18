@@ -2594,6 +2594,21 @@
         </sch:rule>
     </sch:pattern>
     
+    <!-- ============TPOD_2090================================================================================================================ -->
     
+    <sch:pattern id="TPOD_2090">
+        <sch:rule context="//rol:Omgevingsnorm">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="kwl" value="count(rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"></sch:let>
+            <sch:let name="kwn" value="count(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde)"></sch:let>
+            <sch:let name="wir" value="count(rol:normwaarde/rol:Normwaarde/rol:waardeInRegeltekst)"></sch:let>
+            <sch:let name="all" value="count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst))"></sch:let>
+            <sch:let name="CONDITION" value="$kwl=$all or $kwn=$all or $wir=$all"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2090: Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst). 
+                Betreft Omgevingsnormt <sch:value-of select="rol:identificatie"/>
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     
 </sch:schema>

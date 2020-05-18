@@ -13,7 +13,7 @@
 	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
 	<sl:standBestand>
 		<sl:dataset>Gemeentestad</sl:dataset>
 		<sl:inhoud>
