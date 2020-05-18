@@ -2556,6 +2556,7 @@
                 <xsl:if
                     test="contains($wIds, concat('.', $lidWiD, '.')) and contains($wIds, concat('.', $artikelWiD, '.'))">
                     <!-- ******   HIER IS HET DUS FOUT ******** -->
+                    <!-- ******   CREËREN DEEL VAN FOUTMELDING ******** -->
                     <!-- Ophalen regeltekstId behorend bij artikelwId -->
                     <xsl:variable name="regelTekstIdArtikel" select="$xmlDocuments//r:Regeltekst[@wId=$artikelWiD]/r:identificatie"/>
                     <!-- Ophalen regeltekstId behorend bij lid-wId -->
@@ -2628,6 +2629,19 @@
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD2100: Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.. 
                 Betreft Normwaarde: <sch:value-of select="../../rol:identificatie"/>
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+
+    <!-- ============TPOD_2110================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2110">
+        <sch:rule context="//vt:Tekstdeel">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="CONDITION" value="(vt:idealisatie and vt:locatieaanduiding) or (not(vt:idealisatie) and not(vt:locatieaanduiding))"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2110: Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft. 
+                Betreft Tekstdeel: <sch:value-of select="vt:identificatie"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>

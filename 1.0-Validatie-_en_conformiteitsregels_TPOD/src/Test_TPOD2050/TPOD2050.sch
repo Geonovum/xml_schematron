@@ -83,7 +83,7 @@
             <sch:let name="message" value="foo:existsTPOD_2050()"/>
             <sch:let name="CONDITION" value="string-length($message)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2050: <sch:value-of select="$message"/>
+                TPOD2050: <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
