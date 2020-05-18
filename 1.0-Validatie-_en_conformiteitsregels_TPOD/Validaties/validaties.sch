@@ -2541,7 +2541,7 @@
         <xsl:param name="context" as="node()"/>
         <!-- Ophalen wId uit stop-bestand -->
         <xsl:variable name="artikelWiD" select="string($context/@wId)"/>
-        <!-- Verzamelen alle wIds uit regelteksten (omgeven door punten om contains foutloos te kunnen doen) -->
+        <!-- Verzamelen alle wIds uit regelteksten (omgeven door punten om contains-functie foutloos te kunnen doen) -->
         <xsl:variable name="wIds">
             <xsl:for-each select="$xmlDocuments//r:Regeltekst/@wId">
                 <xsl:value-of select="concat('.', string(.), '.')"/>
@@ -2555,15 +2555,14 @@
                 <!-- CONTROLE: Als de lijst van wIds in Regelteksten zowel het artikel nummer bevat alsmede ook een lidnummer, dan is dat fout. -->
                 <xsl:if
                     test="contains($wIds, concat('.', $lidWiD, '.')) and contains($wIds, concat('.', $artikelWiD, '.'))">
-                    <!-- HIER is het dus FOUT -->
+                    <!-- ******   HIER IS HET DUS FOUT ******** -->
                     <!-- Ophalen regeltekstId behorend bij artikelwId -->
                     <xsl:variable name="regelTekstIdArtikel" select="$xmlDocuments//r:Regeltekst[@wId=$artikelWiD]/r:identificatie"/>
                     <!-- Ophalen regeltekstId behorend bij lid-wId -->
                     <xsl:variable name="regelTekstIdLid" select="$xmlDocuments//r:Regeltekst[@wId=$lidWiD]/r:identificatie"/>
                     <!-- Het ID part van de Foutmelding wordt geconstrueerd en in Results gezet. -->
                     <xsl:value-of
-                        select="concat('artikel-wId: ', $artikelWiD, ' (',$regelTekstIdArtikel,')  --&gt; lid-wId: ', $lidWiD, ' (',$regelTekstIdLid,') ')"  disable-output-escaping="no"
-                    />
+                        select="concat('artikel-wId: ', $artikelWiD, ' (',$regelTekstIdArtikel,')  --&gt; lid-wId: ', $lidWiD, ' (',$regelTekstIdLid,') ')"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
@@ -2573,52 +2572,13 @@
                 <xsl:value-of
                     select="
                     concat('Als een Regeltekst van een Lid is gemaakt mag er geen Regeltekst meer gemaakt worden van het artikel dat boven dit Lid hangt. Betreft: ',
-                    $results)"  disable-output-escaping="no"/>
+                    $results)" />
             </xsl:if>
         </xsl:variable>
         <xsl:value-of select="$message"/>
     </xsl:function>
     
-    <!-- ============TPOD_2070================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2070">
-        <sch:rule context="//rol:Activiteit/@ow:regeltekstId">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="foo:checkOwRegeltekstIdverwijzingTPOD_2070(.)=true()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2070: Alleen v0.98 | Als de activiteit een bepaalde regeltekstID heeft dan moet deze overeenkomen met de ID die je via de Activiteit --> RegelVoorIedereen --> Regeltekst vindt.: 
-                ActiviteitId: <sch:value-of select="../rol:identificatie/text()"/>, ow:regeltekstId: <sch:value-of select="string(.)"/>
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    
-    
-    <xsl:function name="foo:checkOwRegeltekstIdverwijzingTPOD_2070">
-        <xsl:param name="context" as="node()"/>
-        <xsl:variable name="regelId" select="string($context)"/>
-        <xsl:variable name="activiteitId" select="$context/../rol:identificatie/text()"/>
-        <xsl:variable name="foundRegelTekst">
-            <xsl:if test="not(string($regelId) = '')">
-                <xsl:for-each select="$xmlDocuments//r:RegelVoorIedereen">
-                    <xsl:if test="
-                        string(r:activiteitaanduiding/rol:ActiviteitRef/@xlink:href)=$activiteitId 
-                        and 
-                        string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)=$regelId
-                        ">
-                        <xsl:value-of select="$activiteitId"/>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:if>
-        </xsl:variable>
-        <xsl:choose>
-            <xsl:when test="$foundRegelTekst=$activiteitId">
-                <xsl:value-of select="true()"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="false()"/>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:function>
     
     
     
