@@ -83,13 +83,15 @@
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
                 value="
+                string-length(string(rol:locatieaanduiding/l:LocatieRef/@xlink:href))=0
+                or
                 contains(rol:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
                 or
                 contains(rol:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')
                 "/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1750: Betreft <sch:value-of select="rol:identificatie"
-                />: Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt,
+                />: Een Activiteit moet een gebied of gebiedengroep zijn (en mag geen punt,
                 puntengroep, lijn of lijnengroep zijn). </sch:assert>
         </sch:rule>
     </sch:pattern>

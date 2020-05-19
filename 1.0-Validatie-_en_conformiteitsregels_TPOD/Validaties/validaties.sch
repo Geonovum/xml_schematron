@@ -1746,13 +1746,15 @@
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION"
                 value="
+                string-length(string(rol:locatieaanduiding/l:LocatieRef/@xlink:href))=0
+                or
                 contains(rol:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
                 or
                 contains(rol:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')
                 "/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1750: Betreft <sch:value-of select="rol:identificatie"
-                />: Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt,
+                />: Een Activiteit moet een gebied of gebiedengroep zijn (en mag geen punt,
                 puntengroep, lijn of lijnengroep zijn). </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2647,6 +2649,35 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <!-- ============TPOD_2120================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2120">
+        <sch:rule context="//*:identificatie">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="dubbel" value="foo:vindDubbeleTPOD_2120(text())"/>
+            <sch:let name="CONDITION" value="string-length($dubbel) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2120: Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen), 
+                dit betreft id:<sch:value-of select="text()"/>.</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:vindDubbeleTPOD_2120">
+        <xsl:param name="id"/>
+        <xsl:variable name="ids">
+            <xsl:for-each select="$xmlDocuments//*:identificatie">
+                <xsl:value-of select="concat('.', text(), '.')"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="dubbeleIds">
+            <xsl:variable name="after" select="substring-after($ids, concat('.', $id, '.'))"/>
+            <xsl:if test="contains($after, concat('.', $id, '.'))">
+                <xsl:value-of select="$id"/>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$dubbeleIds"/>
+    </xsl:function>
 
     <!-- ============TPOD_2130================================================================================================================ -->
     
