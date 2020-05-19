@@ -1289,16 +1289,23 @@
                 <xsl:choose>
                     <xsl:when test="tokenize(string(./@srsName), ':')[last()] = '28992'">
                         <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 3)"/>
-                        <xsl:value-of
-                            select="concat(' TP0D0930: EPSG:28992 (=RD new), coördinaten in meters, maximaal 3 decimalen. gml:id=',./@gml:id,', coördinaten: ',
-                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"/>
+                        <xsl:if test="string-length($fouteCoord) > 0">
+                            <xsl:value-of
+                                select="
+                                concat(' TP0D0930: EPSG:28992 (=RD new), coördinaten in meters, maximaal 3 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                                concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
+                            />
+                        </xsl:if>
                     </xsl:when>
                     <xsl:when test="tokenize(string(./@srsName), ':')[last()] = '4258'">
                         <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 8)"/>
-                        <xsl:value-of
-                            select="
-                            concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten in graden, maximaal 8 decimalen. gml:id=',./@gml:id,', coördinaten: ',
-                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"/>
+                        <xsl:if test="string-length($fouteCoord) > 0">
+                            <xsl:value-of
+                                select="
+                                concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten in graden, maximaal 8 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                                concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
+                            />
+                        </xsl:if>
                     </xsl:when>
                 </xsl:choose>
             </xsl:for-each>

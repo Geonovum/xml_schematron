@@ -12,25 +12,20 @@
     xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
     xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
     xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
     xmlns:stop="https://standaarden.overheid.nl/stop/imop/stop/"
     xmlns:aanlevering="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
-    
     xmlns:basisgeo="http://www.geostandaarden.nl/basisgeometrie/1.0"
     xmlns:gio="https://standaarden.overheid.nl/stop/imop/gio/"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:geo="https://standaarden.overheid.nl/stop/imop/geo/"
-    
     xmlns:lvbb="http://www.overheid.nl/2017/lvbb"
     xmlns:tns="http://www.logius.nl/digikoppeling/gb/2010/10"
-    
     xmlns:ow-manifest="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
-    
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    
+
     <sch:ns uri="http://whatever" prefix="foo"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/bestanden/deelbestand" prefix="ow-dc"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/owobject" prefix="ow"/>
@@ -44,24 +39,24 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/regelsoplocatie" prefix="rol"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/vrijetekst" prefix="vt"/>
     <sch:ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
-    
+
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/tekst/" prefix="tekst"/>
     <sch:ns uri="https://standaarden.overheid.nl/lvbb/stop/aanlevering/" prefix="aanlevering"/>
-    
+
     <sch:ns uri="http://www.geostandaarden.nl/basisgeometrie/1.0" prefix="basisgeo"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/gio/" prefix="gio"/>
     <sch:ns uri="http://www.opengis.net/gml/3.2" prefix="gml"/>
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/geo/" prefix="geo"/>
-    
+
     <sch:ns uri="http://www.overheid.nl/2017/lvbb" prefix="lvbb"/>
     <sch:ns uri="http://www.overheid.nl/2017/stop" prefix="stop"/>
     <sch:ns uri="http://www.logius.nl/digikoppeling/gb/2010/10" prefix="tns"/>
-    
+
     <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/manifest-ow" prefix="ow-manifest"/>
-    
+
     <sch:ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
-    
+
     <!-- ====================================== GENERIC ============================================================================= -->
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
@@ -95,16 +90,23 @@
                 <xsl:choose>
                     <xsl:when test="tokenize(string(./@srsName), ':')[last()] = '28992'">
                         <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 3)"/>
-                        <xsl:value-of
-                            select="concat(' TP0D0930: EPSG:28992 (=RD new), coördinaten in meters, maximaal 3 decimalen. gml:id=',./@gml:id,', coördinaten: ',
-                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"/>
+                        <xsl:if test="string-length($fouteCoord) > 0">
+                            <xsl:value-of
+                                select="
+                                    concat(' TP0D0930: EPSG:28992 (=RD new), coördinaten in meters, maximaal 3 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                                    concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
+                            />
+                        </xsl:if>
                     </xsl:when>
                     <xsl:when test="tokenize(string(./@srsName), ':')[last()] = '4258'">
                         <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 8)"/>
-                        <xsl:value-of
-                            select="
-                            concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten in graden, maximaal 8 decimalen. gml:id=',./@gml:id,', coördinaten: ',
-                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"/>
+                        <xsl:if test="string-length($fouteCoord) > 0">
+                            <xsl:value-of
+                                select="
+                                    concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten in graden, maximaal 8 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                                    concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
+                            />
+                        </xsl:if>
                     </xsl:when>
                 </xsl:choose>
             </xsl:for-each>
