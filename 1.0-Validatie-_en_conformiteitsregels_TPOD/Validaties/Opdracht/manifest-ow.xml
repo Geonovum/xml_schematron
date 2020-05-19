@@ -1,37 +1,98 @@
-<?xml version="1.0" ?>
-<!-- created by OpenOmgevingswet -->
-<Modules xmlns="https://standaarden.overheid.nl/stop/DSO-PI10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://standaarden.overheid.nl/stop/DSO-PI10/       https://standaarden.overheid.nl/stop/DSO-PI10/manifest-ow.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<Aanleveringen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
+  xsi:schemaLocation="http://www.geostandaarden.nl/bestanden-ow/manifest-ow ../xsd/bestanden-ow/generiek/manifest-ow.xsd">
   <domein>omgevingswet</domein>
-  <RegelingVersie>
-    <FRBRwork>/akn/nl/act/mnre1045/2020/OOW001OOWb</FRBRwork>
-    <FRBRExpression>/akn/nl/act/mnre1045/2020/OOW001OOWb/nld@2020-02-05;1</FRBRExpression>
+  <Aanlevering>
+    <WorkIDRegeling>/akn/nl/act/gm0037/2019/reg456</WorkIDRegeling>
+    <DoelID>/join/id/proces/gm0037/2019/Instelling</DoelID>
     <Bestand>
-      <naam>tekstdelen.xml</naam>
-      <objecttype>Tekstdeel</objecttype>
+      <naam>owActiviteiten-Gemeentestad.xml</naam>
+      <objecttype>Activiteit</objecttype>
     </Bestand>
     <Bestand>
-      <naam>Mng.gml</naam>
-      <objecttype>Geometrie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>Tm.gml</naam>
-      <objecttype>Geometrie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>divisies.xml</naam>
-      <objecttype>FormeleDivisie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>gebiedsaanwijzingen.xml</naam>
+      <naam>owGebiedsaanwijzingen-Gemeentestad.xml</naam>
       <objecttype>Gebiedsaanwijzing</objecttype>
     </Bestand>
     <Bestand>
-      <naam>Werkingsgebied.gml</naam>
+      <naam>owPons-Gemeentestad.xml</naam>
+      <objecttype>Pons</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>owOmgevingsnormOmgevingswaarde.xml</naam>
+      <objecttype>Omgevingsnorm</objecttype>
+      <objecttype>Omgevingswaarde</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>owLocaties-Gemeentestad.xml</naam>
+      <objecttype>Gebiedengroep</objecttype>
+      <objecttype>Gebied</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>owRegeltekst-Gemeentestad.xml</naam>
+      <objecttype>Regeltekst</objecttype>
+      <objecttype>RegelVoorIedereen</objecttype>
+      <objecttype>Omgevingswaarderegel</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>owRegelingsgebied.xml</naam>
+      <objecttype>Regelingsgebied</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Bedrijf_categorie_2.gml</naam>
       <objecttype>Geometrie</objecttype>
     </Bestand>
     <Bestand>
-      <naam>locaties.xml</naam>
-      <objecttype>Gebied</objecttype>
+      <naam>Bouwhoogte.gml</naam>
+      <objecttype>Geometrie</objecttype>
     </Bestand>
-  </RegelingVersie>
-</Modules>
+    <Bestand>
+      <naam>Centrumgebied.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Speelhal.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Welstand_A.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Welstand_B.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Welstand_C.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Zone_A.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Zaltbommel.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Zone_B.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Zuilichem.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Zuilichem_industriegebied_1.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Zuilichem_industriegebied_2.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+    <Bestand>
+      <naam>Zuilichem_industriegebied_3.gml</naam>
+      <objecttype>Geometrie</objecttype>
+    </Bestand>
+  </Aanlevering>
+</Aanleveringen>

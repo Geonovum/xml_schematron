@@ -42,6 +42,57 @@
 				<sl:objectType>Hoofdlijn</sl:objectType>
 			</sl:objectTypen>
 		</sl:inhoud>
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:RegelVoorIedereen>
+					<r:identificatie>nl.imow-gm0037.juridischeregel.2019000001</r:identificatie>
+					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/idealisatie/id/concept/Exact</r:idealisatie>
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
+					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+					</r:locatieaanduiding>
+					<r:gebiedsaanwijzing>
+						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000001"/> <!--Bedrijf categorie 2-->
+					</r:gebiedsaanwijzing>
+				</r:RegelVoorIedereen>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Omgevingswaarderegel>
+					<r:identificatie>nl.imow-gm0037.juridischeregel.2019000001</r:identificatie>
+					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/idealisatie/id/concept/Exact</r:idealisatie>
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
+					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+					</r:locatieaanduiding>
+					<r:gebiedsaanwijzing>
+						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000001"/> <!--Bedrijf categorie 2-->
+					</r:gebiedsaanwijzing>
+				</r:Omgevingswaarderegel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel>
+					<r:identificatie>nl.imow-gm0037.juridischeregel.2019000001</r:identificatie>
+					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/idealisatie/id/concept/Exact</r:idealisatie>
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000001"/>
+					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
+					</r:locatieaanduiding>
+					<r:gebiedsaanwijzing>
+						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000001"/> <!--Bedrijf categorie 2-->
+					</r:gebiedsaanwijzing>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
 		<!-- Regeltekst FOUT in ID, moet regeltekst zijn -->
 		<sl:stand>
 			<ow-dc:owObject>

@@ -80,13 +80,31 @@
         <sch:rule context="//*:identificatie">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="CONDITION" value="contains(text(), concat('.', lower-case(../local-name()), '.'))"/>
+            <sch:let name="CONDITION" value="contains(text(), concat('.', foo:CheckFouteIdentifierTPOD_1890(.), '.'))"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1890: Betreft <sch:value-of select="../name()"/>: <sch:value-of
-                    select="text()"/>: De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten.
+                    select="text()"/>: De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:CheckFouteIdentifierTPOD_1890">
+        <xsl:param name="context"/>
+        <xsl:choose>
+            <xsl:when test="
+                lower-case($context/../local-name())='regelvooriedereen' 
+                or 
+                lower-case($context/../local-name())='instructieregel' 
+                or 
+                lower-case($context/../local-name())='omgevingswaarderegel'
+                ">
+                <xsl:value-of select="'juridischeregel'"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="lower-case($context/../local-name())"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
 
 </sch:schema>

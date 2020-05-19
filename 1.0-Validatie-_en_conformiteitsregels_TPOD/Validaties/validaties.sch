@@ -2019,14 +2019,32 @@
         <sch:rule context="//*:identificatie">
             <sch:let name="APPLICABLE"
                 value="true()"/>
-            <sch:let name="CONDITION" value="contains(text(), concat('.', lower-case(../local-name()), '.'))"/>
+            <sch:let name="CONDITION" value="contains(text(), concat('.', foo:CheckFouteIdentifierTPOD_1890(.), '.'))"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1890: Betreft <sch:value-of select="../name()"/>: <sch:value-of
-                    select="text()"/>: De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten.
+                    select="text()"/>: De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:CheckFouteIdentifierTPOD_1890">
+        <xsl:param name="context"/>
+        <xsl:choose>
+            <xsl:when test="
+                lower-case($context/../local-name())='regelvooriedereen' 
+                or 
+                lower-case($context/../local-name())='instructieregel' 
+                or 
+                lower-case($context/../local-name())='omgevingswaarderegel'
+                ">
+                <xsl:value-of select="'juridischeregel'"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="lower-case($context/../local-name())"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
     
     <!-- ============TPOD_1910================================================================================================================ -->    
     
@@ -2407,29 +2425,6 @@
         </xsl:for-each>
     </xsl:function>
     
-    <!-- ============TPOD_2010================================================================================================================ -->
-    
-    <sch:pattern id="TPOD_2010">
-        <sch:rule context="//r:Regeltekst | vt:FormeleDivisie">
-            <sch:let name="APPLICABLE" value="not($SOORT_REGELING = '')"/>
-            <sch:let name="CONDITION"
-                value="string-length(foo:checkFBRWorkTPOD_2010(@wIdRegeling)) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2010: Betreft
-                <sch:value-of select="name()"/>: <sch:value-of select="@wIdRegeling"/>: het wIdRegeling van de
-                Regeltekst of FormeleDivisie in OW moet verwijzen naar een bestaande FRBRWork behorend bij Regeling in OP </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    
-    <xsl:function name="foo:checkFBRWorkTPOD_2010">
-        <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//data:ExpressionIdentificatie/data:FRBRWork/text()">
-            <xsl:if test="$identifier eq .">
-                <xsl:value-of select="$identifier"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
-    
     <!-- ============TPOD_2020================================================================================================================ -->
     
     <sch:pattern id="TPOD_2020">
@@ -2645,5 +2640,35 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+
+    <!-- ============TPOD_2130================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2130">
+        <sch:rule context="//l:GeometrieRef">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="dubbel" value="foo:vindDubbeleTPOD_2130(string(@xlink:href))"/>
+            <sch:let name="CONDITION" value="string-length($dubbel) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2130: Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie toegestaan), 
+                dit betreft gebied:<sch:value-of select="../../l:identificatie/text()"/>, Geometrieref: <sch:value-of select="$dubbel"/>.</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:vindDubbeleTPOD_2130">
+        <xsl:param name="href"/>
+        <xsl:variable name="verwijzingen">
+            <xsl:for-each select="$xmlDocuments//l:GeometrieRef">
+                <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="dubbeleVerwijzing">
+            <xsl:variable name="after"
+                select="substring-after($verwijzingen, concat('.', $href, '.'))"/>
+            <xsl:if test="contains($after, concat('.', $href, '.'))">
+                <xsl:value-of select="$href"/>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$dubbeleVerwijzing"/>
+    </xsl:function>
 
 </sch:schema>
