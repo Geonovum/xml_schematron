@@ -73,36 +73,30 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_2130">
-        <sch:rule context="//aanlevering:AanleveringBesluit">
+        <sch:rule context="//l:GeometrieRef">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="fout" value="foo:vindDubbeleTPOD_2130()"/>
-            <sch:let name="CONDITION" value="string-length($fout) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD2110:
-                Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft. Betreft
-                Tekstdeel: <sch:value-of select="vt:identificatie"/>
-            </sch:assert>
+            <sch:let name="dubbel" value="foo:vindDubbeleTPOD_2130(string(@xlink:href))"/>
+            <sch:let name="CONDITION" value="string-length($dubbel) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2130: Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie toegestaan), 
+                dit betreft gebied:<sch:value-of select="../../l:identificatie/text()"/>, Geometrieref: <sch:value-of select="$dubbel"/>.</sch:assert>
         </sch:rule>
     </sch:pattern>
 
     <xsl:function name="foo:vindDubbeleTPOD_2130">
+        <xsl:param name="href"/>
         <xsl:variable name="verwijzingen">
             <xsl:for-each select="$xmlDocuments//l:GeometrieRef">
                 <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:variable name="dubbeleVerwijzing">
-            <xsl:for-each select="$xmlDocuments//l:GeometrieRef">
                 <xsl:variable name="after"
-                    select="substring-after($verwijzingen, concat('.', string(@xlink:href), '.'))"/>
-                <xsl:message select="$after"/>
-                <xsl:if test="contains($after, concat('.', string(@xlink:href), '.'))">
-                    <xsl:message select="'3'"/>
-                    <xsl:value-of select="concat('Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie toegestaan), dit betreft: ',string(@xlink:href))"/>
-                    <xsl:message select="string(@xlink:href)"/>
+                    select="substring-after($verwijzingen, concat('.', $href, '.'))"/>
+            <xsl:if test="contains($after, concat('.', $href, '.'))">
+                <xsl:value-of select="$href"/>
                 </xsl:if>
-            </xsl:for-each>
         </xsl:variable>
-        <xsl:message select="$dubbeleVerwijzing"/>
         <xsl:value-of select="$dubbeleVerwijzing"/>
     </xsl:function>
 
