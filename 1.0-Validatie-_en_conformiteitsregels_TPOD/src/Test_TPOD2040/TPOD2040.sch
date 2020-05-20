@@ -82,7 +82,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
+                TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
                 Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP
             </sch:assert>
         </sch:rule>

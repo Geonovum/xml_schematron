@@ -6,12 +6,12 @@ Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schem
 Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1650\OwTestExemplaar1650.xml
 Engine-naam: ISO Schematron
 Ernst: error
-Omschrijving: H:TPOD1650: nl.imow-gm0037.omgevingswaarde.201900005: Het attribuut 'normwaarde' moet bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde'.
+Omschrijving: TPOD1650: nl.imow-gm0037.omgevingswaarde.201900005: Het attribuut 'normwaarde' moet bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde'.
 Startlocatie: 119:81
 
 Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1650\OwTestExemplaar1650.xml
 Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPOD1650\OwTestExemplaar1650.xml
 Engine-naam: ISO Schematron
 Ernst: error
-Omschrijving: H:TPOD1650: nl.imow-gm0037.omgevingsnorm.201900002: Het attribuut 'normwaarde' moet bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde'.
+Omschrijving: TPOD1650: nl.imow-gm0037.omgevingsnorm.201900002: Het attribuut 'normwaarde' moet bestaan uit één van de twee mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde'.
 Startlocatie: 159:43

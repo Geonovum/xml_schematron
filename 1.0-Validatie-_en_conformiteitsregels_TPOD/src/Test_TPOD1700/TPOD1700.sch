@@ -93,7 +93,7 @@
             <sch:let name="CONDITION"
                 value="string-length($activiteitenTrajectNaarFunctioneleStructuur) > 0"/>
             <sch:report test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                REPORT: H:TPOD1700:
+                REPORT: TPOD1700:
                 Activiteit-ids: <sch:value-of select="substring($activiteitenTrajectNaarFunctioneleStructuur,1,string-length($activiteitenTrajectNaarFunctioneleStructuur)-2)"/>: 
                 Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in
                 de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de

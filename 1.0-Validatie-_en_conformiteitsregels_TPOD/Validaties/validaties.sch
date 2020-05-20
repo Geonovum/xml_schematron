@@ -1235,7 +1235,7 @@
             <sch:let name="CONDITION"
                 value="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen.
+                TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen.
                 (opschrift is hier: "<sch:value-of select="tekst:Opschrift/text()"/>")
             </sch:assert>
         </sch:rule>
@@ -1245,7 +1245,7 @@
             <sch:let name="hoofdstuk1" value="foo:hoofdstuk1TPOD_0880(.)" />
             <sch:let name="CONDITION" value="$hoofdstuk1=1 or $hoofdstuk1=-1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen. </sch:assert>
+                TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1531,7 +1531,7 @@
             <sch:let name="CONDITION"
                 value="string-length($activiteitenTrajectNaarFunctioneleStructuur) > 0"/>
             <sch:report test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                REPORT: H:TPOD1700:
+                REPORT: TPOD1700:
                 Activiteit-ids: <sch:value-of select="substring($activiteitenTrajectNaarFunctioneleStructuur,1,string-length($activiteitenTrajectNaarFunctioneleStructuur)-2)"/>: 
                 Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in
                 de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de
@@ -1789,7 +1789,7 @@
             <sch:let name="CONDITION"
                 value="count(//tekst:Hoofdstuk/descendant::tekst:Artikel)>0"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1780: Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel. </sch:assert>
+                TPOD1780: Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -2064,7 +2064,7 @@
             <sch:let name="objects" value="foo:owObjectenLijstTPOD_1910(.)"/>
             <sch:let name="CONDITION" value="contains($objects, concat('.',text(),'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TPOD1910: De objecttypen in
+                TPOD1910: De objecttypen in
                 ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met
                 de daadwerkelijke objecten in het betreffende Ow-bestand. Het objecttype waarom het
                 gaat staan nu genoemd: <sch:value-of select="text()"/>
@@ -2284,12 +2284,16 @@
     
     <xsl:function name="foo:calculateConditionTPOD_1980">
         <xsl:param name="href"/>
-        <xsl:for-each select="$gmlDocuments">
+        <xsl:for-each select="$gmlDocuments//basisgeo:Geometrie">
             <xsl:value-of select="0"/>
-            <xsl:if test="//basisgeo:Geometrie[basisgeo:id/text() eq $href]/basisgeo:geometrie/gml:MultiSurface 
-                or 
-                /basisgeo:Geometrie[basisgeo:id/text() eq $href]/basisgeo:geometrie/gml:Surface/gml:patches/gml:PolygonPatch">
-                <xsl:value-of select="1"/>
+            <xsl:if test="basisgeo:id/text() = $href">
+                <xsl:if
+                    test="
+                    basisgeo:geometrie//gml:MultiSurface
+                    or
+                    basisgeo:geometrie//gml:Surface">
+                    <xsl:value-of select="1"/>
+                </xsl:if>
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
@@ -2419,7 +2423,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2000: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
+                TPOD2000: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
                 Het wId van de Regeltekst of Divisie in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP
             </sch:assert>
         </sch:rule>
@@ -2464,7 +2468,7 @@
             <sch:let name="CONDITION"
                 value="string-length(foo:checkFRBRExpressionTPOD_2030(text())) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2020: Betreft
+                TPOD2020: Betreft
                 <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het FRBRExpression van het manifest in OW moet verwijzen naar een bestaand FRBRExpression van een Regelingversie in OP </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2485,7 +2489,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
+                TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
                 Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP
             </sch:assert>
         </sch:rule>
@@ -2508,7 +2512,7 @@
             <sch:let name="message" value="foo:existsTPOD_2050()"/>
             <sch:let name="CONDITION" value="string-length($message)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2050: <sch:value-of select="$message"/>
+                TPOD2050: <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2535,7 +2539,7 @@
             <sch:let name="message" value="foo:checkFouteArtikelLidCombinatieTPOD_2060(.)"/>
             <sch:let name="CONDITION" value="string-length($message) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD2060:
+                TPOD2060:
                 <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>

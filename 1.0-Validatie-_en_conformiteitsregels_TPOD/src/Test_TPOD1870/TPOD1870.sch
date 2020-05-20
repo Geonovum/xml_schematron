@@ -84,7 +84,7 @@
                 value="foo:getRegelTekstIdentifiersTPOD_1870()"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',r:RegeltekstRef/@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                H:TPOD1870: Betreft
+                TPOD1870: Betreft
                 <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of
                     select="r:RegeltekstRef/@xlink:href"/>: Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid. </sch:assert>
         </sch:rule>

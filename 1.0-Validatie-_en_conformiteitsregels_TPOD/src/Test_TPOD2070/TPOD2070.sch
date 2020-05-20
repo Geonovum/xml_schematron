@@ -48,7 +48,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="fouten" value="foo:checkOwObjectenTPOD_2070(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> H:TPOD2070: Vanuit
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD2070: Vanuit
                 volgende Ow-objecten wordt er van of naar Activiteit: <sch:value-of
                     select="rol:identificatie/text()"/> verwezen, terwijl de regelTekstIds niet
                 overeen komen: <sch:value-of
