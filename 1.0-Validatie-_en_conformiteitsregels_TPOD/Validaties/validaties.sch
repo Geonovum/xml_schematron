@@ -2652,14 +2652,16 @@
     
     <!-- ============TPOD_2120================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2120">
+    <sch:pattern id="TPOD_2130">
         <sch:rule context="//*:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="dubbel" value="foo:vindDubbeleTPOD_2120(text())"/>
             <sch:let name="CONDITION" value="string-length($dubbel) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD2120: Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen), 
-                dit betreft id:<sch:value-of select="text()"/>.</sch:assert>
+                dit betreft id:<sch:value-of select="text()"/>.
+                Let op, heel belangrijk om dit eerst te repareren voor conclusies te trekken over fout-situaties in andere validaties.
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
