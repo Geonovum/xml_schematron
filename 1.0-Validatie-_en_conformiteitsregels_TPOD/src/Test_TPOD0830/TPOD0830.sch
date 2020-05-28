@@ -81,10 +81,10 @@
         <sch:rule context="//tekst:Lijst">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
-            <sch:let name="ancestorsFout" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
-            <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0830/0831:
-                    <sch:value-of select="$ancestorsFout"/></sch:assert>
+            <sch:let name="lijstMetLettersAangeven" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
+            <sch:let name="CONDITION" value="string-length($lijstMetLettersAangeven) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0830/0831:<sch:value-of select="$lijstMetLettersAangeven"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 

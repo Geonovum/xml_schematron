@@ -90,7 +90,7 @@
 
     <xsl:function name="foo:checkFRBRExpressionTPOD_2030">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:ExpressionIdentificatie/data:FRBRExpression/text()">
+        <xsl:for-each select="$xmlDocuments//data:ExpressionIdentificatie/data:FRBRExpression/text()">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>

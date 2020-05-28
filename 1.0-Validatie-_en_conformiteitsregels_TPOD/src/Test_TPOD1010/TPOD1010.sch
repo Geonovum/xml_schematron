@@ -94,13 +94,13 @@
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="list">
             <xsl:for-each select="$context/tekst:Begrip">
-                <xsl:value-of select="tekst:Term"/>
+                <xsl:value-of select="tekst:Term/text()"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:variable name="sortedList">
             <xsl:for-each select="$context/tekst:Begrip">
-                <xsl:sort select="tekst:Term"/>
-                <xsl:value-of select="tekst:Term"/>
+                <xsl:sort select="tekst:Term/text()"/>
+                <xsl:value-of select="tekst:Term/text()"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:if test="not($sortedList=$list)">
