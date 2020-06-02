@@ -2646,21 +2646,19 @@ Opmerkingen / hints: Document is in ontwikkeling.
     <sch:pattern id="TPOD_2070">
         <sch:rule context="//rol:Activiteit">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="fouten" value="foo:checkOwObjectenTPOD_2070(.)"/>
+            <sch:let name="fouten" value="foo:regeltekstIdVanActiviteitNaarObjectTPOD_2070(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD2070: Vanuit
-                volgende Ow-objecten wordt er van of naar Activiteit: <sch:value-of
-                    select="rol:identificatie/text()"/> verwezen, terwijl de regelTekstIds niet
-                overeen komen: <sch:value-of
-                    select="substring($fouten, 1, string-length($fouten) - 2)"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD2070:
+                <sch:value-of select="$fouten"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-
-    <xsl:function name="foo:checkOwObjectenTPOD_2070">
+    
+    
+    <xsl:function name="foo:regeltekstIdVanActiviteitNaarObjectTPOD_2070">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="regelId" select="$context/@ow:regeltekstId"/>
-        <xsl:if test="not(string($regelId) = '')">
+        <xsl:if test="$context/@ow:regeltekstId">
             <xsl:variable name="collection">
                 <xsl:for-each
                     select="$xmlDocuments//(r:RegelVoorIedereen | rol:Activiteit | l:Gebiedengroep | l:Puntengroep | l:Lijnengroep | l:Gebied | l:Punt | l:Lijn)">
@@ -2670,54 +2668,51 @@ Opmerkingen / hints: Document is in ontwikkeling.
             <xsl:variable name="node_list" select="$collection/element()"/>
             <xsl:variable name="actId" select="$context/rol:identificatie/text()"/>
             <xsl:variable name="messages"
-                select="foo:recursieveActiviteitTPOD_2070($node_list, $actId, $regelId, $context)"/>
+                select="foo:recursieveVanActiviteitNaarObjectTPOD_2070($node_list, $actId, $regelId, $context)"/>
             <xsl:value-of select="$messages"/>
         </xsl:if>
     </xsl:function>
-
-    <xsl:function name="foo:recursieveActiviteitTPOD_2070">
+    
+    <xsl:function name="foo:recursieveVanActiviteitNaarObjectTPOD_2070">
         <xsl:param name="node_list" as="node()*"/>
         <xsl:param name="actId"/>
         <xsl:param name="regelId"/>
         <xsl:param name="context"/>
         <xsl:variable name="fouteVerwijzingen">
-            <!-- zoek voor activiteit naar owobjecten die ernaar verwijzen en vergelijk de regeltekstId -->
-            <xsl:for-each select="$node_list[descendant::*[@xlink:href = $actId]]">
-                <xsl:variable name="remoteId" select="./*:identificatie/text()"/>
-                <xsl:variable name="remoteRegelId" select="./@ow:regeltekstId"/>
-                <xsl:if test="not($remoteRegelId = $regelId)">
-                    <xsl:value-of select="concat(local-name(.), ':', $remoteId, ', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-            <!-- zoek naar voor  owobjecten van waaruit activiteit wordt verwezen en vergelijk de regeltekstId -->
-            <xsl:for-each select="$context//@xlink:href">
-                <xsl:variable name="remoteId" select="."/>
-                <xsl:variable name="remoteNode"
-                    select="$node_list[self::*[./*:identificatie/text() = $remoteId]][1]"/>
-                <xsl:if test="$remoteNode">
-                    <xsl:variable name="remoteRegelId" select="$remoteNode/@ow:regeltekstId"/>
-                    <xsl:if test="not($remoteRegelId = $regelId)">
-                        <xsl:value-of select="concat(local-name($remoteNode), ':', $remoteId, ', ')"
+            <!-- zoek naar voor  RegelVoorIedereen van waar vanuit activiteit naar wordt verwezen en vergelijk de terugverwijzing -->
+            <xsl:for-each select="$context//@ow:regeltekstId">
+                <!-- vind de juridische regels van waaruit van activiteit (regeltekstId) naar wordt verwezen: die heet dan remoteNode  -->
+                <xsl:variable name="remoteRegelsVoorIedereen"
+                    select="$node_list[self::*[string(./r:artikelOfLid/r-ref:RegeltekstRef/@xlink:href) = string($regelId)]]"/>
+                <xsl:choose>
+                    <!-- Als gevonden? -->
+                    <xsl:when test="$remoteRegelsVoorIedereen">
+                        <xsl:variable name="remoteRegelId"
+                            select="$remoteRegelsVoorIedereen/@ow:regeltekstId"/>
+                        <xsl:if
+                            test="not($remoteRegelsVoorIedereen[@ow:regeltekstId = string($regelId)]//rol-ref:ActiviteitRef[@xlink:href = $actId])">
+                            <xsl:value-of
+                                select="
+                                concat('Vanuit Activiteit: ',
+                                $actId,
+                                ' wordt verwezen naar RegelVoorIedereen via RegeltekstId: ',
+                                string($regelId),
+                                ', echter heeft deze geen terug-verwijzing naar deze Activiteit. ')"
+                            />
+                        </xsl:if>
+                    </xsl:when>
+                    <!-- Anders niet gevonden -->
+                    <xsl:otherwise>
+                        <xsl:value-of
+                            select="
+                            concat('Vanuit Activiteit: ',
+                            $actId,
+                            ' wordt verwezen naar RegelVoorIedereen: ',
+                            string($regelId),
+                            ', deze is niet aangetroffen. ')"
                         />
-                    </xsl:if>
-                    <xsl:if
-                        test="local-name($remoteNode) = 'Gebiedengroep' or local-name($remoteNode) = 'Puntengroep' or local-name($remoteNode) = 'Lijnengroep'">
-                        <xsl:for-each select="$remoteNode//@xlink:href">
-                            <xsl:variable name="lremoteId" select="."/>
-                            <xsl:variable name="lremoteNode"
-                                select="$node_list[self::*[./*:identificatie/text() = $lremoteId]][1]"/>
-                            <xsl:if test="$lremoteNode">
-                                <xsl:variable name="lremoteRegelId"
-                                    select="$lremoteNode/@ow:regeltekstId"/>
-                                <xsl:if test="not($lremoteRegelId = $regelId)">
-                                    <xsl:value-of
-                                        select="concat(local-name($lremoteNode), ':', $lremoteId, ', ')"
-                                    />
-                                </xsl:if>
-                            </xsl:if>
-                        </xsl:for-each>
-                    </xsl:if>
-                </xsl:if>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$fouteVerwijzingen"/>
