@@ -10,6 +10,516 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>../../xml_omgevingsvisie_provincie_utrecht_1.0/werkset_vervangen_gmls_met_xslt/experimenteerruimte.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/zwemwater.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/zoekgebied_drinkwater.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/waterbergingsgebied.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/utrechtse_heuvelrug.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/stiltegebieden.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/stelling_van_amsterdam.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/rivierengebied.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/regionale_kering.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/recreatiezone.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/recreatiewoningen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/recreatietoervaartnet.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/overstroombaar_gebied.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/neder-germaanse_limes.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/militair_erfgoed.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/kernrandzone.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/hollandse_waterlinies.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/historische_infrastructuur.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/historische_buitenplaatszones.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/grondwaterlichamen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/groene_hart.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/gezonde_en_veilige_leefomgeving.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/geluidscontour_61_db_lden.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/gelderse_vallei.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/gehele_provincie.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/experimenteerruimte.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/eemland.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/bovenlokaal_dagrecreatieterrein.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/bodemdaling_stedelijk_gebied.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/bodemdaling_landelijk_gebied.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/beschermingszone_drinkwaterwinning.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/beperken_bodembewerking.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/archeologisch_waardevolle_zones.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Validaties/GML/agrarische_cultuurlandschappen.gml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>vervang_poslist</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>Validaties/GML/aardkundige_waarden.gml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -1365,7 +1875,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${pdu}/Validaties/GML/Naamloos.xsl</String>
+                                    <String>file:/C:/Users/Default.DESKTOP-NDDI22K/Documents/Geonovum/github/xml_omgevingsvisie_provincie_utrecht_1.0/werkset_vervangen_gmls_met_xslt/VervangPoslists.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>

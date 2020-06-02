@@ -96,6 +96,8 @@
                 <xsl:message select="basisgeo:id"/>
                 <xsl:if
                     test="
+                        basisgeo:geometrie//gml:Polygon
+                        or
                         basisgeo:geometrie//gml:MultiSurface
                         or
                         basisgeo:geometrie//gml:Surface">

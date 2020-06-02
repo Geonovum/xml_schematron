@@ -2289,6 +2289,8 @@
             <xsl:if test="basisgeo:id/text() = $href">
                 <xsl:if
                     test="
+                    basisgeo:geometrie//gml:Polygon
+                    or
                     basisgeo:geometrie//gml:MultiSurface
                     or
                     basisgeo:geometrie//gml:Surface">
@@ -2419,7 +2421,7 @@
     <!-- ============TPOD_2000================================================================================================================ -->
     
     <sch:pattern id="TPOD_2000">
-        <sch:rule context="//r:Regeltekst | vt:Divisie">
+        <sch:rule context="//r:Regeltekst">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -2431,7 +2433,7 @@
     
     <xsl:function name="foo:checkWIdTPOD_2000">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//(tekst:Artikel | tekst:Lid | tekst:FormeleDivisie)/@wId">
+        <xsl:for-each select="$xmlDocuments//(tekst:Artikel | tekst:Lid)/@wId">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>
@@ -2490,14 +2492,14 @@
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
-                Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP
+                Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een Divisie in OP
             </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:checkWIdTPOD_2040">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//tekst:FormeleDivisie/@wId">
+        <xsl:for-each select="$xmlDocuments//tekst:Divisie/@wId">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>
@@ -2646,7 +2648,7 @@
     <sch:pattern id="TPOD_2110">
         <sch:rule context="//vt:Tekstdeel">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="(vt:idealisatie and vt:locatieaanduiding) or (not(vt:idealisatie) and not(vt:locatieaanduiding))"/>
+            <sch:let name="CONDITION" value="(vt:idealisatie and vt:locatieaanduiding) or not(vt:locatieaanduiding)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD2110: Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft. 
                 Betreft Tekstdeel: <sch:value-of select="vt:identificatie"/>
@@ -2656,7 +2658,7 @@
     
     <!-- ============TPOD_2120================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2130">
+    <sch:pattern id="TPOD_2120">
         <sch:rule context="//*:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="dubbel" value="foo:vindDubbeleTPOD_2120(text())"/>

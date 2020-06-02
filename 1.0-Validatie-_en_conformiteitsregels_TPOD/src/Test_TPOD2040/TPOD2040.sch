@@ -90,7 +90,7 @@
 
     <xsl:function name="foo:checkWIdTPOD_2040">
         <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//tekst:FormeleDivisie/@wId">
+        <xsl:for-each select="$xmlDocuments//tekst:Divisie/@wId">
             <xsl:if test="$identifier eq .">
                 <xsl:value-of select="$identifier"/>
             </xsl:if>
