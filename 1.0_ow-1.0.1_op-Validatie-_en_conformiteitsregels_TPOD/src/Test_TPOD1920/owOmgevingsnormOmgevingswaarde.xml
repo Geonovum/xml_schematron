@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
+	<sl:standBestand>
+		<sl:dataset>Gemeentestad</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Gemeentestad</sl:gebied>
+			<sl:leveringsId>abc-20190221-0801</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Omgevingsnorm</sl:objectType>
+				<sl:objectType>Omgevingswaarde</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<sl:stand>
+			<owObject>
+				<rol:Omgevingswaarde>
+					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>150</da:waarde>
+								<da:eenheid>μg/m3</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>ten hoogste twaalf maal per kalenderjaar overschreden stikstofdioxide uurgemiddelde</rol:naam>
+					<rol:groep>luchtkwaliteit</rol:groep>
+				</rol:Omgevingswaarde>
+			</owObject>
+		</sl:stand>
+		<sl:stand>
+			<owObject>
+				<rol:Omgevingswaarde>
+					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900002</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>30</da:waarde>
+								<da:eenheid>μg/m3</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000009"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>stikstofdioxide kalenderjaargemiddelde</rol:naam>
+					<rol:groep>luchtkwaliteit</rol:groep>
+				</rol:Omgevingswaarde>
+			</owObject>
+		</sl:stand>
+		<sl:stand>
+			<owObject>
+				<rol:Omgevingsnorm>
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900003</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>13</da:waarde>
+								<da:eenheid>meter</da:eenheid>
+							</rol:kwantitatieveWaarde>
+							<rol:locatieaanduiding>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+						<rol:Normwaarde>
+							<rol:kwantitatieveWaarde>
+								<da:waarde>7</da:waarde>
+								<da:eenheid>meter</da:eenheid>
+							</rol:kwantitatieveWaarde>					
+							<rol:locatieaanduiding>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>maximum bouwhoogte</rol:naam>
+					<rol:groep>maatvoeringbouwen</rol:groep>
+				</rol:Omgevingsnorm>
+			</owObject>
+		</sl:stand>	
+	</sl:standBestand>
+</owBestand>

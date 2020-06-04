@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+    xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
+    xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
+    <BesluitVersie>
+        <BesluitKlassiek xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+            <RegelingKlassiek FRBRwork="/akn/nl/act/mnre1034/2019/201912011101"
+                wordt="/akn/nl/act/mnre1034/2019/201912011101/nld@2020-02-01;1" componentnaam="main">
+                <RegelingOpschrift
+                    eId="longTitle" wId="longTitle">
+                    <Al>Regeling van de Minister voor Milieu en Wonen, de Staatssecretaris van
+                        Defensie, de Minister van Economische Zaken en Klimaat, de Minister van
+                        Infrastructuur en Waterstaat, de Minister van Landbouw, Natuur en
+                        Voedselkwaliteit en de Minister van Onderwijs, Cultuur en Wetenschap van 21
+                        november 2019, houdende regels over het beschermen en benutten van de
+                        fysieke leefomgeving (Omgevingsregeling)</Al>
+                </RegelingOpschrift>
+                <Lichaam eId="body"
+                    wId="body">
+                    <Hoofdstuk eId="chp_1" wId="mnre1034_1-0__chp_1">
+                        <Kop>
+                            <Nummer>1</Nummer>
+                        </Kop>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_2" wId="mnre1034_1-0__chp_2">
+                        <Kop>
+                            <Nummer>2</Nummer>
+                        </Kop>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_3" wId="mnre1034_1-0__chp_3">
+                        <Kop>
+                            <Nummer>4</Nummer>
+                        </Kop>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_4" wId="mnre1034_1-0__chp_4">
+                        <Kop>
+                            <Nummer>1.1</Nummer>
+                        </Kop>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_5" wId="mnre1034_1-0__chp_5">
+                        <Kop>
+                            <Nummer>IV</Nummer>
+                        </Kop>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_6" wId="mnre1034_1-0__chp_6">
+                        <Kop>
+                            <Nummer>6</Nummer>
+                        </Kop>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_7" wId="mnre1034_1-0__chp_7">
+                        <Kop>
+                            <Nummer>VII</Nummer>
+                        </Kop>
+                    </Hoofdstuk>
+                </Lichaam>
+            </RegelingKlassiek>
+        </BesluitKlassiek>
+    </BesluitVersie>
+    <RegelingVersieInformatie>
+        <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+        </RegelingMetadata>
+    </RegelingVersieInformatie>
+</AanleveringBesluit>

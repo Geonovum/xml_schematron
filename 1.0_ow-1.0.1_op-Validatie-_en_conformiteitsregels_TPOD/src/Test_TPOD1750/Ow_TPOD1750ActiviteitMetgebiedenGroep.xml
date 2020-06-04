@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
+	<sl:standBestand>
+		<sl:dataset>Gemeentestad</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Gemeentestad</sl:gebied>
+			<sl:leveringsId>abc-20190221-0801</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Gebiedsaanwijzing</sl:objectType>
+				<sl:objectType>Gebied</sl:objectType>
+				<sl:objectType>Gebiedengroep</sl:objectType>
+				<sl:objectType>Regeltekst</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit>
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900001</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.punt.201900003"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit>
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900002</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.lijnengroep.201900002"/>
+					</rol:locatieaanduiding>
+					<rol:gerelateerdeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
+					</rol:gerelateerdeActiviteit>
+					<rol:bovenliggendeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit>
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900003</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebiedengroep.201900001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit>
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900004</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+
+
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit>
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900005</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.punt.201900003"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit>
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900006</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.lijnengroep.201900002"/>
+					</rol:locatieaanduiding>
+					<rol:gerelateerdeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
+					</rol:gerelateerdeActiviteit>
+					<rol:bovenliggendeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit>
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900007</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebiedengroep.201900001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit>
+					<rol:identificatie>nl.imow-gm0037.activiteit.201900008</rol:identificatie>
+					<rol:naam></rol:naam>
+					<rol:groep></rol:groep>
+					<rol:locatieaanduiding>
+						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</rol:locatieaanduiding>
+					<rol:bovenliggendeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>
+	</sl:standBestand>
+</ow-dc:owBestand>

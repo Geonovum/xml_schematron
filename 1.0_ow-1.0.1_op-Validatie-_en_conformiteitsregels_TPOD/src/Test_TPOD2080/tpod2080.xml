@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
+	<sl:standBestand>
+		<sl:dataset>Gemeentestad</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Gemeentestad</sl:gebied>
+			<sl:leveringsId>abc-20190221-0801</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Regeltekst"</sl:objectType>
+				<sl:objectType>Instructieregel</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst 	
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900001</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst 
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900002</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst 
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900003</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Regeltekst -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst 
+					wId="gm0037_1__subchp_2.2__art_2.3">
+					<r:identificatie>nl.imow-gm0037.regeltekst.201900004</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel Mist InstructieRegelInstrument Mist InstructieregelTaakuitoefening -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel>
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+					</r:artikelOfLid>
+					<r:omgevingsnormaanduiding>
+						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
+					</r:omgevingsnormaanduiding>
+					<r:instructieregelTaakuitoefening>InstructieregelTaakuitoefening</r:instructieregelTaakuitoefening>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel Mist InstructieRegelInstrument Heeft InstructieregelTaakuitoefening -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel>
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+					</r:artikelOfLid>
+					<r:gebiedsaanwijzing>
+						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
+					</r:gebiedsaanwijzing>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel Heeft InstructieRegelInstrument Mist InstructieregelTaakuitoefening -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel>
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
+					</r:artikelOfLid>
+					<r:instructieregelInstrument>InstructieregelInstrument</r:instructieregelInstrument>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Instructieregel Heeft InstructieRegelInstrument Heeft InstructieregelTaakuitoefening -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Instructieregel>
+					<r:idealisatie></r:idealisatie>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900004"/>
+					</r:artikelOfLid>
+					<r:instructieregelTaakuitoefening>InstructieregelTaakuitoefening</r:instructieregelTaakuitoefening>
+					<r:instructieregelInstrument>InstructieregelInstrument</r:instructieregelInstrument>
+				</r:Instructieregel>
+			</ow-dc:owObject>
+		</sl:stand>
+	</sl:standBestand>
+</ow-dc:owBestand>

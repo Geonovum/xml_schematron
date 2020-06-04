@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!-- OP BG Hillegom by Visma | Roxit -->
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
+	<sl:standBestand>
+		<sl:dataset>Omgevingsplan Hillegom</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Omgevingsplan Hillegom</sl:gebied>
+			<sl:leveringsId>act_gm0534</sl:leveringsId><!-- KL: moet deze niet gelijk zijn aan het idlevering in het opdracht.xml bestand? -->
+			<sl:objectTypen>
+				<sl:objectType>Regeltekst</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst
+					wId="gm0534_1__chp_2__subchp_2.6__subsec_2.6.1__art_2.33" id="s96"><!-- KL: gm0534? 44x -->
+					<r:identificatie>nl.imow-gm0534.regeltekst.100</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:RegelVoorIedereen>
+					<r:idealisatie>exact</r:idealisatie>
+					<r:locatieaanduiding>
+						<l:LocatieRef xlink:href="nl.imow-gm0534.gebied.gml78"/>
+					</r:locatieaanduiding>
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0534.regeltekst.64"/>
+					</r:artikelOfLid>
+				</r:RegelVoorIedereen>
+			</ow-dc:owObject>
+		</sl:stand>
+	</sl:standBestand>
+</ow-dc:owBestand>

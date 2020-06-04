@@ -1,0 +1,94 @@
+Schematron draaien tegen OwTestExemplaar1860.xml
+
+Verwachte foutmeldingen:
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft l:Gebied: nl.imow-gm0037.gebied.201900004, C28AF779-7EDD-4A88-8B11-809798F53611: Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.
+Startlocatie: 656:78
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft l:Gebied: nl.imow-gm0037.gebied.201900005, B28AF779-7EDD-4A88-8B11-809798F53611: Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.
+Startlocatie: 667:78
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft ow-dc:owObject: nl.imow-gm0037.gebiedengroep.201900003, nl.imow-gm0037.punt.201900003, : Iedere verwijzing naar een OwObject in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.
+Startlocatie: 701:23
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft ow-dc:owObject: nl.imow-gm0037.gebiedengroep.201900004, nl.imow-gm0037.lijn.201900003, : Iedere verwijzing naar een OwObject in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.
+Startlocatie: 713:23
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft ow-dc:owObject: nl.imow-gm0037.gebiedengroep.201900005, nl.imow-gm0037.lijn.201900003, nl.imow-gm0037.lijn.201900003, : Iedere verwijzing naar een OwObject in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.
+Startlocatie: 725:23
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft l:Punt: nl.imow-gm0037.punt.201900004, A0EA019E-3C96-4631-A76C-35BCF4D7AB11: Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.
+Startlocatie: 772:78
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft l:Punt: nl.imow-gm0037.punt.201900005, B28AF779-7EDD-4A88-8B11-809798F53611: Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.
+Startlocatie: 783:78
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft ow-dc:owObject: nl.imow-gm0037.puntengroep.201900003, nl.imow-gm0037.lijn.201900003, : Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.
+Startlocatie: 817:23
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft ow-dc:owObject: nl.imow-gm0037.puntengroep.201900003, nl.imow-gm0037.gebied.201900003, : Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.
+Startlocatie: 829:23
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft l:Lijn: nl.imow-gm0037.lijn.201900004, A0EA019E-3C96-4631-A76C-35BCF4D7AB11: Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn.
+Startlocatie: 875:78
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft l:Lijn: nl.imow-gm0037.lijn.201900005, C28AF779-7EDD-4A88-8B11-809798F53611: Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn.
+Startlocatie: 886:78
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft ow-dc:owObject: nl.imow-gm0037.lijnengroep.201900003, nl.imow-gm0037.punt.201900002, : Iedere verwijzing naar een OwObject in een Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn.
+Startlocatie: 920:23
+
+Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx1\OwTestExemplaarX1.xml
+Engine-naam: ISO Schematron
+Ernst: error
+Omschrijving: xxx: Betreft ow-dc:owObject: nl.imow-gm0037.lijnengroep.201900003, nl.imow-gm0037.gebied.201900002, : Iedere verwijzing naar een OwObject in een Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn.
+Startlocatie: 932:23
