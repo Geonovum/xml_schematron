@@ -2085,9 +2085,9 @@
     <!-- ============TPOD_1920================================================================================================================ -->
     
     <sch:pattern id="TPOD_1920">
-        <sch:rule context="/Modules/RegelingVersie/Bestand">
+        <sch:rule context="/ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="nfFOOT" value="foo:notfoundFileOrObjectTypeTPOD_1920(naam,.)"></sch:let>
+            <sch:let name="nfFOOT" value="foo:notfoundFileOrObjectTypeTPOD_1920(ow-manifest:naam,.)"></sch:let>
             <sch:let name="CONDITION" value="string-length($nfFOOT) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1920: De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het
@@ -2100,11 +2100,11 @@
         <xsl:param name="naam"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="notfoundFileOrObjectType">
-            <xsl:for-each select="$context/objecttype">
+            <xsl:for-each select="$context/ow-manifest:objecttype">
                 <xsl:variable name="objecttype" select="text()"/>
                 <xsl:choose>
                     <xsl:when test=". = 'Geometrie'">
-                        <xsl:if test="not(document($naam)//geo:FeatureCollectionGeometrie)">
+                        <xsl:if test="not(document($naam)//geo:GeoInformatieObjectVaststelling)">
                             <xsl:value-of select="concat($naam, ': ', ., ', ')"/>
                         </xsl:if>
                     </xsl:when>
@@ -2119,6 +2119,7 @@
         </xsl:variable>
         <xsl:value-of select="$notfoundFileOrObjectType"/>
     </xsl:function>
+    
     
     <!-- ============TPOD_1930================================================================================================================ -->
     
