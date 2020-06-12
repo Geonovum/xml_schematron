@@ -83,6 +83,7 @@
             <sch:let name="volgorde" value="foo:volgordeTPOD_0420(.)">
             </sch:let>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
+            <sch:report test="true()"><sch:value-of select="$SOORT_REGELING"/></sch:report>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0420: Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers 
                 (betreft hoofdstukken:  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
