@@ -39,20 +39,20 @@
             <Al/>
          </RegelingOpschrift>
          <Lichaam eId="body" wId="body">
-               <Hoofdstuk eId="chp_1" wId="pv30_32__chp_1">
-                  <Kop>
-                     <Label>Hoofdstuk</Label>
-                     <Nummer>1</Nummer>
-                     <Opschrift>Algemene Bepalingen</Opschrift>
-                  </Kop>
-               </Hoofdstuk>
-            </Lichaam>
-            <Sluiting wId="aa" eId="aa">
-               <Slotformulering>
-                  <Al>aaa</Al>
-               </Slotformulering>
-            </Sluiting>
-            </BesluitCompact>
+            <Hoofdstuk eId="chp_1" wId="pv30_32__chp_1">
+               <Kop>
+                  <Label>Hoofdstuk</Label>
+                  <Nummer>1</Nummer>
+                  <Opschrift>Algemene Bepalingen</Opschrift>
+               </Kop>
+            </Hoofdstuk>
+         </Lichaam>
+         <Sluiting wId="aa" eId="aa">
+            <Slotformulering>
+               <Al>aaa</Al>
+            </Slotformulering>
+         </Sluiting>
+      </BesluitCompact>
    </BesluitVersie>
    <RegelingVersieInformatie>
       <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
