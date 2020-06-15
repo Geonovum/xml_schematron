@@ -1,124 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+    xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
     xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
     <BesluitVersie>
-        <BesluitKlassiek xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
-            <RegelingKlassiek FRBRwork="/akn/nl/act/mnre1034/2019/201912011101"
-                wordt="/akn/nl/act/mnre1034/2019/201912011101/nld@2020-02-01;1" componentnaam="main">
-                <Lichaam eId="body"
-                    wId="body">
-                    <Hoofdstuk eId="chp_1" wId="mnre1034_1-0__chp_1">
+        <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <FRBRWork>/akn/nl/bill/ws0659/2019/wvl-20190906-1643</FRBRWork>
+            <FRBRExpression>/akn/nl/bill/ws0659/2019/wvl-20190906-1643/nld@2019-01-04;1.0</FRBRExpression>
+            <soortWork>/join/id/stop/work_003</soortWork>
+        </ExpressionIdentificatie>
+        <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+            <maker>/tooi/id/waterschap/ws0659</maker>
+            <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
+            </onderwerpen>
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
+            </rechtsgebieden>
+            <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
+            <informatieobjectRefs>
+                <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
+            </informatieobjectRefs>
+        </BesluitMetadata>
+        <data:Procedureverloop>
+            <data:bekendOp>2020-01-01</data:bekendOp>
+            <data:procedurestappen>
+                <data:Procedurestap>
+                    <data:soortStap/>
+                    <data:voltooidOp>2020-01-01</data:voltooidOp>
+                </data:Procedurestap>
+            </data:procedurestappen>
+        </data:Procedureverloop>
+        <data:ConsolidatieInformatie/>
+        <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+            <RegelingOpschrift wId="abc" eId="abc">
+                <Al/>
+            </RegelingOpschrift>
+            <Lichaam eId="body" wId="body">
+                <Hoofdstuk eId="chp_1" wId="mnre1034_1-0__chp_1">
+                    <Kop>
+                        <Label>HOOFDSTUK</Label>
+                        <Nummer>1</Nummer>
+                        <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
+                    </Kop>
+                    <Afdeling eId="chp_1__subchp_1.3" wId="mnre1034_1-0__chp_1__subchp_1.3">
                         <Kop>
-                            <Label>HOOFDSTUK</Label>
-                            <Nummer>1</Nummer>
-                            <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
+                            <Label>AFDELING</Label>
+                            <Nummer>1.3</Nummer>
+                            <Opschrift>INTERNATIONAALRECHTELIJKE VERPLICHTINGEN</Opschrift>
                         </Kop>
-                        <Afdeling eId="chp_1__subchp_1.3" wId="mnre1034_1-0__chp_1__subchp_1.3">
+                        <Artikel eId="chp_1__subchp_1.3__art_1.3"
+                            wId="mnre1034_1-0__chp_1__subchp_1.3__art_1.3">
                             <Kop>
-                                <Label>AFDELING</Label>
+                                <Label>Artikel</Label>
                                 <Nummer>1.3</Nummer>
-                                <Opschrift>INTERNATIONAALRECHTELIJKE VERPLICHTINGEN</Opschrift>
+                                <Opschrift>(wederzijdse erkenning)</Opschrift>
                             </Kop>
-                            <Artikel eId="chp_1__subchp_1.3__art_1.3"
-                                wId="mnre1034_1-0__chp_1__subchp_1.3__art_1.3">
-                                <Kop>
-                                    <Label>Artikel</Label>
-                                    <Nummer>1.3</Nummer>
-                                    <Opschrift>(wederzijdse erkenning)</Opschrift>
-                                </Kop>
-                                
-                            </Artikel>
-                        </Afdeling>
-                        <Afdeling eId="chp_1__subchp_1.4" wId="mnre1034_1-0__chp_1__subchp_1.4">
+
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling eId="chp_1__subchp_1.4" wId="mnre1034_1-0__chp_1__subchp_1.4">
+                        <Kop>
+                            <Label>AFDELING</Label>
+                            <Nummer>1.4</Nummer>
+                            <Opschrift>VERWIJZINGEN</Opschrift>
+                        </Kop>
+                        <Artikel eId="chp_1__subchp_1.4__art_1.4"
+                            wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4">
                             <Kop>
-                                <Label>AFDELING</Label>
+                                <Label>Artikel</Label>
                                 <Nummer>1.4</Nummer>
-                                <Opschrift>VERWIJZINGEN</Opschrift>
+                                <Opschrift>(uitgaven en verwijzingen)</Opschrift>
                             </Kop>
-                            <Artikel eId="chp_1__subchp_1.4__art_1.4"
-                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4">
-                                <Kop>
-                                    <Label>Artikel</Label>
-                                    <Nummer>1.4</Nummer>
-                                    <Opschrift>(uitgaven en verwijzingen)</Opschrift>
-                                </Kop>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_1"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_1">
-                                    <!-- nummer op posiitie fout -->
-                                    <LidNummer>1.</LidNummer>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_2"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_2">
-                                    <!-- goed (nummer, positie + 1 letter -->
-                                    <LidNummer>2a.</LidNummer>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_3"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_3">
-                                    <!-- goed, positie alleen nummer en punt -->
-                                    <LidNummer>3.</LidNummer>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_4"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_4">
-                                    <!-- fout twee letters -->
-                                    <LidNummer>4aa.</LidNummer>
-                                    
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_5"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_5">
-                                    <!-- goed (nummer, positie + 1 letter -->
-                                    <LidNummer>5a</LidNummer>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_6"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_6">
-                                    <!-- goed (nummer, positie + 1 letter -->
-                                    <LidNummer>6a.</LidNummer>
-                                </Lid>
-                            </Artikel>
-                            <Artikel eId="chp_1__subchp_1.4__art_1.5"
-                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5">
-                                <Kop>
-                                    <Label>Artikel</Label>
-                                    <Nummer>1.5</Nummer>
-                                    <Opschrift>(uitgaven en verwijzingen)</Opschrift>
-                                </Kop>
-                                <Lid eId="chp_1__subchp_1.4__art_1.5__para_1"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_1">
-                                    <!-- nummer op posiitie fout -->
-                                    <LidNummer>2.</LidNummer>
-                                    
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.5__para_2"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_2">
-                                    <!-- goed (nummer, positie + 1 letter -->
-                                    <LidNummer>2a.</LidNummer>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.5__para_3"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_3">
-                                    <!-- goed, positie alleen nummer en punt -->
-                                    <LidNummer>3.</LidNummer>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.5__para_4"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_4">
-                                    <!-- fout twee letters -->
-                                    <LidNummer>4aa.</LidNummer>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.5__para_5"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_5">
-                                    <!-- goed (nummer, positie + 1 letter -->
-                                    <LidNummer>5a</LidNummer>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.5__para_6"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_6">
-                                    <!-- goed (nummer, positie + 1 letter -->
-                                    <LidNummer>6a.</LidNummer>
-                                </Lid>
-                            </Artikel>
-                        </Afdeling>
-                    </Hoofdstuk>
-                </Lichaam>
-            </RegelingKlassiek>
-        </BesluitKlassiek>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_1"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_1">
+                                <!-- nummer op posiitie fout -->
+                                <LidNummer>1.</LidNummer>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_2"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_2">
+                                <!-- goed (nummer, positie + 1 letter -->
+                                <LidNummer>2a.</LidNummer>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_3"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_3">
+                                <!-- goed, positie alleen nummer en punt -->
+                                <LidNummer>3.</LidNummer>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_4"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_4">
+                                <!-- fout twee letters -->
+                                <LidNummer>4aa.</LidNummer>
+
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_5"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_5">
+                                <!-- goed (nummer, positie + 1 letter -->
+                                <LidNummer>5a</LidNummer>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_6"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_6">
+                                <!-- goed (nummer, positie + 1 letter -->
+                                <LidNummer>6a.</LidNummer>
+                            </Lid>
+                        </Artikel>
+                        <Artikel eId="chp_1__subchp_1.4__art_1.5"
+                            wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>1.5</Nummer>
+                                <Opschrift>(uitgaven en verwijzingen)</Opschrift>
+                            </Kop>
+                            <Lid eId="chp_1__subchp_1.4__art_1.5__para_1"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_1">
+                                <!-- nummer op posiitie fout -->
+                                <LidNummer>2.</LidNummer>
+
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.5__para_2"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_2">
+                                <!-- goed (nummer, positie + 1 letter -->
+                                <LidNummer>2a.</LidNummer>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.5__para_3"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_3">
+                                <!-- goed, positie alleen nummer en punt -->
+                                <LidNummer>3.</LidNummer>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.5__para_4"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_4">
+                                <!-- fout twee letters -->
+                                <LidNummer>4aa.</LidNummer>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.5__para_5"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_5">
+                                <!-- goed (nummer, positie + 1 letter -->
+                                <LidNummer>5a</LidNummer>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.5__para_6"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_6">
+                                <!-- goed (nummer, positie + 1 letter -->
+                                <LidNummer>6a.</LidNummer>
+                            </Lid>
+                        </Artikel>
+                    </Afdeling>
+                </Hoofdstuk>
+            </Lichaam>
+        </BesluitCompact>
     </BesluitVersie>
     <RegelingVersieInformatie>
         <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
