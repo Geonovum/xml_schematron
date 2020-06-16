@@ -401,8 +401,7 @@
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>fijnstof</rol:naam>
-					<rol:groep>luchtkwaliteit</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:groep>
 				</rol:Omgevingswaarde>
 			</ow-dc:owObject>
 		</sl:stand>

@@ -86,8 +86,7 @@
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>fijnstof</rol:naam>
-					<rol:groep>luchtkwaliteit</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:groep>
 				</rol:Omgevingswaarde>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -107,8 +106,7 @@
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>fijnstof</rol:naam>
-					<rol:groep>luchtkwaliteit</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:groep>
 				</rol:Omgevingswaarde>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -128,8 +126,7 @@
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>fijnstof</rol:naam>
-					<rol:groep>luchtkwaliteit</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:groep>
 				</rol:Omgevingswaarde>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -150,8 +147,7 @@
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>fijnstof</rol:naam>
-					<rol:groep>luchtkwaliteit</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:groep>
 				</rol:Omgevingswaarde>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -884,17 +880,14 @@
 					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:type>
 					<rol:normwaarde>
 						<rol:Normwaarde>
-							<rol:kwantitatieveWaarde>
-								<da:waarde>200</da:waarde>
-								<da:eenheid>μg/m3</da:eenheid>
-							</rol:kwantitatieveWaarde>
+							<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001</rol:identificatie>
+							<rol:kwantitatieveWaarde>200</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
 								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>fijnstof</rol:naam>
-					<rol:groep>luchtkwaliteit</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:groep>
 				</rol:Omgevingswaarde>
 			</ow-dc:owObject>
 		</sl:stand>

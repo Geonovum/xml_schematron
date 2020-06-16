@@ -39,8 +39,7 @@
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>ten hoogste twaalf maal per kalenderjaar overschreden stikstofdioxide uurgemiddelde</rol:naam>
-					<rol:groep>luchtkwaliteit</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:groep>
 				</rol:Omgevingswaarde>
 			</owObject>
 		</sl:stand>
@@ -59,8 +58,7 @@
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>stikstofdioxide kalenderjaargemiddelde</rol:naam>
-					<rol:groep>luchtkwaliteit</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:groep>
 				</rol:Omgevingswaarde>
 			</owObject>
 		</sl:stand>
