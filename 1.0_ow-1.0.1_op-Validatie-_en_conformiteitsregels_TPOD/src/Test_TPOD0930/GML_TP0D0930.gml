@@ -5,7 +5,7 @@
    xmlns:gml="http://www.opengis.net/gml/3.2"
    xmlns:geo="https://standaarden.overheid.nl/stop/imop/geo/"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/geo/ ../stop/imop-geo.xsd"
+   xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/geo/ ../schemas/stop/imop-geo.xsd"
    schemaversie="1.0">
    <geo:context>
       <gio:GeografischeContext>
@@ -41,6 +41,15 @@
                               </gml:Polygon>
                            </gml:surfaceMember>
                         </gml:MultiSurface>
+                     </basisgeo:geometrie>
+                  </basisgeo:Geometrie>
+               </geo:geometrie>
+            </geo:Locatie>
+            <geo:Locatie>
+               <geo:geometrie>
+                  <basisgeo:Geometrie gml:id="id-D28AF779-7EDD-4A88-8B11-809798F53636-xx">
+                     <basisgeo:id>D28AF779-7EDD-4A88-8B11-809798F53636</basisgeo:id>
+                     <basisgeo:geometrie>
                         <gml:MultiSurface srsName="urn:ogc:def:crs:EPSG::4258"
                            gml:id="id-50EA019E-3C96-4631-A76C-35BCF4D7AB6E-0">
                            <gml:surfaceMember>
