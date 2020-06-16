@@ -1,1 +1,1 @@
-Kijk in Vaklidaties-directory voor instructies over valideren via Ant of via Oxygen
+Kijk in Validaties-directory voor instructies over valideren via Ant of via Oxygen
