@@ -1416,8 +1416,7 @@
       </BesluitCompact>
    </BesluitVersie>
    <RegelingVersieInformatie>
-      <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <!-- Work en Expression gelijk aan @wordt uit MaakInitieleRegeling -->
+      <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/"><!-- Work en Expression gelijk aan @wordt uit MaakInitieleRegeling -->
          <FRBRWork>/akn/nl/act/pv26/2020/act3</FRBRWork>
          <FRBRExpression>/akn/nl/act/pv26/2020/act3/nld@2020-03-05</FRBRExpression>
          <!-- soortWork 'work_019' = Regeling -->

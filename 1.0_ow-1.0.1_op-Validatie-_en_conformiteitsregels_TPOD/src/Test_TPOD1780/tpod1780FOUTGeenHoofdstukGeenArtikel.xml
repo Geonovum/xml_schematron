@@ -1276,7 +1276,9 @@
          <onderwerpen>
             <onderwerp>/tooi/def/concept/c_cfc7d5ab</onderwerp>
          </onderwerpen>
-         <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+         <overheidsdomeinen>
+            <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+         </overheidsdomeinen>
          <rechtsgebieden>
             <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
          </rechtsgebieden>
@@ -1291,7 +1293,6 @@
                </TekstReferentie>
             </grondslag>
          </grondslagen>
-         <redactioneleTitel>Omgevingsverordening Utrecht</redactioneleTitel>
          <versienummer>310</versienummer>
          <voorkeursafkorting/>
          <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>

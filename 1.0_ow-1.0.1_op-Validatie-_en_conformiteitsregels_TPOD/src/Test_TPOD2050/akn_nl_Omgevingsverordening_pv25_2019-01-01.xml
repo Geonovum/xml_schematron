@@ -756,22 +756,37 @@
       </BesluitKlassiek>
    </BesluitVersie>
    <RegelingVersieInformatie>
-      <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <FRBRWork>/akn/nl/act/pv25/2019/Regeling_001</FRBRWork>
-         <FRBRExpression>/akn/nl/act/pv25/2019/Regeling_001/nld@2020-07-01</FRBRExpression>
-         <soortWork>/join/id/stop/work_019</soortWork>
-      </ExpressionIdentificatie>
+      <data:ExpressionIdentificatie>
+         <data:FRBRWork></data:FRBRWork>
+         <data:FRBRExpression></data:FRBRExpression>
+         <data:soortWork></data:soortWork>
+      </data:ExpressionIdentificatie>
       <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <eindverantwoordelijke>/tooi/id/provincie/pv25</eindverantwoordelijke>
-         <maker>/tooi/id/provincie/pv25</maker>
-         <officieleTitel>Voorbeeldregels met uitbreiding tbv Toepasbare Regels</officieleTitel>
+         <eindverantwoordelijke>/tooi/id/provincie/pv26</eindverantwoordelijke>
+         <maker>/tooi/id/provincie/pv26</maker>
+         <officieleTitel>Omgevingsverordening Utrecht</officieleTitel>
          <onderwerpen>
-            <onderwerp>/tooi/def/concept/onbekend</onderwerp>
+            <onderwerp>/tooi/def/concept/c_cfc7d5ab</onderwerp>
          </onderwerpen>
-         <overheidsdomein>/tooi/def/concept/c_86b84a9d</overheidsdomein>
+         <overheidsdomeinen>
+            <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+         </overheidsdomeinen>
          <rechtsgebieden>
             <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
          </rechtsgebieden>
+         <afkortingen>
+            <afkorting/>
+         </afkortingen>
+         <grondslagen>
+            <grondslag>
+               <TekstReferentie>
+                  <uri/>
+                  <label/>
+               </TekstReferentie>
+            </grondslag>
+         </grondslagen>
+         <versienummer>310</versienummer>
+         <voorkeursafkorting/>
          <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
          <versienummer>1.0</versienummer>
       </RegelingMetadata>

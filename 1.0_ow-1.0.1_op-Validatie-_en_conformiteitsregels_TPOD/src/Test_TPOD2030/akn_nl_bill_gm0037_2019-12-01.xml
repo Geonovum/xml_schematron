@@ -508,24 +508,39 @@
         </BesluitKlassiek>
     </BesluitVersie>
     <RegelingVersieInformatie>
-        <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-            <FRBRWork>/akn/nl/act/gm0037/2019/reg456</FRBRWork>
-            <FRBRExpression>/akn/nl/act/gm0037/2019/reg456/nld@2019-12-01</FRBRExpression>
-            <soortWork>/join/id/stop/work_019</soortWork>
-        </ExpressionIdentificatie>
-        <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-            <eindverantwoordelijke>/tooi/id/gemeente/gm0037</eindverantwoordelijke>
-            <maker>/tooi/id/gemeente/gm0037</maker>
-            <officieleTitel>Voorbeeldregels met uitbreiding tbv Toepasbare Regels</officieleTitel>
+        <data:ExpressionIdentificatie>
+            <data:FRBRWork></data:FRBRWork>
+            <data:FRBRExpression></data:FRBRExpression>
+            <data:soortWork></data:soortWork>
+        </data:ExpressionIdentificatie>
+        <data:RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/provincie/pv26</eindverantwoordelijke>
+            <maker>/tooi/id/provincie/pv26</maker>
+            <officieleTitel>Omgevingsverordening Utrecht</officieleTitel>
             <onderwerpen>
-                <onderwerp>/tooi/def/concept/c_9d1917e9</onderwerp>
+                <onderwerp>/tooi/def/concept/c_cfc7d5ab</onderwerp>
             </onderwerpen>
-            <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+            <overheidsdomeinen>
+                <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+            </overheidsdomeinen>
             <rechtsgebieden>
                 <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
             </rechtsgebieden>
+            <afkortingen>
+                <afkorting/>
+            </afkortingen>
+            <grondslagen>
+                <grondslag>
+                    <TekstReferentie>
+                        <uri/>
+                        <label/>
+                    </TekstReferentie>
+                </grondslag>
+            </grondslagen>
+            <versienummer>310</versienummer>
+            <voorkeursafkorting/>
             <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling><!-- Omgevingsplan -->
             <versienummer>1</versienummer>
-        </RegelingMetadata>
+        </data:RegelingMetadata>
     </RegelingVersieInformatie>
 </AanleveringBesluit>
