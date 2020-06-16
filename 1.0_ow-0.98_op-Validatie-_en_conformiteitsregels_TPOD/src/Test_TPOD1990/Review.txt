@@ -1,9 +1,0 @@
-Schematron draaien tegen OwTestExemplaar1990.xml
-
-Verwachte foutmeldingen:
-
-Systeem-id: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx2\OwTestExemplaarX2.xml
-Hoofdvalidatiebestand: C:\Users\Default.DESKTOP-NDDI22K\Documents\Geonovum\github\xml_schematron\0.98-3-Validatie-_en_conformiteitsregels_TPOD\src\Test_TPODx2\OwTestExemplaarX2.xml
-Engine-naam: ISO Schematron
-Ernst: error
-Omschrijving: xxx: Er wordt niet gerefereerd aan volgende (wel bestaande) geometrieen: A0EA019E-3C96-4631-A76C-35BCF4D7AB10, B28AF779-7EDD-4A88-8B11-809798F53610, C28AF779-7EDD-4A88-8B11-809798F53610,
