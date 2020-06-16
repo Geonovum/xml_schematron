@@ -1271,43 +1271,61 @@
     
     <!-- ============TPOD_0930================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0930">
+    <sch:pattern id="TPOD_0930_28992">
         <sch:rule context="//basisgeo:geometrie">
             <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="fout" value="foo:aantalTPOD_0930(.)"/>
+            <sch:let name="fout" value="foo:aantalTPOD_0930_28992(.)"/>
             <sch:let name="CONDITION" value="string-length($fout) = 0"/>
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert test="$ASSERT"><sch:value-of select="$fout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:aantalTPOD_0930">
+    <sch:pattern id="TPOD_0930_4258">
+        <sch:rule context="//basisgeo:geometrie">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="fout" value="foo:aantalTPOD_0930_4258(.)"/>
+            <sch:let name="CONDITION" value="string-length($fout) = 0"/>
+            <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
+            <sch:assert test="$ASSERT"><sch:value-of select="$fout"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:aantalTPOD_0930_28992">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="fout">
             <xsl:for-each select="$context/*">
                 <xsl:variable name="srsName" select="string(./@srsName)"/>
-                <xsl:choose>
-                    <xsl:when test="tokenize(string(./@srsName), ':')[last()] = '28992'">
-                        <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 3)"/>
-                        <xsl:if test="string-length($fouteCoord) > 0">
-                            <xsl:value-of
-                                select="
-                                concat(' TP0D0930: EPSG:28992 (=RD new), coördinaten in meters, maximaal 3 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
-                                concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
-                            />
-                        </xsl:if>
-                    </xsl:when>
-                    <xsl:when test="tokenize(string(./@srsName), ':')[last()] = '4258'">
-                        <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 8)"/>
-                        <xsl:if test="string-length($fouteCoord) > 0">
-                            <xsl:value-of
-                                select="
-                                concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten in graden, maximaal 8 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
-                                concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
-                            />
-                        </xsl:if>
-                    </xsl:when>
-                </xsl:choose>
+                <xsl:if test="tokenize(string(./@srsName), ':')[last()] = '28992'">
+                    <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 3)"/>
+                    <xsl:if test="string-length($fouteCoord) > 0">
+                        <xsl:value-of
+                            select="
+                            concat(' TP0D0930: EPSG:28992 (=RD new), coördinaten in meters, maximaal 3 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
+                        />
+                    </xsl:if>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$fout"/>
+    </xsl:function>
+    
+    <xsl:function name="foo:aantalTPOD_0930_4258">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="fout">
+            <xsl:for-each select="$context/*">
+                <xsl:variable name="srsName" select="string(./@srsName)"/>
+                <xsl:if test="tokenize(string(./@srsName), ':')[last()] = '4258'">
+                    <xsl:variable name="fouteCoord" select="foo:fouteCoordTPOD_0930(., 8)"/>
+                    <xsl:if test="string-length($fouteCoord) > 0">
+                        <xsl:value-of
+                            select="
+                            concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten in graden, maximaal 8 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
+                        />
+                    </xsl:if>
+                </xsl:if>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$fout"/>
@@ -1327,8 +1345,7 @@
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$fouteCoord"/>
-    </xsl:function>
-    
+    </xsl:function>    
     
     <!-- ============TPOD_0940================================================================================================================ -->    
     
