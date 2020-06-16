@@ -248,12 +248,12 @@
 			<ow-dc:owObject>
 				<rol:Omgevingswaarde>
 					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001</rol:identificatie>
+					<rol:naam>abc</rol:naam>
+					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:type>
 					<rol:normwaarde>
 						<rol:Normwaarde>
-							<rol:kwantitatieveWaarde>
-								<da:waarde>200</da:waarde>
-								<da:eenheid>μg/m3</da:eenheid>
-							</rol:kwantitatieveWaarde>
+							<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001111</rol:identificatie>
+							<rol:kwantitatieveWaarde>200</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
 								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 							</rol:locatieaanduiding>
@@ -269,8 +269,11 @@
 			<ow-dc:owObject>
 				<rol:Omgevingswaarde>
 					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900002</rol:identificatie>
+					<rol:naam>abc</rol:naam>
+					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:type>
 					<rol:normwaarde>
 						<rol:Normwaarde>
+							<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001111</rol:identificatie>
 							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
 							<rol:locatieaanduiding>
 								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>

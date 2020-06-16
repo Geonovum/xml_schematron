@@ -75,8 +75,11 @@
 			<ow-dc:owObject>
 				<rol:Omgevingswaarde>
 					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001</rol:identificatie>
+					<rol:naam>abc</rol:naam>
+					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:type>
 					<rol:normwaarde>
 						<rol:Normwaarde>
+							<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001111</rol:identificatie>
 							<rol:kwantitatieveWaarde>
 								<da:waarde>200</da:waarde>
 								<da:eenheid>μg/m3</da:eenheid>
@@ -96,8 +99,11 @@
 			<ow-dc:owObject>
 				<rol:Omgevingswaarde>
 					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900003</rol:identificatie>
+					<rol:naam>abc</rol:naam>
+					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:type>
 					<rol:normwaarde>
 						<rol:Normwaarde>
+							<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001111</rol:identificatie>
 							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
 							<rol:locatieaanduiding>
 								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
@@ -114,12 +120,13 @@
 			<ow-dc:owObject>
 				<rol:Omgevingswaarde>
 					<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900005</rol:identificatie>
+					<rol:naam>abc</rol:naam>
+					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:type>
 					<rol:normwaarde>
 						<rol:Normwaarde>
+							<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001111</rol:identificatie>
 							<rol:kwalitatieveWaarde>Een string</rol:kwalitatieveWaarde>
-							<rol:kwantitatieveWaarde>
-								<da:waarde>200</da:waarde>
-								<da:eenheid>μg/m3</da:eenheid>
+							<rol:kwantitatieveWaarde>200</rol:kwantitatieveWaarde>
 							</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
 								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
@@ -441,7 +448,8 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<r:Instructieregel>
-					<r:idealisatie></r:idealisatie>
+					<r:identificatie>nl.imow-gm0037.omgevingswaarde.2019000011</r:identificatie>
+					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
 					<r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
 					</r:locatieaanduiding>
@@ -455,7 +463,8 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<r:Omgevingswaarderegel>
-					<r:idealisatie></r:idealisatie>
+					<r:identificatie>nl.imow-gm0037.omgevingswaarde.201900001</r:identificatie>
+					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
 					<r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000014"/>
 					</r:locatieaanduiding>
