@@ -1,1 +1,1 @@
-Kijk in src -> ant directory voor instructies over valideren via script
+Kijk in Vaklidaties-directory voor instructies over valideren via Ant of via Oxygen
