@@ -1,63 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AanleveringBesluit
-    xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+    xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
     xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
     <BesluitVersie>
         <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-            <FRBRWork>/akn/nl/bill/pv27/2019/3520</FRBRWork>
-            <FRBRExpression>/akn/nl/bill/pv27/2019/3520/nld@2019-12-01</FRBRExpression>
+            <FRBRWork>/akn/nl/bill/ws0659/2019/wvl-20190906-1643</FRBRWork>
+            <FRBRExpression>/akn/nl/bill/ws0659/2019/wvl-20190906-1643/nld@2019-01-04;1.0</FRBRExpression>
             <soortWork>/join/id/stop/work_003</soortWork>
         </ExpressionIdentificatie>
         <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-            <eindverantwoordelijke>/tooi/id/provincie/pv27</eindverantwoordelijke>
-            <maker>/tooi/id/provincie/pv27</maker>
-            <officieleTitel>Projectbesluit Zuidas 2018</officieleTitel>
+            <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+            <maker>/tooi/id/waterschap/ws0659</maker>
+            <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
             <onderwerpen>
-                <onderwerp>/tooi/def/concept/c_849842ac</onderwerp><!-- verkeer -->
+                <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
             </onderwerpen>
-            <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein><!-- bouwen, wonen en leefomgeving -->
             <rechtsgebieden>
-                <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied><!-- ruimtelijke ordening en milieu -->
+                <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
             </rechtsgebieden>
+            <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
             <informatieobjectRefs>
-                <informatieobjectRef>/join/id/regdata/pv27/2019/werkingsgebied_projectbesluit@20190604</informatieobjectRef>
+                <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
             </informatieobjectRefs>
         </BesluitMetadata>
-        <Procedure xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-            <Procedureverloop>
-                <bekendOp>2019-12-01</bekendOp>
-                <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
-                <procedurestappen>
-                    <Procedurestap>
-                        <soortStap>/join/id/stop/procedurestap/stap_003</soortStap>
-                        <voltooidOp>2019-11-01</voltooidOp>
-                    </Procedurestap>
-                </procedurestappen>
-            </Procedureverloop>
-        </Procedure>
-        <BesluitDoel xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-            <BeoogdeRegelgeving>
-                <BeoogdeRegeling>
-                    <doel>/akn/ontology/event/nl/pv27/sync/Instelling</doel>
-                    <instrumentVersie>/akn/nl/act/pv27/2019/3520/nld@2019-12-01</instrumentVersie>
-                    <eId/>
-                </BeoogdeRegeling>
-                <BeoogdeRegeling>
-                    <doel>/akn/ontology/event/nl/pv27/sync/Instelling</doel>
-                    <instrumentVersie>/join/id/regdata/pv27/2019/plangebied_projectbesluit_zuidas/nld@2019-12-12</instrumentVersie>
-                    <eId>cmp_I__list_o_1__item_o_1__ref_o_1</eId>
-                </BeoogdeRegeling>
-                <BeoogdeRegeling>
-                    <doel>/akn/ontology/event/nl/pv27/sync/Instelling</doel>
-                    <instrumentVersie>/join/id/regdata/pv27/2019/A10-zuid_en_de_knooppunten_nieuwe_meer_en_amstel/nld@2019-12-12</instrumentVersie>
-                    <eId>cmp_I__list_o_1__item_o_2__ref_o_1</eId>
-                </BeoogdeRegeling>
-            </BeoogdeRegelgeving>
-        </BesluitDoel>
-        <BesluitKlassiek xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
-            <RegelingKlassiek FRBRwork="/akn/nl/act/pv27/2019/3520" wordt="/akn/nl/act/pv27/2019/3520/nld@2019-12-01" componentnaam="main">
-                <Lichaam eId="body" wId="body">
+        <data:Procedureverloop>
+            <data:bekendOp>2020-01-01</data:bekendOp>
+            <data:procedurestappen>
+                <data:Procedurestap>
+                    <data:soortStap/>
+                    <data:voltooidOp>2020-01-01</data:voltooidOp>
+                </data:Procedurestap>
+            </data:procedurestappen>
+        </data:Procedureverloop>
+        <data:ConsolidatieInformatie/>
+        <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+            <RegelingOpschrift wId="abc" eId="abc">
+                <Al/>
+            </RegelingOpschrift>
+            <Lichaam eId="body" wId="body">
                     <FormeleDivisie eId="fdvs_o_1" wId="pv27_1__fdvs_o_1">
                         <Kop>
                             <Opschrift>Projectbesluit Zuidas 2018</Opschrift>

@@ -1,182 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/"
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+   xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
    <BesluitVersie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <FRBRWork>/akn/nl/bill/pv26/2020/311</FRBRWork>
-         <FRBRExpression>/akn/nl/bill/pv26/2020/311/nld@2020-02-01</FRBRExpression>
+         <FRBRWork>/akn/nl/bill/ws0659/2019/wvl-20190906-1643</FRBRWork>
+         <FRBRExpression>/akn/nl/bill/ws0659/2019/wvl-20190906-1643/nld@2019-01-04;1.0</FRBRExpression>
          <soortWork>/join/id/stop/work_003</soortWork>
       </ExpressionIdentificatie>
       <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <eindverantwoordelijke>/tooi/id/provincie/pv26</eindverantwoordelijke>
-         <maker>/tooi/id/provincie/pv26</maker>
-         <officieleTitel>Omgevingsverordening Utrecht</officieleTitel>
+         <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+         <maker>/tooi/id/waterschap/ws0659</maker>
+         <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
          <onderwerpen>
-            <onderwerp>/tooi/def/concept/c_cfc7d5ab</onderwerp>
+            <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
          </onderwerpen>
-         <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
          <rechtsgebieden>
-            <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
+            <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
          </rechtsgebieden>
+         <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
          <informatieobjectRefs>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</informatieobjectRef>
+            <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
          </informatieobjectRefs>
       </BesluitMetadata>
-      <Procedure xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <Procedureverloop>
-            <bekendOp>2020-02-03</bekendOp>
-            <soortProcedure>/join/id/stop/proceduretype_ontwerp</soortProcedure>
-            <procedurestappen>
-               <Procedurestap>
-                  <soortStap>/join/id/stop/procedure/stap_003</soortStap>
-                  <voltooidOp>2020-02-01</voltooidOp>
-               </Procedurestap>
-            </procedurestappen>
-         </Procedureverloop>
-      </Procedure>
-      <BesluitDoel xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <BeoogdeRegelgeving>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/akn/nl/act/pv26/2020/act3/nld@2020-03-05</instrumentVersie>
-               <eId>art_I</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_18</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_24</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_3</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_32</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_16</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_19</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_26</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_4</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_14</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_13</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_2</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_37</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_41</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_15</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_39</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_5</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_20</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_8</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_27</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_23</eId>
-            </BeoogdeRegeling>
-         </BeoogdeRegelgeving>
-         <Tijdstempels>
-            <Tijdstempel>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <soortTijdstempel>inwerkingtreding</soortTijdstempel>
-               <datum>2021-09-01</datum>
-               <eId>art_II</eId>
-            </Tijdstempel>
-         </Tijdstempels>
-      </BesluitDoel>
-      <BesluitKlassiek xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
-         <Regeling>
-            <RegelingOpschrift eId="longTitle" wId="longTitle">
-               <Al>Vaststelling van Omgevingsverordening Utrecht</Al>
-            </RegelingOpschrift>
-            <Lichaam eId="body" wId="body">
+      <data:Procedureverloop>
+         <data:bekendOp>2020-01-01</data:bekendOp>
+         <data:procedurestappen>
+            <data:Procedurestap>
+               <data:soortStap/>
+               <data:voltooidOp>2020-01-01</data:voltooidOp>
+            </data:Procedurestap>
+         </data:procedurestappen>
+      </data:Procedureverloop>
+      <data:ConsolidatieInformatie/>
+      <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <RegelingOpschrift wId="abc" eId="abc">
+            <Al/>
+         </RegelingOpschrift>
+         <Lichaam eId="body" wId="body">
                <WijzigArtikel eId="art_I" wId="pv26_311__art_I">
                   <Kop>
                      <Label>Artikel</Label>
@@ -2807,8 +2669,7 @@
                   </Toelichting>
                </MaakInitieleRegeling>
             </WijzigBijlage>
-         </Regeling>
-      </BesluitKlassiek>
+      </BesluitCompact>
    </BesluitVersie>
    <RegelingVersieInformatie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/"><!-- Work en Expression gelijk aan @wordt uit MaakInitieleRegeling -->

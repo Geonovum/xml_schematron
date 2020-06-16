@@ -1,1398 +1,1269 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+   xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
    <BesluitVersie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <FRBRWork>/akn/nl/bill/pv26/2020/311</FRBRWork>
-         <FRBRExpression>/akn/nl/bill/pv26/2020/311/nld@2020-02-01</FRBRExpression>
+         <FRBRWork>/akn/nl/bill/ws0659/2019/wvl-20190906-1643</FRBRWork>
+         <FRBRExpression>/akn/nl/bill/ws0659/2019/wvl-20190906-1643/nld@2019-01-04;1.0</FRBRExpression>
          <soortWork>/join/id/stop/work_003</soortWork>
       </ExpressionIdentificatie>
       <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <eindverantwoordelijke>/tooi/id/provincie/pv26</eindverantwoordelijke>
-         <maker>/tooi/id/provincie/pv26</maker>
-         <officieleTitel>Omgevingsverordening Utrecht</officieleTitel>
+         <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+         <maker>/tooi/id/waterschap/ws0659</maker>
+         <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
          <onderwerpen>
-            <onderwerp>/tooi/def/concept/c_cfc7d5ab</onderwerp>
+            <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
          </onderwerpen>
-         <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
          <rechtsgebieden>
-            <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
+            <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
          </rechtsgebieden>
+         <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
          <informatieobjectRefs>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</informatieobjectRef>
+            <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
          </informatieobjectRefs>
       </BesluitMetadata>
-      <Procedure xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <Procedureverloop>
-            <bekendOp>2020-02-03</bekendOp>
-            <soortProcedure>/join/id/stop/proceduretype_ontwerp</soortProcedure>
-            <procedurestappen>
-               <Procedurestap>
-                  <soortStap>/join/id/stop/procedure/stap_003</soortStap>
-                  <voltooidOp>2020-02-01</voltooidOp>
-               </Procedurestap>
-            </procedurestappen>
-         </Procedureverloop>
-      </Procedure>
-      <BesluitDoel xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <BeoogdeRegelgeving>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/akn/nl/act/pv26/2020/act3/nld@2020-03-05</instrumentVersie>
-               <eId>art_I</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_18</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_24</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_3</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_32</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_16</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_19</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_26</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_4</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_14</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_13</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_2</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_37</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_41</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_15</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_39</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_5</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_20</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_8</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_27</eId>
-            </BeoogdeRegeling>
-            <BeoogdeRegeling>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <instrumentVersie>/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</instrumentVersie>
-               <eId>cmp_I__list_o_1__item_o_23</eId>
-            </BeoogdeRegeling>
-         </BeoogdeRegelgeving>
-         <Tijdstempels>
-            <Tijdstempel>
-               <doel>/join/id/proces/pv26/2020/Instelling</doel>
-               <soortTijdstempel>inwerkingtreding</soortTijdstempel>
-               <datum>2021-09-01</datum>
-               <eId>art_II</eId>
-            </Tijdstempel>
-         </Tijdstempels>
-      </BesluitDoel>
-      <BesluitKlassiek xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
-         <Regeling>
-            <RegelingOpschrift eId="longTitle" wId="longTitle">
-               <Al>Vaststelling van Omgevingsverordening Utrecht</Al>
-            </RegelingOpschrift>
-            <Lichaam eId="body" wId="body">
-               <WijzigArtikel eId="art_I" wId="pv26_311__art_I">
-                  <Kop>
-                     <Label>Artikel</Label>
-                     <Nummer>I</Nummer>
-                  </Kop>
-                  <Wat>Omgevingsverordening Utrecht wordt vastgesteld zoals die in <IntRef doel="cmp_A">Bijlage A</IntRef> wordt gegeven</Wat>
-               </WijzigArtikel>
-               
-            </Lichaam>
-            <Sluiting eId="formula_2_o_1" wId="formula_2_o_1">
-               <Al>Gegeven te Kampen, 01 februari 2020</Al>
-               <Ondertekening>
-                  <Al>L.Koopmans</Al>
-                  <Al>Adviseur Omgevinswet</Al>
-                  <Al>A.C.Kersten</Al>
-                  <Al>Teamleider programmeurs</Al>
-               </Ondertekening>
-            </Sluiting>
-            <WijzigBijlage eId="cmp_A" wId="pv26_311__cmp_A">
+      <data:Procedureverloop>
+         <data:bekendOp>2020-01-01</data:bekendOp>
+         <data:procedurestappen>
+            <data:Procedurestap>
+               <data:soortStap/>
+               <data:voltooidOp>2020-01-01</data:voltooidOp>
+            </data:Procedurestap>
+         </data:procedurestappen>
+      </data:Procedureverloop>
+      <data:ConsolidatieInformatie/>
+      <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <RegelingOpschrift wId="abc" eId="abc">
+            <Al/>
+         </RegelingOpschrift>
+         <Lichaam eId="body" wId="body">
+            <Bijlage eId="cmp_I" wId="pv26_311__cmp_I">
                <Kop>
                   <Label>Bijlage</Label>
-                  <Nummer>A</Nummer>
-                  <Opschrift>Bijlage bij artikel I</Opschrift>
+                  <Nummer>I</Nummer>
+                  <Opschrift>Overzicht Informatieobjecten</Opschrift>
                </Kop>
-               <MaakInitieleRegeling FRBRwork="/akn/nl/act/pv26/2020/act3"
-                                     wordt="/akn/nl/act/pv26/2020/act3/nld@2020-03-05"
-                                     componentnaam="component_01">
-                  <RegelingOpschrift eId="longTitle_o_1" wId="longTitle_o_1">
-                     <Al>Omgevingsverordening Utrecht</Al>
-                  </RegelingOpschrift>
-                  <Lichaam eId="body_o_1" wId="body_o_1">
-                     
-                     
-                     
-                     
-                  </Lichaam>
-                  <Bijlage eId="cmp_I" wId="pv26_311__cmp_I">
+               <Inhoud>
+                  <Begrippenlijst eId="cmp_I__list_o_1" wId="pv26_311__cmp_I__list_o_1">
+                     <Begrip eId="cmp_I__list_o_1__item_o_1"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_1">
+                        <Term>Boringsvrijezone</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_1__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_1__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040"
+                                 >/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_2"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_2">
+                        <Term>Bufferzonestiltegebied</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_2__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044"
+                                 >/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_3"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_3">
+                        <Term>Concentratiegebiedglastuinbouw</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_3__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_3__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045"
+                                 >/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_4"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_4">
+                        <Term>Grondwaterbeschermingsgebied</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_4__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039"
+                                 >/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_5"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_5">
+                        <Term>Kernrandzone</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_5__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051"
+                                 >/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_6"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_6">
+                        <Term>Kwetsbarestrategischegrondwatervoorraad</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_6__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_6__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053"
+                                 >/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_7"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_7">
+                        <Term>Landelijkgebied</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_7__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_7__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047"
+                                 >/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_8"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_8">
+                        <Term>Matigkwetsbarestrategischegrondwatervoorraad</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_8__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_8__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043"
+                                 >/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_9"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_9">
+                        <Term>Recreatiewoningen</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_9__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_9__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042"
+                                 >/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_10"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_10">
+                        <Term>Slaperdijk</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_10__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_10__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054"
+                                 >/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_11"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_11">
+                        <Term>Stedelijkgebied</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_11__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_11__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057"
+                                 >/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_12"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_12">
+                        <Term>Stillekern</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_12__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_12__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062"
+                                 >/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_13"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_13">
+                        <Term>Stiltegebied</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_13__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_13__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060"
+                                 >/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_14"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_14">
+                        <Term>Strategischegrondwatervoorraad</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_14__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_14__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058"
+                                 >/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_15"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_15">
+                        <Term>Vrijwaringszonestiltegebied</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_15__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_15__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055"
+                                 >/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_16"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_16">
+                        <Term>Waterwingebied</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_16__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_16__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061"
+                                 >/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_17"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_17">
+                        <Term>WaterwingebiedBethunepolder</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_17__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_17__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063"
+                                 >/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_18"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_18">
+                        <Term>WeginbeheerbijdeProvincie</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_18__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_18__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059"
+                                 >/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_19"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_19">
+                        <Term>beperkingengebiedmetbetrekkingtoteenprovincialeweg</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_19__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_19__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056"
+                                 >/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip eId="cmp_I__list_o_1__item_o_20"
+                        wId="pv26_311__cmp_I__list_o_1__item_o_20">
+                        <Term>xxx-jaaraandachtsgebied</Term>
+                        <Definitie>
+                           <Al>
+                              <ExtIoRef eId="cmp_I__list_o_1__item_o_20__ref_o_1"
+                                 wId="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1"
+                                 doel="/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049"
+                                 >/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</ExtIoRef>
+                           </Al>
+                        </Definitie>
+                     </Begrip>
+                  </Begrippenlijst>
+               </Inhoud>
+            </Bijlage>
+            <Bijlage eId="cmp_2" wId="pv26_311__cmp_2">
+               <Kop>
+                  <Label>Bijlage bij regels</Label>
+                  <Nummer>2</Nummer>
+                  <Opschrift>Mobiliteitstoets</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <Al>
+                     <b>Mobiliteitsscan</b>
+                  </Al>
+                  <Al>Om na te gaan of de mobiliteitstoets noodzakelijk is, is het wenselijk bij elk
+                     ruimtelijk plan inzicht te geven in het aantal verplaatsingen dat die
+                     ontwikkeling tot gevolg heeft voor de verschillende vervoerwijzen in relatie
+                     tot de omliggende verkeers- en vervoersnetwerken (wegennet,
+                     openbaar-vervoernetwerk, fiets- en looproutes). Als er sprake is van een
+                     (relatief) groot aantal verplaatsingen en/of het vermoeden bestaat dat er zich
+                     een knelpunt gaat voordoen op het omliggende verkeers- en vervoersnetwerken, is
+                     een mobiliteitstoets noodzakelijk.</Al>
+                  <Al>Aangeraden wordt om na te gaan hoe de desbetreffende ruimtelijke ontwikkeling
+                     zich verhoudt tot het geheel aan (te verwachten) ruimtelijke ontwikkelingen in
+                     een gebied of gemeente. Wanneer er sprake is van meerdere (te verwachten)
+                     ruimtelijke ontwikkelingen in een gebied of gemeente kan er sprake zijn van een
+                     stapeling van effecten op de diverse verkeers- en vervoersnetwerken waardoor
+                     specifieke knelpunten ontstaan of zich er juist kansen voordoen om netwerken te
+                     versterken. Dit kan tevens een aangrijpingspunt vormen voor eventuele
+                     kostenverevening (het verdelen van de kosten van infrastructuuraanpassingen
+                     over verschillende projecten).</Al>
+                  <Al>
+                     <b>Mobiliteitstoets</b>
+                  </Al>
+                  <Lijst eId="cmp_2__list_o_1" wId="pv26_311__cmp_2__list_o_1" type="expliciet">
+                     <Lijstaanhef>Als de mobiliteitstoets noodzakelijk blijkt, is het aan te bevelen
+                        om in ieder geval in te gaan op een aantal algemene aspecten
+                        zoals:</Lijstaanhef>
+                     <Li eId="cmp_2__list_o_1__item_-_inst_1"
+                        wId="pv26_311__cmp_2__list_o_1__item_-_inst_1">
+                        <LiNummer>-</LiNummer>
+                        <Al>of de ruimtelijke ontwikkeling qua locatie en type mobiliteit passend is
+                           binnen het mobiliteitsbeleid van de provincie Utrecht zoals omschreven in
+                           de vigerende versie van het Mobiliteitsplan 2015-2028 Provincie
+                           Utrecht;</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_1__item_-_inst_2"
+                        wId="pv26_311__cmp_2__list_o_1__item_-_inst_2">
+                        <LiNummer>-</LiNummer>
+                        <Al>of het aantal (te verwachten) verplaatsingen van de diverse
+                           vervoerswijzen passend is op het ontsluitende en omliggende verkeers- en
+                           vervoersnetwerk of dat er knelpunten ontstaan;</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_1__item_-_inst_3"
+                        wId="pv26_311__cmp_2__list_o_1__item_-_inst_3">
+                        <LiNummer>-</LiNummer>
+                        <Al>of er sprake is van andere (ruimtelijke) ontwikkelingen die van invloed
+                           (kunnen) zijn op het functioneren van het verkeers- en
+                           vervoersnetwerk;</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_1__item_-_inst_4"
+                        wId="pv26_311__cmp_2__list_o_1__item_-_inst_4">
+                        <LiNummer>-</LiNummer>
+                        <Al>met welke maatregel(en) wordt voorzien in een afdoende aansluiting van
+                           de locatie op het ontsluitende en omliggende verkeers- en vervoersnetwerk
+                           voor de diverse vervoerswijzen;</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_1__item_-_inst_5"
+                        wId="pv26_311__cmp_2__list_o_1__item_-_inst_5">
+                        <LiNummer>-</LiNummer>
+                        <Al>of er voldoende financiële middelen zijn gereserveerd om de maatregelen
+                           aan het verkeers- en vervoersnetwerk voor de diverse vervoerswijzen te
+                           bekostigen;</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_1__item_-_inst_6"
+                        wId="pv26_311__cmp_2__list_o_1__item_-_inst_6">
+                        <LiNummer>-</LiNummer>
+                        <Al>wanneer de maatregel(en) aan het verkeers- en vervoersnetwerk voor de
+                           diverse vervoerswijzen wordt/worden gerealiseerd in relatie tot de
+                           ruimtelijke ontwikkeling zodat een tijdige ontsluiting en goed
+                           functionerend verkeersnetwerk voor alle modaliteiten kan worden
+                           gewaarborgd.</Al>
+                     </Li>
+                  </Lijst>
+                  <Lijst eId="cmp_2__list_o_2" wId="pv26_311__cmp_2__list_o_2" type="expliciet">
+                     <Lijstaanhef>Ten aanzien van auto (personen en goederen) daarnaast specifiek
+                        op:</Lijstaanhef>
+                     <Li eId="cmp_2__list_o_2__item_-" wId="pv26_311__cmp_2__list_o_2__item_-">
+                        <LiNummer>-</LiNummer>
+                        <Al>de capaciteit van het omliggend autowegennet in relatie tot de extra
+                           autoverplaatsingen;</Al>
+                     </Li>
+                  </Lijst>
+                  <Lijst eId="cmp_2__list_o_3" wId="pv26_311__cmp_2__list_o_3" type="expliciet">
+                     <Lijstaanhef>Ten aanzien van openbaar vervoer daarnaast ook specifiek
+                        op:</Lijstaanhef>
+                     <Li eId="cmp_2__list_o_3__item_-_inst_1"
+                        wId="pv26_311__cmp_2__list_o_3__item_-_inst_1">
+                        <LiNummer>-</LiNummer>
+                        <Al>het kwaliteitsniveau (centrale ontsluiting, goede doorstroming,
+                           haltelocaties) van het huidige en toekomstige openbaar vervoer (en,
+                           indien van toepassing, in relatie tot het vestigingsmilieu);</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_3__item_-_inst_2"
+                        wId="pv26_311__cmp_2__list_o_3__item_-_inst_2">
+                        <LiNummer>-</LiNummer>
+                        <Al>de betaalbaarheid van de benodigde aanpassing van het
+                           kwaliteitsniveau;</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_3__item_-_inst_3"
+                        wId="pv26_311__cmp_2__list_o_3__item_-_inst_3">
+                        <LiNummer>-</LiNummer>
+                        <Al>de bereikbaarheid en toegankelijkheid van haltevoorzieningen.</Al>
+                     </Li>
+                  </Lijst>
+                  <Lijst eId="cmp_2__list_o_4" wId="pv26_311__cmp_2__list_o_4" type="expliciet">
+                     <Lijstaanhef>Ten aanzien van lopen en fietsen daarnaast ook specifiek
+                        op:</Lijstaanhef>
+                     <Li eId="cmp_2__list_o_4__item_-_inst_1"
+                        wId="pv26_311__cmp_2__list_o_4__item_-_inst_1">
+                        <LiNummer>-</LiNummer>
+                        <Al>de huidige en geplande fietsinfrastructuur (binnen en buiten het
+                           plangebied);</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_4__item_-_inst_2"
+                        wId="pv26_311__cmp_2__list_o_4__item_-_inst_2">
+                        <LiNummer>-</LiNummer>
+                        <Al>de ontsluiting van de ruimtelijke ontwikkeling door loop- en
+                           fietsroutes.</Al>
+                     </Li>
+                  </Lijst>
+                  <Al>Het resultaat van deze toets moet voldoende inzicht geven of de locatie (de
+                     ruimtelijke ontwikkeling) goed en tijdig is ontsloten en welke maatregelen er
+                     op het omliggende verkeers- en verkeersnetwerk nodig zijn.</Al>
+                  <Al>Het inzicht in het aantal verplaatsingen dat de ruimtelijke ontwikkeling tot
+                     gevolg heeft (mobiliteitsscan) alsmede de resultaten van de mobiliteitstoets
+                     worden samen met de overige zaken met betrekking tot verkeer en vervoer
+                     opgenomen in een ruimtelijk besluit.</Al>
+                  <Lijst eId="cmp_2__list_o_5" wId="pv26_311__cmp_2__list_o_5" type="expliciet">
+                     <Lijstaanhef>Relevante overige zaken met betrekking tot verkeer en vervoer
+                        (mobiliteitsaspecten) die in ruimtelijke besluiten aan de orde moeten komen
+                        zijn (voor zover relevant en niet al behandeld in de mobiliteitstoets
+                        zelf):</Lijstaanhef>
+                     <Li eId="cmp_2__list_o_5__item_-_inst_1"
+                        wId="pv26_311__cmp_2__list_o_5__item_-_inst_1">
+                        <LiNummer>-</LiNummer>
+                        <Al>verkeersveiligheid</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_5__item_-_inst_2"
+                        wId="pv26_311__cmp_2__list_o_5__item_-_inst_2">
+                        <LiNummer>-</LiNummer>
+                        <Al>kwaliteit leefomgeving (geluidsbelasting, mede in relatie tot
+                           stiltegebieden; luchtverontreiniging; compenserende maatregelen);</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_5__item_-_inst_3"
+                        wId="pv26_311__cmp_2__list_o_5__item_-_inst_3">
+                        <LiNummer>-</LiNummer>
+                        <Al>parkeervoorzieningen voor auto en fiets;</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_5__item_-_inst_4"
+                        wId="pv26_311__cmp_2__list_o_5__item_-_inst_4">
+                        <LiNummer>-</LiNummer>
+                        <Al>vervoermanagement, parkmanagement;</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_5__item_-_inst_5"
+                        wId="pv26_311__cmp_2__list_o_5__item_-_inst_5">
+                        <LiNummer>-</LiNummer>
+                        <Al>goederenvervoer (multimodaal vervoer, overslagmogelijkheden);</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_5__item_-_inst_6"
+                        wId="pv26_311__cmp_2__list_o_5__item_-_inst_6">
+                        <LiNummer>-</LiNummer>
+                        <Al>transport gevaarlijke stoffen (in relatie tot routenet gevaarlijke
+                           stoffen);</Al>
+                     </Li>
+                     <Li eId="cmp_2__list_o_5__item_-_inst_7"
+                        wId="pv26_311__cmp_2__list_o_5__item_-_inst_7">
+                        <LiNummer>-</LiNummer>
+                        <Al>randvoorwaarden vanuit wegenverordeningen (o.a. Wegenverordening
+                           provincie Utrecht 2010).</Al>
+                     </Li>
+                  </Lijst>
+               </Inhoud>
+            </Bijlage>
+            <Bijlage eId="cmp_3" wId="pv26_311__cmp_3">
+               <Kop>
+                  <Label>Bijlage bij regels</Label>
+                  <Nummer>3</Nummer>
+                  <Opschrift>lijst waterwingebieden</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <Al/>
+                  <Al>Amersfoort-Berg</Al>
+                  <Al>Amersfoort-Koedijkerweg</Al>
+                  <Al>Beerschoten</Al>
+                  <Al>
+                     <IntIoRef eId="cmp_3__ref_o_1" wId="pv26_311__cmp_3__ref_o_1"
+                        doel="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1"
+                        >Bethunepolder</IntIoRef>
+                  </Al>
+                  <Al>Bethunepolder waterleidingkanaal</Al>
+                  <Al>Bilthoven</Al>
+                  <Al>Blokland</Al>
+                  <Al>Bunnik</Al>
+                  <Al>Cothen</Al>
+                  <Al>De Meern</Al>
+                  <Al>Doorn</Al>
+                  <Al>Driebergen</Al>
+                  <Al>Eempolder</Al>
+                  <Al>Groenekan</Al>
+                  <Al>Leersum</Al>
+                  <Al>Leidsche Rijn</Al>
+                  <Al>Linschoten</Al>
+                  <Al>Lopik</Al>
+                  <Al>Montfoort</Al>
+                  <Al>Nieuwegein</Al>
+                  <Al>Rhenen</Al>
+                  <Al>Soestduinen</Al>
+                  <Al>Tull en ’t Waal</Al>
+                  <Al>Veenendaal</Al>
+                  <Al>Vianen</Al>
+                  <Al>Vianen-Panoven</Al>
+                  <Al>Woerden</Al>
+                  <Al>Woudenberg</Al>
+                  <Al>Zeist</Al>
+                  <Al>WCB Nieuwegein</Al>
+               </Inhoud>
+            </Bijlage>
+            <Bijlage eId="cmp_4" wId="pv26_311__cmp_4">
+               <Kop>
+                  <Label>Bijlage</Label>
+                  <Nummer>4</Nummer>
+                  <Opschrift>Parameters en frequentie van bemonstering en analyse van te infiltreren
+                     water</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <table xmlns:eigen="https://www.eigen.nl/" eId="cmp_4__table_o_1"
+                     wId="pv26_311__cmp_4__table_o_1" eigen:class="standaard" frame="all" colsep="1"
+                     rowsep="1">
+                     <tgroup cols="3" align="left">
+                        <colspec colname="col1" colwidth="2642"/>
+                        <colspec colname="col2" colwidth="2642"/>
+                        <colspec colname="col3" colwidth="2643"/>
+                        <thead valign="top">
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Parameter</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Afkorting</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>Frequentie</Al>
+                              </entry>
+                           </row>
+                        </thead>
+                        <tbody valign="top">
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>bacteriën van de coligroep</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al/>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>kleur</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al/>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>zwevende stof</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>SS</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>geleidingsvermogen voor elektriciteit</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al/>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>temperatuur</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>T</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>zuurgraad</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>pH</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>opgelost zuurstof</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>O2</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>totaal organisch koolstof</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>TOC</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>bicarbonaat</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>HCO3</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>nitriet</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>NO2</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>nitraat</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>NO3</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>ammonium</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>NH4</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>totaal fosfaat</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Totaal P</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>fluoride</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>F</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>chloride</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Cl</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>sulfaat</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>SO4</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>natrium</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Na</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>ijzer</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Fe</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>mangaan</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Mn</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>chroom</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Cr</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>lood</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Pb</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>koper</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Cu</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>zink</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Zn</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>cadmium</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Ca</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>arseen</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>As</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>cyanide</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>CN</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>minerale olie</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al/>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>adsorbeerbaar organisch halogeen</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>AOX</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>vluchtig organisch gebonden chloor</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>VOC</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>vluchtige aromaten</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al/>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>4 wekelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>polycyclische aromaten</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>PAK</Al>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>fenolen</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al/>
+                              </entry>
+                              <entry namest="col3" nameend="col3" align="left">
+                                 <Al>3 maandelijks</Al>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </tgroup>
+                  </table>
+               </Inhoud>
+            </Bijlage>
+            <Bijlage eId="cmp_5" wId="pv26_311__cmp_5">
+               <Kop>
+                  <Label>Bijlage</Label>
+                  <Nummer>5</Nummer>
+                  <Opschrift>Modelborden grondwaterbeschermingszones</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <Figuur eId="cmp_5__img_o_1" wId="pv26_311__cmp_5__img_o_1">
+                     <Illustratie naam="image_1.jpeg" breedte="944" hoogte="1017" uitlijning="start"
+                        formaat="image/jpeg" dpi="72"/>
+                  </Figuur>
+               </Inhoud>
+            </Bijlage>
+            <Bijlage eId="cmp_o_6" wId="pv26_311__cmp_o_6">
+               <Kop>
+                  <Label>Bijlage</Label>
+                  <Opschrift>Lijst verboden activiteiten in
+                     grondwaterbeschermingsgebieden</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <table xmlns:eigen="https://www.eigen.nl/" eId="cmp_o_6__table_o_1"
+                     wId="pv26_311__cmp_o_6__table_o_1" eigen:class="standaard" frame="all"
+                     colsep="1" rowsep="1">
+                     <tgroup cols="2" align="left">
+                        <colspec colname="col1" colwidth="3963"/>
+                        <colspec colname="col2" colwidth="3964"/>
+                        <thead valign="top">
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Activiteit</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>Zoals bedoeld in artikel van het Besluit activiteiten
+                                    leefomgeving</Al>
+                              </entry>
+                           </row>
+                        </thead>
+                        <tbody valign="top">
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Mijnbouw</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.320</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Het gebruik van ontplofbare stoffen of voorwerpen op militaire
+                                    objecten</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.334</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Opslaan, mengen, scheiden en verdichten van bedrijfsafval of
+                                    gevaarlijk afval voorafgaand aan inzameling of afgifte</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.39</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Op of in de bodem brengen van bedrijfsafvalstoffen of
+                                    gevaarlijke afvalstoffen buiten stortplaatsen</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.40b</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Verbranden van afvalstoffen anders dan in een
+                                    ippcinstallatie</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.40d</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Zuiveringsvoorziening voor ingezameld of afgegeven
+                                    afvalwater</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.41</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Opslaan van grond en baggerspecie</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>(gereserveerd)</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Opslagtank voor gassen</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.21</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Opslagtank voor vloeistoffen en tankcontainer of verpakking die
+                                    wordt gebruikt als opslagtank voor vloeistoffen</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.24</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Stortplaats of winningsafvalvoorziening</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.84</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Verbranden van afvalstoffen in een ippc-installatie</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.87</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Maken van cokes</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.60</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Basismetaal</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.66</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Scheepswerven</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.144</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Metaalproductenindustrie</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.103</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Rubberindustrie en kunststofindustrie</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.134</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Autodemontagebedrijf en tweewielerdemontagebedrijf</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.152</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Verwerken van bedrijfsafvalstoffen of gevaarlijke
+                                    afvalstoffen</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.184</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Zuiveringtechnisch werk</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.173</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Bedrijf voor telen en kweken van waterplanten of
+                                    waterdieren</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.221</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Tankstation</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.296</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Reinigen van opslagtanks, verpakkingen, voertuigen of
+                                    containers voor gevaarlijke stoffen</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.300</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Bunkerstations en andere tankplaatsen voor schepen</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.272</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Opslag- en transportbedrijf, groothandel en
+                                    containerterminal</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.285</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Autosport en motorsport, zoals crossterrein, racebaan of
+                                    kartbaan</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.304</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Jachthaven</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.308</Al>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry namest="col1" nameend="col1" align="left">
+                                 <Al>Schietbaan</Al>
+                              </entry>
+                              <entry namest="col2" nameend="col2" align="left">
+                                 <Al>3.311</Al>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </tgroup>
+                  </table>
+               </Inhoud>
+            </Bijlage>
+            <Toelichting eId="recital_6" wId="pv26_311__recital_6">
+               <Kop>
+                  <Label>Toelichting</Label>
+                  <Nummer>6</Nummer>
+                  <Opschrift>Toelichting</Opschrift>
+               </Kop>
+               <Divisie eId="recital_6__div_1" wId="pv26_311__recital_6__div_1">
+                  <Kop>
+                     <Label>Algemene toelichting</Label>
+                     <Nummer>1</Nummer>
+                     <Opschrift>Algemene toelichting</Opschrift>
+                  </Kop>
+                  <Divisie eId="recital_6__div_1__div_o_1" wId="pv26_311__recital_6__div_1__div_o_1">
                      <Kop>
-                        <Label>Bijlage</Label>
-                        <Nummer>I</Nummer>
-                        <Opschrift>Overzicht Informatieobjecten</Opschrift>
+                        <Opschrift>Wettelijke basis verordening</Opschrift>
                      </Kop>
                      <Inhoud>
-                        <Begrippenlijst eId="cmp_I__list_o_1" wId="pv26_311__cmp_I__list_o_1">
-                           <Begrip eId="cmp_I__list_o_1__item_o_1"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_1">
-                              <Term>Boringsvrijezone</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_1__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_1__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040">/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_2"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_2">
-                              <Term>Bufferzonestiltegebied</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_2__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044">/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_3"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_3">
-                              <Term>Concentratiegebiedglastuinbouw</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_3__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_3__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045">/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_4"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_4">
-                              <Term>Grondwaterbeschermingsgebied</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_4__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039">/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_5"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_5">
-                              <Term>Kernrandzone</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_5__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051">/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_6"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_6">
-                              <Term>Kwetsbarestrategischegrondwatervoorraad</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_6__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_6__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053">/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_7"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_7">
-                              <Term>Landelijkgebied</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_7__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_7__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047">/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_8"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_8">
-                              <Term>Matigkwetsbarestrategischegrondwatervoorraad</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_8__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_8__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043">/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_9"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_9">
-                              <Term>Recreatiewoningen</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_9__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_9__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042">/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_10"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_10">
-                              <Term>Slaperdijk</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_10__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_10__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054">/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_11"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_11">
-                              <Term>Stedelijkgebied</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_11__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_11__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057">/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_12"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_12">
-                              <Term>Stillekern</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_12__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_12__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062">/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_13"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_13">
-                              <Term>Stiltegebied</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_13__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_13__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060">/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_14"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_14">
-                              <Term>Strategischegrondwatervoorraad</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_14__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_14__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058">/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_15"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_15">
-                              <Term>Vrijwaringszonestiltegebied</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_15__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_15__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055">/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_16"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_16">
-                              <Term>Waterwingebied</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_16__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_16__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061">/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_17"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_17">
-                              <Term>WaterwingebiedBethunepolder</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_17__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_17__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063">/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_18"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_18">
-                              <Term>WeginbeheerbijdeProvincie</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_18__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_18__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059">/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_19"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_19">
-                              <Term>beperkingengebiedmetbetrekkingtoteenprovincialeweg</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_19__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_19__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056">/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                           <Begrip eId="cmp_I__list_o_1__item_o_20"
-                                   wId="pv26_311__cmp_I__list_o_1__item_o_20">
-                              <Term>xxx-jaaraandachtsgebied</Term>
-                              <Definitie>
-                                 <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_20__ref_o_1"
-                                              wId="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049">/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</ExtIoRef>
-                                 </Al>
-                              </Definitie>
-                           </Begrip>
-                        </Begrippenlijst>
-                     </Inhoud>
-                  </Bijlage>
-                  <Bijlage eId="cmp_2" wId="pv26_311__cmp_2">
-                     <Kop>
-                        <Label>Bijlage bij regels</Label>
-                        <Nummer>2</Nummer>
-                        <Opschrift>Mobiliteitstoets</Opschrift>
-                     </Kop>
-                     <Inhoud>
-                        <Al>
-                           <b>Mobiliteitsscan</b>
-                        </Al>
-                        <Al>Om na te gaan of de mobiliteitstoets noodzakelijk is, is het wenselijk bij elk ruimtelijk plan inzicht te geven in het aantal verplaatsingen dat die ontwikkeling tot gevolg heeft voor de verschillende vervoerwijzen in relatie tot de omliggende verkeers- en vervoersnetwerken (wegennet, openbaar-vervoernetwerk, fiets- en looproutes). Als er sprake is van een (relatief) groot aantal verplaatsingen en/of het vermoeden bestaat dat er zich een knelpunt gaat voordoen op het omliggende verkeers- en vervoersnetwerken, is een mobiliteitstoets noodzakelijk.</Al>
-                        <Al>Aangeraden wordt om na te gaan hoe de desbetreffende ruimtelijke ontwikkeling zich verhoudt tot het geheel aan (te verwachten) ruimtelijke ontwikkelingen in een gebied of gemeente. Wanneer er sprake is van meerdere (te verwachten) ruimtelijke ontwikkelingen in een gebied of gemeente kan er sprake zijn van een stapeling van effecten op de diverse verkeers- en vervoersnetwerken waardoor specifieke knelpunten ontstaan of zich er juist kansen voordoen om netwerken te versterken. Dit kan tevens een aangrijpingspunt vormen voor eventuele kostenverevening (het verdelen van de kosten van infrastructuuraanpassingen over verschillende projecten).</Al>
-                        <Al>
-                           <b>Mobiliteitstoets</b>
-                        </Al>
-                        <Lijst eId="cmp_2__list_o_1"
-                               wId="pv26_311__cmp_2__list_o_1"
-                               type="expliciet">
-                           <Lijstaanhef>Als de mobiliteitstoets noodzakelijk blijkt, is het aan te bevelen om in ieder geval in te gaan op een aantal algemene aspecten zoals:</Lijstaanhef>
-                           <Li eId="cmp_2__list_o_1__item_-_inst_1"
-                               wId="pv26_311__cmp_2__list_o_1__item_-_inst_1">
-                              <LiNummer>-</LiNummer>
-                              <Al>of de ruimtelijke ontwikkeling qua locatie en type mobiliteit passend is binnen het mobiliteitsbeleid van de provincie Utrecht zoals omschreven in de vigerende versie van het Mobiliteitsplan 2015-2028 Provincie Utrecht;</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_1__item_-_inst_2"
-                               wId="pv26_311__cmp_2__list_o_1__item_-_inst_2">
-                              <LiNummer>-</LiNummer>
-                              <Al>of het aantal (te verwachten) verplaatsingen van de diverse vervoerswijzen passend is op het ontsluitende en omliggende verkeers- en vervoersnetwerk of dat er knelpunten ontstaan;</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_1__item_-_inst_3"
-                               wId="pv26_311__cmp_2__list_o_1__item_-_inst_3">
-                              <LiNummer>-</LiNummer>
-                              <Al>of er sprake is van andere (ruimtelijke) ontwikkelingen die van invloed (kunnen) zijn op het functioneren van het verkeers- en vervoersnetwerk;</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_1__item_-_inst_4"
-                               wId="pv26_311__cmp_2__list_o_1__item_-_inst_4">
-                              <LiNummer>-</LiNummer>
-                              <Al>met welke maatregel(en) wordt voorzien in een afdoende aansluiting van de locatie op het ontsluitende en omliggende verkeers- en vervoersnetwerk voor de diverse vervoerswijzen;</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_1__item_-_inst_5"
-                               wId="pv26_311__cmp_2__list_o_1__item_-_inst_5">
-                              <LiNummer>-</LiNummer>
-                              <Al>of er voldoende financiële middelen zijn gereserveerd om de maatregelen aan het verkeers- en vervoersnetwerk voor de diverse vervoerswijzen te bekostigen;</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_1__item_-_inst_6"
-                               wId="pv26_311__cmp_2__list_o_1__item_-_inst_6">
-                              <LiNummer>-</LiNummer>
-                              <Al>wanneer de maatregel(en) aan het verkeers- en vervoersnetwerk voor de diverse vervoerswijzen wordt/worden gerealiseerd in relatie tot de ruimtelijke ontwikkeling zodat een tijdige ontsluiting en goed functionerend verkeersnetwerk voor alle modaliteiten kan worden gewaarborgd.</Al>
-                           </Li>
-                        </Lijst>
-                        <Lijst eId="cmp_2__list_o_2"
-                               wId="pv26_311__cmp_2__list_o_2"
-                               type="expliciet">
-                           <Lijstaanhef>Ten aanzien van auto (personen en goederen) daarnaast specifiek op:</Lijstaanhef>
-                           <Li eId="cmp_2__list_o_2__item_-" wId="pv26_311__cmp_2__list_o_2__item_-">
-                              <LiNummer>-</LiNummer>
-                              <Al>de capaciteit van het omliggend autowegennet in relatie tot de extra autoverplaatsingen;</Al>
-                           </Li>
-                        </Lijst>
-                        <Lijst eId="cmp_2__list_o_3"
-                               wId="pv26_311__cmp_2__list_o_3"
-                               type="expliciet">
-                           <Lijstaanhef>Ten aanzien van openbaar vervoer daarnaast ook specifiek op:</Lijstaanhef>
-                           <Li eId="cmp_2__list_o_3__item_-_inst_1"
-                               wId="pv26_311__cmp_2__list_o_3__item_-_inst_1">
-                              <LiNummer>-</LiNummer>
-                              <Al>het kwaliteitsniveau (centrale ontsluiting, goede doorstroming, haltelocaties) van het huidige en toekomstige openbaar vervoer (en, indien van toepassing, in relatie tot het vestigingsmilieu);</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_3__item_-_inst_2"
-                               wId="pv26_311__cmp_2__list_o_3__item_-_inst_2">
-                              <LiNummer>-</LiNummer>
-                              <Al>de betaalbaarheid van de benodigde aanpassing van het kwaliteitsniveau;</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_3__item_-_inst_3"
-                               wId="pv26_311__cmp_2__list_o_3__item_-_inst_3">
-                              <LiNummer>-</LiNummer>
-                              <Al>de bereikbaarheid en toegankelijkheid van haltevoorzieningen.</Al>
-                           </Li>
-                        </Lijst>
-                        <Lijst eId="cmp_2__list_o_4"
-                               wId="pv26_311__cmp_2__list_o_4"
-                               type="expliciet">
-                           <Lijstaanhef>Ten aanzien van lopen en fietsen daarnaast ook specifiek op:</Lijstaanhef>
-                           <Li eId="cmp_2__list_o_4__item_-_inst_1"
-                               wId="pv26_311__cmp_2__list_o_4__item_-_inst_1">
-                              <LiNummer>-</LiNummer>
-                              <Al>de huidige en geplande fietsinfrastructuur (binnen en buiten het plangebied);</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_4__item_-_inst_2"
-                               wId="pv26_311__cmp_2__list_o_4__item_-_inst_2">
-                              <LiNummer>-</LiNummer>
-                              <Al>de ontsluiting van de ruimtelijke ontwikkeling door loop- en fietsroutes.</Al>
-                           </Li>
-                        </Lijst>
-                        <Al>Het resultaat van deze toets moet voldoende inzicht geven of de locatie (de ruimtelijke ontwikkeling) goed en tijdig is ontsloten en welke maatregelen er op het omliggende verkeers- en verkeersnetwerk nodig zijn.</Al>
-                        <Al>Het inzicht in het aantal verplaatsingen dat de ruimtelijke ontwikkeling tot gevolg heeft (mobiliteitsscan) alsmede de resultaten van de mobiliteitstoets worden samen met de overige zaken met betrekking tot verkeer en vervoer opgenomen in een ruimtelijk besluit.</Al>
-                        <Lijst eId="cmp_2__list_o_5"
-                               wId="pv26_311__cmp_2__list_o_5"
-                               type="expliciet">
-                           <Lijstaanhef>Relevante overige zaken met betrekking tot verkeer en vervoer (mobiliteitsaspecten) die in ruimtelijke besluiten aan de orde moeten komen zijn (voor zover relevant en niet al behandeld in de mobiliteitstoets zelf):</Lijstaanhef>
-                           <Li eId="cmp_2__list_o_5__item_-_inst_1"
-                               wId="pv26_311__cmp_2__list_o_5__item_-_inst_1">
-                              <LiNummer>-</LiNummer>
-                              <Al>verkeersveiligheid</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_5__item_-_inst_2"
-                               wId="pv26_311__cmp_2__list_o_5__item_-_inst_2">
-                              <LiNummer>-</LiNummer>
-                              <Al>kwaliteit leefomgeving (geluidsbelasting, mede in relatie tot stiltegebieden; luchtverontreiniging; compenserende maatregelen);</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_5__item_-_inst_3"
-                               wId="pv26_311__cmp_2__list_o_5__item_-_inst_3">
-                              <LiNummer>-</LiNummer>
-                              <Al>parkeervoorzieningen voor auto en fiets;</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_5__item_-_inst_4"
-                               wId="pv26_311__cmp_2__list_o_5__item_-_inst_4">
-                              <LiNummer>-</LiNummer>
-                              <Al>vervoermanagement, parkmanagement;</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_5__item_-_inst_5"
-                               wId="pv26_311__cmp_2__list_o_5__item_-_inst_5">
-                              <LiNummer>-</LiNummer>
-                              <Al>goederenvervoer (multimodaal vervoer, overslagmogelijkheden);</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_5__item_-_inst_6"
-                               wId="pv26_311__cmp_2__list_o_5__item_-_inst_6">
-                              <LiNummer>-</LiNummer>
-                              <Al>transport gevaarlijke stoffen (in relatie tot routenet gevaarlijke stoffen);</Al>
-                           </Li>
-                           <Li eId="cmp_2__list_o_5__item_-_inst_7"
-                               wId="pv26_311__cmp_2__list_o_5__item_-_inst_7">
-                              <LiNummer>-</LiNummer>
-                              <Al>randvoorwaarden vanuit wegenverordeningen (o.a. Wegenverordening provincie Utrecht 2010).</Al>
-                           </Li>
-                        </Lijst>
-                     </Inhoud>
-                  </Bijlage>
-                  <Bijlage eId="cmp_3" wId="pv26_311__cmp_3">
-                     <Kop>
-                        <Label>Bijlage bij regels</Label>
-                        <Nummer>3</Nummer>
-                        <Opschrift>lijst waterwingebieden</Opschrift>
-                     </Kop>
-                     <Inhoud>
+                        <Al>Artikel 2.6 van de Omgevingswet schrijf voor dat provinciale staten één
+                           omgevingsverordening vaststellen waarin regels over de fysieke
+                           leefomgeving worden opgenomen. De omgevingsverordening vervangt bestaande
+                           verordeningen zoals de ruimtelijke verordening, de milieuverordening, de
+                           natuur en landschapsverordening.</Al>
                         <Al/>
-                        <Al>Amersfoort-Berg</Al>
-                        <Al>Amersfoort-Koedijkerweg</Al>
-                        <Al>Beerschoten</Al>
-                        <Al>
-                           <IntIoRef eId="cmp_3__ref_o_1"
-                                     wId="pv26_311__cmp_3__ref_o_1"
-                                     doel="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1">Bethunepolder</IntIoRef>
-                        </Al>
-                        <Al>Bethunepolder waterleidingkanaal</Al>
-                        <Al>Bilthoven</Al>
-                        <Al>Blokland</Al>
-                        <Al>Bunnik</Al>
-                        <Al>Cothen</Al>
-                        <Al>De Meern</Al>
-                        <Al>Doorn</Al>
-                        <Al>Driebergen</Al>
-                        <Al>Eempolder</Al>
-                        <Al>Groenekan</Al>
-                        <Al>Leersum</Al>
-                        <Al>Leidsche Rijn</Al>
-                        <Al>Linschoten</Al>
-                        <Al>Lopik</Al>
-                        <Al>Montfoort</Al>
-                        <Al>Nieuwegein</Al>
-                        <Al>Rhenen</Al>
-                        <Al>Soestduinen</Al>
-                        <Al>Tull en ’t Waal</Al>
-                        <Al>Veenendaal</Al>
-                        <Al>Vianen</Al>
-                        <Al>Vianen-Panoven</Al>
-                        <Al>Woerden</Al>
-                        <Al>Woudenberg</Al>
-                        <Al>Zeist</Al>
-                        <Al>WCB Nieuwegein</Al>
+                        <Al>De omgevingsverordening bevat instructieregels over taken en
+                           bevoegdheden van gemeenten en waterschappen. Daarnaast bevat de
+                           omgevingsverordening direct werkende regels. Dit zijn regels die
+                           rechtstreeks gelden voor bedrijven, burgers en andere initiatiefnemers
+                           bij het uitvoeren van een activiteit. Andere voorbeelden van direct
+                           werkende regels zijn de meld- en informatieplichten en de specifieke
+                           zorgplichten. Regels over bijvoorbeeld een vergunningplicht gelden ook
+                           voor bedrijven, burgers en andere initiatiefnemers. Daarover moet eerst
+                           een besluit genomen worden.</Al>
                      </Inhoud>
-                  </Bijlage>
-                  <Bijlage eId="cmp_4" wId="pv26_311__cmp_4">
+                  </Divisie>
+                  <Divisie eId="recital_6__div_1__div_o_2" wId="pv26_311__recital_6__div_1__div_o_2">
                      <Kop>
-                        <Label>Bijlage</Label>
-                        <Nummer>4</Nummer>
-                        <Opschrift>Parameters en frequentie van bemonstering en analyse van te infiltreren water</Opschrift>
+                        <Opschrift>Provinciaal belang</Opschrift>
                      </Kop>
                      <Inhoud>
-                        <table xmlns:eigen="https://www.eigen.nl/"
-                               eId="cmp_4__table_o_1"
-                               wId="pv26_311__cmp_4__table_o_1"
-                               eigen:class="standaard"
-                               frame="all"
-                               colsep="1"
-                               rowsep="1">
-                           <tgroup cols="3" align="left">
-                              <colspec colname="col1" colwidth="2642"/>
-                              <colspec colname="col2" colwidth="2642"/>
-                              <colspec colname="col3" colwidth="2643"/>
-                              <thead valign="top">
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Parameter</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Afkorting</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>Frequentie</Al>
-                                    </entry>
-                                 </row>
-                              </thead>
-                              <tbody valign="top">
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>bacteriën van de coligroep</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al/>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>kleur</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al/>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>zwevende stof</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>SS</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>geleidingsvermogen voor elektriciteit</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al/>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>temperatuur</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>T</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>zuurgraad</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>pH</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>opgelost zuurstof</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>O2</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>totaal organisch koolstof</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>TOC</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>bicarbonaat</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>HCO3</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>nitriet</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>NO2</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>nitraat</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>NO3</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>ammonium</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>NH4</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>totaal fosfaat</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Totaal P</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>fluoride</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>F</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>chloride</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Cl</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>sulfaat</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>SO4</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>natrium</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Na</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>ijzer</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Fe</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>mangaan</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Mn</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>chroom</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Cr</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>lood</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Pb</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>koper</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Cu</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>zink</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Zn</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>cadmium</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Ca</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>arseen</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>As</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>cyanide</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>CN</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>minerale olie</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al/>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>adsorbeerbaar organisch halogeen</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>AOX</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>vluchtig organisch gebonden chloor</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>VOC</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>vluchtige aromaten</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al/>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>4 wekelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>polycyclische aromaten</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>PAK</Al>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>fenolen</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al/>
-                                    </entry>
-                                    <entry namest="col3" nameend="col3" align="left">
-                                       <Al>3 maandelijks</Al>
-                                    </entry>
-                                 </row>
-                              </tbody>
-                           </tgroup>
-                        </table>
-                     </Inhoud>
-                  </Bijlage>
-                  <Bijlage eId="cmp_5" wId="pv26_311__cmp_5">
-                     <Kop>
-                        <Label>Bijlage</Label>
-                        <Nummer>5</Nummer>
-                        <Opschrift>Modelborden grondwaterbeschermingszones</Opschrift>
-                     </Kop>
-                     <Inhoud>
-                        <Figuur eId="cmp_5__img_o_1" wId="pv26_311__cmp_5__img_o_1">
-                           <Illustratie naam="image_1.jpeg"
-                                        breedte="944"
-                                        hoogte="1017"
-                                        uitlijning="start"
-                                        formaat="image/jpeg"
-                                        dpi="72"/>
+                        <Figuur eId="recital_6__div_1__div_o_2__img_o_1"
+                           wId="pv26_311__recital_6__div_1__div_o_2__img_o_1">
+                           <Illustratie naam="image_2.jpeg" breedte="637" hoogte="506"
+                              uitlijning="start" formaat="image/jpeg" dpi="72"/>
+                        </Figuur>
+                        <Figuur eId="recital_6__div_1__div_o_2__img_o_2"
+                           wId="pv26_311__recital_6__div_1__div_o_2__img_o_2">
+                           <Illustratie naam="image_3.jpeg" breedte="643" hoogte="359"
+                              uitlijning="start" formaat="image/jpeg" dpi="72"/>
+                        </Figuur>
+                        <Figuur eId="recital_6__div_1__div_o_2__img_o_3"
+                           wId="pv26_311__recital_6__div_1__div_o_2__img_o_3">
+                           <Illustratie naam="image_4.jpeg" breedte="637" hoogte="227"
+                              uitlijning="start" formaat="image/jpeg" dpi="72"/>
+                        </Figuur>
+                        <Figuur eId="recital_6__div_1__div_o_2__img_o_4"
+                           wId="pv26_311__recital_6__div_1__div_o_2__img_o_4">
+                           <Illustratie naam="image_5.jpeg" breedte="637" hoogte="404"
+                              uitlijning="start" formaat="image/jpeg" dpi="72"/>
+                        </Figuur>
+                        <Figuur eId="recital_6__div_1__div_o_2__img_o_5"
+                           wId="pv26_311__recital_6__div_1__div_o_2__img_o_5">
+                           <Illustratie naam="image_6.jpeg" breedte="643" hoogte="251"
+                              uitlijning="start" formaat="image/jpeg" dpi="72"/>
+                        </Figuur>
+                        <Figuur eId="recital_6__div_1__div_o_2__img_o_6"
+                           wId="pv26_311__recital_6__div_1__div_o_2__img_o_6">
+                           <Illustratie naam="image_7.jpeg" breedte="643" hoogte="372"
+                              uitlijning="start" formaat="image/jpeg" dpi="72"/>
+                        </Figuur>
+                        <Figuur eId="recital_6__div_1__div_o_2__img_o_7"
+                           wId="pv26_311__recital_6__div_1__div_o_2__img_o_7">
+                           <Illustratie naam="image_8.jpeg" breedte="637" hoogte="443"
+                              uitlijning="start" formaat="image/jpeg" dpi="72"/>
                         </Figuur>
                      </Inhoud>
-                  </Bijlage>
-                  <Bijlage eId="cmp_o_6" wId="pv26_311__cmp_o_6">
-                     <Kop>
-                        <Label>Bijlage</Label>
-                        <Opschrift>Lijst verboden activiteiten in grondwaterbeschermingsgebieden</Opschrift>
-                     </Kop>
-                     <Inhoud>
-                        <table xmlns:eigen="https://www.eigen.nl/"
-                               eId="cmp_o_6__table_o_1"
-                               wId="pv26_311__cmp_o_6__table_o_1"
-                               eigen:class="standaard"
-                               frame="all"
-                               colsep="1"
-                               rowsep="1">
-                           <tgroup cols="2" align="left">
-                              <colspec colname="col1" colwidth="3963"/>
-                              <colspec colname="col2" colwidth="3964"/>
-                              <thead valign="top">
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Activiteit</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>Zoals bedoeld in artikel van het Besluit activiteiten leefomgeving</Al>
-                                    </entry>
-                                 </row>
-                              </thead>
-                              <tbody valign="top">
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Mijnbouw</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.320</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Het gebruik van ontplofbare stoffen of voorwerpen op militaire objecten</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.334</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Opslaan, mengen, scheiden en verdichten van bedrijfsafval of gevaarlijk afval voorafgaand aan inzameling of afgifte</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.39</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Op of in de bodem brengen van bedrijfsafvalstoffen of gevaarlijke afvalstoffen buiten stortplaatsen</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.40b</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Verbranden van afvalstoffen anders dan in een ippcinstallatie</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.40d</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Zuiveringsvoorziening voor ingezameld of afgegeven afvalwater</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.41</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Opslaan van grond en baggerspecie</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>(gereserveerd)</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Opslagtank voor gassen</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.21</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Opslagtank voor vloeistoffen en tankcontainer of verpakking die wordt gebruikt als opslagtank voor vloeistoffen</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.24</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Stortplaats of winningsafvalvoorziening</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.84</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Verbranden van afvalstoffen in een ippc-installatie</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.87</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Maken van cokes</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.60</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Basismetaal</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.66</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Scheepswerven</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.144</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Metaalproductenindustrie</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.103</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Rubberindustrie en kunststofindustrie</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.134</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Autodemontagebedrijf en tweewielerdemontagebedrijf</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.152</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Verwerken van bedrijfsafvalstoffen of gevaarlijke afvalstoffen</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.184</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Zuiveringtechnisch werk</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.173</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Bedrijf voor telen en kweken van waterplanten of waterdieren</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.221</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Tankstation</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.296</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Reinigen van opslagtanks, verpakkingen, voertuigen of containers voor gevaarlijke stoffen</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.300</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Bunkerstations en andere tankplaatsen voor schepen</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.272</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Opslag- en transportbedrijf, groothandel en containerterminal</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.285</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Autosport en motorsport, zoals crossterrein, racebaan of kartbaan</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.304</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Jachthaven</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.308</Al>
-                                    </entry>
-                                 </row>
-                                 <row>
-                                    <entry namest="col1" nameend="col1" align="left">
-                                       <Al>Schietbaan</Al>
-                                    </entry>
-                                    <entry namest="col2" nameend="col2" align="left">
-                                       <Al>3.311</Al>
-                                    </entry>
-                                 </row>
-                              </tbody>
-                           </tgroup>
-                        </table>
-                     </Inhoud>
-                  </Bijlage>
-                  <Toelichting eId="recital_6" wId="pv26_311__recital_6">
-                     <Kop>
-                        <Label>Toelichting</Label>
-                        <Nummer>6</Nummer>
-                        <Opschrift>Toelichting</Opschrift>
-                     </Kop>
-                     <Divisie eId="recital_6__div_1" wId="pv26_311__recital_6__div_1">
-                        <Kop>
-                           <Label>Algemene toelichting</Label>
-                           <Nummer>1</Nummer>
-                           <Opschrift>Algemene toelichting</Opschrift>
-                        </Kop>
-                        <Divisie eId="recital_6__div_1__div_o_1"
-                                 wId="pv26_311__recital_6__div_1__div_o_1">
-                           <Kop>
-                              <Opschrift>Wettelijke basis verordening</Opschrift>
-                           </Kop>
-                           <Inhoud>
-                              <Al>Artikel 2.6 van de Omgevingswet schrijf voor dat provinciale staten één omgevingsverordening vaststellen waarin regels over de fysieke leefomgeving worden opgenomen. De omgevingsverordening vervangt bestaande verordeningen zoals de ruimtelijke verordening, de milieuverordening, de natuur en landschapsverordening.</Al>
-                              <Al/>
-                              <Al>De omgevingsverordening bevat instructieregels over taken en bevoegdheden van gemeenten en waterschappen. Daarnaast bevat de omgevingsverordening direct werkende regels. Dit zijn regels die rechtstreeks gelden voor bedrijven, burgers en andere initiatiefnemers bij het uitvoeren van een activiteit. Andere voorbeelden van direct werkende regels zijn de meld- en informatieplichten en de specifieke zorgplichten. Regels over bijvoorbeeld een vergunningplicht gelden ook voor bedrijven, burgers en andere initiatiefnemers. Daarover moet eerst een besluit genomen worden.</Al>
-                           </Inhoud>
-                        </Divisie>
-                        <Divisie eId="recital_6__div_1__div_o_2"
-                                 wId="pv26_311__recital_6__div_1__div_o_2">
-                           <Kop>
-                              <Opschrift>Provinciaal belang</Opschrift>
-                           </Kop>
-                           <Inhoud>
-                              <Figuur eId="recital_6__div_1__div_o_2__img_o_1"
-                                      wId="pv26_311__recital_6__div_1__div_o_2__img_o_1">
-                                 <Illustratie naam="image_2.jpeg"
-                                              breedte="637"
-                                              hoogte="506"
-                                              uitlijning="start"
-                                              formaat="image/jpeg"
-                                              dpi="72"/>
-                              </Figuur>
-                              <Figuur eId="recital_6__div_1__div_o_2__img_o_2"
-                                      wId="pv26_311__recital_6__div_1__div_o_2__img_o_2">
-                                 <Illustratie naam="image_3.jpeg"
-                                              breedte="643"
-                                              hoogte="359"
-                                              uitlijning="start"
-                                              formaat="image/jpeg"
-                                              dpi="72"/>
-                              </Figuur>
-                              <Figuur eId="recital_6__div_1__div_o_2__img_o_3"
-                                      wId="pv26_311__recital_6__div_1__div_o_2__img_o_3">
-                                 <Illustratie naam="image_4.jpeg"
-                                              breedte="637"
-                                              hoogte="227"
-                                              uitlijning="start"
-                                              formaat="image/jpeg"
-                                              dpi="72"/>
-                              </Figuur>
-                              <Figuur eId="recital_6__div_1__div_o_2__img_o_4"
-                                      wId="pv26_311__recital_6__div_1__div_o_2__img_o_4">
-                                 <Illustratie naam="image_5.jpeg"
-                                              breedte="637"
-                                              hoogte="404"
-                                              uitlijning="start"
-                                              formaat="image/jpeg"
-                                              dpi="72"/>
-                              </Figuur>
-                              <Figuur eId="recital_6__div_1__div_o_2__img_o_5"
-                                      wId="pv26_311__recital_6__div_1__div_o_2__img_o_5">
-                                 <Illustratie naam="image_6.jpeg"
-                                              breedte="643"
-                                              hoogte="251"
-                                              uitlijning="start"
-                                              formaat="image/jpeg"
-                                              dpi="72"/>
-                              </Figuur>
-                              <Figuur eId="recital_6__div_1__div_o_2__img_o_6"
-                                      wId="pv26_311__recital_6__div_1__div_o_2__img_o_6">
-                                 <Illustratie naam="image_7.jpeg"
-                                              breedte="643"
-                                              hoogte="372"
-                                              uitlijning="start"
-                                              formaat="image/jpeg"
-                                              dpi="72"/>
-                              </Figuur>
-                              <Figuur eId="recital_6__div_1__div_o_2__img_o_7"
-                                      wId="pv26_311__recital_6__div_1__div_o_2__img_o_7">
-                                 <Illustratie naam="image_8.jpeg"
-                                              breedte="637"
-                                              hoogte="443"
-                                              uitlijning="start"
-                                              formaat="image/jpeg"
-                                              dpi="72"/>
-                              </Figuur>
-                           </Inhoud>
-                        </Divisie>
-                     </Divisie>
-                     <Divisie eId="recital_6__div_2" wId="pv26_311__recital_6__div_2">
-                        <Kop>
-                           <Label>Artikelsgewijze toelichting</Label>
-                           <Nummer>2</Nummer>
-                           <Opschrift>Artikelsgewijze toelichting</Opschrift>
-                        </Kop>
-                        <Inhoud>
-                           <Al>NOG VULLEN</Al>
-                        </Inhoud>
-                     </Divisie>
-                  </Toelichting>
-               </MaakInitieleRegeling>
-            </WijzigBijlage>
-         </Regeling>
-      </BesluitKlassiek>
+                  </Divisie>
+               </Divisie>
+               <Divisie eId="recital_6__div_2" wId="pv26_311__recital_6__div_2">
+                  <Kop>
+                     <Label>Artikelsgewijze toelichting</Label>
+                     <Nummer>2</Nummer>
+                     <Opschrift>Artikelsgewijze toelichting</Opschrift>
+                  </Kop>
+                  <Inhoud>
+                     <Al>NOG VULLEN</Al>
+                  </Inhoud>
+               </Divisie>
+            </Toelichting>
+         </Lichaam>
+      </BesluitCompact>
    </BesluitVersie>
    <RegelingVersieInformatie>
-      <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/"><!-- Work en Expression gelijk aan @wordt uit MaakInitieleRegeling -->
+      <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <!-- Work en Expression gelijk aan @wordt uit MaakInitieleRegeling -->
          <FRBRWork>/akn/nl/act/pv26/2020/act3</FRBRWork>
          <FRBRExpression>/akn/nl/act/pv26/2020/act3/nld@2020-03-05</FRBRExpression>
          <!-- soortWork 'work_019' = Regeling -->

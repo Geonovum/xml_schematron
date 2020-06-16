@@ -1,111 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+   xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
    <BesluitVersie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <FRBRWork>/akn/nl/bill/pv25/2019/CVDR09925</FRBRWork>
-         <FRBRExpression>/akn/nl/bill/pv25/2019/CVDR09925/nld@2019-02-22</FRBRExpression>
+         <FRBRWork>/akn/nl/bill/ws0659/2019/wvl-20190906-1643</FRBRWork>
+         <FRBRExpression>/akn/nl/bill/ws0659/2019/wvl-20190906-1643/nld@2019-01-04;1.0</FRBRExpression>
          <soortWork>/join/id/stop/work_003</soortWork>
       </ExpressionIdentificatie>
       <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <eindverantwoordelijke>/tooi/id/provincie/pv25</eindverantwoordelijke>
-         <maker>/tooi/id/provincie/pv25</maker>
-         <officieleTitel>Voorbeeldregels met uitbreiding tbv Toepasbare Regels</officieleTitel>
+         <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+         <maker>/tooi/id/waterschap/ws0659</maker>
+         <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
          <onderwerpen>
-            <onderwerp>/tooi/def/concept/onbekend</onderwerp>
+            <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
          </onderwerpen>
-         <overheidsdomein>/tooi/def/concept/c_86b84a9d</overheidsdomein>
          <rechtsgebieden>
-            <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
+            <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
          </rechtsgebieden>
+         <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
          <informatieobjectRefs>
-            <informatieobjectRef>/join/id/regdata/pv25/2019/provincie_Gelderland/nld@2019-02-22</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv25/2019/Extensiveringsgebied_glastuinbouw/nld@2019-02-22</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv25/2019/Tijdelijk_verbod_nieuwvestiging_glastuinbouw/nld@2019-02-22</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv25/2019/Grondwaterbeschermingsgebieden/nld@2019-02-22</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv25/2019/Waterverbinder/nld@2019-02-22</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv25/2019/Grote_Rivieren/nld@2019-02-22</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv25/2019/Nieuwe_Hollandse_Waterline/nld@2019-02-22</informatieobjectRef>
-            <informatieobjectRef>/join/id/regdata/pv25/2019/Boringsvrijezone/nld@2019-02-22</informatieobjectRef>
+            <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
          </informatieobjectRefs>
       </BesluitMetadata>
-      <Procedure xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <Procedureverloop>
-            <bekendOp>2020-01-01</bekendOp>
-            <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
-            <procedurestappen>
-               <Procedurestap>
-                  <soortStap>/join/id/stop/procedure/stap_003</soortStap>
-                  <voltooidOp>2020-01-01</voltooidOp>
-               </Procedurestap>
-            </procedurestappen>
-         </Procedureverloop>
-      </Procedure>
-         <BesluitDoel xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-            <BeoogdeRegelgeving>
-               <BeoogdeRegeling>
-                  <doel>/akn/ontology/event/nl/pv25/sync/Instelling</doel>
-                  <instrumentVersie>/akn/nl/act/pv25/2019/Regeling_001/nld@2020-07-01</instrumentVersie>
-                  <eId>art_II</eId>
-               </BeoogdeRegeling>
-               <BeoogdeRegeling>
-                  <doel>/akn/ontology/event/nl/pv25/sync/Instelling</doel>
-                  <instrumentVersie>/join/id/regdata/pv25/2019/provincie_Gelderland/nld@2019-02-22</instrumentVersie>
-                  <eId>cmp_I__list_o_1__item_o_1__ref_o_1</eId>
-               </BeoogdeRegeling>
-               <BeoogdeRegeling>
-                  <doel>/akn/ontology/event/nl/pv25/sync/Instelling</doel>
-                  <instrumentVersie>/join/id/regdata/pv25/2019/Extensiveringsgebied_glastuinbouw/nld@2019-02-22</instrumentVersie>
-                  <eId>cmp_I__list_o_1__item_o_2__ref_o_1</eId>
-               </BeoogdeRegeling>
-               <BeoogdeRegeling>
-                  <doel>/akn/ontology/event/nl/pv25/sync/Instelling</doel>
-                  <instrumentVersie>/join/id/regdata/pv25/2019/Tijdelijk_verbod_nieuwvestiging_glastuinbouw/nld@2019-02-22</instrumentVersie>
-                  <eId>cmp_I__list_o_1__item_o_3__ref_o_1</eId>
-               </BeoogdeRegeling>
-               <BeoogdeRegeling>
-                  <doel>/akn/ontology/event/nl/pv25/sync/Instelling</doel>
-                  <instrumentVersie>/join/id/regdata/pv25/2019/Grondwaterbeschermingsgebieden/nld@2019-02-22</instrumentVersie>
-                  <eId>cmp_I__list_o_1__item_o_4__ref_o_1</eId>
-               </BeoogdeRegeling>
-               <BeoogdeRegeling>
-                  <doel>/akn/ontology/event/nl/pv25/sync/Instelling</doel>
-                  <instrumentVersie>/join/id/regdata/pv25/2019/Waterverbinder/nld@2019-02-22</instrumentVersie>
-                  <eId>cmp_I__list_o_1__item_o_5__ref_o_1</eId>
-               </BeoogdeRegeling>
-               <BeoogdeRegeling>
-                  <doel>/akn/ontology/event/nl/pv25/sync/Instelling</doel>
-                  <instrumentVersie>/join/id/regdata/pv25/2019/Grote_Rivieren/nld@2019-02-22</instrumentVersie>
-                  <eId>cmp_I__list_o_1__item_o_6__ref_o_1</eId>
-               </BeoogdeRegeling>
-               <BeoogdeRegeling>
-                  <doel>/akn/ontology/event/nl/pv25/sync/Instelling</doel>
-                  <instrumentVersie>/join/id/regdata/pv25/2019/Nieuwe_Hollandse_Waterline/nld@2019-02-22</instrumentVersie>
-                  <eId>cmp_I__list_o_1__item_o_7__ref_o_1</eId>
-               </BeoogdeRegeling>
-               <BeoogdeRegeling>
-                  <doel>/akn/ontology/event/nl/pv25/sync/Instelling</doel>
-                  <instrumentVersie>/join/id/regdata/pv25/2019/Boringsvrijezone/nld@2019-02-22</instrumentVersie>
-                  <eId>cmp_I__list_o_1__item_o_8__ref_o_1</eId>
-               </BeoogdeRegeling>
-            </BeoogdeRegelgeving>
-         </BesluitDoel>
-      <BesluitKlassiek xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
-         <Regeling>
-            <RegelingOpschrift eId="longTitle_o_1" wId="longTitle_o_1">
-               <Al>Besluit tot vaststelling van de Omgevingsverordening Gelderland</Al>
-            </RegelingOpschrift>
-            <Aanhef eId="formula_1_o_1" wId="formula_1_o_1">
-               <Al>Gedeputeerde Staten van Gelderland</Al>
-               <Considerans>
-                  <Al>NOG INVULLEN</Al>
-               </Considerans>
-               <Afkondiging>
-                  <Al>Besluiten:</Al>
-               </Afkondiging>
-            </Aanhef>
-            <Lichaam eId="body" wId="body">
+      <data:Procedureverloop>
+         <data:bekendOp>2020-01-01</data:bekendOp>
+         <data:procedurestappen>
+            <data:Procedurestap>
+               <data:soortStap/>
+               <data:voltooidOp>2020-01-01</data:voltooidOp>
+            </data:Procedurestap>
+         </data:procedurestappen>
+      </data:Procedureverloop>
+      <data:ConsolidatieInformatie/>
+      <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <RegelingOpschrift wId="abc" eId="abc">
+            <Al/>
+         </RegelingOpschrift>
+         <Lichaam eId="body" wId="body">
                <WijzigArtikel eId="art_I" wId="pv25_1__art_I">
                   <Kop>
                      <Label>Artikel</Label>

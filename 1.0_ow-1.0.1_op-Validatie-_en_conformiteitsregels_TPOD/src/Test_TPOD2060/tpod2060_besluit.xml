@@ -1,58 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+   xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
    <BesluitVersie>
-      <BesluitKlassiek xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
-         <Regeling>
-            <RegelingOpschrift eId="longTitle_o_1" wId="longTitle_o_1">
-               <Al>Besluit tot vaststelling van de Omgevingsverordening Gelderland</Al>
-            </RegelingOpschrift>
-            <Aanhef eId="formula_1_o_1" wId="formula_1_o_1">
-               <Al>Gedeputeerde Staten van Gelderland</Al>
-               <Considerans>
-                  <Al>NOG INVULLEN</Al>
-               </Considerans>
-               <Afkondiging>
-                  <Al>Besluiten:</Al>
-               </Afkondiging>
-            </Aanhef>
-            <Lichaam eId="body" wId="body">
-               <WijzigArtikel eId="art_I" wId="pv25_1__art_I">
-                  <Kop>
-                     <Label>Artikel</Label>
-                     <Nummer>I</Nummer>
-                  </Kop>
-                  <Wat>De Omgevingsverordening Gelderland zoals opgenomen in de bijlage wordt vastgesteld.</Wat>
-               </WijzigArtikel>
-               <Artikel eId="art_II" wId="pv25_1__art_II">
-                  <Kop>
-                     <Label>Artikel</Label>
-                     <Nummer>II</Nummer>
-                  </Kop>
-                  <Inhoud>
-                     <Al>Dit besluit treedt in werking per 8 maart 2019</Al>
-                  </Inhoud>
-               </Artikel>
-            </Lichaam>
-            <Sluiting eId="formula_2_o_1" wId="formula_2_o_1">
-               <Al>Gegeven te Arnhem, 8 maart 2019</Al>
-               <Ondertekening>
-                  <Al>Gedeputeerde Staten van Gelderland</Al>
-                  <Al>J. van Gils</Al>
-                  <Al>-</Al>
-               </Ondertekening>
-            </Sluiting>
-            <WijzigBijlage eId="cmp_A" wId="pv25_1__cmp_A">
-               <Kop>
-                  <Label>Bijlage</Label>
-                  <Nummer>A</Nummer>
-                  <Opschrift>Bijlage bij artikel I</Opschrift>
-               </Kop>
-               <MaakInitieleRegeling FRBRwork="/akn/nl/act/pv25/2019/reg123/nld@2019-02-22"
-                                     wordt="/akn/nl/act/pv25/2019/reg123/nld@2019-02-22"
-                                     componentnaam="component_01">
-                  <Lichaam eId="body" wId="body">
+      <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <FRBRWork>/akn/nl/bill/ws0659/2019/wvl-20190906-1643</FRBRWork>
+         <FRBRExpression>/akn/nl/bill/ws0659/2019/wvl-20190906-1643/nld@2019-01-04;1.0</FRBRExpression>
+         <soortWork>/join/id/stop/work_003</soortWork>
+      </ExpressionIdentificatie>
+      <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+         <maker>/tooi/id/waterschap/ws0659</maker>
+         <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
+         <onderwerpen>
+            <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
+         </onderwerpen>
+         <rechtsgebieden>
+            <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
+         </rechtsgebieden>
+         <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
+         <informatieobjectRefs>
+            <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
+         </informatieobjectRefs>
+      </BesluitMetadata>
+      <data:Procedureverloop>
+         <data:bekendOp>2020-01-01</data:bekendOp>
+         <data:procedurestappen>
+            <data:Procedurestap>
+               <data:soortStap/>
+               <data:voltooidOp>2020-01-01</data:voltooidOp>
+            </data:Procedurestap>
+         </data:procedurestappen>
+      </data:Procedureverloop>
+      <data:ConsolidatieInformatie/>
+      <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <RegelingOpschrift wId="abc" eId="abc">
+            <Al/>
+         </RegelingOpschrift>
+         <Lichaam eId="body" wId="body">
                      <Hoofdstuk eId="chp_1" wId="pv25_1__chp_1">
                         <Kop>
                            <Label>Hoofdstuk</Label>

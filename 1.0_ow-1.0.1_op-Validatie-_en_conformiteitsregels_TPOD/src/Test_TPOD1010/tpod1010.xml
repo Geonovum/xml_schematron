@@ -1,167 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+    xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
     xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
     <BesluitVersie>
-        <BesluitKlassiek xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
-            <Bijlage eId="cmp_I" wId="gm0037_1__cmp_I">
+        <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <FRBRWork>/akn/nl/bill/ws0659/2019/wvl-20190906-1643</FRBRWork>
+            <FRBRExpression>/akn/nl/bill/ws0659/2019/wvl-20190906-1643/nld@2019-01-04;1.0</FRBRExpression>
+            <soortWork>/join/id/stop/work_003</soortWork>
+        </ExpressionIdentificatie>
+        <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+            <maker>/tooi/id/waterschap/ws0659</maker>
+            <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
+            </onderwerpen>
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
+            </rechtsgebieden>
+            <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
+            <informatieobjectRefs>
+                <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
+            </informatieobjectRefs>
+        </BesluitMetadata>
+        <data:Procedureverloop>
+            <data:bekendOp>2020-01-01</data:bekendOp>
+            <data:procedurestappen>
+                <data:Procedurestap>
+                    <data:soortStap/>
+                    <data:voltooidOp>2020-01-01</data:voltooidOp>
+                </data:Procedurestap>
+            </data:procedurestappen>
+        </data:Procedureverloop>
+        <data:ConsolidatieInformatie/>
+        <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+            <RegelingOpschrift wId="abc" eId="abc">
+                <Al/>
+            </RegelingOpschrift>
+            <Lichaam eId="body" wId="body">
+                <Artikel wId="dsgs" eId="sdfgsd">
+                    <Kop>
+                        <Label>sdf</Label>
+                    </Kop>
+                    <Vervallen/>
+                </Artikel>
+            </Lichaam>
+            <Sluiting wId="aa" eId="aa">
+                <Slotformulering>
+                    <Al>aaa</Al>
+                </Slotformulering>
+            </Sluiting>
+            <Bijlage eId="aaa" wId="sss">
                 <Kop>
-                    <Label>Bijlage</Label>
-                    <Nummer>I</Nummer>
-                    <Opschrift>Overzicht Informatieobjecten</Opschrift>
+                    <Label>sad</Label>
                 </Kop>
-                <Inhoud>
-                    <Begrippenlijst eId="cmp_I__list_o_1" wId="gm0037_1__cmp_I__list_o_1">
-                        <Begrip eId="cmp_I__list_o_1__item_o_3"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_3">
-                            <Term>Centrumgebied</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1"
-                                        doel="/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                        <Begrip eId="cmp_I__list_o_1__item_o_5"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_5">
-                            <Term>Exploiteren speelautomatenhal</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_1"
-                                        doel="/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                        <Begrip eId="cmp_I__list_o_1__item_o_34"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_34">
-                            <Term>Zone A</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_15"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_15"
-                                        doel="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                        <Begrip eId="cmp_I__list_o_1__item_o_46"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_46">
-                            <Term>Zone C</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_17"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_17"
-                                        doel="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                        <Begrip eId="cmp_I__list_o_1__item_o_2"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_2">
-                            <Term>Zone D</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_13"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_13"
-                                        doel="/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                        <Begrip eId="cmp_I__list_o_1__item_o_4"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_4">
-                            <Term>Zone E</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_1"
-                                        doel="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                    </Begrippenlijst>
-                    <Begrippenlijst eId="cmp_I__list_o_12" wId="gm0037_1__cmp_I__list_o_12">
-                        <Begrip eId="cmp_I__list_o_1__item_o_32"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_32">
-                            <Term>Zone D</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_12"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_12"
-                                        doel="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                        <Begrip eId="cmp_I__list_o_1__item_o_42"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_42">
-                            <Term>Zone E</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_128"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_128"
-                                        doel="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                        <Begrip eId="cmp_I__list_o_1__item_o_22"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_22">
-                            <Term>Centrumgebied</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_12"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_12"
-                                        doel="/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                        <Begrip eId="cmp_I__list_o_1__item_o_321"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_321">
-                            <Term>Zone A</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_121"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_121"
-                                        doel="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                        <Begrip eId="cmp_I__list_o_1__item_o_421"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_421">
-                            <Term>Zone C</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_122"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_122"
-                                        doel="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                        <Begrip eId="cmp_I__list_o_1__item_o_52"
-                            wId="gm0037_1__cmp_I__list_o_1__item_o_52">
-                            <Term>Exploiteren speelautomatenhal</Term>
-                            <Definitie>
-                                <Al>
-                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_12"
-                                        wId="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_12"
-                                        doel="/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520"
-                                        >/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520</ExtIoRef>
-                                </Al>
-                            </Definitie>
-                        </Begrip>
-                    </Begrippenlijst>
-                </Inhoud>
+                <Divisie eId="cmp_I" wId="gm0037_1__cmp_I">
+                    <Kop>
+                        <Label>Bijlage</Label>
+                        <Nummer>I</Nummer>
+                        <Opschrift>Overzicht Informatieobjecten</Opschrift>
+                    </Kop>
+                    <Divisietekst wId="sdf" eId="sdfsd">
+                        <Inhoud>
+                            <Begrippenlijst eId="cmp_I__list_o_1" wId="gm0037_1__cmp_I__list_o_1">
+                                <Begrip eId="cmp_I__list_o_1__item_o_3"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_3">
+                                    <Term>Centrumgebied</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1"
+                                                ref="/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip eId="cmp_I__list_o_1__item_o_5"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_5">
+                                    <Term>Exploiteren speelautomatenhal</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_1"
+                                                ref="/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip eId="cmp_I__list_o_1__item_o_34"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_34">
+                                    <Term>Zone A</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_15"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_15"
+                                                ref="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip eId="cmp_I__list_o_1__item_o_46"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_46">
+                                    <Term>Zone C</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_17"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_17"
+                                                ref="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip eId="cmp_I__list_o_1__item_o_2"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_2">
+                                    <Term>Zone D</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_13"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_13"
+                                                ref="/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip eId="cmp_I__list_o_1__item_o_4"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_4">
+                                    <Term>Zone E</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_1"
+                                                ref="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                            </Begrippenlijst>
+                            <Begrippenlijst eId="cmp_I__list_o_12" wId="gm0037_1__cmp_I__list_o_12">
+                                <Begrip eId="cmp_I__list_o_1__item_o_32"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_32">
+                                    <Term>Zone D</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_12"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_12"
+                                                ref="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip eId="cmp_I__list_o_1__item_o_42"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_42">
+                                    <Term>Zone E</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_128"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_128"
+                                                ref="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip eId="cmp_I__list_o_1__item_o_22"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_22">
+                                    <Term>Centrumgebied</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_12"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_12"
+                                                ref="/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip eId="cmp_I__list_o_1__item_o_321"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_321">
+                                    <Term>Zone A</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_121"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_121"
+                                                ref="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip eId="cmp_I__list_o_1__item_o_421"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_421">
+                                    <Term>Zone C</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_122"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_122"
+                                                ref="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip eId="cmp_I__list_o_1__item_o_52"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_52">
+                                    <Term>Exploiteren speelautomatenhal</Term>
+                                    <Definitie>
+                                        <Al>
+                                            <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_12"
+                                                wId="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_12"
+                                                ref="/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520"
+                                                >/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520</ExtIoRef>
+                                        </Al>
+                                    </Definitie>
+                                </Begrip>
+                            </Begrippenlijst>
+                        </Inhoud>
+                    </Divisietekst>
+                </Divisie>
             </Bijlage>
-        </BesluitKlassiek>
+        </BesluitCompact>
     </BesluitVersie>
     <RegelingVersieInformatie>
         <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">

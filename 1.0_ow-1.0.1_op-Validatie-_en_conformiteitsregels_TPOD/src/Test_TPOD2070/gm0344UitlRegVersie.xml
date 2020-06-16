@@ -1,85 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<UitleveringRegelingVersie xmlns="https://standaarden.overheid.nl/lvbb/DSO-PI12"
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
   xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
-  xmlns:lvbb="http://standaarden.overheid.nl/lvbb/stop/"
-  xmlns:uit="https://standaarden.overheid.nl/lvbb/DSO-PI12" schemaversie="0.98.4">
-  <!--Uitgevoerd: 2020-02-24T13:05:17.228+01:00 Bron: stcrt-2020-8794-->
-  <data:ExpressionIdentificatie>
-    <data:FRBRWork>/akn/nl/act/gm0344/2020/OMGPLAN01</data:FRBRWork>
-    <data:FRBRExpression>/akn/nl/act/gm0344/2020/OMGPLAN01/nld@1-0</data:FRBRExpression>
-    <!-- MBT Expression: NOG CHECKEN / AFSTEMMEN MET EB en VNG WELKE VERSIEDATUM WE GAAN DOEN-->
-    <!-- soortWork 'work_019' = Regeling (Keuze voor work_019 correct? 'work_006' = Geconsolideerde regeling)-->
-    <soortWork>/join/id/stop/work_019</soortWork>
-  </data:ExpressionIdentificatie>
-  <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-    <eindverantwoordelijke>/tooi/id/gemeente/gm0344</eindverantwoordelijke>
-    <!-- voor 'maker' is ministerie BZK opgenomen. Is dat correct? AFSTEMMEN MET EB EN VNG-->
-    <maker>/tooi/id/ministerie/mnre1034</maker>
-    <officieleTitel>Omgevingsplan gemeente Utrecht</officieleTitel>
-    <redactioneleTitel>Omgevingsplan gemeente Utrecht</redactioneleTitel>
-    <!-- voorkeursafkorting NOG AFSTEMMEN MET EB EN VNG -->
-    <voorkeursafkorting>OMGPLAN</voorkeursafkorting>
-    <versienummer>1</versienummer>
-    <!-- soortRegeling 'regelingtype_003' = Omgevingsplan -->
-    <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
-    <!-- grondslag van Omgevingsplan DIT IS GEBASEERD OP INFORMATIE VAN UVW VOOR WATERSCHAPSVERORDENING, MOET DUS NOG AFGESTEMD WORDEN MET EB EN VNG  -->
-    <grondslagen>
-      <grondslag>
-        <!-- uri's voor grondslagen ingevuld met imaginaire AKN-ids DEZE MOETEN DUS NOG VERVANGEN WORDEN
-        Hoofdstuk 22 van de Omgevingswet is in STB 2016-156 gereserveerd; onderverdeling is niet bekend.-->
-        <TekstReferentie>
-          <uri>/akn/nl/act/land/2019/BWBR343206#chp_22__art_22.1</uri>
-          <label>artikel 22.1, onder b van de Omgevingswet</label>
-        </TekstReferentie>
-      </grondslag>
-      <!-- Invoeringsbesluit Omgevingswet niet gevonden als OP, AKNid is volledig imaginair  -->
-      <grondslag>
-        <TekstReferentie>
-          <uri>/akn/nl/act/land/2019/BWBR354207#chp_7__art_7.1</uri>
-          <label>artikel 7.1 van het Invoeringsbesluit Omgevingswet </label>
-        </TekstReferentie>
-      </grondslag>
-      <grondslag>
-        <TekstReferentie>
-          <uri>/akn/nl/act/land/2019/BWBR354207#chp_7__art_7.2</uri>
-          <label>artikel 7.2 van het Invoeringsbesluit Omgevingswet </label>
-        </TekstReferentie>
-      </grondslag>
-      <grondslag>
-        <TekstReferentie>
-          <uri>/akn/nl/act/land/2019/BWBR354207#chp_7__art_7.3</uri>
-          <label>artikel 7.3 van het Invoeringsbesluit Omgevingswet </label>
-        </TekstReferentie>
-      </grondslag>
-    </grondslagen>
-    <onderwerpen>
-      <!-- ONDERWERP, OVERHEIDSDOMEIN EN RECHTSGEBIEDEN NOG AFSTEMMEN MET EB EN VNG -->
-      <!-- onderwerp: wonen -->
-      <onderwerp>/tooi/def/concept/c_124eaf3a</onderwerp>
-      <!-- onderwerp: natuur en milieu -->
-      <onderwerp>/tooi/def/concept/c_afa30a11</onderwerp>
-    </onderwerpen>
-    <!-- overheidsdomein (thema): bouwen, wonen en leefomgeving -->
-    <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
-    <!-- rechtsgebied omgevingsrecht. Subterm van ruimtelijke ordening en milieu -->
-    <rechtsgebieden>
-      <rechtsgebied>/tooi/def/concept/c_638d8062</rechtsgebied>
-    </rechtsgebieden>
-  </RegelingMetadata>
-  <RegelingVersie xmlns="https://standaarden.overheid.nl/stop/imop/tekst/"
-    schemaversie="0.98.1-kern">
-    <Regeling>
-      <RegelingOpschrift wId="longTitle_o_1" eId="longTitle_o_1">
-        <Al>Omgevingsplan gemeente Utrecht</Al>
-      </RegelingOpschrift>
-      <Aanhef wId="formula_1" eId="formula_1">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+  xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
+  <BesluitVersie>
+    <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+      <FRBRWork>/akn/nl/bill/ws0659/2019/wvl-20190906-1643</FRBRWork>
+      <FRBRExpression>/akn/nl/bill/ws0659/2019/wvl-20190906-1643/nld@2019-01-04;1.0</FRBRExpression>
+      <soortWork>/join/id/stop/work_003</soortWork>
+    </ExpressionIdentificatie>
+    <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+      <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+      <maker>/tooi/id/waterschap/ws0659</maker>
+      <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
+      <onderwerpen>
+        <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
+      </onderwerpen>
+      <rechtsgebieden>
+        <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
+      </rechtsgebieden>
+      <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
+      <informatieobjectRefs>
+        <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
+      </informatieobjectRefs>
+    </BesluitMetadata>
+    <data:Procedureverloop>
+      <data:bekendOp>2020-01-01</data:bekendOp>
+      <data:procedurestappen>
+        <data:Procedurestap>
+          <data:soortStap/>
+          <data:voltooidOp>2020-01-01</data:voltooidOp>
+        </data:Procedurestap>
+      </data:procedurestappen>
+    </data:Procedureverloop>
+    <data:ConsolidatieInformatie/>
+    <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+      <RegelingOpschrift wId="abc" eId="abc">
         <Al/>
-        <Considerans>
-          <Al>Gelet op de artikelen 22.1, onder b van de Omgevingswet en 7.1, 7.2 en 7.3 van het
-            Invoeringsbesluit Omgevingswet</Al>
-        </Considerans>
-      </Aanhef>
-      <Lichaam wId="body" eId="body">
+      </RegelingOpschrift>
+      <Lichaam eId="body" wId="body">
         <Hoofdstuk wId="gm0344_1-0__chp_1" eId="chp_1">
           <Kop>
             <Label>HOOFDSTUK</Label>
