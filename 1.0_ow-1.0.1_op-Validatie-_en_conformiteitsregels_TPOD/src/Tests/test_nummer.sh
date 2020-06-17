@@ -11,7 +11,7 @@ else
       cd ..
       if [ -d Test_$1 ]
       then
-        cp -R Validaties Test_$1
+        cp -R ../Validaties Test_$1
         rm -f -r Test_$1/Validaties/Opdracht
         mkdir Test_$1/Validaties/Opdracht
         cp Test_$1/*.xml Test_$1/Validaties/Opdracht
