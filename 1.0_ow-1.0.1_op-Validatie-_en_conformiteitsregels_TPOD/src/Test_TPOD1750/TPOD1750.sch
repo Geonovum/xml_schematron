@@ -91,7 +91,7 @@
                 "/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD1750: Betreft <sch:value-of select="rol:identificatie"
-                />: Een Activiteit moet een gebied of gebiedengroep zijn (en mag geen punt,
+                />: Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt,
                 puntengroep, lijn of lijnengroep zijn). </sch:assert>
         </sch:rule>
     </sch:pattern>
