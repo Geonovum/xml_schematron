@@ -27,11 +27,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0534.activiteit.7</rol:identificatie>
-					<rol:naam>beperkingengebiedactiviteit waterstaatswerk</rol:naam>
-					<rol:groep>wateractiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0534.gebiedengroep.201911221101000"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0534.activiteit.Omgevingsplanactiviteit"/>
 					</rol:bovenliggendeActiviteit>

@@ -51,13 +51,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000241</rol:identificatie>
-					<!-- Deze activiteit is voor de 1e keer ontstaan/gecreeerd in artikel 2.4 nl.imow-gm0037.Regeltekst.2019000002 -->
-					<rol:naam>uitoefenen van bedrijfstypen van categorie 2</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-						<!-- Deze activiteit geldt bij de 1e keer dat deze ontstaat alleen voor locatie 1 -->
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
@@ -70,13 +65,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000242</rol:identificatie>
-					<!-- Deze activiteit is>
-					<rol:naam>wonen in een bedrijfswoning</rol:naam>
-					Deze activiteit wordt opnieuwgebruikt in artikel 2.11 nl.imow-gm0037.Regeltekst.20190000011 -->
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
@@ -88,11 +78,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000243</rol:identificatie>
-					<rol:naam>aanleggen en instandhouden van nutsvoorzieningen</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000540"/>
 					</rol:bovenliggendeActiviteit>
@@ -103,11 +90,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.20190002431111</rol:identificatie>
-					<rol:naam>aanleggen en instandhouden van nutsvoorzieningen</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000243"/>
 					</rol:bovenliggendeActiviteit>
@@ -118,11 +102,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000244</rol:identificatie>
-					<rol:naam>aanleggen en instandhouden van voorzieningen voor de waterhuishouding</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
@@ -134,11 +115,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.20190002453</rol:identificatie>
-					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002451"/>
 					</rol:bovenliggendeActiviteit>
@@ -149,11 +127,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.20190002451</rol:identificatie>
-					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002452"/>
 					</rol:bovenliggendeActiviteit>
@@ -164,11 +139,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.20190002452</rol:identificatie>
-					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002453"/>
 					</rol:bovenliggendeActiviteit>
@@ -179,11 +151,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000246</rol:identificatie>
-					<rol:naam>uitoefenen van detailhandel in ter plaatse vervaardigde goederen</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000002"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
@@ -195,11 +164,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000730</rol:identificatie>
-					<rol:naam>exploiteren van inrichtingen</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
@@ -211,11 +177,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000740</rol:identificatie>
-					<rol:naam>exploiteren van risicovolle inrichtingen</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
@@ -227,11 +190,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000750</rol:identificatie>
-					<rol:naam>opslagterrein</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>
@@ -244,10 +204,7 @@
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000540</rol:identificatie>
 					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
-					<rol:groep>milieubelastende activiteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:gerelateerdeActiviteit>
 						<!-- Regels van gerelateerde activiteit zijn contextueel relevant -->
 						<rol:ActiviteitRef
@@ -264,11 +221,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000760</rol:identificatie>
-					<rol:naam>opslaan van motorbrandstoffen niet zijnde lpg</rol:naam>
-					<rol:groep>milieubelastende activiteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.FunctioneleStructuur0001"/>
@@ -280,11 +234,8 @@
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019000660</rol:identificatie>
-					<rol:naam>exploiteren van een speelautomatenhal</rol:naam>
-					<rol:groep>gebruiksactiviteit</rol:groep>
-					<rol:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
-					</rol:locatieaanduiding>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef
 							xlink:href="nl.imow-mn002.activiteit.Omgevingsplanactiviteit"/>

@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ow-dc:owBestand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                 xmlns:gml="http://www.opengis.net/gml/3.2"
-                 xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190901"
-                 xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
-                 xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-                 xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709"
-                 xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
-                 xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
-                 xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301"
-                 xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190901"
-                 xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
-                 xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-                 xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
-                 xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
-                 xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190901"
-                 xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst/v20190901"
-                 xmlns:vt-ref="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901"
-                 xsi:schemaLocation="http://www.geostandaarden.nl/imow https://register.geostandaarden.nl/xmlschema/tpod/v0.98.3-kern/bestanden-ow/deelbestand-ow/v20190901/IMOW_Deelbestand_v0_9_8_2.xsd">
-   <sl:standBestand>
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+   xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+   xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+   xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+   xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+   xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+   xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+   xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+   xmlns:p="http://www.geostandaarden.nl/imow/pons"
+   xmlns:r="http://www.geostandaarden.nl/imow/regels"
+   xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+   xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">   <sl:standBestand>
       <sl:dataset>gm0344</sl:dataset>
       <sl:inhoud>
          <sl:gebied>gm0344</sl:gebied>
@@ -29,13 +24,10 @@
       </sl:inhoud>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000406">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.AcculaderInWerkingHebben</rol:identificatie>
-               <rol:naam>Acculader in werking hebben</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -44,13 +36,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000507">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.ActBetrGemMonument</rol:identificatie>
-               <rol:naam>Activiteit die betrekking heeft op een gemeentelijk monument</rol:naam>
-               <rol:groep>monumentactiviteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.OverigeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -59,13 +48,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000293">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LozenCalamiteitOef</rol:identificatie>
-               <rol:naam>Afvalwater lozen bij calamiteitenoefeningen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -74,13 +60,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000313">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LozenMakenBetonmortel</rol:identificatie>
-               <rol:naam>Afvalwater lozen bij maken van betonmortel</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -89,13 +72,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000275">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LozenOpslaanGoederen</rol:identificatie>
-               <rol:naam>Afvalwater lozen bij opslaan en overslaan van goederen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -104,13 +84,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000272">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LozenReinigenBouww</rol:identificatie>
-               <rol:naam>Afvalwater lozen bij reinigen van bouwwerken</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -119,13 +96,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000288">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LozenSchoonmDrinkwleid</rol:identificatie>
-               <rol:naam>Afvalwater lozen bij schoonmaken drinkwaterleidingen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -134,13 +108,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000298">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LozenTelenGewassen</rol:identificatie>
-               <rol:naam>Afvalwater lozen bij telen, kweken, spoelen of sorteren van gewassen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -149,13 +120,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000497">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LozenSchoonwRiool</rol:identificatie>
-               <rol:naam>Afvalwater of andere afvalstoffen lozen in een schoonwaterriool</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -164,13 +132,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000494">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LozenOpInBodem</rol:identificatie>
-               <rol:naam>Afvalwater op of in de bodem te lozen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -179,13 +144,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000244">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LozenHemelwater</rol:identificatie>
-               <rol:naam>Afvloeiend hemelwater lozen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -194,13 +156,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000526">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.AlarminstallatieHebben</rol:identificatie>
-               <rol:naam>Alarminstallatie hebben</rol:naam>
-               <rol:groep>alarminstallatieactiviteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.OverigeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -209,13 +168,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000485">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.AntihagelkanonHebben</rol:identificatie>
-               <rol:naam>Antihagelkanonnen in werking hebben</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -224,13 +180,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000322">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.BetonUitwassen</rol:identificatie>
-               <rol:naam>Beton uitwassen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -239,13 +192,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000061">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.BijbehorendBouwwerk</rol:identificatie>
-               <rol:naam>Bijbehorend bouwwerk bouwen, in stand houden of gebruiken</rol:naam>
-               <rol:groep>bouwactiviteit ruimtelijk</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.BouwwerkBouwen"/>
                </rol:bovenliggendeActiviteit>
@@ -254,13 +204,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000506">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.BouwwerkSlopen</rol:identificatie>
-               <rol:naam>Bouwwerk slopen</rol:naam>
-               <rol:groep>overig</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.OverigeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -269,13 +216,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000061">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.BouwwerkVeranderen</rol:identificatie>
-               <rol:naam>Bouwwerk veranderen</rol:naam>
-               <rol:groep>bouwactiviteit ruimtelijk</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.BouwwerkBouwen"/>
                </rol:bovenliggendeActiviteit>
@@ -299,13 +243,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000061">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.BuisleidingBouwen</rol:identificatie>
-               <rol:naam>Buisleiding bouwen, in stand houden of gebruiken</rol:naam>
-               <rol:groep>bouwactiviteit ruimtelijk</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.BouwwerkBouwen"/>
                </rol:bovenliggendeActiviteit>
@@ -314,13 +255,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000371">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.DierenSlachten</rol:identificatie>
-               <rol:naam>Dieren slachten en dierlijke bijproducten bewerken vlees, vis of organen uitsnijden</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -329,13 +267,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000492">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.DierlijkeMestOpslaan</rol:identificatie>
-               <rol:naam>Dierlijke meststoffen opslaan</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -344,13 +279,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000396">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.ElektrWindturbine</rol:identificatie>
-               <rol:naam>Elektriciteit opwekken met een windturbine</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -359,13 +291,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000098">
+            <rol:Activiteit">
                <rol:identificatie>nl.imow-gm0344.activiteit.Energiebesparing</rol:identificatie>
-               <rol:naam>Energiebesparing</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -374,13 +303,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000334">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.FotoMateriaalOntw</rol:identificatie>
-               <rol:naam>Fotografisch materiaal ontwikkelen of afdrukken</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -389,13 +315,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000430">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.SportBuitenlucht</rol:identificatie>
-               <rol:naam>Gelegenheid bieden voor het beoefenen van sport in de buitenlucht</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -404,13 +327,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000489">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GenetischGemOrganGebr</rol:identificatie>
-               <rol:naam>Genetisch gemodificeerde organismen gebruiken</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -419,13 +339,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000476">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GeslotenBodemenergInst</rol:identificatie>
-               <rol:naam>Gesloten bodemenergiesysteem installeren</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -434,13 +351,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000228">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GrondwLozenSanering</rol:identificatie>
-               <rol:naam>Grondwater lozen bij sanering of ontwatering</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -449,13 +363,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000529">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.MakenHandelsreclame</rol:identificatie>
-               <rol:naam>Handelsreclame maken of voeren</rol:naam>
-               <rol:groep>reclameactiviteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.OverigeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -464,13 +375,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000527">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.HoutopstandVellen</rol:identificatie>
-               <rol:naam>Houtopstand vellen</rol:naam>
-               <rol:groep>overig</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.OverigeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -479,13 +387,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000253">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.HuishAfvalwLozen</rol:identificatie>
-               <rol:naam>Huishoudelijk afvalwater lozen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -494,13 +399,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000266">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.KoelwaterLozen</rol:identificatie>
-               <rol:naam>Koelwater lozen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -509,13 +411,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000447">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.KuilvoerOpslaan</rol:identificatie>
-               <rol:naam>Kuilvoer of vaste bijvoedermiddelen opslaan</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -524,13 +423,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000483">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LPGTanken</rol:identificatie>
-               <rol:naam>LPG tanken</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -539,13 +435,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000459">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.FokkenLandbHuisdieren</rol:identificatie>
-               <rol:naam>Landbouwhuisdieren, andere zoogdieren of vogels fokken, houden of trainen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -554,13 +447,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000504">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.BouwwerkGebruiken</rol:identificatie>
-               <rol:naam>Locaties of bouwwerken gebruiken</rol:naam>
-               <rol:groep>overig</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.OverigeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -569,13 +459,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000479">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.MadenVliegInsectKweken</rol:identificatie>
-               <rol:naam>Maden van vliegende insecten kweken</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -584,13 +471,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000345">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.MotorvoertuigWassen</rol:identificatie>
-               <rol:naam>Motorvoertuigen wassen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -599,13 +483,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000353">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.NietIndVoedselbereid</rol:identificatie>
-               <rol:naam>Niet-industriële voedselbereiding</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -614,13 +495,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000409">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.Parkeergarage</rol:identificatie>
-               <rol:naam>Parkeergelegenheid bieden in een parkeergarage</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -629,13 +507,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000473">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.PolyesterharsVerw</rol:identificatie>
-               <rol:naam>Polyesterhars verwerken</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -644,13 +519,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000487">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.LaboratoriumBiolAgens</rol:identificatie>
-               <rol:naam>Praktijkruimte of laboratorium waar gewerkt met biologische agens in werking hebben</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -659,13 +531,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000481">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.PropaanOpslaan</rol:identificatie>
-               <rol:naam>Propaan of propeen opslaan</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -674,13 +543,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000061">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.RecreatiefNachtverblijfBouw</rol:identificatie>
-               <rol:naam>Recreatief nachtverblijf bouwen, in stand houden of gebruiken</rol:naam>
-               <rol:groep>bouwactiviteit ruimtelijk</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.BouwwerkBouwen"/>
                </rol:bovenliggendeActiviteit>
@@ -689,13 +555,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000330">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.RecrVisvijver</rol:identificatie>
-               <rol:naam>Recreatieve visvijvers exploiteren</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -704,13 +567,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000531">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.RoerendeZakenOpslaan</rol:identificatie>
-               <rol:naam>Roerende zaken opslaan</rol:naam>
-               <rol:groep>opslagactiviteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.OverigeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -719,13 +579,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000523">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.SlopenBeschStadsgezicht</rol:identificatie>
-               <rol:naam>Slopen in een beschermd stads of dorpsgezicht</rol:naam>
-               <rol:groep>overig</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.OverigeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -734,13 +591,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000061">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.SportSpeeltBouwen</rol:identificatie>
-               <rol:naam>Sport- of speeltoestel bouwen, in stand houden of gebruiken</rol:naam>
-               <rol:groep>bouwactiviteit ruimtelijk</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.BouwwerkBouwen"/>
                </rol:bovenliggendeActiviteit>
@@ -749,13 +603,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000414">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.TraditioneelSchieten</rol:identificatie>
-               <rol:naam>Traditioneel schieten</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -764,13 +615,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000158">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.Trillingen</rol:identificatie>
-               <rol:naam>Trillingen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -779,13 +627,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000525">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.UitwegMakenHebbenVeranderen</rol:identificatie>
-               <rol:naam>Uitweg maken, hebben of veranderen of het gebruik daarvan te veranderen</rol:naam>
-               <rol:groep>uitritactiviteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.OverigeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -794,13 +639,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000436">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.VasteMestOpslaan</rol:identificatie>
-               <rol:naam>Vaste mest opslaan</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -809,13 +651,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000367">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.VoedingsmidIndustr</rol:identificatie>
-               <rol:naam>Voedingsmiddelenindustrie (omgevingsplan)</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -824,13 +663,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000502">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.WerkzaamheidUitv</rol:identificatie>
-               <rol:naam>Werk, niet zijnde bouwwerk, of werkzaamheid uitvoeren</rol:naam>
-               <rol:groep>verrichten-van-werken-en-werkzaamhedenactiviteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.OverigeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -839,13 +675,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000061">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.ZwembadBouwen</rol:identificatie>
-               <rol:naam>Zwembad, bubbelbad of soortgelijke voorziening of vijver bouwen, in stand houden of gebruiken</rol:naam>
-               <rol:groep>bouwactiviteit ruimtelijk</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.BouwwerkBouwen"/>
                </rol:bovenliggendeActiviteit>
@@ -854,13 +687,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000102">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.Zwerfaval</rol:identificatie>
-               <rol:naam>Zwerfafval</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -869,13 +699,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000119">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GeluidProdAndereAct</rol:identificatie>
-               <rol:naam>Geluid produceren door andere activiteiten</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.GeluidProdAct"/>
                </rol:bovenliggendeActiviteit>
@@ -884,13 +711,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000152">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GeluidProdSchietbaan</rol:identificatie>
-               <rol:naam>Geluid produceren door civiele buitenschietbanen, militaire buitenschietbanen en militaire springterreinen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.GeluidProdAct"/>
                </rol:bovenliggendeActiviteit>
@@ -899,13 +723,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000147">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GeluidProdWindturbine</rol:identificatie>
-               <rol:naam>Geluid produceren door windturbines en windparken</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.GeluidProdAct"/>
                </rol:bovenliggendeActiviteit>
@@ -914,13 +735,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000203">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GeurProdAndereAct</rol:identificatie>
-               <rol:naam>Geur produceren door andere agrarische activiteiten</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.GeurProdDoorAct"/>
                </rol:bovenliggendeActiviteit>
@@ -929,13 +747,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000222">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GeurProdZuiveringtwerk</rol:identificatie>
-               <rol:naam>Geur produceren door het exploiteren van zuiveringtechnische werken</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.GeurProdDoorAct"/>
                </rol:bovenliggendeActiviteit>
@@ -944,13 +759,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000190">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GeurProdFoktevenNerts</rol:identificatie>
-               <rol:naam>Geur produceren door het houden van fokteven van nertsen</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.GeurProdDoorAct"/>
                </rol:bovenliggendeActiviteit>
@@ -959,7 +771,7 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000175">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GeurProdDierenverblijven</rol:identificatie>
                <rol:naam>Geur produceren door het houden van landbouwhuisdieren, paarden en pony's in een dierenverblijf </rol:naam>
                <rol:groep>milieubelastende activiteit</rol:groep>
@@ -974,13 +786,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000055">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.ActInOmgevingsplanGem</rol:identificatie>
-               <rol:naam>Activiteit gereguleerd in het omgevingsplan gemeente Utrecht</rol:naam>
-               <rol:groep>overig</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-mn002.activiteit.ActInOmgevingsplan"/>
                </rol:bovenliggendeActiviteit>
@@ -989,13 +798,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000055">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.BouwwerkBouwen</rol:identificatie>
-               <rol:naam>Bouwwerk bouwen, in stand houden of gebruiken</rol:naam>
-               <rol:groep>overig</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.ActInOmgevingsplanGem"/>
                </rol:bovenliggendeActiviteit>
@@ -1004,13 +810,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000078">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.MilieubelastendeAct</rol:identificatie>
-               <rol:naam>Milieubelastende activiteit in Omgevingsplan</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.ActInOmgevingsplanGem"/>
                </rol:bovenliggendeActiviteit>
@@ -1019,13 +822,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000501">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.OverigeAct</rol:identificatie>
-               <rol:naam>Overige activiteit</rol:naam>
-               <rol:groep>overig</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.ActInOmgevingsplanGem"/>
                </rol:bovenliggendeActiviteit>
@@ -1034,13 +834,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000061">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.DakkapelVoorkant</rol:identificatie>
-               <rol:naam>Dakkapel bouwen, in stand houden of gebruiken</rol:naam>
-               <rol:groep>bouwactiviteit ruimtelijk</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.BouwwerkBouwen"/>
                </rol:bovenliggendeActiviteit>
@@ -1049,13 +846,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000061">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.ErafscheidingHoog</rol:identificatie>
-               <rol:naam>Erf- of perceelafscheiding bouwen, in stand houden of gebruiken</rol:naam>
-               <rol:groep>bouwactiviteit ruimtelijk</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.BouwwerkBouwen"/>
                </rol:bovenliggendeActiviteit>
@@ -1064,13 +858,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000103">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GeluidProdAct</rol:identificatie>
-               <rol:naam>Geluid produceren door activiteiten</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
@@ -1079,13 +870,10 @@
       </sl:stand>
       <sl:stand>
          <ow-dc:owObject>
-            <rol:Activiteit ow:regeltekstId="nl.imow-gm0344.regeltekst.2020000167">
+            <rol:Activiteit>
                <rol:identificatie>nl.imow-gm0344.activiteit.GeurProdDoorAct</rol:identificatie>
-               <rol:naam>Geur produceren door een activiteit</rol:naam>
-               <rol:groep>milieubelastende activiteit</rol:groep>
-               <rol:locatieaanduiding>
-                  <l-ref:LocatieRef xlink:href="nl.imow-gm0344.gebiedengroep.gemeentegrens"/>
-               </rol:locatieaanduiding>
+               <rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+               <rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
                <rol:bovenliggendeActiviteit>
                   <rol-ref:ActiviteitRef xlink:href="nl.imow-gm0344.activiteit.MilieubelastendeAct"/>
                </rol:bovenliggendeActiviteit>
