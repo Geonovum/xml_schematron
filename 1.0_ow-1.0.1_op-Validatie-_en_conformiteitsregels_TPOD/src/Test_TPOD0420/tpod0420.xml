@@ -2,7 +2,7 @@
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
     xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.1"
     xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
     <BesluitVersie>
         <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
@@ -44,38 +44,48 @@
                         <Kop>
                             <Nummer>1</Nummer>
                         </Kop>
+                        <Gereserveerd/>
                     </Hoofdstuk>
                     <Hoofdstuk eId="chp_2" wId="mnre1034_1-0__chp_2">
                         <Kop>
                             <Nummer>2</Nummer>
                         </Kop>
+                        <Gereserveerd/>
                     </Hoofdstuk>
                     <Hoofdstuk eId="chp_3" wId="mnre1034_1-0__chp_3">
                         <Kop>
                             <Nummer>4</Nummer>
                         </Kop>
+                        <Gereserveerd/>
                     </Hoofdstuk>
                     <Hoofdstuk eId="chp_4" wId="mnre1034_1-0__chp_4">
                         <Kop>
                             <Nummer>1.1</Nummer>
                         </Kop>
+                        <Gereserveerd/>
                     </Hoofdstuk>
                     <Hoofdstuk eId="chp_5" wId="mnre1034_1-0__chp_5">
                         <Kop>
                             <Nummer>IV</Nummer>
                         </Kop>
+                        <Gereserveerd/>
                     </Hoofdstuk>
                     <Hoofdstuk eId="chp_6" wId="mnre1034_1-0__chp_6">
                         <Kop>
                             <Nummer>6</Nummer>
                         </Kop>
+                        <Gereserveerd/>
                     </Hoofdstuk>
                     <Hoofdstuk eId="chp_7" wId="mnre1034_1-0__chp_7">
                         <Kop>
                             <Nummer>VII</Nummer>
                         </Kop>
+                        <Gereserveerd/>
                     </Hoofdstuk>
                 </Lichaam>
+            <Sluiting wId="aaa" eId="bbb">
+                <Al>aaa</Al>
+            </Sluiting>
         </BesluitCompact>
     </BesluitVersie>
     <RegelingVersieInformatie>

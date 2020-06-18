@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.1"
     xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
     <BesluitVersie>
         <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
@@ -46,6 +46,7 @@
                             <Nummer>1</Nummer>
                             <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
                         </Kop>
+                        <Gereserveerd/>
                     </Hoofdstuk>
                     <Hoofdstuk eId="chp_2" wId="mnre1034_1-0__chp_2">
                         <Kop>
@@ -60,15 +61,19 @@
                                 <Nummer>2.1</Nummer>
                                 <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
                             </Kop>
-                            
+                            <Gereserveerd/>
                         </Afdeling>
                         <Afdeling eId="chp_2__subchp_2.2" wId="mnre1034_1-0__chp_2__subchp_2.2">
+                            <Kop>
+                                <Label>av</Label>
+                            </Kop>
                             <Paragraaf eId="chp_2__subchp_2.2__subsec_2.2.1"
                                 wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.1">
                                 <Kop>
                                     <Label>GeenParagraaf</Label>
                                     <Nummer>2.2.1</Nummer>
                                 </Kop>
+                                <Gereserveerd/>
                             </Paragraaf>
                             <Paragraaf eId="chp_2__subchp_2.2__subsec_2.2.2"
                                 wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.2">
@@ -76,6 +81,7 @@
                                     <Label>para</Label>
                                     <Nummer>2.2.2</Nummer>
                                 </Kop>
+                                <Gereserveerd/>
                             </Paragraaf>
                             <Paragraaf eId="chp_2__subchp_2.2__subsec_2.2.3"
                                 wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.3">
@@ -83,6 +89,7 @@
                                     <Label>§</Label>
                                     <Nummer>2.2.3</Nummer>
                                 </Kop>
+                                <Gereserveerd/>
                             </Paragraaf>
                             <Paragraaf eId="chp_2__subchp_2.2__subsec_2.2.4"
                                 wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.4">
@@ -90,6 +97,7 @@
                                     <Label>Paragraaf</Label>
                                     <Nummer>2.2.4</Nummer>
                                 </Kop>
+                                <Gereserveerd/>
                             </Paragraaf>
                             <Paragraaf eId="chp_2__subchp_2.2__subsec_2.2.6"
                                 wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.6">
@@ -108,7 +116,7 @@
                                     </Kop>
                                     <Inhoud>
                                         <Al>De geometrische begrenzing van het <IntIoRef
-                                                doel="mnre1034_1-0__cmp_III__table_o_1__ref_o_11"
+                                                ref="mnre1034_1-0__cmp_III__table_o_1__ref_o_11"
                                                 eId="chp_2__subchp_2.2__subsec_2.2.6__art_2.10__ref_o_1"
                                                 wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.6__art_2.10__ref_o_1"
                                                 >IJsselmeergebied</IntIoRef>, bedoeld in artikel
@@ -120,6 +128,9 @@
                         </Afdeling>
                     </Hoofdstuk>
                 </Lichaam>
+            <Sluiting wId="aaa" eId="bbb">
+                <Al>aaa</Al>
+            </Sluiting>
         </BesluitCompact>
     </BesluitVersie>
     <RegelingVersieInformatie>

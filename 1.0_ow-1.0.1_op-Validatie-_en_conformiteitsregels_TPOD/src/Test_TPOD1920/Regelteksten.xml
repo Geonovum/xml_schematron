@@ -35,7 +35,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<r:RegelVoorIedereen>
-					<r:idealisatie>exact</r:idealisatie>
+					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0534.gebied.gml78"/>
 					</r:locatieaanduiding>

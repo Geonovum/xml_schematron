@@ -252,7 +252,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<r:Omgevingswaarderegel>
-					<r:idealisatie>exact</r:idealisatie>
+					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
 					<r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>

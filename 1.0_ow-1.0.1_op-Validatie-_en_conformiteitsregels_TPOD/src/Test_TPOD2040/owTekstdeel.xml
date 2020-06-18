@@ -37,7 +37,7 @@
             <ow-dc:owObject>
                 <vt:Tekstdeel>
                     <vt:identificatie>nl.imow-pv27.tekstdeel.2019000001</vt:identificatie>
-                    <vt:idealisatie>exact</vt:idealisatie>
+                    <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
                     <vt:thema>Algemeen</vt:thema>
                     <vt:formeleDivisie>
                         <vt:FormeleDivisieRef xlink:href="nl.imow-pv27.formeleinhoud.2019000001"/>
@@ -69,7 +69,7 @@
             <ow-dc:owObject>
                 <vt:Tekstdeel>
                     <vt:identificatie>nl.imow-pv27.tekstdeel.2019000002</vt:identificatie>
-                    <vt:idealisatie>exact</vt:idealisatie>
+                    <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
                     <vt:hoofdlijnaanduiding>
                         <vt:HoofdlijnRef xlink:href="nl.imow-pv27.hoofdlijn.2019000001"/>
                     </vt:hoofdlijnaanduiding>
@@ -100,7 +100,7 @@
             <ow-dc:owObject>
                 <vt:Tekstdeel>
                     <vt:identificatie>nl.imow-pv27.tekstdeel.2019000003</vt:identificatie>
-                    <vt:idealisatie>exact</vt:idealisatie>
+                    <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
                     <vt:hoofdlijnaanduiding>
                         <vt:HoofdlijnRef xlink:href="nl.imow-pv27.hoofdlijn.2019000002"/>
                     </vt:hoofdlijnaanduiding>
@@ -122,7 +122,7 @@
             <ow-dc:owObject>
                 <vt:Tekstdeel>
                     <vt:identificatie>nl.imow-pv27.tekstdeel.2019000004</vt:identificatie>
-                    <vt:idealisatie>exact</vt:idealisatie>
+                    <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
                     <vt:thema>Verkeer</vt:thema>
                     <vt:formeleDivisie>
                         <vt:FormeleDivisieRef xlink:href="nl.imow-pv27.formeledivisie.2019000004"/>

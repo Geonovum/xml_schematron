@@ -28,7 +28,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbDeel1D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbDeel1"/>
           </vt:formeleDivisie>
@@ -42,7 +42,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbHoofdstuk1D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbHoofdstuk1"/>
           </vt:formeleDivisie>
@@ -56,7 +56,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbParagraaf2P1D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbParagraaf2P1"
             />
@@ -71,7 +71,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbParagraaf2P2D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbParagraaf2P2"
             />
@@ -86,7 +86,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbParagraaf2P3D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbParagraaf2P3"
             />
@@ -101,7 +101,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbParagraaf2P4D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbParagraaf2P4"
             />
@@ -116,7 +116,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbParagraaf3P1D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbParagraaf3P1"
             />
@@ -131,7 +131,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbParagraaf3P2D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbParagraaf3P2"
             />
@@ -180,7 +180,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbHoofdstuk6D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbHoofdstuk6"/>
           </vt:formeleDivisie>
@@ -194,7 +194,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbHoofdstuk7D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbHoofdstuk7"/>
           </vt:formeleDivisie>
@@ -208,7 +208,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbHoofdstuk8D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbHoofdstuk8"/>
           </vt:formeleDivisie>
@@ -222,7 +222,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbHoofdstuk9D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbHoofdstuk9"/>
           </vt:formeleDivisie>
@@ -236,7 +236,7 @@
       <ow-dc:owObject>
         <vt:Tekstdeel>
           <vt:identificatie>nl.imow-mnre1045.tekstdeel.OOWbHoofdstuk10D0</vt:identificatie>
-          <vt:idealisatie>exact</vt:idealisatie>
+          <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
           <vt:formeleDivisie>
             <vt:FormeleDivisieRef xlink:href="nl.imow-mnre1045.formeledivisie.OOWbHoofdstuk10"/>
           </vt:formeleDivisie>

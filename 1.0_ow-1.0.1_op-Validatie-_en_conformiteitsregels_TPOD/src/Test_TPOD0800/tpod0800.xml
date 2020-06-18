@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.1"
     xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
     <BesluitVersie>
         <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
@@ -58,7 +58,7 @@
                                 <Nummer>1.3</Nummer>
                                 <Opschrift>(wederzijdse erkenning)</Opschrift>
                             </Kop>
-
+                            <Gereserveerd/>
                         </Artikel>
                     </Afdeling>
                     <Afdeling eId="chp_1__subchp_1.4" wId="mnre1034_1-0__chp_1__subchp_1.4">
@@ -78,32 +78,62 @@
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_1">
                                 <!-- nummer op posiitie fout -->
                                 <LidNummer>1.</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                             <Lid eId="chp_1__subchp_1.4__art_1.4__para_2"
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_2">
                                 <!-- goed (nummer, positie + 1 letter -->
                                 <LidNummer>2a.</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                             <Lid eId="chp_1__subchp_1.4__art_1.4__para_3"
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_3">
                                 <!-- goed, positie alleen nummer en punt -->
                                 <LidNummer>3.</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                             <Lid eId="chp_1__subchp_1.4__art_1.4__para_4"
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_4">
                                 <!-- fout twee letters -->
                                 <LidNummer>4aa.</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
 
                             </Lid>
                             <Lid eId="chp_1__subchp_1.4__art_1.4__para_5"
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_5">
                                 <!-- goed (nummer, positie + 1 letter -->
                                 <LidNummer>5a</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                             <Lid eId="chp_1__subchp_1.4__art_1.4__para_6"
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_6">
                                 <!-- goed (nummer, positie + 1 letter -->
                                 <LidNummer>6a.</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                         </Artikel>
                         <Artikel eId="chp_1__subchp_1.4__art_1.5"
@@ -117,37 +147,69 @@
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_1">
                                 <!-- nummer op posiitie fout -->
                                 <LidNummer>2.</LidNummer>
-
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                             <Lid eId="chp_1__subchp_1.4__art_1.5__para_2"
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_2">
                                 <!-- goed (nummer, positie + 1 letter -->
                                 <LidNummer>2a.</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                             <Lid eId="chp_1__subchp_1.4__art_1.5__para_3"
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_3">
                                 <!-- goed, positie alleen nummer en punt -->
                                 <LidNummer>3.</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                             <Lid eId="chp_1__subchp_1.4__art_1.5__para_4"
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_4">
                                 <!-- fout twee letters -->
                                 <LidNummer>4aa.</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                             <Lid eId="chp_1__subchp_1.4__art_1.5__para_5"
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_5">
                                 <!-- goed (nummer, positie + 1 letter -->
                                 <LidNummer>5a</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                             <Lid eId="chp_1__subchp_1.4__art_1.5__para_6"
                                 wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5__para_6">
                                 <!-- goed (nummer, positie + 1 letter -->
                                 <LidNummer>6a.</LidNummer>
+                                <Inhoud>
+                                    <Formule wId="aaa" eId="aaa">
+                                        <Illustratie naam="aaa" breedte="10" hoogte="10" uitlijning="center" formaat="image/jpeg" dpi="1"/>
+                                    </Formule>
+                                </Inhoud>
                             </Lid>
                         </Artikel>
                     </Afdeling>
                 </Hoofdstuk>
             </Lichaam>
+            <Sluiting wId="aaa" eId="bbb">
+                <Al>aaa</Al>
+            </Sluiting>
         </BesluitCompact>
     </BesluitVersie>
     <RegelingVersieInformatie>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.1"
    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
    <BesluitVersie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">

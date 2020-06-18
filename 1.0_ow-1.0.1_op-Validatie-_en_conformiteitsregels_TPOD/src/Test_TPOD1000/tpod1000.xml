@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
-                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                    xsi:schemaLocation="https://standaarden.overheid.nl/lvbb/stop/ ../lvbb/lvbb-stop-aanlevering.xsd"
-                    schemaversie="1.0">
+   xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.1"
+   xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
    <BesluitVersie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
          <FRBRWork>/akn/nl/bill/pv26/2020/310</FRBRWork>
@@ -43,17 +43,15 @@
             <informatieobjectRef>/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</informatieobjectRef>
          </informatieobjectRefs>
       </BesluitMetadata>
-      <Procedure xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <Procedureverloop>
-            <bekendOp>2020-02-03</bekendOp>
-            <procedurestappen>
-               <Procedurestap>
-                  <soortStap>/join/id/stop/procedure/stap_003</soortStap>
-                  <voltooidOp>2020-02-01</voltooidOp>
-               </Procedurestap>
-            </procedurestappen>
-         </Procedureverloop>
-      </Procedure>
+         <data:Procedureverloop>
+            <data:bekendOp>2020-02-03</data:bekendOp>
+            <data:procedurestappen>
+               <data:Procedurestap>
+                  <data:soortStap>/join/id/stop/procedure/stap_003</data:soortStap>
+                  <data:voltooidOp>2020-02-01</data:voltooidOp>
+               </data:Procedurestap>
+            </data:procedurestappen>
+         </data:Procedureverloop>
       <ConsolidatieInformatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
          <BeoogdeRegelgeving>
             <BeoogdeRegeling>

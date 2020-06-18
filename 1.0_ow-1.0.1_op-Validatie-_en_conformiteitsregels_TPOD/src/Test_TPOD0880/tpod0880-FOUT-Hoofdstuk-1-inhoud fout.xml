@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
    xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.1"
    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
    <BesluitVersie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
@@ -45,6 +45,7 @@
                      <Nummer>1</Nummer>
                      <Opschrift>FOUT</Opschrift>
                   </Kop>
+                  <Gereserveerd/>
                </Hoofdstuk>
             </Lichaam>
          <Sluiting wId="aa" eId="aa">

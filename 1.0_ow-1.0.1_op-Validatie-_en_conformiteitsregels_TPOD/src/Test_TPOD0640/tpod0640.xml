@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.1"
     xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
     <BesluitVersie>
         <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
@@ -60,6 +60,7 @@
                                     <Nummer>5.1.1</Nummer>
                                     <Opschrift>Milieuprestatie en systeemrendement</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Paragraaf>
                             <Paragraaf eId="chp_5__subchp_5.1__subsec_5.1.2"
                                 wId="mnre1034_1-0__chp_5__subchp_5.1__subsec_5.1.2">
@@ -68,6 +69,7 @@
                                     <Nummer>5.1.2</Nummer>
                                     <Opschrift>Energielabels</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Paragraaf>
                             <Paragraaf eId="chp_5__subchp_5.1__subsec_5.1.3"
                                 wId="mnre1034_1-0__chp_5__subchp_5.1__subsec_5.1.3">
@@ -77,6 +79,7 @@
                                     <Opschrift>Eisen vakbekwaamheid bij afgifte
                                         energielabel</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Paragraaf>
                             <Paragraaf eId="chp_5__subchp_5.1__subsec_5.1.4"
                                 wId="mnre1034_1-0__chp_5__subchp_5.1__subsec_5.1.4">
@@ -92,6 +95,7 @@
                                         <Nummer>5.1.4</Nummer>
                                         <Opschrift>Keuring van airconditioningsystemen</Opschrift>
                                     </Kop>
+                                    <Gereserveerd/>
                                 </Subparagraaf>
                                 <Subparagraaf eId="chp_5__subchp_5.1__subsec_5.1.4__subsec_5.1.4.2"
                                     wId="mnre1034_1-0__chp_5__subchp_5.1__subsec_5.1.4__subsec_5.1.4.2">
@@ -101,6 +105,7 @@
                                         <Opschrift>Eisen vakbekwaamheid keuring
                                             airconditioningsystemen</Opschrift>
                                     </Kop>
+                                    <Gereserveerd/>
                                 </Subparagraaf>
                             </Paragraaf>
                         </Afdeling>
@@ -857,10 +862,7 @@
                                     <Nummer>7.1.1</Nummer>
                                     <Opschrift>Algemene bepalingen</Opschrift>
                                 </Kop>
-                                
-                                
-                                
-                                
+                                <Gereserveerd/>
                             </Paragraaf>
                             <Paragraaf eId="chp_7__subchp_7.1__subsec_7.1.2"
                                 wId="mnre1034_1-0__chp_7__subchp_7.1__subsec_7.1.2">
@@ -869,7 +871,7 @@
                                     <Nummer>7.1.2</Nummer>
                                     <Opschrift>Bouwactiviteiten</Opschrift>
                                 </Kop>
-                                
+                                <Gereserveerd/>
                             </Paragraaf>
                             <Paragraaf eId="chp_7__subchp_7.1__subsec_7.1.3"
                                 wId="mnre1034_1-0__chp_7__subchp_7.1__subsec_7.1.3">
@@ -8840,10 +8842,14 @@
                                     <Opschrift>Activiteiten in of bij waterstaatswerken in beheer
                                         bij het Rijk</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Paragraaf>
                         </Afdeling>
                     </Hoofdstuk>
                 </Lichaam>
+            <Sluiting wId="aaa" eId="bbb">
+                <Al>aaa</Al>
+            </Sluiting>
         </BesluitCompact>                
     </BesluitVersie>
     <RegelingVersieInformatie>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.1"
     xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
     <BesluitVersie>
         <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
@@ -59,6 +59,7 @@
                                     <Nummer>2.1</Nummer>
                                     <Opschrift>(begripsbepalingen)</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Artikel>
                             <Artikel eId="chp_1__subchp_1.1__art_1.2"
                                 wId="mnre1034_1-0__chp_1__subchp_1.1__art_1.2">
@@ -67,6 +68,7 @@
                                     <Nummer>1.2</Nummer>
                                     <Opschrift>(begripsbepalingen)</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Artikel>
                             <Artikel eId="chp_1__subchp_1.1__art_1.3"
                                 wId="mnre1034_1-0__chp_1__subchp_1.1__art_1.3">
@@ -75,6 +77,7 @@
                                     <Nummer>1.31</Nummer>
                                     <Opschrift>(begripsbepalingen)</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Artikel>
                             <Artikel eId="chp_1__subchp_1.1__art_1.4"
                                 wId="mnre1034_1-0__chp_1__subchp_1.1__art_1.4">
@@ -83,6 +86,7 @@
                                     <Nummer>1.4</Nummer>
                                     <Opschrift>(begripsbepalingen)</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Artikel>
                             <Artikel eId="chp_1__subchp_1.1__art_1.5"
                                 wId="mnre1034_1-0__chp_1__subchp_1.1__art_1.5">
@@ -91,6 +95,7 @@
                                     <Nummer>1.5.</Nummer>
                                     <Opschrift>(begripsbepalingen)</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Artikel>
                             <Artikel eId="chp_1__subchp_1.1__art_1.6"
                                 wId="mnre1034_1-0__chp_1__subchp_1.1__art_1.6">
@@ -99,6 +104,7 @@
                                     <Nummer>1.6</Nummer>
                                     <Opschrift>(begripsbepalingen)</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Artikel>
                             <Artikel eId="chp_1__subchp_1.1__art_1.7"
                                 wId="mnre1034_1-0__chp_1__subchp_1.1__art_1.7">
@@ -107,11 +113,15 @@
                                     <Nummer>1.7</Nummer>
                                     <Opschrift>(begripsbepalingen)</Opschrift>
                                 </Kop>
+                                <Gereserveerd/>
                             </Artikel>
                         </Afdeling>
                     </Hoofdstuk>
                 </Lichaam>
-            </BesluitCompact>
+            <Sluiting wId="aaa" eId="bbb">
+                <Al>aaa</Al>
+            </Sluiting>
+        </BesluitCompact>
     </BesluitVersie>
     <RegelingVersieInformatie>
         <data:ExpressionIdentificatie>

@@ -34,7 +34,7 @@
          <ow-dc:owObject>
             <vt:Tekstdeel>
                <vt:identificatie>nl.imow-gm0599.tekstdeel.2019000001</vt:identificatie>
-               <vt:idealisatie>exact</vt:idealisatie>
+               <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
                <vt:thema>verkeer en vervoer</vt:thema>
                <vt:formeleDivisie>
                   <vt:FormeleDivisieRef xlink:href="nl.imow-gm0599.formeledivisie.2019000001"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
     xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="0.98.3-kern"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.1"
     xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
     <BesluitVersie>
         <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
@@ -52,24 +52,32 @@
                                 <Kop>
                                     <Nummer>1.1.2</Nummer>
                                 </Kop>
+                                <Gereserveerd/>
                             </Afdeling>
                             <Afdeling eId="chp_1__titel_1_subchp_1.2" wId="mnre1034_1-0__chp_1__subchp_1.2">
                                 <Kop>
                                     <Nummer>1.1.1</Nummer>
                                 </Kop>
+                                <Gereserveerd/>
                             </Afdeling>
                             <Afdeling eId="chp_1__titel_1_subchp_1.3" wId="mnre1034_1-0__chp_1__subchp_1.3">
                                 <Kop>
+                                    <Label>aa</Label>
                                 </Kop>
+                                <Gereserveerd/>
                             </Afdeling>
                             <Afdeling eId="chp_1__titel_1_subchp_1.4" wId="mnre1034_1-0__chp_1__subchp_1.4">
                                 <Kop>
                                     <Nummer>1.1.4</Nummer>
                                 </Kop>
+                                <Gereserveerd/>
                             </Afdeling>
                         </Titel>
                     </Hoofdstuk>
                 </Lichaam>
+            <Sluiting wId="aaa" eId="bbb">
+                <Al>aaa</Al>
+            </Sluiting>
         </BesluitCompact>
     </BesluitVersie>
     <RegelingVersieInformatie>

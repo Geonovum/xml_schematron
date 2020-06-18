@@ -36,7 +36,7 @@
             <ow-dc:owObject>
                 <vt:Tekstdeel>
                     <vt:identificatie>nl.imow-pv27.tekstdeel.2019000001</vt:identificatie>
-                    <vt:idealisatie>exact</vt:idealisatie>
+                    <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
                     <vt:thema>Algemeen</vt:thema>
                     <vt:formeleDivisie>
                         <vt:FormeleDivisieRef xlink:href="nl.imow-pv27.formeleinhoud.2019000001"/>
