@@ -43,8 +43,7 @@
             <informatieobjectRef>/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</informatieobjectRef>
          </informatieobjectRefs>
       </BesluitMetadata>
-      <Procedure xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-         <Procedureverloop>
+         <Procedureverloop xmlns="https://standaarden.overheid.nl/stop/imop/data/">
             <bekendOp>2020-02-03</bekendOp>
             <procedurestappen>
                <Procedurestap>
@@ -53,7 +52,6 @@
                </Procedurestap>
             </procedurestappen>
          </Procedureverloop>
-      </Procedure>
       <ConsolidatieInformatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
          <BeoogdeRegelgeving>
             <BeoogdeRegeling>

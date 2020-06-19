@@ -339,58 +339,63 @@
                 <Kop>
                     <Nummer>21</Nummer>
                 </Kop>
-                <Inhoud>
-                    <Lijst type="expliciet" wId="aaa" eId="aaa">
-                        <!-- 1 -->
-                        <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
-                        <Li wId="aaa" eId="aaa">
-                            <LiNummer>1</LiNummer>
-                            <Al>Lijst 1</Al>
-                        </Li>
-                        <Li wId="aaa" eId="aaa">
-                            <LiNummer>2</LiNummer>
-                            <Lijst type="expliciet" wId="aaa" eId="aaa">
-                                <!-- 2 -->
-                                <Li wId="aaa" eId="aaa">
-                                    <LiNummer>1</LiNummer>
-                                    <Al>Lijst 2</Al>
-                                </Li>
-                                <Li wId="aaa" eId="aaa">
-                                    <LiNummer>2</LiNummer>
-                                    <Al>bla bla</Al>
-                                </Li>
-                                <Li wId="aaa" eId="aaa">
-                                    <LiNummer>3</LiNummer>
-                                    <Lijst type="expliciet" wId="aaa" eId="aaa">
-                                        <!-- 3 -->
-                                        <Li wId="aaa" eId="aaa">
-                                            <LiNummer>1</LiNummer>
-                                            <Al>bla bla bla</Al>
-                                        </Li>
-                                        <Li wId="aaa" eId="aaa">
-                                            <LiNummer>2</LiNummer>
-                                            <Lijst type="expliciet" wId="aaa" eId="aaa">
-                                                <!-- 4 -->
-                                                <Li wId="aaa" eId="aaa">
+                <Divisietekst wId="aaa" eId="aaa">
+                    <Kop>
+                        <Label>aaa</Label>
+                    </Kop>
+                    <Inhoud>
+                        <Lijst type="expliciet" wId="aaa" eId="aaa">
+                            <!-- 1 -->
+                            <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                            <Li wId="aaa" eId="aaa">
+                                <LiNummer>1</LiNummer>
+                                <Al>Lijst 1</Al>
+                            </Li>
+                            <Li wId="aaa" eId="aaa">
+                                <LiNummer>2</LiNummer>
+                                <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                    <!-- 2 -->
+                                    <Li wId="aaa" eId="aaa">
+                                        <LiNummer>1</LiNummer>
+                                        <Al>Lijst 2</Al>
+                                    </Li>
+                                    <Li wId="aaa" eId="aaa">
+                                        <LiNummer>2</LiNummer>
+                                        <Al>bla bla</Al>
+                                    </Li>
+                                    <Li wId="aaa" eId="aaa">
+                                        <LiNummer>3</LiNummer>
+                                        <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                            <!-- 3 -->
+                                            <Li wId="aaa" eId="aaa">
+                                                <LiNummer>1</LiNummer>
+                                                <Al>bla bla bla</Al>
+                                            </Li>
+                                            <Li wId="aaa" eId="aaa">
+                                                <LiNummer>2</LiNummer>
+                                                <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                                  <!-- 4 -->
+                                                  <Li wId="aaa" eId="aaa">
                                                   <LiNummer>1</LiNummer>
                                                   <Al>bla bla bla bla</Al>
-                                                </Li>
-                                            </Lijst>
-                                        </Li>
-                                    </Lijst>
-                                </Li>
-                            </Lijst>
-                        </Li>
-                    </Lijst>
-                </Inhoud>
+                                                  </Li>
+                                                </Lijst>
+                                            </Li>
+                                        </Lijst>
+                                    </Li>
+                                </Lijst>
+                            </Li>
+                        </Lijst>
+                    </Inhoud>
+                </Divisietekst>
             </Bijlage>
         </BesluitCompact>
     </BesluitVersie>
     <RegelingVersieInformatie>
         <data:ExpressionIdentificatie>
-            <data:FRBRWork></data:FRBRWork>
-            <data:FRBRExpression></data:FRBRExpression>
-            <data:soortWork></data:soortWork>
+            <data:FRBRWork/>
+            <data:FRBRExpression/>
+            <data:soortWork/>
         </data:ExpressionIdentificatie>
         <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
             <eindverantwoordelijke>/tooi/id/provincie/pv26</eindverantwoordelijke>

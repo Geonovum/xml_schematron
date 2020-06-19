@@ -28,253 +28,147 @@
             <data:bekendOp>2020-01-01</data:bekendOp>
             <data:procedurestappen>
                 <data:Procedurestap>
-                    <data:soortStap></data:soortStap>
+                    <data:soortStap/>
                     <data:voltooidOp>2020-01-01</data:voltooidOp>
                 </data:Procedurestap>
             </data:procedurestappen>
         </data:Procedureverloop>
-        <data:ConsolidatieInformatie></data:ConsolidatieInformatie>
+        <data:ConsolidatieInformatie/>
         <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
             <RegelingOpschrift wId="abc" eId="abc">
-                <Al></Al>
+                <Al/>
             </RegelingOpschrift>
-            <Lichaam eId="body"
-                wId="body">
-                    <Hoofdstuk eId="chp_1" wId="mnre1034_1-0__chp_1">
+            <Lichaam eId="body" wId="body">
+                <Hoofdstuk eId="chp_1" wId="mnre1034_1-0__chp_1">
+                    <Kop>
+                        <Label>HOOFDSTUK</Label>
+                        <Nummer>1</Nummer>
+                        <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
+                    </Kop>
+                    <Afdeling eId="chp_1__subchp_1.3" wId="mnre1034_1-0__chp_1__subchp_1.3">
                         <Kop>
-                            <Label>HOOFDSTUK</Label>
-                            <Nummer>1</Nummer>
-                            <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
+                            <Label>AFDELING</Label>
+                            <Nummer>1.3</Nummer>
+                            <Opschrift>INTERNATIONAALRECHTELIJKE VERPLICHTINGEN</Opschrift>
                         </Kop>
-                        <Afdeling eId="chp_1__subchp_1.3" wId="mnre1034_1-0__chp_1__subchp_1.3">
+                        <Artikel eId="chp_1__subchp_1.3__art_1.3"
+                            wId="mnre1034_1-0__chp_1__subchp_1.3__art_1.3">
                             <Kop>
-                                <Label>AFDELING</Label>
+                                <Label>Artikel</Label>
                                 <Nummer>1.3</Nummer>
-                                <Opschrift>INTERNATIONAALRECHTELIJKE VERPLICHTINGEN</Opschrift>
+                                <Opschrift>(wederzijdse erkenning)</Opschrift>
                             </Kop>
-                            <Artikel eId="chp_1__subchp_1.3__art_1.3"
-                                wId="mnre1034_1-0__chp_1__subchp_1.3__art_1.3">
-                                <Kop>
-                                    <Label>Artikel</Label>
-                                    <Nummer>1.3</Nummer>
-                                    <Opschrift>(wederzijdse erkenning)</Opschrift>
-                                </Kop>
-                                <Gereserveerd/>
-                            </Artikel>
-                        </Afdeling>
-                        <Afdeling eId="chp_1__subchp_1.4" wId="mnre1034_1-0__chp_1__subchp_1.4">
+                            <Gereserveerd/>
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling eId="chp_1__subchp_1.4" wId="mnre1034_1-0__chp_1__subchp_1.4">
+                        <Kop>
+                            <Label>AFDELING</Label>
+                            <Nummer>1.4</Nummer>
+                            <Opschrift>VERWIJZINGEN</Opschrift>
+                        </Kop>
+                        <Artikel eId="chp_1__subchp_1.4__art_1.4"
+                            wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4">
                             <Kop>
-                                <Label>AFDELING</Label>
+                                <Label>Artikel</Label>
                                 <Nummer>1.4</Nummer>
-                                <Opschrift>VERWIJZINGEN</Opschrift>
+                                <Opschrift>(uitgaven en verwijzingen)</Opschrift>
                             </Kop>
-                            <Artikel eId="chp_1__subchp_1.4__art_1.4"
-                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4">
-                                <Kop>
-                                    <Label>Artikel</Label>
-                                    <Nummer>1.4</Nummer>
-                                    <Opschrift>(uitgaven en verwijzingen)</Opschrift>
-                                </Kop>
-                                <Lid wId="abc" eId="abc">
-                                    <LidNummer>1.</LidNummer>
-                                    <Inhoud>
-                                        <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 1 -->
-                                            <Li wId="abc" eId="abc">
-                                                <LiNummer>1</LiNummer>
-                                                <Al></Al>
-                                            </Li>
-                                            <Li wId="abc" eId="abc">
-                                                <LiNummer>a.</LiNummer>
-                                                <Al>bla</Al>
-                                            </Li>
-                                        </Lijst>
-                                    </Inhoud>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_1"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_1">
-                                    <!-- nummer op posiitie fout -->
-                                    <LidNummer>2.</LidNummer>
-                                    <Inhoud>
-                                        <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 1 -->
-                                            <Lijstaanhef>Lijst met 2 niveaus</Lijstaanhef>
-                                            <Li wId="abc" eId="abc">
-                                                <LiNummer>a.</LiNummer>
-                                                <Al>Lijst 1</Al>
-                                            </Li>
-                                            <Li wId="abc" eId="abc">
-                                                <LiNummer>b.</LiNummer>
-                                                <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 2 -->
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>b</LiNummer>
-                                                        <Al>Lijst 2</Al>
-                                                    </Li>
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>2</LiNummer>
-                                                        <Al>bla bla</Al>
-                                                    </Li>
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>3</LiNummer>
-                                                        <Al>bla bla bla</Al>
-                                                    </Li>
-                                                </Lijst>
-                                            </Li>
-                                        </Lijst>
-                                    </Inhoud>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_2"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_2">
-                                    <!-- goed (nummer, positie + 1 letter -->
-                                    <LidNummer>3.</LidNummer>
-                                    <Inhoud>
-                                        <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 1 -->
-                                            <Lijstaanhef>Lijst met 3 niveaus</Lijstaanhef>
-                                            <Li wId="abc" eId="abc">
-                                                <LiNummer>a.</LiNummer>
-                                                <Al>Lijst 1</Al>
-                                            </Li>
-                                            <Li wId="abc" eId="abc">
-                                                <LiNummer>b.</LiNummer>
-                                                <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 2 -->
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>1</LiNummer>
-                                                        <Al>Lijst 2</Al>
-                                                    </Li>
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>2</LiNummer>
-                                                        <Al>bla bla</Al>
-                                                    </Li>
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>3</LiNummer>
-                                                        <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 3 -->
-                                                            <Li wId="abc" eId="abc">
-                                                                <LiNummer>c</LiNummer>
-                                                                <Al>bla bla bla</Al>
-                                                            </Li>
-                                                        </Lijst>
-                                                    </Li>
-                                                </Lijst>
-                                            </Li>
-                                        </Lijst>
-                                    </Inhoud>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_3"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_3">
-                                    <!-- goed, positie alleen nummer en punt -->
-                                    <LidNummer>4.</LidNummer>
-                                    <Inhoud>
-                                        <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 1 -->
-                                            <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
-                                            <Li wId="abc" eId="abc">
-                                                <LiNummer>1</LiNummer>
-                                                <Al>Lijst 1</Al>
-                                            </Li>
-                                            <Li wId="abc" eId="abc">
-                                                <LiNummer>2</LiNummer>
-                                                <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 2 -->
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>b</LiNummer>
-                                                        <Al>Lijst 2</Al>
-                                                    </Li>
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>2</LiNummer>
-                                                        <Al>bla bla</Al>
-                                                    </Li>
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>3</LiNummer>
-                                                        <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 3 -->
-                                                            <Li wId="abc" eId="abc">
-                                                                <LiNummer>c</LiNummer>
-                                                                <Al>bla bla bla</Al>
-                                                            </Li>
-                                                            <Li wId="abc" eId="abc">
-                                                                <LiNummer>2</LiNummer>
-                                                                <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 4 -->
-                                                                    <Li wId="abc" eId="abc">
-                                                                        <LiNummer>d</LiNummer>
-                                                                        <Al>bla bla bla bla</Al>
-                                                                    </Li>
-                                                                </Lijst>
-                                                            </Li>
-                                                        </Lijst>
-                                                    </Li>
-                                                </Lijst>
-                                            </Li>
-                                        </Lijst>
-                                    </Inhoud>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_4"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_4">
-                                    <!-- fout twee letters -->
-                                    <LidNummer>5.</LidNummer>
-                                    <Inhoud>
-                                        <Al>aaa</Al>
-                                    </Inhoud>
-                                    
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_5"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_5">
-                                    <!-- goed (nummer, positie + 1 letter -->
-                                    <LidNummer>6.</LidNummer>
-                                    <Inhoud>
-                                        <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 1 -->
-                                            <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
-                                            <Li wId="abc" eId="abc">
-                                                <LiNummer>1</LiNummer>
-                                                <Al>Lijst 1</Al>
-                                            </Li>
-                                            <Li wId="abc" eId="abc">
-                                                <LiNummer>2</LiNummer>
-                                                <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 2 -->
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>1</LiNummer>
-                                                        <Al>Lijst 2</Al>
-                                                    </Li>
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>2</LiNummer>
-                                                        <Al>bla bla</Al>
-                                                    </Li>
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>3</LiNummer>
-                                                        <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 3 -->
-                                                            <Li wId="abc" eId="abc">
-                                                                <LiNummer>1</LiNummer>
-                                                                <Al>bla bla bla</Al>
-                                                            </Li>
-                                                            <Li wId="abc" eId="abc">
-                                                                <LiNummer>2</LiNummer>
-                                                                <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 4 -->
-                                                                    <Li wId="abc" eId="abc">
-                                                                        <LiNummer>1</LiNummer>
-                                                                        <Al>bla bla bla bla</Al>
-                                                                    </Li>
-                                                                </Lijst>
-                                                            </Li>
-                                                        </Lijst>
-                                                    </Li>
-                                                </Lijst>
-                                            </Li>
-                                        </Lijst>
-                                    </Inhoud>
-                                </Lid>
-                                <Lid eId="chp_1__subchp_1.4__art_1.4__para_6"
-                                    wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_6">
-                                    <!-- goed (nummer, positie + 1 letter -->
-                                    <LidNummer>7.</LidNummer>
-                                    <Inhoud>
-                                        <Al>aaa</Al>
-                                    </Inhoud>
-                                    
-                                </Lid>
-                            </Artikel>
-                            <Artikel eId="chp_1__subchp_1.4__art_1.5"
-                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5">
-                                <Kop>
-                                    <Label>Artikel</Label>
-                                    <Nummer>1.5</Nummer>
-                                    <Opschrift>(uitgaven en verwijzingen)</Opschrift>
-                                </Kop>
+                            <Lid wId="abc" eId="abc">
+                                <LidNummer>1.</LidNummer>
                                 <Inhoud>
-                                    <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 1 -->
+                                    <Lijst type="expliciet" wId="abc" eId="abc">
+                                        <!-- 1 -->
+                                        <Li wId="abc" eId="abc">
+                                            <LiNummer>1</LiNummer>
+                                            <Al/>
+                                        </Li>
+                                        <Li wId="abc" eId="abc">
+                                            <LiNummer>a.</LiNummer>
+                                            <Al>bla</Al>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_1"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_1">
+                                <!-- nummer op posiitie fout -->
+                                <LidNummer>2.</LidNummer>
+                                <Inhoud>
+                                    <Lijst type="expliciet" wId="abc" eId="abc">
+                                        <!-- 1 -->
+                                        <Lijstaanhef>Lijst met 2 niveaus</Lijstaanhef>
+                                        <Li wId="abc" eId="abc">
+                                            <LiNummer>a.</LiNummer>
+                                            <Al>Lijst 1</Al>
+                                        </Li>
+                                        <Li wId="abc" eId="abc">
+                                            <LiNummer>b.</LiNummer>
+                                            <Lijst type="expliciet" wId="abc" eId="abc">
+                                                <!-- 2 -->
+                                                <Li wId="abc" eId="abc">
+                                                  <LiNummer>b</LiNummer>
+                                                  <Al>Lijst 2</Al>
+                                                </Li>
+                                                <Li wId="abc" eId="abc">
+                                                  <LiNummer>2</LiNummer>
+                                                  <Al>bla bla</Al>
+                                                </Li>
+                                                <Li wId="abc" eId="abc">
+                                                  <LiNummer>3</LiNummer>
+                                                  <Al>bla bla bla</Al>
+                                                </Li>
+                                            </Lijst>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_2"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_2">
+                                <!-- goed (nummer, positie + 1 letter -->
+                                <LidNummer>3.</LidNummer>
+                                <Inhoud>
+                                    <Lijst type="expliciet" wId="abc" eId="abc">
+                                        <!-- 1 -->
+                                        <Lijstaanhef>Lijst met 3 niveaus</Lijstaanhef>
+                                        <Li wId="abc" eId="abc">
+                                            <LiNummer>a.</LiNummer>
+                                            <Al>Lijst 1</Al>
+                                        </Li>
+                                        <Li wId="abc" eId="abc">
+                                            <LiNummer>b.</LiNummer>
+                                            <Lijst type="expliciet" wId="abc" eId="abc">
+                                                <!-- 2 -->
+                                                <Li wId="abc" eId="abc">
+                                                  <LiNummer>1</LiNummer>
+                                                  <Al>Lijst 2</Al>
+                                                </Li>
+                                                <Li wId="abc" eId="abc">
+                                                  <LiNummer>2</LiNummer>
+                                                  <Al>bla bla</Al>
+                                                </Li>
+                                                <Li wId="abc" eId="abc">
+                                                  <LiNummer>3</LiNummer>
+                                                  <Lijst type="expliciet" wId="abc" eId="abc">
+                                                  <!-- 3 -->
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>c</LiNummer>
+                                                  <Al>bla bla bla</Al>
+                                                  </Li>
+                                                  </Lijst>
+                                                </Li>
+                                            </Lijst>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_3"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_3">
+                                <!-- goed, positie alleen nummer en punt -->
+                                <LidNummer>4.</LidNummer>
+                                <Inhoud>
+                                    <Lijst type="expliciet" wId="abc" eId="abc">
+                                        <!-- 1 -->
                                         <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
                                         <Li wId="abc" eId="abc">
                                             <LiNummer>1</LiNummer>
@@ -282,50 +176,178 @@
                                         </Li>
                                         <Li wId="abc" eId="abc">
                                             <LiNummer>2</LiNummer>
-                                            <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 2 -->
+                                            <Lijst type="expliciet" wId="abc" eId="abc">
+                                                <!-- 2 -->
                                                 <Li wId="abc" eId="abc">
-                                                    <LiNummer>1</LiNummer>
-                                                    <Al>Lijst 2</Al>
+                                                  <LiNummer>b</LiNummer>
+                                                  <Al>Lijst 2</Al>
                                                 </Li>
                                                 <Li wId="abc" eId="abc">
-                                                    <LiNummer>2</LiNummer>
-                                                    <Al>bla bla</Al>
+                                                  <LiNummer>2</LiNummer>
+                                                  <Al>bla bla</Al>
                                                 </Li>
                                                 <Li wId="abc" eId="abc">
-                                                    <LiNummer>3</LiNummer>
-                                                    <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 3 -->
-                                                        <Li wId="abc" eId="abc">
-                                                            <LiNummer>1</LiNummer>
-                                                            <Al>bla bla bla</Al>
-                                                        </Li>
-                                                        <Li wId="abc" eId="abc">
-                                                            <LiNummer>2</LiNummer>
-                                                            <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 4 -->
-                                                                <Li wId="abc" eId="abc">
-                                                                    <LiNummer>1</LiNummer>
-                                                                    <Al>bla bla bla bla</Al>
-                                                                </Li>
-                                                            </Lijst>
-                                                        </Li>
-                                                    </Lijst>
+                                                  <LiNummer>3</LiNummer>
+                                                  <Lijst type="expliciet" wId="abc" eId="abc">
+                                                  <!-- 3 -->
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>c</LiNummer>
+                                                  <Al>bla bla bla</Al>
+                                                  </Li>
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>2</LiNummer>
+                                                  <Lijst type="expliciet" wId="abc" eId="abc">
+                                                  <!-- 4 -->
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>d</LiNummer>
+                                                  <Al>bla bla bla bla</Al>
+                                                  </Li>
+                                                  </Lijst>
+                                                  </Li>
+                                                  </Lijst>
                                                 </Li>
                                             </Lijst>
                                         </Li>
                                     </Lijst>
                                 </Inhoud>
-                            </Artikel>
-                        </Afdeling>
-                    </Hoofdstuk>
-                </Lichaam>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_4"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_4">
+                                <!-- fout twee letters -->
+                                <LidNummer>5.</LidNummer>
+                                <Inhoud>
+                                    <Al>aaa</Al>
+                                </Inhoud>
+
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_5"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_5">
+                                <!-- goed (nummer, positie + 1 letter -->
+                                <LidNummer>6.</LidNummer>
+                                <Inhoud>
+                                    <Lijst type="expliciet" wId="abc" eId="abc">
+                                        <!-- 1 -->
+                                        <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                                        <Li wId="abc" eId="abc">
+                                            <LiNummer>1</LiNummer>
+                                            <Al>Lijst 1</Al>
+                                        </Li>
+                                        <Li wId="abc" eId="abc">
+                                            <LiNummer>2</LiNummer>
+                                            <Lijst type="expliciet" wId="abc" eId="abc">
+                                                <!-- 2 -->
+                                                <Li wId="abc" eId="abc">
+                                                  <LiNummer>1</LiNummer>
+                                                  <Al>Lijst 2</Al>
+                                                </Li>
+                                                <Li wId="abc" eId="abc">
+                                                  <LiNummer>2</LiNummer>
+                                                  <Al>bla bla</Al>
+                                                </Li>
+                                                <Li wId="abc" eId="abc">
+                                                  <LiNummer>3</LiNummer>
+                                                  <Lijst type="expliciet" wId="abc" eId="abc">
+                                                  <!-- 3 -->
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>1</LiNummer>
+                                                  <Al>bla bla bla</Al>
+                                                  </Li>
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>2</LiNummer>
+                                                  <Lijst type="expliciet" wId="abc" eId="abc">
+                                                  <!-- 4 -->
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>1</LiNummer>
+                                                  <Al>bla bla bla bla</Al>
+                                                  </Li>
+                                                  </Lijst>
+                                                  </Li>
+                                                  </Lijst>
+                                                </Li>
+                                            </Lijst>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Lid>
+                            <Lid eId="chp_1__subchp_1.4__art_1.4__para_6"
+                                wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.4__para_6">
+                                <!-- goed (nummer, positie + 1 letter -->
+                                <LidNummer>7.</LidNummer>
+                                <Inhoud>
+                                    <Al>aaa</Al>
+                                </Inhoud>
+
+                            </Lid>
+                        </Artikel>
+                        <Artikel eId="chp_1__subchp_1.4__art_1.5"
+                            wId="mnre1034_1-0__chp_1__subchp_1.4__art_1.5">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>1.5</Nummer>
+                                <Opschrift>(uitgaven en verwijzingen)</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet" wId="abc" eId="abc">
+                                    <!-- 1 -->
+                                    <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                                    <Li wId="abc" eId="abc">
+                                        <LiNummer>1</LiNummer>
+                                        <Al>Lijst 1</Al>
+                                    </Li>
+                                    <Li wId="abc" eId="abc">
+                                        <LiNummer>2</LiNummer>
+                                        <Lijst type="expliciet" wId="abc" eId="abc">
+                                            <!-- 2 -->
+                                            <Li wId="abc" eId="abc">
+                                                <LiNummer>1</LiNummer>
+                                                <Al>Lijst 2</Al>
+                                            </Li>
+                                            <Li wId="abc" eId="abc">
+                                                <LiNummer>2</LiNummer>
+                                                <Al>bla bla</Al>
+                                            </Li>
+                                            <Li wId="abc" eId="abc">
+                                                <LiNummer>3</LiNummer>
+                                                <Lijst type="expliciet" wId="abc" eId="abc">
+                                                  <!-- 3 -->
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>1</LiNummer>
+                                                  <Al>bla bla bla</Al>
+                                                  </Li>
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>2</LiNummer>
+                                                  <Lijst type="expliciet" wId="abc" eId="abc">
+                                                  <!-- 4 -->
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>1</LiNummer>
+                                                  <Al>bla bla bla bla</Al>
+                                                  </Li>
+                                                  </Lijst>
+                                                  </Li>
+                                                </Lijst>
+                                            </Li>
+                                        </Lijst>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                </Hoofdstuk>
+            </Lichaam>
             <Sluiting wId="aa" eId="a">
                 <Al>aaa</Al>
             </Sluiting>
-                <Bijlage wId="abc" eId="abc">
+            <Bijlage wId="abc" eId="abc">
+                <Kop>
+                    <Nummer>21</Nummer>
+                </Kop>
+                <Divisietekst wId="aaa" eId="aaa">
                     <Kop>
-                        <Nummer>21</Nummer>
+                        <Label>aaa</Label>
                     </Kop>
                     <Inhoud>
-                        <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 1 -->
+                        <Lijst type="expliciet" wId="abc" eId="abc">
+                            <!-- 1 -->
                             <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
                             <Li wId="abc" eId="abc">
                                 <LiNummer>1</LiNummer>
@@ -333,7 +355,8 @@
                             </Li>
                             <Li wId="abc" eId="abc">
                                 <LiNummer>2</LiNummer>
-                                <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 2 -->
+                                <Lijst type="expliciet" wId="abc" eId="abc">
+                                    <!-- 2 -->
                                     <Li wId="abc" eId="abc">
                                         <LiNummer>1</LiNummer>
                                         <Al>Lijst 2</Al>
@@ -344,18 +367,20 @@
                                     </Li>
                                     <Li wId="abc" eId="abc">
                                         <LiNummer>3</LiNummer>
-                                        <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 3 -->
+                                        <Lijst type="expliciet" wId="abc" eId="abc">
+                                            <!-- 3 -->
                                             <Li wId="abc" eId="abc">
                                                 <LiNummer>1</LiNummer>
                                                 <Al>bla bla bla</Al>
                                             </Li>
                                             <Li wId="abc" eId="abc">
                                                 <LiNummer>2</LiNummer>
-                                                <Lijst type="expliciet" wId="abc" eId="abc"> <!-- 4 -->
-                                                    <Li wId="abc" eId="abc">
-                                                        <LiNummer>1</LiNummer>
-                                                        <Al>bla bla bla bla</Al>
-                                                    </Li>
+                                                <Lijst type="expliciet" wId="abc" eId="abc">
+                                                  <!-- 4 -->
+                                                  <Li wId="abc" eId="abc">
+                                                  <LiNummer>1</LiNummer>
+                                                  <Al>bla bla bla bla</Al>
+                                                  </Li>
                                                 </Lijst>
                                             </Li>
                                         </Lijst>
@@ -364,14 +389,15 @@
                             </Li>
                         </Lijst>
                     </Inhoud>
-                </Bijlage>
+                </Divisietekst>
+            </Bijlage>
         </BesluitCompact>
     </BesluitVersie>
     <RegelingVersieInformatie>
         <data:ExpressionIdentificatie>
-            <data:FRBRWork></data:FRBRWork>
-            <data:FRBRExpression></data:FRBRExpression>
-            <data:soortWork></data:soortWork>
+            <data:FRBRWork/>
+            <data:FRBRExpression/>
+            <data:soortWork/>
         </data:ExpressionIdentificatie>
         <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
             <eindverantwoordelijke>/tooi/id/provincie/pv26</eindverantwoordelijke>
