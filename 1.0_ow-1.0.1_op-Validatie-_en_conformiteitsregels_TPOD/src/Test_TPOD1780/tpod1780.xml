@@ -1455,12 +1455,16 @@
                         </Afdeling>
                      </Hoofdstuk>
                   </Lichaam>
+         <Sluiting wId="aa" eId="aa">
+            <Al>aa</Al>
+         </Sluiting>
                   <Bijlage eId="cmp_I" wId="pv26_311__cmp_I">
                      <Kop>
                         <Label>Bijlage</Label>
                         <Nummer>I</Nummer>
                         <Opschrift>Overzicht Informatieobjecten</Opschrift>
                      </Kop>
+                     <Divisietekst wId="aa" eId="aa">
                      <Inhoud>
                         <Begrippenlijst eId="cmp_I__list_o_1" wId="pv26_311__cmp_I__list_o_1">
                            <Begrip eId="cmp_I__list_o_1__item_o_1"
@@ -1684,7 +1688,9 @@
                               </Definitie>
                            </Begrip>
                         </Begrippenlijst>
+                        
                      </Inhoud>
+                     </Divisietekst>
                   </Bijlage>
                   <Bijlage eId="cmp_2" wId="pv26_311__cmp_2">
                      <Kop>
@@ -1692,6 +1698,7 @@
                         <Nummer>2</Nummer>
                         <Opschrift>Mobiliteitstoets</Opschrift>
                      </Kop>
+                     <Divisietekst wId="aa" eId="a">
                      <Inhoud>
                         <Al>
                            <b>Mobiliteitsscan</b>
@@ -1823,6 +1830,7 @@
                            </Li>
                         </Lijst>
                      </Inhoud>
+                     </Divisietekst>
                   </Bijlage>
                   <Bijlage eId="cmp_3" wId="pv26_311__cmp_3">
                      <Kop>
@@ -1830,6 +1838,7 @@
                         <Nummer>3</Nummer>
                         <Opschrift>lijst waterwingebieden</Opschrift>
                      </Kop>
+                     <Divisietekst wId="aa" eId="aa">
                      <Inhoud>
                         <Al/>
                         <Al>Amersfoort-Berg</Al>
@@ -1867,6 +1876,7 @@
                         <Al>Zeist</Al>
                         <Al>WCB Nieuwegein</Al>
                      </Inhoud>
+                     </Divisietekst>
                   </Bijlage>
                   <Bijlage eId="cmp_4" wId="pv26_311__cmp_4">
                      <Kop>
@@ -1874,7 +1884,9 @@
                         <Nummer>4</Nummer>
                         <Opschrift>Parameters en frequentie van bemonstering en analyse van te infiltreren water</Opschrift>
                      </Kop>
+                     <Divisietekst wId="aaa" eId="aa">
                      <Inhoud>
+                        
                         <table xmlns:eigen="https://www.eigen.nl/"
                                eId="cmp_4__table_o_1"
                                wId="pv26_311__cmp_4__table_o_1"
@@ -2256,6 +2268,7 @@
                            </tgroup>
                         </table>
                      </Inhoud>
+                     </Divisietekst>
                   </Bijlage>
                   <Bijlage eId="cmp_5" wId="pv26_311__cmp_5">
                      <Kop>
@@ -2263,6 +2276,7 @@
                         <Nummer>5</Nummer>
                         <Opschrift>Modelborden grondwaterbeschermingszones</Opschrift>
                      </Kop>
+                     <Divisietekst wId="aa" eId="aa">
                      <Inhoud>
                         <Figuur eId="cmp_5__img_o_1" wId="pv26_311__cmp_5__img_o_1">
                            <Illustratie naam="image_1.jpeg"
@@ -2273,12 +2287,14 @@
                                         dpi="72"/>
                         </Figuur>
                      </Inhoud>
+                     </Divisietekst>
                   </Bijlage>
                   <Bijlage eId="cmp_o_6" wId="pv26_311__cmp_o_6">
                      <Kop>
                         <Label>Bijlage</Label>
                         <Opschrift>Lijst verboden activiteiten in grondwaterbeschermingsgebieden</Opschrift>
                      </Kop>
+                     <Divisietekst wId="aa" eId="aa">
                      <Inhoud>
                         <table xmlns:eigen="https://www.eigen.nl/"
                                eId="cmp_o_6__table_o_1"
@@ -2521,6 +2537,7 @@
                            </tgroup>
                         </table>
                      </Inhoud>
+                     </Divisietekst>
                   </Bijlage>
                   <Toelichting eId="recital_6" wId="pv26_311__recital_6">
                      <Kop>
@@ -2539,17 +2556,20 @@
                            <Kop>
                               <Opschrift>Wettelijke basis verordening</Opschrift>
                            </Kop>
+                           <Divisietekst wId="aa" eId="aa">
                            <Inhoud>
                               <Al>Artikel 2.6 van de Omgevingswet schrijf voor dat provinciale staten één omgevingsverordening vaststellen waarin regels over de fysieke leefomgeving worden opgenomen. De omgevingsverordening vervangt bestaande verordeningen zoals de ruimtelijke verordening, de milieuverordening, de natuur en landschapsverordening.</Al>
                               <Al/>
                               <Al>De omgevingsverordening bevat instructieregels over taken en bevoegdheden van gemeenten en waterschappen. Daarnaast bevat de omgevingsverordening direct werkende regels. Dit zijn regels die rechtstreeks gelden voor bedrijven, burgers en andere initiatiefnemers bij het uitvoeren van een activiteit. Andere voorbeelden van direct werkende regels zijn de meld- en informatieplichten en de specifieke zorgplichten. Regels over bijvoorbeeld een vergunningplicht gelden ook voor bedrijven, burgers en andere initiatiefnemers. Daarover moet eerst een besluit genomen worden.</Al>
                            </Inhoud>
+                           </Divisietekst>
                         </Divisie>
                         <Divisie eId="recital_6__div_1__div_o_2"
                                  wId="pv26_311__recital_6__div_1__div_o_2">
                            <Kop>
                               <Opschrift>Provinciaal belang</Opschrift>
                            </Kop>
+                           <Divisietekst wId="aa" eId="aa">
                            <Inhoud>
                               <Figuur eId="recital_6__div_1__div_o_2__img_o_1"
                                       wId="pv26_311__recital_6__div_1__div_o_2__img_o_1">
@@ -2615,6 +2635,7 @@
                                               dpi="72"/>
                               </Figuur>
                            </Inhoud>
+                           </Divisietekst>
                         </Divisie>
                      </Divisie>
                      <Divisie eId="recital_6__div_2" wId="pv26_311__recital_6__div_2">
@@ -2623,14 +2644,13 @@
                            <Nummer>2</Nummer>
                            <Opschrift>Artikelsgewijze toelichting</Opschrift>
                         </Kop>
+                        <Divisietekst wId="aaa" eId="aa">
                         <Inhoud>
                            <Al>NOG VULLEN</Al>
                         </Inhoud>
+                        </Divisietekst>
                      </Divisie>
                   </Toelichting>
-               </MaakInitieleRegeling>
-            </WijzigBijlage>
-         </Regeling>
       </BesluitCompact>
    </BesluitVersie>
    <RegelingVersieInformatie>
@@ -2647,7 +2667,9 @@
          <onderwerpen>
             <onderwerp>/tooi/def/concept/c_cfc7d5ab</onderwerp>
          </onderwerpen>
-         <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+         <overheidsdomeinen>
+            <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+         </overheidsdomeinen>
          <rechtsgebieden>
             <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
          </rechtsgebieden>
@@ -2662,7 +2684,9 @@
                </TekstReferentie>
             </grondslag>
          </grondslagen>
-         <redactioneleTitel>Omgevingsverordening Utrecht</redactioneleTitel>
+         <alternatieveTitels>
+            <alternatieveTitel>Omgevingsverordening Utrecht</alternatieveTitel>
+         </alternatieveTitels>
          <versienummer>310</versienummer>
          <voorkeursafkorting/>
          <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>

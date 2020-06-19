@@ -39,12 +39,20 @@
             <Al/>
          </RegelingOpschrift>
          <Lichaam eId="body" wId="body">
+            <Artikel wId="aa" eId="aa">
+            <Gereserveerd/>
+            </Artikel>
+         </Lichaam>
+         <Sluiting wId="a" eId="a">
+            <Al>a</Al>
+         </Sluiting>
             <Bijlage eId="cmp_I" wId="pv26_311__cmp_I">
                <Kop>
                   <Label>Bijlage</Label>
                   <Nummer>I</Nummer>
                   <Opschrift>Overzicht Informatieobjecten</Opschrift>
                </Kop>
+               <Divisietekst wId="aa" eId="a">
                <Inhoud>
                   <Begrippenlijst eId="cmp_I__list_o_1" wId="pv26_311__cmp_I__list_o_1">
                      <Begrip eId="cmp_I__list_o_1__item_o_1"
@@ -54,7 +62,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_1__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_1__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040"
+                                 ref="/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040"
                                  >/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -66,7 +74,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_2__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044"
+                                 ref="/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044"
                                  >/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -78,7 +86,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_3__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_3__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045"
+                                 ref="/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045"
                                  >/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -90,7 +98,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_4__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039"
+                                 ref="/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039"
                                  >/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -102,7 +110,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_5__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051"
+                                 ref="/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051"
                                  >/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -114,7 +122,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_6__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_6__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053"
+                                 ref="/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053"
                                  >/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -126,7 +134,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_7__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_7__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047"
+                                 ref="/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047"
                                  >/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -138,7 +146,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_8__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_8__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043"
+                                 ref="/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043"
                                  >/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -150,7 +158,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_9__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_9__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042"
+                                 ref="/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042"
                                  >/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -162,7 +170,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_10__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_10__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054"
+                                 ref="/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054"
                                  >/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -174,7 +182,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_11__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_11__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057"
+                                 ref="/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057"
                                  >/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -186,7 +194,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_12__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_12__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062"
+                                 ref="/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062"
                                  >/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -198,7 +206,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_13__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_13__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060"
+                                 ref="/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060"
                                  >/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -210,7 +218,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_14__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_14__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058"
+                                 ref="/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058"
                                  >/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -222,7 +230,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_15__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_15__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055"
+                                 ref="/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055"
                                  >/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -234,7 +242,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_16__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_16__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061"
+                                 ref="/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061"
                                  >/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -246,7 +254,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_17__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_17__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063"
+                                 ref="/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063"
                                  >/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -258,7 +266,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_18__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_18__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059"
+                                 ref="/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059"
                                  >/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -270,7 +278,7 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_19__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_19__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056"
+                                 ref="/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056"
                                  >/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</ExtIoRef>
                            </Al>
                         </Definitie>
@@ -282,13 +290,14 @@
                            <Al>
                               <ExtIoRef eId="cmp_I__list_o_1__item_o_20__ref_o_1"
                                  wId="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1"
-                                 doel="/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049"
+                                 ref="/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049"
                                  >/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</ExtIoRef>
                            </Al>
                         </Definitie>
                      </Begrip>
                   </Begrippenlijst>
                </Inhoud>
+               </Divisietekst>
             </Bijlage>
             <Bijlage eId="cmp_2" wId="pv26_311__cmp_2">
                <Kop>
@@ -296,6 +305,7 @@
                   <Nummer>2</Nummer>
                   <Opschrift>Mobiliteitstoets</Opschrift>
                </Kop>
+               <Divisietekst wId="aaa" eId="aaa">
                <Inhoud>
                   <Al>
                      <b>Mobiliteitsscan</b>
@@ -469,6 +479,7 @@
                      </Li>
                   </Lijst>
                </Inhoud>
+               </Divisietekst>
             </Bijlage>
             <Bijlage eId="cmp_3" wId="pv26_311__cmp_3">
                <Kop>
@@ -476,6 +487,7 @@
                   <Nummer>3</Nummer>
                   <Opschrift>lijst waterwingebieden</Opschrift>
                </Kop>
+               <Divisietekst wId="aaa" eId="aaa">
                <Inhoud>
                   <Al/>
                   <Al>Amersfoort-Berg</Al>
@@ -483,7 +495,7 @@
                   <Al>Beerschoten</Al>
                   <Al>
                      <IntIoRef eId="cmp_3__ref_o_1" wId="pv26_311__cmp_3__ref_o_1"
-                        doel="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1"
+                        ref="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1"
                         >Bethunepolder</IntIoRef>
                   </Al>
                   <Al>Bethunepolder waterleidingkanaal</Al>
@@ -513,6 +525,7 @@
                   <Al>Zeist</Al>
                   <Al>WCB Nieuwegein</Al>
                </Inhoud>
+               </Divisietekst>
             </Bijlage>
             <Bijlage eId="cmp_4" wId="pv26_311__cmp_4">
                <Kop>
@@ -521,6 +534,7 @@
                   <Opschrift>Parameters en frequentie van bemonstering en analyse van te infiltreren
                      water</Opschrift>
                </Kop>
+               <Divisietekst wId="aaa" eId="aaa">
                <Inhoud>
                   <table xmlns:eigen="https://www.eigen.nl/" eId="cmp_4__table_o_1"
                      wId="pv26_311__cmp_4__table_o_1" eigen:class="standaard" frame="all" colsep="1"
@@ -899,6 +913,7 @@
                      </tgroup>
                   </table>
                </Inhoud>
+               </Divisietekst>
             </Bijlage>
             <Bijlage eId="cmp_5" wId="pv26_311__cmp_5">
                <Kop>
@@ -906,12 +921,14 @@
                   <Nummer>5</Nummer>
                   <Opschrift>Modelborden grondwaterbeschermingszones</Opschrift>
                </Kop>
+               <Divisietekst wId="aaa" eId="aaa">
                <Inhoud>
                   <Figuur eId="cmp_5__img_o_1" wId="pv26_311__cmp_5__img_o_1">
                      <Illustratie naam="image_1.jpeg" breedte="944" hoogte="1017" uitlijning="start"
                         formaat="image/jpeg" dpi="72"/>
                   </Figuur>
                </Inhoud>
+               </Divisietekst>
             </Bijlage>
             <Bijlage eId="cmp_o_6" wId="pv26_311__cmp_o_6">
                <Kop>
@@ -919,6 +936,7 @@
                   <Opschrift>Lijst verboden activiteiten in
                      grondwaterbeschermingsgebieden</Opschrift>
                </Kop>
+               <Divisietekst wId="aaa" eId="aaa">
                <Inhoud>
                   <table xmlns:eigen="https://www.eigen.nl/" eId="cmp_o_6__table_o_1"
                      wId="pv26_311__cmp_o_6__table_o_1" eigen:class="standaard" frame="all"
@@ -1169,6 +1187,7 @@
                      </tgroup>
                   </table>
                </Inhoud>
+               </Divisietekst>
             </Bijlage>
             <Toelichting eId="recital_6" wId="pv26_311__recital_6">
                <Kop>
@@ -1186,6 +1205,7 @@
                      <Kop>
                         <Opschrift>Wettelijke basis verordening</Opschrift>
                      </Kop>
+                     <Divisietekst wId="aaa" eId="aaa">
                      <Inhoud>
                         <Al>Artikel 2.6 van de Omgevingswet schrijf voor dat provinciale staten één
                            omgevingsverordening vaststellen waarin regels over de fysieke
@@ -1203,11 +1223,13 @@
                            voor bedrijven, burgers en andere initiatiefnemers. Daarover moet eerst
                            een besluit genomen worden.</Al>
                      </Inhoud>
+                     </Divisietekst>
                   </Divisie>
                   <Divisie eId="recital_6__div_1__div_o_2" wId="pv26_311__recital_6__div_1__div_o_2">
                      <Kop>
                         <Opschrift>Provinciaal belang</Opschrift>
                      </Kop>
+                     <Divisietekst wId="aaa" eId="aaa">
                      <Inhoud>
                         <Figuur eId="recital_6__div_1__div_o_2__img_o_1"
                            wId="pv26_311__recital_6__div_1__div_o_2__img_o_1">
@@ -1245,6 +1267,7 @@
                               uitlijning="start" formaat="image/jpeg" dpi="72"/>
                         </Figuur>
                      </Inhoud>
+                     </Divisietekst>
                   </Divisie>
                </Divisie>
                <Divisie eId="recital_6__div_2" wId="pv26_311__recital_6__div_2">
@@ -1253,12 +1276,13 @@
                      <Nummer>2</Nummer>
                      <Opschrift>Artikelsgewijze toelichting</Opschrift>
                   </Kop>
+                  <Divisietekst wId="aaa" eId="aaa">
                   <Inhoud>
                      <Al>NOG VULLEN</Al>
                   </Inhoud>
+                  </Divisietekst>
                </Divisie>
             </Toelichting>
-         </Lichaam>
       </BesluitCompact>
    </BesluitVersie>
    <RegelingVersieInformatie>
