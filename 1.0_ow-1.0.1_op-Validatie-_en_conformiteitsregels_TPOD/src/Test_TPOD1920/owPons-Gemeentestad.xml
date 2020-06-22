@@ -28,7 +28,6 @@
 				<!--variant 1: geldende pons!-->
 					<p:Pons>
 						<p:identificatie>nl.imow-gm0037.pons.2019000001</p:identificatie>
-						<p:leidendVanaf>2019-07-19</p:leidendVanaf>
 						<p:locatieaanduiding>
 							<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 						</p:locatieaanduiding>

@@ -66,28 +66,25 @@
 			<owObject>
 				<rol:Omgevingsnorm>
 					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900003</rol:identificatie>
+					<rol:naam>maximum bouwhoogte</rol:naam>
+					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Type</rol:type>
 					<rol:normwaarde>
 						<rol:Normwaarde>
-							<rol:kwantitatieveWaarde>
-								<da:waarde>13</da:waarde>
-								<da:eenheid>meter</da:eenheid>
-							</rol:kwantitatieveWaarde>
+							<rol:identificatie>nl.imow-gm0037.normwaarde.2019000010</rol:identificatie>
+							<rol:kwantitatieveWaarde>13</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
 								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000010"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 						<rol:Normwaarde>
-							<rol:kwantitatieveWaarde>
-								<da:waarde>7</da:waarde>
-								<da:eenheid>meter</da:eenheid>
-							</rol:kwantitatieveWaarde>					
+							<rol:identificatie>nl.imow-gm0037.normwaarde.2019000010</rol:identificatie>
+							<rol:kwantitatieveWaarde>7</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
 								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>maximum bouwhoogte</rol:naam>
-					<rol:groep>maatvoeringbouwen</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Maatvoeringbouwen</rol:groep>
 				</rol:Omgevingsnorm>
 			</owObject>
 		</sl:stand>	
