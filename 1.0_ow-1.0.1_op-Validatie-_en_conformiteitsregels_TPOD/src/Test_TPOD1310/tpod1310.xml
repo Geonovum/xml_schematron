@@ -193,14 +193,20 @@
 				<r:RegelVoorIedereen>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019000002</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-
-
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+					</r:locatieaanduiding>
 					<r:activiteitaanduiding>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
 						<r:ActiviteitLocatieaanduiding>
 							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019000001</r:identificatie>
 							<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-
+							<r:locatieaanduiding>
+								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+							</r:locatieaanduiding>
 						</r:ActiviteitLocatieaanduiding>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
@@ -209,16 +215,22 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<r:RegelVoorIedereen>
-					<r:identificatie>nl.imow-gm0037.juridischeregel.2019000001</r:identificatie>
+					<r:identificatie>nl.imow-gm0037.juridischeregel.2019000002</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-
-
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+					</r:locatieaanduiding>
 					<r:activiteitaanduiding>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
 						<r:ActiviteitLocatieaanduiding>
 							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019000001</r:identificatie>
 							<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-
+							<r:locatieaanduiding>
+								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+							</r:locatieaanduiding>
 						</r:ActiviteitLocatieaanduiding>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
@@ -227,16 +239,22 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<r:RegelVoorIedereen>
-					<r:identificatie>nl.imow-gm0037.juridischeregel.2019000001</r:identificatie>
+					<r:identificatie>nl.imow-gm0037.juridischeregel.2019000003</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-
-
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000002"/>
+					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+					</r:locatieaanduiding>
 					<r:activiteitaanduiding>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
 						<r:ActiviteitLocatieaanduiding>
 							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019000001</r:identificatie>
 							<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-
+							<r:locatieaanduiding>
+								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
+							</r:locatieaanduiding>
 						</r:ActiviteitLocatieaanduiding>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
@@ -414,19 +432,6 @@
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000013"/>
 					</l:groepselement>
 				</l:Gebiedengroep>
-			</ow-dc:owObject>
-		</sl:stand>
-
-
-		<!-- correct Instructieregel -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<r:Instructieregel>
-					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001001</r:identificatie>
-					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-
-
-				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
 		<sl:stand>
@@ -672,111 +677,30 @@
 				</rol:Activiteit>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000001</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/Functie</ga:type>
 					<ga:naam>Bedrijf categorie 2</ga:naam>
-					<ga:groep>bedrijf</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/Bedrijf</ga:groep>
 					<ga:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000002</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/Functie</ga:type>
 					<ga:naam>Centrumgebied</ga:naam>
-					<ga:groep>centrumgebied</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/Centrumgebied</ga:groep>
 					<ga:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000004"/>
 					</ga:locatieaanduiding>
 				</ga:Gebiedsaanwijzing>
-			</ow-dc:owObject>
-		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<!--variant 1: geldende pons!-->
-				<p:Pons>
-					<p:identificatie>nl.imow-gm0037.pons.2019000001</p:identificatie>
-					<p:leidendVanaf>2019-07-19</p:leidendVanaf>
-					<p:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
-					</p:locatieaanduiding>
-				</p:Pons>
-			</ow-dc:owObject>
-		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<!--variant 2: aangeleverd, later vervallen!-->
-				<p:Pons>
-					<p:identificatie>nl.imow-gm0037.pons.2019000002</p:identificatie>
-					<p:leidendVanaf>2019-07-19</p:leidendVanaf>
-					<p:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000002"/>
-					</p:locatieaanduiding>
-				</p:Pons>
-			</ow-dc:owObject>
-		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<p:Pons>
-					<p:identificatie>nl.imow-gm0037.pons.2019000003</p:identificatie>
-					<p:leidendTot>2019-09-03</p:leidendTot>
-					<p:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000002"/>
-					</p:locatieaanduiding>
-				</p:Pons>
-			</ow-dc:owObject>
-		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<!--variant 3: toekomstige ponsgeometrie!-->
-				<p:Pons>
-					<p:identificatie>nl.imow-gm0037.pons.2019000004</p:identificatie>
-					<p:leidendVanaf>2021-01-01</p:leidendVanaf>
-					<p:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000003"/>
-					</p:locatieaanduiding>
-				</p:Pons>
-			</ow-dc:owObject>
-		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<!--variant 4: besluit genomen op 07 januari 2019, besluit geschorst op 1 juni 2019, einduitspraak besluit in stand gebleven op 31 oktober 2019!-->
-				<p:Pons>
-					<p:identificatie>nl.imow-gm0037.pons.2019000005</p:identificatie>
-					<p:leidendVanaf>2019-01-07</p:leidendVanaf>
-					<p:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
-					</p:locatieaanduiding>
-				</p:Pons>
-			</ow-dc:owObject>
-		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<p:Pons>
-					<p:identificatie>nl.imow-gm0037.pons.2019000005</p:identificatie>
-					<p:leidendTot>2019-06-01</p:leidendTot>
-					<p:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
-					</p:locatieaanduiding>
-				</p:Pons>
-			</ow-dc:owObject>
-		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<p:Pons>
-					<p:identificatie>nl.imow-gm0037.pons.2019000005</p:identificatie>
-					<p:leidendVanaf>2019-10-31</p:leidendVanaf>
-					<p:locatieaanduiding>
-						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000007"/>
-					</p:locatieaanduiding>
-				</p:Pons>
 			</ow-dc:owObject>
 		</sl:stand>
 		<sl:stand xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709">
@@ -826,9 +750,7 @@
 				</rol:Omgevingsnorm>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.3 -->
@@ -841,9 +763,7 @@
 				</l:Gebied>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.4 -->
@@ -856,9 +776,7 @@
 				</l:Gebied>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - art 2.6 lid 1 -->
@@ -870,9 +788,7 @@
 				</l:Gebied>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.9 -->
@@ -884,9 +800,7 @@
 				</l:Gebied>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
@@ -898,9 +812,7 @@
 				</l:Gebied>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
@@ -912,9 +824,7 @@
 				</l:Gebied>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
@@ -926,9 +836,7 @@
 				</l:Gebied>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
@@ -940,9 +848,7 @@
 				</l:Gebied>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.10 -->
@@ -998,11 +904,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000241"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1017,11 +918,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000242"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1036,12 +932,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000243"/>
-						<!-- deze activiteit heeft ook een regel vanuit art 2.11 lid 1 -->
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1056,11 +946,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000244"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1075,11 +960,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000245"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1094,11 +974,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002451"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1113,11 +988,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002452"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1132,11 +1002,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002453"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1151,11 +1016,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000246"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1177,11 +1037,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>verbod</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000730"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1196,11 +1051,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>verbod</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000740"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1215,11 +1065,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>verbod</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000750"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1243,11 +1088,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>meldingsplicht</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000246"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1269,11 +1109,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>vergunningplicht</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000540"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -1321,11 +1156,6 @@
 					<r:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000004"/>
 					</r:locatieaanduiding>
-
-					<r:activiteitregelkwalificatie>toegestaan</r:activiteitregelkwalificatie>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000660"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>

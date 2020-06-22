@@ -30,9 +30,9 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000001</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/Functie</ga:type>
 					<ga:naam>Bedrijf categorie 2</ga:naam>
-					<ga:groep>bedrijf</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/bedrijf</ga:groep>
 					<ga:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</ga:locatieaanduiding>
@@ -43,9 +43,9 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000002FOUT</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/Functie</ga:type>
 					<ga:naam>Centrumgebied</ga:naam>
-					<ga:groep>centrumgebied</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/Centrumgebied</ga:groep>
 					<ga:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebiedje.2019000004"/>
 					</ga:locatieaanduiding>
@@ -56,9 +56,9 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000003</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/Functie</ga:type>
 					<ga:naam>Zuilichem industriegebied Totaal</ga:naam>
-					<ga:groep>Zuilichem industriegebied Totaal</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/Zuilichem industriegebied Totaal</ga:groep>
 					<ga:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebiedengroep.2019000001"/>
 					</ga:locatieaanduiding>
@@ -69,9 +69,9 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000004FOUT</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/Functie</ga:type>
 					<ga:naam>Zuilichem industriegebied Totaal</ga:naam>
-					<ga:groep>Zuilichem industriegebied Totaal</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/Zuilichem industriegebied Totaal</ga:groep>
 					<ga:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebiedengroepje.2019000001"/>
 					</ga:locatieaanduiding>
@@ -84,9 +84,9 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000005</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/Functie</ga:type>
 					<ga:naam>Bedrijf categorie 2</ga:naam>
-					<ga:groep>bedrijf</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/Bedrijf</ga:groep>
 					<ga:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000001"/>
 					</ga:locatieaanduiding>
@@ -97,9 +97,9 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000006FOUT</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/Functie</ga:type>
 					<ga:naam>Centrumgebied</ga:naam>
-					<ga:groep>centrumgebied</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/Centrumgebied</ga:groep>
 					<ga:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebiedje.2019000004"/>
 					</ga:locatieaanduiding>
@@ -110,9 +110,9 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000007</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/Functie</ga:type>
 					<ga:naam>Zuilichem industriegebied Totaal</ga:naam>
-					<ga:groep>Zuilichem industriegebied Totaal</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/Zuilichem industriegebied Totaal</ga:groep>
 					<ga:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebiedengroep.2019000001"/>
 					</ga:locatieaanduiding>
@@ -123,9 +123,9 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.2019000008FOUT</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/Functie</ga:type>
 					<ga:naam>Zuilichem industriegebied Totaal</ga:naam>
-					<ga:groep>Zuilichem industriegebied Totaal</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/Zuilichem industriegebied Totaal</ga:groep>
 					<ga:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebiedengroepje.2019000001"/>
 					</ga:locatieaanduiding>

@@ -33,9 +33,7 @@
 				</r:Regeltekst>
 			</ow-dc:owObject>
 		</sl:stand>
-		<sl:stand xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190901"
-			xmlns:g-ref="http://www.geostandaarden.nl/imow/geometrie-ref/v20190901"
-			xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190709">
+		<sl:stand>
 			<ow-dc:owObject>
 				<l:Gebied>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.3 -->
