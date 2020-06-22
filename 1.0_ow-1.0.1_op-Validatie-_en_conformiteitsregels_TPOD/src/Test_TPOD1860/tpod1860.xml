@@ -165,15 +165,12 @@
 				<r:RegelVoorIedereen>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.20190010015</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
 					</r:artikelOfLid>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
-					</r:activiteitaanduiding>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -183,12 +180,12 @@
 				<r:RegelVoorIedereen>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.20190010014</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 					<r:gebiedsaanwijzing>
 						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
 					</r:gebiedsaanwijzing>
@@ -201,12 +198,12 @@
 				<r:RegelVoorIedereen>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.20190010013</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 					<r:omgevingsnormaanduiding>
 						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
 					</r:omgevingsnormaanduiding>
@@ -219,15 +216,12 @@
 				<r:RegelVoorIedereen>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.20190010012</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900004"/>
 					</r:artikelOfLid>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000011FOUT"/>
-					</r:activiteitaanduiding>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -237,12 +231,12 @@
 				<r:RegelVoorIedereen>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.20190010011</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900005"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 					<r:gebiedsaanwijzing>
 						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000011FOUT"/>
 					</r:gebiedsaanwijzing>
@@ -255,12 +249,12 @@
 				<r:RegelVoorIedereen>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.20190010010</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900006"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 					<r:omgevingsnormaanduiding>
 						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.2019000011FOUT"/>
 					</r:omgevingsnormaanduiding>
@@ -273,12 +267,12 @@
 				<r:RegelVoorIedereen>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001009</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000061FOUT"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 					<r:omgevingsnormaanduiding>
 						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
 					</r:omgevingsnormaanduiding>
@@ -291,12 +285,12 @@
 				<r:RegelVoorIedereen>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001008</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011FOUT"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900008"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011FOUT"/>
+					</r:locatieaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>	
@@ -306,12 +300,12 @@
 				<r:Instructieregel>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001007</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 					<r:omgevingsnormaanduiding>
 						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
 					</r:omgevingsnormaanduiding>
@@ -324,12 +318,12 @@
 				<r:Instructieregel>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001006</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 					<r:gebiedsaanwijzing>
 						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
 					</r:gebiedsaanwijzing>
@@ -342,12 +336,12 @@
 				<r:Instructieregel>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001005</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -357,12 +351,12 @@
 				<r:Instructieregel>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001004</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900004"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -372,12 +366,12 @@
 				<r:Instructieregel>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001003</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 					<r:omgevingsnormaanduiding>
 						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.2019000011FOUT"/>
 					</r:omgevingsnormaanduiding>
@@ -390,12 +384,12 @@
 				<r:Instructieregel>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001002</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 					<r:gebiedsaanwijzing>
 						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.2019000011FOUT"/>
 					</r:gebiedsaanwijzing>
@@ -408,12 +402,12 @@
 				<r:Instructieregel>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001001</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011FOUT"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011FOUT"/>
+					</r:locatieaanduiding>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -423,12 +417,12 @@
 				<r:Instructieregel>
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001000</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
-					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-					</r:locatieaanduiding>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000041FOUT"/>
 					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
+					</r:locatieaanduiding>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -506,30 +500,16 @@
 				</rol:Activiteit>
 			</ow-dc:owObject>	
 		</sl:stand>
-		<!-- Omgevingsnorm GOED gebiedref-->
-		<sl:stand>
-			<ow-dc:owObject>
-				<rol:Omgevingsnorm>
-					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900001</rol:identificatie>
-					<rol:normwaarde>
-						<rol:Normwaarde>
-							<rol:locatieaanduiding>
-								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-							</rol:locatieaanduiding>
-						</rol:Normwaarde>
-					</rol:normwaarde>
-					<rol:naam>abc</rol:naam>
-					<rol:groep>cde</rol:groep>
-				</rol:Omgevingsnorm>
-			</ow-dc:owObject>
-		</sl:stand>
 		<!-- Omgevingsnorm FOUT gebiedref bestaat niet -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<rol:Omgevingsnorm>
 					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900002</rol:identificatie>
+					<rol:naam>abc</rol:naam>
+					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/Type</rol:type>
 					<rol:normwaarde>
 						<rol:Normwaarde>
+							<rol:identificatie>nl.imow-gm0037.normwaarde.201900002</rol:identificatie>
 							<rol:locatieaanduiding>
 								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011FOUT"/>
 							</rol:locatieaanduiding>
@@ -555,8 +535,7 @@
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>fijnstof</rol:naam>
-					<rol:groep>luchtkwaliteit</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/Luchtkwaliteit</rol:groep>
 				</rol:Omgevingswaarde>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -585,9 +564,9 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.201900001</ga:identificatie>
-					<ga:type></ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Type</ga:type>
 					<ga:naam>abc</ga:naam>
-					<ga:groep></ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Groep</ga:groep>
 					<ga:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</ga:locatieaanduiding>
@@ -599,9 +578,9 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.201900002</ga:identificatie>
-					<ga:type></ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Type</ga:type>
 					<ga:naam>abc</ga:naam>
-					<ga:groep></ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Groep</ga:groep>
 					<ga:locatieaanduiding>
 						<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000011FOUT"/>
 					</ga:locatieaanduiding>
@@ -928,219 +907,6 @@
 						<l:LijnRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
 					</l:groepselement>
 				</l:Lijnengroep>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- FormeleDivisie -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:FormeleDivisie wId="gm0037_1__subchp_2.2__art_2.3">
-					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900001</vt:identificatie>
-				</vt:FormeleDivisie>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- FormeleDivisie -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:FormeleDivisie wId="gm0037_1__subchp_2.2__art_2.3">
-					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900002</vt:identificatie>
-				</vt:FormeleDivisie>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- FormeleDivisie -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:FormeleDivisie wId="gm0037_1__subchp_2.2__art_2.3">
-					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900003</vt:identificatie>
-				</vt:FormeleDivisie>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Symbolisatiecollectie -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<k:Symbolisatiecollectie>
-					<k:symbolisatieItem>
-						<k:SymbolisatieItem>
-							<k:objecttype></k:objecttype>
-							<k:attribuut></k:attribuut>
-							<k:symboolcode></k:symboolcode>
-						</k:SymbolisatieItem>
-					</k:symbolisatieItem>
-				</k:Symbolisatiecollectie>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Symbolisatiecollectie -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<k:Symbolisatiecollectie>
-					<k:symbolisatieItem>
-						<k:SymbolisatieItem>
-							<k:objecttype></k:objecttype>
-							<k:attribuut></k:attribuut>
-							<k:symboolcode></k:symboolcode>
-						</k:SymbolisatieItem>
-					</k:symbolisatieItem>
-				</k:Symbolisatiecollectie>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Symbolisatiecollectie -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<k:Symbolisatiecollectie>
-					<k:symbolisatieItem>
-						<k:SymbolisatieItem>
-							<k:objecttype></k:objecttype>
-							<k:attribuut></k:attribuut>
-							<k:symboolcode></k:symboolcode>
-						</k:SymbolisatieItem>
-					</k:symbolisatieItem>
-				</k:Symbolisatiecollectie>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Kaart -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<k:Kaart>
-					<k:identificatie>nl.imow-gm0037.kaart.201900001</k:identificatie>
-					<k:kaartnaam></k:kaartnaam>
-					<k:kaartnummer></k:kaartnummer>
-					<k:kaartuitsnede>
-						<k:Kaartextent>
-							<k:minX></k:minX>
-							<k:minY></k:minY>
-							<k:maxX></k:maxX>
-							<k:maxY></k:maxY>
-						</k:Kaartextent>
-					</k:kaartuitsnede>
-				</k:Kaart>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Kaart -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<k:Kaart>
-					<k:identificatie>nl.imow-gm0037.kaart.201900002</k:identificatie>
-					<k:kaartnaam></k:kaartnaam>
-					<k:kaartnummer></k:kaartnummer>
-					<k:kaartuitsnede>
-						<k:Kaartextent>
-							<k:minX></k:minX>
-							<k:minY></k:minY>
-							<k:maxX></k:maxX>
-							<k:maxY></k:maxY>
-						</k:Kaartextent>
-					</k:kaartuitsnede>
-				</k:Kaart>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Kaart -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<k:Kaart>
-					<k:identificatie>nl.imow-gm0037.kaart.201900003</k:identificatie>
-					<k:kaartnaam></k:kaartnaam>
-					<k:kaartnummer></k:kaartnummer>
-					<k:kaartuitsnede>
-						<k:Kaartextent>
-							<k:minX></k:minX>
-							<k:minY></k:minY>
-							<k:maxX></k:maxX>
-							<k:maxY></k:maxY>
-						</k:Kaartextent>
-					</k:kaartuitsnede>
-				</k:Kaart>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Pons -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<p:Pons>
-					<p:identificatie>nl.imow-gm0037.pons.201900001</p:identificatie>
-					<p:locatieaanduiding></p:locatieaanduiding>
-				</p:Pons>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Pons -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<p:Pons>
-					<p:identificatie>nl.imow-gm0037.pons.201900002</p:identificatie>
-					<p:locatieaanduiding></p:locatieaanduiding>
-				</p:Pons>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Pons -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<p:Pons>
-					<p:identificatie>nl.imow-gm0037.pons.201900003</p:identificatie>
-					<p:locatieaanduiding></p:locatieaanduiding>
-				</p:Pons>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Tekstdeel -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Tekstdeel>
-					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900001</vt:identificatie>
-					<vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
-					<vt:formeleDivisie>
-						<vt:FormeleDivisieRef xlink:href=""/>
-					</vt:formeleDivisie>
-				</vt:Tekstdeel>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Tekstdeel -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Tekstdeel>
-					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900002</vt:identificatie>
-					<vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
-					<vt:formeleDivisie>
-						<vt:FormeleDivisieRef xlink:href=""/>
-					</vt:formeleDivisie>
-				</vt:Tekstdeel>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Tekstdeel -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Tekstdeel>
-					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900003</vt:identificatie>
-					<vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
-					<vt:formeleDivisie>
-						<vt:FormeleDivisieRef xlink:href=""/>
-					</vt:formeleDivisie>
-				</vt:Tekstdeel>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Hoofdlijn -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Hoofdlijn>
-					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900001</vt:identificatie>
-					<vt:naam></vt:naam>
-					<vt:soort></vt:soort>
-				</vt:Hoofdlijn>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Hoofdlijn -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Hoofdlijn>
-					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900002</vt:identificatie>
-					<vt:naam></vt:naam>
-					<vt:soort></vt:soort>
-				</vt:Hoofdlijn>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Hoofdlijn -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Hoofdlijn>
-					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900003</vt:identificatie>
-					<vt:naam></vt:naam>
-					<vt:soort></vt:soort>
-				</vt:Hoofdlijn>
 			</ow-dc:owObject>
 		</sl:stand>
 	</sl:standBestand>
