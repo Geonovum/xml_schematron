@@ -7,15 +7,15 @@
     <WorkIDRegeling>/akn/nl/act/gm0297/2019/reg456</WorkIDRegeling>
     <DoelID>/join/id/proces/gm0297/2019/Instelling</DoelID>
     <Bestand>
-      <naam>owActiviteiten-Gemeentestad.xml</naam>
-      <objecttype>Activiteits</objecttype>
+      <naam>Activiteiten.xml</naam>
+      <objecttype>Activiteit</objecttype>
     </Bestand>
     <Bestand>
-      <naam>owGebiedsaanwijzingen-Gemeentestad.xml</naam>
+      <naam>Gebiedsaanwijzing.xml</naam>
       <objecttype>Gebiedsaanwijzing</objecttype>
     </Bestand>
     <Bestand>
-      <naam>owKaart.xml</naam>
+      <naam>owKaart001.xml</naam>
       <objecttype>Kaart</objecttype>
     </Bestand>
     <Bestand>
@@ -28,54 +28,16 @@
       <objecttype>Omgevingswaarde</objecttype>
     </Bestand>
     <Bestand>
-      <naam>owLocaties-Gemeentestad.xml</naam>
+      <naam>owLocatie.xml</naam>
       <objecttype>Gebiedengroep</objecttype>
       <objecttype>Gebied</objecttype>
     </Bestand>
     <Bestand>
-      <naam>owRegeltekst-Gemeentestad.xml</naam>
+      <naam>Regelteksten.xml</naam>
       <objecttype>Regeltekst</objecttype>
-      <objecttype>RegelVoorIedereen</objecttype>
-      <objecttype>Omgevingswaarderegel</objecttype>
     </Bestand>
     <Bestand>
-      <naam>owRegelingsgebied.xml</naam>
-      <objecttype>Regelingsgebied</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>Bedrijf_categorie_2.gml</naam>
-      <objecttype>Geometrie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>Centrumgebied.gml</naam>
-      <objecttype>Geometrie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>Speelhal.gml</naam>
-      <objecttype>Geometrie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>Welstand.gml</naam>
-      <objecttype>Geometrie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>Zone_A.gml</naam>
-      <objecttype>Geometrie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>Zaltbommel.gml</naam>
-      <objecttype>Geometrie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>Zone_B.gml</naam>
-      <objecttype>Geometrie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>Zuilichem.gml</naam>
-      <objecttype>Geometrie</objecttype>
-    </Bestand>
-    <Bestand>
-      <naam>Zuilichem_industriegebied.gml</naam>
+      <naam>werelderfgoed_Stelling_van_Amsterdam.gml</naam>
       <objecttype>Geometrie</objecttype>
     </Bestand>
   </Aanlevering>

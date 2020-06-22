@@ -57,7 +57,6 @@
     <sch:ns uri="http://www.overheid.nl/2017/lvbb" prefix="lvbb"/>
     <sch:ns uri="http://www.overheid.nl/2017/stop" prefix="stop"/>
     <sch:ns uri="http://www.logius.nl/digikoppeling/gb/2010/10" prefix="tns"/>
-    
     <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/manifest-ow" prefix="ow-manifest"/>
     
     <sch:ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
@@ -92,7 +91,6 @@
     <xsl:function name="foo:notfoundFileOrObjectTypeTPOD_1920">
         <xsl:param name="naam"/>
         <xsl:param name="context" as="node()"/>
-        <xsl:message select="$naam"/>
         <xsl:variable name="notfoundFileOrObjectType">
             <xsl:for-each select="$context/ow-manifest:objecttype">
                 <xsl:variable name="objecttype" select="text()"/>
