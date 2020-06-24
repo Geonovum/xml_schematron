@@ -78,7 +78,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_2020">
-        <sch:rule context="//FRBRwork">
+        <sch:rule context="//WorkIDRegeling">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkFBRWorkTPOD_2010(text())) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD2020: Betreft

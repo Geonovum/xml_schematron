@@ -10,37 +10,7 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>1.0_ow-1.0.1_op-Validatie-_en_conformiteitsregels_TPOD/src/Test_TPOD2130/tpod2130.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>locatieartikelomdraaien</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>1.0_ow-1.0.1_op-Validatie-_en_conformiteitsregels_TPOD/src/Test_TPOD2120/tpod2120.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>locatieartikelomdraaien</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>1.0_ow-1.0.1_op-Validatie-_en_conformiteitsregels_TPOD/src/Test_TPOD2080/tpod2080.xml</String>
+                                    <String>1.0_ow-1.0.1_op-Validatie-_en_conformiteitsregels_TPOD/src/Test_TPOD2070/owRegeltekst.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -71,21 +41,6 @@
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>1.0_ow-1.0.1_op-Validatie-_en_conformiteitsregels_TPOD/src/Test_TPOD1970/tpod1970.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>locatieartikelomdraaien</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>1.0_ow-1.0.1_op-Validatie-_en_conformiteitsregels_TPOD/src/Test_TPOD1960/tpod1960.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -240,6 +195,51 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>idealisatie</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>1.0_ow-1.0.1_op-Validatie-_en_conformiteitsregels_TPOD/src/Test_TPOD2130/tpod2130.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>locatieartikelomdraaien</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>1.0_ow-1.0.1_op-Validatie-_en_conformiteitsregels_TPOD/src/Test_TPOD2120/tpod2120.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>locatieartikelomdraaien</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>1.0_ow-1.0.1_op-Validatie-_en_conformiteitsregels_TPOD/src/Test_TPOD2080/tpod2080.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>locatieartikelomdraaien</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">

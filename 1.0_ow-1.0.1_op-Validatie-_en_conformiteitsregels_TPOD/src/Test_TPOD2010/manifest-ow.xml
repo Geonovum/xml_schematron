@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<!-- OP BG Hillegom by Visma | Roxit -->
-<Modules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:m="http://www.geostandaarden.nl/imow/manifest/v20190901"
-	xsi:schemaLocation="http://www.geostandaarden.nl/imow https://register.geostandaarden.nl/xmlschema/tpod/v0.98.2-kern/bestanden-ow/generiek/v20190901/manifest-ow.xsd">
+<Aanleveringen 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
+	xsi:schemaLocation="http://www.geostandaarden.nl/bestanden-ow/manifest-ow ../schemas/xsd/bestanden-ow/generiek/manifest-ow.xsd">
 	<domein>omgevingswet</domein>
-	<RegelingVersie>
-		<FRBRwork>/akn/nl/bill/pv27/2019/3520</FRBRwork>
-		<FRBRExpression>/akn/nl/bill/pv27/2019/3520/nld@2019-12-01</FRBRExpression>
+	<Aanlevering>
+		<WorkIDRegeling>/akn/nl/bill/pv27/2019/3520</WorkIDRegeling>
+		<DoelID>/akn/nl/bill/pv27/2019/3520/nld@2019-12-01</DoelID>
 		<Bestand>
 			<naam>Activiteiten.xml</naam>
 			<objecttype>Activiteit</objecttype>
@@ -72,5 +73,5 @@
 			<objecttype>Pons</objecttype>
 		</Bestand>
 		
-	</RegelingVersie>
-</Modules>
+	</Aanlevering>
+</Aanleveringen>

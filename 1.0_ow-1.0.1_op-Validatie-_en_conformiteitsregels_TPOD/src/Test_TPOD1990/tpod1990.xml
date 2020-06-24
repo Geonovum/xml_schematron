@@ -78,10 +78,6 @@
 					</r:artikelOfLid><r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
-					
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.201900001"/>
-					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -196,23 +192,6 @@
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Omgevingsnorm G1-->
-		<sl:stand>
-			<ow-dc:owObject>
-				<rol:Omgevingsnorm>
-					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900001</rol:identificatie>
-					<rol:normwaarde>
-						<rol:Normwaarde>
-							<rol:locatieaanduiding>
-								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
-							</rol:locatieaanduiding>
-						</rol:Normwaarde>
-					</rol:normwaarde>
-					<rol:naam>abc</rol:naam>
-					<rol:groep>cde</rol:groep>
-				</rol:Omgevingsnorm>
 			</ow-dc:owObject>
 		</sl:stand>
 		<!-- Omgevingswaarde G1 -->
@@ -395,136 +374,12 @@
 				</l:Lijnengroep>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- FormeleDivisie 1 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:FormeleDivisie wId="gm0037_1__subchp_2.2__art_2.3">
-					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900001</vt:identificatie>
-				</vt:FormeleDivisie>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- FormeleDivisie 2 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:FormeleDivisie wId="gm0037_1__subchp_2.2__art_2.3">
-					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900002</vt:identificatie>
-				</vt:FormeleDivisie>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- FormeleDivisie 3 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:FormeleDivisie wId="gm0037_1__subchp_2.2__art_2.3">
-					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900003</vt:identificatie>
-				</vt:FormeleDivisie>
-			</ow-dc:owObject>
-		</sl:stand>
 		<!-- FormeleDivisie 4 -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<vt:FormeleDivisie wId="gm0037_1__subchp_2.2__art_2.3">
-					<vt:identificatie>nl.imow-gm0037.formeledivisie.201900004WEES</vt:identificatie>
-				</vt:FormeleDivisie>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Tekstdeel 1 FD1 H1 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Tekstdeel>
-					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900001</vt:identificatie>
-					<vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
-					<vt:hoofdlijnaanduiding>
-						<vt:HoofdlijnRef xlink:href="nl.imow-gm0037.hoofdlijn.201900001"/>
-					</vt:hoofdlijnaanduiding>
-					<vt:formeleDivisie>
-						<vt:FormeleDivisieRef xlink:href="nl.imow-gm0037.formeledivisie.201900001"/>
-					</vt:formeleDivisie>
-				</vt:Tekstdeel>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Tekstdeel 2 FD2 H2 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Tekstdeel>
-					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900002</vt:identificatie>
-					<vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
-					<vt:hoofdlijnaanduiding>
-						<vt:HoofdlijnRef xlink:href="nl.imow-gm0037.hoofdlijn.201900002"/>
-					</vt:hoofdlijnaanduiding>
-					<vt:formeleDivisie>
-						<vt:FormeleDivisieRef xlink:href="nl.imow-gm0037.formeledivisie.201900002"/>
-					</vt:formeleDivisie>
-				</vt:Tekstdeel>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Tekstdeel 3 FD3 H3 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Tekstdeel>
-					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900003</vt:identificatie>
-					<vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
-					<vt:hoofdlijnaanduiding>
-						<vt:HoofdlijnRef xlink:href="nl.imow-gm0037.hoofdlijn.201900003"/>
-					</vt:hoofdlijnaanduiding>
-					<vt:formeleDivisie>
-						<vt:FormeleDivisieRef xlink:href="nl.imow-gm0037.formeledivisie.201900003"/>
-					</vt:formeleDivisie>
-				</vt:Tekstdeel>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Tekstdeel 4 FD1 H1 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Tekstdeel>
-					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900003</vt:identificatie>
-					<vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
-					<vt:hoofdlijnaanduiding>
-						<vt:HoofdlijnRef xlink:href="nl.imow-gm0037.hoofdlijn.201900001"/>
-					</vt:hoofdlijnaanduiding>
-					<vt:formeleDivisie>
-						<vt:FormeleDivisieRef xlink:href="nl.imow-gm0037.formeledivisie.201900001"/>
-					</vt:formeleDivisie>
-				</vt:Tekstdeel>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Hoofdlijn 1 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Hoofdlijn>
-					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900001</vt:identificatie>
-					<vt:naam/>
-					<vt:soort/>
-				</vt:Hoofdlijn>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Hoofdlijn 2 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Hoofdlijn>
-					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900002</vt:identificatie>
-					<vt:naam>abc</vt:naam>
-					<vt:soort>def</vt:soort>
-				</vt:Hoofdlijn>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Hoofdlijn 3 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Hoofdlijn>
-					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900003</vt:identificatie>
-					<vt:naam>abc</vt:naam>
-					<vt:soort>def</vt:soort>
-				</vt:Hoofdlijn>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Hoofdlijn 4 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<vt:Hoofdlijn>
-					<vt:identificatie>nl.imow-gm0037.hoofdlijn.201900004WEES</vt:identificatie>
-					<vt:naam>abc</vt:naam>
-					<vt:soort>def</vt:soort>
-				</vt:Hoofdlijn>
+				<vt:Divisie wId="gm0037_1__subchp_2.2__art_2.3">
+					<vt:identificatie>nl.imow-gm0037.divisie.201900004WEES</vt:identificatie>
+				</vt:Divisie>
 			</ow-dc:owObject>
 		</sl:stand>
 	</sl:standBestand>

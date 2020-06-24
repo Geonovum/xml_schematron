@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Modules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xmlns:m="http://www.geostandaarden.nl/imow/manifest/v20190901" 
-         xsi:schemaLocation="http://www.geostandaarden.nl/imow/manifest/v20190901 ../xsd/bestanden-ow/generiek/v20190901/manifest-ow.xsd">
+<Aanleveringen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns="http://www.geostandaarden.nl/bestanden-ow/manifest-ow" 
+         xsi:schemaLocation="http://www.geostandaarden.nl/bestanden-ow/manifest-ow ../schemas/xsd/bestanden-ow/generiek/manifest-ow.xsd">
   <domein>omgevingswet</domein>
-  <RegelingVersie>
-    <FRBRwork>/akn/nl/act/pv25/2019/Regeling_001</FRBRwork>
-    <FRBRExpression>/akn/nl/act/pv25/2019/Regeling_001/nld@2020-07-01</FRBRExpression>
+  <Aanlevering>
+    <WorkIDRegeling>/akn/nl/act/pv25/2019/Regeling_001</WorkIDRegeling>
+    <DoelID>/akn/nl/act/pv25/2019/Regeling_001/nld@2020-07-01</DoelID>
     <Bestand>
       <naam>owActiviteit.xml</naam>
       <objecttype>Activiteit</objecttype>
@@ -46,5 +46,5 @@
       <naam>Waterverbinder.gml</naam>
       <objecttype>Geometrie</objecttype>
     </Bestand>
-  </RegelingVersie>
-</Modules>
+  </Aanlevering>
+</Aanleveringen>

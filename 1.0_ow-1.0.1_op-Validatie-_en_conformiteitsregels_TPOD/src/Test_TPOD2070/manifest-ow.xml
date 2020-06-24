@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Modules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.geostandaarden.nl/imow https://register.geostandaarden.nl/xmlschema/tpod/v0.98.3-kern/bestanden-ow/generiek/v20190901/manifest-ow.xsd">
+<Aanleveringen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
+   xsi:schemaLocation="http://www.geostandaarden.nl/bestanden-ow/manifest-ow ../schemas/xsd/bestanden-ow/generiek/manifest-ow.xsd">
    <domein>omgevingswet</domein>
-   <RegelingVersie>
-      <FRBRwork>/akn/nl/act/gm0344/2020/OMGPLAN01</FRBRwork>
-      <FRBRExpression>/akn/nl/act/gm0344/2020/OMGPLAN01/nld@1-0</FRBRExpression>
+   <Aanlevering>
+      <WorkIDRegeling>/akn/nl/act/gm0344/2020/OMGPLAN01</WorkIDRegeling>
+      <DoelID>/akn/nl/act/gm0344/2020/OMGPLAN01/nld@1-0</DoelID>
       <Bestand>
          <naam>owRegeltekst.xml</naam>
          <objecttype>Regeltekst</objecttype>
@@ -21,5 +22,5 @@
          <objecttype>Gebied</objecttype>
          <objecttype>Gebiedengroep</objecttype>
       </Bestand>
-   </RegelingVersie>
-</Modules>
+   </Aanlevering>
+</Aanleveringen>

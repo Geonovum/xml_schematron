@@ -44,7 +44,7 @@
                      <Label>Artikel</Label>
                      <Nummer>I</Nummer>
                   </Kop>
-                  <Wat>Omgevingsverordening Utrecht wordt vastgesteld zoals die in <IntRef doel="cmp_A">Bijlage A</IntRef> wordt gegeven</Wat>
+                  <Wat>Omgevingsverordening Utrecht wordt vastgesteld zoals die in <IntRef ref="cmp_A">Bijlage A</IntRef> wordt gegeven</Wat>
                </WijzigArtikel>
                <Artikel eId="art_II" wId="pv26_311__art_II">
                   <Kop>
@@ -373,15 +373,15 @@
                                  <Inhoud>
                                     <Al>Een omgevingsplan dat betrekking heeft op een<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_1"
                                                  wId="pv26_311__chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_1"
-                                                 doel="pv26_311__cmp_I__list_o_1__item_o_5__ref_o_1">Waterwingebied</IntIoRef>,<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_2"
+                                                 ref="pv26_311__cmp_I__list_o_1__item_o_5__ref_o_1">Waterwingebied</IntIoRef>,<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_2"
                                                  wId="pv26_311__chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_2"
-                                                 doel="pv26_311__cmp_I__list_o_1__item_o_32__ref_o_1">Grondwaterbeschermingsgebied</IntIoRef>,<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_3"
+                                                 ref="pv26_311__cmp_I__list_o_1__item_o_32__ref_o_1">Grondwaterbeschermingsgebied</IntIoRef>,<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_3"
                                                  wId="pv26_311__chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_3"
-                                                 doel="pv26_311__cmp_I__list_o_1__item_o_18__ref_o_1">Boringsvrije Zone</IntIoRef>,<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_4"
+                                                 ref="pv26_311__cmp_I__list_o_1__item_o_18__ref_o_1">Boringsvrije Zone</IntIoRef>,<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_4"
                                                  wId="pv26_311__chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_4"
-                                                 doel="pv26_311__cmp_I__list_o_1__item_o_23__ref_o_1">100-Jaaraandachtsgebied</IntIoRef> of<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_5"
+                                                 ref="pv26_311__cmp_I__list_o_1__item_o_23__ref_o_1">100-Jaaraandachtsgebied</IntIoRef> of<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_5"
                                                  wId="pv26_311__chp_2__subchp_2.1__subsec_2.1.2__art_2.4__ref_o_5"
-                                                 doel="pv26_311__cmp_I__list_o_1__item_o_19__ref_o_1">Kwetsbare Strategische Grondwatervoorraad</IntIoRef>, wijst geen functies aan die onverenigbaar zijn met de bescherming van de kwaliteit van het grondwater met het oog op de drinkwaterwinning.</Al>
+                                                 ref="pv26_311__cmp_I__list_o_1__item_o_19__ref_o_1">Kwetsbare Strategische Grondwatervoorraad</IntIoRef>, wijst geen functies aan die onverenigbaar zijn met de bescherming van de kwaliteit van het grondwater met het oog op de drinkwaterwinning.</Al>
                                  </Inhoud>
                               </Artikel>
                               <Artikel eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.5"
@@ -394,7 +394,7 @@
                                  <Inhoud>
                                     <Al>In een omgevingsplan dat betrekking heeft op een<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.5__ref_o_1"
                                                  wId="pv26_311__chp_2__subchp_2.1__subsec_2.1.2__art_2.5__ref_o_1"
-                                                 doel="pv26_311__cmp_I__list_o_1__item_o_4__ref_o_1">Matig Kwetsbare Strategische Grondwatervoorraad</IntIoRef>, wordt rekening gehouden met de bescherming van de kwaliteit van het grondwater met het oog op de drinkwaterwinning.</Al>
+                                                 ref="pv26_311__cmp_I__list_o_1__item_o_4__ref_o_1">Matig Kwetsbare Strategische Grondwatervoorraad</IntIoRef>, wordt rekening gehouden met de bescherming van de kwaliteit van het grondwater met het oog op de drinkwaterwinning.</Al>
                                  </Inhoud>
                               </Artikel>
                               <Artikel eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.6"
@@ -410,7 +410,7 @@
                                     <Inhoud>
                                        <Al>Een omgevingsplan staat parkeren in<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.6__para_1__ref_o_1"
                                                     wId="pv26_311__chp_2__subchp_2.1__subsec_2.1.2__art_2.6__para_1__ref_o_1"
-                                                    doel="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1">Waterwingebied Bethunepolder</IntIoRef> uitsluitend toe in perioden van drukte in verband met zomer- of winterrecreatie. De gemeente bepaalt wanneer hier sprake van is. In het omgevingsplan worden regels gesteld om achteruitgang van de kwaliteit van het grondwater met het oog op de waterwinning te voorkomen of zoveel mogelijk te beperken. </Al>
+                                                    ref="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1">Waterwingebied Bethunepolder</IntIoRef> uitsluitend toe in perioden van drukte in verband met zomer- of winterrecreatie. De gemeente bepaalt wanneer hier sprake van is. In het omgevingsplan worden regels gesteld om achteruitgang van de kwaliteit van het grondwater met het oog op de waterwinning te voorkomen of zoveel mogelijk te beperken. </Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.6__para_2"
@@ -431,7 +431,7 @@
                                  <Inhoud>
                                     <Al>Een omgevingsplan dat betrekking heeft op het aanleggen of hebben van een begraafplaats of uitstrooiveld als bedoeld in de Wet op de lijkbezorging of een dierenbegraafplaats in een<IntIoRef eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.7__ref_o_1"
                                                  wId="pv26_311__chp_2__subchp_2.1__subsec_2.1.2__art_2.7__ref_o_1"
-                                                 doel="pv26_311__cmp_I__list_o_1__item_o_32__ref_o_1">Grondwaterbeschermingsgebied</IntIoRef>, bevat regels ter bescherming van de kwaliteit van het grondwater met het oog op de openbare drinkwaterwinning. Bij een begraafplaats of uitstrooiveld wordt de Inspectierichtlijn Lijkbezorging in acht genomen.</Al>
+                                                 ref="pv26_311__cmp_I__list_o_1__item_o_32__ref_o_1">Grondwaterbeschermingsgebied</IntIoRef>, bevat regels ter bescherming van de kwaliteit van het grondwater met het oog op de openbare drinkwaterwinning. Bij een begraafplaats of uitstrooiveld wordt de Inspectierichtlijn Lijkbezorging in acht genomen.</Al>
                                  </Inhoud>
                               </Artikel>
                               <Artikel eId="chp_2__subchp_2.1__subsec_2.1.2__art_2.8"
@@ -658,7 +658,7 @@
                                     <Inhoud>
                                        <Al>In een omgevingsplan dat van toepassing is op het<IntIoRef eId="chp_2__subchp_2.2__subsec_2.2.1__art_2.15__para_1__ref_o_1"
                                                     wId="pv26_311__chp_2__subchp_2.2__subsec_2.2.1__art_2.15__para_1__ref_o_1"
-                                                    doel="pv26_311__cmp_I__list_o_1__item_o_27__ref_o_1">beperkingengebied met betrekking tot een weg in beheer bij de provincie Utrecht</IntIoRef>, worden geen regels gesteld die het gebruik, de instandhouding, de verbetering of de vernieuwing van deze wegen belemmeren.</Al>
+                                                    ref="pv26_311__cmp_I__list_o_1__item_o_27__ref_o_1">beperkingengebied met betrekking tot een weg in beheer bij de provincie Utrecht</IntIoRef>, worden geen regels gesteld die het gebruik, de instandhouding, de verbetering of de vernieuwing van deze wegen belemmeren.</Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_2__subchp_2.2__subsec_2.2.1__art_2.15__para_2"
@@ -667,7 +667,7 @@
                                     <Inhoud>
                                        <Al>Een omgevingsplan dat betrekking heeft op het<IntIoRef eId="chp_2__subchp_2.2__subsec_2.2.1__art_2.15__para_2__ref_o_1"
                                                     wId="pv26_311__chp_2__subchp_2.2__subsec_2.2.1__art_2.15__para_2__ref_o_1"
-                                                    doel="pv26_311__cmp_I__list_o_1__item_o_27__ref_o_1">Beperkingengebied Met Betrekking Tot Een Provinciale Weg</IntIoRef> verbiedt het realiseren of wijzigen van bouwwerken binnen een afstand van 10 meter uit de kant van de verharding van de weg.</Al>
+                                                    ref="pv26_311__cmp_I__list_o_1__item_o_27__ref_o_1">Beperkingengebied Met Betrekking Tot Een Provinciale Weg</IntIoRef> verbiedt het realiseren of wijzigen van bouwwerken binnen een afstand van 10 meter uit de kant van de verharding van de weg.</Al>
                                     </Inhoud>
                                  </Lid>
                               </Artikel>
@@ -968,9 +968,9 @@
                                     <Inhoud>
                                        <Al>In een omgevingsplan dat betrekking heeft op locaties binnen<IntIoRef eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.4__para_1__ref_o_1"
                                                     wId="pv26_311__chp_3__subchp_3.1__subsec_3.1.2__art_3.4__para_1__ref_o_1"
-                                                    doel="pv26_311__cmp_I__list_o_1__item_o_41__ref_o_1">Stiltegebied</IntIoRef> wordt rekening gehouden met een maximaal toelaatbare waarde voor het 24-uursgemiddelde geluidsniveau afkomstig van functies of activiteiten in het<IntIoRef eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.4__para_1__ref_o_2"
+                                                    ref="pv26_311__cmp_I__list_o_1__item_o_41__ref_o_1">Stiltegebied</IntIoRef> wordt rekening gehouden met een maximaal toelaatbare waarde voor het 24-uursgemiddelde geluidsniveau afkomstig van functies of activiteiten in het<IntIoRef eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.4__para_1__ref_o_2"
                                                     wId="pv26_311__chp_3__subchp_3.1__subsec_3.1.2__art_3.4__para_1__ref_o_2"
-                                                    doel="pv26_311__cmp_I__list_o_1__item_o_41__ref_o_1">Stiltegebied</IntIoRef> van LAeq,24h = 35 dB(A) op 50 m afstand vanaf de functie of activiteit.</Al>
+                                                    ref="pv26_311__cmp_I__list_o_1__item_o_41__ref_o_1">Stiltegebied</IntIoRef> van LAeq,24h = 35 dB(A) op 50 m afstand vanaf de functie of activiteit.</Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.4__para_2"
@@ -1022,13 +1022,13 @@
                                     <Inhoud>
                                        <Al>In een omgevingsplan dat betrekking heeft op locaties binnen<IntIoRef eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_1"
                                                     wId="pv26_311__chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_1"
-                                                    doel="pv26_311__cmp_I__list_o_1__item_o_39__ref_o_1">Vrijwaringszone Stiltegebied</IntIoRef>   wordt rekening gehouden met een maximaal toelaatbare waarde voor het 24-uursgemiddelde geluidsniveau afkomstig van functies of activiteiten in de<IntIoRef eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_2"
+                                                    ref="pv26_311__cmp_I__list_o_1__item_o_39__ref_o_1">Vrijwaringszone Stiltegebied</IntIoRef>   wordt rekening gehouden met een maximaal toelaatbare waarde voor het 24-uursgemiddelde geluidsniveau afkomstig van functies of activiteiten in de<IntIoRef eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_2"
                                                     wId="pv26_311__chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_2"
-                                                    doel="pv26_311__cmp_I__list_o_1__item_o_39__ref_o_1">Vrijwaringszone Stiltegebied</IntIoRef>  van LAeq,24h = 35 dB(A) op 50 m afstand vanaf de grens van het<IntIoRef eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_3"
+                                                    ref="pv26_311__cmp_I__list_o_1__item_o_39__ref_o_1">Vrijwaringszone Stiltegebied</IntIoRef>  van LAeq,24h = 35 dB(A) op 50 m afstand vanaf de grens van het<IntIoRef eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_3"
                                                     wId="pv26_311__chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_3"
-                                                    doel="pv26_311__cmp_I__list_o_1__item_o_41__ref_o_1">Stiltegebied</IntIoRef>, binnen het<IntIoRef eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_4"
+                                                    ref="pv26_311__cmp_I__list_o_1__item_o_41__ref_o_1">Stiltegebied</IntIoRef>, binnen het<IntIoRef eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_4"
                                                     wId="pv26_311__chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_1__ref_o_4"
-                                                    doel="pv26_311__cmp_I__list_o_1__item_o_41__ref_o_1">Stiltegebied</IntIoRef>.</Al>
+                                                    ref="pv26_311__cmp_I__list_o_1__item_o_41__ref_o_1">Stiltegebied</IntIoRef>.</Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_3__subchp_3.1__subsec_3.1.2__art_3.5__para_2"
@@ -1264,7 +1264,7 @@
                               <Inhoud>
                                  <Al>Een omgevingsplan dat betrekking heeft op locaties binnen<IntIoRef eId="chp_3__subchp_3.2__art_3.11__ref_o_1"
                                               wId="pv26_311__chp_3__subchp_3.2__art_3.11__ref_o_1"
-                                              doel="pv26_311__cmp_I__list_o_1__item_o_3__ref_o_1">Concentratiegebied Glastuinbouw</IntIoRef> bevat geen regels die een belemmering vormen voor de glastuinbouw.</Al>
+                                              ref="pv26_311__cmp_I__list_o_1__item_o_3__ref_o_1">Concentratiegebied Glastuinbouw</IntIoRef> bevat geen regels die een belemmering vormen voor de glastuinbouw.</Al>
                               </Inhoud>
                            </Artikel>
                         </Afdeling>
@@ -1291,7 +1291,7 @@
                                  <Inhoud>
                                     <Al>Een omgevingsplan dat betrekking heeft op locaties binnen<IntIoRef eId="chp_3__subchp_3.3__subsec_3.3.1__art_3.12__ref_o_1"
                                                  wId="pv26_311__chp_3__subchp_3.3__subsec_3.3.1__art_3.12__ref_o_1"
-                                                 doel="pv26_311__cmp_I__list_o_1__item_o_14__ref_o_1">Recreatiewoningen</IntIoRef> bevat regels die het recreatief gebruik van<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_6">recreatiewoningen</IntRef> en bijbehorende gronden garanderen en omvorming van deze<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_6">recreatiewoningen</IntRef> en gronden ten behoeve van permanente bewoning uitsluiten.</Al>
+                                                 ref="pv26_311__cmp_I__list_o_1__item_o_14__ref_o_1">Recreatiewoningen</IntIoRef> bevat regels die het recreatief gebruik van<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_6">recreatiewoningen</IntRef> en bijbehorende gronden garanderen en omvorming van deze<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_6">recreatiewoningen</IntRef> en gronden ten behoeve van permanente bewoning uitsluiten.</Al>
                                  </Inhoud>
                               </Artikel>
                               <Artikel eId="chp_3__subchp_3.3__subsec_3.3.1__art_3.13"
@@ -1310,17 +1310,17 @@
                                               type="expliciet">
                                           <Lijstaanhef>Een omgevingsplan dat betrekking heeft op locaties binnen<IntIoRef eId="chp_3__subchp_3.3__subsec_3.3.1__art_3.13__para_1__list_o_1__ref_o_1"
                                                        wId="pv26_311__chp_3__subchp_3.3__subsec_3.3.1__art_3.13__para_1__list_o_1__ref_o_1"
-                                                       doel="pv26_311__cmp_I__list_o_1__item_o_26__ref_o_1">Landelijk Gebied</IntIoRef> kan regels bevatten die toestaan dat in<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_1">bebouwingsenclaves</IntRef> of<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_2">bebouwingslinten</IntRef>
-                                             <IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> plaatsvindt, mits is voldaan aan de volgende voorwaarden:</Lijstaanhef>
+                                                       ref="pv26_311__cmp_I__list_o_1__item_o_26__ref_o_1">Landelijk Gebied</IntIoRef> kan regels bevatten die toestaan dat in<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_1">bebouwingsenclaves</IntRef> of<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_2">bebouwingslinten</IntRef>
+                                             <IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> plaatsvindt, mits is voldaan aan de volgende voorwaarden:</Lijstaanhef>
                                           <Li eId="chp_3__subchp_3.3__subsec_3.3.1__art_3.13__para_1__list_o_1__item_-_inst_1"
                                               wId="pv26_311__chp_3__subchp_3.3__subsec_3.3.1__art_3.13__para_1__list_o_1__item_-_inst_1">
                                              <LiNummer>-</LiNummer>
-                                             <Al>gelijktijdig met de<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> de omgevingskwaliteit wordt verhoogd;</Al>
+                                             <Al>gelijktijdig met de<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> de omgevingskwaliteit wordt verhoogd;</Al>
                                           </Li>
                                           <Li eId="chp_3__subchp_3.3__subsec_3.3.1__art_3.13__para_1__list_o_1__item_-_inst_2"
                                               wId="pv26_311__chp_3__subchp_3.3__subsec_3.3.1__art_3.13__para_1__list_o_1__item_-_inst_2">
                                              <LiNummer>-</LiNummer>
-                                             <Al>bebouwing vindt niet plaats buiten de bestaande<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_1">bebouwingsenclaves</IntRef> of<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_2">bebouwingslinten</IntRef>; en</Al>
+                                             <Al>bebouwing vindt niet plaats buiten de bestaande<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_1">bebouwingsenclaves</IntRef> of<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_2">bebouwingslinten</IntRef>; en</Al>
                                           </Li>
                                           <Li eId="chp_3__subchp_3.3__subsec_3.3.1__art_3.13__para_1__list_o_1__item_-_inst_3"
                                               wId="pv26_311__chp_3__subchp_3.3__subsec_3.3.1__art_3.13__para_1__list_o_1__item_-_inst_3">
@@ -1334,7 +1334,7 @@
                                       wId="pv26_311__chp_3__subchp_3.3__subsec_3.3.1__art_3.13__para_2">
                                     <LidNummer>2</LidNummer>
                                     <Inhoud>
-                                       <Al>De toelichting op een omgevingsplan bevat een onderbouwing waaruit blijkt dat aan de genoemde voorwaarden is voldaan. Een<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_3">beeldkwaliteitsparagraaf</IntRef> maakt onderdeel uit van de onderbouwing.</Al>
+                                       <Al>De toelichting op een omgevingsplan bevat een onderbouwing waaruit blijkt dat aan de genoemde voorwaarden is voldaan. Een<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_3">beeldkwaliteitsparagraaf</IntRef> maakt onderdeel uit van de onderbouwing.</Al>
                                     </Inhoud>
                                  </Lid>
                               </Artikel>
@@ -1369,18 +1369,18 @@
                                               type="expliciet">
                                           <Lijstaanhef>Een omgevingsplan dat betrekking heeft op locaties binnen<IntIoRef eId="chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__ref_o_1"
                                                        wId="pv26_311__chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__ref_o_1"
-                                                       doel="pv26_311__cmp_I__list_o_1__item_o_16__ref_o_1">Kernrandzone</IntIoRef> kan ten behoeve van het versterken van de omgevingskwaliteit in de<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_5">kernrandzone</IntRef> regels bevatten die<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> toestaan, mits voldaan is aan de volgende voorwaarden:</Lijstaanhef>
+                                                       ref="pv26_311__cmp_I__list_o_1__item_o_16__ref_o_1">Kernrandzone</IntIoRef> kan ten behoeve van het versterken van de omgevingskwaliteit in de<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_5">kernrandzone</IntRef> regels bevatten die<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> toestaan, mits voldaan is aan de volgende voorwaarden:</Lijstaanhef>
                                           <Li eId="chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__item_-_inst_1"
                                               wId="pv26_311__chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__item_-_inst_1">
                                              <LiNummer>-</LiNummer>
-                                             <Al>de<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> gaat gepaard met versterking van de omgevingskwaliteit die in een redelijke verhouding staat tot de aard en de omvang van de<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef>, tenzij de<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> betrekking heeft op<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_4">kernrandactiviteiten</IntRef>;</Al>
+                                             <Al>de<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> gaat gepaard met versterking van de omgevingskwaliteit die in een redelijke verhouding staat tot de aard en de omvang van de<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef>, tenzij de<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> betrekking heeft op<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_4">kernrandactiviteiten</IntRef>;</Al>
                                           </Li>
                                           <Li eId="chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__item_-_inst_2"
                                               wId="pv26_311__chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__item_-_inst_2">
                                              <LiNummer>-</LiNummer>
-                                             <Al>de<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> is ruimtelijk en landschappelijk goed inpasbaar en wordt in aansluiting op<IntIoRef eId="chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__item_-_inst_2__ref_o_1"
+                                             <Al>de<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> is ruimtelijk en landschappelijk goed inpasbaar en wordt in aansluiting op<IntIoRef eId="chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__item_-_inst_2__ref_o_1"
                                                           wId="pv26_311__chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__item_-_inst_2__ref_o_1"
-                                                          doel="pv26_311__cmp_I__list_o_1__item_o_2__ref_o_1">Stedelijk Gebied</IntIoRef> gerealiseerd, of in samenhang met overige verstedelijkte structuur; </Al>
+                                                          ref="pv26_311__cmp_I__list_o_1__item_o_2__ref_o_1">Stedelijk Gebied</IntIoRef> gerealiseerd, of in samenhang met overige verstedelijkte structuur; </Al>
                                           </Li>
                                           <Li eId="chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__item_-_inst_3"
                                               wId="pv26_311__chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_1__list_o_1__item_-_inst_3">
@@ -1399,7 +1399,7 @@
                                       wId="pv26_311__chp_3__subchp_3.4__subsec_3.4.1__art_3.14__para_2">
                                     <LidNummer>2</LidNummer>
                                     <Inhoud>
-                                       <Al>De toelichting op een omgevingsplan bevat een onderbouwing waaruit blijkt op welk gebied deze toepassing betrekking heeft en dat aan de genoemde voorwaarden is voldaan. De onderbouwing bevat ook een beschrijving van de in het plangebied voorkomende omgevingskwaliteit en de wijze waarop met het versterken daarvan is omgegaan. Hierbij wordt aangegeven hoe de<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> aansluit op de ruimtelijke en landschappelijke structuur. Een<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_3">beeldkwaliteitsparagraaf</IntRef> maakt onderdeel uit van de onderbouwing.</Al>
+                                       <Al>De toelichting op een omgevingsplan bevat een onderbouwing waaruit blijkt op welk gebied deze toepassing betrekking heeft en dat aan de genoemde voorwaarden is voldaan. De onderbouwing bevat ook een beschrijving van de in het plangebied voorkomende omgevingskwaliteit en de wijze waarop met het versterken daarvan is omgegaan. Hierbij wordt aangegeven hoe de<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef> aansluit op de ruimtelijke en landschappelijke structuur. Een<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_3">beeldkwaliteitsparagraaf</IntRef> maakt onderdeel uit van de onderbouwing.</Al>
                                     </Inhoud>
                                  </Lid>
                               </Artikel>
@@ -1438,7 +1438,7 @@
                                     <Inhoud>
                                        <Al>Een omgevingsplan dat betrekking heeft op locaties binnen<IntIoRef eId="chp_4__subchp_4.1__subsec_4.1.1__art_4.1__para_1__ref_o_1"
                                                     wId="pv26_311__chp_4__subchp_4.1__subsec_4.1.1__art_4.1__para_1__ref_o_1"
-                                                    doel="pv26_311__cmp_I__list_o_1__item_o_2__ref_o_1">Stedelijk Gebied</IntIoRef> kan regels bevatten voor<IntRef doel="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef>.</Al>
+                                                    ref="pv26_311__cmp_I__list_o_1__item_o_2__ref_o_1">Stedelijk Gebied</IntIoRef> kan regels bevatten voor<IntRef ref="pv9930_42__chp_1__subsec_1.1__art_1.1__list_o_1__item_o_7">verstedelijking</IntRef>.</Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_4__subchp_4.1__subsec_4.1.1__art_4.1__para_2"
@@ -1509,7 +1509,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_1__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_1__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040">/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040">/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1520,7 +1520,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_2__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044">/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044">/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1531,7 +1531,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_3__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_3__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045">/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045">/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1542,7 +1542,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_4__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039">/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039">/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1553,7 +1553,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_5__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051">/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051">/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1564,7 +1564,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_6__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_6__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053">/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053">/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1575,7 +1575,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_7__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_7__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047">/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047">/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1586,7 +1586,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_8__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_8__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043">/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043">/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1597,7 +1597,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_9__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_9__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042">/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042">/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1608,7 +1608,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_10__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_10__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054">/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054">/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1619,7 +1619,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_11__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_11__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057">/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057">/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1630,7 +1630,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_12__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_12__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062">/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062">/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1641,7 +1641,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_13__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_13__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060">/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060">/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1652,7 +1652,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_14__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_14__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058">/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058">/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1663,7 +1663,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_15__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_15__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055">/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055">/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1674,7 +1674,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_16__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_16__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061">/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061">/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1685,7 +1685,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_17__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_17__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063">/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063">/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1696,7 +1696,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_18__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_18__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059">/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059">/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1707,7 +1707,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_19__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_19__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056">/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056">/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1718,7 +1718,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_20__ref_o_1"
                                               wId="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1"
-                                              doel="/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049">/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</ExtIoRef>
+                                              ref="/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049">/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -1877,7 +1877,7 @@
                         <Al>
                            <IntIoRef eId="cmp_3__ref_o_1"
                                      wId="pv26_311__cmp_3__ref_o_1"
-                                     doel="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1">Bethunepolder</IntIoRef>
+                                     ref="pv26_311__cmp_I__list_o_1__item_o_20__ref_o_1">Bethunepolder</IntIoRef>
                         </Al>
                         <Al>Bethunepolder waterleidingkanaal</Al>
                         <Al>Bilthoven</Al>

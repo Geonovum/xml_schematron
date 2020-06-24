@@ -87,13 +87,9 @@
 
     <xsl:function name="foo:calculateConditionTPOD_1980">
         <xsl:param name="href"/>
-        <xsl:message select="$href"/>
         <xsl:for-each select="$gmlDocuments//basisgeo:Geometrie">
             <xsl:value-of select="0"/>
-            <xsl:message select="basisgeo:id/text()"/>
             <xsl:if test="basisgeo:id/text() = $href">
-                <xsl:message select="$href"/>
-                <xsl:message select="basisgeo:id"/>
                 <xsl:if
                     test="
                         basisgeo:geometrie//gml:Polygon

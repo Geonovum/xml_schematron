@@ -70,9 +70,11 @@
                   <Nummer>A</Nummer>
                   <Opschrift>Bijlage bij artikel I</Opschrift>
                </Kop>
-               <MaakInitieleRegeling FRBRwork="/akn/nl/act/pv25/2019/reg123/nld@2019-02-22"
-                                     wordt="/akn/nl/act/pv25/2019/reg123/nld@2019-02-22"
+               <RegelingCompact wordt="/akn/nl/act/pv25/2019/reg123/nld@2019-02-22"
                                      componentnaam="component_01">
+                  <RegelingOpschrift wId="aaa" eId="aaa">
+                     <Al>aaa</Al>
+                  </RegelingOpschrift>
                   <Lichaam eId="body" wId="body">
                      <Hoofdstuk eId="chp_1" wId="pv25_1__chp_1">
                         <Kop>
@@ -254,14 +256,14 @@
                                       wId="pv25_1__chp_2__subchp_2.1__subsec_2.1.1__art_2.1__para_1">
                                     <LidNummer>1</LidNummer>
                                     <Inhoud>
-                                       <Al>In omgevingsplannen wordt de functie <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_3">bedrijventerreinen</IntRef> slechts toegestaan indien dit past in de door Gedeputeerde Staten vastgestelde regionale afspraken ten aanzien van de programmering van bedrijventerreinen of werklocaties (<IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_1">Regionaal Programma Bedrijventerreinen</IntRef> of <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_1">Regionaal Programma Werklocaties</IntRef>).</Al>
+                                       <Al>In omgevingsplannen wordt de functie <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_3">bedrijventerreinen</IntRef> slechts toegestaan indien dit past in de door Gedeputeerde Staten vastgestelde regionale afspraken ten aanzien van de programmering van bedrijventerreinen of werklocaties (<IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_1">Regionaal Programma Bedrijventerreinen</IntRef> of <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_1">Regionaal Programma Werklocaties</IntRef>).</Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_2__subchp_2.1__subsec_2.1.1__art_2.1__para_2"
                                       wId="pv25_1__chp_2__subchp_2.1__subsec_2.1.1__art_2.1__para_2">
                                     <LidNummer>2</LidNummer>
                                     <Inhoud>
-                                       <Al>Indien de regionale afspraken bedoeld in het eerste lid niet tot stand komen, of de regionale afspraken naar het oordeel van Gedeputeerde Staten van onvoldoende kwaliteit zijn, stellen Gedeputeerde Staten zelfstandig een <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_1">Programma Bedrijventerreinen</IntRef> of <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_1">Programma Werklocaties</IntRef> op en vast voor de desbetreffende regio.</Al>
+                                       <Al>Indien de regionale afspraken bedoeld in het eerste lid niet tot stand komen, of de regionale afspraken naar het oordeel van Gedeputeerde Staten van onvoldoende kwaliteit zijn, stellen Gedeputeerde Staten zelfstandig een <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_1">Programma Bedrijventerreinen</IntRef> of <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_1">Programma Werklocaties</IntRef> op en vast voor de desbetreffende regio.</Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_2__subchp_2.1__subsec_2.1.1__art_2.1__para_3"
@@ -298,18 +300,18 @@
                                       wId="pv25_1__chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_1">
                                     <LidNummer>1</LidNummer>
                                     <Inhoud>
-                                       <Al>In een omgevingsplan dat betrekking heeft op een <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_4">Extensiveringsgebied glastuinbouw</IntRef> kan na 22 januari 2011 éénmalig uitbreiding van een bestaand <IntIoRef eId="chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_1__ref_o_1"
+                                       <Al>In een omgevingsplan dat betrekking heeft op een <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_4">Extensiveringsgebied glastuinbouw</IntRef> kan na 22 januari 2011 éénmalig uitbreiding van een bestaand <IntIoRef eId="chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_1__ref_o_1"
                                                     wId="pv25_1__chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_1__ref_o_1"
-                                                    doel="pv25_1.0__cmp_I__list_1__item_2__ref_1">glastuinbouwbedrijf</IntIoRef> worden toegestaan.</Al>
+                                                    ref="pv25_1.0__cmp_I__list_1__item_2__ref_1">glastuinbouwbedrijf</IntIoRef> worden toegestaan.</Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_2"
                                       wId="pv25_1__chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_2">
                                     <LidNummer>2</LidNummer>
                                     <Inhoud>
-                                       <Al>In een omgevingsplan dat betrekking heeft op een <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_4">Extensiveringsgebied glastuinbouw</IntRef> wordt geen <IntIoRef eId="chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_2__ref_o_1"
+                                       <Al>In een omgevingsplan dat betrekking heeft op een <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_4">Extensiveringsgebied glastuinbouw</IntRef> wordt geen <IntIoRef eId="chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_2__ref_o_1"
                                                     wId="pv25_1__chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_2__ref_o_1"
-                                                    doel="pv25_1.0__cmp_I__list_1__item_3__ref_1">hervestiging</IntIoRef> toegestaan.</Al>
+                                                    ref="pv25_1.0__cmp_I__list_1__item_3__ref_1">hervestiging</IntIoRef> toegestaan.</Al>
                                     </Inhoud>
                                  </Lid>
                               </Artikel>
@@ -321,9 +323,9 @@
                                     <Opschrift>Tijdelijk verbod nieuwvestiging glastuinbouw</Opschrift>
                                  </Kop>
                                  <Inhoud>
-                                    <Al>Zolang geen omgevingsplan als bedoeld in artikel … Implementatietermijn in werking is getreden, is <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_7">nieuwvestiging van een glastuinbouwbedrijf</IntRef> buiten de <IntIoRef eId="chp_2__subchp_2.2__subsec_2.2.1__art_2.3__ref_o_1"
+                                    <Al>Zolang geen omgevingsplan als bedoeld in artikel … Implementatietermijn in werking is getreden, is <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.1__list_1__item_7">nieuwvestiging van een glastuinbouwbedrijf</IntRef> buiten de <IntIoRef eId="chp_2__subchp_2.2__subsec_2.2.1__art_2.3__ref_o_1"
                                                  wId="pv25_1__chp_2__subchp_2.2__subsec_2.2.1__art_2.3__ref_o_1"
-                                                 doel="pv25_1.0__cmp_I__list_1__item_3__ref_1">Glastuinbouwontwikkelingsgebieden</IntIoRef> verboden.</Al>
+                                                 ref="pv25_1.0__cmp_I__list_1__item_3__ref_1">Glastuinbouwontwikkelingsgebieden</IntIoRef> verboden.</Al>
                                  </Inhoud>
                               </Artikel>
                            </Paragraaf>
@@ -359,14 +361,14 @@
                                       wId="pv25_1__chp_3__subchp_3.1__subsec_3.1.1__art_3.1__para_1">
                                     <LidNummer>1</LidNummer>
                                     <Inhoud>
-                                       <Al>Het is verboden binnen een <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_2">inrichting</IntRef> in een <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_1">Grondwaterbeschermingsgebied</IntRef> werken tot stand te brengen of handelingen te verrichten waardoor direct of indirect warmte aan de grond of het grondwater wordt onttrokken of toegevoegd.</Al>
+                                       <Al>Het is verboden binnen een <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_2">inrichting</IntRef> in een <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_1">Grondwaterbeschermingsgebied</IntRef> werken tot stand te brengen of handelingen te verrichten waardoor direct of indirect warmte aan de grond of het grondwater wordt onttrokken of toegevoegd.</Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_3__subchp_3.1__subsec_3.1.1__art_3.1__para_2"
                                       wId="pv25_1__chp_3__subchp_3.1__subsec_3.1.1__art_3.1__para_2">
                                     <LidNummer>2</LidNummer>
                                     <Inhoud>
-                                       <Al>Onder een handeling als bedoeld in het eerste lid wordt in ieder geval begrepen het oprichten, in exploitatie nemen of hebben van een <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_3">bodemenergiesysteem</IntRef>.</Al>
+                                       <Al>Onder een handeling als bedoeld in het eerste lid wordt in ieder geval begrepen het oprichten, in exploitatie nemen of hebben van een <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_3">bodemenergiesysteem</IntRef>.</Al>
                                     </Inhoud>
                                  </Lid>
                               </Artikel>
@@ -381,14 +383,14 @@
                                       wId="pv25_1__chp_3__subchp_3.1__subsec_3.1.1__art_3.2__para_1">
                                     <LidNummer>1</LidNummer>
                                     <Inhoud>
-                                       <Al>Het is verboden in een <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_1">Grondwaterbeschermingsgebied</IntRef> een <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_2">inrichting</IntRef> op te richten waarvoor een omgevingsvergunning is vereist, indien die <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_2">inrichting</IntRef>inrichting behoort tot één of meer categorieën van <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_2">inrichtingen</IntRef> die zijn aangewezen in bijlage 4 Grondwaterbescherming met het oog op de waterwinning, onderdeel B.</Al>
+                                       <Al>Het is verboden in een <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_1">Grondwaterbeschermingsgebied</IntRef> een <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_2">inrichting</IntRef> op te richten waarvoor een omgevingsvergunning is vereist, indien die <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_2">inrichting</IntRef>inrichting behoort tot één of meer categorieën van <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_2">inrichtingen</IntRef> die zijn aangewezen in bijlage 4 Grondwaterbescherming met het oog op de waterwinning, onderdeel B.</Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_3__subchp_3.1__subsec_3.1.1__art_3.2__para_2"
                                       wId="pv25_1__chp_3__subchp_3.1__subsec_3.1.1__art_3.2__para_2">
                                     <LidNummer>2</LidNummer>
                                     <Inhoud>
-                                       <Al>Het verbod als bedoeld in het eerste lid geldt niet voor de betrokken grondwateronttrekker, voor zover de <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_2">inrichting</IntRef> noodzakelijk is voor de waterwinning.</Al>
+                                       <Al>Het verbod als bedoeld in het eerste lid geldt niet voor de betrokken grondwateronttrekker, voor zover de <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.2__list_1__item_2">inrichting</IntRef> noodzakelijk is voor de waterwinning.</Al>
                                     </Inhoud>
                                  </Lid>
                               </Artikel>
@@ -420,7 +422,7 @@
                                     <Inhoud>
                                        <Al>Met het oog op de bergings- en afvoercapaciteit waarop de regionale wateren moeten zijn ingericht, geldt voor het gebied van een gemeente binnen de bebouwde kom, bedoeld in artikel 20a van de Wegenverkeerswet 1994, in een omgevingsplan voor de functies bebouwing, hoofdinfrastructuur en spoorwegen, als norm een gemiddelde kans op <IntIoRef eId="chp_3__subchp_3.2__subsec_3.2.1__art_3.3__para_1__ref_o_1"
                                                     wId="pv25_1__chp_3__subchp_3.2__subsec_3.2.1__art_3.3__para_1__ref_o_1"
-                                                    doel="pv25_1.0__cmp_I__list_1__item_1__ref_1">overstroming van 1/100 per jaar</IntIoRef> en voor het overige gebied een gemiddelde kans op overstroming van 1/10 per jaar</Al>
+                                                    ref="pv25_1.0__cmp_I__list_1__item_1__ref_1">overstroming van 1/100 per jaar</IntIoRef> en voor het overige gebied een gemiddelde kans op overstroming van 1/10 per jaar</Al>
                                     </Inhoud>
                                  </Lid>
                                  <Lid eId="chp_3__subchp_3.2__subsec_3.2.1__art_3.3__para_2"
@@ -429,7 +431,7 @@
                                     <Inhoud>
                                        <Al>Met het oog op de bergings- en afvoercapaciteit waarop de regionale wateren moeten zijn ingericht geldt voor het gebied van een gemeente buiten de bebouwde kom, bedoeld in het eerste lid, als norm een gemiddelde kans op <IntIoRef eId="chp_3__subchp_3.2__subsec_3.2.1__art_3.3__para_2__ref_o_1"
                                                     wId="pv25_1__chp_3__subchp_3.2__subsec_3.2.1__art_3.3__para_2__ref_o_1"
-                                                    doel="pv25_1.0__cmp_I__list_1__item_1__ref_1">overstroming van 1/10 per jaar.</IntIoRef>
+                                                    ref="pv25_1.0__cmp_I__list_1__item_1__ref_1">overstroming van 1/10 per jaar.</IntIoRef>
                                        </Al>
                                     </Inhoud>
                                  </Lid>
@@ -439,7 +441,7 @@
                                     <Inhoud>
                                        <Al>Gedeputeerde Staten stellen na overleg met het dagelijks bestuur het tijdstip vast waarop de bergings- en afvoercapaciteit van de verschillende regionale wateren moeten <IntIoRef eId="chp_3__subchp_3.2__subsec_3.2.1__art_3.3__para_3__ref_o_1"
                                                     wId="pv25_1__chp_3__subchp_3.2__subsec_3.2.1__art_3.3__para_3__ref_o_1"
-                                                    doel="pv25_1.0__cmp_I__list_1__item_1__ref_1">voldoen aan de in het eerste en tweede lid opgenomen normen</IntIoRef>
+                                                    ref="pv25_1.0__cmp_I__list_1__item_1__ref_1">voldoen aan de in het eerste en tweede lid opgenomen normen</IntIoRef>
                                        </Al>
                                     </Inhoud>
                                  </Lid>
@@ -514,7 +516,7 @@
                                  <Inhoud>
                                     <Al>Het bevoegd gezag verbindt aan een omgevingsvergunning voor het onttrekken van grondwater door een daarvoor bestemde voorziening in een <IntIoRef eId="chp_3__subchp_3.4__subsec_3.4.1__art_3.5__ref_o_1"
                                                  wId="pv25_1__chp_3__subchp_3.4__subsec_3.4.1__art_3.5__ref_o_1"
-                                                 doel="pv25_1.0__cmp_I__list_1__item_8__ref_1">boringsvrije zone</IntIoRef> het voorschrift dat het voor de boring toe te passen werkwater of spoelwater van drinkwaterkwaliteit is of niet-verontreinigd grondwater betreft.</Al>
+                                                 ref="pv25_1.0__cmp_I__list_1__item_8__ref_1">boringsvrije zone</IntIoRef> het voorschrift dat het voor de boring toe te passen werkwater of spoelwater van drinkwaterkwaliteit is of niet-verontreinigd grondwater betreft.</Al>
                                  </Inhoud>
                               </Artikel>
                            </Paragraaf>
@@ -548,7 +550,7 @@
                                            type="expliciet">
                                        <Lijstaanhef>De kernkwaliteiten van de <IntIoRef eId="chp_4__subsec_4.1__art_4.1__para_1__list_o_1__ref_o_1"
                                                     wId="pv25_1__chp_4__subsec_4.1__art_4.1__para_1__list_o_1__ref_o_1"
-                                                    doel="pv25_1.0__cmp_I__list_1__item_7__ref_1">Nieuwe Hollandse Waterlinie</IntIoRef> , dat onderdeel is van het <IntRef doel="pv25_1.0__chp_1__subsec_1.1__art_1.3__list_1__item_1">Werelderfgoed</IntRef>, zijn:</Lijstaanhef>
+                                                    ref="pv25_1.0__cmp_I__list_1__item_7__ref_1">Nieuwe Hollandse Waterlinie</IntIoRef> , dat onderdeel is van het <IntRef ref="pv25_1.0__chp_1__subsec_1.1__art_1.3__list_1__item_1">Werelderfgoed</IntRef>, zijn:</Lijstaanhef>
                                        <Li eId="chp_4__subsec_4.1__art_4.1__para_1__list_o_1__item_a"
                                            wId="pv25_1__chp_4__subsec_4.1__art_4.1__para_1__list_o_1__item_a">
                                           <LiNummer>a.</LiNummer>
@@ -619,7 +621,7 @@
                                  <Inhoud>
                                     <Al>De toelichting op een omgevingsplan bevat een beschrijving van de in het plangebied aanwezige cultuurhistorische waarden, het door de gemeente te voeren beleid en van de wijze waarop met eventuele veranderingen wordt omgegaan. Bij de beschrijving van de verschillende waarden wordt gebruik gemaakt van de nadere beschrijving van de kernkwaliteiten van de <IntIoRef eId="chp_4__subsec_4.1__art_4.2__para_2__ref_o_1"
                                                  wId="pv25_1__chp_4__subsec_4.1__art_4.2__para_2__ref_o_1"
-                                                 doel="pv25_1.0__cmp_I__list_1__item_7__ref_1">Nieuwe Hollandse Waterlinie</IntIoRef> zoals bedoeld in artikel 4.1, tweede lid.</Al>
+                                                 ref="pv25_1.0__cmp_I__list_1__item_7__ref_1">Nieuwe Hollandse Waterlinie</IntIoRef> zoals bedoeld in artikel 4.1, tweede lid.</Al>
                                  </Inhoud>
                               </Lid>
                            </Artikel>
@@ -632,6 +634,7 @@
                         <Nummer>I</Nummer>
                         <Opschrift>Overzicht informatieobjecten</Opschrift>
                      </Kop>
+                     <Samenvatting wId="aaa" eId="aaa">
                      <Inhoud>
                         <Begrippenlijst eId="cmp_I__list_o_1" wId="pv25_1__cmp_I__list_o_1">
                            <Begrip eId="cmp_I__list_o_1__item_o_1"
@@ -641,7 +644,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_1__ref_o_1"
                                               wId="pv25_1__cmp_I__list_o_1__item_o_1__ref_o_1"
-                                              doel="/join/id/regdata/pv25/2019/provincie_Gelderland/nld@2019-02-22">/join/id/regdata/pv25/2019/provincie_Gelderland/nld@2019-02-22</ExtIoRef>
+                                              ref="/join/id/regdata/pv25/2019/provincie_Gelderland/nld@2019-02-22">/join/id/regdata/pv25/2019/provincie_Gelderland/nld@2019-02-22</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -652,7 +655,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1"
                                               wId="pv25_1__cmp_I__list_o_1__item_o_2__ref_o_1"
-                                              doel="/join/id/regdata/pv25/2019/Extensiveringsgebied_glastuinbouw/nld@2019-02-22">/join/id/regdata/pv25/2019/Extensiveringsgebied_glastuinbouw/nld@2019-02-22</ExtIoRef>
+                                              ref="/join/id/regdata/pv25/2019/Extensiveringsgebied_glastuinbouw/nld@2019-02-22">/join/id/regdata/pv25/2019/Extensiveringsgebied_glastuinbouw/nld@2019-02-22</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -663,7 +666,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_3__ref_o_1"
                                               wId="pv25_1__cmp_I__list_o_1__item_o_3__ref_o_1"
-                                              doel="/join/id/regdata/pv25/2019/Tijdelijk_verbod_nieuwvestiging_glastuinbouw/nld@2019-02-22">/join/id/regdata/pv25/2019/Tijdelijk_verbod_nieuwvestiging_glastuinbouw/nld@2019-02-22</ExtIoRef>
+                                              ref="/join/id/regdata/pv25/2019/Tijdelijk_verbod_nieuwvestiging_glastuinbouw/nld@2019-02-22">/join/id/regdata/pv25/2019/Tijdelijk_verbod_nieuwvestiging_glastuinbouw/nld@2019-02-22</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -674,7 +677,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1"
                                               wId="pv25_1__cmp_I__list_o_1__item_o_4__ref_o_1"
-                                              doel="/join/id/regdata/pv25/2019/Grondwaterbeschermingsgebieden/nld@2019-02-22">/join/id/regdata/pv25/2019/Grondwaterbeschermingsgebieden/nld@2019-02-22</ExtIoRef>
+                                              ref="/join/id/regdata/pv25/2019/Grondwaterbeschermingsgebieden/nld@2019-02-22">/join/id/regdata/pv25/2019/Grondwaterbeschermingsgebieden/nld@2019-02-22</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -685,7 +688,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
                                               wId="pv25_1__cmp_I__list_o_1__item_o_5__ref_o_1"
-                                              doel="/join/id/regdata/pv25/2019/Waterverbinder/nld@2019-02-22">/join/id/regdata/pv25/2019/Waterverbinder/nld@2019-02-22</ExtIoRef>
+                                              ref="/join/id/regdata/pv25/2019/Waterverbinder/nld@2019-02-22">/join/id/regdata/pv25/2019/Waterverbinder/nld@2019-02-22</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -696,7 +699,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_6__ref_o_1"
                                               wId="pv25_1__cmp_I__list_o_1__item_o_6__ref_o_1"
-                                              doel="/join/id/regdata/pv25/2019/Grote_Rivieren/nld@2019-02-22">/join/id/regdata/pv25/2019/Grote_Rivieren/nld@2019-02-22</ExtIoRef>
+                                              ref="/join/id/regdata/pv25/2019/Grote_Rivieren/nld@2019-02-22">/join/id/regdata/pv25/2019/Grote_Rivieren/nld@2019-02-22</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -707,7 +710,7 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_7__ref_o_1"
                                               wId="pv25_1__cmp_I__list_o_1__item_o_7__ref_o_1"
-                                              doel="/join/id/regdata/pv25/2019/Nieuwe_Hollandse_Waterline/nld@2019-02-22">/join/id/regdata/pv25/2019/Nieuwe_Hollandse_Waterline/nld@2019-02-22</ExtIoRef>
+                                              ref="/join/id/regdata/pv25/2019/Nieuwe_Hollandse_Waterline/nld@2019-02-22">/join/id/regdata/pv25/2019/Nieuwe_Hollandse_Waterline/nld@2019-02-22</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
@@ -718,12 +721,13 @@
                                  <Al>
                                     <ExtIoRef eId="cmp_I__list_o_1__item_o_8__ref_o_1"
                                               wId="pv25_1__cmp_I__list_o_1__item_o_8__ref_o_1"
-                                              doel="/join/id/regdata/pv25/2019/Boringsvrijezone/nld@2019-02-22">/join/id/regdata/pv25/2019/Boringsvrijezone/nld@2019-02-22</ExtIoRef>
+                                              ref="/join/id/regdata/pv25/2019/Boringsvrijezone/nld@2019-02-22">/join/id/regdata/pv25/2019/Boringsvrijezone/nld@2019-02-22</ExtIoRef>
                                  </Al>
                               </Definitie>
                            </Begrip>
                         </Begrippenlijst>
                      </Inhoud>
+                     </Samenvatting>
                   </Bijlage>
                   <Toelichting eId="recital_o_1" wId="pv25_1__recital_o_1">
                      <Divisie eId="recital_o_1__div_o_1" wId="pv25_1__recital_o_1__div_o_1">
@@ -735,25 +739,28 @@
                            <Kop>
                               <Opschrift>Artikel 2.2 Extensiveringsgebied glastuinbouw (toelichting)</Opschrift>
                            </Kop>
+                           <Samenvatting wId="aaa" eId="aaa">
                            <Inhoud>
                               <Al>Bij de uitvoering van het herstructureringsbeleid voor de Gelderse Glastuinbouwontwikkelingsgebieden Huissen-Angeren en de Bommelerwaard is geconcludeerd dat niet alle delen van de gebieden met een glastuinbouwbestemming perspectief bieden voor een duurzame glastuinbouwontwikkeling. De betreffende deelgebieden zijn daarvoor onder meer te kleinschalig, de verwevenheid met andere (glastuinbouw-vreemde) functies is te groot geworden of de concentratie van glastuinbouw verdraagt zich niet meer met andere gebiedskwaliteiten of de leefbaarheid in de aangrenzende woongebieden. Deze deelgebieden zijn aangeduid als Extensiveringsgebied. In deze gebieden wordt nieuwvestiging en hervestiging van glastuinbouwbedrijven niet toegestaan. Wel wordt bestaande bedrijven de mogelijkheid geboden onder voorwaarden, gerekend vanaf 22 januari 2011 (datum vaststelling van dit beleid) éénmalig met maximaal 20% uit te breiden. Deze uitbreiding kan in verschillende bouwfasen worden uitgevoerd.</Al>
                            </Inhoud>
+                           </Samenvatting>
                         </Divisie>
                         <Divisie eId="recital_o_1__div_o_1__div_o_2"
                                  wId="pv25_1__recital_o_1__div_o_1__div_o_2">
                            <Kop>
                               <Opschrift>Artikel 4.1 Kernkwaliteiten van de Nieuwe Hollandse Waterlinie</Opschrift>
                            </Kop>
+                           <Samenvatting wId="aaa" eId="aaa">
                            <Inhoud>
                               <Al>De Nieuwe Hollandse Waterlinie (NHW) is erfgoed van mondiaal belang. Ze staat op de Voorlopige Lijst Unesco Werelderfgoed van het Koninkrijk der Nederlanden om als werelderfgoed te worden aangewezen. De instandhouding ervan is een opgave van het Rijk samen met de provincies waarin de NHW is gelegen. Omdat de NHW op de Voorlopige Lijst staat, heeft het Rijk de begrenzing van het gebied indicatief vastgelegd in het Besluit algemene regels ruimtelijke ordening (Barro titel 2.13). De nadere begrenzing heeft tot doel te bewerkstelligen dat op lokaal niveau alle onderdelen van het gebied van cultuurhistorisch belang onder het erfgoed vallen. Inmiddels hebben gemeenten en de drie zuidelijke NHW-provincies gezamenlijk de kernkwaliteiten NHW in beeld gebracht. De provincie ondersteunt en faciliteert de gemeenten bij het proces tot vaststelling van een bestemmingsplan waarin regels ter bescherming van de kernkwaliteiten van de Nieuwe Hollandse Waterlinie worden opgenomen. </Al>
                            </Inhoud>
+                           </Samenvatting>
                         </Divisie>
                      </Divisie>
                   </Toelichting>
-               </MaakInitieleRegeling>
+               </RegelingCompact>
             </WijzigBijlage>
-         </Regeling>
-      </BesluitKlassiek>
+      </BesluitCompact>
    </BesluitVersie>
    <RegelingVersieInformatie>
       <data:ExpressionIdentificatie>

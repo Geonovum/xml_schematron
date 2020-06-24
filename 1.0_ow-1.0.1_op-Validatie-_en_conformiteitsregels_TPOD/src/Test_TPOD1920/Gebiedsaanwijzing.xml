@@ -28,9 +28,9 @@
 			<owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0534.gebiedsaanwijzing.10</ga:identificatie>
-					<ga:type>Functie</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Functie</ga:type>
 					<ga:naam>duurzame bloementuin</ga:naam>
-					<ga:groep>agrarisch</ga:groep>
+					<ga:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Agrarisch</ga:groep>
 					<ga:locatieaanduiding>
 						<l:LocatieRef xlink:href="cb027ed1-0aaa-4303-9cad-cee79999a001"/>
 					</ga:locatieaanduiding>

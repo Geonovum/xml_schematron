@@ -52,7 +52,7 @@
                                         <Opschrift>Doel functietoedeling</Opschrift>
                                     </Kop>
                                     <Inhoud>
-                                        <Al>Het werkingsgebied van de functie '<IntIoRef eId="subchp_2.2__art_2.3__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.3__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>' is bedoeld voor het verrichten van gebruiksactiviteiten die passen bij een bedrijf met een lichte milieucategorie met een beperkte uitstraling op het omringende gebied. </Al>
+                                        <Al>Het werkingsgebied van de functie '<IntIoRef eId="subchp_2.2__art_2.3__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.3__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>' is bedoeld voor het verrichten van gebruiksactiviteiten die passen bij een bedrijf met een lichte milieucategorie met een beperkte uitstraling op het omringende gebied. </Al>
                                     </Inhoud>
                                 </Artikel>
                                 <Artikel eId="subchp_2.2__art_2.4" wId="gm0037_1__subchp_2.2__art_2.4">
@@ -62,7 +62,7 @@
                                         <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
                                     </Kop>
                                     <Inhoud>
-                                        <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.2__art_2.4__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.4__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>' mogen de locatie en de daarop voorkomende bouwwerken in ieder geval worden gebruikt voor het verrichten van de volgende gebruiksactiviteiten: </Al>
+                                        <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.2__art_2.4__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.4__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>' mogen de locatie en de daarop voorkomende bouwwerken in ieder geval worden gebruikt voor het verrichten van de volgende gebruiksactiviteiten: </Al>
                                         <Lijst eId="subchp_2.2__art_2.4__list_o_1" wId="gm0037_1__subchp_2.2__art_2.4__list_o_1" type="expliciet">
                                             <Li eId="subchp_2.2__art_2.4__list_o_1__item_a" wId="gm0037_1__subchp_2.2__art_2.4__list_o_1__item_a">
                                                 <LiNummer>a.</LiNummer>
@@ -86,7 +86,7 @@
                                             </Li>
                                             <Li eId="subchp_2.2__art_2.4__list_o_1__item_f" wId="gm0037_1__subchp_2.2__art_2.4__list_o_1__item_f">
                                                 <LiNummer>f.</LiNummer>
-                                                <Al>het uitoefenen van detailhandel in ter plaatse vervaardigde goederen, voor zover deze binnen ‘<IntIoRef eId="subchp_2.2__art_2.4__list_o_1__item_f__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.4__list_o_1__item_f__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_3__ref_o_1">zone A</IntIoRef>’ van het werkingsgebied ‘<IntIoRef eId="subchp_2.2__art_2.4__list_o_1__item_f__ref_o_2" wId="gm0037_1__subchp_2.2__art_2.4__list_o_1__item_f__ref_o_2" doel="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>’ plaatsvinden.</Al>
+                                                <Al>het uitoefenen van detailhandel in ter plaatse vervaardigde goederen, voor zover deze binnen ‘<IntIoRef eId="subchp_2.2__art_2.4__list_o_1__item_f__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.4__list_o_1__item_f__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_3__ref_o_1">zone A</IntIoRef>’ van het werkingsgebied ‘<IntIoRef eId="subchp_2.2__art_2.4__list_o_1__item_f__ref_o_2" wId="gm0037_1__subchp_2.2__art_2.4__list_o_1__item_f__ref_o_2" ref="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>’ plaatsvinden.</Al>
                                             </Li>
                                         </Lijst>
                                     </Inhoud>
@@ -98,7 +98,7 @@
                                         <Opschrift>Gebruiksactiviteiten die verboden zijn</Opschrift>
                                     </Kop>
                                     <Inhoud>
-                                        <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.2__art_2.5__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.5__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>' is het verboden de locatie en de daarop voorkomende bouwwerken te gebruiken:</Al>
+                                        <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.2__art_2.5__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.5__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>' is het verboden de locatie en de daarop voorkomende bouwwerken te gebruiken:</Al>
                                         <Lijst eId="subchp_2.2__art_2.5__list_o_1" wId="gm0037_1__subchp_2.2__art_2.5__list_o_1" type="expliciet">
                                             <Li eId="subchp_2.2__art_2.5__list_o_1__item_a" wId="gm0037_1__subchp_2.2__art_2.5__list_o_1__item_a">
                                                 <LiNummer>a.</LiNummer>
@@ -125,7 +125,7 @@
                                         <LidNummer>1</LidNummer>
                                         <Inhoud>
                                             <Al>Meldingplichtige gebruiksactiviteiten</Al>
-                                            <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.2__art_2.6__para_1__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.6__para_1__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>' is het binnen '<IntIoRef eId="subchp_2.2__art_2.6__para_1__ref_o_2" wId="gm0037_1__subchp_2.2__art_2.6__para_1__ref_o_2" doel="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_1">Zone B</IntIoRef>' verboden de gebruiksactiviteit 'het uitoefenen van detailhandel in ter plaatse vervaardigde goederen' te verrichten zonder dat daarvoor aan het bevoegd gezag een melding is gedaan</Al>
+                                            <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.2__art_2.6__para_1__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.6__para_1__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>' is het binnen '<IntIoRef eId="subchp_2.2__art_2.6__para_1__ref_o_2" wId="gm0037_1__subchp_2.2__art_2.6__para_1__ref_o_2" ref="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_1">Zone B</IntIoRef>' verboden de gebruiksactiviteit 'het uitoefenen van detailhandel in ter plaatse vervaardigde goederen' te verrichten zonder dat daarvoor aan het bevoegd gezag een melding is gedaan</Al>
                                         </Inhoud>
                                     </Lid>
                                     <Lid eId="subchp_2.2__art_2.6__para_2" wId="gm0037_1__subchp_2.2__art_2.6__para_2">
@@ -156,7 +156,7 @@
                                         <LidNummer>1</LidNummer>
                                         <Inhoud>
                                             <Al>Vergunningplichtige gebruiksactiviteiten</Al>
-                                            <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.2__art_2.7__para_1__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.7__para_1__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>' is het verboden om zonder omgevingsvergunning de gebruiksactiviteit 'het exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg' te verrichten. Daarnaast is het eveneens verboden om deze gebruiksactiviteit uit te voeren zonder een vergunning voor de milieubelastende activiteit ‘het opslaan van motorbrandstoffen niet zijnde lpg’, zoals beschreven in <IntRef doel="gm0037_X__subchp_3.2__art_13.24">Artikel 13.24</IntRef>.</Al>
+                                            <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.2__art_2.7__para_1__ref_o_1" wId="gm0037_1__subchp_2.2__art_2.7__para_1__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1">Bedrijf categorie 2</IntIoRef>' is het verboden om zonder omgevingsvergunning de gebruiksactiviteit 'het exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg' te verrichten. Daarnaast is het eveneens verboden om deze gebruiksactiviteit uit te voeren zonder een vergunning voor de milieubelastende activiteit ‘het opslaan van motorbrandstoffen niet zijnde lpg’, zoals beschreven in <IntRef ref="gm0037_X__subchp_3.2__art_13.24">Artikel 13.24</IntRef>.</Al>
                                         </Inhoud>
                                     </Lid>
                                     <Lid eId="subchp_2.2__art_2.7__para_2" wId="gm0037_1__subchp_2.2__art_2.7__para_2">
@@ -220,7 +220,7 @@
                                         <Opschrift>Doel functietoedeling</Opschrift>
                                     </Kop>
                                     <Inhoud>
-                                        <Al>Het werkingsgebied van de functie '<IntIoRef eId="subchp_2.3__art_2.9__ref_o_1" wId="gm0037_1__subchp_2.3__art_2.9__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1">Centrumgebied</IntIoRef>' is bedoeld voor het verrichten van gebruiksactiviteiten die passen in een stadscentrum met een overwegend stedelijke inrichting en die geen onevenredige afbreuk doen aan het stedelijke karakter of aan de beleving van het bezoekende publiek.</Al>
+                                        <Al>Het werkingsgebied van de functie '<IntIoRef eId="subchp_2.3__art_2.9__ref_o_1" wId="gm0037_1__subchp_2.3__art_2.9__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1">Centrumgebied</IntIoRef>' is bedoeld voor het verrichten van gebruiksactiviteiten die passen in een stadscentrum met een overwegend stedelijke inrichting en die geen onevenredige afbreuk doen aan het stedelijke karakter of aan de beleving van het bezoekende publiek.</Al>
                                     </Inhoud>
                                 </Artikel>
                                 <Artikel eId="subchp_2.3__art_2.10" wId="gm0037_1__subchp_2.3__art_2.10">
@@ -230,7 +230,7 @@
                                         <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
                                     </Kop>
                                     <Inhoud>
-                                        <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.3__art_2.10__ref_o_1" wId="gm0037_1__subchp_2.3__art_2.10__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1">Centrumgebied</IntIoRef>' mag de locatie in ieder geval worden gebruikt voor het verrichten van de volgende gebruiksactiviteiten:</Al>
+                                        <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.3__art_2.10__ref_o_1" wId="gm0037_1__subchp_2.3__art_2.10__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1">Centrumgebied</IntIoRef>' mag de locatie in ieder geval worden gebruikt voor het verrichten van de volgende gebruiksactiviteiten:</Al>
                                         <Lijst eId="subchp_2.3__art_2.10__list_o_1" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1" type="expliciet">
                                             <Li eId="subchp_2.3__art_2.10__list_o_1__item_a" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_a">
                                                 <LiNummer>a.</LiNummer>
@@ -266,7 +266,7 @@
                                             </Li>
                                             <Li eId="subchp_2.3__art_2.10__list_o_1__item_i" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_i">
                                                 <LiNummer>i.</LiNummer>
-                                                <Al>het exploiteren van een speelautomatenhal, uitsluitend ter plaatse van het werkingsgebied '<IntIoRef eId="subchp_2.3__art_2.10__list_o_1__item_i__ref_o_1" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_i__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_1">exploiteren speelautomatenhal</IntIoRef>'; </Al>
+                                                <Al>het exploiteren van een speelautomatenhal, uitsluitend ter plaatse van het werkingsgebied '<IntIoRef eId="subchp_2.3__art_2.10__list_o_1__item_i__ref_o_1" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_i__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_1">exploiteren speelautomatenhal</IntIoRef>'; </Al>
                                             </Li>
                                             <Li eId="subchp_2.3__art_2.10__list_o_1__item_j" wId="gm0037_1__subchp_2.3__art_2.10__list_o_1__item_j">
                                                 <LiNummer>j.</LiNummer>
@@ -313,7 +313,7 @@
                                         <LidNummer>1</LidNummer>
                                         <Inhoud>
                                             <Al>Meldingplichtige gebruiksactiviteiten</Al>
-                                            <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.3__art_2.11__para_1__ref_o_1" wId="gm0037_1__subchp_2.3__art_2.11__para_1__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1">Centrumgebied</IntIoRef>' is het verboden de gebruiksactiviteit 'het wonen in een bedrijfswoning' te verrichten zonder dat daarvoor aan het bevoegd gezag een melding is gedaan.</Al>
+                                            <Al>Ter plaatse van het werkingsgebied van de functie '<IntIoRef eId="subchp_2.3__art_2.11__para_1__ref_o_1" wId="gm0037_1__subchp_2.3__art_2.11__para_1__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1">Centrumgebied</IntIoRef>' is het verboden de gebruiksactiviteit 'het wonen in een bedrijfswoning' te verrichten zonder dat daarvoor aan het bevoegd gezag een melding is gedaan.</Al>
                                         </Inhoud>
                                     </Lid>
                                     <Lid eId="subchp_2.3__art_2.11__para_2" wId="gm0037_1__subchp_2.3__art_2.11__para_2">
@@ -348,11 +348,11 @@
                                             <Lijstaanhef>Voor stikstofdioxide gelden de volgende ten hoogste toelaatbare concentraties:</Lijstaanhef>
                                             <Li eId="subchp_2.4__art_2.12__list_o_1__item_a" wId="gm0037_1__subchp_2.4__art_2.12__list_o_1__item_a">
                                                 <LiNummer>a.</LiNummer>
-                                                <Al>150 μg/m<sup>3</sup> <IntIoRef eId="subchp_2.4__art_2.12__list_o_1__item_a__ref_o_1" wId="gm0037_1__subchp_2.4__art_2.12__list_o_1__item_a__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_6__ref_o_1">uurgemiddelde</IntIoRef>, dat ten hoogste twaalf maal per kalenderjaar wordt overschreden; en</Al>
+                                                <Al>150 μg/m<sup>3</sup> <IntIoRef eId="subchp_2.4__art_2.12__list_o_1__item_a__ref_o_1" wId="gm0037_1__subchp_2.4__art_2.12__list_o_1__item_a__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_6__ref_o_1">uurgemiddelde</IntIoRef>, dat ten hoogste twaalf maal per kalenderjaar wordt overschreden; en</Al>
                                             </Li>
                                             <Li eId="subchp_2.4__art_2.12__list_o_1__item_b" wId="gm0037_1__subchp_2.4__art_2.12__list_o_1__item_b">
                                                 <LiNummer>b.</LiNummer>
-                                                <Al>30 μg/m<sup>3</sup> als <IntIoRef eId="subchp_2.4__art_2.12__list_o_1__item_b__ref_o_1" wId="gm0037_1__subchp_2.4__art_2.12__list_o_1__item_b__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_7__ref_o_1">kalenderjaargemiddelde</IntIoRef>.</Al>
+                                                <Al>30 μg/m<sup>3</sup> als <IntIoRef eId="subchp_2.4__art_2.12__list_o_1__item_b__ref_o_1" wId="gm0037_1__subchp_2.4__art_2.12__list_o_1__item_b__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_7__ref_o_1">kalenderjaargemiddelde</IntIoRef>.</Al>
                                             </Li>
                                         </Lijst>
                                     </Inhoud>
@@ -415,7 +415,7 @@
                                             </Li>
                                             <Li eId="subchp_2.5__art_2.14__list_o_1__item_d" wId="gm0037_1__subchp_2.5__art_2.14__list_o_1__item_d">
                                                 <LiNummer>d.</LiNummer>
-                                                <Al>De maximum bouwhoogte van een bedrijfsgebouw is de ter plaatse van het werkingsgebied '<IntIoRef wId="subchp_2.5__art_2.14__list_o_1__item_d__ref_o_1" eId="gm0037_1__subchp_2.5__art_2.14__list_o_1__item_d__ref_o_1" doel="gm0037_1__cmp_I__list_o_1__item_o_8__ref_o_1">maximum bouwhoogte bedrijfsgebouw</IntIoRef>' bepaalde waarde.</Al>
+                                                <Al>De maximum bouwhoogte van een bedrijfsgebouw is de ter plaatse van het werkingsgebied '<IntIoRef wId="subchp_2.5__art_2.14__list_o_1__item_d__ref_o_1" eId="gm0037_1__subchp_2.5__art_2.14__list_o_1__item_d__ref_o_1" ref="gm0037_1__cmp_I__list_o_1__item_o_8__ref_o_1">maximum bouwhoogte bedrijfsgebouw</IntIoRef>' bepaalde waarde.</Al>
                                             </Li>
                                             <Li eId="subchp_2.5__art_2.14__list_o_1__item_e" wId="gm0037_1__subchp_2.5__art_2.14__list_o_1__item_e">
                                                 <LiNummer>e.</LiNummer>
@@ -426,86 +426,17 @@
                                 </Artikel>
                             </Afdeling>
                         </Lichaam>
+            <Sluiting wId="aaa" eId="aaa">
+                <Al>aaa</Al>
+            </Sluiting>
                         <Bijlage eId="cmp_I" wId="gm0037_1__cmp_I">
                             <Kop>
                                 <Label>Bijlage</Label>
                                 <Nummer>I</Nummer>
                                 <Opschrift>Overzicht Informatieobjecten</Opschrift>
                             </Kop>
-                            <Inhoud>
-                                <Begrippenlijst eId="cmp_I__list_o_1" wId="gm0037_1__cmp_I__list_o_1">
-                                    <Begrip eId="cmp_I__list_o_1__item_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_1">
-                                        <Term>Bedrijf categorie 2</Term>
-                                        <Definitie>
-                                            <Al>
-                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_1__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_1__ref_o_1" doel="/join/id/regdata/gm0037/2019/Bedrijf_categorie_2/nld@2019-06-18;3520">/join/id/regdata/gm0037/2019/Bedrijf_categorie_2/nld@2019-06-18;3520</ExtIoRef>
-                                            </Al>
-                                        </Definitie>
-                                    </Begrip>
-                                    <Begrip eId="cmp_I__list_o_1__item_o_2" wId="gm0037_1__cmp_I__list_o_1__item_o_2">
-                                        <Term>Centrumgebied</Term>
-                                        <Definitie>
-                                            <Al>
-                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1" doel="/join/id/regdata/gm0037/2019/Centrumgebied/nld@2019-06-18;3520">/join/id/regdata/gm0037/2019/Centrumgebied/nld@2019-06-18;3520</ExtIoRef>
-                                            </Al>
-                                        </Definitie>
-                                    </Begrip>
-                                    <Begrip eId="cmp_I__list_o_1__item_o_3" wId="gm0037_1__cmp_I__list_o_1__item_o_3">
-                                        <Term>Zone A</Term>
-                                        <Definitie>
-                                            <Al>
-                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_3__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_3__ref_o_1" doel="/join/id/regdata/gm0037/2019/Zone_A/nld@2019-06-18;3520">/join/id/regdata/gm0037/2019/Zone_A/nld@2019-06-18;3520</ExtIoRef>
-                                            </Al>
-                                        </Definitie>
-                                    </Begrip>
-                                    <Begrip eId="cmp_I__list_o_1__item_o_4" wId="gm0037_1__cmp_I__list_o_1__item_o_4">
-                                        <Term>Zone B</Term>
-                                        <Definitie>
-                                            <Al>
-                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_1" doel="/join/id/regdata/gm0037/2019/Zone_B/nld@2019-06-18;3520">/join/id/regdata/gm0037/2019/Zone_B/nld@2019-06-18;3520</ExtIoRef>
-                                            </Al>
-                                        </Definitie>
-                                    </Begrip>
-                                    <Begrip eId="cmp_I__list_o_1__item_o_5" wId="gm0037_1__cmp_I__list_o_1__item_o_5">
-                                        <Term>Exploiteren speelautomatenhal</Term>
-                                        <Definitie>
-                                            <Al>
-                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_1" doel="/join/id/regdata/gm0037/2019/Speelhal/nld@2019-06-18;3520">/join/id/regdata/gm0037/2019/Speelhal/nld@2019-06-18;3520</ExtIoRef>
-                                            </Al>
-                                        </Definitie>
-                                    </Begrip>
-                                    <!-- Nieuwe GIO's vanwege OmgevingsnormOmgevingswaarde in OW -->
-                                    <Begrip eId="cmp_I__list_o_1__item_o_6" wId="gm0037_1__cmp_I__list_o_1__item_o_6">
-                                        <Term>uurgemiddelde</Term>
-                                        <Definitie>
-                                            <Al>
-                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_6__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_6__ref_o_1" doel="/join/id/regdata/gm0037/2019/Zuilichem_1/nld@2019-06-18;3520">/join/id/regdata/gm0037/2019/Zuilichem_1/nld@2019-06-18;3520</ExtIoRef>
-                                            </Al>
-                                        </Definitie>
-                                    </Begrip>
-                                    <Begrip eId="cmp_I__list_o_1__item_o_7" wId="gm0037_1__cmp_I__list_o_1__item_o_7">
-                                        <Term>kalenderjaargemiddelde</Term>
-                                        <Definitie>
-                                            <Al>
-                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_7__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_7__ref_o_1" doel="/join/id/regdata/gm0037/2019/Zuilichem_2/nld@2019-06-18;3520">/join/id/regdata/gm0037/2019/Zuilichem_2/nld@2019-06-18;3520</ExtIoRef>
-                                            </Al>
-                                        </Definitie>
-                                    </Begrip>
-                                    <Begrip eId="cmp_I__list_o_1__item_o_8" wId="gm0037_1__cmp_I__list_o_1__item_o_8">
-                                        <Term>maximum bouwhoogte bedrijfsgebouw</Term>
-                                        <Definitie>
-                                            <Al>
-                                                <ExtIoRef eId="cmp_I__list_o_1__item_o_8__ref_o_1" wId="gm0037_1__cmp_I__list_o_1__item_o_8__ref_o_1" doel="/join/id/regdata/gm0037/2019/Zuilichem_3/nld@2019-06-18;3520">/join/id/regdata/gm0037/2019/Zuilichem_3/nld@2019-06-18;3520</ExtIoRef>
-                                            </Al>
-                                        </Definitie>
-                                    </Begrip>
-                                </Begrippenlijst>
-                            </Inhoud>
                         </Bijlage>
-                    </MaakInitieleRegeling>
-                </WijzigBijlage>
-            </Regeling>
-        </BesluitKlassiek>
+        </BesluitCompact>
     </BesluitVersie>
     <RegelingVersieInformatie>
         <data:ExpressionIdentificatie>
@@ -540,7 +471,6 @@
             <versienummer>310</versienummer>
             <voorkeursafkorting/>
             <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling><!-- Omgevingsplan -->
-            <versienummer>1</versienummer>
         </data:RegelingMetadata>
     </RegelingVersieInformatie>
 </AanleveringBesluit>

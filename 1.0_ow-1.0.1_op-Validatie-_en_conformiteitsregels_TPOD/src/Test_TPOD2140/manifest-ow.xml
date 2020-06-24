@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Aanleveringen xmlns="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
+<Aanleveringen 
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:schemaLocation="http://www.geostandaarden.nl/bestanden-ow/manifest-ow ../xsd/bestanden-ow/generiek/manifest-ow.xsd">
+               xmlns="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
+               xsi:schemaLocation="http://www.geostandaarden.nl/bestanden-ow/manifest-ow ../schemas/xsd/bestanden-ow/generiek/manifest-ow.xsd">
    <domein>omgevingswet</domein>
    <Aanlevering>
       <WorkIDRegeling>/akn/nl/act/pv26/2019/OVPU-20191211</WorkIDRegeling>
