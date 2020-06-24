@@ -29,9 +29,9 @@
 				<vt:Tekstdeel>
 					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900001</vt:identificatie>
 					<vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
-					<vt:formeleDivisie>
-						<vt:FormeleDivisieRef xlink:href=""/>
-					</vt:formeleDivisie>
+					<vt:divisieaanduiding>
+						<vt:DivisieRef xlink:href=""/>
+					</vt:divisieaanduiding>
 				</vt:Tekstdeel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -41,9 +41,9 @@
 				<vt:Tekstdeel>
 					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900002</vt:identificatie>
 					<vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
-					<vt:formeleDivisie>
-						<vt:FormeleDivisieRef xlink:href=""/>
-					</vt:formeleDivisie>
+					<vt:divisieaanduiding>
+						<vt:DivisieRef xlink:href=""/>
+					</vt:divisieaanduiding>
 					<vt:locatieaanduiding>
 						<l:GebiedRef xlink:href=""/>
 					</vt:locatieaanduiding>
@@ -55,9 +55,9 @@
 			<ow-dc:owObject>
 				<vt:Tekstdeel>
 					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900003</vt:identificatie>
-					<vt:formeleDivisie>
-						<vt:FormeleDivisieRef xlink:href=""/>
-					</vt:formeleDivisie>
+					<vt:divisieaanduiding>
+						<vt:DivisieRef xlink:href=""/>
+					</vt:divisieaanduiding>
 				</vt:Tekstdeel>
 			</ow-dc:owObject>
 		</sl:stand>
