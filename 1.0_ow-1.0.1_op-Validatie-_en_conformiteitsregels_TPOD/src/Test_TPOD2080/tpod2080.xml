@@ -67,11 +67,9 @@
 					<r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
-
 					<r:omgevingsnormaanduiding>
 						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
 					</r:omgevingsnormaanduiding>
-					<r:instructieregelTaakuitoefening>InstructieregelTaakuitoefening</r:instructieregelTaakuitoefening>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -87,11 +85,10 @@
 					<r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
-
-					<r:gebiedsaanwijzing>
-						<ga:GebiedsaanwijzingRef
-							xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
-					</r:gebiedsaanwijzing>
+					<r:instructieregelTaakuitoefening>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/InstructieregelTaakuitoefening</r:instructieregelTaakuitoefening>
+					<r:omgevingsnormaanduiding>
+						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
+					</r:omgevingsnormaanduiding>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -107,8 +104,7 @@
 					<r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
-
-					<r:instructieregelInstrument>InstructieregelInstrument</r:instructieregelInstrument>
+					<r:instructieregelInstrument>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/InstructieregelInstrument</r:instructieregelInstrument>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -124,9 +120,8 @@
 					<r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
-
-					<r:instructieregelTaakuitoefening>InstructieregelTaakuitoefening</r:instructieregelTaakuitoefening>
-					<r:instructieregelInstrument>InstructieregelInstrument</r:instructieregelInstrument>
+					<r:instructieregelInstrument>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/InstructieregelInstrument</r:instructieregelInstrument>
+					<r:instructieregelTaakuitoefening>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/InstructieregelTaakuitoefening</r:instructieregelTaakuitoefening>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>

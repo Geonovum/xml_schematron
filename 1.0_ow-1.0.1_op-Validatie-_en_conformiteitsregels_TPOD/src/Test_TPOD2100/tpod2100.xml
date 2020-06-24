@@ -23,107 +23,42 @@
 				<sl:objectType>Omgevingsnorm</sl:objectType>
 			</sl:objectTypen>
 		</sl:inhoud>
-    	<!-- Omgevingsnorm GOED kwantitatieveWaarde -->
+    	<!-- Omgevingsnorm GOED kwantitatieveWaarde en eenheid -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<rol:Omgevingsnorm>
 					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900001</rol:identificatie>
+					<rol:naam>abc</rol:naam>
+					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:type>
+					<rol:eenheid>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:eenheid>
 					<rol:normwaarde>
 						<rol:Normwaarde>
 							<rol:identificatie>nl.imow-gm0037.normwaarde.201900001</rol:identificatie>
-							<rol:kwantitatieveWaarde>
-								<da:waarde>200</da:waarde>
-								<da:eenheid>μg/m3</da:eenheid>
-							</rol:kwantitatieveWaarde>
+							<rol:kwantitatieveWaarde>200</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
 								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 						<rol:Normwaarde>
 							<rol:identificatie>nl.imow-gm0037.normwaarde.201900002</rol:identificatie>
-							<rol:kwantitatieveWaarde>
-								<da:waarde>200</da:waarde>
-								<da:eenheid>μg/m3</da:eenheid>
-							</rol:kwantitatieveWaarde>
+							<rol:kwantitatieveWaarde>200</rol:kwantitatieveWaarde>
 							<rol:locatieaanduiding>
 								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
 							</rol:locatieaanduiding>
 						</rol:Normwaarde>
 					</rol:normwaarde>
-					<rol:naam>abc</rol:naam>
-					<rol:groep>cde</rol:groep>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:groep>
 				</rol:Omgevingsnorm>
 			</ow-dc:owObject>
 		</sl:stand>
-    	<!-- Omgevingsnorm FOUT kwantitatieveWaarde en kwalitatieveWaarde -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<rol:Omgevingsnorm>
-					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900002</rol:identificatie>
-					<rol:normwaarde>
-						<rol:Normwaarde>
-							<rol:identificatie>nl.imow-gm0037.normwaarde.201900003</rol:identificatie>
-							<rol:kwantitatieveWaarde>
-								<da:waarde>200</da:waarde>
-								<da:eenheid>μg/m3</da:eenheid>
-							</rol:kwantitatieveWaarde>
-							<rol:locatieaanduiding>
-								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
-							</rol:locatieaanduiding>
-						</rol:Normwaarde>
-						<rol:Normwaarde>
-							<rol:identificatie>nl.imow-gm0037.normwaarde.201900004</rol:identificatie>
-							<rol:kwalitatieveWaarde>
-								<da:waarde>200</da:waarde>
-								<da:eenheid>μg/m3</da:eenheid>
-							</rol:kwalitatieveWaarde>
-							<rol:locatieaanduiding>
-								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
-							</rol:locatieaanduiding>
-						</rol:Normwaarde>
-					</rol:normwaarde>
-					<rol:naam>abc</rol:naam>
-					<rol:groep>cde</rol:groep>
-				</rol:Omgevingsnorm>
-			</ow-dc:owObject>
-		</sl:stand>
-    	<!-- Omgevingsnorm GOED kwantitatieveWaarde -->
-    	<sl:stand>
-    		<ow-dc:owObject>
-    			<rol:Omgevingsnorm>
-    				<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900003</rol:identificatie>
-    				<rol:normwaarde>
-    					<rol:Normwaarde>
-    						<rol:identificatie>nl.imow-gm0037.normwaarde.201900005</rol:identificatie>
-    						<rol:kwalitatieveWaarde>
-    							<da:waarde>200</da:waarde>
-    							<da:eenheid>μg/m3</da:eenheid>
-    						</rol:kwalitatieveWaarde>
-    						<rol:locatieaanduiding>
-    							<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
-    						</rol:locatieaanduiding>
-    					</rol:Normwaarde>
-    					<rol:Normwaarde>
-    						<rol:identificatie>nl.imow-gm0037.normwaarde.201900006</rol:identificatie>
-    						<rol:kwalitatieveWaarde>
-    							<da:waarde>200</da:waarde>
-    							<da:eenheid>μg/m3</da:eenheid>
-    						</rol:kwalitatieveWaarde>
-    						<rol:locatieaanduiding>
-    							<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
-    						</rol:locatieaanduiding>
-    					</rol:Normwaarde>
-    				</rol:normwaarde>
-    				<rol:naam>abc</rol:naam>
-    				<rol:groep>cde</rol:groep>
-    			</rol:Omgevingsnorm>
-    		</ow-dc:owObject>
-    	</sl:stand>
-    	<!-- Omgevingsnorm GOED waardeInRegelTekst -->
+    	<!-- Omgevingsnorm fout waardeInRegelTekst en eenheid -->
     	<sl:stand>
     		<ow-dc:owObject>
     			<rol:Omgevingsnorm>
     				<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900004</rol:identificatie>
+    				<rol:naam>abc</rol:naam>
+    				<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:type>
+    				<rol:eenheid>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:eenheid>
     				<rol:normwaarde>
     					<rol:Normwaarde>
     						<rol:identificatie>nl.imow-gm0037.normwaarde.201900007</rol:identificatie>
@@ -134,75 +69,54 @@
     					</rol:Normwaarde>
     					<rol:Normwaarde>
     						<rol:identificatie>nl.imow-gm0037.normwaarde.201900008</rol:identificatie>
-    						<rol:waardeInRegeltekst>
-    							<da:waarde>200</da:waarde>
-    							<da:eenheid>μg/m3</da:eenheid>
-    						</rol:waardeInRegeltekst>
+    						<rol:waardeInRegeltekst>waarde staat in regeltekst</rol:waardeInRegeltekst>
     						<rol:locatieaanduiding>
     							<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
     						</rol:locatieaanduiding>
     					</rol:Normwaarde>
     				</rol:normwaarde>
-    				<rol:naam>abc</rol:naam>
-    				<rol:groep>cde</rol:groep>
+    				<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:groep>
     			</rol:Omgevingsnorm>
     		</ow-dc:owObject>
     	</sl:stand>
-    	<!-- Omgevingsnorm FOUT kwantitatieveWaarde en waardeInRegeltekst -->
+    	<!-- Omgevingsnorm FOUT kwalitatieveWaarde en eenheid -->
     	<sl:stand>
     		<ow-dc:owObject>
     			<rol:Omgevingsnorm>
     				<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900005</rol:identificatie>
+    				<rol:naam>abc</rol:naam>
+    				<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:type>
+    				<rol:eenheid>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:eenheid>
     				<rol:normwaarde>
     					<rol:Normwaarde>
-    						<rol:identificatie>nl.imow-gm0037.normwaarde.201900009</rol:identificatie>
-    						<rol:kwantitatieveWaarde>
-    							<da:waarde>200</da:waarde>
-    							<da:eenheid>μg/m3</da:eenheid>
-    						</rol:kwantitatieveWaarde>
-    						<rol:locatieaanduiding>
-    							<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
-    						</rol:locatieaanduiding>
-    					</rol:Normwaarde>
-    					<rol:Normwaarde>
-    						<rol:identificatie>nl.imow-gm0037.normwaarde.201900010</rol:identificatie>
-    						<rol:waardeInRegeltekst>waarde staat in regeltekst</rol:waardeInRegeltekst>
+    						<rol:identificatie>nl.imow-gm0037.normwaarde.201900011</rol:identificatie>
+    						<rol:kwalitatieveWaarde>123</rol:kwalitatieveWaarde>
     						<rol:locatieaanduiding>
     							<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
     						</rol:locatieaanduiding>
     					</rol:Normwaarde>
     				</rol:normwaarde>
-    				<rol:naam>abc</rol:naam>
-    				<rol:groep>cde</rol:groep>
+    				<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:groep>
     			</rol:Omgevingsnorm>
     		</ow-dc:owObject>
     	</sl:stand>
-    	<!-- Omgevingsnorm FOUT kwalitatieveWaarde en waardeInRegeltekst -->
+    	<!-- Omgevingsnorm GOED kwalitatieveWaarde -->
     	<sl:stand>
     		<ow-dc:owObject>
     			<rol:Omgevingsnorm>
     				<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900006</rol:identificatie>
+    				<rol:naam>abc</rol:naam>
+    				<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:type>
     				<rol:normwaarde>
     					<rol:Normwaarde>
     						<rol:identificatie>nl.imow-gm0037.normwaarde.201900011</rol:identificatie>
-    						<rol:kwalitatieveWaarde>
-    							<da:waarde>200</da:waarde>
-    							<da:eenheid>μg/m3</da:eenheid>
-    						</rol:kwalitatieveWaarde>
-    						<rol:locatieaanduiding>
-    							<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
-    						</rol:locatieaanduiding>
-    					</rol:Normwaarde>
-    					<rol:Normwaarde>
-    						<rol:identificatie>nl.imow-gm0037.normwaarde.201900012</rol:identificatie>
-    						<rol:waardeInRegeltekst>waarde staat in regeltekst</rol:waardeInRegeltekst>
+    						<rol:kwalitatieveWaarde>123</rol:kwalitatieveWaarde>
     						<rol:locatieaanduiding>
     							<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
     						</rol:locatieaanduiding>
     					</rol:Normwaarde>
     				</rol:normwaarde>
-    				<rol:naam>abc</rol:naam>
-    				<rol:groep>cde</rol:groep>
+    				<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/cde</rol:groep>
     			</rol:Omgevingsnorm>
     		</ow-dc:owObject>
     	</sl:stand>
