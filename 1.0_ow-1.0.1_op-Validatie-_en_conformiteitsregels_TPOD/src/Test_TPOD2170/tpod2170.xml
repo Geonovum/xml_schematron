@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+	xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+	xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+	xmlns:p="http://www.geostandaarden.nl/imow/pons"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
+	<sl:standBestand>
+		<sl:dataset>Gemeentestad</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Gemeentestad</sl:gebied>
+			<sl:leveringsId>abc-20190221-0801</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Regeltekst"</sl:objectType>
+				<sl:objectType>RegelVoorIedereen</sl:objectType>
+				<sl:objectType>Instructieregel</sl:objectType>
+				<sl:objectType>Omgevingswaarderegel</sl:objectType>
+				<sl:objectType>Activiteit</sl:objectType>
+				<sl:objectType>Omgevingsnorm</sl:objectType>
+				<sl:objectType>Omgevingswaarde</sl:objectType>
+				<sl:objectType>Gebiedsaanwijzing</sl:objectType>
+				<sl:objectType>Gebied</sl:objectType>
+				<sl:objectType>Gebiedengroep</sl:objectType>
+				<sl:objectType>Punt</sl:objectType>
+				<sl:objectType>Puntengroep</sl:objectType>
+				<sl:objectType>Lijn</sl:objectType>
+				<sl:objectType>Lijnengroep</sl:objectType>
+				<sl:objectType>FormeleDivisie</sl:objectType>
+				<sl:objectType>Symbolisatiecollectie</sl:objectType>
+				<sl:objectType>Kaart</sl:objectType>
+				<sl:objectType>Pons</sl:objectType>
+				<sl:objectType>Tekstdeel</sl:objectType>
+				<sl:objectType>Hoofdlijn</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+
+	<!--  Omgevingsnorm correct waardeInRegeltekst-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm>
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900006</rol:identificatie>
+					<rol:naam>abc</rol:naam>
+					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:type>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001111</rol:identificatie>
+							<rol:waardeInRegeltekst>waarde staat in regeltekst</rol:waardeInRegeltekst>
+							<rol:locatieaanduiding>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:groep>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!--  Omgevingsnorm niet correct 2 * en waardeInRegeltekst-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm>
+					<rol:identificatie>nl.imow-gm0037.omgevingsnorm.201900007</rol:identificatie>
+					<rol:naam>abc</rol:naam>
+					<rol:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:type>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001112</rol:identificatie>
+							<rol:waardeInRegeltekst>waarde staat in regeltekst</rol:waardeInRegeltekst>
+							<rol:locatieaanduiding>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+						<rol:Normwaarde>
+							<rol:identificatie>nl.imow-gm0037.omgevingswaarde.201900001114</rol:identificatie>
+							<rol:waardeInRegeltekst>waarde staat in regeltekst</rol:waardeInRegeltekst>
+							<rol:locatieaanduiding>
+								<l:LocatieRef xlink:href="nl.imow-gm0037.gebied.2019000008"/>
+							</rol:locatieaanduiding>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</rol:groep>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+	</sl:standBestand>
+</ow-dc:owBestand>
