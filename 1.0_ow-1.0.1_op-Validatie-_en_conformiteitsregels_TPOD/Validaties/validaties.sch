@@ -43,6 +43,7 @@
     <sch:ns uri="http://www.geostandaarden.nl/imow/regels" prefix="r"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/regelsoplocatie" prefix="rol"/>
     <sch:ns uri="http://www.geostandaarden.nl/imow/vrijetekst" prefix="vt"/>
+    <sch:ns uri="http://www.geostandaarden.nl/imow/regelingsgebied" prefix="rg"/>
     <sch:ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
     
     <sch:ns uri="https://standaarden.overheid.nl/stop/imop/data/" prefix="data"/>
@@ -2798,6 +2799,25 @@
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_2170: <sch:value-of select="../rol:identificatie"/>: Indien de normwaarde van het type 'waardeInRegeltekst' is, mag er maar één normwaarde voorkomen. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <!-- ============TPOD_2180================================================================================================================ -->
+    
+    <!-- Het is lastig een fout te triggeren op iets dat niet voorkomt, en je wilt het maar een keer testen.
+    Daarom heb ik gekozen voor het manifest-ow dat maar een keer voorkomt, en dan op die plaats te controleren of ergens in een xml-document 
+    Een regelingsgebied is gedeclareerd.
+    Nu gaat deze validatie de mist in als het manifest-ow niet voorkomt, maar dan hebben we nog wel meer problemen.
+    -->
+    <sch:pattern id="TPOD_2180">
+        <sch:rule
+            context="//ow-manifest:Aanlevering">
+            <sch:let name="APPLICABLE"
+                value="true()"/>
+            <sch:let name="CONDITION" value="count($xmlDocuments//rg:Regelingsgebied) = 1"/>
+            <sch:assert
+                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_2180: Per Regeling moet er een Regelingsgebied zijn aangeleverd.</sch:assert>
         </sch:rule>
     </sch:pattern>
     
