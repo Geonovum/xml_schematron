@@ -87,13 +87,5 @@
         </sch:rule>
     </sch:pattern>
 
-    <xsl:function name="foo:checkDoelIdTPOD_2150">
-        <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//data:BeoogdeRegelgeving/data:BeoogdeRegeling/data:doelen/data:doel/text()">
-            <xsl:if test="$identifier eq .">
-                <xsl:value-of select="$identifier"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
 
 </sch:schema>
