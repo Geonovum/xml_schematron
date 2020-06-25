@@ -2820,5 +2820,16 @@
                 TPOD_2180: Per Regeling moet er een Regelingsgebied zijn aangeleverd.</sch:assert>
         </sch:rule>
     </sch:pattern>
+
+    <!-- ============TPOD_2190================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2190">
+        <sch:rule context="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ow-manifest:objecttype[1]/text() eq 'Geometrie']">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="CONDITION" value="false()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.</sch:assert>
+        </sch:rule>
+    </sch:pattern>
     
 </sch:schema>
