@@ -2832,4 +2832,15 @@
         </sch:rule>
     </sch:pattern>
     
+    <!-- ============TPOD_2200================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2200">
+        <sch:rule context="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ends-with(ow-manifest:naam[1]/text(), '.gml')]">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="CONDITION" value="false()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
 </sch:schema>
