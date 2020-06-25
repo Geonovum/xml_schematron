@@ -2775,4 +2775,16 @@
         </xsl:for-each>
     </xsl:function>
     
+    <!-- ============TPOD_2160================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_2160">
+        <sch:rule context="//ow-manifest:Aanlevering">
+            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="CONDITION"
+                value="count(ow-manifest:DoelID) = 1"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2160: In het manifest-ow mag maar voor 1 doel aangeleverd worden. </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
 </sch:schema>
