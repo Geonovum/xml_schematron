@@ -86,7 +86,7 @@
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0640: Subparagrafen moeten oplopend worden genummerd in Arabische cijfers 
-                (betreft paragraaf: <xsl:value-of select="$paragraaf"/>, subparagrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
+                (betreft: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -96,7 +96,7 @@
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Subparagraaf">
                 <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($paragraaf, '.', string(position())))">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                    <xsl:value-of select="concat('paragraaf: ',$paragraaf, ' subparagraaf: ',string(tekst:Kop/tekst:Nummer),', ')"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
