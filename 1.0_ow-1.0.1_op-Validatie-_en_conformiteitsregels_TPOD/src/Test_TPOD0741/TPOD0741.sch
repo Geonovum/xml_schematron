@@ -86,13 +86,13 @@
             <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
                 TPOD_0741: De nummering van Artikelen bevat letters en kan niet middels schematron op geldigheid
                 worden gecheckt. Dit moet handmatig gebeuren. 
-                (betreft hoofdstuk: <xsl:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"/>)</sch:assert>
+                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"/>)</sch:assert>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0741($hoofdstuk, $bevatLetters, .)"/>
             <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
                 TPOD_0741: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
                 voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in Arabische cijfers inclusief indien nodig een letter. 
-                (betreft hoofdstuk:<xsl:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/>)</sch:assert>
+                (betreft hoofdstuk:<sch:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/>)</sch:assert>
         </sch:rule>
     </sch:pattern>
 
