@@ -577,7 +577,7 @@
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0680: De nummering van Subsubparagrafen begint met het samengestelde nummer van de Subparagraaf waarin de Subsubparagraaf voorkomt, gevolgd door een punt. 
-                (betreft subparagraaf: <xsl:value-of select="$subparagraaf"/>, subsubparagrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
+                (betreft subparagraaf: <sch:value-of select="$subparagraaf"/>, subsubparagrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
         </sch:rule>
     </sch:pattern>
     
