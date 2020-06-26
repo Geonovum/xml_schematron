@@ -83,8 +83,8 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="ancestorsFout" value="foo:checkDerdeNiveauLijstCijfersTPOD_0850(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0850/0851:
-                    <sch:value-of select="$ancestorsFout"/></sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0850/0851: <sch:value-of select="$ancestorsFout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
