@@ -83,8 +83,7 @@
             <sch:let name="CONDITION"
                 value="(lower-case(tekst:Label/text()) = 'hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen.
-                (opschrift is hier: "<sch:value-of select="tekst:Opschrift/text()"/>")
+                TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen: Opschrift is hier: "<sch:value-of select="tekst:Opschrift/text()"/>"
             </sch:assert>
         </sch:rule>
         <sch:rule context="//tekst:Lichaam">
