@@ -483,14 +483,13 @@
         </sch:rule>
     </sch:pattern>
     
-    
     <xsl:function name="foo:volgordeTPOD_0630">
         <xsl:param name="paragraaf" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Subparagraaf">
                 <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($paragraaf, '.', string(position())))">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                    <xsl:value-of select="concat('paragraaf: ',$paragraaf, ' subparagraaf: ',string(tekst:Kop/tekst:Nummer),', ')"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
