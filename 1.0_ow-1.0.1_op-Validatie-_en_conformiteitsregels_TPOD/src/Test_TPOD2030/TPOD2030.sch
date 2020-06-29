@@ -78,13 +78,12 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_2030">
-        <sch:rule context="//DoelID">
+        <sch:rule context="//ow-manifest:DoelID">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION"
                 value="string-length(foo:checkFRBRExpressionTPOD_2030(text())) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2020: Betreft
-                <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het DoelID van het manifest in OW moet verwijzen naar een bestaand FRBRExpression van een Regelingversie in OP </sch:assert>
+                TPOD2020: Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het DoelID van het manifest in OW moet verwijzen naar een bestaand FRBRExpression van een Regelingversie in OP </sch:assert>
         </sch:rule>
     </sch:pattern>
 

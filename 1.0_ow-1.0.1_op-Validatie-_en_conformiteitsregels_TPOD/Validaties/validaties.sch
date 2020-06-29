@@ -2511,7 +2511,7 @@
     <!-- ============TPOD_2030================================================================================================================ -->
     
     <sch:pattern id="TPOD_2030">
-        <sch:rule context="//FRBRExpression">
+        <sch:rule context="//ow-manifest:DoelID">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION"
                 value="string-length(foo:checkFRBRExpressionTPOD_2030(text())) > 0"/>
