@@ -82,8 +82,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="(vt:idealisatie and vt:locatieaanduiding) or (not(vt:idealisatie) and not(vt:locatieaanduiding))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2110: Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft. 
-                Betreft Tekstdeel: <sch:value-of select="vt:identificatie"/>
+                TPOD2110: Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft. Betreft Tekstdeel: <sch:value-of select="vt:identificatie"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
