@@ -83,8 +83,7 @@
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ in AMvB/MR is de waarde ‘Beperkingengebied’ van attribuut ‘type’
-                (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het
-                gaat: <sch:value-of select="ga:identificatie/text()"/>
+                (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het gaat: <sch:value-of select="ga:identificatie/text()"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
