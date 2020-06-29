@@ -81,7 +81,6 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1740()"/>
-
             <!-- TPOD1740  -->
             <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
             <sch:report

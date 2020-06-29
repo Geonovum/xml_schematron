@@ -1396,9 +1396,8 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD_0980: Een
-                OW-besluit moet minimaal één hoofdstuk 1 bevatten met artikel met opschrift
-                Begripsbepaling. </sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD_0980: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met artikel met opschrift Begripsbepaling. </sch:assert>
         </sch:rule>
     </sch:pattern>
     

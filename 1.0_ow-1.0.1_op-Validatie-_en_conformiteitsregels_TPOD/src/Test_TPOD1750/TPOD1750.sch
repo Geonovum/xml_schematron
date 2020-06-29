@@ -81,18 +81,38 @@
             context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="ref" value="rol:identificatie/text()"></sch:let>
             <sch:let name="CONDITION"
-                value="
-                string-length(string(rol:locatieaanduiding/l:LocatieRef/@xlink:href))=0
-                or
-                contains(rol:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
-                or
-                contains(rol:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(rol:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')
-                "/>    
+                value="not(foo:activiteitenGebiedenTPOD_1750($ref)='false')"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD1750: Betreft <sch:value-of select="rol:identificatie"
-                />: Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt,
-                puntengroep, lijn of lijnengroep zijn). </sch:assert>
+                TPOD1750: Betreft <sch:value-of select="rol:identificatie"/>: Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn). </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:activiteitenGebiedenTPOD_1750">
+        <xsl:param name="ref"/>
+        <xsl:variable name="returnValue">
+            <xsl:for-each
+                select="$xmlDocuments//sl:stand/ow-dc:owObject/r:RegelVoorIedereen/r:activiteitaanduiding[string(rol:ActiviteitRef/@xlink:href)=$ref]/r:ActiviteitLocatieaanduiding">
+                <xsl:value-of select="
+                    (r:locatieaanduiding/l:LocatieRef
+                        and
+                        (contains(string(r:locatieaanduiding/l:LocatieRef/@xlink:href), '.gebiedengroep.') 
+                        or contains(string(r:locatieaanduiding/l:LocatieRef/@xlink:href), '.gebied.'))
+                    )
+                    or 
+                    (r:locatieaanduiding/l:GebiedengroepRef
+                    and contains(string(r:locatieaanduiding/l:GebiedengroepRef/@xlink:href), '.gebiedengroep.')
+                    )
+                    or
+                    (r:locatieaanduiding/l:GebiedRef
+                    and contains(string(r:locatieaanduiding/l:GebiedRef/@xlink:href), '.gebied.')
+                    )
+                    "/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$returnValue"/>
+    </xsl:function>
+    
+    
 </sch:schema>
