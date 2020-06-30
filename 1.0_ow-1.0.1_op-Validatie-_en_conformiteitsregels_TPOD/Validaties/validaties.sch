@@ -2766,8 +2766,7 @@
             <sch:let name="CONDITION"
                 value="string-length(foo:checkWorkIdRegelingTPOD_2140(text())) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2140: Betreft
-                <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het WorkID van het manifest in OW moet verwijzen naar een bestaande Work-id in een Regelingversie in OP </sch:assert>
+                TPOD2140: Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het WorkIDRegeling van het manifest in OW moet verwijzen naar een bestaande FRBRWork in een Regelingversie in OP </sch:assert>
         </sch:rule>
     </sch:pattern>
     
