@@ -72,7 +72,7 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_2130">
+    <sch:pattern id="TPOD_2120">
         <sch:rule context="//*:identificatie">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="dubbel" value="foo:vindDubbeleTPOD_2120(text())"/>

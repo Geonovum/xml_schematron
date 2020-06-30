@@ -78,10 +78,9 @@
             <sch:let name="dubbel"
                 value="foo:vindDubbeleTPOD_2130(string(@xlink:href), ../../l:identificatie/text())"/>
             <sch:let name="CONDITION" value="string-length($dubbel[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> TPOD2130: Er zijn
-                meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie
-                toegestaan), dit betreft gebied:<sch:value-of select="../../l:identificatie/text()"
-                />, Geometrieref: <sch:value-of select="$dubbel"/>.</sch:assert>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                TPOD2130: Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie
+                toegestaan), dit betreft gebied:<sch:value-of select="../../l:identificatie/text()"/>, Geometrieref: <sch:value-of select="$dubbel"/>.</sch:assert>
         </sch:rule>
     </sch:pattern>
 
