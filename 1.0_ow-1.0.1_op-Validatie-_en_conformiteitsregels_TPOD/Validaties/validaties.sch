@@ -2787,8 +2787,7 @@
             <sch:let name="CONDITION"
                 value="string-length(foo:checkDoelIdTPOD_2150(text())) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2150: Betreft
-                <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat aanwezig is in de bijbehorende Regeling in OP. </sch:assert>
+                TPOD2150: Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat aanwezig is in de bijbehorende Regeling in OP. </sch:assert>
         </sch:rule>
     </sch:pattern>
     
