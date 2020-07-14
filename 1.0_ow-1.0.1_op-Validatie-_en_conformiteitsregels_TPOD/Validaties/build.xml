@@ -71,6 +71,7 @@
         </xslt>
         
         <loadfile property="contents" srcFile="tmp/errors.txt" />
+		<property name="contents" value="Geen fouten gevonden"/>
         <echo message="${contents}" level="error" />
         <delete file="tmp/errors.txt"></delete>
         <delete file="xsl/instance.svrlt"></delete>

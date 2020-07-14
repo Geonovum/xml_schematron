@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 #script om alle Test-schematrons op bijgeleverde xml-bestanden uit te voeren
 

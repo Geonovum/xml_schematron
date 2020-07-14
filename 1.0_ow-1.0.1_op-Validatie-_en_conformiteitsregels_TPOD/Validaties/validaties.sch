@@ -1756,15 +1756,15 @@
     <!-- ============TPOD_1750================================================================================================================ -->
     
     <sch:pattern id="TPOD_1750">
-        <sch:rule
-            context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="ref" value="rol:identificatie/text()"></sch:let>
-            <sch:let name="CONDITION"
-                value="not(foo:activiteitenGebiedenTPOD_1750($ref)='false')"/>    
+            <sch:let name="ref" value="rol:identificatie/text()"/>
+            <sch:let name="CONDITION" value="not(foo:activiteitenGebiedenTPOD_1750($ref) = 'false')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD1750: Betreft <sch:value-of select="rol:identificatie"/>: Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn). </sch:assert>
+                TPOD1750: Betreft <sch:value-of select="rol:identificatie"/>: Een Activiteit moet een gebied of
+                gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn).
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1772,22 +1772,30 @@
         <xsl:param name="ref"/>
         <xsl:variable name="returnValue">
             <xsl:for-each
-                select="$xmlDocuments//sl:stand/ow-dc:owObject/r:RegelVoorIedereen/r:activiteitaanduiding[string(rol:ActiviteitRef/@xlink:href)=$ref]/r:ActiviteitLocatieaanduiding">
-                <xsl:value-of select="
-                    (r:locatieaanduiding/l:LocatieRef
-                    and
-                    (contains(string(r:locatieaanduiding/l:LocatieRef/@xlink:href), '.gebiedengroep.') 
-                    or contains(string(r:locatieaanduiding/l:LocatieRef/@xlink:href), '.gebied.'))
-                    )
-                    or 
-                    (r:locatieaanduiding/l:GebiedengroepRef
-                    and contains(string(r:locatieaanduiding/l:GebiedengroepRef/@xlink:href), '.gebiedengroep.')
-                    )
-                    or
-                    (r:locatieaanduiding/l:GebiedRef
-                    and contains(string(r:locatieaanduiding/l:GebiedRef/@xlink:href), '.gebied.')
-                    )
-                    "/>
+                select="$xmlDocuments//sl:stand/ow-dc:owObject/r:RegelVoorIedereen/r:activiteitaanduiding[string(rol:ActiviteitRef/@xlink:href) = $ref]/r:ActiviteitLocatieaanduiding/r:locatieaanduiding">
+                <xsl:for-each select="*">
+                    <xsl:choose>
+                        <xsl:when test="./local-name() = 'LocatieRef'">
+                            <xsl:if
+                                test="not(contains(string(@xlink:href), '.gebiedengroep.') or contains(string(@xlink:href), '.gebied.'))">
+                                <xsl:value-of select="false()"/>
+                            </xsl:if>
+                        </xsl:when>
+                        <xsl:when test="./local-name() = 'GebiedengroepRef'">
+                            <xsl:if test="not((contains(string(./@xlink:href), '.gebiedengroep.')))">
+                                <xsl:value-of select="false()"/>
+                            </xsl:if>
+                        </xsl:when>
+                        <xsl:when test="./local-name() = 'GebiedRef'">
+                            <xsl:if test="not((contains(string(./@xlink:href), '.gebied.')))">
+                                <xsl:value-of select="false()"/>
+                            </xsl:if>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="false()"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$returnValue"/>
