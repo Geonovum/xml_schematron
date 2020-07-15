@@ -2495,27 +2495,6 @@
         <xsl:value-of select="$result"/>
     </xsl:function>
     
-    <!-- ============TPOD_2020================================================================================================================ -->
-    
-    <sch:pattern id="TPOD_2020">
-        <sch:rule context="//ow-manifest:WorkIDRegeling">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="string-length(foo:checkFBRWorkTPOD_2020(text())) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2020: Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het Id van de
-                Regeling in manifest-ow moet verwijzen naar een bestaande work van een regeling in OP</sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    
-    <xsl:function name="foo:checkFBRWorkTPOD_2020">
-        <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//data:ExpressionIdentificatie/data:FRBRWork/text()">
-            <xsl:if test="$identifier eq .">
-                <xsl:value-of select="$identifier"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
-    
     <!-- ============TPOD_2030================================================================================================================ -->
     
     <sch:pattern id="TPOD_2030">
