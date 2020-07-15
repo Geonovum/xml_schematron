@@ -2495,27 +2495,6 @@
         <xsl:value-of select="$result"/>
     </xsl:function>
     
-    <!-- ============TPOD_2030================================================================================================================ -->
-    
-    <sch:pattern id="TPOD_2030">
-        <sch:rule context="//ow-manifest:DoelID">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION"
-                value="string-length(foo:checkFRBRExpressionTPOD_2030(text())) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2030: Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het DoelID van het manifest in OW moet verwijzen naar een bestaand FRBRExpression van een Regelingversie in OP </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    
-    <xsl:function name="foo:checkFRBRExpressionTPOD_2030">
-        <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//data:ExpressionIdentificatie/data:FRBRExpression/text()">
-            <xsl:if test="$identifier eq .">
-                <xsl:value-of select="$identifier"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
-    
     <!-- ============TPOD_2040================================================================================================================ -->
     
     <sch:pattern id="TPOD_2040">
