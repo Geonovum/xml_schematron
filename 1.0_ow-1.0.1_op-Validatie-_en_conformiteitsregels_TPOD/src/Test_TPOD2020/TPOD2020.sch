@@ -82,7 +82,7 @@
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="CONDITION" value="string-length(foo:checkFBRWorkTPOD_2010(text())) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2010: Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het Id van de
+                TPOD2020: Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het Id van de
                 Regeling in manifest-ow moet verwijzen naar een bestaande work van een regeling in OP</sch:assert>
         </sch:rule>
     </sch:pattern>

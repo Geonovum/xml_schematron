@@ -5,7 +5,7 @@
   xsi:schemaLocation="http://www.geostandaarden.nl/bestanden-ow/manifest-ow ../schemas/xsd/bestanden-ow/generiek/manifest-ow.xsd">
   <domein>omgevingswet</domein>
   <Aanlevering>
-    <WorkIDRegeling>/akn/nl/act/gm0037/2019/reg456FOUT</WorkIDRegeling>
+    <WorkIDRegeling>/akn/nl/act/gm0037/2019/reg456</WorkIDRegeling>
     <DoelID>/akn/nl/act/gm0037/2019/reg456/nld@2019-12-01FOUT</DoelID>
     <Bestand>
       <naam>owActiviteiten-Gemeentestad.xml</naam>
