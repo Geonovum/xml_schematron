@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Lijst eId="list_o_1" type="expliciet" wId="bgCode_1-0__list_o_1"
+   xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+   <!-- Een Lijst van het type 'expliciet' MOET lijst-items hebben met nummering of symbolen -->
+   <Lijstaanhef>Aanhef voor de lijst</Lijstaanhef>
+   <Li eId="list_o_1__item_1" wId="bgCode_1-0__list_o_1__item_1">
+      <LiNummer>1.</LiNummer>
+      <Al>Tekst</Al>
+   </Li>
+   <Li eId="list_o_1__item_2" wId="bgCode_1-0__list_o_1__item_2">
+      <LiNummer>2.</LiNummer>
+      <Al>Tekst</Al>
+   </Li>
+   <Li eId="list_o_1__item_3" wId="bgCode_1-0__list_o_1__item_3">
+      <LiNummer>3.</LiNummer>
+      <Al>Tekst</Al>
+   </Li>
+</Lijst>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+   <!-- Een wId MOET voldoen aan de AKN-naamgevingsconventie -->
+   <RegelingOpschrift wId="longTitle" eId="longTitle">
+      <Al>Test AKN</Al>
+   </RegelingOpschrift>
+   <Aanhef wId="formula_1" eId="formula_1">
+      <Al>Aanhef tekst</Al>
+      <Lijst type="ongemarkeerd" wId="bgCode_1-0__list_o_1" eId="__list_o_1">
+         <Li wId="bgCode_1-0__list_o_1__item_o_1" eId="__list_o_1__item_o_1">
+            <Al>Tekst</Al>
+         </Li>
+         <Li wId="bgCode_1-0__list_o_1__item_o_2" eId="__list_o_1__item_o_2">
+            <Al>Tekst</Al>
+         </Li>
+      </Lijst>
+   </Aanhef>
+   <Lichaam wId="body" eId="body">
+      <Afdeling wId="bgCode_1-0__subchp_A" eId="subchp_A">
+         <Kop>
+            <Label>Afdeling</Label>
+            <Nummer>A</Nummer>
+         </Kop>
+         <Artikel wId="bgCode_1-0__subchp_A__art_A.1" eId="subchp_A__art_A.1">
+            <Kop>
+               <Label>Artikel</Label>
+               <Nummer>A.1.</Nummer>
+            </Kop>
+            <Lid wId="bgCode_1-0__subchp_A__art_A.1__para_1"
+                 eId="subchp_A__art_A.1__para_1">
+               <LidNummer>1</LidNummer>
+               <Inhoud>
+                  <Al>Tekst <InlineTekstAfbeelding breedte="10"
+                                            dpi="300"
+                                            formaat="image/png"
+                                            hoogte="10"
+                                            naam="dollar.png"/> en plaatje</Al>
+               </Inhoud>
+            </Lid>
+            <Lid wId="bgCode_1-0__subchp_A__art_A.1__para_A.2"
+                 eId="subchp_A__art_A.1__para_A.2">
+               <LidNummer>A.2.</LidNummer>
+               <Inhoud>
+                  <Al>Tekst met verwijzing <IntRef ref="cmp_A">Bijlage</IntRef>
+                  </Al>
+               </Inhoud>
+            </Lid>
+         </Artikel>
+      </Afdeling>
+      <Afdeling wId="bgCode_1-0__subchp_B" eId="subchp_B">
+         <Kop>
+            <Label>Afdeling</Label>
+            <Nummer>B</Nummer>
+         </Kop>
+         <Artikel wId="bgCode_1-0__subchp_B__art_B.1" eId="subchp_B__art_B.1">
+            <Kop>
+               <Label>Artikel</Label>
+               <Nummer>B.1.</Nummer>
+            </Kop>
+            <Inhoud>
+               <Al>Tekst</Al>
+            </Inhoud>
+         </Artikel>
+      </Afdeling>
+   </Lichaam>
+   <Sluiting wId="bgCode_1-0__formula_2" eId="formula_2">
+      <Al>Gesloten</Al>
+   </Sluiting>
+   <WijzigBijlage wId="bgCode_1-0__cmp_A" eId="cmp_A">
+      <Kop>
+         <Nummer>A</Nummer>
+      </Kop>
+      <RegelingCompact componentnaam="Regeling_1" wordt="/akn/nl/act/bgCode/2020/TEST001">
+         <RegelingOpschrift wId="longTitle" eId="longTitle">
+            <Al>Regeling</Al>
+         </RegelingOpschrift>
+         <Lichaam wId="body" eId="body">
+            <Boek wId="bgCode_1-0__book_1" eId="book_1">
+               <Kop>
+                  <Nummer>1</Nummer>
+               </Kop>
+               <Deel wId="bgCode_1-0__book_1__part_1.1" eId="book_1__part_1.1">
+                  <Kop>
+                     <Nummer>1.1</Nummer>
+                  </Kop>
+                  <Afdeling wId="bgCode_1-0__book_1__part_1.1__subchp_1.1.1"
+                            eId="book_1__part_1.1__subchp_1.1.1">
+                     <Kop>
+                        <Nummer>1.1.1</Nummer>
+                     </Kop>
+                     <Hoofdstuk wId="bgCode_1-0__book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1"
+                                eId="book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1">
+                        <Kop>
+                           <Nummer>1.1.1.1</Nummer>
+                        </Kop>
+                        <Paragraaf wId="bgCode_1-0__book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1__subsec_1.1.1.1.1"
+                                   eId="book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1__subsec_1.1.1.1.1">
+                           <Kop>
+                              <Nummer>1.1.1.1.1</Nummer>
+                           </Kop>
+                           <Subparagraaf wId="bgCode_1-0__book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1__subsec_1.1.1.1.1__subsec_1.1.1.1.1.1"
+                                         eId="book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1__subsec_1.1.1.1.1__subsec_1.1.1.1.1.1">
+                              <Kop>
+                                 <Nummer>1.1.1.1.1.1</Nummer>
+                              </Kop>
+                              <Subsubparagraaf wId="bgCode_1-0__book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1__subsec_1.1.1.1.1__subsec_1.1.1.1.1.1__subsec_1.1.1.1.1.1.1"
+                                               eId="book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1__subsec_1.1.1.1.1__subsec_1.1.1.1.1.1__subsec_1.1.1.1.1.1.1">
+                                 <Kop>
+                                    <Nummer>1.1.1.1.1.1.1</Nummer>
+                                 </Kop>
+                                 <Artikel wId="bgCode_1-0__book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1__subsec_1.1.1.1.1__subsec_1.1.1.1.1.1__subsec_1.1.1.1.1.1.1__art_1.1.1.1.1.1.1.1"
+                                          eId="book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1__subsec_1.1.1.1.1__subsec_1.1.1.1.1.1__subsec_1.1.1.1.1.1.1__art_1.1.1.1.1.1.1.1">
+                                    <Kop>
+                                       <Label>Artikel</Label>
+                                       <Nummer>1.1.1.1.1.1.1.1</Nummer>
+                                    </Kop>
+                                    <Inhoud>
+                                       <Al>Tekst</Al>
+                                    </Inhoud>
+                                 </Artikel>
+                                 <Artikel wId="bgCode_1-0__book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1__subsec_1.1.1.1.1__subsec_1.1.1.1.1.1__subsec_1.1.1.1.1.1.1__art_1.1.1.1.1.1.1.2"
+                                          eId="book_1__part_1.1__subchp_1.1.1__chp_1.1.1.1__subsec_1.1.1.1.1__subsec_1.1.1.1.1.1__subsec_1.1.1.1.1.1.1__art_1.1.1.1.1.1.1.2">
+                                    <Kop>
+                                       <Label>Artikel</Label>
+                                       <Nummer>1.1.1.1.1.1.1.2</Nummer>
+                                    </Kop>
+                                    <Inhoud>
+                                       <Al>Tekst</Al>
+                                    </Inhoud>
+                                 </Artikel>
+                              </Subsubparagraaf>
+                           </Subparagraaf>
+                        </Paragraaf>
+                     </Hoofdstuk>
+                  </Afdeling>
+               </Deel>
+            </Boek>
+         </Lichaam>
+      </RegelingCompact>
+   </WijzigBijlage>
+   <Toelichting wId="bgCode_1-0__recital_o_1" eId="recital_o_1">
+      <Kop>
+         <Opschrift>Toelichting</Opschrift>
+      </Kop>
+      <AlgemeneToelichting wId="bgCode_1-0__recital_o_1__genrecital_o_1"
+                           eId="recital_o_1__genrecital_o_1">
+         <Kop>
+            <Opschrift>Algemeen</Opschrift>
+         </Kop>
+         <Divisietekst wId="bgCode_1-0__recital_o_1__genrecital_o_1__content_o_1"
+                       eId="recital_o_1__genrecital_o_1__content_o_1">
+            <Kop>
+               <Opschrift>Doel</Opschrift>
+            </Kop>
+            <Inhoud>
+               <Al>Tekst</Al>
+            </Inhoud>
+         </Divisietekst>
+         <Divisietekst wId="bgCode_1-0__recital_o_1__genrecital_o_1__content_o_2"
+                       eId="recital_o_1__genrecital_o_1__content_o_2">
+            <Kop>
+               <Opschrift>Uitwerking</Opschrift>
+            </Kop>
+            <Inhoud>
+               <Al>Tekst</Al>
+            </Inhoud>
+         </Divisietekst>
+      </AlgemeneToelichting>
+      <ArtikelgewijzeToelichting wId="bgCode_1-0__recital_o_1__artrecital_o_1"
+                                 eId="recital_o_1__artrecital_o_1">
+         <Kop>
+            <Opschrift>Per artikel</Opschrift>
+         </Kop>
+         <Divisie wId="bgCode_1-0__recital_o_1__artrecital_o_1__div_o_1"
+                  eId="recital_o_1__artrecital_o_1__div_o_1">
+            <Kop>
+               <Opschrift>Voor Afd A</Opschrift>
+            </Kop>
+            <InleidendeTekst wId="bgCode_1-0__recital_o_1__artrecital_o_1__div_o_1__intro_o_1"
+                             eId="recital_o_1__artrecital_o_1__div_o_1__intro_o_1">
+               <Al>Inleiding</Al>
+            </InleidendeTekst>
+            <Divisietekst wId="bgCode_1-0__recital_o_1__artrecital_o_1__div_o_1__content_o_1"
+                          eId="recital_o_1__artrecital_o_1__div_o_1__content_o_1">
+               <Kop>
+                  <Opschrift>Art A.1</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <Al>Tekst</Al>
+                  <Begrippenlijst wId="bgCode_1-0__recital_o_1__artrecital_o_1__div_o_1__content_o_1__list_o_1"
+                                  eId="recital_o_1__artrecital_o_1__div_o_1__content_o_1__list_o_1">
+                     <Begrip wId="bgCode_1-0__recital_o_1__artrecital_o_1__div_o_1__content_o_1__list_o_1__item_1"
+                             eId="recital_o_1__artrecital_o_1__div_o_1__content_o_1__list_o_1__item_1">
+                        <LiNummer>1</LiNummer>
+                        <Term>Tekst</Term>
+                        <Definitie>
+                           <Al>Tekst</Al>
+                        </Definitie>
+                     </Begrip>
+                     <Begrip wId="bgCode_1-0__recital_o_1__artrecital_o_1__div_o_1__content_o_1__list_o_1__item_2"
+                             eId="recital_o_1__artrecital_o_1__div_o_1__content_o_1__list_o_1__item_2">
+                        <LiNummer>2</LiNummer>
+                        <Term>Tekst</Term>
+                        <Definitie>
+                           <Al>Tekst</Al>
+                        </Definitie>
+                     </Begrip>
+                  </Begrippenlijst>
+               </Inhoud>
+            </Divisietekst>
+            <Divisietekst wId="bgCode_1-0__recital_o_1__artrecital_o_1__div_o_1__content_o_2"
+                          eId="recital_o_1__artrecital_o_1__div_o_1__content_o_2">
+               <Kop>
+                  <Opschrift>Art A.2</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <Al>Tekst</Al>
+               </Inhoud>
+            </Divisietekst>
+         </Divisie>
+         <Divisie wId="bgCode_1-0__recital_o_1__artrecital_o_1__div_o_2"
+                  eId="recital_o_1__artrecital_o_1__div_o_2">
+            <Kop>
+               <Opschrift>Voor Afd B</Opschrift>
+            </Kop>
+            <Divisietekst wId="bgCode_1-0__recital_o_1__artrecital_o_1__div_o_2__content_o_1"
+                          eId="recital_o_1__artrecital_o_1__div_o_2__content_o_1">
+               <Kop>
+                  <Opschrift>Art B.1</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <Al>Tekst</Al>
+               </Inhoud>
+            </Divisietekst>
+         </Divisie>
+      </ArtikelgewijzeToelichting>
+   </Toelichting>
+</BesluitCompact>

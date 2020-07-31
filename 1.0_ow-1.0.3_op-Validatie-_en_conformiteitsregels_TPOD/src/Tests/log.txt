@@ -1,0 +1,104 @@
+cp: cannot stat 'Test_TPOD2130/*.gml': No such file or directory
+     [echo]  TPOD2130: Er zijn
+     [echo]                 meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie
+     [echo]                 toegestaan), dit betreft gebied:nl.imow-gm0037.gebied.201900002, Geometrieref: 50EA019E-3C96-4631-A76C-35BCF4D7AB31. TPOD2
+     [echo]                 meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie
+     [echo]                 toegestaan), dit betreft gebied:nl.imow-gm0037.gebied.201900003, Geometrieref: 50EA019E-3C96-4631-A76C-35BCF4D7AB31.
+cp: cannot stat 'Test_TPOD2140/*.gml': No such file or directory
+     [echo] ${contents}
+     [echo]
+     [echo]                 TPOD2140: Betreft
+     [echo]                 WorkIDRegeling: /akn/nl/act/pv26/2019/OVPU-20191211FOUT: het WorkID van het manifest in OW moet verwijzen naar een bestaan
+     [echo] ${contents}
+cp: cannot stat 'Test_TPOD2150/*.gml': No such file or directory
+     [echo] ${contents}
+     [echo]
+     [echo]                 TPOD2150: Betreft
+     [echo]                 DoelID: /join/id/proces/pv26/2019/InstellingFOUT: Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat
+     [echo] ${contents}
+cp: cannot stat 'Test_TPOD2160/*.gml': No such file or directory
+     [echo] ${contents}
+     [echo]
+     [echo]                 TPOD2160: In het manifest-ow mag maar voor 1 doel aangeleverd worden.
+cp: cannot stat 'Test_TPOD2170/*.gml': No such file or directory
+     [echo]
+     [echo]                 TPOD_2170: nl.imow-gm0037.omgevingsnorm.201900007: Indien de normwaarde van het type 'waardeInRegeltekst' is, mag er maar
+cp: cannot stat 'Test_TPOD2180/*.gml': No such file or directory
+     [echo] ${contents}
+     [echo] ${contents}
+cp: cannot stat 'Test_TPOD2190/*.gml': No such file or directory
+     [echo] ${contents}
+     [echo]
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+     [echo]                 TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.
+cp: cannot stat 'Test_TPOD2200/*.gml': No such file or directory
+     [echo] ${contents}
+     [echo]
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+     [echo]                 TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.
+
+

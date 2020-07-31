@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bijlage eId="cmp_XI" wId="bgCode_1-0__cmp_XI"
+   xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+   <!-- Een onderdeel van attribuut @wId MAG NIET eindigen met een punt '.' -->
+   <Kop>
+      <Nummer>XI</Nummer>
+      <Opschrift>Test ID's</Opschrift>
+   </Kop>
+   <Divisietekst eId="cmp_XI__content_o_1" wId="bgCode_1-0__cmp_XI__content_o_1">
+      <Inhoud>
+         <Lijst eId="cmp_XI__content_o_1__list_o_1" type="expliciet"
+            wId="bgCode_1-0__cmp_XI__content_o_1__list_o_1">
+            <Lijstaanhef>Test eId's:</Lijstaanhef>
+            <Li eId="cmp_XI__content_o_1__list_o_1__item_1"
+               wId="bgCode_1-0__cmp_XI__content_o_1__list_o_1__item_1">
+               <LiNummer>1.</LiNummer>
+               <Al>Tekst</Al>
+            </Li>
+            <Li eId="cmp_XI__content_o_1__list_o_1__item_2"
+               wId="bgCode_1-0__cmp_XI__content_o_1__list_o_1.__item_2">
+               <LiNummer>2.</LiNummer>
+               <Al>Tekst</Al>
+            </Li>
+         </Lijst>
+         <Al>Tekst</Al>
+      </Inhoud>
+   </Divisietekst>
+</Bijlage>

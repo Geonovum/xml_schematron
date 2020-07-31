@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AlgemeneToelichting eId="recital_o_1" wId="bgCode_1-0__recital_o_1"
+   xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+   <!-- Divisietekst MOET een Kop bevatten in de juiste context -->
+   <Kop>
+      <Opschrift>Algemene toelichting</Opschrift>
+   </Kop>
+   <Divisietekst eId="recital_o_1__content_o_1" wId="bgCode_1-0__recital_o_1__content_o_1">
+      <Inhoud>
+         <Al>Tekst</Al>
+      </Inhoud>
+   </Divisietekst>
+   <Divisietekst eId="recital_o_1__content_o_2" wId="bgCode_1-0__recital_o_1__content_o_2">
+      <Kop>
+         <Opschrift>tweede tekst </Opschrift>
+      </Kop>
+      <Inhoud>
+         <Al>Tekst</Al>
+      </Inhoud>
+   </Divisietekst>
+</AlgemeneToelichting>

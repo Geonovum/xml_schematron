@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Divisietekst eId="content_o_1" wId="bgCode_1-0__content_o_1"
+  xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+  <!-- Een Kop MOET inhoud hebben (tekst) -->
+  <Kop>
+    <Label />
+    <Opschrift />
+  </Kop>
+  <Inhoud>
+    <Al>Tekst</Al>
+    <Al>Tekst</Al>
+    <Al>
+      <InlineTekstAfbeelding breedte="10" dpi="300" formaat="image/png" hoogte="10"
+        naam="unittest.png" />
+    </Al>
+  </Inhoud>
+</Divisietekst>

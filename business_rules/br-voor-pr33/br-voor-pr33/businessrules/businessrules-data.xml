@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessRules schemaversie="@@@VERSIE@@@"
+  xmlns="https://standaarden.overheid.nl/stop/imop/businessrules/">
+  <BusinessRuleGroep>
+    <geldtVoor>
+      <Documenttype>
+        <localName>ExpressionIdentificatie</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/data/</namespace>
+      </Documenttype>
+      <Documenttype>
+        <localName>ConsolidatieInformatie</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/data/</namespace>
+      </Documenttype>
+    </geldtVoor>
+    <geldendeBusinessRules>
+      <BusinessRule>
+        <code>LVBB2017</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>Een AKN- of JOIN-identificatie mag geen punt bevatten.</regel>
+        <melding>De identifier <var naam="ID" /> bevat een punt. Dit is niet toegestaan. Verwijder
+          de punt.</melding>
+        <documentatie>
+          <link href="xsd:data:FRBRWork" />
+          <link href="xsd:data:FRBRExpression" />
+          <link href="xsd:data:instrumentVersie" />
+          <link href="xsd:data:doel" />
+          <link href="doc:naamgevingsconventie" />
+          <!-- TODO: wordt -->
+          <!-- TODO: GIO -->
+        </documentatie>
+      </BusinessRule>
+      <BusinessRule>
+        <code>LVBB2018</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>Het deel vóór de "taalcode/@" van de FRBRExpression moet gelijk aan zijn FRBRWork</regel>
+        <melding>Het gedeelte van de FRBRExpression <var naam="Expression-ID" /> vóór de
+          'taalcode/@' is niet gelijk aan de FRBRWork-identificatie <var naam="Work-ID"
+           />.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+          <!-- TODO: consolidatie? -->
+        </documentatie>
+      </BusinessRule>
+      <BusinessRule>
+        <code>LVBB2009</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>Voor een AKN-identificatie (werk/expressie) moet het tweede deel een geldig land zijn (nl, aw, cw, sx)</regel>
+        <melding>Landcode <var naam="substring" /> in de AKN-identificatie <var naam="Work-ID" /> is niet toegestaan. Pas
+          landcode aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+
+      <BusinessRule>
+        <code>LVBB2011</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>Voor een JOIN-identificatie (work) moet het tweede deel gelijk zijn aan 'id'</regel>
+        <melding>Tweede deel JOIN-identificatie <var naam="Work-ID" /> moet gelijk zijn aan 'id'. Pas dit aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+
+      <BusinessRule>
+        <code>LVBB2012</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>Voor een JOIN-identificatie moet het derde deel een geldig type zijn (regdata, pubdata, infodata)</regel>
+        <melding>Derde deel JOIN-identificatie <var naam="Work-ID" /> moet gelijk zijn aan regdata, pubdata, of infodata. Pas dit aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+
+      <BusinessRule>
+        <code>LVBB2013</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>Voor een AKN- of JOIN identificatie (werk/expressie) moet het vijfde deel een jaartal zijn of een geldige datum zijn</regel>
+        <melding>Vijfde deel AKN- of JOIN-identificatie <var naam="Work-ID" /> moet gelijk zijn aan jaartal of geldige datum. Pas dit aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+
+      <BusinessRule>
+        <code>LVBB2014</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>Voor een JOIN-identificatie (expressie) moet het eerste deel na de '@' een jaartal of een geldige datum zijn</regel>
+        <melding>Voor een JOIN-identificatie (<var naam="Expression-ID" />) moet het eerste deel na de '@' een jaartal of een geldige datum zijn. Pas dit aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+
+      <BusinessRule>
+        <code>LVBB2015</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>JOIN-identificatie (expressie) MOET als eerste deel na de '@' een jaartal of een geldige datum hebben groter/gelijk aan jaartal in werk</regel>
+        <melding>JOIN-identificatie (<var naam="Expression-ID" />) MOET als eerste deel na de '@' een jaartal of een geldige datum hebben groter/gelijk aan jaartal in werk (<var naam="Work-ID" />). Pas dit aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+
+      <BusinessRule>
+        <code>LVBB2016</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>Voor een AKN- of JOIN-identificatie (expressie) moet deel voorafgaand aan de '@' een geldige taal zijn ('nld','eng','fry','pap','mul','und')</regel>
+        <melding>Voor een AKN- of JOIN-identificatie (<var naam="Expression-ID" />) moet deel voorafgaand aan de '@' een geldige taal zijn ('nld','eng','fry','pap','mul','und'). Pas dit aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+
+      <BusinessRule>
+        <code>LVBB4035</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>Vierde deel van alle AKN / JOIN werken en expressies moet gelijk zijn aan een brpcode</regel>
+        <melding>Vierde deel van alle AKN/JOIN werken (<var naam="Work-ID" />) moet gelijk zijn aan een brpcode. Pas dit aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+	  
+      <BusinessRule>
+        <code>STOPxxxx</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>De AKN van een officiele publicatie moet als derde veld 'officialGazette' hebben</regel>
+        <melding>Derde veld <var naam="substring" /> in de AKN-identificatie <var naam="Work-ID" /> is niet toegestaan bij officiele publicatie. Pas
+          dit veld aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+      <BusinessRule>
+        <code>LVBB2500</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>De AKN door het bevoegd gezag aangeleverde regeling moet als derde veld 'act' hebben</regel>
+        <melding>Derde veld <var naam="substring" /> in de AKN-identificatie <var naam="Work-ID" /> is niet toegestaan bij regeling. Pas
+          dit veld aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+      <BusinessRule>
+        <code>LVBB4004</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>De AKN door het bevoegd gezag aangeleverd besluit moet als derde veld 'bill' hebben</regel>
+        <melding>Derde veld <var naam="substring" /> in de AKN-identificatie <var naam="Work-ID" /> is niet toegestaan bij besluit. Pas
+          dit veld aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>	  
+	  
+      <BusinessRule>
+        <code>LVBB2008</code>
+        <!-- TODO STOP-code -->
+        <ernst>fout</ernst>
+        <regel>Daar waar een AKN- of JOIN-identifactie wordt verwacht moet deze beginnen met akn of join</regel>
+        <melding>De waarde <var naam="Work-ID" /> begint niet met /akn/ of /join/. Pas de waarde aan.</melding>
+        <documentatie>
+          <link href="data:ExpressionIdentificatie" />
+        </documentatie>
+      </BusinessRule>
+    </geldendeBusinessRules>
+  </BusinessRuleGroep>
+  <BusinessRuleGroep>
+    <geldtVoor>
+      <Documenttype>
+        <localName>InformatieObjectMetadata</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/data/</namespace>
+      </Documenttype>
+    </geldtVoor>
+    <geldendeBusinessRules>
+      <BusinessRule>
+        <code>STOP3605</code>
+        <ernst>fout</ernst>
+        <regel>De officieleTitel van InformatieObjectMetatada MOET starten met /join/id/</regel>
+        <melding>De waarde van officieleTitel <var naam="substring" /> MOET starten met /join/id/. Maak er een JOIN-identifier van.</melding>
+        <documentatie>
+          <link href="xsd:data:InformatieObjectMetadata" />
+          <link href="xsd:data:officieleTitel" />
+        </documentatie>
+      </BusinessRule>
+
+
+    </geldendeBusinessRules>
+  </BusinessRuleGroep>
+</BusinessRules>
