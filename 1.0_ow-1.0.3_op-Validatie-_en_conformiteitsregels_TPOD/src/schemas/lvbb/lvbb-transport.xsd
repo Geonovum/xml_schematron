@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema elementFormDefault="qualified" targetNamespace="http://www.overheid.nl/2017/lvbb"
-  version="@@@VERSION@@@" xmlns:lvbbt="http://www.overheid.nl/2017/lvbb"
+  version="1.0.3" xmlns:lvbbt="http://www.overheid.nl/2017/lvbb"
   xmlns:stop="http://www.overheid.nl/2017/stop"
   xmlns:tns="http://www.logius.nl/digikoppeling/gb/2010/10"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:annotation>
-    <xs:documentation>Wijzigingen tov 1.0.0</xs:documentation>
-    <xs:documentation>2020-04-29 - in enumeratie van DirecteMutatieUitkomstCode de waarde "valide"
-      vervangen door "ok"</xs:documentation>
-    <xs:documentation>2020-05-04 - toegevoegd
-                                    * directeMutatieVerzoek,
-                                    * validatieDirecteMutatieVerzoek
-                                    * validatieDirecteMutatieGBVerzoek</xs:documentation>
-    <xs:documentation>
-      2020-05-17 - in enumeratie van DirecteMutatieVoortgangCode de waarde "mutatie-voltooid"
-      en "behandeling-afgebroken" toegevoegd
-    </xs:documentation>
+    <xs:documentation>LVBB-Transport-schema</xs:documentation>
+    <xs:documentation>versie 1.0.3 uitgegeven op 06-07-2020</xs:documentation>
   </xs:annotation>
 
-  <xs:import namespace="http://www.logius.nl/digikoppeling/gb/2010/10" schemaLocation="gb-meta.xsd"/>
-  <xs:import namespace="http://www.overheid.nl/2017/stop" schemaLocation="stop_toevoeging.xsd"/>
+  <xs:import namespace="http://www.logius.nl/digikoppeling/gb/2010/10" />
+  <xs:import namespace="http://www.overheid.nl/2017/stop" />
 
   <!--===========================================================================
   
@@ -190,11 +181,10 @@
       <xs:documentation>Beschrijving van een bestand in het opdrachtbestand.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="bestandsnaam" type="xs:NCName">
+      <xs:element name="bestandsnaam" type="lvbbt:dtBestandsnaam">
         <xs:annotation>
           <xs:documentation>Naam van het bestand (evt inclusief het pad) zoals het bestand in het
-            gecomprimeerde opdrachtbestand is opgenomen. Er wordt onderscheid gemaakt tussen hoofd-
-            en kleine letters.</xs:documentation>
+            gecomprimeerde opdrachtbestand is opgenomen.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="contentType" type="xs:string">
@@ -205,6 +195,12 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
+
+  <xs:simpleType name="dtBestandsnaam">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9A-Za-z\._-]+" />
+    </xs:restriction>
+  </xs:simpleType>
 
   <!--
   Opdrachtbestand: opdracht.xml
@@ -217,13 +213,36 @@
     <xs:sequence>
       <xs:element name="idLevering" type="xs:string">
         <xs:annotation>
-          <xs:documentation> Unieke waarde waaronder de opdracht aan de LVBB bekend is in de eigen
-            organisatie. Deze is uniek per organisatie (zoals geidentificeerd door het OIN). De
+          <xs:documentation>Unieke waarde waaronder de opdracht aan de LVBB bekend is in de eigen
+            organisatie. Deze is uniek per organisatie (zoals geïdentificeerd door het OIN). De
             aanleverende software is vrij in de opmaak van dit kenmerk. </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="idBevoegdGezag" type="lvbbt:dtOIN">
+        <xs:annotation>
+          <xs:documentation>Het OIN van het Bevoegd Gezag waarvoor een gemandateerde/intermediair de
+            afhandeling doet</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="idAanleveraar" type="lvbbt:dtOIN">
+        <xs:annotation>
+          <xs:documentation>OIN van BG zelf, indien geen intermedair van toepassing is; of anders (=
+            indien een intermedair wel van toepassing is): - OIN in het geval van
+            samenwerkingsverband (overheidsorganisatie); of - HRN in het geval van
+            softwareleverancier, die de berichten namens BG verstuurt (zie
+            https://www.logius.nl/diensten/oin); </xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
+
+  <xs:simpleType name="dtOIN">
+    <xs:restriction base="xs:token">
+      <xs:maxLength value="20" />
+      <xs:minLength value="20" />
+      <xs:pattern value="[0-9]+" />
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:element name="validatieOpdracht" type="lvbbt:ValidatieOpdrachtType">
     <xs:annotation>

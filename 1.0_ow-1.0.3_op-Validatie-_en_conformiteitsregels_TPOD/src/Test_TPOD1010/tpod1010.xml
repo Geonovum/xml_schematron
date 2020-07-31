@@ -2,7 +2,7 @@
 <AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                     xsi:schemaLocation="https://standaarden.overheid.nl/lvbb/stop/ ../schemas/lvbb/lvbb-stop-aanlevering.xsd"
-                    schemaversie="1.0.1">
+                    schemaversie="1.0.3">
    <BesluitVersie>
       <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
          <FRBRWork>/akn/nl/bill/pv26/2020/310</FRBRWork>

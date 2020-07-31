@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema elementFormDefault="qualified"
-  targetNamespace="https://standaarden.overheid.nl/stop/imop/tekst/" version="1.0.1"
-  xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema elementFormDefault="qualified" targetNamespace="https://standaarden.overheid.nl/stop/imop/tekst/" version="1.0.3"
+  xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
   <xs:annotation>
     <xs:documentation>"Tekst-schema" van STOP.</xs:documentation>
     <xs:documentation>Dit schema definieert de "tekst"-elementen voor de
       STOP-modules</xs:documentation>
-    <xs:documentation>versie 1.0.1 uitgegeven op 20-05-2020</xs:documentation>
-    <xs:documentation>Veranderingen t.o.v uitgeleverd 0.98-kern versie worden beschreven op
-      https://koop.gitlab.io/STOP/standaard/tekst_xsd_Main_schema_tekst_xsd.html</xs:documentation>
-    <xs:documentation>Veranderingen t.o.v uitgeleverde STOP 1.0 versies in de issue tracker op
-      https://gitlab.com/koop/STOP/standaard/-/issues </xs:documentation>
+    <xs:documentation>versie 1.0.3 uitgegeven op 06-07-2020</xs:documentation>
   </xs:annotation>
+  
   <!--  ELEMENTEN -->
   <!-- ROOT REGELINGEN -->
   <xs:element name="RegelingKlassiek">
@@ -62,7 +58,7 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element ref="tekst:Conditie" />
-              <xs:group ref="tekst:mgLichaamZonderWijziging" />
+              <xs:group ref="tekst:mgLichaamStructuurTijdelijkdeel" />
             </xs:sequence>
             <xs:attributeGroup ref="tekst:agAKN" />
           </xs:complexType>
@@ -81,7 +77,7 @@
         <xs:element name="Lichaam">
           <xs:complexType>
             <xs:sequence>
-              <xs:choice>
+              <xs:choice maxOccurs="unbounded">
                 <xs:group ref="tekst:mgDivisieStructuur" />
               </xs:choice>
             </xs:sequence>
@@ -144,7 +140,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:group ref="tekst:mgLichaamZonderWijziging" />
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="tekst:Artikel" />
       </xs:sequence>
       <xs:attributeGroup ref="tekst:agAlgemeen" />
     </xs:complexType>
@@ -260,8 +256,8 @@
         <xs:choice minOccurs="1">
           <xs:element maxOccurs="1" ref="tekst:Gereserveerd" />
           <xs:sequence>
-            <xs:element maxOccurs="1" minOccurs="0" ref="tekst:Samenvatting" />
-            <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element maxOccurs="1" minOccurs="0" ref="tekst:InleidendeTekst" />
+            <xs:choice maxOccurs="unbounded" minOccurs="1">
               <xs:element ref="tekst:Divisie" />
               <xs:element ref="tekst:Divisietekst" />
             </xs:choice>
@@ -281,15 +277,17 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" ref="tekst:Kop" />
-        <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" ref="tekst:Samenvatting" />
-          <xs:element maxOccurs="1" minOccurs="0" ref="tekst:AlgemeneToelichting" />
-          <xs:element maxOccurs="1" minOccurs="0" ref="tekst:ArtikelgewijzeToelichting" />
-        </xs:sequence>
-        <xs:choice maxOccurs="unbounded" minOccurs="0">
-          <xs:element ref="tekst:Divisie" />
-          <xs:element ref="tekst:Divisietekst" />
+        <xs:element minOccurs="1" ref="tekst:Kop" />
+        <xs:choice minOccurs="1">
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" ref="tekst:InleidendeTekst" />
+            <xs:element maxOccurs="1" minOccurs="1" ref="tekst:AlgemeneToelichting" />
+            <xs:element maxOccurs="1" minOccurs="0" ref="tekst:ArtikelgewijzeToelichting" />
+          </xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="1">
+            <xs:element ref="tekst:Divisie" />
+            <xs:element ref="tekst:Divisietekst" />
+          </xs:choice>
         </xs:choice>
         <xs:element minOccurs="0" ref="tekst:Sluiting" />
         <xs:element maxOccurs="unbounded" minOccurs="0" ref="tekst:Bijlage" />
@@ -306,10 +304,10 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" ref="tekst:Kop" />
+        <xs:element minOccurs="1" ref="tekst:Kop" />
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" ref="tekst:Samenvatting" />
-          <xs:choice maxOccurs="unbounded" minOccurs="0">
+          <xs:element maxOccurs="1" minOccurs="0" ref="tekst:InleidendeTekst" />
+          <xs:choice maxOccurs="unbounded" minOccurs="1">
             <xs:element ref="tekst:Divisie" />
             <xs:element ref="tekst:Divisietekst" />
           </xs:choice>
@@ -330,7 +328,7 @@
         <xs:element minOccurs="1" ref="tekst:Kop" />
         <xs:choice>
           <xs:sequence>
-            <xs:element maxOccurs="1" minOccurs="0" ref="tekst:Samenvatting" />
+            <xs:element maxOccurs="1" minOccurs="0" ref="tekst:InleidendeTekst" />
             <xs:choice maxOccurs="unbounded" minOccurs="1">
               <xs:element ref="tekst:Divisie" />
               <xs:element ref="tekst:Divisietekst" />
@@ -373,8 +371,8 @@
         <xs:choice minOccurs="1">
           <xs:element maxOccurs="1" ref="tekst:Gereserveerd" />
           <xs:sequence>
-            <xs:element maxOccurs="1" minOccurs="0" ref="tekst:Samenvatting" />
-            <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element maxOccurs="1" minOccurs="0" ref="tekst:InleidendeTekst" />
+            <xs:choice maxOccurs="unbounded" minOccurs="1">
               <xs:element ref="tekst:Divisie" />
               <xs:element ref="tekst:Divisietekst" />
             </xs:choice>
@@ -387,9 +385,9 @@
     </xs:complexType>
   </xs:element>
   <!--  -->
-  <xs:element name="Samenvatting">
+  <xs:element name="InleidendeTekst">
     <xs:annotation>
-      <xs:documentation>Een samenvattende tekst beschrijft wat de het doel of de content is van een
+      <xs:documentation>Beschrijft wat het doel of de content is van een
         structuur-element, te weten: een Bijlage, Toelichting, Motivering, Divisie. Vervangt het
         gebruik van een anoniem element Inhoud, dat een betekenisloze container
         is.</xs:documentation>
@@ -397,7 +395,12 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element maxOccurs="1" minOccurs="0" ref="tekst:Kop" />
-        <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Inhoud" />
+        <xs:choice maxOccurs="unbounded" minOccurs="1">
+          <xs:element ref="tekst:Al" />
+          <xs:element ref="tekst:Lijst" />
+          <xs:element ref="tekst:Figuur" />
+          <xs:element ref="tekst:Tussenkop" />
+        </xs:choice>
       </xs:sequence>
       <xs:attributeGroup ref="tekst:agAlgemeen" />
       <xs:attributeGroup ref="tekst:agWijzigactie" />
@@ -1070,12 +1073,11 @@
           <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Gereserveerd" />
           <xs:choice maxOccurs="1" minOccurs="1">
             <xs:element maxOccurs="unbounded" ref="tekst:Subparagraaf" />
-            <xs:element maxOccurs="unbounded" ref="tekst:Subsubparagraaf" />
-            <xs:element maxOccurs="unbounded" ref="tekst:Artikel" />
-          </xs:choice>
-          <xs:choice maxOccurs="unbounded" minOccurs="1">
-            <xs:element ref="tekst:Redactioneel" />
-            <xs:element ref="tekst:WijzigArtikel" />
+            <xs:choice maxOccurs="unbounded" minOccurs="1">
+              <xs:element ref="tekst:Artikel" />
+              <xs:element ref="tekst:WijzigArtikel" />
+              <xs:element ref="tekst:Redactioneel" />
+            </xs:choice>
           </xs:choice>
         </xs:choice>
       </xs:sequence>
@@ -1096,10 +1098,13 @@
         <xs:element minOccurs="1" ref="tekst:Kop" />
         <xs:choice>
           <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Gereserveerd" />
-          <xs:choice maxOccurs="unbounded" minOccurs="1">
-            <xs:element ref="tekst:Subsubparagraaf" />
-            <xs:element ref="tekst:Artikel" />
-            <xs:element ref="tekst:Redactioneel" />
+          <xs:choice maxOccurs="1" minOccurs="1">
+            <xs:element maxOccurs="unbounded" ref="tekst:Subsubparagraaf" />
+            <xs:choice maxOccurs="unbounded" minOccurs="1">
+              <xs:element ref="tekst:Artikel" />
+              <xs:element ref="tekst:WijzigArtikel" />
+              <xs:element ref="tekst:Redactioneel" />
+            </xs:choice>
           </xs:choice>
         </xs:choice>
       </xs:sequence>
@@ -1122,8 +1127,10 @@
           <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Gereserveerd" />
           <xs:choice maxOccurs="unbounded" minOccurs="1">
             <xs:element ref="tekst:Artikel" />
+            <xs:element ref="tekst:WijzigArtikel" />
             <xs:element ref="tekst:Redactioneel" />
           </xs:choice>
+          <xs:sequence> </xs:sequence>
         </xs:choice>
       </xs:sequence>
       <xs:attributeGroup ref="tekst:agAKN" />
@@ -1139,7 +1146,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" ref="tekst:Kop" />
+        <xs:element minOccurs="1" ref="tekst:Kop" />
         <xs:choice minOccurs="1">
           <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Gereserveerd" />
           <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Vervallen" />
@@ -1212,7 +1219,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" ref="tekst:LidNummer" />
+        <xs:element minOccurs="1" ref="tekst:LidNummer" />
         <xs:choice>
           <xs:element minOccurs="0" ref="tekst:Wat" />
           <xs:element ref="tekst:WijzigInstructies" />
@@ -1275,15 +1282,13 @@
         de Regeling.</xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:sequence>
-        <xs:choice maxOccurs="unbounded" minOccurs="1">
-          <xs:element ref="tekst:Groep" />
-          <xs:element ref="tekst:Al" />
-          <xs:element ref="tekst:Slotformulering" />
-          <xs:element ref="tekst:Dagtekening" />
-        </xs:choice>
-        <xs:element maxOccurs="unbounded" minOccurs="0" ref="tekst:Ondertekening" />
-      </xs:sequence>
+      <xs:choice maxOccurs="unbounded" minOccurs="1">
+        <xs:element ref="tekst:Groep" />
+        <xs:element ref="tekst:Al" />
+        <xs:element ref="tekst:Slotformulering" />
+        <xs:element ref="tekst:Dagtekening" />
+        <xs:element ref="tekst:Ondertekening" />
+      </xs:choice>
       <xs:attributeGroup ref="tekst:agAKN" />
       <xs:attributeGroup ref="tekst:agAlgemeen" />
     </xs:complexType>
@@ -1319,11 +1324,8 @@
       <xs:sequence>
         <xs:element ref="tekst:Kop" />
         <xs:choice>
-          <xs:sequence>
-            <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Inhoud" />
-            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tekst:Divisie" />
-          </xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="1" ref="tekst:Divisie" />
+          <xs:element maxOccurs="unbounded" ref="tekst:Divisietekst" />
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="tekst:Divisie" />
         </xs:choice>
         <xs:element minOccurs="0" ref="tekst:Sluiting" />
         <xs:element maxOccurs="unbounded" minOccurs="0" ref="tekst:Bijlage" />
@@ -1474,6 +1476,7 @@
       </xs:choice>
       <xs:attributeGroup ref="tekst:agTableEntry" />
       <xs:attributeGroup ref="tekst:agAlgemeen" />
+      <xs:attributeGroup ref="tekst:agWijzigactie" />
     </xs:complexType>
   </xs:element>
   <!-- EINDE TABLE CALS -->
@@ -1879,13 +1882,26 @@
   <xs:group name="mgBijlagenVoorBesluit">
     <xs:sequence>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="tekst:Bijlage" />
-      <xs:choice maxOccurs="unbounded">
+      <xs:sequence>
         <xs:choice maxOccurs="1" minOccurs="0">
           <xs:element ref="tekst:Toelichting" />
           <xs:element ref="tekst:ArtikelgewijzeToelichting" />
         </xs:choice>
-        <xs:element ref="tekst:Motivering" />
-        <xs:element ref="tekst:Inhoudsopgave" />
+        <xs:element minOccurs="0" ref="tekst:Motivering" />
+        <xs:element minOccurs="0" ref="tekst:Inhoudsopgave" />
+      </xs:sequence>
+    </xs:sequence>
+  </xs:group>
+  <!--  -->
+  <xs:group name="mgLichaamStructuurTijdelijkdeel">
+    <xs:sequence>
+      <xs:choice minOccurs="1">
+        <xs:element maxOccurs="unbounded" ref="tekst:Deel" />
+        <xs:element maxOccurs="unbounded" ref="tekst:Hoofdstuk" />
+        <xs:element maxOccurs="unbounded" ref="tekst:Paragraaf" />
+        <xs:element maxOccurs="unbounded" ref="tekst:Afdeling" />
+        <xs:element maxOccurs="unbounded" ref="tekst:Titel" />
+        <xs:element maxOccurs="unbounded" ref="tekst:Artikel" />
       </xs:choice>
     </xs:sequence>
   </xs:group>
@@ -1899,23 +1915,12 @@
         <xs:element maxOccurs="unbounded" ref="tekst:Paragraaf" />
         <xs:element maxOccurs="unbounded" ref="tekst:Afdeling" />
         <xs:element maxOccurs="unbounded" ref="tekst:Titel" />
-        <xs:element maxOccurs="unbounded" ref="tekst:Artikel" />
-        <xs:sequence>
+        <xs:choice maxOccurs="unbounded">
           <xs:element maxOccurs="unbounded" ref="tekst:WijzigArtikel" />
           <xs:element maxOccurs="unbounded" ref="tekst:Artikel" />
-        </xs:sequence>
+        </xs:choice>
       </xs:choice>
     </xs:sequence>
-  </xs:group>
-  <!--  -->
-  <xs:group name="mgLichaamZonderWijziging">
-    <xs:choice>
-      <xs:element maxOccurs="unbounded" ref="tekst:Hoofdstuk" />
-      <xs:element maxOccurs="unbounded" ref="tekst:Paragraaf" />
-      <xs:element maxOccurs="unbounded" ref="tekst:Afdeling" />
-      <xs:element maxOccurs="unbounded" ref="tekst:Titel" />
-      <xs:element maxOccurs="unbounded" ref="tekst:Artikel" />
-    </xs:choice>
   </xs:group>
   <!--  -->
   <xs:group name="mgDivisieStructuur">

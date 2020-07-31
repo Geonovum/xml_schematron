@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified"
-  targetNamespace="https://standaarden.overheid.nl/lvbb/stop/uitlevering/" version="1.0.1"
+  targetNamespace="https://standaarden.overheid.nl/lvbb/stop/uitlevering/" version="1.0.3"
   xmlns:cons="https://standaarden.overheid.nl/stop/imop/consolidatie/"
   xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
   xmlns:imop="https://standaarden.overheid.nl/stop/imop/"
   xmlns:lvbbu="https://standaarden.overheid.nl/lvbb/stop/uitlevering/"
+  xmlns:se="http://www.opengis.net/se"
   xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:annotation>
     <xs:documentation>LVBB-Uitlevering-schema</xs:documentation>
-    <xs:documentation>versie 1.0.1 uitgegeven op 20-05-2020</xs:documentation>
+    <xs:documentation>versie 1.0.3 uitgegeven op 06-07-2020</xs:documentation>
   </xs:annotation>
 
   <!-- xs:appinfo om geincludeerde STOP-versie vast te leggen -->
   <xs:annotation>
     <xs:appinfo>
-      <imop:STOPversie>1.0.1</imop:STOPversie>
+      <imop:STOPversie>1.0.3</imop:STOPversie>
     </xs:appinfo>
   </xs:annotation>
 
-  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/" schemaLocation="../stop/imop-data.xsd"/>
-  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/consolidatie/" schemaLocation="../stop/imop-consolidatie.xsd"/>
-  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/" schemaLocation="../stop/imop-tekst.xsd"/>
+  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.0.3/imop-data.xsd" />
+  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/consolidatie/"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.0.3/imop-consolidatie.xsd" />
+  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.0.3/imop-tekst.xsd" />
+  <xs:import namespace="http://www.opengis.net/se"
+    schemaLocation="http://www.opengis.net/se/1.1.0/FeatureStyle.xsd" />
 
   <!--
     UITLEVEREN CONSOLIDATIE MET TOESTANDEN 
@@ -43,10 +49,10 @@
         <xs:element ref="cons:ConsolidatieIdentificatie" />
         <xs:element ref="cons:Toestanden" />
         <xs:choice>
-          <!-- optioneel: meeleveren van alle Regelingversies en GIOs samen met de Toestanden -->
           <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:RegelingVersie" />
           <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:InformatieObjectVersie" />
         </xs:choice>
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:AnnotatieBijToestand" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -64,6 +70,8 @@
           <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:RegelingVersie" />
           <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:InformatieObjectVersie" />
         </xs:choice>
+        <!-- TODO bespreken -->
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbbu:AnnotatieBijToestand"/>
       </xs:sequence>
       <xs:attributeGroup ref="lvbbu:agSchemaversie" />
     </xs:complexType>
@@ -96,29 +104,42 @@
   <xs:group name="mgRegelingVersieInformatie">
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie" />
-      <xs:element maxOccurs="1" minOccurs="1" ref="data:RegelingMetadata" />
+      <xs:element maxOccurs="1" minOccurs="1" ref="data:RegelingVersieMetadata" />
     </xs:sequence>
   </xs:group>
   <!--  -->
   <xs:element name="InformatieObjectVersie">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="data:ExpressionIdentificatie" />
-        <xs:element ref="data:InformatieObjectMetadata" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="data:InformatieObjectVersieMetadata" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  
-  
+
+  <xs:element name="AnnotatieBijToestand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="data:ExpressionIdentificatie" />
+        <xs:choice>
+          <xs:element maxOccurs="1" minOccurs="0" ref="data:RegelingMetadata" />
+          <xs:element maxOccurs="1" minOccurs="0" ref="data:InformatieObjectMetadata" />
+          <xs:element maxOccurs="1" minOccurs="0" ref="se:FeatureTypeStyle" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
   <!--
     LEVEREN OFFICIELE PUBLICATIE
   -->
   <xs:element name="OfficielePublicatie">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="data:ExpressionIdentificatie" />
-        <xs:element ref="data:OfficielePublicatieMetadata" />
-        <xs:element ref="tekst:OfficielePublicatie" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:OfficielePublicatieVersieMetadata" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:OfficielePublicatieMetadata" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="tekst:OfficielePublicatie" />
       </xs:sequence>
       <xs:attributeGroup ref="lvbbu:agSchemaversie" />
     </xs:complexType>

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified"
-  targetNamespace="https://standaarden.overheid.nl/lvbb/stop/aanlevering/" version="1.0.1"
+  targetNamespace="https://standaarden.overheid.nl/lvbb/stop/aanlevering/" version="1.0.3"
   xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
   xmlns:imop="https://standaarden.overheid.nl/stop/imop/"
   xmlns:lvbba="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+  xmlns:se="http://www.opengis.net/se"
   xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:annotation>
     <xs:documentation>LVBB-Aanlevering-schema</xs:documentation>
-    <xs:documentation>versie 1.0.1 uitgegeven op 20-05-2020</xs:documentation>
+    <xs:documentation>versie 1.0.3 uitgegeven op 06-07-2020</xs:documentation>
     <xs:documentation>Veranderingen tov uitgeleverd 0.98-kern versie worden beschreven op
       https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/lvbba_xsd_Main_schema_lvbba_xsd.html </xs:documentation>
   </xs:annotation>
@@ -17,12 +18,16 @@
   <!-- xs:appinfo om geincludeerde STOP-versie vast te leggen -->
   <xs:annotation>
     <xs:appinfo>
-      <imop:STOPversie>1.0.1</imop:STOPversie>
+      <imop:STOPversie>1.0.3</imop:STOPversie>
     </xs:appinfo>
   </xs:annotation>
 
-  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/" schemaLocation="../stop/imop-data.xsd"/>
-  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/" schemaLocation="../stop/imop-tekst.xsd"/>
+  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.0.3/imop-data.xsd" />
+  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.0.3/imop-tekst.xsd" />
+  <xs:import namespace="http://www.opengis.net/se"
+    schemaLocation="http://www.opengis.net/se/1.1.0/FeatureStyle.xsd" />
 
   <!--
     AANLEVEREN BESLUIT
@@ -94,7 +99,8 @@
   <xs:group name="mgRegelingVersieInformatie">
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie" />
-      <xs:element maxOccurs="1" minOccurs="1" ref="data:RegelingMetadata" />
+      <xs:element maxOccurs="1" minOccurs="1" ref="data:RegelingVersieMetadata" />
+      <xs:element maxOccurs="1" minOccurs="0" ref="data:RegelingMetadata" />
     </xs:sequence>
   </xs:group>
 
@@ -103,7 +109,9 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="data:ExpressionIdentificatie" />
-        <xs:element ref="data:InformatieObjectMetadata" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:InformatieObjectVersieMetadata" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="data:InformatieObjectMetadata" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="se:FeatureTypeStyle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
