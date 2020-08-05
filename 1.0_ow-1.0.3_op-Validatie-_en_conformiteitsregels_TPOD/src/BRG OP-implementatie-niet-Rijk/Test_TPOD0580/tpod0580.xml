@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+    xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.3"
+    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
+    <BesluitVersie>
+        <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <FRBRWork>/akn/nl/bill/ws0659/2019/wvl-20190906-1643</FRBRWork>
+            <FRBRExpression>/akn/nl/bill/ws0659/2019/wvl-20190906-1643/nld@2019-01-04;1.0</FRBRExpression>
+            <soortWork>/join/id/stop/work_003</soortWork>
+        </ExpressionIdentificatie>
+        <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+            <maker>/tooi/id/waterschap/ws0659</maker>
+            <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
+            </onderwerpen>
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
+            </rechtsgebieden>
+            <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
+            <informatieobjectRefs>
+                <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
+            </informatieobjectRefs>
+        </BesluitMetadata>
+        <data:Procedureverloop>
+            <data:bekendOp>2020-01-01</data:bekendOp>
+            <data:procedurestappen>
+                <data:Procedurestap>
+                    <data:soortStap></data:soortStap>
+                    <data:voltooidOp>2020-01-01</data:voltooidOp>
+                </data:Procedurestap>
+            </data:procedurestappen>
+        </data:Procedureverloop>
+        <data:ConsolidatieInformatie></data:ConsolidatieInformatie>
+        <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+            <RegelingOpschrift wId="abc" eId="abc">
+                <Al></Al>
+            </RegelingOpschrift>
+            <Lichaam eId="body"
+                wId="body">
+                    <Hoofdstuk eId="chp_1" wId="mnre1034_1-0__chp_1">
+                        <Kop>
+                            <Label>HOOFDSTUK</Label>
+                            <Nummer>1</Nummer>
+                            <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
+                        </Kop>
+                        <Titel eId="chp_1_titel_1" wId="mnre1034_1-0__chp_1_titel_1">
+                            <Kop>
+                                <Label>Titel</Label>
+                                <Nummer>1.1</Nummer>
+                                <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
+                            </Kop>
+                            <Gereserveerd/>
+                        </Titel>
+                        <Titel eId="chp_1_titel_2" wId="mnre1034_1-0__chp_1_titel_2">
+                            <Kop>
+                                <Label>Titel</Label>
+                                <Nummer>1.2</Nummer>
+                                <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
+                            </Kop>
+                            <Afdeling eId="chp_1__subchp_1.1" wId="mnre1034_1-0__chp_1__subchp_1.1">
+                                <Kop>
+                                    <Label>AFDELING</Label>
+                                    <Nummer>1.2.2</Nummer>
+                                    <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
+                                </Kop>
+                                <Artikel eId="chp_1__subchp_1.1__art_1.1.1"
+                                    wId="mnre1034_1-0__chp_1__subchp_1.2.1__art_1.1.1">
+                                    <Kop>
+                                        <Label>Artikel</Label>
+                                        <Nummer>1.2.1</Nummer>
+                                        <Opschrift>(toepassingsbereik)</Opschrift>
+                                    </Kop>
+                                    <Inhoud>
+                                        <Al>Dit hoofdstuk is van toepassing op de aanwijzing of
+                                            geometrische begrenzing van locaties voor de toepassing van
+                                            de wet en de daarop berustende bepalingen.</Al>
+                                    </Inhoud>
+                                </Artikel>
+                            </Afdeling>
+                            <Afdeling eId="chp_1__subchp_1.2" wId="mnre1034_1-0__chp_1__subchp_1.2">
+                                <Kop>
+                                    <Label>AFDELING</Label>
+                                    <Nummer>1.2.1</Nummer>
+                                    <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
+                                </Kop>
+                                <Artikel eId="chp_1__subchp_1.2__art_1.2.1"
+                                    wId="mnre1034_1-0__chp_1__subchp_1.2__art_1.2.1">
+                                    <Kop>
+                                        <Label>Artikel</Label>
+                                        <Nummer>2.1</Nummer>
+                                        <Opschrift>(toepassingsbereik)</Opschrift>
+                                    </Kop>
+                                    <Inhoud>
+                                        <Al>Dit hoofdstuk is van toepassing op de aanwijzing of
+                                            geometrische begrenzing van locaties voor de toepassing van
+                                            de wet en de daarop berustende bepalingen.</Al>
+                                    </Inhoud>
+                                </Artikel>
+                            </Afdeling>
+                        </Titel>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_2" wId="mnre1034_1-0__chp_2">
+                        <Kop>
+                            <Label>HOOFDSTUK</Label>
+                            <Nummer>2</Nummer>
+                            <Opschrift>AANWIJZING EN GEOMETRISCHE BEGRENZING VAN
+                                LOCATIES</Opschrift>
+                        </Kop>
+                        <Afdeling eId="chp_2__subchp_2.1" wId="mnre1034_1-0__chp_2__subchp_2.1">
+                            <Kop>
+                                <Label>AFDELING</Label>
+                                <Nummer>2.2</Nummer>
+                                <Opschrift>ALGEMENE BEPALINGEN</Opschrift>
+                            </Kop>
+                            <Gereserveerd/>
+                        </Afdeling>
+                        <Afdeling eId="chp_2__subchp_2.2" wId="mnre1034_1-0__chp_2__subchp_2.2">
+                            <Kop>
+                                <Label>AFDELING</Label>
+                                <Nummer>2.2</Nummer>
+                                <Opschrift>WATER</Opschrift>
+                            </Kop>
+                            <Paragraaf eId="chp_2__subchp_2.2__subsec_2.2.1"
+                                wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.1">
+                                <Kop>
+                                    <Label>§</Label>
+                                    <Nummer>2.2.2</Nummer>
+                                    <Opschrift>Rijkswateren</Opschrift>
+                                </Kop>
+                                <Gereserveerd/>
+                            </Paragraaf>
+                            <Paragraaf eId="chp_2__subchp_2.2__subsec_2.2.2"
+                                wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.2">
+                                <Kop>
+                                    <Label>§</Label>
+                                    <Nummer>2.2.2</Nummer>
+                                    <Opschrift>Waterkeringen</Opschrift>
+                                </Kop>
+                                <Gereserveerd/>
+                            </Paragraaf>
+                        </Afdeling>
+                    </Hoofdstuk>
+                </Lichaam>
+            <Sluiting wId="aaa" eId="bbb">
+                <Al>aaa</Al>
+            </Sluiting>
+        </BesluitCompact>
+    </BesluitVersie>
+    <RegelingVersieInformatie>
+        <data:ExpressionIdentificatie>
+            <data:FRBRWork></data:FRBRWork>
+            <data:FRBRExpression></data:FRBRExpression>
+            <data:soortWork></data:soortWork>
+        </data:ExpressionIdentificatie>
+        <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/provincie/pv26</eindverantwoordelijke>
+            <maker>/tooi/id/provincie/pv26</maker>
+            <officieleTitel>Omgevingsverordening Utrecht</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_cfc7d5ab</onderwerp>
+            </onderwerpen>
+            <overheidsdomeinen>
+                <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+            </overheidsdomeinen>
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
+            </rechtsgebieden>
+            <afkortingen>
+                <afkorting/>
+            </afkortingen>
+            <grondslagen>
+                <grondslag>
+                    <TekstReferentie>
+                        <uri/>
+                        <label/>
+                    </TekstReferentie>
+                </grondslag>
+            </grondslagen>
+            <versienummer>310</versienummer>
+            <voorkeursafkorting/>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+        </RegelingMetadata>
+    </RegelingVersieInformatie>
+</AanleveringBesluit>

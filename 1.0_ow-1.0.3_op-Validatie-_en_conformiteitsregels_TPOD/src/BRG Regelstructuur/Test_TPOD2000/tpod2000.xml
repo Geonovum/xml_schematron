@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+    xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+    xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+    xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+    xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+    xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+    xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+    xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+    xmlns:p="http://www.geostandaarden.nl/imow/pons"
+    xmlns:r="http://www.geostandaarden.nl/imow/regels"
+    xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+    xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
+    <sl:standBestand>
+        <sl:dataset>Omgevingsregeling_201912011101001</sl:dataset>
+        <sl:inhoud>
+            <sl:gebied>[onbekend]</sl:gebied>
+            <sl:leveringsId>201912011101</sl:leveringsId>
+            <sl:objectTypen>
+                <sl:objectType>Regeltekst</sl:objectType>
+                <sl:objectType>RegelVoorIedereen</sl:objectType>
+            </sl:objectTypen>
+        </sl:inhoud>
+        <!-- 2.02.1	Geometrische begrenzing van oppervlaktewaterlichamen beheer van de waterkwaliteit -->
+        <sl:stand>
+            <ow-dc:owObject>
+                <r:Regeltekst
+                    wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_1_LID_FOUT">
+                    <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101001</r:identificatie>
+                </r:Regeltekst>
+            </ow-dc:owObject>
+        </sl:stand>
+        <sl:stand>
+            <ow-dc:owObject>
+                <vt:Divisie wId="mnre1034_1__fdvs_o_1_DIVISIE_FOUT">
+                    <vt:identificatie>nl.imow-mnre1034.divisie.2020000001</vt:identificatie>
+                </vt:Divisie>
+            </ow-dc:owObject>
+        </sl:stand>
+        <sl:stand>
+            <ow-dc:owObject>
+                <r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.1__art_2.2__para_1">
+                    <r:identificatie>nl.imow-mnre1034.regeltekst.201912011101001</r:identificatie>
+                </r:Regeltekst>
+            </ow-dc:owObject>
+        </sl:stand>
+        <sl:stand>
+            <ow-dc:owObject>
+                <vt:Divisie wId="mnre1034_1__fdvs_o_1">
+                    <vt:identificatie>nl.imow-mnre1034.divisie.2020000001</vt:identificatie>
+                </vt:Divisie>
+            </ow-dc:owObject>
+        </sl:stand>
+    </sl:standBestand>
+</ow-dc:owBestand>
