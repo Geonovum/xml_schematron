@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Aanleveringen 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
+	xsi:schemaLocation="http://www.geostandaarden.nl/bestanden-ow/manifest-ow ../schemas/xsd/bestanden-ow/generiek/manifest-ow.xsd">
+	<domein>omgevingswet</domein>
+	<Aanlevering>
+		<WorkIDRegeling>/akn/nl/act/gm0037/2020/VBG0001</WorkIDRegeling>
+		<DoelID>/join/id/proces/gm0037/2020/Instelling</DoelID>
+		<Bestand>
+			<naam>Activiteiten.xml</naam>
+			<objecttype>Activiteit</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>ActiviteitenFOUT.xml</naam>
+			<objecttype>Activiteit</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>NoSuchFile.xml</naam>
+			<objecttype>Activiteit</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>Regelteksten.xml</naam>
+			<objecttype>Regeltekst</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>Gebiedsaanwijzing.xml</naam>
+			<objecttype>Gebiedsaanwijzing</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>NoSuchFile.gml</naam>
+			<objecttype>Gebiedsaanwijzing</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>owLocatie.xml</naam>
+			<objecttype>Gebied</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>owVrijetekst.xml</naam>
+			<objecttype>Tekstdeel</objecttype>
+			<objecttype>Formele Divisie</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>owTekstdeel.xml</naam>
+			<objecttype>Tekstdeel</objecttype>
+			<objecttype>FormeleDivisie</objecttype>
+			<objecttype>Hoofdlijn</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>WaterschapsverordeningLocatiegroepen.xml</naam>
+			<objecttype>Gebiedengroep</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>owOmgevingsnormOmgevingswaarde.xml</naam>
+			<objecttype>Omgevingsnorm</objecttype>
+			<objecttype>Omgevingswaarde</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>owKaart001.xml</naam>
+			<objecttype>Kaart</objecttype>
+		</Bestand>
+		<Bestand>
+			<naam>owPons-Gemeentestad.xml</naam>
+			<objecttype>Pons</objecttype>
+		</Bestand>
+		
+	</Aanlevering>
+</Aanleveringen>

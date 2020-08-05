@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+   xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
+   xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+   xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+   xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+   xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+   xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+   xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+   xmlns:p="http://www.geostandaarden.nl/imow/pons"
+   xmlns:r="http://www.geostandaarden.nl/imow/regels"
+   xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+   xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand ../schemas/xsd/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd">
+   <sl:standBestand>
+      <sl:dataset>Omgevingsvisie Rotterdam</sl:dataset>
+      <sl:inhoud>
+         <sl:gebied>Rotterdam</sl:gebied>
+         <sl:leveringsId>omgevingsvisie-20191201-0010</sl:leveringsId>
+         <sl:objectTypen>
+            <sl:objectType>Tekstdeel</sl:objectType>
+            <sl:objectType>Formele Divisie</sl:objectType>
+         </sl:objectTypen>
+      </sl:inhoud>
+      <sl:stand>
+         <ow-dc:owObject>
+            <!-- FormeleInhoud of FormeleDivisie -->
+            <vt:Divisie wId="gm0599_1__fdvs_3__fcontent_1">
+               <vt:identificatie>nl.imow-gm0599.divisie.2019000001</vt:identificatie>
+            </vt:Divisie>
+         </ow-dc:owObject>
+      </sl:stand>
+      <sl:stand>
+         <ow-dc:owObject>
+            <!-- je zou ow:regeltekstId kunnen veralgemeniseren naar ow:bron ofzo -->
+            <vt:Tekstdeel>
+               <vt:identificatie>nl.imow-gm0599.tekstdeel.2019000001</vt:identificatie>
+               <vt:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</vt:idealisatie>
+               <vt:thema>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Verkeer en vervoer</vt:thema>
+               <vt:divisieaanduiding>
+                  <vt:DivisieRef xlink:href="nl.imow-gm0599.divisie.2019000001"/>
+               </vt:divisieaanduiding>
+            </vt:Tekstdeel>
+         </ow-dc:owObject>
+      </sl:stand>
+   </sl:standBestand>
+</ow-dc:owBestand>

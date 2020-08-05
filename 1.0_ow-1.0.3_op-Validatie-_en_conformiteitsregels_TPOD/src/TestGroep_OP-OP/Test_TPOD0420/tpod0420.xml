@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+    xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
+    xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.3"
+    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
+    <BesluitVersie>
+        <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <FRBRWork>/akn/nl/bill/ws0659/2019/wvl-20190906-1643</FRBRWork>
+            <FRBRExpression>/akn/nl/bill/ws0659/2019/wvl-20190906-1643/nld@2019-01-04;1.0</FRBRExpression>
+            <soortWork>/join/id/stop/work_003</soortWork>
+        </ExpressionIdentificatie>
+        <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+            <maker>/tooi/id/waterschap/ws0659</maker>
+            <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
+            </onderwerpen>
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
+            </rechtsgebieden>
+            <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
+            <informatieobjectRefs>
+                <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
+            </informatieobjectRefs>
+        </BesluitMetadata>
+        <data:Procedureverloop>
+            <data:bekendOp>2020-01-01</data:bekendOp>
+            <data:procedurestappen>
+                <data:Procedurestap>
+                    <data:soortStap></data:soortStap>
+                    <data:voltooidOp>2020-01-01</data:voltooidOp>
+                </data:Procedurestap>
+            </data:procedurestappen>
+        </data:Procedureverloop>
+        <data:ConsolidatieInformatie></data:ConsolidatieInformatie>
+        <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+            <RegelingOpschrift wId="abc" eId="abc">
+                <Al></Al>
+            </RegelingOpschrift>
+            <Lichaam wId="abc" eId="abc">
+                    <Hoofdstuk eId="chp_1" wId="mnre1034_1-0__chp_1">
+                        <Kop>
+                            <Nummer>1</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_2" wId="mnre1034_1-0__chp_2">
+                        <Kop>
+                            <Nummer>2</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_3" wId="mnre1034_1-0__chp_3">
+                        <Kop>
+                            <Nummer>4</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_4" wId="mnre1034_1-0__chp_4">
+                        <Kop>
+                            <Nummer>1.1</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_5" wId="mnre1034_1-0__chp_5">
+                        <Kop>
+                            <Nummer>IV</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_6" wId="mnre1034_1-0__chp_6">
+                        <Kop>
+                            <Nummer>6</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                    </Hoofdstuk>
+                    <Hoofdstuk eId="chp_7" wId="mnre1034_1-0__chp_7">
+                        <Kop>
+                            <Nummer>VII</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                    </Hoofdstuk>
+                </Lichaam>
+            <Sluiting wId="aaa" eId="bbb">
+                <Al>aaa</Al>
+            </Sluiting>
+        </BesluitCompact>
+    </BesluitVersie>
+    <RegelingVersieInformatie>
+        <data:ExpressionIdentificatie>
+            <data:FRBRWork></data:FRBRWork>
+            <data:FRBRExpression></data:FRBRExpression>
+            <data:soortWork></data:soortWork>
+        </data:ExpressionIdentificatie>
+        <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/provincie/pv26</eindverantwoordelijke>
+            <maker>/tooi/id/provincie/pv26</maker>
+            <officieleTitel>Omgevingsverordening Utrecht</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_cfc7d5ab</onderwerp>
+            </onderwerpen>
+            <overheidsdomeinen>
+                <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+            </overheidsdomeinen>
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
+            </rechtsgebieden>
+            <afkortingen>
+                <afkorting/>
+            </afkortingen>
+            <grondslagen>
+                <grondslag>
+                    <TekstReferentie>
+                        <uri/>
+                        <label/>
+                    </TekstReferentie>
+                </grondslag>
+            </grondslagen>
+            <versienummer>310</versienummer>
+            <voorkeursafkorting/>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+        </RegelingMetadata>
+    </RegelingVersieInformatie>
+</AanleveringBesluit>
