@@ -94,7 +94,7 @@
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Titel">
-                <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($hoofdstuk, '.', string(position())))">
+                <xsl:if test="not(substring-after(string(tekst:Kop/tekst:Nummer),'.')=string(position()))">
                     <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
                 </xsl:if>
             </xsl:for-each>
