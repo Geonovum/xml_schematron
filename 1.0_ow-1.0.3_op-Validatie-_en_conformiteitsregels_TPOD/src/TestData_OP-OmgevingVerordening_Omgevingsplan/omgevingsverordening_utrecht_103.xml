@@ -1176,6 +1176,15 @@
                            </Kop>
                            <Gereserveerd/>
                         </Artikel>
+                        <Artikel eId="chp_1__subsec_1.1__art_1.2"
+                           wId="pv26_1-0__chp_1__subsec_1.1__art_1.2">
+                           <Kop>
+                              <Label>Artikel</Label>
+                              <Nummer>2.2</Nummer>
+                              <Opschrift>Meet- en rekenbepalingen</Opschrift>
+                           </Kop>
+                           <Gereserveerd/>
+                        </Artikel>
                         <Artikel eId="chp_1__subsec_1.1__art_1.3"
                                  wId="pv26_1-0__chp_1__subsec_1.1__art_1.3">
                            <Kop>
