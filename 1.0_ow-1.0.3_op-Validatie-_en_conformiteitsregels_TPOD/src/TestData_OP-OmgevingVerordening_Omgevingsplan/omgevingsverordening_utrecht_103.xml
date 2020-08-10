@@ -15066,6 +15066,18 @@
                               </Kop>
                               <Gereserveerd/>
                            </Subparagraaf>
+                           <Subparagraaf wId="chp_30_aaa" eId="aa">
+                              <Kop>
+                                 <Nummer>30.1.1.7.</Nummer>
+                              </Kop>
+                              <Gereserveerd/>
+                           </Subparagraaf>
+                           <Subparagraaf wId="chp_30_aaa" eId="aa">
+                              <Kop>
+                                 <Nummer>30.1.1.8</Nummer>
+                              </Kop>
+                              <Gereserveerd/>
+                           </Subparagraaf>
                         </Paragraaf>
                      </Afdeling>
                   </Hoofdstuk>
