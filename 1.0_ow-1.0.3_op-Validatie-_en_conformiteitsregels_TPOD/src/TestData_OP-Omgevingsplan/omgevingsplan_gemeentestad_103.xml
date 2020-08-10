@@ -1074,11 +1074,11 @@
                                                     <Lijst type="expliciet" wId="abc" eId="abc">
                                                         <!-- 2 -->
                                                         <Li wId="abc" eId="abc">
-                                                            <LiNummer>1</LiNummer>
+                                                            <LiNummer>a</LiNummer>
                                                             <Al>Lijst 2</Al>
                                                         </Li>
                                                         <Li wId="abc" eId="abc">
-                                                            <LiNummer>2</LiNummer>
+                                                            <LiNummer>b</LiNummer>
                                                             <Al>bla bla</Al>
                                                         </Li>
                                                         <Li wId="abc" eId="abc">
