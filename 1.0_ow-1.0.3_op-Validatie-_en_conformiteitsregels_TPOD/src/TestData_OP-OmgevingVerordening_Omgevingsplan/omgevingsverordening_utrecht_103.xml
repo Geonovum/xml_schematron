@@ -15018,39 +15018,51 @@
                         <Nummer>30</Nummer>
                         <Label>Hoofdstuk</Label>
                      </Kop>
-                     <Afdeling wId="chp_29_" eId="aaa">
+                     <Afdeling wId="chp_30_" eId="aaa">
                         <Kop>
                            <Nummer>30.1</Nummer>
                            <Label>Afdeling</Label>
                         </Kop>
-                        <Paragraaf wId="chp_29_aa" eId="aa">
+                        <Paragraaf wId="chp_30_aa" eId="aa">
                            <Kop>
                               <Label>Paragraaf</Label>
                               <Nummer>30.1.1</Nummer>
                            </Kop>
-                           <Subparagraaf wId="chp_29_aaa" eId="a">
+                           <Subparagraaf wId="chp_30_aaa" eId="a">
                               <Kop>
                                  <Label>Subparagraaf</Label>
                                  <Nummer>30.1.1.1</Nummer>
                               </Kop>
                               <Gereserveerd/>
                            </Subparagraaf>
-                           <Subparagraaf wId="chp_29_aaa" eId="aa">
+                           <Subparagraaf wId="chp_30_aaa" eId="aa">
                               <Kop>
                                  <Label>Subparagraaf</Label>
                                  <Nummer>30.1.1.21</Nummer>
                               </Kop>
                               <Gereserveerd/>
                            </Subparagraaf>
-                           <Subparagraaf wId="chp_29_aaa" eId="aa">
+                           <Subparagraaf wId="chp_30_aaa" eId="aa">
                               <Kop>
                                  <Nummer>30.1.1.3</Nummer>
                               </Kop>
                               <Gereserveerd/>
                            </Subparagraaf>
-                           <Subparagraaf wId="chp_29_aaa" eId="aa">
+                           <Subparagraaf wId="chp_30_aaa" eId="aa">
                               <Kop>
                                  <Nummer>30.1.1</Nummer>
+                              </Kop>
+                              <Gereserveerd/>
+                           </Subparagraaf>
+                           <Subparagraaf wId="chp_30_aaa" eId="aa">
+                              <Kop>
+                                 <Nummer>30.1.1.5</Nummer>
+                              </Kop>
+                              <Gereserveerd/>
+                           </Subparagraaf>
+                           <Subparagraaf wId="chp_30_aaa" eId="aa">
+                              <Kop>
+                                 <Nummer>30.1.1.10</Nummer>
                               </Kop>
                               <Gereserveerd/>
                            </Subparagraaf>
