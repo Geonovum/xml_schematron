@@ -45,7 +45,14 @@
                   <Nummer>111111</Nummer>
                   <Opschrift>Algemene Bepaling</Opschrift>
                </Kop>
-               <Gereserveerd/>
+               <Artikel eId="chp_1_art_1.1" wId="gm0297_1__subchp_2.2__art_1.13">
+                  <Kop>
+                     <Label>Artikel</Label>
+                     <Nummer>1.1</Nummer>
+                     <Opschrift>Begripsbepaling</Opschrift>
+                  </Kop>
+                  <Gereserveerd/>
+               </Artikel>
             </Hoofdstuk>
          </Lichaam>
          <Sluiting wId="aa" eId="aa">
