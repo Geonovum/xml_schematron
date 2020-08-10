@@ -1038,7 +1038,7 @@
                                                                 <!-- 3 -->
                                                                 <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
                                                                 <Li wId="aaa" eId="aaa">
-                                                                    <LiNummer>1</LiNummer>
+                                                                    <LiNummer>a</LiNummer>
                                                                     <Al>bla bla bla</Al>
                                                                 </Li>
                                                                 <Li wId="aaa" eId="aaa">
