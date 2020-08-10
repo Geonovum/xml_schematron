@@ -83,7 +83,6 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0780(.)"/>
-
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0780: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
