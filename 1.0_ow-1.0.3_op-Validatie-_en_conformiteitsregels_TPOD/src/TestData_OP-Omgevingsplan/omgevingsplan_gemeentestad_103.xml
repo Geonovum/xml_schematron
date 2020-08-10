@@ -987,11 +987,11 @@
                                         <Inhoud>
                                             <Lijst type="expliciet" wId="a_wId_0" eId="aaa">
                                                 <Li wId="aaa" eId="aaa">
-                                                    <LiNummer>1</LiNummer>
+                                                    <LiNummer>a</LiNummer>
                                                     <Al/>
                                                 </Li>
                                                 <Li wId="aaa" eId="aaa">
-                                                    <LiNummer>a.</LiNummer>
+                                                    <LiNummer>b</LiNummer>
                                                     <Al>bla</Al>
                                                 </Li>
                                             </Lijst>
@@ -1062,13 +1062,38 @@
                                     <Lid wId="subchp_2.5__art_2.16" eId="aaa">
                                         <LidNummer>4a.</LidNummer>
                                         <Inhoud>
-                                            <Al>Het uiterlijk van bouwwerken dient te voldoen aan
-                                                het niveau van redelijke eisen van welstand dat ter
-                                                plaatse van het werkingsgebied ‘<IntIoRef
-                                                  eId="subchp_2.5__art_2.15__ref_o_1"
-                                                  wId="gm0297_1__subchp_2.5__art_2.15__ref_o_1"
-                                                  ref="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_7__ref_o_1"
-                                                  >welstandsniveau</IntIoRef>’ is vastgelegd.</Al>
+                                            <Lijst type="expliciet" wId="abc" eId="abc">
+                                                <!-- 1 -->
+                                                <Lijstaanhef>Lijst met 3 niveaus</Lijstaanhef>
+                                                <Li wId="abc" eId="abc">
+                                                    <LiNummer>a.</LiNummer>
+                                                    <Al>Lijst 1</Al>
+                                                </Li>
+                                                <Li wId="abc" eId="abc">
+                                                    <LiNummer>b.</LiNummer>
+                                                    <Lijst type="expliciet" wId="abc" eId="abc">
+                                                        <!-- 2 -->
+                                                        <Li wId="abc" eId="abc">
+                                                            <LiNummer>1</LiNummer>
+                                                            <Al>Lijst 2</Al>
+                                                        </Li>
+                                                        <Li wId="abc" eId="abc">
+                                                            <LiNummer>2</LiNummer>
+                                                            <Al>bla bla</Al>
+                                                        </Li>
+                                                        <Li wId="abc" eId="abc">
+                                                            <LiNummer>3</LiNummer>
+                                                            <Lijst type="expliciet" wId="abc" eId="abc">
+                                                                <!-- 3 -->
+                                                                <Li wId="abc" eId="abc">
+                                                                    <LiNummer>1</LiNummer>
+                                                                    <Al>bla bla bla</Al>
+                                                                </Li>
+                                                            </Lijst>
+                                                        </Li>
+                                                    </Lijst>
+                                                </Li>
+                                            </Lijst>
                                         </Inhoud>
                                     </Lid>
                                 </Artikel>
