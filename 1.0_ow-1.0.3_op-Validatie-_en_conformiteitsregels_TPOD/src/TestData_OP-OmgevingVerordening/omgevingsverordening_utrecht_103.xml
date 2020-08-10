@@ -10926,14 +10926,20 @@
                                  <Nummer>9.6</Nummer>
                                  <Opschrift>Instructieregel Recreatiewoningen</Opschrift>
                               </Kop>
-                              <Inhoud>
-                                 <Al>Een omgevingsplan dat betrekking heeft op locaties binnen <b>
-                                       <IntIoRef eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.6__ref_o_1"
-                                                 wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.6__ref_o_1"
-                                                 ref="pv26_1-0__cmp_2__list_o_1__item_o_98__ref_o_1">Recreatiewoningen</IntIoRef>
-                                    </b> bevat regels die het recreatief gebruik van recreatiewoningen en bijbehorende gronden garanderen en omvorming van deze recreatiewoningen en gronden ten behoeve van permanente bewoning uitsluiten.</Al>
-                              </Inhoud>
-                           </Artikel>
+                              <Lid eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.5__para_2"
+                                 wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.5__para_2">
+                                 <LidNummer>1.</LidNummer>
+                                 <Inhoud>
+                                    <Al>De motivering op een omgevingsplan bevat een onderbouwing waaruit blijkt dat aan de genoemde voorwaarden is voldaan. Een beeldkwaliteitsparagraaf maakt onderdeel uit van de onderbouwing.</Al>
+                                 </Inhoud>
+                              </Lid>
+                              <Lid eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.5__para_2"
+                                 wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.5__para_2">
+                                 <LidNummer>2</LidNummer>
+                                 <Inhoud>
+                                    <Al>De motivering op een omgevingsplan bevat een onderbouwing waaruit blijkt dat aan de genoemde voorwaarden is voldaan. Een beeldkwaliteitsparagraaf maakt onderdeel uit van de onderbouwing.</Al>
+                                 </Inhoud>
+                              </Lid>                           </Artikel>
                            <Artikel eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.7"
                                     wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.7">
                               <Kop>
