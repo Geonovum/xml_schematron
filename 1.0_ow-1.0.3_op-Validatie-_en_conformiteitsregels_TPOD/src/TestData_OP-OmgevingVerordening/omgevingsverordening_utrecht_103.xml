@@ -10749,13 +10749,22 @@
                                  <Nummer>9.2</Nummer>
                                  <Opschrift>Verstedelijkingsverbod Landelijk gebied</Opschrift>
                               </Kop>
-                              <Inhoud>
-                                 <Al>Een omgevingsplan dat betrekking heeft op locaties binnen <b>
-                                       <IntIoRef eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.2__ref_o_1"
-                                                 wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.2__ref_o_1"
-                                                 ref="pv26_1-0__cmp_2__list_o_1__item_o_75__ref_o_1">Landelijk gebied</IntIoRef>
-                                    </b> laat geen verstedelijking toe, tenzij in deze verordening anders is bepaald.</Al>
-                              </Inhoud>
+                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.2" eId="aaa">
+                                 <LidNummer>1.</LidNummer>
+                                 <Inhoud><Al>Een omgevingsplan</Al></Inhoud>
+                              </Lid>
+                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.2" eId="aaa">
+                                 <LidNummer>3.</LidNummer>
+                                 <Inhoud><Al>Een omgevingsplan</Al></Inhoud>
+                              </Lid>
+                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.2" eId="aaa">
+                                 <LidNummer>3.</LidNummer>
+                                 <Inhoud><Al>Een omgevingsplan</Al></Inhoud>
+                              </Lid>
+                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.2" eId="aaa">
+                                 <LidNummer>4.</LidNummer>
+                                 <Inhoud><Al>Een omgevingsplan</Al></Inhoud>
+                              </Lid>
                            </Artikel>
                            <Artikel eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.3"
                                     wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.3">
@@ -10817,7 +10826,7 @@
                               </Lid>
                               <Lid eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.4__para_2"
                                    wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.4__para_2">
-                                 <LidNummer>2.</LidNummer>
+                                 <LidNummer>2a.</LidNummer>
                                  <Inhoud>
                                     <Lijst eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.4__para_2__list_o_1"
                                            wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.4__para_2__list_o_1"

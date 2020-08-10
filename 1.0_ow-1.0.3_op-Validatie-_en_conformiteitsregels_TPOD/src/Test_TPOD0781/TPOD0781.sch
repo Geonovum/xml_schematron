@@ -83,16 +83,16 @@
             <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0781(.)"/>
             <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> TPOD_0781: De
-                nummering van Leden bevat letters en kan niet middels schematron op geldigheid
+            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
+                TPOD_0781: De nummering van Leden bevat letters en kan niet middels schematron op geldigheid
                 worden gecheckt. Dit moet handmatig gebeuren. 
                 (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
                     select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"
                 />)</sch:assert> 
             <sch:let name="volgorde" value="foo:volgordeTPOD_0781($bevatLetters,.)"/>
             <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> TPOD_0781: Leden
-                moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig,
+            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
+                TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig,
                 een letter). 
                 (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"
