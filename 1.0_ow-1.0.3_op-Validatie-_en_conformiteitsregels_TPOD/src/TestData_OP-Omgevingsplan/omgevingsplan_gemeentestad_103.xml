@@ -210,14 +210,50 @@
                                     <Opschrift>Begripsbepaling</Opschrift>
                                 </Kop>
                                 <Inhoud>
-                                    <Al>Het werkingsgebied van de functie '<IntIoRef
-                                            eId="subchp_2.2__art_2.3__ref_o_1"
-                                            wId="gm0297_1__subchp_2.2__art_2.3__ref_o_1"
-                                            ref="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_1__ref_o_1"
-                                            >Bedrijf categorie 2</IntIoRef>' is bedoeld voor het
-                                        verrichten van gebruiksactiviteiten die passen bij een
-                                        bedrijf met een lichte milieucategorie met een beperkte
-                                        uitstraling op het omringende gebied. </Al>
+                                    <Al>fsefs</Al>
+                                    <Begrippenlijst eId="cmp_I__list_o_1" wId="gm0037_1__cmp_I__list_o_1">
+                                        <Begrip eId="cmp_I__list_o_1__item_o_1"
+                                            wId="gm0037_1__cmp_I__list_o_1__item_o_1"> </Begrip>
+                                        <Begrip eId="cmp_I__list_o_1__item_o_2"
+                                            wId="gm0037_1__cmp_I__list_o_1__item_o_2">
+                                            <Term>Centrumgebied</Term>
+                                            <Definitie>
+                                                <Al>
+                                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1"
+                                                        wId="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1"
+                                                        ref="/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520"
+                                                        >/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520</ExtIoRef>
+                                                </Al>
+                                            </Definitie>
+                                        </Begrip>
+                                        <Begrip eId="cmp_I__list_o_1__item_o_3"
+                                            wId="gm0037_1__cmp_I__list_o_1__item_o_3">
+                                            <Term>Zone A</Term>
+                                        </Begrip>
+                                        <Begrip eId="cmp_I__list_o_1__item_o_4"
+                                            wId="gm0037_1__cmp_I__list_o_1__item_o_4">
+                                            <Definitie>
+                                                <Al>
+                                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1"
+                                                        wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_1"
+                                                        ref="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
+                                                        >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
+                                                </Al>
+                                            </Definitie>
+                                        </Begrip>
+                                        <Begrip eId="cmp_I__list_o_1__item_o_5"
+                                            wId="gm0037_1__cmp_I__list_o_1__item_o_5">
+                                            <Term>Exploiteren speelautomatenhal</Term>
+                                            <Definitie>
+                                                <Al>
+                                                    <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
+                                                        wId="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_1"
+                                                        ref="/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520"
+                                                        >/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520</ExtIoRef>
+                                                </Al>
+                                            </Definitie>
+                                        </Begrip>
+                                    </Begrippenlijst>
                                 </Inhoud>
                             </Artikel>
                             <Artikel eId="chp_1_art_1.1" wId="gm0297_1__subchp_2.2__art_1.13">
