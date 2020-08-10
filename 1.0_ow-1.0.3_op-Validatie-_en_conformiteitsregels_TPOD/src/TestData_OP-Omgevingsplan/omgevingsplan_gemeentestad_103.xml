@@ -1164,109 +1164,224 @@
                         <Divisietekst eId="cmp_I__content_o_1" wId="gm0297_1__cmp_I__content_o_1">
                             <Inhoud>
                                 <Begrippenlijst eId="cmp_I__content_o_1__list_o_1"
-                                    wId="gm0297_1__cmp_I__content_o_1__list_o_1">
-                                    <!-- BV: Een Begrippenlijst moet gesorteerd zijn -->
+                                    wId="pv26_310__cmp_I__content_o_1__list_o_1">
                                     <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_1"
-                                        wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_1">
-                                        <Term>Bedrijf categorie 2</Term>
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_1">
+                                        <Term>Boringsvrijezone</Term>
                                         <Definitie>
                                             <Al>
-                                                <ExtIoRef
-                                                  eId="cmp_I__content_o_1__list_o_1__item_o_1__ref_o_1"
-                                                  wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_1__ref_o_1"
-                                                  ref="/join/id/regdata/gm0297/2019/Bedrijf_categorie_2/nld@2019-06-18;3520"
-                                                  >/join/id/regdata/gm0297/2019/Bedrijf_categorie_2/nld@2019-06-18;3520</ExtIoRef>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_1__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_1__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040">/join/id/regdata/pv26/2020/Boringsvrijezone/nld@2020-03-05;000000040</ExtIoRef>
                                             </Al>
                                         </Definitie>
                                     </Begrip>
                                     <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_2"
-                                        wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_2">
-                                        <Term>Centrumgebied</Term>
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_2">
+                                        <Term>Bufferzonestiltegebied</Term>
                                         <Definitie>
                                             <Al>
-                                                <ExtIoRef
-                                                  eId="cmp_I__content_o_1__list_o_1__item_o_2__ref_o_1"
-                                                  wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_2__ref_o_1"
-                                                  ref="/join/id/regdata/gm0297/2019/Centrumgebied/nld@2019-06-18;3520"
-                                                  >/join/id/regdata/gm0297/2019/Centrumgebied/nld@2019-06-18;3520</ExtIoRef>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_2__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_2__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044">/join/id/regdata/pv26/2020/Bufferzonestiltegebied/nld@2020-03-05;000000044</ExtIoRef>
                                             </Al>
                                         </Definitie>
                                     </Begrip>
                                     <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_3"
-                                        wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_3">
-                                        <Term>Exploiteren speelautomatenhal</Term>
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_3">
+                                        <Term>Concentratiegebiedglastuinbouw</Term>
                                         <Definitie>
                                             <Al>
-                                                <ExtIoRef
-                                                  eId="cmp_I__content_o_1__list_o_1__item_o_3__ref_o_1"
-                                                  wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_3__ref_o_1"
-                                                  ref="/join/id/regdata/gm0297/2019/Speelhal/nld@2019-06-18;3520"
-                                                  >/join/id/regdata/gm0297/2019/Speelhal/nld@2019-06-18;3520</ExtIoRef>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_3__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_3__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045">/join/id/regdata/pv26/2020/Concentratiegebiedglastuinbouw/nld@2020-03-05;000000045</ExtIoRef>
                                             </Al>
                                         </Definitie>
                                     </Begrip>
                                     <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_4"
-                                        wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_4">
-                                        <Term>Maximum bouwhoogte bedrijfsgebouw</Term>
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_4">
+                                        <Term>Grondwaterbeschermingsgebied</Term>
                                         <Definitie>
                                             <Al>
-                                                <ExtIoRef
-                                                  eId="cmp_I__content_o_1__list_o_1__item_o_4__ref_o_1"
-                                                  wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_4__ref_o_1"
-                                                  ref="/join/id/regdata/gm0297/2019/Bouwhoogte/nld@2019-06-18;3520"
-                                                  >/join/id/regdata/gm0297/2019/Bouwhoogte/nld@2019-06-18;3520</ExtIoRef>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_4__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_4__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039">/join/id/regdata/pv26/2020/Grondwaterbeschermingsgebied/nld@2020-03-05;000000039</ExtIoRef>
                                             </Al>
                                         </Definitie>
                                     </Begrip>
                                     <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_5"
-                                        wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_5">
-                                        <Term>Welstandsniveau</Term>
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_5">
+                                        <Term>Kernrandzone</Term>
                                         <Definitie>
                                             <Al>
-                                                <ExtIoRef
-                                                  eId="cmp_I__content_o_1__list_o_1__item_o_5__ref_o_1"
-                                                  wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_5__ref_o_1"
-                                                  ref="/join/id/regdata/gm0297/2019/Welstand/nld@2019-06-18;3520"
-                                                  >/join/id/regdata/gm0297/2019/Welstand/nld@2019-06-18;3520</ExtIoRef>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_5__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_5__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051">/join/id/regdata/pv26/2020/Kernrandzone/nld@2020-03-05;000000051</ExtIoRef>
                                             </Al>
                                         </Definitie>
                                     </Begrip>
                                     <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_6"
-                                        wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_6">
-                                        <Term>Zone A</Term>
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_6">
+                                        <Term>Kwetsbarestrategischegrondwatervoorraad</Term>
                                         <Definitie>
                                             <Al>
-                                                <ExtIoRef
-                                                  eId="cmp_I__content_o_1__list_o_1__item_o_6__ref_o_1"
-                                                  wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_6__ref_o_1"
-                                                  ref="/join/id/regdata/gm0297/2019/Zone_A/nld@2019-06-18;3520"
-                                                  >/join/id/regdata/gm0297/2019/Zone_A/nld@2019-06-18;3520</ExtIoRef>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_6__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_6__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053">/join/id/regdata/pv26/2020/Kwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000053</ExtIoRef>
                                             </Al>
                                         </Definitie>
                                     </Begrip>
                                     <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_7"
-                                        wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_7">
-                                        <Term>Zone B</Term>
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_7">
+                                        <Term>Landelijkgebied</Term>
                                         <Definitie>
                                             <Al>
-                                                <ExtIoRef
-                                                  eId="cmp_I__content_o_1__list_o_1__item_o_7__ref_o_1"
-                                                  wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_7__ref_o_1"
-                                                  ref="/join/id/regdata/gm0297/2019/Zone_B/nld@2019-06-18;3520"
-                                                  >/join/id/regdata/gm0297/2019/Zone_B/nld@2019-06-18;3520</ExtIoRef>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_7__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_7__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047">/join/id/regdata/pv26/2020/Landelijkgebied/nld@2020-03-05;000000047</ExtIoRef>
                                             </Al>
                                         </Definitie>
                                     </Begrip>
                                     <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_8"
-                                        wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_8">
-                                        <Term>Zuilichem</Term>
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_8">
+                                        <Term>Matigkwetsbarestrategischegrondwatervoorraad</Term>
                                         <Definitie>
                                             <Al>
-                                                <ExtIoRef
-                                                  eId="cmp_I__content_o_1__list_o_1__item_o_8__ref_o_1"
-                                                  wId="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_8__ref_o_1"
-                                                  ref="/join/id/regdata/gm0297/2019/Zuilichem/nld@2019-06-18;3520"
-                                                  >/join/id/regdata/gm0297/2019/Zuilichem/nld@2019-06-18;3520</ExtIoRef>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_8__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_8__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043">/join/id/regdata/pv26/2020/Matigkwetsbarestrategischegrondwatervoorraad/nld@2020-03-05;000000043</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_9"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_9">
+                                        <Term>Recreatiewoningen</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_9__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_9__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042">/join/id/regdata/pv26/2020/Recreatiewoningen/nld@2020-03-05;000000042</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_10"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_10">
+                                        <Term>Slaperdijk</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_10__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_10__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054">/join/id/regdata/pv26/2020/Slaperdijk/nld@2020-03-05;000000054</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_11"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_11">
+                                        <Term>Stedelijkgebied</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_11__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_11__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057">/join/id/regdata/pv26/2020/Stedelijkgebied/nld@2020-03-05;000000057</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_12"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_12">
+                                        <Term>Stillekern</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_12__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_12__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062">/join/id/regdata/pv26/2020/Stillekern/nld@2020-03-05;000000062</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_13"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_13">
+                                        <Term>Stiltegebied</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_13__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_13__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060">/join/id/regdata/pv26/2020/Stiltegebied/nld@2020-03-05;000000060</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_14"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_14">
+                                        <Term>Strategischegrondwatervoorraad</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_14__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_14__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058">/join/id/regdata/pv26/2020/Strategischegrondwatervoorraad/nld@2020-03-05;000000058</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_15"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_15">
+                                        <Term>Vrijwaringszonestiltegebied</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_15__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_15__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055">/join/id/regdata/pv26/2020/Vrijwaringszonestiltegebied/nld@2020-03-05;000000055</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_16"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_16">
+                                        <Term>Waterwingebied</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_16__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_16__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061">/join/id/regdata/pv26/2020/Waterwingebied/nld@2020-03-05;000000061</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_17"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_17">
+                                        <Term>WaterwingebiedBethunepolder</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_17__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_17__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063">/join/id/regdata/pv26/2020/WaterwingebiedBethunepolder/nld@2020-03-05;000000063</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_18"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_18">
+                                        <Term>WeginbeheerbijdeProvincie</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_18__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_18__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059">/join/id/regdata/pv26/2020/WeginbeheerbijdeProvincie/nld@2020-03-05;000000059</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_19"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_19">
+                                        <Term>beperkingengebiedmetbetrekkingtoteenprovincialeweg</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_19__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_19__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056">/join/id/regdata/pv26/2020/beperkingengebiedmetbetrekkingtoteenprovincialeweg/nld@2020-03-05;000000056</ExtIoRef>
+                                            </Al>
+                                        </Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__content_o_1__list_o_1__item_o_20"
+                                        wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_20">
+                                        <Term>xxx-jaaraandachtsgebied</Term>
+                                        <Definitie>
+                                            <Al>
+                                                <ExtIoRef eId="cmp_I__content_o_1__list_o_1__item_o_20__ref_o_1"
+                                                    wId="pv26_310__cmp_I__content_o_1__list_o_1__item_o_20__ref_o_1"
+                                                    ref="/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049">/join/id/regdata/pv26/2020/xxx-jaaraandachtsgebied/nld@2020-03-05;000000049</ExtIoRef>
                                             </Al>
                                         </Definitie>
                                     </Begrip>
