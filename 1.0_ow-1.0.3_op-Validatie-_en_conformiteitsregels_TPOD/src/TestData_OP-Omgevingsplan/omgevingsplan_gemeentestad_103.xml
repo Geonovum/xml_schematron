@@ -1012,13 +1012,51 @@
                                     <Lid wId="subchp_2.5__art_2.16" eId="aaa">
                                         <LidNummer>3.</LidNummer>
                                         <Inhoud>
-                                            <Al>Het uiterlijk van bouwwerken dient te voldoen aan
-                                                het niveau van redelijke eisen van welstand dat ter
-                                                plaatse van het werkingsgebied ‘<IntIoRef
-                                                  eId="subchp_2.5__art_2.15__ref_o_1"
-                                                  wId="gm0297_1__subchp_2.5__art_2.15__ref_o_1"
-                                                  ref="gm0297_1__cmp_I__content_o_1__list_o_1__item_o_7__ref_o_1"
-                                                  >welstandsniveau</IntIoRef>’ is vastgelegd.</Al>
+                                            <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                                <!-- 1 -->
+                                                <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                                                <Li wId="aaa" eId="aaa">
+                                                    <LiNummer>1</LiNummer>
+                                                    <Al>Lijst 1</Al>
+                                                </Li>
+                                                <Li wId="aaa" eId="aaa">
+                                                    <LiNummer>2</LiNummer>
+                                                    <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                                        <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                                                        <!-- 2 -->
+                                                        <Li wId="aaa" eId="aaa">
+                                                            <LiNummer>1</LiNummer>
+                                                            <Al>Lijst 2</Al>
+                                                        </Li>
+                                                        <Li wId="aaa" eId="aaa">
+                                                            <LiNummer>2</LiNummer>
+                                                            <Al>bla bla</Al>
+                                                        </Li>
+                                                        <Li wId="aaa" eId="aaa">
+                                                            <LiNummer>3</LiNummer>
+                                                            <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                                                <!-- 3 -->
+                                                                <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                                                                <Li wId="aaa" eId="aaa">
+                                                                    <LiNummer>1</LiNummer>
+                                                                    <Al>bla bla bla</Al>
+                                                                </Li>
+                                                                <Li wId="aaa" eId="aaa">
+                                                                    <LiNummer>2</LiNummer>
+                                                                    <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                                                        <!-- 4 -->
+                                                                        <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                                                                        <Li wId="aaa" eId="aaa">
+                                                                            <LiNummer>1</LiNummer>
+                                                                            <Al>bla bla bla bla</Al>
+                                                                        </Li>
+                                                                    </Lijst>
+                                                                </Li>
+                                                            </Lijst>
+                                                        </Li>
+                                                    </Lijst>
+                                                </Li>
+                                            </Lijst>
                                         </Inhoud>
                                     </Lid>
                                     <Lid wId="subchp_2.5__art_2.16" eId="aaa">
