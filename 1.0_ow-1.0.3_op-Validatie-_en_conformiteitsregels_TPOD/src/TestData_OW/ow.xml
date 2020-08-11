@@ -510,6 +510,24 @@
 				</rol:Activiteit>
 			</ow-dc:owObject>
 		</sl:stand>
+		<!-- Activiteit naar functionele structuur -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit>
+					<rol:identificatie>nl.imow-gm0037.activiteit.2019000540</rol:identificatie>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
+					<rol:gerelateerdeActiviteit>
+						<!-- Regels van gerelateerde activiteit zijn contextueel relevant -->
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.20190002452"/>
+					</rol:gerelateerdeActiviteit>
+					<rol:bovenliggendeActiviteit>
+						<rol:ActiviteitRef
+							xlink:href="nl.imow-mn002.activiteit.FunctioneleStructuur0001"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
 		<!-- Omgevingsnorm GOED gebiedref-->
 		<!-- Normwaarde correct met kwantitatieveWaarde-->
 		<sl:stand>
