@@ -5,11 +5,15 @@
         rm -f -r Validaties/Opdracht
         mkdir Validaties/Opdracht
         cp ../TestData_Manifest_OW-OP/*.xml Validaties/Opdracht
-        cp TPOD1920.sch Validaties/validaties.sch
+        cp TPOD2050.sch Validaties/validaties.sch
         cd Validaties/
+        #alleen manifest-ow
         ./validate.sh
-        
-        cp Opdracht/ActiviteitenFOUT.xml Opdracht/Activiteiten.xml
+        #manifst-ow + manifest
+        cp Opdracht/manifest-ow.xml Opdracht/manifest.xml
+        ./validate.sh
+        rm Opdracht/manifest-ow.xml
+        #alleen manifest
         ./validate.sh
 
         rm -f -r ../Validaties
