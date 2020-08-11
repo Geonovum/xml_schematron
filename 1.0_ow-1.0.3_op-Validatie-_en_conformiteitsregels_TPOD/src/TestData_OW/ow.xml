@@ -30,7 +30,7 @@
 		<!-- Regeltekst -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_1__subchp_1.1__art_1.1">
 					<r:identificatie>nl.imow-gm0037.regeltekst.201900001</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -38,7 +38,7 @@
 		<!-- Regeltekst -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_1__subchp_1.2__art_1.2">
 					<r:identificatie>nl.imow-gm0037.regeltekst.201900002</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -46,7 +46,7 @@
 		<!-- Regeltekst -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.1__art_2.1">
 					<r:identificatie>nl.imow-gm0037.regeltekst.201900003</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -54,7 +54,7 @@
 		<!-- Regeltekst -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.1__art_2.2">
 					<r:identificatie>nl.imow-gm0037.regeltekst.201900004</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -62,7 +62,7 @@
 		<!-- Regeltekst -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.1__art_2.3">
 					<r:identificatie>nl.imow-gm0037.regeltekst.201900005</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -70,7 +70,7 @@
 		<!-- Regeltekst -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.2__art_2.4">
 					<r:identificatie>nl.imow-gm0037.regeltekst.201900006</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -78,15 +78,15 @@
 		<!-- Regeltekst -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.2__art_2.5">
 					<r:identificatie>nl.imow-gm0037.regeltekst.201900007</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Regeltekst -->
+		<!-- Regeltekst Ongeldige wId -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.3__art_2.6FOUT">
 					<r:identificatie>nl.imow-gm0037.regeltekst.201900008</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -94,7 +94,7 @@
 		<!-- Regeltekst -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.4__art_2.7">
 					<r:identificatie>nl.imow-gm0037.regeltekst.201900009</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -102,7 +102,7 @@
 		<!-- Regeltekst met gerelateerde regeltekst GOED -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.5__art_2.8">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019000010</r:identificatie>
 					<r:gerelateerdeRegeltekst>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
@@ -113,7 +113,7 @@
 		<!-- Regeltekst met gerelateerde regeltekst FOUT (bestaat niet) -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.5__art_2.9">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019000011</r:identificatie>
 					<r:gerelateerdeRegeltekst>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000021"/>
@@ -124,7 +124,7 @@
 		<!-- Regeltekst met gerelateerde regeltekst FOUT (verwijst naar zichzelf) -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="gm0037_1__subchp_2.2__art_2.3">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.6__art_2.10">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019000012</r:identificatie>
 					<r:gerelateerdeRegeltekst>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012"/>
