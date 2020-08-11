@@ -739,6 +739,12 @@
 			<ow-dc:owObject>
 				<l:Gebied>
 					<l:identificatie>nl.imow-gm0037.gebied.201900001</l:identificatie>
+					<l:noemer>Bedrijf categorie 2</l:noemer>
+					<!-- zelfde als een functie -->
+					<l:hoogte>
+						<da:waarde>1</da:waarde>
+						<da:eenheid>http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid</da:eenheid>
+					</l:hoogte>
 					<l:geometrie>
 						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11GEBIED"/>
 					</l:geometrie>
@@ -750,6 +756,12 @@
 			<ow-dc:owObject>
 				<l:Gebied>
 					<l:identificatie>nl.imow-gm0037.gebied.201900002</l:identificatie>
+					<l:noemer>zone A</l:noemer>
+					<!-- zelfde als een functie -->
+					<l:hoogte>
+						<da:waarde>1</da:waarde>
+						<da:eenheid>http://standaarden.omgevingswet.overheid.nl/datatypenalgemeen/id/concept/Cm</da:eenheid>
+					</l:hoogte>
 					<l:geometrie>
 						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB12GEBIED"/>
 					</l:geometrie>
