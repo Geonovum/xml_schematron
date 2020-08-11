@@ -124,7 +124,7 @@
 		<!-- Regeltekst met gerelateerde regeltekst FOUT (verwijst naar zichzelf) -->
 		<sl:stand>
 			<ow-dc:owObject>
-				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.6__art_2.10">
+				<r:Regeltekst wId="mnre1034_1-0__chp_2__subchp_2.2__subsec_2.2.5__art_2.9__para_1">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019000012</r:identificatie>
 					<r:gerelateerdeRegeltekst>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019000012"/>
