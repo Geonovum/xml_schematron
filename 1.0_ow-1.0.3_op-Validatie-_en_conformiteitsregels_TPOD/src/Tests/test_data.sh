@@ -24,11 +24,11 @@ else
     else
         if [ -d Test_TPOD$1 ]
         then
-            echo "Directory Test_TPOD$1 bestaat niet"
+            echo "Directory TestData_$2 bestaat niet"
         fi
         if [ -d TestData_$2 ]
         then
-            echo "Directory TestData_$2 bestaat niet"
+            echo "Directory Test_TPOD$1 bestaat niet"
         fi
     fi  
 fi
