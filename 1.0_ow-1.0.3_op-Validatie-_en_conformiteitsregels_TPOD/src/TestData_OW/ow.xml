@@ -577,61 +577,6 @@
 				</ga:Gebiedsaanwijzing>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Gebied -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Gebied>
-					<l:identificatie>nl.imow-gm0037.gebied.201900001</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
-					</l:geometrie>
-				</l:Gebied>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Gebied -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Gebied>
-					<l:identificatie>nl.imow-gm0037.gebied.201900002</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
-					</l:geometrie>
-				</l:Gebied>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Gebied -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Gebied>
-					<l:identificatie>nl.imow-gm0037.gebied.201900003</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
-					</l:geometrie>
-				</l:Gebied>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Gebied FOUT verwijst naar een punt-->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Gebied>
-					<l:identificatie>nl.imow-gm0037.gebied.201900004</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
-					</l:geometrie>
-				</l:Gebied>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Gebied FOUT verwijst naar een lijn-->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Gebied>
-					<l:identificatie>nl.imow-gm0037.gebied.201900005</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
-					</l:geometrie>
-				</l:Gebied>
-			</ow-dc:owObject>
-		</sl:stand>
 		<!-- Gebiedengroep GOED Gebied 1 en 2 -->
 		<sl:stand>
 			<ow-dc:owObject>
@@ -693,164 +638,6 @@
 				</l:Gebiedengroep>
 			</ow-dc:owObject>
 		</sl:stand>
-		<!-- Punt -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Punt>
-					<l:identificatie>nl.imow-gm0037.punt.201900001</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
-					</l:geometrie>
-				</l:Punt>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Punt -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Punt>
-					<l:identificatie>nl.imow-gm0037.punt.201900002</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53621"/>
-					</l:geometrie>
-				</l:Punt>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Punt -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Punt>
-					<l:identificatie>nl.imow-gm0037.punt.201900003</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53631"/>
-					</l:geometrie>
-				</l:Punt>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Punt FOUT verwijst naar een gebied -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Punt>
-					<l:identificatie>nl.imow-gm0037.punt.201900004</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
-					</l:geometrie>
-				</l:Punt>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Punt FOUT verwijst naar een lijn -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Punt>
-					<l:identificatie>nl.imow-gm0037.punt.201900005</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
-					</l:geometrie>
-				</l:Punt>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Puntengroep GOED lijn 1 en 2 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Puntengroep>
-					<l:identificatie>nl.imow-gm0037.puntengroep.201900001</l:identificatie>
-					<l:groepselement>
-						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900001"/>
-						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
-					</l:groepselement>
-				</l:Puntengroep>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Puntengroep GOED lijn 2 en 3 -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Puntengroep>
-					<l:identificatie>nl.imow-gm0037.puntengroep.201900002</l:identificatie>
-					<l:groepselement>
-						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
-						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900003"/>
-					</l:groepselement>
-				</l:Puntengroep>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Puntengroep FOUT verwijst naar een lijn-->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Puntengroep>
-					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
-					<l:groepselement>
-						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
-						<l:PuntRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
-					</l:groepselement>
-				</l:Puntengroep>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Puntengroep FOUT verwijst naar een gebied-->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Puntengroep>
-					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
-					<l:groepselement>
-						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
-						<l:PuntRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
-					</l:groepselement>
-				</l:Puntengroep>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Lijn -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Lijn>
-					<l:identificatie>nl.imow-gm0037.lijn.201900001</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611"/>
-					</l:geometrie>
-				</l:Lijn>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Lijn -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Lijn>
-					<l:identificatie>nl.imow-gm0037.lijn.201900002</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53621"/>
-					</l:geometrie>
-				</l:Lijn>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Lijn -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Lijn>
-					<l:identificatie>nl.imow-gm0037.lijn.201900003</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53631"/>
-					</l:geometrie>
-				</l:Lijn>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Lijn FOUT verwijst naar een gebied -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Lijn>
-					<l:identificatie>nl.imow-gm0037.lijn.201900004</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
-					</l:geometrie>
-				</l:Lijn>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Lijn FOUT verwijst naar een punt -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Lijn>
-					<l:identificatie>nl.imow-gm0037.lijn.201900005</l:identificatie>
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
-					</l:geometrie>
-				</l:Lijn>
-			</ow-dc:owObject>
-		</sl:stand>
 		<!-- Lijnengroep GOED lijn 1 en 2-->
 		<sl:stand>
 			<ow-dc:owObject>
@@ -897,6 +684,219 @@
 						<l:LijnRef xlink:href="nl.imow-gm0037.gebied.201900002"/>
 					</l:groepselement>
 				</l:Lijnengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Puntengroep GOED lijn 2 en 3 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Puntengroep>
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900002</l:identificatie>
+					<l:groepselement>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900003"/>
+					</l:groepselement>
+				</l:Puntengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Puntengroep FOUT verwijst naar een lijn-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Puntengroep>
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
+					<l:groepselement>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.lijn.201900003"/>
+					</l:groepselement>
+				</l:Puntengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Puntengroep FOUT verwijst naar een gebied-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Puntengroep>
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
+					<l:groepselement>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
+					</l:groepselement>
+				</l:Puntengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Puntengroep GOED lijn 1 en 2 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Puntengroep>
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900001</l:identificatie>
+					<l:groepselement>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900001"/>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
+					</l:groepselement>
+				</l:Puntengroep>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied>
+					<l:identificatie>nl.imow-gm0037.gebied.201900001</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied>
+					<l:identificatie>nl.imow-gm0037.gebied.201900002</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied>
+					<l:identificatie>nl.imow-gm0037.gebied.201900003</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB31"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied FOUT verwijst naar een punt-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied>
+					<l:identificatie>nl.imow-gm0037.gebied.201900004</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Gebied FOUT verwijst naar een lijn-->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied>
+					<l:identificatie>nl.imow-gm0037.gebied.201900005</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611LIJN"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt>
+					<l:identificatie>nl.imow-gm0037.punt.201900001</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611PUNT"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt>
+					<l:identificatie>nl.imow-gm0037.punt.201900002</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53612PUNT"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt>
+					<l:identificatie>nl.imow-gm0037.punt.201900003</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53613PUNT"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt FOUT verwijst naar een gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt>
+					<l:identificatie>nl.imow-gm0037.punt.201900004</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11GEBIED"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Punt FOUT verwijst naar een lijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Punt>
+					<l:identificatie>nl.imow-gm0037.punt.201900005</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611LIJN"/>
+					</l:geometrie>
+				</l:Punt>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn>
+					<l:identificatie>nl.imow-gm0037.lijn.201900001</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53611LIJN"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn>
+					<l:identificatie>nl.imow-gm0037.lijn.201900002</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53612LIJN"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn>
+					<l:identificatie>nl.imow-gm0037.lijn.201900003</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53613LIJN"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn FOUT verwijst naar een gebied -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn>
+					<l:identificatie>nl.imow-gm0037.lijn.201900004</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="A0EA019E-3C96-4631-A76C-35BCF4D7AB11GEBIED"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- Lijn FOUT verwijst naar een punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn>
+					<l:identificatie>nl.imow-gm0037.lijn.201900005</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="C28AF779-7EDD-4A88-8B11-809798F53611PUNT"/>
+					</l:geometrie>
+				</l:Lijn>
 			</ow-dc:owObject>
 		</sl:stand>
 		<!-- Divisie -->
