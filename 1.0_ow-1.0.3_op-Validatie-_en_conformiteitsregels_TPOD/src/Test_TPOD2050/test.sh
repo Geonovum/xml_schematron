@@ -1,7 +1,6 @@
 #!/usr/bin/sh
 
-
-        cp -R ../../Validaties .
+cp -R ../../Validaties .
         rm -f -r Validaties/Opdracht
         mkdir Validaties/Opdracht
         cp ../TestData_Manifest_OW-OP/*.xml Validaties/Opdracht
@@ -16,4 +15,4 @@
         #alleen manifest
         ./validate.sh
 
-        rm -f -r ../Validaties
+       
