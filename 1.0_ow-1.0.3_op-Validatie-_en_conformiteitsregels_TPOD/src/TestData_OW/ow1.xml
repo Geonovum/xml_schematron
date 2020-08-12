@@ -1051,7 +1051,7 @@
 			<ow-dc:owObject>
 				<ga:Gebiedsaanwijzing>
 					<ga:identificatie>nl.imow-gm0037.gebiedsaanwijzing.201900001</ga:identificatie>
-					<ga:type>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</ga:type>
+					<ga:type>http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie</ga:type>
 					<ga:naam>abc</ga:naam>
 					<ga:groep>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</ga:groep>
 					<ga:locatieaanduiding>
