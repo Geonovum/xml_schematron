@@ -186,7 +186,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<r:RegelVoorIedereen>
-					<r:identificatie>nl.imow-gm0037.juridischeregel.20190010012</r:identificatie>
+					<r:identificatie>nl.imow-gm0037.juridischeregeltje.20190010012</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900004"/>
