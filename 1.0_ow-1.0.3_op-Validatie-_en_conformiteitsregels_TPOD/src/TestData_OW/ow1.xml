@@ -398,12 +398,12 @@
 			</ow-dc:owObject>
 		</sl:stand>
 			
-		<!-- ============================================================================ -->
+		<!-- == 2019GROEP1 ========================================================================== -->
 		<!-- Activiteit FOUT gemengd -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<rol:Activiteit>
-					<rol:identificatie>nl.imow-gm0037.activiteit.20190000GROEP1</rol:identificatie>
+					<rol:identificatie>nl.imow-gm0037.activiteit.2019GROEP1</rol:identificatie>
 					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
@@ -423,35 +423,81 @@
 		<sl:stand>
 			<owObject>
 				<r:RegelVoorIedereen>
-					<r:identificatie>nl.imow-gm0037.juridischeregel.2019GROEP5</r:identificatie>
+					<r:identificatie>nl.imow-gm0037.juridischeregel.2019GROEP1</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/activiteit/id/Exact</r:idealisatie>
 					<r:artikelOfLid>
-						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019GROEP5"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019GROEP1"/>
 					</r:artikelOfLid>
 					<r:locatieaanduiding>
 						<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP1"/>
+						<l:PuntengroepRef xlink:href="nl.imow-gm0037.puntengroep.2019GROEP1"/>
+						<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP2"/>
 					</r:locatieaanduiding>
 					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019GROEP"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019GROEP1"/>
 						<r:ActiviteitLocatieaanduiding>
 							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019GROEP1</r:identificatie>
 							<r:activiteitregelkwalificatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Activiteitregelkwalificatie</r:activiteitregelkwalificatie>
 							<r:locatieaanduiding>
 								<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP1"/>
 								<l:PuntengroepRef xlink:href="nl.imow-gm0037.puntengroep.2019GROEP1"/>
-								<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP1"/>
+								<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP2"/>
 							</r:locatieaanduiding>
 						</r:ActiviteitLocatieaanduiding>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</owObject>
 		</sl:stand>
-		<!-- ============================================================================ -->
+		<!-- ======== gebiedengroep ==================================================================== -->
+		<sl:stand>
+			<owObject>
+				<l:Gebiedengroep>
+					<l:identificatie>nl.imow-gm0037.gebiedengroep.2019GROEP1</l:identificatie>
+					<l:groepselement>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP1"/>
+					</l:groepselement>
+				</l:Gebiedengroep>
+			</owObject>
+		</sl:stand>
+		<sl:stand>
+			<owObject>
+				<l:Gebiedengroep>
+					<l:identificatie>nl.imow-gm0037.gebiedengroep.2019GROEP2</l:identificatie>
+					<l:groepselement>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP2"/>
+					</l:groepselement>
+				</l:Gebiedengroep>
+			</owObject>
+		</sl:stand>
+		<!-- ======== gebied ==================================================================== -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied>
+					<l:identificatie>nl.imow-gm0037.gebied.2019GROEP1</l:identificatie>
+					<l:noemer>Bedrijf categorie 2</l:noemer>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Gebied>
+					<l:identificatie>nl.imow-gm0037.gebied.2019GROEP2</l:identificatie>
+					<l:noemer>Bedrijf categorie 2</l:noemer>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
+					</l:geometrie>
+				</l:Gebied>
+			</ow-dc:owObject>
+		</sl:stand>
+		<!-- === 2019GROEP2 ========================================================================= -->
 		<!-- Activiteit GOED gebiedengroep -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<rol:Activiteit>
-					<rol:identificatie>nl.imow-gm0037.activiteit.2019GROEP8</rol:identificatie>
+					<rol:identificatie>nl.imow-gm0037.activiteit.2019GROEP2</rol:identificatie>
 					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:bovenliggendeActiviteit>
@@ -464,79 +510,6 @@
 			<ow-dc:owObject>
 				<r:Regeltekst
 					wId="mnre1034_1-0__chp_4__subchp_4.1__art_4.2">
-					<r:identificatie>nl.imow-gm0037.regeltekst.2019GROEP1</r:identificatie>
-				</r:Regeltekst>
-			</ow-dc:owObject>
-		</sl:stand>
-		<sl:stand>
-			<owObject>
-				<r:RegelVoorIedereen>
-					<r:identificatie>nl.imow-gm0037.juridischeregel.2019GROEP1</r:identificatie>
-					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/activiteit/id/Exact</r:idealisatie>
-					<r:artikelOfLid>
-						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019GROEP1"/>
-					</r:artikelOfLid>
-					<r:locatieaanduiding>
-						<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP1"/>
-					</r:locatieaanduiding>
-					<r:activiteitaanduiding>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019GROEP8"/>
-						<r:ActiviteitLocatieaanduiding>
-							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019000001</r:identificatie>
-							<r:activiteitregelkwalificatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Activiteitregelkwalificatie</r:activiteitregelkwalificatie>
-							<r:locatieaanduiding>
-								<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP1"/>
-							</r:locatieaanduiding>
-						</r:ActiviteitLocatieaanduiding>
-					</r:activiteitaanduiding>
-				</r:RegelVoorIedereen>
-			</owObject>
-		</sl:stand>
-		<sl:stand>
-			<owObject>
-				<l:Gebiedengroep>
-					<l:identificatie>nl.imow-gm0037.gebiedengroep.2019GROEP1</l:identificatie>
-					<l:groepselement>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP1"/>
-					</l:groepselement>
-				</l:Gebiedengroep>
-			</owObject>
-		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Gebied>
-					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.3 -->
-					<l:identificatie>nl.imow-gm0037.gebied.2019GROEP1</l:identificatie>
-					<l:noemer>Bedrijf categorie 2</l:noemer>
-					<!-- zelfde als een functie -->
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
-					</l:geometrie>
-				</l:Gebied>
-			</ow-dc:owObject>
-		</sl:stand>
-		
-		<!-- ============================================================================ -->
-		<!-- Activiteit GOED gebied -->
-		<sl:stand>
-			<ow-dc:owObject>
-				<rol:Activiteit>
-					<rol:identificatie>nl.imow-gm0037.activiteit.2019GROEP2</rol:identificatie>
-					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
-					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
-					<rol:gerelateerdeActiviteit>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019GROEP2"/>
-					</rol:gerelateerdeActiviteit>
-					<rol:bovenliggendeActiviteit>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
-					</rol:bovenliggendeActiviteit>
-				</rol:Activiteit>
-			</ow-dc:owObject>	
-		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<r:Regeltekst
-					wId="mnre1034_1-0__chp_4__subchp_4.1__art_4.3">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019GROEP2</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -550,43 +523,33 @@
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019GROEP2"/>
 					</r:artikelOfLid>
 					<r:locatieaanduiding>
-						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP2"/>
+						<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP1"/>
 					</r:locatieaanduiding>
 					<r:activiteitaanduiding>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019GROEP2"/>
 						<r:ActiviteitLocatieaanduiding>
-							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019000003</r:identificatie>
+							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019000001</r:identificatie>
 							<r:activiteitregelkwalificatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Activiteitregelkwalificatie</r:activiteitregelkwalificatie>
 							<r:locatieaanduiding>
-								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP2"/>
-								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP2"/>
-								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP2"/>
+								<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP1"/>
 							</r:locatieaanduiding>
 						</r:ActiviteitLocatieaanduiding>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</owObject>
 		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Gebied>
-					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.3 -->
-					<l:identificatie>nl.imow-gm0037.gebied.2019GROEP2</l:identificatie>
-					<l:noemer>Bedrijf categorie 2</l:noemer>
-					<!-- zelfde als een functie -->
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
-					</l:geometrie>
-				</l:Gebied>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- Activiteit FOUT Puntengroep -->
+		
+		<!-- === 2019GROEP3 ========================================================================= -->
+		<!-- Activiteit GOED gebied -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<rol:Activiteit>
 					<rol:identificatie>nl.imow-gm0037.activiteit.2019GROEP3</rol:identificatie>
 					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
+					<rol:gerelateerdeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019GROEP3"/>
+					</rol:gerelateerdeActiviteit>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
 					</rol:bovenliggendeActiviteit>
@@ -596,7 +559,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<r:Regeltekst
-					wId="mnre1034_1-0__chp_4__subchp_4.2__art_4.4">
+					wId="mnre1034_1-0__chp_4__subchp_4.1__art_4.3">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019GROEP3</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -610,46 +573,25 @@
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019GROEP3"/>
 					</r:artikelOfLid>
 					<r:locatieaanduiding>
-						<l:PuntengroepRef xlink:href="nl.imow-gm0037.puntengroep.2019GROEP3"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP1"/>
+						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP2"/>
 					</r:locatieaanduiding>
 					<r:activiteitaanduiding>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019GROEP3"/>
 						<r:ActiviteitLocatieaanduiding>
-							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019GROEP3</r:identificatie>
+							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019000003</r:identificatie>
 							<r:activiteitregelkwalificatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Activiteitregelkwalificatie</r:activiteitregelkwalificatie>
 							<r:locatieaanduiding>
-								<l:PuntengroepRef xlink:href="nl.imow-gm0037.puntengroep.2019GROEP3"/>
+								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP2"/>
+								<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019GROEP1"/>
 							</r:locatieaanduiding>
 						</r:ActiviteitLocatieaanduiding>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</owObject>
 		</sl:stand>
-		<sl:stand>
-			<owObject>
-				<l:Puntengroep>
-					<l:identificatie>nl.imow-gm0037.puntengroep.2019GROEP3</l:identificatie>
-					<l:groepselement>
-						<l:PuntRef xlink:href="nl.imow-gm0037.punt.2019GROEP3"/>
-					</l:groepselement>
-				</l:Puntengroep>
-			</owObject>
-		</sl:stand>
-		<sl:stand>
-			<ow-dc:owObject>
-				<l:Punt>
-					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.3 -->
-					<l:identificatie>nl.imow-gm0037.punt.2019GROEP3</l:identificatie>
-					<l:noemer>Bedrijf categorie 2</l:noemer>
-					<!-- zelfde als een functie -->
-					<l:geometrie>
-						<l:GeometrieRef xlink:href="50EA019E-3C96-4631-A76C-35BCF4D7AB6D"/>
-					</l:geometrie>
-				</l:Punt>
-			</ow-dc:owObject>
-		</sl:stand>
-		<!-- ============================================================================ -->
-		<!-- FOUT Punt -->
+		<!-- == 2019GROEP4 ========================================================================== -->
+		<!-- Activiteit FOUT Puntengroep -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<rol:Activiteit>
@@ -661,10 +603,11 @@
 					</rol:bovenliggendeActiviteit>
 				</rol:Activiteit>
 			</ow-dc:owObject>	
-		</sl:stand>		<sl:stand>
+		</sl:stand>
+		<sl:stand>
 			<ow-dc:owObject>
 				<r:Regeltekst
-					wId="mnre1034_1-0__chp_4__subchp_4.2__art_4.5">
+					wId="mnre1034_1-0__chp_4__subchp_4.2__art_4.4">
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019GROEP4</r:identificatie>
 				</r:Regeltekst>
 			</ow-dc:owObject>
@@ -678,26 +621,38 @@
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019GROEP4"/>
 					</r:artikelOfLid>
 					<r:locatieaanduiding>
-						<l:PuntRef xlink:href="nl.imow-gm0037.punt.2019GROEP4"/>
+						<l:PuntengroepRef xlink:href="nl.imow-gm0037.puntengroep.2019GROEP1"/>
 					</r:locatieaanduiding>
 					<r:activiteitaanduiding>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019GROEP4"/>
 						<r:ActiviteitLocatieaanduiding>
-							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019GROEP4</r:identificatie>
+							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019GROEP3</r:identificatie>
 							<r:activiteitregelkwalificatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Activiteitregelkwalificatie</r:activiteitregelkwalificatie>
 							<r:locatieaanduiding>
-								<l:PuntRef xlink:href="nl.imow-gm0037.punt.2019GROEP4"/>
+								<l:PuntengroepRef xlink:href="nl.imow-gm0037.puntengroep.2019GROEP1"/>
 							</r:locatieaanduiding>
 						</r:ActiviteitLocatieaanduiding>
 					</r:activiteitaanduiding>
 				</r:RegelVoorIedereen>
 			</owObject>
 		</sl:stand>
+		<!-- =========== puntengroep ================================================================= -->
+		<sl:stand>
+			<owObject>
+				<l:Puntengroep>
+					<l:identificatie>nl.imow-gm0037.puntengroep.2019GROEP1</l:identificatie>
+					<l:groepselement>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.2019GROEP1"/>
+					</l:groepselement>
+				</l:Puntengroep>
+			</owObject>
+		</sl:stand>
+		<!-- =========== punt ================================================================= -->
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Punt>
 					<!-- artikel waar de locatie bijhoort en gedefinieerd wordt voor 1e keer - artikel 2.3 -->
-					<l:identificatie>nl.imow-gm0037.punt.2019GROEP4</l:identificatie>
+					<l:identificatie>nl.imow-gm0037.punt.2019GROEP1</l:identificatie>
 					<l:noemer>Bedrijf categorie 2</l:noemer>
 					<!-- zelfde als een functie -->
 					<l:geometrie>
@@ -705,6 +660,51 @@
 					</l:geometrie>
 				</l:Punt>
 			</ow-dc:owObject>
+		</sl:stand>
+		<!-- === 2019GROEP5 ========================================================================= -->
+		<!-- FOUT Punt -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit>
+					<rol:identificatie>nl.imow-gm0037.activiteit.2019GROEP5</rol:identificatie>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
+					<rol:bovenliggendeActiviteit>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>
+					</rol:bovenliggendeActiviteit>
+				</rol:Activiteit>
+			</ow-dc:owObject>	
+		</sl:stand>		<sl:stand>
+			<ow-dc:owObject>
+				<r:Regeltekst
+					wId="mnre1034_1-0__chp_4__subchp_4.2__art_4.5">
+					<r:identificatie>nl.imow-gm0037.regeltekst.2019GROEP5</r:identificatie>
+				</r:Regeltekst>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<owObject>
+				<r:RegelVoorIedereen>
+					<r:identificatie>nl.imow-gm0037.juridischeregel.2019GROEP5</r:identificatie>
+					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/activiteit/id/Exact</r:idealisatie>
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.2019GROEP4"/>
+					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:PuntRef xlink:href="nl.imow-gm0037.punt.2019GROEP1"/>
+					</r:locatieaanduiding>
+					<r:activiteitaanduiding>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019GROEP5"/>
+						<r:ActiviteitLocatieaanduiding>
+							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019GROEP5</r:identificatie>
+							<r:activiteitregelkwalificatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Activiteitregelkwalificatie</r:activiteitregelkwalificatie>
+							<r:locatieaanduiding>
+								<l:PuntRef xlink:href="nl.imow-gm0037.punt.2019GROEP1"/>
+							</r:locatieaanduiding>
+						</r:ActiviteitLocatieaanduiding>
+					</r:activiteitaanduiding>
+				</r:RegelVoorIedereen>
+			</owObject>
 		</sl:stand>
 		<!-- ============================================================================ -->
 		<!-- Activiteit GOED locatieaanduiding -->
