@@ -269,10 +269,11 @@
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
 					<r:artikelOfLid>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
-					</r:artikelOfLid><r:locatieaanduiding>
+					</r:artikelOfLid>
+					<r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
-					
+					<r:instructieregelInstrument>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/something</r:instructieregelInstrument>					
 					<r:omgevingsnormaanduiding>
 						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
 					</r:omgevingsnormaanduiding>
@@ -290,10 +291,10 @@
 					</r:artikelOfLid><r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
-					
-					<r:gebiedsaanwijzing>
-						<ga:GebiedsaanwijzingRef xlink:href="nl.imow-gm0037.gebiedsaanwijzing.201900001"/>
-					</r:gebiedsaanwijzing>
+					<r:instructieregelTaakuitoefening>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/somethingElse</r:instructieregelTaakuitoefening>
+					<r:omgevingsnormaanduiding>
+						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.201900001"/>
+					</r:omgevingsnormaanduiding>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -308,7 +309,7 @@
 					</r:artikelOfLid><r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
-					
+					<r:instructieregelTaakuitoefening>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/InstructieregelTaakuitoefening</r:instructieregelTaakuitoefening>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -323,7 +324,7 @@
 					</r:artikelOfLid><r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
-					
+					<r:instructieregelInstrument>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/InstructieregelInstrument</r:instructieregelInstrument>
 				</r:Instructieregel>
 			</ow-dc:owObject>
 		</sl:stand>
@@ -334,11 +335,12 @@
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001003</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
 					<r:artikelOfLid>
-						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900001"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900005"/>
 					</r:artikelOfLid><r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
-					
+					<r:instructieregelInstrument>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/InstructieregelInstrument</r:instructieregelInstrument>
+					<r:instructieregelTaakuitoefening>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/InstructieregelTaakuitoefening</r:instructieregelTaakuitoefening>
 					<r:omgevingsnormaanduiding>
 						<rol:OmgevingsnormRef xlink:href="nl.imow-gm0037.omgevingsnorm.2019000011"/>
 					</r:omgevingsnormaanduiding>
@@ -352,7 +354,7 @@
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001002</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
 					<r:artikelOfLid>
-						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900006"/>
 					</r:artikelOfLid><r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.201900001"/>
 					</r:locatieaanduiding>
@@ -370,7 +372,7 @@
 					<r:identificatie>nl.imow-gm0037.juridischeregel.2019001001</r:identificatie>
 					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Exact</r:idealisatie>
 					<r:artikelOfLid>
-						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900003"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900007"/>
 					</r:artikelOfLid><r:locatieaanduiding>
 						<l:GebiedRef xlink:href="nl.imow-gm0037.gebied.2019000011"/>
 					</r:locatieaanduiding>
