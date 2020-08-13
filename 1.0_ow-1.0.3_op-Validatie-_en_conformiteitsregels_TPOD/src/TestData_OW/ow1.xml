@@ -1244,7 +1244,7 @@
 		<sl:stand>
 			<ow-dc:owObject>
 				<l:Puntengroep>
-					<l:identificatie>nl.imow-gm0037.puntengroep.201900003</l:identificatie>
+					<l:identificatie>nl.imow-gm0037.puntengroep.201900004</l:identificatie>
 					<l:groepselement>
 						<l:PuntRef xlink:href="nl.imow-gm0037.punt.201900002"/>
 						<l:PuntRef xlink:href="nl.imow-gm0037.gebied.201900003"/>
