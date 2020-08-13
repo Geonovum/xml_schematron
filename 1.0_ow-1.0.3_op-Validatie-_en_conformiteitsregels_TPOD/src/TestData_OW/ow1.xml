@@ -5,10 +5,9 @@
 			<sl:gebied>Gemeentestad</sl:gebied>
 			<sl:leveringsId>abc-20190221-0801</sl:leveringsId>
 			<sl:objectTypen>
-				<sl:objectType>Regeltekst"</sl:objectType>
+				<sl:objectType>Regeltekst</sl:objectType>
 				<sl:objectType>RegelVoorIedereen</sl:objectType>
 				<sl:objectType>Instructieregel</sl:objectType>
-				<sl:objectType>Omgevingswaarderegel</sl:objectType>
 				<sl:objectType>Activiteit</sl:objectType>
 				<sl:objectType>Omgevingsnorm</sl:objectType>
 				<sl:objectType>Omgevingswaarde</sl:objectType>
@@ -20,11 +19,8 @@
 				<sl:objectType>Lijn</sl:objectType>
 				<sl:objectType>Lijnengroep</sl:objectType>
 				<sl:objectType>Divisie</sl:objectType>
-				<sl:objectType>Symbolisatiecollectie</sl:objectType>
-				<sl:objectType>Kaart</sl:objectType>
-				<sl:objectType>Pons</sl:objectType>
+				<sl:objectType>Foutje</sl:objectType>
 				<sl:objectType>Tekstdeel</sl:objectType>
-				<sl:objectType>Hoofdlijn</sl:objectType>
 			</sl:objectTypen>
 		</sl:inhoud>
 		<!-- Regeltekst -->
