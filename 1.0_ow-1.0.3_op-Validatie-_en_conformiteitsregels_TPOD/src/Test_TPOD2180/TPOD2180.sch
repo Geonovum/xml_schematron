@@ -84,7 +84,7 @@
     -->
     <sch:pattern id="TPOD_2180">
         <sch:rule
-            context="//ow-manifest:Aanlevering">
+            context="//aanlevering:AanleveringBesluit">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="CONDITION" value="count($xmlDocuments//rg:Regelingsgebied) = 1"/>
