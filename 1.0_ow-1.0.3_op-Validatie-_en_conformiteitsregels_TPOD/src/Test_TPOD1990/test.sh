@@ -8,5 +8,6 @@
         cp *.gml Validaties/Opdracht
         cd Validaties/
         ./validate.sh
+        cd ..
         rm -f -r Validaties
        
