@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessRules schemaversie="@@@VERSIE@@@"
+   xmlns="https://standaarden.overheid.nl/stop/imop/businessrules/"
+   xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+<BusinessRuleGroep>
+	<naam>AMvB/MR</naam>
+	<id>BRG0001</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_001</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_002</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD1830</code>
+			<ernst>Waarschuwing</ernst>
+			<regel>Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘functie’ van attribuut ‘type’ (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR)</regel>
+			<melding>TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ in AMvB/MR is de waarde ‘Functie’ van attribuut ‘type’
+                (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het gaat: <sch:value-of select="ga:identificatie/text()"/>
+			</melding>
+		<documentatie/>
+	</BusinessRule>
+	<BusinessRule>
+		<code>TPOD1840</code>
+		<ernst>Waarschuwing</ernst>
+		<regel>Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘beperkingengebied’ van attribuut ‘type’ (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR) </regel>
+		<melding>TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ in AMvB/MR is de waarde ‘Beperkingengebied’ van attribuut ‘type’
+                (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het gaat: <sch:value-of select="ga:identificatie/text()"/>
+		</melding>
+	<documentatie/>
+</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>
+<BusinessRuleGroep>
+	<naam>Omgevingsplan</naam>
+	<id>BRG0002</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_003</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD1790</code>
+			<ernst>Blokkerend</ernst>
+			<regel>Het IMOW-object 'Instructieregel' is niet van toepassing (voor Omgevingsplan).</regel>
+			<melding>TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing. Betreft:<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>
+			</melding>
+		<documentatie/>
+	</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>
+<BusinessRuleGroep>
+	<naam>OP-implementatie-GemeentenEnWaterschappen</naam>
+	<id>BRG0003</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_003</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_005</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD0740</code>
+			<ernst>Waarschuwing</ernst>
+			<regel>Artikelen moeten oplopend worden genummerd in Arabische cijfers.</regel>
+			<melding>TPOD_0740: Artikelnummers moeten oplopend worden genummerd in Arabische cijfers 
+                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/>)</melding>
+		<documentatie/>
+	</BusinessRule>
+	<BusinessRule>
+		<code>TPOD0780</code>
+		<ernst>Waarschuwing</ernst>
+		<regel>Leden moeten per artikel oplopend genummerd worden in Arabische cijfers.</regel>
+		<melding>TPOD_0780: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
+                (en indien nodig, een letter). 
+                (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
+                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/>)</melding>
+	<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0830</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>De onderdelen van de Lijst op het eerste niveau moeten worden aangegeven met letters.</regel>
+	<melding>TPOD_0830: functie, hoe doe ik dit.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0840</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>De onderdelen van de Lijst op het tweede niveau moeten worden aangegeven met Arabische cijfers.</regel>
+	<melding>TPOD_0840: functie, hoe doe ik dit</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0850</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>De onderdelen van de Lijst op het derde niveau moeten worden aangegeven met Arabische cijfers.</regel>
+	<melding>TPOD_0850: functie, hoe doe ik dit</melding>
+<documentatie/>
+</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>"
+<BusinessRuleGroep>
+	<naam>OP-implementatie-generiek</naam>
+	<id>BRG0004</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_001</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_002</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_003</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_004</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_005</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_006</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_007</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_008</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_009</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_010</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_011</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD0940</code>
+			<ernst>Blokkerend</ernst>
+			<regel>Als een Locatie uit meer dan één geometrie bestaat, dan moeten de geometrieën volgens dezelfde coordinate reference system (crs) zijn opgebouwd.</regel>
+			<melding>H:TP0D940: Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): 
+                EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/basisgeo:id"/> bevat een combinatie van beiden. </melding>
+		<documentatie/>
+	</BusinessRule>
+	<BusinessRule>
+		<code>TPOD1010</code>
+		<ernst>Waarschuwing</ernst>
+		<regel>Begrippen moeten in alfabetische volgorde worden gesorteerd.</regel>
+		<melding>TPOD_1010_1060:  Een Begriplijst moet gesorteerd zijn, 
+                de Begrippenlijst met wId: "<sch:value-of select="$items"/>" is dat niet</melding>
+	<documentatie/>
+</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>"
+<BusinessRuleGroep>
+	<naam>OP-implementatie-niet-Rijk</naam>
+	<id>BRG0005</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_003</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_004</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_005</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_006</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_007</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_008</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_009</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_010</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_011</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD0410</code>
+			<ernst>Waarschuwing</ernst>
+			<regel>Een Hoofdstuk moet worden geduid met de label Hoofdstuk.</regel>
+			<melding>TPOD_0410: Een Hoofdstuk moet worden geduid met de label Hoofdstuk. (betreft hoofdstuk: <sch:value-of select="tekst:Nummer"/>, label: <sch:value-of select="tekst:Label"/>)</melding>
+		<documentatie/>
+	</BusinessRule>
+	<BusinessRule>
+		<code>TPOD0420</code>
+		<ernst>Waarschuwing</ernst>
+		<regel>Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers.</regel>
+		<melding>TPOD_0420: Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers 
+                (betreft hoofdstukken:  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</melding>
+	<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0460</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Een Titel moet worden geduid met de label Titel.</regel>
+	<melding>TPOD_0460: Een Titel moet worden geduid met de label Titel. Betreft titel, label: 
+		<sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0470</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt.</regel>
+	<melding>TPOD_0470: De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt. 
+                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, titels: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0480</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Titels moeten oplopend worden genummerd in Arabische cijfers.</regel>
+	<melding>TPOD_0480: Titels moeten oplopend worden genummerd in Arabische cijfers. 
+                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, titels: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0490</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Achter het cijfer van een titelnummer mag geen punt worden opgenomen.</regel>
+	<melding>TPOD_0490: Achter het cijfer van een titelnummer mag geen punt worden opgenomen. 
+                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, titels: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0510</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Een Afdeling moet worden geduid met de label Afdeling.</regel>
+	<melding>TPOD_0510: Een Afdeling moet worden geduid met de label Afdeling. 
+                Betreft afdeling: <sch:value-of select="tekst:Nummer"/>, label:<sch:value-of select="tekst:Label"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0520</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt.</regel>
+	<melding>TPOD_0520: Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt. 
+                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, titel: <sch:value-of select="$titel"/>, afdelingen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0530</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Afdelingen moeten oplopend worden genummerd in Arabische cijfers.</regel>
+	<melding>TPOD_0530: Afdelingen moeten oplopend worden genummerd in Arabische cijfers. 
+                (betreft hoofdstukken: <sch:value-of select="$hoofdstuk"/>, afdelingen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0540</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Achter het laatste cijfer van een Afdelingnummer mag geen punt worden opgenomen.</regel>
+	<melding>TPOD_0540: Achter het cijfer van een afdelingnummer mag geen punt worden opgenomen. 
+                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, afdelingen: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0560</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt.</regel>
+	<melding>TPOD_0560: Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van
+                Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt. 
+                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, afdelingen: <sch:value-of select="substring($fouten, 1, string-length($fouten) - 2)"/>) </melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0570</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken.</regel>
+	<melding>TPOD_0570: Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken. 
+                (betreft nummer: <sch:value-of select="tekst:Nummer"/>, label: <sch:value-of select="tekst:Label"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0580</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin de Paragraaf voorkomt, gevolgd door een punt.</regel>
+	<melding>TPOD_0580: De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin de Paragraaf voorkomt, gevolgd door een punt. 
+                (betreft afdeling: <sch:value-of select="$afdeling"/>, paragrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0590</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Paragrafen moeten oplopend worden genummerd in Arabische cijfers.</regel>
+	<melding>TPOD_0590: Paragrafen moeten oplopend worden genummerd in Arabische cijfers.
+                (betreft hoofdstuk: <sch:value-of select="../tekst:Kop/tekst:Nummer"/>, afdeling: <sch:value-of select="tekst:Kop/tekst:Nummer"/>, paragrafen:  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0600</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Achter het cijfer van een Paragraafnummer mag geen punt worden opgenomen.</regel>
+	<melding>TPOD_0600: Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen.  
+                (betreft hoofdstuk: <sch:value-of select="../tekst:Kop/tekst:Nummer"/>, afdeling: <sch:value-of select="tekst:Kop/tekst:Nummer"/>, paragrafen: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0620</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Een Subparagraaf moet worden geduid met de label Subparagraaf.</regel>
+	<melding>TPOD_0620: Een Subparagraaf moet worden geduid met de label Subparagraaf. 
+                (Betreft subparagraaf-nummer: <sch:value-of select="tekst:Nummer"/> en label: <sch:value-of select="tekst:Label"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0630</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>De nummering van Subparagrafen begint met het samengestelde nummer van de Paragraaf waarin de Subparagraaf voorkomt, gevolgd door een punt.</regel>
+	<melding>TPOD_0630: De nummering van Subparagrafen begint met het samengestelde nummer van de Paragraaf waarin de Subparagraaf voorkomt, gevolgd door een punt. 
+                (betreft: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0640</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Subparagrafen moeten oplopend worden genummerd in Arabische cijfers.</regel>
+	<melding>TPOD_0640: Subparagrafen moeten oplopend worden genummerd in Arabische cijfers 
+                (betreft: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0650</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Achter het laatste cijfer van een Subparagraafnummer mag geen punt worden opgenomen.</regel>
+	<melding>TPOD_0650: Achter het cijfer van een subparagraafnummer mag geen punt worden opgenomen. 
+                (betreft paragraaf: <sch:value-of select="$paragraaf"/>, subparagrafen: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0670</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf.</regel>
+	<melding>TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. 
+                (betreft subsubparagraaf-nummer: <sch:value-of select="tekst:Nummer"/>, label: <sch:value-of select="tekst:Label"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0680</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>De nummering van Subsubparagrafen begint met het samengestelde nummer van de Subparagraaf waarin de Subsubparagraaf voorkomt, gevolgd door een punt.</regel>
+	<melding>TPOD_0680: De nummering van Subsubparagrafen begint met het samengestelde nummer van de Subparagraaf waarin de Subsubparagraaf voorkomt, gevolgd door een punt. 
+                (betreft subparagraaf: <sch:value-of select="$subparagraaf"/>, subsubparagrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0690</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers.</regel>
+	<melding>TPOD_0690: Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers 
+                (betreft subparagraaf: <sch:value-of select="$subparagraaf"/>,subsubparagrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>) </melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0700</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen.</regel>
+	<melding>TPOD_0700: Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen. 
+                (betreft subparagraaf: <sch:value-of select="$subparagraaf"/>,subsubparagrafen: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0720</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Een Artikel moet worden geduid met de label Artikel.</regel>
+	<melding>TPOD_0720: Een Artikel moet worden geduid met de label Artikel. 
+                (betreft artikel: <sch:value-of select="tekst:Nummer"/>, label:<sch:value-of select="tekst:Label"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0730</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt.</regel>
+	<melding>TPOD_0730: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt.
+                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, artikels: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0750</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Achter het cijfer van een Artikelnummer mag geen punt worden opgenomen.</regel>
+	<melding>TPOD_0750: Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen. 
+                (betreft artikel: <sch:value-of select="$artikel"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0790</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Het eerste lid van ieder artikel krijgt het nummer 1.</regel>
+	<melding>TPOD_0790: Het eerste lid van ieder artikel krijgt het nummer 1. 
+                (betreft artikel: <sch:value-of select="$artikel"/>, lid: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0800</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Het cijfer van een Lid moet worden opgevolgd door een punt.</regel>
+	<melding>TPOD_0800: Achter het lidnummer moet een punt worden opgenomen. 
+                (betreft artikel: <sch:value-of select="$artikel"/>, lidnummers: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0810</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Een Lijst wordt altijd voorafgegaan door een inleidende tekst, oftewel de aanhef.</regel>
+	<melding>TPOD_0810: Een Lijst wordt altijd voorafgegaan door een inleidende tekst, oftewel de Lijstaanhef.
+                Betreft: Lijst met wId: <sch:value-of select="string(./@wId)"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0820</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Lijsten mogen in ten hoogste drie niveaus gebruikt worden.</regel>
+	<melding>TPOD_0820: In een lijst mag je maximaal drie niveaus gebruiken.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0880</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Hoofdstuk 1 heeft het Opschrift Algemene bepalingen</regel>
+	<melding>TPOD880: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met het opschrift Algemene bepalingen: Opschrift is hier: "<sch:value-of select="tekst:Opschrift/text()"/>"</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0980</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Hoofdstuk 1 moet een artikel 'begripsbepalingen' bevatten.</regel>
+	<melding>TPOD_0980: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met artikel met opschrift Begripsbepaling. </melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1000</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Een Begrip moet bestaan uit één term en één definitie.</regel>
+	<melding>TPOD_1000_1050:  Een Begrip moet bestaan uit één term en één definitie. 
+                Begrip met wId: <sch:value-of select="string(@wId)"/> bevat geen <sch:value-of select="$items"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1070</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Meet- en rekenbepalingen mogen niet worden genummerd. (Het LiNummer mag niet gebruikt worden binnen een Begrippenlijst.)</regel>
+	<melding>TPOD_1020-1070:  Begrippen mogen niet worden genummerd, 
+                de Begrippenlijst met wId: "<sch:value-of select="@wId"/>" is dat wel</melding>
+<documentatie/>
+</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>"
+<BusinessRuleGroep>
+	<naam>OP-implementatie-Omgevingsverordening</naam>
+	<id>BRG0006</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_004</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD0741</code>
+			<ernst>Waarschuwing</ernst>
+			<regel>De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artike-len in Arabische cijfers inclusief indien nodig een letter</regel>
+			<melding>TPOD_0741: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
+                voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in Arabische cijfers inclusief indien nodig een letter. 
+                (betreft hoofdstuk:<sch:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/>)</melding>
+		<documentatie/>
+	</BusinessRule>
+	<BusinessRule>
+		<code>TPOD0781</code>
+		<ernst>Waarschuwing</ernst>
+		<regel>Leden worden per artikel oplopend genummerd in Arabische cijfers en indien nodig een letter.</regel>
+		<melding>TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig,
+                een letter). 
+                (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
+                    select="substring($volgorde, 1, string-length($volgorde) - 2)"
+                />)</melding>
+	<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0831</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Het teken voor een Lijstitem mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.</regel>
+	<melding>TPOD_0831: functie, hoe doe ik dit.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0841</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Het teken voor een Lijstitem mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.</regel>
+	<melding>TPOD_0841: functie, hoe doe ik dit</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD0851</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Het teken voor een Lijstitem mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.</regel>
+	<melding>TPOD_0851: functie, hoe doe ik dit</melding>
+<documentatie/>
+</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>"
+<BusinessRuleGroep>
+	<naam>OP-implementatie-regelstructuur</naam>
+	<id>BRG0007</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_001</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_002</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_003</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_004</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_005</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_009</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD1020</code>
+			<ernst>Waarschuwing</ernst>
+			<regel>Begrippen mogen niet worden genummerd. (Het LiNummer mag niet gebruikt worden binnen een Begrippenlijst.)</regel>
+			<melding>TPOD_1020-1070:  Begrippen mogen niet worden genummerd, 
+                de Begrippenlijst met wId: "<sch:value-of select="@wId"/>" is dat wel</melding>
+		<documentatie/>
+	</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>"
+<BusinessRuleGroep>
+	<naam>OW-generiek</naam>
+	<id>BRG0008</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_001</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_002</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_003</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_004</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_005</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_006</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_007</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_008</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_009</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_010</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_011</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD0930</code>
+			<ernst>Blokkerend</ernst>
+			<regel>Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten. Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.</regel>
+			<melding>TPOD_0930: functie, hoe doe ik dit?</melding>
+		<documentatie/>
+	</BusinessRule>
+	<BusinessRule>
+		<code>TPOD1310</code>
+		<ernst>Waarschuwing</ernst>
+		<regel>Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van 'meter' gekozen te worden.</regel>
+		<melding>TPOD_1310: De grootheid waarin de hoogte wordt uitgedrukt; in het geval van hoogte dient altijd de eenheid meter gekozen te worden. 
+                Dit is niet zo in Gebied: <sch:value-of select="../l:identificatie"/>
+		</melding>
+	<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1650</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Het attribuut 'normwaarde' moet bestaan uit één van de drie mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde' of 'waardeInRegeltekst'</regel>
+	<melding> TPOD_1650: <sch:value-of select="../../rol:identificatie"/>: Het attribuut 'normwaarde'
+                moet bestaan uit één van de drie mogelijke attributen; 'kwalitatieveWaarde' óf
+                'kwantitatieveWaarde' óf waardeInRegeltekst. </melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1760</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag dus geen punt, puntengroep, lijn of lijnengroep zijn).</regel>
+	<melding>TPOD1760: Betreft <sch:value-of select="ga:identificatie"
+                />: Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt,
+                puntengroep, lijn of lijnengroep zijn). </melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1770</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Binnen het object 'Gebiedsaanwijzing' moeten de waarden van de attributen 'groep' (datatype 'Gebiedsaanwijzinggroep') hiërarchisch vallen onder het 'type' (datatype 'TypeGebiedsaanwijzing').</regel>
+	<melding>?</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1890</code>
+	<ernst>Blokkerend</ernst>
+	<regel>De identificatie van het OwObject moet de naam van het OwObject zelf bevatten.</regel>
+	<melding>TPOD1890: Betreft <sch:value-of select="../name()"/>: <sch:value-of
+                    select="text()"/>: De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1910</code>
+	<ernst>Blokkerend</ernst>
+	<regel>De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand.</regel>
+	<melding>TPOD1910: De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met
+                de daadwerkelijke objecten in het betreffende Ow-bestand. Het objecttype waarom het gaat: <sch:value-of select="text()"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1920</code>
+	<ernst>Blokkerend</ernst>
+	<regel>De objecttypen in manifest-ow dienen overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand.</regel>
+	<melding>TPOD1920: De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het
+                betreffende Ow-bestand. Het gaat om deze objecttypen: <sch:value-of select="$nfFOOT"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1930</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Gebiedengroepen mogen in referenties alleen naar objecten van type Gebied verwijzen.</regel>
+	<melding>TPOD_1930: Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject in een
+                Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1940</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Puntengroepen mogen in referenties alleen naar objecten van type Punt verwijzen.</regel>
+	<melding>TPOD_1940: Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="$notFound"/>.
+                Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1950</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Lijnengroepen mogen in referenties alleen naar objecten van type Lijn verwijzen.</regel>
+	<melding>TPOD_1950: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="$notFound"/>. 
+                Iedere verwijzing naar een OwObject in een Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1960</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn.</regel>
+	<melding>TPOD_1960: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>. 
+                Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn. </melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1970</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.</regel>
+	<melding>TPOD_1970: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: 
+                Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1980</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.</regel>
+	<melding>TPOD_1980: Betreft
+		<sch:value-of select="../../name()"/>: <sch:value-of
+                    select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: Iedere
+                verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2050</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Kijken of het manifest-ow en het manifest bestaan, en de bestanden benoemd in de manifest-bestanden aanwezig zijn.</regel>
+	<melding>TPOD2050: functie, hoe doe ik dit?</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2090</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst).</regel>
+	<melding>TPOD2090: Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst). 
+                Betreft Omgevingsnorm: <sch:value-of select="rol:identificatie"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2120</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen).</regel>
+	<melding>TPOD2120: Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen), 
+                dit betreft id:<sch:value-of select="text()"/>.
+                Let op, heel belangrijk om dit eerst te repareren voor conclusies te trekken over fout-situaties in andere validaties.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2130</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Er zijn niet meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie).</regel>
+	<melding>TPOD2130: Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie
+                toegestaan), dit betreft gebied:<sch:value-of select="../../l:identificatie/text()"/>, Geometrieref: <sch:value-of select="$dubbel"/>.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2140</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Het WorkIDRegeling van het manifest-ow moet verwijzen naar een bestaande work-id van een Regeling in OP.</regel>
+	<melding>TPOD2140: Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het WorkIDRegeling van het manifest in OW moet verwijzen naar een bestaande FRBRWork in een Regelingversie in OP </melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2150</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat aanwezig is in de bijbehorende Regeling in OP.</regel>
+	<melding>TPOD2150: Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat aanwezig is in de bijbehorende Regeling in OP. </melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2160</code>
+	<ernst>Blokkerend</ernst>
+	<regel>In het manifest-ow mag maar voor 1 doel aangeleverd worden. (tijdelijk)</regel>
+	<melding>TPOD2160: In het manifest-ow mag maar voor 1 doel aangeleverd worden.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2170</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Indien de normwaarde van het type 'waardeInRegeltekst' is, mag er maar één normwaarde voorkomen.</regel>
+	<melding>TPOD_2170: <sch:value-of select="../rol:identificatie"/>: Indien de normwaarde van het type 'waardeInRegeltekst' is, mag er maar één normwaarde voorkomen.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2190</code>
+	<ernst>Blokkerend</ernst>
+	<regel>In het manifest-OW mag het objecttype Geometrie niet voorkomen.</regel>
+	<melding>TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2200</code>
+	<ernst>Blokkerend</ernst>
+	<regel>In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'</regel>
+	<melding>TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.</melding>
+<documentatie/>
+</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>"
+<BusinessRuleGroep>
+	<naam>OW-generiek/OZON-database</naam>
+	<id>BRG0009</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_001</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_002</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_003</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_004</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_005</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_006</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_007</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_008</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_009</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_010</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_011</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD1860</code>
+			<ernst>Blokkerend</ernst>
+			<regel>Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.</regel>
+			<melding>oke hier moeten we het ook over hebben</melding>
+		<documentatie/>
+	</BusinessRule>
+	<BusinessRule>
+		<code>TPOD2180</code>
+		<ernst>Blokkerend</ernst>
+		<regel>Per Regeling moet er een Regelingsgebied zijn aangeleverd.</regel>
+		<melding>TPOD_2180: Per Regeling moet er een Regelingsgebied zijn aangeleverd.</melding>
+	<documentatie/>
+</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>
+<BusinessRuleGroep>
+	<naam>Regelstructuur</naam>
+	<id>BRG0010</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_001</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_002</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_003</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_004</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_005</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_009</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD1750</code>
+			<ernst>Blokkerend</ernst>
+			<regel>Een activiteit moet een gebied of gebiedengroep zijn (en mag dus geen punt, puntengroep, lijn of lijnengroep zijn).</regel>
+			<melding>TPOD1750: Betreft
+				<sch:value-of select="rol:identificatie"/>: Een Activiteit moet een gebied of
+                gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn).</melding>
+		<documentatie/>
+	</BusinessRule>
+	<BusinessRule>
+		<code>TPOD1780</code>
+		<ernst>Blokkerend</ernst>
+		<regel>Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel.</regel>
+		<melding>TPOD1780: Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel. </melding>
+	<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1850</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; Regel voor iedereen, Instructieregel of Omgevingswaarderegel.</regel>
+	<melding>TPOD1850: Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel. 
+                Het Regeltekst waarom het gaat: <sch:value-of select="$fouten"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2000</code>
+	<ernst>Blokkerend</ernst>
+	<regel>het wId van de Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP</regel>
+	<melding>TPOD2000: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
+                Het wId van de Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2060</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Als er een Regeltekst van een Lid is gemaakt mag er geen Regeltekst meer gemaakt worden van het Artikel dat boven dit Lid hangt.</regel>
+	<melding>TPOD2060: functie, hoe doe ik dit?</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2080</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Binnen een instructieregel dient er gekozen te worden tussen InstructieregelInstrument of InstructieregelTaakuitoefening (één van de twee moet voorkomen, niet meer, niet minder).</regel>
+	<melding>TPOD2080: Binnen een instructieregel dient er gekozen te worden tussen InstructieregelInstrument of InstructieregelTaakuitoefening (één van de twee moet voorkomen, niet meer, niet minder). 
+                Betreft Instructieregel bij Regeltekst: <sch:value-of select="r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD2100</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.</regel>
+	<melding>TPOD2100: Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.. 
+                Betreft Normwaarde: <sch:value-of select="../rol:identificatie"/>
+	</melding>
+<documentatie/>
+</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>"
+<BusinessRuleGroep>
+	<naam>Regelstructuur/OZON-database</naam>
+	<id>BRG0011</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_001</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_002</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_003</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_004</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_005</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_009</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD1700</code>
+			<ernst>Blokkerend</ernst>
+			<regel>Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de functionele structuur.</regel>
+			<melding>REPORT: TPOD1700:
+                Activiteit-ids: <sch:value-of select="substring($activiteitenTrajectNaarFunctioneleStructuur,1,string-length($activiteitenTrajectNaarFunctioneleStructuur)-2)"/>: 
+                Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in
+                de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de
+                functionele structuur. DIT LAATSTE WORDT NU NOG NIET GETEST!</melding>
+		<documentatie/>
+	</BusinessRule>
+	<BusinessRule>
+		<code>TPOD1710</code>
+		<ernst>Blokkerend</ernst>
+		<regel>Een bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt. </regel>
+		<melding>H:TP0D1710:
+                Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten,1,string-length($circulaireActivititeiten)-2)"/>: Een
+                bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt.</melding>
+	<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1730</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.</regel>
+	<melding>TPOD1730: <sch:value-of select="rol:identificatie"/> 
+                Betreft verwijzing: <sch:value-of select="rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href"/>:
+                Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1740</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt.</regel>
+	<melding>REPORT: TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft verwijzing: <sch:value-of select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>:
+                Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt. DIT LAATSTE
+                WORDT NU NOG NIET GETEST</melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1870</code>
+	<ernst>Blokkerend</ernst>
+	<regel>Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid.</regel>
+	<melding>TPOD1870: Betreft
+		<sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of
+                    select="r:RegeltekstRef/@xlink:href"/>: Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid. </melding>
+<documentatie/>
+</BusinessRule>
+<BusinessRule>
+	<code>TPOD1990</code>
+	<ernst>Waarschuwing</ernst>
+	<regel>Ieder OwObject, behalve Activiteit heeft minstens een OwObject dat ernaar verwijst.</regel>
+	<melding>TPOD_1990: Iedere Geometrie heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="basisgeo:id/text()" />
+	</melding>
+<documentatie/>
+</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>"
+<BusinessRuleGroep>
+	<naam>Vrijetekststructuur</naam>
+	<id>BRG0012</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_006</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_007</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_008</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_010</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_011</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD2110</code>
+			<ernst>Blokkerend</ernst>
+			<regel>Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft.</regel>
+			<melding>TPOD2110: Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft. Betreft Tekstdeel: <sch:value-of select="vt:identificatie"/>
+			</melding>
+		<documentatie/>
+	</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>
+<BusinessRuleGroep>
+	<naam>Vrijetekststructuur/OZON-database</naam>
+	<id>BRG0013</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_006</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_007</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_008</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_010</soortregeling>
+		<soortregeling>/join/id/stop/regelingtype_011</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD2040</code>
+			<ernst>Blokkerend</ernst>
+			<regel>het id van Divisie in OW moet verwijzen naar een bestaande id van een Divisie in OP</regel>
+			<melding>TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>:
+                Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP</melding>
+		<documentatie/>
+	</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>"
+<BusinessRuleGroep>
+	<naam>Waterschapsverordening</naam>
+	<id>BRG0014</id>
+	<geldtVoor>
+		<soortregeling>/join/id/stop/regelingtype_005</soortregeling>
+	</geldtVoor>
+	<geldendeBusinessRules>
+		<BusinessRule>
+			<code>TPOD1880</code>
+			<ernst>Blokkerend</ernst>
+			<regel>De IMOW-objecten 'Omgevingswaarderegel' en 'Omgevingswaarde' mogen niet voorkomen (bij de Waterschapsverordening).</regel>
+			<melding>TPOD1880: functie, hoe doe ik dit?</melding>
+		<documentatie/>
+	</BusinessRule>
+</geldendeBusinessRules>
+</BusinessRuleGroep>
+</BusinessRules>
