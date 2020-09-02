@@ -140,7 +140,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 REPORT: TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft verwijzing: <sch:value-of select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>:
                 Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt. DIT LAATSTE

@@ -138,7 +138,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 TPOD1860: Betreft <sch:value-of select="name()"/>:
                 <sch:value-of select="r:identificatie"/>: Iedere verwijzing naar een ander
@@ -154,7 +155,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 TPOD1860: Betreft <sch:value-of select="name()"/>:
                 <sch:value-of select="rol:identificatie"/>: Iedere verwijzing naar een ander
@@ -171,7 +173,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 TPOD1860: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
@@ -188,7 +191,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 TPOD1860: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
@@ -205,7 +209,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 TPOD1860: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
@@ -222,7 +227,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 TPOD1860: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>,
                 <sch:value-of select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject
@@ -239,7 +245,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 TPOD1860: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../rol:identificatie"/>, <sch:value-of
                     select="@xlink:href"/>: Iedere verwijzing naar een ander OwObject moet een
@@ -256,7 +263,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 TPOD1860: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../*:identificatie"/>, <sch:value-of select="@xlink:href"/>: 
                 Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn. (verwijzing vanuit l:ref niet aangetroffen) </sch:assert>

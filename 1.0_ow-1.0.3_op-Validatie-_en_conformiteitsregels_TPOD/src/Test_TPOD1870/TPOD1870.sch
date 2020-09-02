@@ -139,7 +139,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 TPOD1870: Betreft
                 <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of

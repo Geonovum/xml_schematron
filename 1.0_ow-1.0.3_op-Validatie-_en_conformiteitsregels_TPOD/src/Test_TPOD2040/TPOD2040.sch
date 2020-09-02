@@ -137,7 +137,8 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": " <sch:value-of select="../@eId"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
                 TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
                 Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP
