@@ -129,21 +129,21 @@
     <!-- ============TPOD_0410================================================================================================================ -->
     
     <sch:pattern id="TPOD_0410">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[lower-case(tekst:Label) ne 'hoofdstuk']">
+        <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[tekst:Label ne 'Hoofdstuk']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
+            <sch:report test="false()">asa</sch:report>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                    "code": "TPOD",
-                    "eId": "<sch:value-of select="../@eId"/>",
-                    "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                    "regel": "",
-                    "melding": " <sch:value-of select="../@eId"/> "
+                "code": "TPOD0410",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="../@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Een Hoofdstuk moet worden geduid met het label Hoofdstuk.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="../@eId"/>. Het Label is daar: <sch:value-of select="tekst:Label"/>"
                 },
-                
-                TPOD_0410: Een Hoofdstuk moet worden geduid met de label Hoofdstuk. 
-                (betreft hoofdstuk: <sch:value-of select="tekst:Nummer"/>, label: <sch:value-of select="tekst:Label"/>) </sch:assert> 
+            </sch:assert> 
         </sch:rule>
     </sch:pattern>
         
