@@ -182,20 +182,20 @@
     <!-- ============TPOD_0460================================================================================================================ -->
     
     <sch:pattern id="TPOD_0460">
-        <sch:rule context="//tekst:Titel/tekst:Kop[lower-case(tekst:Label) ne 'titel']">
+        <sch:rule context="//tekst:Titel/tekst:Kop[tekst:Label ne 'Titel']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
+                "code": "TPOD0460",
+                "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Een Titel moet worden geduid met het label Titel.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="../@eId"/>."
                 },
-                TPOD_0410: Een Titel moet worden geduid met de label Titel. Betreft label: 
-                <sch:value-of select="tekst:Nummer"/>:<sch:value-of select="tekst:Label"/></sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     

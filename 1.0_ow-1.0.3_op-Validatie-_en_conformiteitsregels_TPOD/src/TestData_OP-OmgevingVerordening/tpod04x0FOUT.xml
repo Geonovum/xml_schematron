@@ -47,7 +47,13 @@
                         <Label>Een Hoofdstuk</Label>
                         <Nummer>5</Nummer>
                      </Kop>
-                     <Gereserveerd/>
+                     <Titel wId="chp_15_wrong_titel_label" eId="a2_15_2">
+                        <Kop>
+                           <Label>Foute Titel</Label>
+                           <Nummer>15.1</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Titel>
                   </Hoofdstuk>
                </Lichaam>
             </RegelingCompact>

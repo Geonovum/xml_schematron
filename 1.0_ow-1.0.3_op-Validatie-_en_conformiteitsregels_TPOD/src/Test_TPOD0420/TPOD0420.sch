@@ -136,7 +136,7 @@
             <sch:report test="true()"><sch:value-of select="$SOORT_REGELING"/></sch:report>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
+                "code": "TPOD0420",
                 "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
