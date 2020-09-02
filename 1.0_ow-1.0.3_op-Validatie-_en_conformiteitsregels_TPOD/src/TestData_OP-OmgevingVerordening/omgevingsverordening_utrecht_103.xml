@@ -13161,28 +13161,28 @@
                         </Artikel>
                      </Paragraaf>
                   </Hoofdstuk>
-                  <Hoofdstuk wId="chp_11" eId="aaa">
+                  <Hoofdstuk wId="chp_11" eId="aaa_11_1">
                      <Kop>
                         <Label>Geen Hoofdstuk</Label>
                         <Nummer>11</Nummer>
                      </Kop>
                      <Gereserveerd/>
                   </Hoofdstuk>
-                  <Hoofdstuk wId="chp_14" eId="aaa">
+                  <Hoofdstuk wId="chp_14" eId="aaa_14_1">
                      <Kop>
                         <Label>Nummer overgeslagen</Label>
                         <Nummer>14</Nummer>
                      </Kop>
                      <Gereserveerd/>
                   </Hoofdstuk>
-                  <Hoofdstuk wId="chp_AA" eId="aaa">
+                  <Hoofdstuk wId="chp_AA" eId="aaa_AA_1">
                      <Kop>
                         <Label>Nummer geen Arabisch cijfer</Label>
                         <Nummer>AA</Nummer>
                      </Kop>
                      <Gereserveerd/>
                   </Hoofdstuk>
-                  <Hoofdstuk wId="chp_14" eId="aaa">
+                  <Hoofdstuk wId="chp_14" eId="aaa_14_2">
                      <Kop>
                         <Label>Hoofdstuk</Label>
                         <Nummer>14</Nummer>
@@ -13195,12 +13195,12 @@
                         <Gereserveerd/>
                      </Titel>
                   </Hoofdstuk>
-                  <Hoofdstuk wId="chp_15" eId="aaa">
+                  <Hoofdstuk wId="chp_15" eId="aaa_15_1">
                      <Kop>
                         <Label>Hoofdstuk</Label>
                         <Nummer>15</Nummer>
                      </Kop>
-                     <Titel wId="chp_15_wrong_titel_label" eId="a2">
+                     <Titel wId="chp_15_wrong_titel_label" eId="a2_15_2">
                         <Kop>
                            <Label>Foute Titel</Label>
                            <Nummer>15.1</Nummer>

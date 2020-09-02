@@ -138,6 +138,7 @@
                 <xsl:value-of select="'naaaa'"/>
                 {               
                 "code": "TPOD",
+                "ernst": "",
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",

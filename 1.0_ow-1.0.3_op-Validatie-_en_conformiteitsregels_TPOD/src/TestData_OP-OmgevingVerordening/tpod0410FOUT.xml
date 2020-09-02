@@ -7,21 +7,21 @@
             <RegelingCompact componentnaam="initieel_reg"
                              wordt="/akn/nl/act/pv26/2020/OVPU001/nld@2020-06-09;1-0">
                <Lichaam eId="body" wId="body">
-                  <Hoofdstuk wId="chp_11" eId="aaa">
+                  <Hoofdstuk wId="chp_11" eId="aaa_1">
                      <Kop>
                         <Label>Geen Hoofdstuk</Label>
                         <Nummer>11</Nummer>
                      </Kop>
                      <Gereserveerd/>
                   </Hoofdstuk>
-                  <Hoofdstuk wId="chp_14" eId="aaa">
+                  <Hoofdstuk wId="chp_14" eId="aaa_2">
                      <Kop>
                         <Label>Nummer overgeslagen</Label>
                         <Nummer>14</Nummer>
                      </Kop>
                      <Gereserveerd/>
                   </Hoofdstuk>
-                  <Hoofdstuk wId="chp_AA" eId="aaa">
+                  <Hoofdstuk wId="chp_AA" eId="aaa_3">
                      <Kop>
                         <Label>Nummer geen Arabisch cijfer</Label>
                         <Nummer>AA</Nummer>
