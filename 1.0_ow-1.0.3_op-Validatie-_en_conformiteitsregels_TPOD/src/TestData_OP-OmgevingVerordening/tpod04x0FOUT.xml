@@ -40,17 +40,23 @@
                         <Label>Een Hoofdstuk</Label>
                         <Nummer>5</Nummer>
                      </Kop>
-                     <Gereserveerd/>
+                     <Titel wId="chp_5_wrong_titel_label" eId="a2_5_1">
+                        <Kop>
+                           <Label>Titel</Label>
+                           <Nummer>5.1</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Titel>
                   </Hoofdstuk>
                   <Hoofdstuk wId="chp_6" eId="aaa_6">
                      <Kop>
                         <Label>Een Hoofdstuk</Label>
                         <Nummer>5</Nummer>
                      </Kop>
-                     <Titel wId="chp_15_wrong_titel_label" eId="a2_15_2">
+                     <Titel wId="chp_6_wrong_titel_label" eId="a2_6_2">
                         <Kop>
-                           <Label>Foute Titel</Label>
-                           <Nummer>15.1</Nummer>
+                           <Label>Fout Titellabel</Label>
+                           <Nummer>6.1</Nummer>
                         </Kop>
                         <Gereserveerd/>
                      </Titel>
