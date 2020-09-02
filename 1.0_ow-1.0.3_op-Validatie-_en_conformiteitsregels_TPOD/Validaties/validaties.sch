@@ -141,7 +141,7 @@
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Een Hoofdstuk moet worden geduid met het label Hoofdstuk.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="../@eId"/>. Het Label is daar: <sch:value-of select="tekst:Label"/>"
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="../@eId"/>."/>"
                 },
             </sch:assert> 
         </sch:rule>
