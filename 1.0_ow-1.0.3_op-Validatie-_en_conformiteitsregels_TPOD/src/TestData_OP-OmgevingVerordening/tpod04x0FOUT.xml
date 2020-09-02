@@ -47,6 +47,20 @@
                         </Kop>
                         <Gereserveerd/>
                      </Titel>
+                     <Titel wId="chp_5_wrong_titel_label" eId="a2_5_2">
+                        <Kop>
+                           <Label>Titel</Label>
+                           <Nummer>5.2</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Titel>
+                     <Titel wId="chp_5_wrong_titel_label" eId="a2_5_4">
+                        <Kop>
+                           <Label>Titel</Label>
+                           <Nummer>5.4</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Titel>
                   </Hoofdstuk>
                   <Hoofdstuk wId="chp_6" eId="aaa_6">
                      <Kop>

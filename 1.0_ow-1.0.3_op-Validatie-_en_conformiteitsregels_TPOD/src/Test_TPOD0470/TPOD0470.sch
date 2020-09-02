@@ -132,7 +132,7 @@
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="fouten" value="foo:foutenTPOD_0470(.)"/>
             
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+            <sch:let name="CONDITION" value="string-length($fouten[1]) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD0470",

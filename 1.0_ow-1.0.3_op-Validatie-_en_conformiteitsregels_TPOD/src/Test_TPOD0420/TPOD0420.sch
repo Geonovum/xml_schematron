@@ -132,7 +132,7 @@
                 value="$omgevingsplan-en-waterschap or $omgevingsverordening"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0420(.)">
             </sch:let>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
+            <sch:let name="CONDITION" value="string-length($volgorde[1]) = 0"/>
             <sch:report test="true()"><sch:value-of select="$SOORT_REGELING"/></sch:report>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
