@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+                    schemaversie="1.0.3">
+   <BesluitVersie>
+      <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <WijzigBijlage eId="cmp_A" wId="pv26_1-0__cmp_A">
+            <RegelingCompact componentnaam="initieel_reg"
+                             wordt="/akn/nl/act/pv26/2020/OVPU001/nld@2020-06-09;1-0">
+               <Lichaam eId="body" wId="body">
+                  <Hoofdstuk wId="chp_11" eId="aaa">
+                     <Kop>
+                        <Label>Geen Hoofdstuk</Label>
+                        <Nummer>11</Nummer>
+                     </Kop>
+                     <Gereserveerd/>
+                  </Hoofdstuk>
+                  <Hoofdstuk wId="chp_14" eId="aaa">
+                     <Kop>
+                        <Label>Nummer overgeslagen</Label>
+                        <Nummer>14</Nummer>
+                     </Kop>
+                     <Gereserveerd/>
+                  </Hoofdstuk>
+                  <Hoofdstuk wId="chp_AA" eId="aaa">
+                     <Kop>
+                        <Label>Nummer geen Arabisch cijfer</Label>
+                        <Nummer>AA</Nummer>
+                     </Kop>
+                     <Gereserveerd/>
+                  </Hoofdstuk>
+               </Lichaam>
+            </RegelingCompact>
+         </WijzigBijlage>
+      </BesluitCompact>
+   </BesluitVersie>
+   <RegelingVersieInformatie>
+      <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+      </RegelingMetadata>
+   </RegelingVersieInformatie>
+</AanleveringBesluit>

@@ -63,12 +63,62 @@
     <sch:let name="SOORT_REGELING"
         value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
-    <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
-    <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
-    <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>
-    <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>
-    <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
-    <sch:let name="OVI_PB" value="''"/>
+    <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/> <!-- AMvB -->
+    <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>   <!-- Ministeriële Regeling -->
+    <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>   <!-- Omgevingsplan -->
+    <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>   <!-- Omgevingsverordening -->
+    <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>   <!-- Waterschapsverordening -->
+    <sch:let name="OVi" value="'/join/id/stop/regelingtype_006'"/>   <!-- Omgevingsvisie -->
+    <sch:let name="PB" value="'/join/id/stop/regelingtype_007'"/>   <!-- Projectbesluit -->
+    <sch:let name="I" value="'/join/id/stop/regelingtype_008'"/>   <!-- Instructie -->
+    <sch:let name="VR" value="'/join/id/stop/regelingtype_009'"/>   <!-- Voorbeschermingsregels -->
+    <sch:let name="P" value="'/join/id/stop/regelingtype_010'"/>   <!-- Programma -->
+    <sch:let name="RI" value="'/join/id/stop/regelingtype_011'"/>   <!-- Reactieve interventie -->
+    
+    <sch:let name="rijk" value="$SOORT_REGELING=$AMvB or $SOORT_REGELING=$MR"/>
+    <sch:let name="omgevingsplan" value="$SOORT_REGELING=$OP"/>
+    <sch:let name="omgevingsplan-en-waterschap" value="$SOORT_REGELING=$OP or $SOORT_REGELING=$WV"/>
+    <sch:let name="allen" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$VR or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="allen-behalve-rijk" value="
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$VR or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="omgevingsverordening" value="$SOORT_REGELING=$OV"/>
+    <sch:let name="regelstructuur" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$VR
+        "/>
+    <sch:let name="vrijetekststructuur" value="
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="waterschapsverordening" value="$SOORT_REGELING=$WV"/>
 
     <!-- ============TPOD_0930================================================================================================================ -->
 
@@ -78,7 +128,15 @@
             <sch:let name="fout" value="foo:aantalTPOD_0930_28992(.)"/>
             <sch:let name="CONDITION" value="string-length($fout) = 0"/>
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"><sch:value-of select="$fout"/></sch:assert>
+            <sch:assert test="$ASSERT">
+                {               
+                "code": "TPOD",
+                "eId": "<sch:value-of select="../@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "",
+                "melding": " <sch:value-of select="../@eId"/> "
+                },
+                <sch:value-of select="$fout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -88,7 +146,15 @@
             <sch:let name="fout" value="foo:aantalTPOD_0930_4258(.)"/>
             <sch:let name="CONDITION" value="string-length($fout) = 0"/>
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"><sch:value-of select="$fout"/></sch:assert>
+            <sch:assert test="$ASSERT">
+                {               
+                "code": "TPOD",
+                "eId": "<sch:value-of select="../@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "",
+                "melding": " <sch:value-of select="../@eId"/> "
+                },
+                <sch:value-of select="$fout"/></sch:assert>
         </sch:rule>
     </sch:pattern>
 
