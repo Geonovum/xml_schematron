@@ -67,40 +67,93 @@
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING" value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
     
-    <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/>
-    <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>
-    <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>
-    <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>
-    <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>
-    <sch:let name="OVI_PB" value="''"/>
+    <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/> <!-- AMvB -->
+    <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>   <!-- Ministeriële Regeling -->
+    <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>   <!-- Omgevingsplan -->
+    <sch:let name="OV" value="'/join/id/stop/regelingtype_004'"/>   <!-- Omgevingsverordening -->
+    <sch:let name="WV" value="'/join/id/stop/regelingtype_005'"/>   <!-- Waterschapsverordening -->
+    <sch:let name="OVi" value="'/join/id/stop/regelingtype_006'"/>   <!-- Omgevingsvisie -->
+    <sch:let name="PB" value="'/join/id/stop/regelingtype_007'"/>   <!-- Projectbesluit -->
+    <sch:let name="I" value="'/join/id/stop/regelingtype_008'"/>   <!-- Instructie -->
+    <sch:let name="VR" value="'/join/id/stop/regelingtype_009'"/>   <!-- Voorbeschermingsregels -->
+    <sch:let name="P" value="'/join/id/stop/regelingtype_010'"/>   <!-- Programma -->
+    <sch:let name="RI" value="'/join/id/stop/regelingtype_011'"/>   <!-- Reactieve interventie -->
+    
+    <sch:let name="rijk" value="$SOORT_REGELING=$AMvB or $SOORT_REGELING=$MR"/>
+    <sch:let name="omgevingsplan" value="$SOORT_REGELING=$OP"/>
+    <sch:let name="omgevingsplan-en-waterschap" value="$SOORT_REGELING=$OP or $SOORT_REGELING=$WV"/>
+    <sch:let name="allen" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$VR or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="allen-behalve-rijk" value="
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$VR or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="omgevingsverordening" value="$SOORT_REGELING=$OV"/>
+    <sch:let name="regelstructuur" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$VR
+        "/>
+    <sch:let name="vrijetekststructuur" value="
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="waterschapsverordening" value="$SOORT_REGELING=$WV"/>
     
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_0420">
-        <sch:rule context="//tekst:Lichaam">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0420(.)">
-            </sch:let>
+        <sch:rule context="//tekst:Hoofdstuk">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0420(.)"/>
+            
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:report test="true()"><sch:value-of select="$SOORT_REGELING"/></sch:report>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0420: Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers 
-                (betreft hoofdstukken:  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
+                {               
+                "code": "TPOD0420",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
+    
     <xsl:function name="foo:volgordeTPOD_0420">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Hoofdstuk">
-                <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=string(position()))">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
+        <xsl:for-each select="$context/../tekst:Hoofdstuk">
+            <xsl:if test="$context/@eId=@eId and not(string(tekst:Kop/tekst:Nummer)=string(position()))">
+                <xsl:value-of select="@eId"/>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:function>
     
-
 </sch:schema>
