@@ -152,17 +152,14 @@
                 "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
                 "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:LidNummer)"/>"
                 },
-                TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter). 
-                (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
-                    select="substring($volgorde, 1, string-length($volgorde) - 2)"
-                />)</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:bevatGeletterdeNummersTPOD_0781">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="bevatLetters">
-            <xsl:for-each select="$context/tekst:Lid">
+            <xsl:for-each select="$context/../tekst:Lid">
                 <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1,2}\.')">
                     <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
                 </xsl:if>
@@ -175,32 +172,32 @@
         <xsl:param name="bevatLetters"/>
         <xsl:param name="context" as="node()"/>
         <xsl:if test="string-length($bevatLetters) = 0">
-            <xsl:variable name="volgorde">
-                <xsl:for-each select="$context/tekst:Lid">
-                    <xsl:variable name="pos" select="position()"/>
+            <xsl:for-each select="$context/../tekst:Lid">
+                <xsl:if test="$context/@eId=@eId">
                     <xsl:choose>
-                        <xsl:when
-                            test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
-                            <xsl:if test="matches(tekst:LidNummer, '\d{1,2}\.')">
-                                <xsl:if
-                                    test="not(string(tekst:LidNummer) = concat(string($pos), '.'))">
-                                    <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
-                                </xsl:if>
-                            </xsl:if>
-                            <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
-                                <xsl:if
-                                    test="not(string(tokenize(tekst:LidNummer, '[a-z]{1}')[1]) = string($pos)) and not(ends-with(tekst:LidNummer, '.'))">
-                                    <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
-                                </xsl:if>
-                            </xsl:if>
+                        <xsl:when test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
+                            <xsl:choose>
+                                <xsl:when test="matches(tekst:LidNummer, '\d{1,2}\.')">
+                                    <xsl:if test="not(string(tekst:LidNummer)=concat(string(position()),'.'))">
+                                        <xsl:value-of select="@eId"/>
+                                    </xsl:if>
+                                </xsl:when>
+                                <xsl:when test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
+                                    <xsl:if test="not(ends-with(tekst:LidNummer, '.'))">
+                                        <xsl:value-of select="@eId"/>
+                                    </xsl:if>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="@eId"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
+                            <xsl:value-of select="@eId"/>
                         </xsl:otherwise>
                     </xsl:choose>
-                </xsl:for-each>
-            </xsl:variable>
-            <xsl:value-of select="$volgorde"/>
+                </xsl:if>
+            </xsl:for-each>
         </xsl:if>
     </xsl:function>
 
