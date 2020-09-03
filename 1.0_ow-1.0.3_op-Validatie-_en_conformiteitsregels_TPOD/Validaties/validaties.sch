@@ -130,8 +130,7 @@
     
     <sch:pattern id="TPOD_0410">
         <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[tekst:Label ne 'Hoofdstuk']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:report test="false()">asa</sch:report>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -151,8 +150,7 @@
     
     <sch:pattern id="TPOD_0420">
         <sch:rule context="//tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE"
-                value="$omgevingsplan-en-waterschap or $omgevingsverordening"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0420(.)">
             </sch:let>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
@@ -183,8 +181,7 @@
     
     <sch:pattern id="TPOD_0460">
         <sch:rule context="//tekst:Titel/tekst:Kop[tekst:Label ne 'Titel']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
@@ -203,8 +200,7 @@
     
     <sch:pattern id="TPOD_0470">
         <sch:rule context="//tekst:Hoofdstuk/tekst:Titel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="fouten" value="foo:foutenTPOD_0470(.)"/>
             
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
@@ -234,8 +230,7 @@
     
     <sch:pattern id="TPOD_0480">
         <sch:rule context="//tekst:Hoofdstuk/tekst:Titel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0480(.)"/>
             <sch:let name="CONDITION" value="string-length($volgorde[1]) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -258,32 +253,33 @@
                 <xsl:value-of select="@eId"/>
             </xsl:if>
         </xsl:for-each>
+    </xsl:function>
     
     <!-- ============TPOD_0490================================================================================================================ -->
     
     <sch:pattern id="TPOD_0490">
-        <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0490( .)"/>
+        <sch:rule context="//tekst:Titel">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="fouten" value="foo:foutenTPOD_0490(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0490: Achter het cijfer van een titelnummer mag geen punt worden opgenomen. 
-                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, titels: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</sch:assert>
+                { 
+                "code": "TPOD0490", 
+                "ernst": "Waarschuwing", 
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>", 
+                "regel": "Achter het cijfer van een titelnummer mag geen punt worden opgenomen.", 
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>." 
+                }
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:foutenTPOD_0490">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Titel">
-                <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
+        <xsl:if test="ends-with($context/tekst:Kop/tekst:Nummer, '.')">
+            <xsl:value-of select="$context/@eId"/>
+        </xsl:if>
     </xsl:function>
     
     <!-- ===========TPOD_0510================================================================================================================= -->

@@ -128,8 +128,7 @@
 
     <sch:pattern id="TPOD_0460">
         <sch:rule context="//tekst:Titel/tekst:Kop[tekst:Label ne 'Titel']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               

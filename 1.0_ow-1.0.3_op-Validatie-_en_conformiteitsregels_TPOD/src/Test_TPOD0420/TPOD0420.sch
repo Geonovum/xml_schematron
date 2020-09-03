@@ -128,8 +128,7 @@
 
     <sch:pattern id="TPOD_0420">
         <sch:rule context="//tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE"
-                value="$omgevingsplan-en-waterschap or $omgevingsverordening"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0420(.)">
             </sch:let>
             <sch:let name="CONDITION" value="string-length($volgorde[1]) = 0"/>

@@ -128,8 +128,7 @@
 
     <sch:pattern id="TPOD_0470">
         <sch:rule context="//tekst:Hoofdstuk/tekst:Titel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="fouten" value="foo:foutenTPOD_0470(.)"/>
             
             <sch:let name="CONDITION" value="string-length($fouten[1]) = 0"/>
