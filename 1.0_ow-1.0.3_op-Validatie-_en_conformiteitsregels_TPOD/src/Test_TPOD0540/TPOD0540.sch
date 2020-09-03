@@ -126,10 +126,8 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_0540">
-        <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
+        <sch:rule context="//tekst:Afdeling">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="fouten" value="foo:foutenTPOD_0540(.)">
             </sch:let>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
@@ -142,29 +140,17 @@
                 "regel": "",
                 "melding": " <sch:value-of select="../@eId"/> "
                 },
-                TPOD_0540: Achter het cijfer van een afdelingnummer mag geen punt worden opgenomen. 
-                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, afdelingen: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:foutenTPOD_0540">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Afdeling">
-                <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-            <xsl:for-each select="$context/tekst:Titel">
-                <sch:let name="titel" value="string(tekst:Kop/tekst:Nummer)"/>
-                <xsl:for-each select="tekst:Afdeling">
-                    <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
-                        <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
+        <xsl:for-each select="$context/../tekst:Afdeling">
+            <xsl:if test="$context/@eId=@eId and ends-with(string(tekst:Kop/tekst:Nummer) '.'))">
+                <xsl:value-of select="@eId"/>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:function>
 
 </sch:schema>
