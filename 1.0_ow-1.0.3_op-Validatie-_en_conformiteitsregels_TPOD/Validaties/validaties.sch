@@ -153,11 +153,11 @@
             <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0420(.)">
             </sch:let>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
+            <sch:let name="CONDITION" value="string-length($volgorde[1]) = 0"/>
             <sch:report test="true()"><sch:value-of select="$SOORT_REGELING"/></sch:report>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
+                "code": "TPOD0420",
                 "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
@@ -229,7 +229,7 @@
     <!-- ===========TPOD_0480================================================================================================================= -->
     
     <sch:pattern id="TPOD_0480">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Titel">
+        <sch:rule context="//tekst:Titel">
             <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0480(.)"/>
             <sch:let name="CONDITION" value="string-length($volgorde[1]) = 0"/>
@@ -249,7 +249,7 @@
     <xsl:function name="foo:volgordeTPOD_0480">
         <xsl:param name="context" as="node()"/>
         <xsl:for-each select="$context/../tekst:Titel">
-            <xsl:if test="$context/@eId=@eId and not(substring-after(string(tekst:Kop/tekst:Nummer),'.')=string(position()))">
+            <xsl:if test="$context/@eId=@eId and not(substring-after(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer,'.'))=string(position()))">
                 <xsl:value-of select="@eId"/>
             </xsl:if>
         </xsl:for-each>
@@ -471,30 +471,31 @@
     <!-- ============TPOD_0590================================================================================================================ -->
     
     <sch:pattern id="TPOD_0590">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Afdeling">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="afdeling" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0590($afdeling, .)"/>
+        <sch:rule context="//tekst:Paragraaf">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0590( .)"/>
             
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0590: Paragrafen moeten oplopend worden genummerd in Arabische cijfers.
-                (betreft hoofdstuk: <sch:value-of select="../tekst:Kop/tekst:Nummer"/>, afdeling: <sch:value-of select="tekst:Kop/tekst:Nummer"/>, paragrafen:  <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
+                {               
+                "code": "TPOD0590",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Paragrafen moeten oplopend worden genummerd in Arabische cijfers.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0590">
-        <xsl:param name="afdeling"/>
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Paragraaf">
-                <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($afdeling, '.', string(position())))">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
+        <xsl:for-each select="$context/../tekst:Paragraaf">
+            <xsl:if test="$context/@eId=@eId and not(substring-after(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer,'.'))=string(position()))">
+                <xsl:value-of select="@eId"/>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:function>
     
     <!-- ============TPOD_0600================================================================================================================ -->

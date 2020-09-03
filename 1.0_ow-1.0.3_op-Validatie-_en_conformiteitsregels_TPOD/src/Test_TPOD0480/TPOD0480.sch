@@ -127,7 +127,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_0480">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Titel">
+        <sch:rule context="//tekst:Titel">
             <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0480(.)"/>
             <sch:let name="CONDITION" value="string-length($volgorde[1]) = 0"/>

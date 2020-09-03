@@ -164,6 +164,15 @@
                 />)</sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <xsl:function name="foo:volgordeTPOD_0480">
+        <xsl:param name="context" as="node()"/>
+        <xsl:for-each select="$context/../tekst:Titel">
+            <xsl:if test="$context/@eId=@eId and not(substring-after(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer,'.'))=string(position()))">
+                <xsl:value-of select="@eId"/>
+            </xsl:if>
+        </xsl:for-each>
+    </xsl:function>
 
     <xsl:function name="foo:bevatGeletterdeNummersTPOD_0781">
         <xsl:param name="context" as="node()"/>
