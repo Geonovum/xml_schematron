@@ -285,13 +285,20 @@
     <!-- ===========TPOD_0510================================================================================================================= -->
     
     <sch:pattern id="TPOD_0510">
-        <sch:rule context="//tekst:Afdeling/tekst:Kop[lower-case(tekst:Label) ne 'afdeling']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+        <sch:rule context="//tekst:Afdeling/tekst:Kop[tekst:Label ne 'Afdeling']">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0510: Een Afdeling moet worden geduid met de label Afdeling. 
-                Betreft afdeling: <sch:value-of select="tekst:Nummer"/>, label:<sch:value-of select="tekst:Label"/></sch:assert>
+                {               
+                "code": "TPOD0510",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="../@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Een Afdeling moet worden geduid met de label Afdeling.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="../@eId"/>."
+                },
+                
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     

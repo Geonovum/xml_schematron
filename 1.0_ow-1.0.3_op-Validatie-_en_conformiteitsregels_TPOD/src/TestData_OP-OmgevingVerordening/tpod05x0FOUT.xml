@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+                    schemaversie="1.0.3">
+   <BesluitVersie>
+      <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <WijzigBijlage eId="cmp_A" wId="pv26_1-0__cmp_A">
+            <RegelingCompact componentnaam="initieel_reg"
+                             wordt="/akn/nl/act/pv26/2020/OVPU001/nld@2020-06-09;1-0">
+               <Lichaam eId="body" wId="body">
+                  <Hoofdstuk wId="chp_1" eId="aaa_1">
+                     <Kop>
+                        <Label>Een Hoofdstuk</Label>
+                        <Nummer>1</Nummer>
+                     </Kop>
+                     <Afdeling eId="chp_1__subchp_1.1" wId="chp_1__subchp_1.1">
+                        <Kop>
+                           <Label>Afdeling</Label>
+                           <Nummer>1.1</Nummer>
+                           <Opschrift>ALGEMEEN</Opschrift>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Afdeling>
+                     <Afdeling eId="chp_1__subchp_1.2" wId="chp_1__subchp_1.2">
+                        <Kop>
+                           <Nummer>1.2</Nummer>
+                           <Label>CabernetSauvignon</Label>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Afdeling>
+                  </Hoofdstuk>
+               </Lichaam>
+            </RegelingCompact>
+         </WijzigBijlage>
+      </BesluitCompact>
+   </BesluitVersie>
+   <RegelingVersieInformatie>
+      <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+      </RegelingMetadata>
+   </RegelingVersieInformatie>
+</AanleveringBesluit>
