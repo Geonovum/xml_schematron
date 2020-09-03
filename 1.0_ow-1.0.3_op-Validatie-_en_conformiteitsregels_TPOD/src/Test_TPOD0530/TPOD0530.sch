@@ -138,7 +138,7 @@
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Afdelingen moeten oplopend worden genummerd in Arabische cijfers.",
-                "melding": " <sch:value-of select="@eId"/> "
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
                 },
             </sch:assert>
         </sch:rule>
