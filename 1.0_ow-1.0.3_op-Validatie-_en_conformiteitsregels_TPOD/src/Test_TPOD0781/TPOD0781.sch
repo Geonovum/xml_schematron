@@ -128,52 +128,37 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_0781">
-        <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE" value="$SOORT_REGELING = $OV"/>
-            <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
+        <sch:rule context="//tekst:Lid">
+            <sch:let name="APPLICABLE" value="$omgevingsverordening"/>
             <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0781(.)"/>
             <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
+                "code": "TPOD0781",
+                "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "De nummering van Leden bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:LidNummer)"/>"
                 },
-                TPOD_0781: De nummering van Leden bevat letters en kan niet middels schematron op geldigheid
-                worden gecheckt. Dit moet handmatig gebeuren. 
-                (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
-                    select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"
-                />)</sch:assert> 
+            </sch:assert> 
             <sch:let name="volgorde" value="foo:volgordeTPOD_0781($bevatLetters,.)"/>
             <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
+                "code": "TPOD0781",
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:LidNummer)"/>"
                 },
-                TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig,
-                een letter). 
+                TPOD_0781: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter). 
                 (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
                     select="substring($volgorde, 1, string-length($volgorde) - 2)"
                 />)</sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:volgordeTPOD_0480">
-        <xsl:param name="context" as="node()"/>
-        <xsl:for-each select="$context/../tekst:Titel">
-            <xsl:if test="$context/@eId=@eId and not(substring-after(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer,'.'))=string(position()))">
-                <xsl:value-of select="@eId"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
-
     <xsl:function name="foo:bevatGeletterdeNummersTPOD_0781">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="bevatLetters">

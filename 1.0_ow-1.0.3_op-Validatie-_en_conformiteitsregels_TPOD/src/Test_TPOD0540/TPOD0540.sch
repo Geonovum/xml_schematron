@@ -128,8 +128,7 @@
     <sch:pattern id="TPOD_0540">
         <sch:rule context="//tekst:Afdeling">
             <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0540(.)"/>
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD",
@@ -137,19 +136,10 @@
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Achter het laatste cijfer van een Afdelingnummer mag geen punt worden opgenomen.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
                 },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:foutenTPOD_0540">
-        <xsl:param name="context" as="node()"/>
-        <xsl:for-each select="$context/../tekst:Afdeling">
-            <xsl:if test="$context/@eId=@eId and ends-with(string(tekst:Kop/tekst:Nummer), '.')">
-                <xsl:value-of select="@eId"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
 
 </sch:schema>

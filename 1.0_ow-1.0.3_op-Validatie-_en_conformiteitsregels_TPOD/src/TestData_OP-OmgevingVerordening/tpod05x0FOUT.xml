@@ -121,26 +121,139 @@
                            <Paragraaf eId="chp_3__subchp_1.3_subsec_4" wId="a">
                               <Kop>
                                  <Label>Paragraaf</Label>
-                                 <Nummer>3.1.3.5</Nummer>
+                                 <Nummer>3.1.3.5.</Nummer>
                               </Kop>
                               <Gereserveerd/>
                            </Paragraaf>
                            <Paragraaf eId="chp_3__subchp_1.3_subsec_5" wId="a">
                               <Kop>
                                  <Label>Paragraaf</Label>
-                                 <Nummer>3.1.3.5.</Nummer>
+                                 <Nummer>3.1.3.5</Nummer>
                               </Kop>
-                              <Gereserveerd/>
+                              <Subparagraaf eId="chp_3__subchp_1.3_subsec_5_subsubsec_1" wId="a11">
+                                 <Kop>
+                                    <Label>Paragraaf</Label>
+                                    <Nummer>3.1.3.5.1</Nummer>
+                                 </Kop>
+                                 <Gereserveerd/>
+                              </Subparagraaf>
+                              <Subparagraaf eId="chp_3__subchp_1.3_subsec_5_subsubsec_2" wId="a11">
+                                 <Kop>
+                                    <Label>Paragraaf</Label>
+                                    <Nummer>3.1.3.5.2.</Nummer>
+                                 </Kop>
+                                 <Gereserveerd/>
+                              </Subparagraaf>
+                              <Subparagraaf eId="chp_3__subchp_1.3_subsec_5_subsubsec_3" wId="a11">
+                                 <Kop>
+                                    <Label>Paragraaf</Label>
+                                    <Nummer>3.1.3.5.3</Nummer>
+                                 </Kop>
+                                 <Subsubparagraaf eId="chp_3__subchp_1.3_subsec_5_subsubsec_3_subsubsubsec_1" wId="a">
+                                    <Kop>
+                                       <Label>SubsubParagraaf</Label>
+                                       <Nummer>3.1.3.5.3.1</Nummer>
+                                    </Kop>
+                                    <Gereserveerd/>
+                                 </Subsubparagraaf>
+                                 <Subsubparagraaf eId="chp_3__subchp_1.3_subsec_5_subsubsec_3_subsubsubsec_2" wId="a">
+                                    <Kop>
+                                       <Label>SubsubParagraaf</Label>
+                                       <Nummer>3.1.3.5.3.2.</Nummer>
+                                    </Kop>
+                                    <Gereserveerd/>
+                                 </Subsubparagraaf>
+                                 <Subsubparagraaf eId="chp_3__subchp_1.3_subsec_5_subsubsec_3_subsubsubsec_3" wId="a">
+                                    <Kop>
+                                       <Label>SubsubParagraaf</Label>
+                                       <Nummer>3.1.3.5.3.3</Nummer>
+                                    </Kop>
+                                    <Artikel wId="a" eId="art_1">
+                                       <Kop>
+                                          <Label>Artikel</Label>
+                                          <Nummer>1</Nummer>
+                                       </Kop>
+                                       <Gereserveerd/>
+                                    </Artikel>
+                                    <Artikel wId="a" eId="art_2">
+                                       <Kop>
+                                          <Label>Artikel</Label>
+                                          <Nummer>2.</Nummer>
+                                       </Kop>
+                                       <Gereserveerd/>
+                                    </Artikel>
+                                    <Artikel wId="a" eId="art_3">
+                                       <Kop>
+                                          <Label>Artikel</Label>
+                                          <Nummer>3</Nummer>
+                                       </Kop>
+                                       <Lid wId="a" eId="art_3_lid_1">
+                                          <LidNummer>1.</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                       <Lid wId="a" eId="art_3_lid_2">
+                                          <LidNummer>3</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                       <Lid wId="a" eId="art_3_lid_3">
+                                          <LidNummer>3.</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                       <Lid wId="a" eId="art_3_lid_4">
+                                          <LidNummer>4</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                    </Artikel>
+                                    <Artikel wId="a" eId="art_4">
+                                       <Kop>
+                                          <Label>Artikel</Label>
+                                          <Nummer>4</Nummer>
+                                       </Kop>
+                                       <Lid wId="a" eId="art_4_lid_1">
+                                          <LidNummer>1a.</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                       <Lid wId="a" eId="art_4_lid_2">
+                                          <LidNummer>1b</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                       <Lid wId="a" eId="art_4_lid_3">
+                                          <LidNummer>1c.</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                       <Lid wId="a" eId="art_4_lid_4">
+                                          <LidNummer>1d</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                    </Artikel>
+                                 </Subsubparagraaf>
+                              </Subparagraaf>
                            </Paragraaf>
                         </Afdeling>
-                        <Afdeling eId="chp_3__subchp_1.3_subsec_3" wId="mnre1034_1-0__chp_1__subchp_1.3">
+                        <Afdeling eId="chp_3__subchp_1.3_subsec_6" wId="mnre1034_1-0__chp_1__subchp_1.3">
                            <Kop>
                               <Label>Afdeling</Label>
                               <Nummer>3.2.3.3.</Nummer>
                            </Kop>
                            <Gereserveerd/>
                         </Afdeling>
-                        <Afdeling eId="chp_3__subchp_1.3_subsec_4" wId="mnre1034_1-0__chp_1__subchp_1.3">
+                        <Afdeling eId="chp_3__subchp_1.3_subsec_7" wId="mnre1034_1-0__chp_1__subchp_1.3">
                            <Kop>
                               <Label>Afdeling</Label>
                               <Nummer>3.2.3.5</Nummer>

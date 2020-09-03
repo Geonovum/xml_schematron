@@ -260,8 +260,7 @@
     <sch:pattern id="TPOD_0490">
         <sch:rule context="//tekst:Titel">
             <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0490(.)"/>
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 { 
                 "code": "TPOD0490", 
@@ -269,18 +268,11 @@
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>", 
                 "regel": "Achter het cijfer van een titelnummer mag geen punt worden opgenomen.", 
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>." 
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>" 
                 }
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:foutenTPOD_0490">
-        <xsl:param name="context" as="node()"/>
-        <xsl:if test="ends-with($context/tekst:Kop/tekst:Nummer, '.')">
-            <xsl:value-of select="$context/@eId"/>
-        </xsl:if>
-    </xsl:function>
     
     <!-- ===========TPOD_0510================================================================================================================= -->
     
@@ -366,8 +358,7 @@
     <sch:pattern id="TPOD_0540">
         <sch:rule context="//tekst:Afdeling">
             <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0540(.)"/>
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD",
@@ -375,20 +366,11 @@
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Achter het laatste cijfer van een Afdelingnummer mag geen punt worden opgenomen.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
                 },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:foutenTPOD_0540">
-        <xsl:param name="context" as="node()"/>
-        <xsl:for-each select="$context/../tekst:Afdeling">
-            <xsl:if test="$context/@eId=@eId and ends-with(string(tekst:Kop/tekst:Nummer), '.')">
-                <xsl:value-of select="@eId"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
     
     <!-- ============TPOD_0560================================================================================================================ -->
     
@@ -501,30 +483,21 @@
     <!-- ============TPOD_0600================================================================================================================ -->
     
     <sch:pattern id="TPOD_0600">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Afdeling">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="afdeling" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0600(.)">
-            </sch:let>
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+        <sch:rule context="//tekst:Paragraaf">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0600: Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen.  
-                (betreft hoofdstuk: <sch:value-of select="../tekst:Kop/tekst:Nummer"/>, afdeling: <sch:value-of select="tekst:Kop/tekst:Nummer"/>, paragrafen: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</sch:assert>
+                {               
+                "code": "TPOD0600",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:foutenTPOD_0600">
-        <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Paragraaf">
-                <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
-    </xsl:function>
     
     <!-- ============TPOD_0620================================================================================================================ -->
     
@@ -599,30 +572,21 @@
     <!-- ============TPOD_0650================================================================================================================ -->
     
     <sch:pattern id="TPOD_0650">
-        <sch:rule context="//tekst:Afdeling/tekst:Paragraaf">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="paragraaf" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0650(.)">
-            </sch:let>
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+        <sch:rule context="//tekst:Subparagraaf">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0650: Achter het cijfer van een subparagraafnummer mag geen punt worden opgenomen. 
-                (betreft paragraaf: <sch:value-of select="$paragraaf"/>, subparagrafen: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</sch:assert>
+                {               
+                "code": "TPOD",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Achter het laatste cijfer van een Subparagraafnummer mag geen punt worden opgenomen.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:foutenTPOD_0650">
-        <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Subparagraaf">
-                <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
-    </xsl:function>
     
     <!-- ============TPOD_0670================================================================================================================ -->
     
@@ -698,30 +662,21 @@
     <!-- ============TPOD_0700================================================================================================================ -->
     
     <sch:pattern id="TPOD_0700">
-        <sch:rule context="//tekst:Paragraaf/tekst:Subparagraaf">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="subparagraaf" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0700(.)">
-            </sch:let>
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+        <sch:rule context="//tekst:Subsubparagraaf">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0700: Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen. 
-                (betreft subparagraaf: <sch:value-of select="$subparagraaf"/>,subsubparagrafen: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</sch:assert>
+                {               
+                "code": "TPOD0700",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen. ",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:foutenTPOD_0700">
-        <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Subsubparagraaf">
-                <xsl:if test="ends-with(tekst:Kop/tekst:Nummer, '.')">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
-    </xsl:function>
     
     <!-- ============TPOD_0720================================================================================================================ -->
     
@@ -909,44 +864,69 @@
     
     <sch:pattern id="TPOD_0750">
         <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="CONDITION" value="not(ends-with($artikel, '.'))"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0750: Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen. 
-                (betreft artikel: <sch:value-of select="$artikel"/>)</sch:assert>
+                {               
+                "code": "TPOD0750",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <!-- ============TPOD_0780================================================================================================================ -->
     
     <sch:pattern id="TPOD_0780">
-        <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
-            <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
+        <sch:rule context="//tekst:Lid">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0780(.)"/>
-            
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
+            <sch:let name="CONDITION" value="string-length($volgorde[1]) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0780: Leden moeten per artikel oplopend genummerd worden in Arabische cijfers
-                (en indien nodig, een letter). 
-                (betreft artikel: <sch:value-of select="$artikel"/>, leden: <sch:value-of
-                    select="substring($volgorde, 1, string-length($volgorde) - 2)"/>)</sch:assert>
+                {               
+                "code": "TPOD0780",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:LidNummer)"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0780">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Lid">
-                <xsl:if test="not(string(tekst:LidNummer)=concat(string(position()), '.'))">
-                    <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
+        <xsl:for-each select="$context/../tekst:Lid">
+            <xsl:if test="$context/@eId=@eId">
+                <xsl:choose>
+                    <xsl:when test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
+                        <xsl:choose>
+                            <xsl:when test="matches(tekst:LidNummer, '\d{1,2}\.')">
+                                <xsl:if test="not(string(tekst:LidNummer)=concat(string(position()),'.'))">
+                                    <xsl:value-of select="@eId"/>
+                                </xsl:if>
+                            </xsl:when>
+                            <xsl:when test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
+                                <xsl:if test="not(ends-with(tekst:LidNummer, '.'))">
+                                    <xsl:value-of select="@eId"/>
+                                </xsl:if>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="@eId"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="@eId"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:function>
     
     <!-- ============TPOD_0781================================================================================================================ -->

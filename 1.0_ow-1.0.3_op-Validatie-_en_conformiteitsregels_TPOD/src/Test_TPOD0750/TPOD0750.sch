@@ -127,21 +127,18 @@
 
     <sch:pattern id="TPOD_0750">
         <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="CONDITION" value="not(ends-with($artikel, '.'))"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD0750",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
                 },
-                TPOD_0750: Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen. 
-                (betreft artikel: <sch:value-of select="$artikel"/>)</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 

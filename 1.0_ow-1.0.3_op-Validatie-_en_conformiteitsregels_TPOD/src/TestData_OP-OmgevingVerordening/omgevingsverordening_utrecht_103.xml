@@ -10729,7 +10729,7 @@
                               <Nummer>9.1.1</Nummer>
                               <Opschrift>Bestaande en nieuwe stedelijke functies landelijk gebied</Opschrift>
                            </Kop>
-                           <Artikel eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.1"
+                           <Artikel eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.11"
                                     wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.1">
                               <Kop>
                                  <Label>Artikel</Label>
@@ -10749,19 +10749,19 @@
                                  <Nummer>9.2</Nummer>
                                  <Opschrift>Verstedelijkingsverbod Landelijk gebied</Opschrift>
                               </Kop>
-                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.2" eId="aaa">
+                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.22" eId="aaa1">
                                  <LidNummer>1.</LidNummer>
                                  <Inhoud><Al>Een omgevingsplan</Al></Inhoud>
                               </Lid>
-                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.2" eId="aaa">
+                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.23" eId="aaa2">
                                  <LidNummer>3.</LidNummer>
                                  <Inhoud><Al>Een omgevingsplan</Al></Inhoud>
                               </Lid>
-                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.2" eId="aaa">
+                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.24" eId="aaa3">
                                  <LidNummer>3.</LidNummer>
                                  <Inhoud><Al>Een omgevingsplan</Al></Inhoud>
                               </Lid>
-                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.2" eId="aaa">
+                              <Lid wId="chp_9__subsec_9.1__subsec_9.1.1__art_9.25" eId="aaa4">
                                  <LidNummer>4.</LidNummer>
                                  <Inhoud><Al>Een omgevingsplan</Al></Inhoud>
                               </Lid>
@@ -10926,15 +10926,15 @@
                                  <Nummer>9.6</Nummer>
                                  <Opschrift>Instructieregel Recreatiewoningen</Opschrift>
                               </Kop>
-                              <Lid eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.5__para_2"
+                              <Lid eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.6__para_2"
                                  wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.5__para_2">
                                  <LidNummer>1.</LidNummer>
                                  <Inhoud>
                                     <Al>De motivering op een omgevingsplan bevat een onderbouwing waaruit blijkt dat aan de genoemde voorwaarden is voldaan. Een beeldkwaliteitsparagraaf maakt onderdeel uit van de onderbouwing.</Al>
                                  </Inhoud>
                               </Lid>
-                              <Lid eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.5__para_2"
-                                 wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.5__para_2">
+                              <Lid eId="chp_9__subsec_9.1__subsec_9.1.1__art_9.6__para_2"
+                                 wId="pv26_1-0__chp_9__subsec_9.1__subsec_9.1.1__art_9.6__para_2">
                                  <LidNummer>2</LidNummer>
                                  <Inhoud>
                                     <Al>De motivering op een omgevingsplan bevat een onderbouwing waaruit blijkt dat aan de genoemde voorwaarden is voldaan. Een beeldkwaliteitsparagraaf maakt onderdeel uit van de onderbouwing.</Al>
