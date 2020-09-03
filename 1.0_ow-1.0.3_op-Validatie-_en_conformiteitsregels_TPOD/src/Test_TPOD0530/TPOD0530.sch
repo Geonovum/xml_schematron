@@ -127,44 +127,31 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_0530">
-        <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0530($hoofdstuk, .)"/>
+        <sch:rule context="//tekst:Afdeling">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0530(.)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD0530",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Afdelingen moeten oplopend worden genummerd in Arabische cijfers.",
+                "melding": " <sch:value-of select="@eId"/> "
                 },
-                TPOD_0530: Afdelingen moeten oplopend worden genummerd in Arabische cijfers. 
-                (betreft hoofdstukken: <sch:value-of select="$hoofdstuk"/>, afdelingen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
         
     <xsl:function name="foo:volgordeTPOD_0530">
-        <xsl:param name="hoofdstuk" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-        <xsl:for-each select="$context/tekst:Afdeling">
-            <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($hoofdstuk, '.', string(position())))">
-                <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+        <xsl:for-each select="$context/../tekst:Afdeling">
+            <xsl:message select="string(tekst:Kop/tekst:Nummer)"/>
+            <xsl:message select="substring-after(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer,'.'))"/>
+            <xsl:if test="$context/@eId=@eId and not(substring-after(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer,'.'))=string(position()))">
+                <xsl:value-of select="@eId"/>
             </xsl:if>
         </xsl:for-each>
-            <xsl:for-each select="$context/tekst:Titel">
-            <xsl:variable name="titel" select="string(tekst:Kop/tekst:Nummer)"/>
-            <xsl:for-each select="tekst:Afdeling">
-                <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($titel, '.', string(position())))">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
     </xsl:function>
 </sch:schema>

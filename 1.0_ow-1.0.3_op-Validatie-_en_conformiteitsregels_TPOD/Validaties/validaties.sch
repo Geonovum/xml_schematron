@@ -310,7 +310,6 @@
             <sch:let name="volgorde" value="foo:volgordeTPOD_0520(.)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                <xsl:value-of select="'naaaa'"/>
                 {               
                 "code": "TPOD",
                 "ernst": "Waarschuwing",
@@ -326,7 +325,7 @@
     <xsl:function name="foo:volgordeTPOD_0520">
         <xsl:param name="context" as="node()"/>
         <xsl:for-each select="$context/../tekst:Afdeling">
-            <xsl:if test="$context/@eId=@eId and not(string(tekst:Kop/tekst:Nummer)=concat($context/../tekst:Kop/tekst:Nummer, '.', string(position()), '.'))">
+            <xsl:if test="$context/@eId=@eId and not(starts-with(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer, '.')))">
                 <xsl:value-of select="@eId"/>
             </xsl:if>
         </xsl:for-each>
