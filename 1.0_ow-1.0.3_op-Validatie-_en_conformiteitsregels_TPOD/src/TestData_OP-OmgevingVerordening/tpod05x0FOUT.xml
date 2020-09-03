@@ -20,9 +20,16 @@
                         </Kop>
                         <Gereserveerd/>
                      </Afdeling>
-                     <Afdeling eId="chp_1__subchp_1.2" wId="chp_1__subchp_1.2">
+                     <Afdeling eId="chp_2__subchp_1.2" wId="chp_1__subchp_1.2">
                         <Kop>
-                           <Nummer>1.2</Nummer>
+                           <Nummer>2.2</Nummer>
+                           <Label>CabernetSauvignon</Label>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Afdeling>
+                     <Afdeling eId="chp_1__subchp_1.3" wId="chp_1__subchp_1.2">
+                        <Kop>
+                           <Nummer>1.3</Nummer>
                            <Label>CabernetSauvignon</Label>
                         </Kop>
                         <Gereserveerd/>

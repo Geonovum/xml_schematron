@@ -126,38 +126,30 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_0560">
-        <sch:rule context="//tekst:Lichaam/tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0560($hoofdstuk, .)"/>
+        <sch:rule context="//tekst:Hoofdstuk/tekst:Afdeling">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="fouten" value="foo:volgordeTPOD_0560(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD0560",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt. ",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
                 },
-                TPOD_0560: Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van
-                Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt. 
-                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, afdelingen: <sch:value-of select="substring($fouten, 1, string-length($fouten) - 2)"/>) </sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:foutenTPOD_0560">
-        <xsl:param name="hoofdstuk"/>
+    <xsl:function name="foo:volgordeTPOD_0560">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Afdeling">
-                <xsl:if test="not(starts-with(tekst:Kop/tekst:Nummer, concat($hoofdstuk, '.')))">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer), ', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
+        <xsl:for-each select="$context/../tekst:Afdeling">
+            <xsl:if test="$context/@eId=@eId and not(starts-with(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer, '.')))">
+                <xsl:value-of select="@eId"/>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:function>
-
+    
 </sch:schema>
