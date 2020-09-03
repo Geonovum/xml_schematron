@@ -90,7 +90,20 @@
                               <Label>Afdeling</Label>
                               <Nummer>3.1.3</Nummer>
                            </Kop>
-                           <Gereserveerd/>
+                           <Paragraaf eId="chp_3__subchp_1.3_subsec_1" wId="a">
+                              <Kop>
+                                 <Label>Paragraaf</Label>
+                                 <Nummer>3.1.3.1</Nummer>
+                              </Kop>
+                              <Gereserveerd/>
+                           </Paragraaf>
+                           <Paragraaf eId="chp_3__subchp_1.3_subsec_2" wId="a">
+                              <Kop>
+                                 <Label>Paragraaf</Label>
+                                 <Nummer>3.1.2.2</Nummer>
+                              </Kop>
+                              <Gereserveerd/>
+                           </Paragraaf>
                         </Afdeling>
                         <Afdeling eId="chp_3__titel_1_subchp_1.3" wId="mnre1034_1-0__chp_1__subchp_1.3">
                            <Kop>
@@ -100,6 +113,36 @@
                            <Gereserveerd/>
                         </Afdeling>
                      </Titel>
+                  </Hoofdstuk>
+                  <Hoofdstuk wId="chp_4" eId="chp_4">
+                     <Kop>
+                        <Label>Hoofdstuk</Label>
+                        <Nummer>4</Nummer>
+                     </Kop>
+                     <Paragraaf eId="chp_4__subsec_1.1" wId="pv26_1-0__chp_1__subsec_1.1">
+                        <Kop>
+                           <Label>Paragraaf</Label>
+                           <Nummer>4.1</Nummer>
+                           <Opschrift>Inleidende bepalingen</Opschrift>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Paragraaf>
+                     <Paragraaf eId="chp_4__subsec_1.2" wId="pv26_1-0__chp_1__subsec_1.1">
+                        <Kop>
+                           <Label>§</Label>
+                           <Nummer>4.2</Nummer>
+                           <Opschrift>Inleidende bepalingen</Opschrift>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Paragraaf>
+                     <Paragraaf eId="chp_4__subsec_1.3" wId="pv26_1-0__chp_1__subsec_1.1">
+                        <Kop>
+                           <Label>Saturnus</Label>
+                           <Nummer>4.3</Nummer>
+                           <Opschrift>Inleidende bepalingen</Opschrift>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Paragraaf>
                   </Hoofdstuk>
                </Lichaam>
             </RegelingCompact>

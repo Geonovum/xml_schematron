@@ -127,38 +127,30 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_0580">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Afdeling">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="afdeling" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0580($afdeling, .)"/>
+        <sch:rule context="//tekst:Afdeling/tekst:Paragraaf">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0580( .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD0580",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin de Paragraaf voorkomt, gevolgd door een punt.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
                 },
-                TPOD_0580: De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin de Paragraaf voorkomt, gevolgd door een punt. 
-                (betreft afdeling: <sch:value-of select="$afdeling"/>, paragrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0580">
-        <xsl:param name="afdeling" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Paragraaf">
-                <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($afdeling, '.', string(position())))">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
+        <xsl:for-each select="$context/../tekst:Paragraaf">
+            <xsl:if test="$context/@eId=@eId and not(starts-with(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer, '.')))">
+                <xsl:value-of select="@eId"/>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:function>
     
-
 </sch:schema>
