@@ -127,57 +127,49 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_0790">
-        <sch:rule context="//tekst:Artikel">
+        <sch:rule context="//tekst:Lid">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0790(.)"/>
-            
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD0790",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Het eerste lid van ieder artikel krijgt het nummer 1",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>: <sch:value-of select="tekst:LidNummer"/>"
                 },
-                TPOD_0790: Het eerste lid van ieder artikel krijgt het nummer 1. 
-                (betreft artikel: <sch:value-of select="$artikel"/>, lid: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0790">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Lid">
+            <xsl:for-each select="$context/../tekst:Lid">
                 <xsl:if test="position() = 1">
                     <xsl:choose>
                         <xsl:when
                             test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
                             <xsl:if test="matches(tekst:LidNummer, '\d{1,2}\.')">
-                                <xsl:if
-                                    test="not(string(tekst:LidNummer) = '1.')">
-                                    <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
+                                <xsl:if test="not(string(tekst:LidNummer) = '1.')">
+                                    <xsl:value-of select="@eId"/>
                                 </xsl:if>
                             </xsl:if>
                             <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
                                 <xsl:variable name="first" select="tokenize(tekst:LidNummer, '[a-z]{1}')[1]"/>
-                                <xsl:if
-                                    test="not(string($first) = string(1))">
-                                    <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
+                                <xsl:if test="not(string($first) = string(1))">
+                                    <xsl:value-of select="@eId"/>
                                 </xsl:if>
                             </xsl:if>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
+                            <xsl:value-of select="@eId"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:if>
             </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
     </xsl:function>
 
 </sch:schema>

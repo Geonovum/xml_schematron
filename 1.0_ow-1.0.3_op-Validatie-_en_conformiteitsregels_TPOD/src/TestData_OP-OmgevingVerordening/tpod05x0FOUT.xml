@@ -180,7 +180,12 @@
                                           <Label>Artikel</Label>
                                           <Nummer>2.</Nummer>
                                        </Kop>
-                                       <Gereserveerd/>
+                                       <Lid wId="a" eId="art_3_lid_1">
+                                          <LidNummer>1.</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
                                     </Artikel>
                                     <Artikel wId="a" eId="art_3">
                                        <Kop>
@@ -237,6 +242,54 @@
                                        </Lid>
                                        <Lid wId="a" eId="art_4_lid_4">
                                           <LidNummer>1d</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                    </Artikel>
+                                    <Artikel wId="a" eId="art_5">
+                                       <Kop>
+                                          <Label>Artikel</Label>
+                                          <Nummer>5</Nummer>
+                                       </Kop>
+                                       <Lid wId="a" eId="art_5_lid_1">
+                                          <LidNummer>1.</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                    </Artikel>
+                                    <Artikel wId="a" eId="art_6">
+                                       <Kop>
+                                          <Label>Artikel</Label>
+                                          <Nummer>6</Nummer>
+                                       </Kop>
+                                       <Lid wId="a" eId="art_6_lid_1">
+                                          <LidNummer>1a.</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                    </Artikel>
+                                    <Artikel wId="a" eId="art_7">
+                                       <Kop>
+                                          <Label>Artikel</Label>
+                                          <Nummer>7</Nummer>
+                                       </Kop>
+                                       <Lid wId="a" eId="art_7_lid_1">
+                                          <LidNummer>10.</LidNummer>
+                                          <Inhoud>
+                                             <Al>Lid</Al>
+                                          </Inhoud>
+                                       </Lid>
+                                    </Artikel>
+                                    <Artikel wId="a" eId="art_8">
+                                       <Kop>
+                                          <Label>Artikel</Label>
+                                          <Nummer>8</Nummer>
+                                       </Kop>
+                                       <Lid wId="a" eId="art_8_lid_1">
+                                          <LidNummer>10a.</LidNummer>
                                           <Inhoud>
                                              <Al>Lid</Al>
                                           </Inhoud>
