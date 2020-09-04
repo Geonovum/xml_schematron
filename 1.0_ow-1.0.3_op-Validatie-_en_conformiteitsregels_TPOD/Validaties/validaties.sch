@@ -1259,7 +1259,16 @@
             <sch:let name="fout" value="foo:aantalTPOD_0930_28992(.)"/>
             <sch:let name="CONDITION" value="string-length($fout) = 0"/>
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"><sch:value-of select="$fout"/></sch:assert>
+            <sch:assert test="$ASSERT">
+                {               
+                "code": "TPOD0930",
+                "ernst": "Blokkerend",
+                "id": "<sch:value-of select="../basisgeo:id"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten. Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.",
+                "melding": "<sch:value-of select="$fout"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1269,7 +1278,16 @@
             <sch:let name="fout" value="foo:aantalTPOD_0930_4258(.)"/>
             <sch:let name="CONDITION" value="string-length($fout) = 0"/>
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT"><sch:value-of select="$fout"/></sch:assert>
+            <sch:assert test="$ASSERT">
+                {               
+                "code": "TPOD0930",
+                "ernst": "Blokkerend",
+                "id": "<sch:value-of select="../basisgeo:id"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten. Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.",
+                "melding": "<sch:value-of select="$fout"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1283,8 +1301,8 @@
                     <xsl:if test="string-length($fouteCoord) > 0">
                         <xsl:value-of
                             select="
-                            concat(' TP0D0930: EPSG:28992 (=RD new), coördinaten in meters, maximaal 3 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
-                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
+                            concat(' EPSG:28992 (=RD new), coördinaten in meters: Maximaal 3 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 80), '.....'))"
                         />
                     </xsl:if>
                 </xsl:if>
@@ -1303,8 +1321,8 @@
                     <xsl:if test="string-length($fouteCoord) > 0">
                         <xsl:value-of
                             select="
-                            concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten in graden, maximaal 8 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
-                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
+                            concat(' EPSG:4258 (=ETRS89) coördinaten in graden, Maximaal 8 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                            concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 80), '.....'))"
                         />
                     </xsl:if>
                 </xsl:if>
@@ -1327,22 +1345,28 @@
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$fouteCoord"/>
-    </xsl:function>    
+    </xsl:function>   
     
     <!-- ============TPOD_0940================================================================================================================ -->    
     
     <sch:pattern id="TPOD_0940">
         <sch:rule
-            context="/geo:FeatureCollectionGeometrie/geo:featureMember/geo:Geometrie/geo:geometrie">
+            context="//basisgeo:geometrie">
             <sch:let name="APPLICABLE"
                 value="true()"/>
             <sch:let name="crs" value="foo:crsTPOD_0940(.)"/>
             <sch:let name="crsses" value="foo:crssesTPOD_0940($crs, .)"/>
             <sch:let name="CONDITION" value="string-length($crsses) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TPOD940: Een geometrie moet zijn
-                opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD new) of
-                EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/geo:id"/>: </sch:assert>
+                {               
+                "code": "TPOD0940",
+                "ernst": "Blokkerend",
+                "id": "<sch:value-of select="../basisgeo:id"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs)",
+                "melding": "EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=<sch:value-of select="../basisgeo:id"/> bevat een combinatie van beiden."
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     

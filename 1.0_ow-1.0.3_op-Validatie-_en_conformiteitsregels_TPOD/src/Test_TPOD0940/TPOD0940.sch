@@ -136,9 +136,9 @@
             <sch:let name="CONDITION" value="string-length($crsses) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               
-                "code": "TPOD",
+                "code": "TPOD0940",
                 "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="../basisgeo:id"/>",
+                "id": "<sch:value-of select="../basisgeo:id"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs)",
                 "melding": "EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=<sch:value-of select="../basisgeo:id"/> bevat een combinatie van beiden."

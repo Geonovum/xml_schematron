@@ -164,7 +164,7 @@
             <geo:Locatie>
                <geo:geometrie>
                   <basisgeo:Geometrie gml:id="id-D28AF779-7EDD-4A88-8B11-809798F53632-xx">
-                     <basisgeo:id>D28AF779-7EDD-4A88-8B11-809798F53636</basisgeo:id>
+                     <basisgeo:id>D28AF779-7EDD-4A88-8B11-809798F53632</basisgeo:id>
                      <basisgeo:geometrie>
                         <gml:MultiSurface srsName="urn:ogc:def:crs:EPSG::28992"
                            gml:id="id-D28AF779-7EDD-4A88-8B11-809798F53632-0">
