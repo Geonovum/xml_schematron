@@ -134,7 +134,7 @@
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD0570",
-                "ernst": "",
+                "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken.",

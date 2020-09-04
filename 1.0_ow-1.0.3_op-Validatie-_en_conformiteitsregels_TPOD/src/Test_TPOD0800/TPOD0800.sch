@@ -126,37 +126,20 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_0800">
-        <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="artikel" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0800(.)">
-            </sch:let>
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
+        <sch:rule context="//tekst:Lid">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="ends-with(string(tekst:LidNummer),'.')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD0800",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Achter het lidnummer moet een punt worden opgenomen.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>: <sch:value-of select="tekst:LidNummer"/>"
                 },
-                TPOD_0800: Achter het lidnummer moet een punt worden opgenomen. 
-                (betreft artikel: <sch:value-of select="$artikel"/>, lidnummers: <sch:value-of select="substring($fouten,1,string-length($fouten)-2)"/>)</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:foutenTPOD_0800">
-        <xsl:param name="context" as="node()"/>
-        <xsl:variable name="volgorde">
-            <xsl:for-each select="$context/tekst:Lid">
-                <xsl:if test="not(ends-with(tekst:LidNummer, '.'))">
-                    <xsl:value-of select="concat(string(tekst:LidNummer),', ')"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$volgorde"/>
-    </xsl:function>
 
 </sch:schema>
