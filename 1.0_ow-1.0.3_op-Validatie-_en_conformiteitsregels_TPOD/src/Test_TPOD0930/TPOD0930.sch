@@ -130,14 +130,14 @@
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert test="$ASSERT">
                 {               
-                "code": "TPOD",
-                "ernst": "",
+                "code": "TPOD0930",
+                "ernst": "Blokkerend",
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten. Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.",
+                "melding": "<sch:value-of select="$fout"/>"
                 },
-                <sch:value-of select="$fout"/></sch:assert>
+                </sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -149,13 +149,14 @@
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
             <sch:assert test="$ASSERT">
                 {               
-                "code": "TPOD",
+                "code": "TPOD0930",
+                "ernst": "Blokkerend",
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten. Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.",
+                "melding": "<sch:value-of select="$fout"/>"
                 },
-                <sch:value-of select="$fout"/></sch:assert>
+                </sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -169,8 +170,8 @@
                         <xsl:if test="string-length($fouteCoord) > 0">
                             <xsl:value-of
                                 select="
-                                    concat(' TP0D0930: EPSG:28992 (=RD new), coördinaten in meters, maximaal 3 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
-                                    concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
+                                    concat(' EPSG:28992 (=RD new), coördinaten in meters: Maximaal 3 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                                    concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 80), '.....'))"
                             />
                         </xsl:if>
                     </xsl:if>
@@ -189,8 +190,8 @@
                         <xsl:if test="string-length($fouteCoord) > 0">
                             <xsl:value-of
                                 select="
-                                concat(' TP0D0930: EPSG:4258 (=ETRS89) coördinaten in graden, maximaal 8 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
-                                concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 50), '.....'))"
+                                concat(' EPSG:4258 (=ETRS89) coördinaten in graden, Maximaal 8 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                                concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 80), '.....'))"
                             />
                         </xsl:if>
                     </xsl:if>
