@@ -129,13 +129,24 @@
 
     <sch:pattern id="TPOD_0780">
         <sch:rule context="//tekst:Lid">
-            <sch:let name="APPLICABLE" value="$omgevingsplan-en-waterschap"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0780(.)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+            <sch:let name="APPLICABLE" value="$omgevingsverordening"/>
+            <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0780(.)"/>
+            <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD0780",
                 "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
+                "melding": "De nummering van Leden ( <sch:value-of select="string(tekst:LidNummer)"/> ) bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren."
+                },
+            </sch:assert> 
+            <sch:let name="volgorde" value="foo:volgordeTPOD_0780($bevatLetters,.)"/>
+            <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
+                {               
+                "code": "TPOD0780",
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
@@ -145,33 +156,48 @@
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:volgordeTPOD_0780">
+    <xsl:function name="foo:bevatGeletterdeNummersTPOD_0780">
         <xsl:param name="context" as="node()"/>
-        <xsl:for-each select="$context/../tekst:Lid">
-            <xsl:if test="$context/@eId=@eId">
-            <xsl:choose>
-                <xsl:when test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
+        <xsl:variable name="bevatLetters">
+            <xsl:for-each select="$context/../tekst:Lid">
+                <xsl:if test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1,2}\.')">
+                    <xsl:value-of select="concat(string(tekst:LidNummer), ', ')"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$bevatLetters"/>
+    </xsl:function>
+    
+    <xsl:function name="foo:volgordeTPOD_0780">
+        <xsl:param name="bevatLetters"/>
+        <xsl:param name="context" as="node()"/>
+        <xsl:if test="string-length($bevatLetters) = 0">
+            <xsl:for-each select="$context/../tekst:Lid">
+                <xsl:if test="$context/@eId=@eId">
                     <xsl:choose>
-                        <xsl:when test="matches(tekst:LidNummer, '\d{1,2}\.')">
-                            <xsl:if test="not(string(tekst:LidNummer)=concat(string(position()),'.'))">
-                                <xsl:value-of select="@eId"/>
-                            </xsl:if>
-                        </xsl:when>
-                        <xsl:when test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
-                            <xsl:if test="not(ends-with(tekst:LidNummer, '.'))">
-                                <xsl:value-of select="@eId"/>
-                            </xsl:if>
+                        <xsl:when test="(matches(tekst:LidNummer, '\d{1,2}\.')) or (matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.'))">
+                            <xsl:choose>
+                                <xsl:when test="matches(tekst:LidNummer, '\d{1,2}\.')">
+                                    <xsl:if test="not(string(tekst:LidNummer)=concat(string(position()),'.'))">
+                                        <xsl:value-of select="@eId"/>
+                                    </xsl:if>
+                                </xsl:when>
+                                <xsl:when test="matches(tekst:LidNummer, '\d{1,2}[a-z]{1}\.')">
+                                    <xsl:if test="not(ends-with(tekst:LidNummer, '.'))">
+                                        <xsl:value-of select="@eId"/>
+                                    </xsl:if>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="@eId"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:value-of select="@eId"/>
                         </xsl:otherwise>
                     </xsl:choose>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:value-of select="@eId"/>
-                </xsl:otherwise>
-            </xsl:choose>
-            </xsl:if>
-        </xsl:for-each>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:if>
     </xsl:function>
 </sch:schema>

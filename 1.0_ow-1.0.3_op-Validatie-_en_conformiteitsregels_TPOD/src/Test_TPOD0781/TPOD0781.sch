@@ -136,10 +136,10 @@
                 {               
                 "code": "TPOD0781",
                 "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De nummering van Leden bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:LidNummer)"/>"
+                "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
+                "melding": "De nummering van Leden ( <sch:value-of select="string(tekst:LidNummer)"/> ) bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren."
                 },
             </sch:assert> 
             <sch:let name="volgorde" value="foo:volgordeTPOD_0781($bevatLetters,.)"/>
@@ -147,7 +147,7 @@
             <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD0781",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
                 "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:LidNummer)"/>"
