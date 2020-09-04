@@ -136,7 +136,7 @@
                 {               
                 "code": "TPOD0840_0841",
                 "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "De onderdelen van de Lijst op het tweede niveau moeten worden aangegeven met Arabische cijfers.",
                 "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
