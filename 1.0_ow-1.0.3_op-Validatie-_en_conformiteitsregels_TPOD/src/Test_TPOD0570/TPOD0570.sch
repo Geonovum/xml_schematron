@@ -128,17 +128,16 @@
 
     <sch:pattern id="TPOD_0570">
         <sch:rule context="//tekst:Paragraaf/tekst:Kop[(lower-case(tekst:Label) ne '§') and (tekst:Label ne 'Paragraaf')]">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD0570",
                 "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="../@eId"/>."
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
                 },
             </sch:assert>
         </sch:rule>

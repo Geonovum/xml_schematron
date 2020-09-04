@@ -291,7 +291,51 @@
                                        <Lid wId="a" eId="art_8_lid_1">
                                           <LidNummer>10a.</LidNummer>
                                           <Inhoud>
-                                             <Al>Lid</Al>
+                                             <Lijst type="expliciet" wId="aaa" eId="art_8_lid_1__lijst1">
+                                                <!-- 1 -->
+                                                <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                                                <Li wId="aaa" eId="art_8_lid_1__lijst1_li_1">
+                                                   <LiNummer>1</LiNummer>
+                                                   <Al>Lijst 1</Al>
+                                                </Li>
+                                                <Li wId="aaa" eId="aaa">
+                                                   <LiNummer>2</LiNummer>
+                                                   <Lijst type="expliciet" wId="aaa" eId="art_8_lid_1__lijst2">
+                                                      <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                                                      <!-- 2 -->
+                                                      <Li wId="aaa" eId="art_8_lid_1__lijst2_li1">
+                                                         <LiNummer>1</LiNummer>
+                                                         <Al>Lijst 2</Al>
+                                                      </Li>
+                                                      <Li wId="aaa" eId="art_8_lid_1__lijst2_li2">
+                                                         <LiNummer>2</LiNummer>
+                                                         <Al>bla bla</Al>
+                                                      </Li>
+                                                      <Li wId="aaa" eId="art_8_lid_1__lijst2_li3">
+                                                         <LiNummer>3</LiNummer>
+                                                         <Lijst type="expliciet" wId="aaa" eId="art_8_lid_1__lijst3">
+                                                            <!-- 3 -->
+                                                            <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                                                            <Li wId="aaa" eId="art_8_lid_1__lijst3_li1">
+                                                               <LiNummer>a</LiNummer>
+                                                               <Al>bla bla bla</Al>
+                                                            </Li>
+                                                            <Li wId="aaa" eId="art_8_lid_1__lijst3_li2">
+                                                               <LiNummer>2</LiNummer>
+                                                               <Lijst type="expliciet" wId="aaa" eId="art_8_lid_1__lijst4">
+                                                                  <!-- 4 -->
+                                                                  <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
+                                                                  <Li wId="aaa" eId="art_8_lid_1__lijst4_li1">
+                                                                     <LiNummer>1</LiNummer>
+                                                                     <Al>bla bla bla bla</Al>
+                                                                  </Li>
+                                                               </Lijst>
+                                                            </Li>
+                                                         </Lijst>
+                                                      </Li>
+                                                   </Lijst>
+                                                </Li>
+                                             </Lijst>
                                           </Inhoud>
                                        </Lid>
                                     </Artikel>

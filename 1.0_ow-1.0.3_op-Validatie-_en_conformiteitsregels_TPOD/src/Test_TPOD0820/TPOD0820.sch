@@ -127,45 +127,19 @@
 
     <sch:pattern id="TPOD_0820">
         <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="ancestorsFout" value="foo:lijstAncestorsTPOD_0820(.)">
-            </sch:let>
-            <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="count(ancestor-or-self::tekst:Lijst)&lt;4"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD0820",
+                "ernst": "Blokkerend",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Lijsten mogen in ten hoogste drie niveaus gebruikt worden.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
                 },
-                TPOD_0820: <sch:value-of select="$ancestorsFout"/></sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:lijstAncestorsTPOD_0820">
-        <xsl:param name="context" as="node()"/>
-        <xsl:variable name="fout">
-            <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
-            <xsl:if test="$ancestors > 3">
-                <xsl:variable name="lid" select="$context/ancestor::tekst:Lid"/>
-                <xsl:variable name="bijlage" select="$context/ancestor::tekst:Bijlage"/>
-                <xsl:choose>
-                    <xsl:when test="$lid">
-                        <xsl:value-of select="concat('In artikel ',$lid/ancestor::tekst:Artikel/tekst:Kop/tekst:Nummer,', lid ',$lid/tekst:LidNummer/text(),' is een lijst met ',string($ancestors), ' niveaus, niet meer dan 3 is toegestaan.')"/>
-                    </xsl:when>
-                    <xsl:when test="$bijlage">
-                        <xsl:value-of select="concat('In bijlage ',$context/ancestor::tekst:Bijlage/tekst:Kop/tekst:Nummer,' is een lijst met ',string($ancestors), ' niveaus, niet meer dan 3 is toegestaan.')"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="concat('In artikel ',$context/ancestor::tekst:Artikel/tekst:Kop/tekst:Nummer,' is een lijst met ',string($ancestors), ' niveaus, niet meer dan 3 is toegestaan.')"/>    
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:if>
-        </xsl:variable>
-        <xsl:value-of select="$fout"/>
-    </xsl:function>
 
 </sch:schema>

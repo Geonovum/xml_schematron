@@ -129,20 +129,18 @@
 
     <sch:pattern id="TPOD_0810">
         <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$omgevingsplan-en-waterschap"/>
             <sch:let name="CONDITION" value="name(*[1])='Lijstaanhef'"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD0810",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Een Lijst wordt altijd voorafgegaan door een inleidende tekst, oftewel de Lijstaanhef.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
                 },
-                TPOD_0810: Een Lijst wordt altijd voorafgegaan door een inleidende tekst, oftewel de Lijstaanhef.
-                Betreft: Lijst met wId: <sch:value-of select="string(./@wId)"/></sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
