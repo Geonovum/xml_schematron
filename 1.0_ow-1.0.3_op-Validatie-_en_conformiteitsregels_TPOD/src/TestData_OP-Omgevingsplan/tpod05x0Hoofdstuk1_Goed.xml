@@ -19,7 +19,14 @@
                            <Nummer>1.1</Nummer>
                            <Opschrift>ALGEMEEN</Opschrift>
                         </Kop>
-                        <Gereserveerd/>
+                        <Artikel wId="abd" eId="chp_1__subchp_1.1__art_1">
+                           <Kop>
+                              <Label>Artikel</Label>
+                              <Nummer>1</Nummer>
+                              <Opschrift>begripsbepalingen</Opschrift>
+                           </Kop>
+                           <Gereserveerd/>
+                        </Artikel>
                      </Afdeling>
                      <Afdeling eId="chp_2__subchp_1.2" wId="chp_1__subchp_1.2">
                         <Kop>

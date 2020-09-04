@@ -7,7 +7,7 @@
             <RegelingCompact componentnaam="initieel_reg"
                              wordt="/akn/nl/act/pv26/2020/OVPU001/nld@2020-06-09;1-0">
                <Lichaam eId="body" wId="body">
-                  <Hoofdstuk wId="chp_1" eId="aaa_1">
+                  <Hoofdstuk wId="chp_1" eId="aaa_1aaa">
                      <Kop>
                         <Label>Een Hoofdstuk</Label>
                         <Nummer>1</Nummer>
@@ -18,7 +18,13 @@
                            <Nummer>1.1</Nummer>
                            <Opschrift>ALGEMEEN</Opschrift>
                         </Kop>
-                        <Gereserveerd/>
+                        <Artikel wId="aaa" eId="chp_1__subchp_1.1__art_1">
+                           <Kop>
+                              <Nummer>1</Nummer>
+                              <Label>Artikel</Label>
+                              <Opschrift>Begripsbepalingen</Opschrift>
+                           </Kop>
+                        </Artikel>
                      </Afdeling>
                      <Afdeling eId="chp_2__subchp_1.2" wId="chp_1__subchp_1.2">
                         <Kop>

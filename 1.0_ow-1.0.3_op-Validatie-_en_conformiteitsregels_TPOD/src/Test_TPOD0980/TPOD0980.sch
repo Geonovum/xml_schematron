@@ -131,17 +131,17 @@
         <sch:rule context="//tekst:Hoofdstuk[tekst:Kop/tekst:Nummer/text() eq '1']">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)) > 0"/>
+            <sch:let name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)[1]) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Hoofdstuk 1 moet een artikel 'begripsbepalingen' bevatten.",
+                "melding": "Dit is niet aangetroffen in Hoofdstuk <sch:value-of select="@eId"/>."
                 },
-                TPOD_0980: Een OW-besluit moet minimaal één hoofdstuk 1 bevatten met artikel met opschrift Begripsbepaling. </sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -149,7 +149,7 @@
         <xsl:param name="context" as="node()"/>
         <xsl:for-each select="$context/descendant::tekst:Artikel">
             <xsl:if test="lower-case(tekst:Kop/tekst:Opschrift/text()) = 'begripsbepalingen'">
-                <xsl:value-of select="tekst:Kop/tekst:Opschrift/text()"/>
+                <xsl:value-of select="@eId"/>
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
