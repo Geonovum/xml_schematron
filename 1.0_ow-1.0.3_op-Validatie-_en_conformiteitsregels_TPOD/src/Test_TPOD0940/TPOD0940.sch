@@ -137,14 +137,13 @@
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               
                 "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "ernst": "Blokkerend",
+                "eId": "<sch:value-of select="../basisgeo:id"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs)",
+                "melding": "EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=<sch:value-of select="../basisgeo:id"/> bevat een combinatie van beiden."
                 },
-                H:TP0D940: Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): 
-                EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=<sch:value-of select="parent::*/basisgeo:id"/> bevat een combinatie van beiden. </sch:assert>
+             </sch:assert>
         </sch:rule>
     </sch:pattern>
     

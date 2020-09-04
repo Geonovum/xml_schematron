@@ -132,7 +132,7 @@
                 {               
                 "code": "TPOD0930",
                 "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "id": "<sch:value-of select="../basisgeo:id"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten. Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.",
                 "melding": "<sch:value-of select="$fout"/>"
@@ -151,7 +151,7 @@
                 {               
                 "code": "TPOD0930",
                 "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "id": "<sch:value-of select="../basisgeo:id"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten. Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.",
                 "melding": "<sch:value-of select="$fout"/>"
