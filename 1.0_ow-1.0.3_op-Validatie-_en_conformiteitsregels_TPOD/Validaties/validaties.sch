@@ -1234,7 +1234,7 @@
     </xsl:function>
     
     <!-- ============TPOD_0880================================================================================================================ -->
-    
+    <sch:pattern id="TPOD880">
     <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']">
         <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
         <sch:let name="CONDITION" value="((tekst:Label/text() = 'Hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen'))"/>
