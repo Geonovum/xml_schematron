@@ -129,59 +129,32 @@
 
     <sch:pattern id="TPOD_0850_0851">
         <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
-            <sch:let name="ancestorsFout" value="foo:checkDerdeNiveauLijstCijfersTPOD_0850(.)"> </sch:let>
-            <sch:let name="CONDITION" value="string-length($ancestorsFout) = 0"/>
+            <sch:let name="APPLICABLE" value="$omgevingsplan-en-waterschap"/>
+            <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0840(.)"> </sch:let>
+            <sch:let name="CONDITION" value="string-length($ancestorsFout[1]) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
+                "code": "TPOD0850_0851",
                 "ernst": "",
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "De onderdelen van de Lijst op het derde niveau moeten worden aangegeven met Arabische cijfers.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
                 },
-                TPOD_0850/0851: <sch:value-of select="$ancestorsFout"/></sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
-
-    <xsl:function name="foo:checkDerdeNiveauLijstCijfersTPOD_0850">
+    
+    <xsl:function name="foo:checkTweedeNiveauLijstCijfersTPOD_0840">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="fout">
-            <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
-            <xsl:if test="$ancestors = 3">
-                <xsl:variable name="found">
-                    <xsl:for-each select="$context/tekst:Li">
-                        <xsl:if test="not(matches(tekst:LiNummer, '[0-9]{1,2}\.')) and not(matches(tekst:LiNummer, '[0-9]{1,2}'))">
-                            <xsl:value-of select="concat(tekst:LiNummer, ', ')"/>
-                        </xsl:if>
-                    </xsl:for-each>
-                </xsl:variable>
-                <xsl:if test="string-length($found)>0">
-                    <xsl:variable name="lid" select="$context/ancestor::tekst:Lid"/>
-                    <xsl:variable name="bijlage" select="$context/ancestor::tekst:Bijlage"/>
-                    <xsl:choose>
-                        <xsl:when test="$lid">
-                            <xsl:value-of
-                                select="concat('In lijst (op het derde niveau) in artikel ', $lid/ancestor::tekst:Artikel/tekst:Kop/tekst:Nummer, ', lid ', $lid/tekst:LidNummer/text(), ' moeten onderdelen worden aangegeven met cijfers. (', substring($found,1,string-length($found)-2), ')')"
-                            />
-                        </xsl:when>
-                        <xsl:when test="$bijlage">
-                            <xsl:value-of
-                                select="concat('In lijst (op het derde niveau) in bijlage ', $context/ancestor::tekst:Bijlage/tekst:Kop/tekst:Nummer, ' moeten onderdelen worden aangegeven met cijfers. (', substring($found,1,string-length($found)-2), ')')"
-                            />
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of
-                                select="concat('In lijst (op het derde niveau) in artikel ', $context/ancestor::tekst:Artikel/tekst:Kop/tekst:Nummer, ' moeten onderdelen worden aangegeven met cijfers. (', substring($found,1,string-length($found)-2), ')')"
-                            />
-                        </xsl:otherwise>
-                    </xsl:choose>
+        <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
+        <xsl:if test="$ancestors = 3">
+            <xsl:for-each select="$context/tekst:Li">
+                <xsl:if test="not(matches(tekst:LiNummer, '[0-9]{1,2}\.')) and not(matches(tekst:LiNummer, '[0-9]{1,2}'))">
+                    <xsl:value-of select="@eId"/>
                 </xsl:if>
-            </xsl:if>
-        </xsl:variable>
-        <xsl:value-of select="$fout"/>
+            </xsl:for-each>
+        </xsl:if>
     </xsl:function>
 
 </sch:schema>

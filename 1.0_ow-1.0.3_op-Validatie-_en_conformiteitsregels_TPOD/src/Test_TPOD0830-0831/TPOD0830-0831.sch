@@ -129,12 +129,10 @@
 
     <sch:pattern id="TPOD_0830_0831">
         <sch:rule context="//tekst:Lijst">
-            <sch:report test="true()"><sch:value-of select="$SOORT_REGELING"/></sch:report>
             <sch:let name="APPLICABLE" value="$omgevingsplan-en-waterschap"/>
             <sch:let name="lijstMetLettersAangeven" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($lijstMetLettersAangeven[1]) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                <sch:value-of select="local-name(..)"/>
                 {               
                 "code": "TPOD0830_0831",
                 "ernst": "Waarschuwing",
