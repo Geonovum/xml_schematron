@@ -145,16 +145,14 @@
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1650",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../../rol:identificatie"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Het attribuut 'normwaarde' moet bestaan uit één van de drie mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde' of 'waardeInRegeltekst'",
+                "melding": "Dit is niet het geval bij indentifivatie: <sch:value-of select="../../rol:identificatie"/> "
                 },
-                TPOD_1650: <sch:value-of select="../../rol:identificatie"/>: Het attribuut 'normwaarde'
-                moet bestaan uit één van de drie mogelijke attributen; 'kwalitatieveWaarde' óf
-                'kwantitatieveWaarde' óf waardeInRegeltekst. </sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 

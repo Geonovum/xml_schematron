@@ -1525,12 +1525,18 @@
     
     <sch:pattern id="TPOD_1310">
         <sch:rule context="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid']">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1310: De grootheid waarin de hoogte wordt uitgedrukt; in het geval van hoogte dient altijd de eenheid meter gekozen te worden. 
-                Dit is niet zo in Gebied: <sch:value-of select="../l:identificatie"/></sch:assert>
+                {               
+                "code": "TPOD1310",
+                "ernst": "Waarschuwing",
+                "identificatie": "<sch:value-of select="../l:identificatie"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van 'meter' gekozen te worden.",
+                "melding": "Dit is niet zo in Gebied: <sch:value-of select="../l:identificatie"/> "
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1554,9 +1560,15 @@
                 "/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1650: <sch:value-of select="../../rol:identificatie"/>: Het attribuut 'normwaarde'
-                moet bestaan uit één van de drie mogelijke attributen; 'kwalitatieveWaarde' óf
-                'kwantitatieveWaarde' óf waardeInRegeltekst. </sch:assert>
+                {               
+                "code": "TPOD1650",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../../rol:identificatie"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Het attribuut 'normwaarde' moet bestaan uit één van de drie mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde' of 'waardeInRegeltekst'",
+                "melding": "Dit is niet het geval bij indentifivatie: <sch:value-of select="../../rol:identificatie"/> "
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
