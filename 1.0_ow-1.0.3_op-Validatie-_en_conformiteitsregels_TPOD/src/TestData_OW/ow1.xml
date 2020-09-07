@@ -755,7 +755,7 @@
 					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
 					<rol:groep>http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/ExploitatieactiviteitDetailhandel</rol:groep>
 					<rol:gerelateerdeActiviteit>
-						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000011"/>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.2019000011BESTAAT_NIET"/>
 					</rol:gerelateerdeActiviteit>
 					<rol:bovenliggendeActiviteit>
 						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.functionele.structuur"/>

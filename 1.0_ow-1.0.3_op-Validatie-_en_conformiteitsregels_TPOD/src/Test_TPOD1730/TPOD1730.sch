@@ -151,7 +151,7 @@
     <xsl:function name="foo:activiteitenLijstTPOD_1730">
         <xsl:variable name="activiteitenLijst">
             <xsl:for-each
-                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+                select="$xmlDocuments//rol:Activiteit">
                 <xsl:value-of select="rol:identificatie/text()"/>
             </xsl:for-each>
         </xsl:variable>

@@ -131,10 +131,8 @@
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1740()"/>
-            <!-- TPOD1740  -->
-            <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+            <sch:let name="CONDITION" value="contains($activiteitenLijst, string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               
                 "code": "TPOD1740",
                 "ernst": "Waarschuwing",
@@ -152,7 +150,7 @@
     <xsl:function name="foo:activiteitenLijstTPOD_1740">
         <xsl:variable name="activiteitenLijst">
             <xsl:for-each
-                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+                select="$xmlDocuments//rol:Activiteit">
                 <xsl:value-of select="rol:identificatie/text()"/>
             </xsl:for-each>
         </xsl:variable>

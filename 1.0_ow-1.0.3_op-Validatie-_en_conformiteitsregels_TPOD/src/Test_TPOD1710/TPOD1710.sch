@@ -142,7 +142,7 @@
                 "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Een bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt. ",
-                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> ",
+                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/>",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
             </sch:assert>

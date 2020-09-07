@@ -1690,12 +1690,13 @@
                 },
             </sch:assert>
         </sch:rule>
+        
     </sch:pattern>
     
     <xsl:function name="foo:activiteitenLijstTPOD_1730">
         <xsl:variable name="activiteitenLijst">
             <xsl:for-each
-                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+                select="$xmlDocuments//rol:Activiteit">
                 <xsl:value-of select="rol:identificatie/text()"/>
             </xsl:for-each>
         </xsl:variable>
@@ -1705,18 +1706,22 @@
     <!-- ============TPOD_1740================================================================================================================ -->
     
     <sch:pattern id="TPOD_1740">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+        <sch:rule context="//rol:Activiteit">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1740()"/>
-            
-            <!-- TPOD1740  -->
-            <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
-            <sch:report
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                REPORT: TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft verwijzing: <sch:value-of select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>:
-                Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt. DIT LAATSTE
-                WORDT NU NOG NIET GETEST</sch:report>
+            <sch:let name="CONDITION" value="contains($activiteitenLijst, string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
+                {               
+                "code": "TPOD1740",
+                "ernst": "Waarschuwing",
+                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt.",
+                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> met verwijzing naar: <sch:value-of select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
+                },
+            </sch:assert>
         </sch:rule>
         
     </sch:pattern>
@@ -1724,7 +1729,7 @@
     <xsl:function name="foo:activiteitenLijstTPOD_1740">
         <xsl:variable name="activiteitenLijst">
             <xsl:for-each
-                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+                select="$xmlDocuments//rol:Activiteit">
                 <xsl:value-of select="rol:identificatie/text()"/>
             </xsl:for-each>
         </xsl:variable>
