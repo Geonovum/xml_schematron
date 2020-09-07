@@ -123,32 +123,30 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1750">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+        <sch:rule context="//rol:Activiteit">
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="ref" value="rol:identificatie/text()"/>
             <sch:let name="CONDITION" value="not(foo:activiteitenGebiedenTPOD_1750($ref) = 'false')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
+                <sch:value-of select="foo:activiteitenGebiedenTPOD_1750($ref)"/>
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1750",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn).",
+                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/>"
                 },
-                TPOD1750: Betreft
-                    <sch:value-of select="rol:identificatie"/>: Een Activiteit moet een gebied of
-                gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn).
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
 
     <xsl:function name="foo:activiteitenGebiedenTPOD_1750">
         <xsl:param name="ref"/>
         <xsl:variable name="returnValue">
             <xsl:for-each
-                select="$xmlDocuments//sl:stand/ow-dc:owObject/r:RegelVoorIedereen/r:activiteitaanduiding[string(rol:ActiviteitRef/@xlink:href) = $ref]/r:ActiviteitLocatieaanduiding/r:locatieaanduiding">
+                select="$xmlDocuments//r:RegelVoorIedereen/r:activiteitaanduiding[string(rol:ActiviteitRef/@xlink:href) = $ref]/r:ActiviteitLocatieaanduiding/r:locatieaanduiding">
                 <xsl:for-each select="*">
                     <xsl:choose>
                         <xsl:when test="./local-name() = 'LocatieRef'">
