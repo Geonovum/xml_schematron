@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
     <RegelingVersieInformatie>
         <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
-            <soortRegeling>/join/id/stop/regelingtype_005</soortRegeling>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
         </RegelingMetadata>
     </RegelingVersieInformatie>
 </AanleveringBesluit>

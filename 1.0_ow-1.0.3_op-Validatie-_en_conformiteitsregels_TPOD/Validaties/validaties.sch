@@ -1820,12 +1820,18 @@
     
     <sch:pattern id="TPOD_1780">
         <sch:rule
-            context="/stop:AanleveringBesluit">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            context="//aanlevering:AanleveringBesluit">
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="CONDITION"
                 value="count(//tekst:Hoofdstuk/descendant::tekst:Artikel)>0"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                {               
+                "code": "TPOD1780",
+                "ernst": "Blokkerend",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel.",
+                "melding": "Een van beiden of beiden missen."
+                },
                 TPOD1780: Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel. </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1835,25 +1841,37 @@
     <sch:pattern id="TPOD_1790">
         <sch:rule
             context="//r:Instructieregel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$omgevingsplan"/>
             <sch:let name="CONDITION"
                 value="false()"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing. Betreft:<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/></sch:assert>
+                {               
+                "code": "TPOD1790",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Het IMOW-object 'Instructieregel' is niet van toepassing (voor Omgevingsplan).",
+                "melding": "Betreft:<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <!-- ============TPOD_1830================================================================================================================ -->    
     
     <sch:pattern id="TPOD1830">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
+        <sch:rule context="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie']">
+            <sch:let name="APPLICABLE" value="$rijk"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ in AMvB/MR is de waarde ‘Functie’ van attribuut ‘type’
-                (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het gaat: <sch:value-of select="ga:identificatie/text()"/>
+                {               
+                "code": "TPOD1830",
+                "ernst": "Waarschuwing",
+                "identificatie": "<sch:value-of select="ga:identificatie"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘functie’ van attribuut ‘type’ (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR)",
+                "melding": "Dit is wel het geval in <sch:value-of select="ga:identificatie"/> "
+                },
             </sch:assert>
         </sch:rule>
     </sch:pattern>

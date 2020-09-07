@@ -129,20 +129,19 @@
     <sch:pattern id="TPOD_1790">
         <sch:rule
             context="//r:Instructieregel">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$omgevingsplan"/>
             <sch:let name="CONDITION"
                 value="false()"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1790",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Het IMOW-object 'Instructieregel' is niet van toepassing (voor Omgevingsplan).",
+                "melding": "Betreft:<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>"
                 },
-                TPOD1790: Het IMOW-object 'Instructieregel' is niet van toepassing. Betreft:<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/></sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>

@@ -129,18 +129,16 @@
     <sch:pattern id="TPOD_1780">
         <sch:rule
             context="//aanlevering:AanleveringBesluit">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="CONDITION"
                 value="count(//tekst:Hoofdstuk/descendant::tekst:Artikel)>0"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1780",
+                "ernst": "Blokkerend",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel.",
+                "melding": "Een van beiden of beiden missen."
                 },
                 TPOD1780: Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel. </sch:assert>
         </sch:rule>
