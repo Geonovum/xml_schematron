@@ -1669,6 +1669,39 @@
         <xsl:value-of select="$activiteitenLijst"/>
     </xsl:function>
     
+    <!-- ============TPOD_1730================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1730">
+        <sch:rule context="//rol:Activiteit">
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
+            <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1730()"/>
+            <!-- TPOD1730  -->
+            <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
+            <sch:assert
+                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
+                {               
+                "code": "TPOD1730",
+                "ernst": "Waarschuwing",
+                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.",
+                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> met verwijzing naar: <sch:value-of select="rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href"/>",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
+                },
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:activiteitenLijstTPOD_1730">
+        <xsl:variable name="activiteitenLijst">
+            <xsl:for-each
+                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+                <xsl:value-of select="rol:identificatie/text()"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$activiteitenLijst"/>
+    </xsl:function>
+    
     <!-- ============TPOD_1740================================================================================================================ -->
     
     <sch:pattern id="TPOD_1740">

@@ -137,15 +137,13 @@
                 {               
                 "code": "TPOD1730",
                 "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.",
-                "melding": " <sch:value-of select="../@eId"/> ",
+                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> met verwijzing naar: <sch:value-of select="rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href"/>",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
-                TPOD1730: <sch:value-of select="rol:identificatie"/> 
-                Betreft verwijzing: <sch:value-of select="rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href"/>:
-                Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.</sch:assert>
+            </sch:assert>
         </sch:rule>
 
     </sch:pattern>
