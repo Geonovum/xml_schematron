@@ -1575,142 +1575,44 @@
     <!-- ============TPOD_1700================================================================================================================ -->
     
     <sch:pattern id="TPOD_1700">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1700()"/>
-            <sch:let name="bovenLiggend"
-                value="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>
-            <sch:let name="identificatie" value="rol:identificatie"/>
-            <sch:let name="circulaireActivititeiten" value="foo:circulaireActiviteitenAanzetTPOD_1700($activiteitenLijst, $bovenLiggend, $identificatie, $identificatie)"/>
-            <sch:let name="identificatie" value="rol:identificatie"/>
-            <sch:let name="lokaalBovenliggend"
-                value="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>
-            <sch:let name="activiteitenTrajectNaarFunctioneleStructuur" value="foo:activiteitenTrajectNaarFunctioneleStructuurTPOD_1700($circulaireActivititeiten, $activiteitenLijst, $identificatie, $lokaalBovenliggend)"/>
-            <sch:let name="CONDITION"
-                value="string-length($activiteitenTrajectNaarFunctioneleStructuur) > 0"/>
-            <sch:report test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                REPORT: TPOD1700:
-                Activiteit-ids: <sch:value-of select="substring($activiteitenTrajectNaarFunctioneleStructuur,1,string-length($activiteitenTrajectNaarFunctioneleStructuur)-2)"/>: 
-                Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in
-                de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de
-                functionele structuur. DIT LAATSTE WORDT NU NOG NIET GETEST!</sch:report>
+        <sch:rule context="rol:Activiteit">
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
+            <sch:let name="CONDITION" value="false()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                {               
+                "code": "TPOD1700",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="rol:identificatie"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Blokkerend",
+                "melding": "Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de functionele structuur.",
+                "waarschuwing": "Verwijzingen naar DSO data worden nog niet onderzocht."
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:activiteitenTrajectNaarFunctioneleStructuurTPOD_1700">
-        <xsl:param name="circulaireActivititeiten"/>
-        <xsl:param name="activiteitenLijst"/>
-        <xsl:param name="identificatie" as="xs:string"/>
-        <xsl:param name="lokaalBovenliggend" as="xs:string"/>
-        <xsl:variable name="activiteitenTrajectNaarFunctioneleStructuur">
-            <xsl:if test="not(contains($circulaireActivititeiten, $identificatie))">
-                <xsl:choose>
-                    <xsl:when test="not(contains($activiteitenLijst, $lokaalBovenliggend))">
-                        <xsl:value-of select="concat($identificatie, ', ')"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of
-                            select="foo:activiteitenPadTPOD_1700($identificatie, $lokaalBovenliggend, $activiteitenLijst)"
-                        />
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:if>
-        </xsl:variable>
-        <xsl:value-of select="$activiteitenTrajectNaarFunctioneleStructuur"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:circulaireActiviteitenAanzetTPOD_1700">
-        <xsl:param name="activiteitenLijstForContains"/>
-        <xsl:param name="bovenLiggendForContains" as="xs:string"/>
-        <xsl:param name="identificatie" as="xs:string"/>
-        <xsl:param name="bovenLiggend" as="xs:string"/>
-        <xsl:variable name="circulaireActiviteitenAanzet">
-            <xsl:if test="contains($activiteitenLijstForContains, $bovenLiggendForContains)">
-                <xsl:value-of
-                    select="foo:circulaireActiviteitenTPOD_1700($identificatie, $bovenLiggend)"
-                />
-            </xsl:if>
-        </xsl:variable>
-        <xsl:value-of select="$circulaireActiviteitenAanzet"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:circulaireActiviteitenTPOD_1700">
-        <xsl:param name="identificatie" as="xs:string"/>
-        <xsl:param name="bovenLiggend" as="xs:string"/>
-        <xsl:variable name="circulaireActiviteiten">
-            <xsl:for-each
-                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-                <xsl:if
-                    test="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href = $bovenLiggend">
-                    <xsl:variable name="lokaalBovenliggend" select="rol:identificatie"/>
-                    <xsl:choose>
-                        <xsl:when test="$identificatie = $lokaalBovenliggend">
-                            <xsl:value-of select="concat($lokaalBovenliggend, ', ')"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of
-                                select="foo:circulaireActiviteitenTPOD_1700($identificatie, $lokaalBovenliggend)"
-                            />
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$circulaireActiviteiten"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:activiteitenLijstTPOD_1700">
-        <xsl:variable name="activiteitenLijst">
-            <xsl:for-each
-                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-                <xsl:value-of select="rol:identificatie"/>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$activiteitenLijst"/>
-    </xsl:function>
-    
-    <xsl:function name="foo:activiteitenPadTPOD_1700">
-        <xsl:param name="identificatie" as="xs:string"/>
-        <xsl:param name="bovenliggend" as="xs:string"/>
-        <xsl:param name="activiteitenLijst" as="xs:string*"/>
-        <xsl:variable name="activiteitenPad">
-            <xsl:for-each
-                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-                <xsl:if test="rol:identificatie = $bovenliggend">
-                    <xsl:variable name="lokaalBovenliggend"
-                        select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>
-                    <xsl:choose>
-                        <xsl:when test="not(contains($activiteitenLijst, $lokaalBovenliggend))">
-                            <xsl:value-of select="concat($identificatie, ', ')"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of
-                                select="foo:activiteitenPadTPOD_1700($identificatie, $lokaalBovenliggend, $activiteitenLijst)"
-                            />
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:value-of select="$activiteitenPad"/>
-    </xsl:function>
     
     <!-- ============TPOD_1710================================================================================================================ -->
     
     <sch:pattern id="TPOD_1710">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+        <sch:rule context="//rol:Activiteit">
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1710()"/>
             <sch:let name="circulaireActivititeiten"
                 value="foo:circulaireActivititeitenTPOD_1710(., $activiteitenLijst)"/>
             <!-- TPOD1710  -->
             <sch:let name="CONDITION" value="string-length($circulaireActivititeiten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                H:TP0D1710:
-                Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten,1,string-length($circulaireActivititeiten)-2)"/>: Een
-                bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt.</sch:assert>
+                {               
+                "code": "TPOD1710",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Een bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt. ",
+                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> ",
+                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     

@@ -123,9 +123,8 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1700">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+        <sch:rule context="rol:Activiteit">
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1700()"/>
             <sch:let name="bovenLiggend"
                 value="string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
@@ -134,18 +133,15 @@
             <sch:let name="CONDITION" value="not(contains($result, ','))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1700",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="rol:identificatie"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> ",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
+                "regel": "Blokkerend",
+                "melding": "Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de functionele structuur.",
+                "waarschuwing": "Verwijzingen naar DSO data worden nog niet onderzocht."
                 },
-                TPOD1700: Activiteit-ids: <sch:value-of select="$result" />: 
-                Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in
-                de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de
-                functionele structuur. DIT LAATSTE WORDT NU NOG NIET GETEST!</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     

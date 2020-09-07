@@ -128,9 +128,8 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1710">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+        <sch:rule context="//rol:Activiteit">
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1710()"/>
             <sch:let name="circulaireActivititeiten"
                 value="foo:circulaireActivititeitenTPOD_1710(., $activiteitenLijst)"/>
@@ -138,17 +137,15 @@
             <sch:let name="CONDITION" value="string-length($circulaireActivititeiten) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1710",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> ",
+                "regel": "Een bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt. ",
+                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> ",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
-                H:TP0D1710:
-                Activiteit-ids: <sch:value-of select="substring($circulaireActivititeiten,1,string-length($circulaireActivititeiten)-2)"/>: Een
-                bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt.</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 

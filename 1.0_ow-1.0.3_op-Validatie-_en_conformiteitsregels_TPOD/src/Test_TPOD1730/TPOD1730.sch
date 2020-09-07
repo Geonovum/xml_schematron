@@ -127,20 +127,19 @@
     <!-- ============================================================================================================================ -->
     
     <sch:pattern id="TPOD_1730">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+        <sch:rule context="//rol:Activiteit">
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1730()"/>
             <!-- TPOD1730  -->
             <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               
-                "code": "TPOD",
-                "ernst": "",
+                "code": "TPOD1730",
+                "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
+                "regel": "Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.",
                 "melding": " <sch:value-of select="../@eId"/> ",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
