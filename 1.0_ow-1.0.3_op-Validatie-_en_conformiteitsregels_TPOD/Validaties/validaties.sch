@@ -1879,13 +1879,18 @@
     <!-- ============TPOD_1840================================================================================================================ -->    
     
     <sch:pattern id="TPOD1840">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR"/>
+        <sch:rule context="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']">
+            <sch:let name="APPLICABLE" value="$rijk"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TPOD1830: Binnen het object ‘Gebiedsaanwijzing’ in AMvB/MR is de waarde ‘Beperkingengebied’ van attribuut ‘type’
-                (datatype TypeGebiedsaanwijzing) niet toegestaan. Het object waarom het gaat: <sch:value-of select="ga:identificatie/text()"/>
+                {               
+                "code": "TPOD1840",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="ga:identificatie/text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘beperkingengebied’ van attribuut ‘type’ (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR) ",
+                "melding": "Dit is wel het geval in <sch:value-of select="ga:identificatie"/>"
+                },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1894,12 +1899,18 @@
     
     <sch:pattern id="TPOD1850">
         <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="fouten" value="foo:CheckFouteConstructiesTPOD_1850(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TPOD1850: Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel. 
-                Het Regeltekst waarom het gaat: <sch:value-of select="$fouten"/>
+                {               
+                "code": "TPOD1850",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="r:identificatie/text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel.",
+                "melding": "Regeltekst waarom het gaat: <sch:value-of select="r:identificatie/text()"/>"
+                },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -1910,7 +1921,6 @@
         <xsl:variable name="ct" select="count($xmlDocuments//r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
         <xsl:variable name="cr" select="count($xmlDocuments//r:RegelVoorIedereen/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
         <xsl:variable name="ci" select="count($xmlDocuments//r:Instructieregel/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
-        <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
         <xsl:variable name="co" select="count($xmlDocuments//r:Omgevingswaarderegel/r:artikelOfLid/r:RegeltekstRef[@xlink:href eq $regeltekstId])"/>
         <xsl:if test="not($ct=$cr or $ct=$ci or $ct=$co)">
             <xsl:value-of select="$regeltekstId"/>

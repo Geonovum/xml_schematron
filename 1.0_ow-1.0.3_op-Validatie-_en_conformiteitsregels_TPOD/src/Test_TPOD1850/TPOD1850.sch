@@ -138,7 +138,7 @@
                 "identificatie": "<sch:value-of select="r:identificatie/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel.",
-                "melding": "Regeltekst waarom het gaat: <sch:value-of select="r:identificatie/text()"/> "
+                "melding": "Regeltekst waarom het gaat: <sch:value-of select="r:identificatie/text()"/>"
                 },
             </sch:assert>
         </sch:rule>
