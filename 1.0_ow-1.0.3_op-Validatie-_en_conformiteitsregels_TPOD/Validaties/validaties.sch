@@ -1404,7 +1404,7 @@
             <sch:let name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)[1]) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
+                "code": "TPOD0980",
                 "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
@@ -1432,7 +1432,7 @@
             <sch:let name="CONDITION" value="tekst:Term and tekst:Definitie"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
+                "code": "TPOD1000",
                 "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
@@ -1454,7 +1454,7 @@
                 value="string-length($items)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
+                "code": "TPOD1010",
                 "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
@@ -1483,17 +1483,41 @@
         </xsl:if>
     </xsl:function>
     
-    <!-- ============TPOD_1020-1070================================================================================================================ -->
+    <!-- ============TPOD_1020================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1020-1070">
+    <sch:pattern id="TPOD_1020">
         <sch:rule context="//tekst:Begrippenlijst[tekst:Begrip/tekst:LiNummer]">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
-            <sch:let name="CONDITION"
-                value="false()"/>
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
+            <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1020-1070: Begrippen mogen niet worden genummerd, 
-                de Begrippenlijst met wId: "<sch:value-of select="@wId"/>" is dat wel</sch:assert>
+                {               
+                "code": "TPOD1020",
+                "ernst": "Waarschuwing,
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Begrippen mogen niet worden genummerd",
+                "melding": "In de Begrippenlijst met eId: <sch:value-of select="@eId"/> wordt LiNummer aangetroffen"
+                },
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <!-- ============TPOD_1070================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_1070">
+        <sch:rule context="//tekst:Begrippenlijst[tekst:Begrip/tekst:LiNummer]">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="false()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                {               
+                "code": "TPOD1070",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Meet- en rekenbepalingen mogen niet worden genummerd.",
+                "melding": "In de Begrippenlijst met eId: <sch:value-of select="@eId"/> wordt LiNummer aangetroffen"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     

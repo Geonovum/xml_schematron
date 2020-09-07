@@ -126,42 +126,21 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_1010">
-        <sch:rule context="//tekst:Begrippenlijst">
-            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
-            <sch:let name="items"
-                value="foo:checkBegripTPOD1010(.)"/>
-            <sch:let name="CONDITION"
-                value="string-length($items)=0"/>
+    <sch:pattern id="TPOD_1020">
+        <sch:rule context="//tekst:Begrippenlijst[tekst:Begrip/tekst:LiNummer]">
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
+            <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD1010",
+                "code": "TPOD",
                 "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Begriplijst moet gesorteerd zijn",
-                "melding": "Dit geldt niet voor de Begrippenlijst met eId: <sch:value-of select="@eId"/> "
+                "regel": "Begrippen mogen niet worden genummerd",
+                "melding": "In de Begrippenlijst met eId: <sch:value-of select="@eId"/> wordt LiNummer aangetroffen"
                 },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-
-    <xsl:function name="foo:checkBegripTPOD1010">
-        <xsl:param name="context" as="node()"/>
-        <xsl:variable name="list">
-            <xsl:for-each select="$context/tekst:Begrip">
-                <xsl:value-of select="tekst:Term/text()"/>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:variable name="sortedList">
-            <xsl:for-each select="$context/tekst:Begrip">
-                <xsl:sort select="tekst:Term/text()"/>
-                <xsl:value-of select="tekst:Term/text()"/>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:if test="not($sortedList=$list)">
-            <xsl:value-of select="string($context/@eId)"/>            
-        </xsl:if>
-    </xsl:function>
     
 </sch:schema>

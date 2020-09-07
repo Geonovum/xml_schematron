@@ -56,7 +56,47 @@
                               <Label>Afdeling</Label>
                               <Nummer>2.1.1</Nummer>
                            </Kop>
-                           <Gereserveerd/>
+                           <Artikel wId="chp_2_art_2_1" eId="chp_2_art_2_1">
+                              <Kop>
+                                 <Nummer>30.1</Nummer>
+                                 <Label>Artikel</Label>
+                              </Kop>
+                              <Inhoud>
+                                 <Begrippenlijst eId="chp_2_art_2_1_cmp_I__list_o_1" wId="gm0037_1__cmp_I__list_o_1">
+                                    <Begrip eId="cmp_I__list_o_1__item_o_3"
+                                       wId="gm0037_1__cmp_I__list_o_1__item_o_3">
+                                       <Term>Centrumgebied</Term>
+                                       <Definitie><Al>ai</Al></Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__list_o_1__item_o_5"
+                                       wId="gm0037_1__cmp_I__list_o_1__item_o_5">
+                                       <LiNummer>2</LiNummer>
+                                       <Term>Exploiteren speelautomatenhal</Term>
+                                       <Definitie><Al>ai</Al></Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__list_o_1__item_o_34"
+                                       wId="gm0037_1__cmp_I__list_o_1__item_o_34">
+                                       <Term>Zone A</Term>
+                                       <Definitie><Al>ai</Al></Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__list_o_1__item_o_46"
+                                       wId="gm0037_1__cmp_I__list_o_1__item_o_46">
+                                       <Term>Zone C</Term>
+                                       <Definitie><Al>ai</Al></Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__list_o_1__item_o_2"
+                                       wId="gm0037_1__cmp_I__list_o_1__item_o_2">
+                                       <Term>Zone D</Term>
+                                       <Definitie><Al>ai</Al></Definitie>
+                                    </Begrip>
+                                    <Begrip eId="cmp_I__list_o_1__item_o_4"
+                                       wId="gm0037_1__cmp_I__list_o_1__item_o_4">
+                                       <Term>Zone E</Term>
+                                       <Definitie><Al>ai</Al></Definitie>
+                                    </Begrip>
+                                 </Begrippenlijst>
+                              </Inhoud>
+                           </Artikel>
                         </Afdeling>
                         <Afdeling eId="chp_2__titel_1_subchp_1.2" wId="mnre1034_1-0__chp_1__subchp_1.2">
                            <Kop>
