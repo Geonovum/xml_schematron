@@ -128,20 +128,18 @@
 
     <sch:pattern id="TPOD1850">
         <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="fouten" value="foo:CheckFouteConstructiesTPOD_1850(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1850",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="r:identificatie/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel.",
+                "melding": "Regeltekst waarom het gaat: <sch:value-of select="r:identificatie/text()"/> "
                 },
-                TPOD1850: Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel. 
-                Het Regeltekst waarom het gaat: <sch:value-of select="$fouten"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
