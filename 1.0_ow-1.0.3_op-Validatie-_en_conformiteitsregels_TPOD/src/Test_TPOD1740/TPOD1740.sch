@@ -127,26 +127,24 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1740">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+        <sch:rule context="//rol:Activiteit">
             <sch:let name="APPLICABLE"
                 value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1740()"/>
             <!-- TPOD1740  -->
             <sch:let name="CONDITION" value="not(contains($activiteitenLijst, rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
-            <sch:report
+            <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1740",
+                "ernst": "Waarschuwing",
+                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> ",
+                "regel": "Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt.",
+                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> met verwijzing naar: <sch:value-of select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
-                REPORT: TPOD1740: <sch:value-of select="rol:identificatie"/>: Betreft verwijzing: <sch:value-of select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>:
-                Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt. DIT LAATSTE
-                WORDT NU NOG NIET GETEST</sch:report>
+            </sch:assert>
         </sch:rule>
 
     </sch:pattern>
