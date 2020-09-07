@@ -128,23 +128,18 @@
 
     <sch:pattern id="TPOD_1000">
         <sch:rule context="//tekst:Begrip">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="items"
-                value="foo:checkBegripTPOD1000(.)"/>
-            <sch:let name="CONDITION"
-                value="string-length($items)=0"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="tekst:Term and tekst:Definitie"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
+                "regel": "Een Begrip moet bestaan uit één term en één definitie.",
                 "melding": " <sch:value-of select="../@eId"/> "
                 },
-                TPOD_1000_1050:  Een Begrip moet bestaan uit één term en één definitie. 
-                Begrip met wId: <sch:value-of select="string(@wId)"/> bevat geen <sch:value-of select="$items"/></sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
