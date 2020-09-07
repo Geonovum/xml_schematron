@@ -1428,47 +1428,40 @@
     
     <sch:pattern id="TPOD_1000">
         <sch:rule context="//tekst:Begrip">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="items"
-                value="foo:checkBegripTPOD1000(.)"/>
-            <sch:let name="CONDITION"
-                value="string-length($items)=0"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="tekst:Term and tekst:Definitie"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1000_1050: Een Begrip moet bestaan uit één term en één definitie. 
-                Begrip met wId: <sch:value-of select="string(@wId)"/> bevat geen <sch:value-of select="$items"/></sch:assert>
+                {               
+                "code": "TPOD",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Een Begrip moet bestaan uit één term en één definitie.",
+                "melding": "Dit is niet het geval in Begrip met eId: <sch:value-of select="@eId"/> "
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:checkBegripTPOD1000">
-        <xsl:param name="context" as="node()"/>
-        <xsl:choose>
-            <xsl:when  test="not($context/tekst:Term) and not($context/tekst:Definitie)">
-                <xsl:value-of select="'Term en Definitie'"/>
-            </xsl:when>
-            <xsl:when  test="not($context/tekst:Term)">
-                <xsl:value-of select="'Term'"/>
-            </xsl:when>
-            <xsl:when  test="not($context/tekst:Definitie)">
-                <xsl:value-of select="'Definitie'"/>
-            </xsl:when>
-        </xsl:choose>
-        
-    </xsl:function>
         
     <!-- ============TPOD_1010================================================================================================================ -->
     
     <sch:pattern id="TPOD_1010">
         <sch:rule context="//tekst:Begrippenlijst">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="items"
                 value="foo:checkBegripTPOD1010(.)"/>
             <sch:let name="CONDITION"
                 value="string-length($items)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1010_1060: Een Begriplijst moet gesorteerd zijn, 
-                de Begrippenlijst met wId: "<sch:value-of select="$items"/>" is dat niet</sch:assert>
+                {               
+                "code": "TPOD",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Een Begriplijst moet gesorteerd zijn",
+                "melding": "Dit geldt niet voor de Begrippenlijst met eId: <sch:value-of select="@eId"/> "
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -1476,17 +1469,17 @@
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="list">
             <xsl:for-each select="$context/tekst:Begrip">
-                <xsl:value-of select="tekst:Term"/>
+                <xsl:value-of select="tekst:Term/text()"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:variable name="sortedList">
             <xsl:for-each select="$context/tekst:Begrip">
-                <xsl:sort select="tekst:Term"/>
-                <xsl:value-of select="tekst:Term"/>
+                <xsl:sort select="tekst:Term/text()"/>
+                <xsl:value-of select="tekst:Term/text()"/>
             </xsl:for-each>
         </xsl:variable>
         <xsl:if test="not($sortedList=$list)">
-            <xsl:value-of select="string($context/@wId)"/>            
+            <xsl:value-of select="string($context/@eId)"/>            
         </xsl:if>
     </xsl:function>
     

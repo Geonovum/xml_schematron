@@ -137,26 +137,9 @@
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Een Begrip moet bestaan uit één term en één definitie.",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "melding": "Dit is niet het geval in Begrip met eId: <sch:value-of select="@eId"/> "
                 },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-
-    <xsl:function name="foo:checkBegripTPOD1000">
-        <xsl:param name="context" as="node()"/>
-        <xsl:choose>
-            <xsl:when  test="not($context/tekst:Term) and not($context/tekst:Definitie)">
-                <xsl:value-of select="'Term en Definitie'"/>
-            </xsl:when>
-            <xsl:when  test="not($context/tekst:Term)">
-                <xsl:value-of select="'Term'"/>
-            </xsl:when>
-            <xsl:when  test="not($context/tekst:Definitie)">
-                <xsl:value-of select="'Definitie'"/>
-            </xsl:when>
-        </xsl:choose>
-        
-    </xsl:function>
-    
 </sch:schema>

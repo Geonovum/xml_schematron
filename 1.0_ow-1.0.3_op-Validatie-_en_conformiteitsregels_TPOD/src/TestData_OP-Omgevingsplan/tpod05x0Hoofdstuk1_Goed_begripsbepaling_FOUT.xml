@@ -33,14 +33,7 @@
                                  <Begrip eId="cmp_I__list_o_1__item_o_2"
                                     wId="gm0037_1__cmp_I__list_o_1__item_o_2">
                                     <Term>Centrumgebied</Term>
-                                    <Definitie>
-                                       <Al>
-                                          <ExtIoRef eId="cmp_I__list_o_1__item_o_2__ref_o_1"
-                                             wId="gm0037_1__cmp_I__list_o_1__item_o_2__ref_o_1"
-                                             ref="/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520"
-                                             >/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520</ExtIoRef>
-                                       </Al>
-                                    </Definitie>
+                                    <Definitie><Al>ai</Al></Definitie>
                                  </Begrip>
                                  <Begrip eId="cmp_I__list_o_1__item_o_3"
                                     wId="gm0037_1__cmp_I__list_o_1__item_o_3">
@@ -48,26 +41,12 @@
                                  </Begrip>
                                  <Begrip eId="cmp_I__list_o_1__item_o_4"
                                     wId="gm0037_1__cmp_I__list_o_1__item_o_4">
-                                    <Definitie>
-                                       <Al>
-                                          <ExtIoRef eId="cmp_I__list_o_1__item_o_4__ref_o_1"
-                                             wId="gm0037_1__cmp_I__list_o_1__item_o_4__ref_o_1"
-                                             ref="/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520"
-                                             >/join/id/regdata/gm0037/2019/loc_ZB@2019-01-16;3520</ExtIoRef>
-                                       </Al>
-                                    </Definitie>
+                                    <Definitie><Al>ai</Al></Definitie>
                                  </Begrip>
                                  <Begrip eId="cmp_I__list_o_1__item_o_5"
                                     wId="gm0037_1__cmp_I__list_o_1__item_o_5">
                                     <Term>Exploiteren speelautomatenhal</Term>
-                                    <Definitie>
-                                       <Al>
-                                          <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
-                                             wId="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_1"
-                                             ref="/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520"
-                                             >/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520</ExtIoRef>
-                                       </Al>
-                                    </Definitie>
+                                    <Definitie><Al>ai</Al></Definitie>
                                  </Begrip>
                               </Begrippenlijst>
                            </Inhoud>
@@ -78,14 +57,76 @@
                            <Nummer>2.2</Nummer>
                            <Label>CabernetSauvignon</Label>
                         </Kop>
-                        <Gereserveerd/>
+                        <Artikel eId="chp_1_art_2.1" wId="gm0297_1__subchp_2.2__art_1.13">
+                           <Kop>
+                              <Label>Artikel</Label>
+                              <Nummer>2.1</Nummer>
+                              <Opschrift>Begripsbepaling</Opschrift>
+                           </Kop>
+                           <Inhoud>
+                              <Al>fsefs</Al>
+                              <Begrippenlijst eId="art_2.1_cmp_I__list_o_1" wId="gm0037_1__cmp_I__list_o_1">
+                                 <Begrip eId="art_2.1_cmp_I__list_o_1__item_o_2"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_2">
+                                    <Term>Centrumgebied</Term>
+                                    <Definitie><Al>ai</Al></Definitie>
+                                 </Begrip>
+                                 <Begrip eId="art_2.1_cmp_I__list_o_1__item_o_5"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_5">
+                                    <Term>Exploiteren speelautomatenhal</Term>
+                                    <Definitie><Al>ai</Al></Definitie>
+                                 </Begrip>
+                                 <Begrip eId="art_2.1_cmp_I__list_o_1__item_o_3"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_3">
+                                    <Term>Zone C</Term>
+                                    <Definitie><Al>ai</Al></Definitie>
+                                 </Begrip>
+                                 <Begrip eId="art_2.1_cmp_I__list_o_1__item_o_4"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_4">
+                                    <Term>Zone D</Term>
+                                    <Definitie><Al>ai</Al></Definitie>
+                                 </Begrip>
+                              </Begrippenlijst>
+                           </Inhoud>
+                        </Artikel>
                      </Afdeling>
                      <Afdeling eId="chp_1__subchp_1.3" wId="chp_1__subchp_1.2">
                         <Kop>
                            <Nummer>1.3</Nummer>
                            <Label>CabernetSauvignon</Label>
                         </Kop>
-                        <Gereserveerd/>
+                        <Artikel eId="chp_1_art_3.1" wId="gm0297_1__subchp_2.2__art_1.13">
+                           <Kop>
+                              <Label>Artikel</Label>
+                              <Nummer>3.1</Nummer>
+                              <Opschrift>Begripsbepaling</Opschrift>
+                           </Kop>
+                           <Inhoud>
+                              <Al>fsefs</Al>
+                              <Begrippenlijst eId="art_3.1_cmp_I__list_o_1" wId="gm0037_1__cmp_I__list_o_1">
+                                 <Begrip eId="art_3.1_cmp_I__list_o_1__item_o_2"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_2">
+                                    <Term>Centrumgebied</Term>
+                                    <Definitie><Al>ai</Al></Definitie>
+                                 </Begrip>
+                                 <Begrip eId="art_3.1_cmp_I__list_o_1__item_o_5"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_5">
+                                    <Term>Exploiteren speelautomatenhal</Term>
+                                    <Definitie><Al>ai</Al></Definitie>
+                                 </Begrip>
+                                 <Begrip eId="art_3.1_cmp_I__list_o_1__item_o_3"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_3">
+                                    <Term>Zone C</Term>
+                                    <Definitie><Al>ai</Al></Definitie>
+                                 </Begrip>
+                                 <Begrip eId="art_3.1_cmp_I__list_o_1__item_o_4"
+                                    wId="gm0037_1__cmp_I__list_o_1__item_o_4">
+                                    <Term>Zone B</Term>
+                                    <Definitie><Al>ai</Al></Definitie>
+                                 </Begrip>
+                              </Begrippenlijst>
+                           </Inhoud>
+                        </Artikel>
                      </Afdeling>
                   </Hoofdstuk>
                   <Hoofdstuk eId="chp_2" wId="mnre1034_1-0__chp_1">

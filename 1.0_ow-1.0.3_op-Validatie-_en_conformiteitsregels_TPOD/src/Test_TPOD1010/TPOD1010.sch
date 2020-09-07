@@ -128,8 +128,7 @@
 
     <sch:pattern id="TPOD_1010">
         <sch:rule context="//tekst:Begrippenlijst">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
             <sch:let name="items"
                 value="foo:checkBegripTPOD1010(.)"/>
             <sch:let name="CONDITION"
@@ -137,14 +136,13 @@
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Een Begriplijst moet gesorteerd zijn",
+                "melding": "Dit geldt niet voor de Begrippenlijst met eId: <sch:value-of select="@eId"/> "
                 },
-                TPOD_1010_1060:  Een Begriplijst moet gesorteerd zijn, 
-                de Begrippenlijst met wId: "<sch:value-of select="$items"/>" is dat niet</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
@@ -162,7 +160,7 @@
             </xsl:for-each>
         </xsl:variable>
         <xsl:if test="not($sortedList=$list)">
-            <xsl:value-of select="string($context/@wId)"/>            
+            <xsl:value-of select="string($context/@eId)"/>            
         </xsl:if>
     </xsl:function>
     
