@@ -2292,13 +2292,19 @@
     <sch:pattern id="TPOD_1940">
         <sch:rule
             context="//l:Puntengroep/l:groepselement">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="notFound" value="foo:notFoundTPOD_1940(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1940: Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="$notFound"/>.
-                Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn. </sch:assert>
+                {               
+                "code": "TPOD1940",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../l:identificatie"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.",
+                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>."
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
