@@ -128,10 +128,8 @@
     
     <sch:pattern id="TPOD_1970">
         <sch:rule context="//l:Punt/l:geometrie/l:GeometrieRef">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
-            <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq $href]"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq string(@xlink:href)]"/>
             <sch:let name="CONDITION" value="$geometrie//gml:MultiPoint || $geometrie//gml:Point"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               

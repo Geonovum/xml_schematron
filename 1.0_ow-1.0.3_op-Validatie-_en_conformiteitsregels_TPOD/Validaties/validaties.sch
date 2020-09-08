@@ -2433,10 +2433,16 @@
         <sch:rule context="//l:Gebied/l:geometrie/l:GeometrieRef">
             <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="CONDITION" value="foo:calculateConditionTPOD_1980($href)=1"/>
+            <sch:let name="CONDITION" value="foo:calculateConditionTPOD_1980($href) = 1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1980: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: 
-                Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.
+                {               
+                "code": "TPOD1980",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../../l:identificatie"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.",
+                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>"
+                },       
             </sch:assert>
         </sch:rule>
     </sch:pattern>
