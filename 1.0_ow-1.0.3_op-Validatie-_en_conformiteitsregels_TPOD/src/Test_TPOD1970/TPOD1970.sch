@@ -135,15 +135,13 @@
             <sch:let name="CONDITION" value="$geometrie//gml:MultiPoint || $geometrie//gml:Point"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1970",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../../l:identificatie"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.",
+                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>"
                 },
-                TPOD_1970: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>: 
-                Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn. 
             </sch:assert>
         </sch:rule>
     </sch:pattern>
