@@ -2308,7 +2308,7 @@
                 "identificatie": "<sch:value-of select="../l:identificatie"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.",
-                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>."
+                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>: <sch:value-of select="substring($notFound,1,string-length($notFound)-2)"/>."
                 },
             </sch:assert>
         </sch:rule>
@@ -2343,13 +2343,19 @@
     <sch:pattern id="TPOD_1950">
         <sch:rule
             context="//l:Lijnengroep/l:groepselement">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="notFound" value="foo:notFoundTPOD_1950(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_1950: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="$notFound"/>. 
-                Iedere verwijzing naar een OwObject in een Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn. </sch:assert>
+                {               
+                "code": "TPOD1950",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../l:identificatie"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.",
+                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>: <sch:value-of select="substring($notFound,1,string-length($notFound)-2)"/>."
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
