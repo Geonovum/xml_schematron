@@ -128,19 +128,19 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1880">
-        <sch:rule context="//rol:Omgevingswaarde">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="not($SOORT_REGELING=$WV)"/>
+        <sch:rule context="//(rol:Omgevingswaarde|r:Omgevingswaarderegel)">
+            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="CONDITION" value="not($waterschapsverordening)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1880",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "De IMOW-objecten 'Omgevingswaarde' zijn niet van toepassing op de Waterschapsverordening",
+                "melding": "Betreft <sch:value-of select="local-name()"/>: <sch:value-of select="rol:identificatie/text()"/> "
                 },
-                TPOD1880: De IMOW-objecten 'Omgevingswaarde' zijn niet van toepassing op de Waterschapsverordening.: 
+                TPOD1880: De IMOW-objecten 'Omgevingswaarde' en 'Omgevingswaarderegel' zijn niet van toepassing op de Waterschapsverordening.: 
                 Identificatie: <sch:value-of select="rol:identificatie/text()"/>
             </sch:assert>
         </sch:rule>
@@ -149,7 +149,7 @@
             <sch:let name="CONDITION" value="not($SOORT_REGELING=$WV)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
+                "code": "TPOD1880",
                 "eId": "<sch:value-of select="../@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "",

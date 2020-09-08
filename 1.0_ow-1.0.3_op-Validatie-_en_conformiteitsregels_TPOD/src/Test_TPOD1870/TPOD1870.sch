@@ -128,24 +128,21 @@
     
     <sch:pattern id="TPOD_1870">
         <sch:rule context="//r:artikelOfLid">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
-            <sch:let name="identifiers"
-                value="foo:getRegelTekstIdentifiersTPOD_1870()"/>
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
+            <sch:let name="identifiers" value="foo:getRegelTekstIdentifiersTPOD_1870()"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',r:RegeltekstRef/@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1870",
+                "ernst": "Blokkerend",
+                "RegeltekstRef": "<sch:value-of select="r:RegeltekstRef/@xlink:href"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> ",
+                "regel": "Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid.",
+                "melding": "Betreft
+                <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of select="r:RegeltekstRef/@xlink:href"/>",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
-                TPOD1870: Betreft
-                <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of
-                    select="r:RegeltekstRef/@xlink:href"/>: Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid. </sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
