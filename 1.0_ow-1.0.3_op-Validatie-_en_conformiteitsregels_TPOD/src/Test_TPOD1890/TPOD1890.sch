@@ -128,21 +128,18 @@
     
     <sch:pattern id="TPOD_1890">
         <sch:rule context="//*:identificatie">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="CONDITION" value="contains(text(), concat('.', foo:CheckFouteIdentifierTPOD_1890(.), '.'))"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1890",
+                "ernst": "Blokkerend",
+                "eId": "<sch:value-of select="text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.",
+                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="text()"/>"
                 },
-                TPOD1890: Betreft <sch:value-of select="../name()"/>: <sch:value-of
-                    select="text()"/>: De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.
             </sch:assert>
         </sch:rule>
     </sch:pattern>
