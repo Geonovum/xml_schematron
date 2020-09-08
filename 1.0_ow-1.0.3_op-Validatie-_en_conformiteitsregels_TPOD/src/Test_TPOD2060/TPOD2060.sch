@@ -129,20 +129,18 @@
 
     <sch:pattern id="TPOD_2060">
         <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="message" value="foo:checkFouteArtikelLidCombinatieTPOD_2060(.)"/>
             <sch:let name="CONDITION" value="string-length($message) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2060",
+                "ernst": "Blokkerend",
+                "wId": "<sch:value-of select="@wId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Als er een Regeltekst van een Lid is gemaakt mag er geen Regeltekst meer gemaakt worden van het Artikel dat boven dit Lid hangt.",
+                "melding": "<sch:value-of select="$message"/> "
                 },
-                TPOD2060:
-                    <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -181,7 +179,7 @@
             <xsl:if test="string-length($results) > 0">
                 <xsl:value-of
                     select="
-                    concat('Als een Regeltekst van een Lid is gemaakt mag er geen Regeltekst meer gemaakt worden van het artikel dat boven dit Lid hangt. Betreft: ',
+                    concat('Betreft: ',
                     $results)" />
             </xsl:if>
         </xsl:variable>
