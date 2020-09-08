@@ -143,12 +143,4 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-    
-    <xsl:function name="foo:typeOfNormaardeTPOD_2100">
-        <xsl:param name="context" as="node()"/>
-        <xsl:if test="$context/rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]">
-            <xsl:value-of select="$context/rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]/text()"></xsl:value-of>
-        </xsl:if>
-    </xsl:function>
-
-</sch:schema>
+ </sch:schema>
