@@ -2177,20 +2177,23 @@
     <!-- ============TPOD_1910================================================================================================================ -->    
     
     <sch:pattern id="TPOD_1910">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen/sl:objectType">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+        <sch:rule context="//sl:objectTypen/sl:objectType">
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="objects" value="foo:owObjectenLijstTPOD_1910(.)"/>
             <sch:let name="CONDITION" value="contains($objects, concat('.',text(),'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TPOD1910: De objecttypen in
-                ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met
-                de daadwerkelijke objecten in het betreffende Ow-bestand. Het objecttype waarom het
-                gaat staan nu genoemd: <sch:value-of select="text()"/>
+                {               
+                "code": "TPOD1910",
+                "ernst": "Blokkerend",
+                "objectType": "<sch:value-of select="text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand.",
+                "melding": "Het objecttype waarom het gaat: <sch:value-of select="text()"/>"
+                },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-   
+    
     <xsl:function name="foo:owObjectenLijstTPOD_1910">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="owObjectenLijst">
@@ -2205,12 +2208,18 @@
     
     <sch:pattern id="TPOD_1920">
         <sch:rule context="/ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="nfFOOT" value="foo:notfoundFileOrObjectTypeTPOD_1920(ow-manifest:naam,.)"></sch:let>
             <sch:let name="CONDITION" value="string-length($nfFOOT) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD1920: De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het
-                betreffende Ow-bestand. Het gaat om deze objecttypen: <sch:value-of select="$nfFOOT"/>
+                {               
+                "code": "TPOD1920",
+                "ernst": "Blokkerend",
+                "eId": "<sch:value-of select="ow-manifest:objecttype"/>, <sch:value-of select="ow-manifest:naam"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het betreffende Ow-bestand.",
+                "melding": "Het gaat om deze objecttypen: <sch:value-of select="$nfFOOT"/>"
+                },
             </sch:assert>
         </sch:rule>
     </sch:pattern>

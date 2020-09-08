@@ -127,22 +127,19 @@
     <!-- ============================================================================================================================ -->    
     
     <sch:pattern id="TPOD_1910">
-        <sch:rule context="/ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen/sl:objectType">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+        <sch:rule context="//sl:objectTypen/sl:objectType">
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="objects" value="foo:owObjectenLijstTPOD_1910(.)"/>
             <sch:let name="CONDITION" value="contains($objects, concat('.',text(),'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1910",
+                "ernst": "Blokkerend",
+                "objectType": "<sch:value-of select="text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand.",
+                "melding": "Het objecttype waarom het gaat: <sch:value-of select="text()"/>"
                 },
-                TPOD1910: De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met
-                de daadwerkelijke objecten in het betreffende Ow-bestand. Het objecttype waarom het gaat: <sch:value-of select="text()"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
