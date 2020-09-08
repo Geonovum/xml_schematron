@@ -135,28 +135,11 @@
                 {               
                 "code": "TPOD1880",
                 "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
+                "identificatie": "<sch:value-of select="rol:identificatie/text()"/><sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "De IMOW-objecten 'Omgevingswaarde' zijn niet van toepassing op de Waterschapsverordening",
-                "melding": "Betreft <sch:value-of select="local-name()"/>: <sch:value-of select="rol:identificatie/text()"/> "
+                "melding": "Betreft <sch:value-of select="local-name()"/>: <sch:value-of select="rol:identificatie/text()"/><sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>"
                 },
-                TPOD1880: De IMOW-objecten 'Omgevingswaarde' en 'Omgevingswaarderegel' zijn niet van toepassing op de Waterschapsverordening.: 
-                Identificatie: <sch:value-of select="rol:identificatie/text()"/>
-            </sch:assert>
-        </sch:rule>
-        <sch:rule context="//r:Omgevingswaarderegel">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="not($SOORT_REGELING=$WV)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1880",
-                "eId": "<sch:value-of select="../@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
-                },
-                TPOD1880: De IMOW-objecten 'Omgevingswaarderegel' zijn niet van toepassing op de Waterschapsverordening.: 
-                Regeltekst-referentie: <sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>

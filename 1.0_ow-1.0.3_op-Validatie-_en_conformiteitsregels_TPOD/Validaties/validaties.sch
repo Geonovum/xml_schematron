@@ -2120,20 +2120,18 @@
     <!-- ============TPOD_1880================================================================================================================ -->
     
     <sch:pattern id="TPOD_1880">
-        <sch:rule context="//rol:Omgevingswaarde">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="not($SOORT_REGELING=$WV)"/>
+        <sch:rule context="//(rol:Omgevingswaarde|r:Omgevingswaarderegel)">
+            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="CONDITION" value="not($waterschapsverordening)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD1880: De IMOW-objecten 'Omgevingswaarde' zijn niet van toepassing op de Waterschapsverordening.: 
-                Identificatie: <sch:value-of select="rol:identificatie/text()"/>
-            </sch:assert>
-        </sch:rule>
-        <sch:rule context="//r:Omgevingswaarderegel">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="not($SOORT_REGELING=$WV)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD1880: De IMOW-objecten 'Omgevingswaarderegel' zijn niet van toepassing op de Waterschapsverordening.: 
-                Regeltekst-referentie: <sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>
+                {               
+                "code": "TPOD1880",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="rol:identificatie/text()"/><sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "De IMOW-objecten 'Omgevingswaarde' zijn niet van toepassing op de Waterschapsverordening",
+                "melding": "Betreft <sch:value-of select="local-name()"/>: <sch:value-of select="rol:identificatie/text()"/><sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>"
+                },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
