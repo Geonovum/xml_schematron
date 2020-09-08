@@ -65,9 +65,8 @@
     <!-- ====================================== GENERIC ============================================================================= -->
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
-    <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
-
+    <sch:let name="SOORT_REGELING" value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+    
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/> <!-- AMvB -->
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>   <!-- Ministeriële Regeling -->
     <sch:let name="OP" value="'/join/id/stop/regelingtype_003'"/>   <!-- Omgevingsplan -->
@@ -124,34 +123,24 @@
         $SOORT_REGELING=$RI
         "/>
     <sch:let name="waterschapsverordening" value="$SOORT_REGELING=$WV"/>
-
+    
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_2040">
-        <sch:rule context="//vt:Divisie">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
+    <sch:pattern id="TPOD_1070">
+        <sch:rule context="//tekst:Begrippenlijst[tekst:Begrip/tekst:LiNummer]">
+            <sch:let name="APPLICABLE" value="$allen-behalve-rijk"/>
+            <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD2040",
-                "ernst": "Blokkerend",
-                "wId": "<sch:value-of select="@wId"/>",
+                "code": "TPOD1070",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP",
-                "melding": "Betreft: <sch:value-of select="@wId"/> "
+                "regel": "Meet- en rekenbepalingen mogen niet worden genummerd.",
+                "melding": "In de Begrippenlijst met eId: <sch:value-of select="@eId"/> wordt LiNummer aangetroffen"
                 },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
-
-    <xsl:function name="foo:checkWIdTPOD_2040">
-        <xsl:param name="identifier"/>
-        <xsl:for-each select="$xmlDocuments//tekst:Divisie/@wId">
-            <xsl:if test="$identifier eq .">
-                <xsl:value-of select="$identifier"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
-
-
+    
 </sch:schema>

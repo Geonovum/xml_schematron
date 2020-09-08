@@ -137,15 +137,14 @@
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrie) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1990",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="basisgeo:id/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> ",
+                "regel": "Iedere Geometrie heeft minstens een OwObject dat ernaar verwijst",
+                "melding": "Betreft: <sch:value-of select="basisgeo:id/text()"/>",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
-                TPOD_1990: Iedere Geometrie heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="basisgeo:id/text()" />
             </sch:assert>
         </sch:rule>
         
@@ -157,15 +156,14 @@
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1990",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> ",
+                "regel": "Iedere Regeltekst heeft minstens een OwObject dat ernaar verwijst",
+                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
-                TPOD_1990: Iedere Regeltekst heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
             </sch:assert>
         </sch:rule>
         
@@ -177,15 +175,14 @@
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1990",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> ",
+                "regel": "Iedere FormeleDivisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst",
+                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
-                TPOD_1990: Iedere FormeleDivisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
             </sch:assert>
         </sch:rule>
         
@@ -198,15 +195,14 @@
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1990",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> ",
+                "regel": "Iedere Activiteit-aanduiding heeft minstens een OwObject dat ernaar verwijst",
+                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
-                TPOD_1990: Iedere Activiteit heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="substring($nietGerefereerdeReferenties, 1, string-length($nietGerefereerdeReferenties) - 2)"
                 />
             </sch:assert>
         </sch:rule>
@@ -224,15 +220,14 @@
             <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1990",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> ",
+                "regel": "Iedere Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst",
+                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
-                TPOD_1990: Iedere Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>
             </sch:assert>
         </sch:rule>
         

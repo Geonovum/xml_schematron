@@ -129,19 +129,17 @@
 
     <sch:pattern id="TPOD_2000">
         <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2000",
+                "ernst": "Blokkerend",
+                "wId": "<sch:value-of select="@wId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Het wId van de Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP",
+                "melding": "Betreft: <sch:value-of select="@wId"/> "
                 },
-                TPOD2000: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
-                Het wId van de Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP
             </sch:assert>
         </sch:rule>
     </sch:pattern>
