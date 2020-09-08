@@ -133,15 +133,13 @@
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD1930",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../l:identificatie"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Iedere verwijzing naar een OwObject in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.",
+                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>: <sch:value-of select="substring($notFound,1,string-length($notFound)-2)"/>."
                 },
-                TPOD_1930: Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="$notFound"/>: Iedere verwijzing naar een OwObject in een
-                Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.
             </sch:assert>
         </sch:rule>
     </sch:pattern>

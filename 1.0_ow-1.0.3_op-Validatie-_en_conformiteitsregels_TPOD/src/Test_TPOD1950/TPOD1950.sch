@@ -142,7 +142,7 @@
                 "regel": "",
                 "melding": " <sch:value-of select="../@eId"/> "
                 },
-                TPOD_1950: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="$notFound"/>. 
+                TPOD_1950: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../l:identificatie"/>, <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>. 
                 Iedere verwijzing naar een OwObject in een Lijnengroep moet een bestaand (ander) OwObject van het type Lijn zijn. </sch:assert>
         </sch:rule>
     </sch:pattern>

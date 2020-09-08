@@ -139,7 +139,7 @@
                 "identificatie": "<sch:value-of select="../l:identificatie"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
                 "regel": "Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.",
-                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>."
+                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>."
                 },
             </sch:assert>
         </sch:rule>
