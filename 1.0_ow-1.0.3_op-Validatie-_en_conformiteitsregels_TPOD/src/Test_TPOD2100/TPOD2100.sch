@@ -129,19 +129,17 @@
 
     <sch:pattern id="TPOD_2100">
         <sch:rule context="//rol:Omgevingsnorm/rol:eenheid">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="string-length(foo:typeOfNormaardeTPOD_2100(..))>0"/>
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
+            <sch:let name="CONDITION" value="../rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../rol:identificatie"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.",
+                "melding": "Betreft Normwaarde: <sch:value-of select="../rol:identificatie"/>"
                 },
-                TPOD2100: Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.. 
-                Betreft Normwaarde: <sch:value-of select="../rol:identificatie"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>

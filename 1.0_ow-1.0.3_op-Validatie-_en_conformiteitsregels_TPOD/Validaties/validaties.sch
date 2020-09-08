@@ -2832,23 +2832,21 @@
     
     <sch:pattern id="TPOD_2100">
         <sch:rule context="//rol:Omgevingsnorm/rol:eenheid">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="string-length(foo:typeOfNormaardeTPOD_2100(..))>0"/>
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
+            <sch:let name="CONDITION" value="../rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2100: Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.. 
-                Betreft Normwaarde: <sch:value-of select="../rol:identificatie"/>
+                {               
+                "code": "TPOD",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../rol:identificatie"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.",
+                "melding": "Betreft Normwaarde: <sch:value-of select="../rol:identificatie"/>"
+                },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
     
-    <xsl:function name="foo:typeOfNormaardeTPOD_2100">
-        <xsl:param name="context" as="node()"/>
-        <xsl:if test="$context/rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]">
-            <xsl:value-of select="$context/rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]/text()"></xsl:value-of>
-        </xsl:if>
-    </xsl:function>
-    
-
     <!-- ============TPOD_2110================================================================================================================ -->
     
     <sch:pattern id="TPOD_2110">
