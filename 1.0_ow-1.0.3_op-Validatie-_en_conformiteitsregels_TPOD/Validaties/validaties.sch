@@ -2386,17 +2386,25 @@
     <!-- ============TPOD_1960================================================================================================================ -->    
     
     <sch:pattern id="TPOD_1960">
-        <sch:rule context="//l:Lijn/l:geometrie/l:GeometrieRef">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
-            <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq $href]"/>
-            <sch:let name="CONDITION" value="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                TPOD_1960: Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>. 
-                Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn. 
-            </sch:assert>
-        </sch:rule>
+        <sch:pattern id="TPOD_1960">
+            <sch:rule context="//l:Lijn/l:geometrie/l:GeometrieRef">
+                <sch:let name="APPLICABLE"
+                    value="true()"/>
+                <sch:let name="href" value="string(@xlink:href)"/>
+                <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq $href]"/>
+                <sch:let name="CONDITION" value="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
+                <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
+                    {               
+                    "code": "TPOD1960",
+                    "ernst": "Blokkerend",
+                    "identificatie": "<sch:value-of select="../../l:identificatie"/>",
+                    "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                    "regel": "Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn.",
+                    "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>"
+                    },
+                </sch:assert>
+            </sch:rule>
+        </sch:pattern>
     </sch:pattern>
     
     <!-- ============TPOD_1970================================================================================================================ -->    
