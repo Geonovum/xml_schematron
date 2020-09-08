@@ -129,35 +129,52 @@
 
     <sch:pattern id="TPOD_2050">
         <sch:rule context="//aanlevering:AanleveringBesluit">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="message" value="foo:existsTPOD_2050()"/>
             <sch:let name="CONDITION" value="string-length($message)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2050",
+                "ernst": "Blokkerend",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Kijken of het manifest-ow en het manifest bestaan, en de bestanden benoemd in de manifest-bestanden aanwezig zijn.",
+                "melding": "<sch:value-of select="$message"/>"
                 },
-                TPOD2050: <sch:value-of select="$message"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:existsTPOD_2050">
+        <xsl:variable name="message">
         <xsl:choose>
-            <xsl:when test="(not((document('manifest-ow.xml')) or (document('Manifest-ow.xml')))) and (not((document('manifest.xml')) or (document('Manifest.xml'))))">
-                <xsl:value-of select="'(M|m)anifest-ow.xml en (M|m)anifest.xml zijn niet aangetroffen of niet valide.'"/>
+            <xsl:when test="(not(document('manifest-ow.xml'))) and (not(document('manifest.xml')))">
+                <xsl:value-of select="'manifest-ow.xml en manifest.xml zijn niet aangetroffen of niet valide.'"/>
             </xsl:when>
-            <xsl:when test="not((document('manifest-ow.xml')) or (document('Manifest-ow.xml')))">
-                <xsl:value-of select="'(M|m)anifest-ow.xml is niet aangetroffen of niet valide.'"/>
+            <xsl:when test="not(document('manifest-ow.xml'))">
+                <xsl:value-of select="concat('manifest-ow.xml is niet aangetroffen of niet valide.',foo:bestandenTPOD_2050())"/>
             </xsl:when>
-            <xsl:when test="not((document('manifest.xml')) or (document('Manifest.xml')))">
-                <xsl:value-of select="'(M|m)anifest.xml is niet aangetroffen of niet valide.'"/>
+            <xsl:when test="not(document('manifest.xml'))">
+                <xsl:value-of select="'manifest.xml is niet aangetroffen of niet valide.'"/>
             </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="foo:bestandenTPOD_2050()"/>
+            </xsl:otherwise>
         </xsl:choose>
+        </xsl:variable>
+        <xsl:message select="$message"/>
+        <xsl:value-of select="$message"/>
     </xsl:function>
+    
+    <xsl:function name="foo:bestandenTPOD_2050">
+        <xsl:variable name="bestandsnaam">
+        <xsl:for-each select="$xmlDocuments/lvbb:manifest/lvbb:bestand">
+            <xsl:if test="not(document(lvbb:bestandsnaam/text()))">
+                <xsl:value-of select="concat(lvbb:bestandsnaam/text(), ', ')"/>
+            </xsl:if>
+        </xsl:for-each>
+    </xsl:variable>
+     <xsl:value-of select="concat('Volgende bestanden uit manifest.xml zijn niet aangetroffen: ',$bestandsnaam)"/>
+    </xsl:function>
+    
     
 </sch:schema>
