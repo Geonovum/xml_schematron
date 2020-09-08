@@ -151,7 +151,7 @@
                 <xsl:value-of select="'manifest-ow.xml en manifest.xml zijn niet aangetroffen of niet valide.'"/>
             </xsl:when>
             <xsl:when test="not(document('manifest-ow.xml'))">
-                <xsl:value-of select="concat('manifest-ow.xml is niet aangetroffen of niet valide.',foo:bestandenTPOD_2050())"/>
+                <xsl:value-of select="concat('manifest-ow.xml is niet aangetroffen of niet valide. ',foo:bestandenTPOD_2050())"/>
             </xsl:when>
             <xsl:when test="not(document('manifest.xml'))">
                 <xsl:value-of select="'manifest.xml is niet aangetroffen of niet valide.'"/>

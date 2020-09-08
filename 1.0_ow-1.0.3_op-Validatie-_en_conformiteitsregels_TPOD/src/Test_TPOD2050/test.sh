@@ -19,4 +19,6 @@
         cp ../*.xml Opdracht
         rm Opdracht/manifest-ow.xml
         ./validate.sh
+        cd ..
+        rm -fr Validaties
        
