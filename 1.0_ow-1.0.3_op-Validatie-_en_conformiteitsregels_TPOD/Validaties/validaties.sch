@@ -2816,8 +2816,14 @@
             <sch:let name="all" value="count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst))"></sch:let>
             <sch:let name="CONDITION" value="$kwl=$all or $kwn=$all or $wir=$all"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2090: Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst). 
-                Betreft Omgevingsnormt <sch:value-of select="rol:identificatie"/>
+                {               
+                "code": "TPOD2090",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="rol:identificatie"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst).",
+                "melding": "Betreft Omgevingsnorm: <sch:value-of select="rol:identificatie"/>"
+                },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
