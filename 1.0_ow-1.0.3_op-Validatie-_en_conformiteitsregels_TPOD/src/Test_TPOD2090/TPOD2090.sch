@@ -137,15 +137,13 @@
             <sch:let name="CONDITION" value="$kwl=$all or $kwn=$all or $wir=$all"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2090",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="rol:identificatie"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst).",
+                "melding": "Betreft Omgevingsnorm: <sch:value-of select="rol:identificatie"/>"
                 },
-                TPOD2090: Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst). 
-                Betreft Omgevingsnorm: <sch:value-of select="rol:identificatie"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
