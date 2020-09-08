@@ -129,22 +129,20 @@
 
     <sch:pattern id="TPOD_2080">
         <sch:rule context="//r:Instructieregel">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$regelstructuur"/>
             <sch:let name="or" value="r:instructieregelTaakuitoefening or r:instructieregelInstrument"></sch:let>
             <sch:let name="both" value="r:instructieregelTaakuitoefening and r:instructieregelInstrument"></sch:let>
             <sch:let name="none" value="not(r:instructieregelTaakuitoefening) and not(r:instructieregelInstrument)"></sch:let>
             <sch:let name="CONDITION" value="$or and not($both) and not($none)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2080",
+                "ernst": "Blokkerend",
+                "artikelOfLid": "<sch:value-of select="r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Binnen een instructieregel dient er gekozen te worden tussen InstructieregelInstrument of InstructieregelTaakuitoefening (één van de twee moet voorkomen, niet meer, niet minder).",
+                "melding": "Betreft Instructieregel bij Regeltekst: <sch:value-of select="r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>"
                 },
-                TPOD2080: Binnen een instructieregel dient er gekozen te worden tussen InstructieregelInstrument of InstructieregelTaakuitoefening (één van de twee moet voorkomen, niet meer, niet minder). 
-                Betreft Instructieregel bij Regeltekst: <sch:value-of select="r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>
