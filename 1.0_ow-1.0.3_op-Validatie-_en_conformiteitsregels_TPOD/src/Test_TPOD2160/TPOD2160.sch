@@ -129,19 +129,19 @@
 
     <sch:pattern id="TPOD_2160">
         <sch:rule context="//ow-manifest:Aanlevering">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="CONDITION"
                 value="count(ow-manifest:DoelID) = 1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2160",
+                "ernst": "Blokkerend",
+                "DoelID": "<sch:value-of select="ow-manifest:DoelID/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "In het manifest-ow mag maar voor 1 doel aangeleverd worden",
+                "melding": "In dit manifest-ow komt het meermalen voor"
                 },
-                TPOD2160: In het manifest-ow mag maar voor 1 doel aangeleverd worden. </sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
