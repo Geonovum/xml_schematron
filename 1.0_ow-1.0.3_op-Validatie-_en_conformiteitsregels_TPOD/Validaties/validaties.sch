@@ -3017,12 +3017,19 @@
     <sch:pattern id="TPOD_2170">
         <sch:rule
             context="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="CONDITION" value="count(rol:Normwaarde/rol:waardeInRegeltekst) &lt; 2"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_2170: <sch:value-of select="../rol:identificatie"/>: Indien de normwaarde van het type 'waardeInRegeltekst' is, mag er maar één normwaarde voorkomen. </sch:assert>
+                {               
+                "code": "TPOD2170",
+                "ernst": "Blokkerend",
+                "eId": "<sch:value-of select="../rol:identificatie"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Indien de normwaarde van het type 'waardeInRegeltekst' is, mag er maar één normwaarde voorkomen.",
+                "melding": "Betreft <sch:value-of select="../rol:identificatie"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
