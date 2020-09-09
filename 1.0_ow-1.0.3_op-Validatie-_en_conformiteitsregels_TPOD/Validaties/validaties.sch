@@ -3064,10 +3064,18 @@
     
     <sch:pattern id="TPOD_2190">
         <sch:rule context="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ow-manifest:objecttype[1]/text() eq 'Geometrie']">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.</sch:assert>
+                {               
+                "code": "TPOD2190",
+                "ernst": "Blokkerend",
+                "naam": "<sch:value-of select="ow-manifest:naam/text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "In het manifest-OW mag het objecttype Geometrie niet voorkomen.",
+                "melding": "Betreft <sch:value-of select="ow-manifest:naam/text()"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -3075,10 +3083,18 @@
     
     <sch:pattern id="TPOD_2200">
         <sch:rule context="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ends-with(ow-manifest:naam[1]/text(), '.gml')]">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2200: In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'.</sch:assert>
+                {               
+                "code": "TPOD2200",
+                "ernst": "Blokkerend",
+                "naam": "<sch:value-of select="ow-manifest:naam/text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'",
+                "melding": "Betreft <sch:value-of select="ow-manifest:naam/text()"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     

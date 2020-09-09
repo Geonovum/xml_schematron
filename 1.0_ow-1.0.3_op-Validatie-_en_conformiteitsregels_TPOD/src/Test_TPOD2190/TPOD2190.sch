@@ -129,18 +129,18 @@
 
     <sch:pattern id="TPOD_2190">
         <sch:rule context="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ow-manifest:objecttype[1]/text() eq 'Geometrie']">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2190",
+                "ernst": "Blokkerend",
+                "naam": "<sch:value-of select="ow-manifest:naam/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "In het manifest-OW mag het objecttype Geometrie niet voorkomen.",
+                "melding": "Betreft <sch:value-of select="ow-manifest:naam/text()"/>"
                 },
-                TPOD2190: In het manifest-OW mag het objecttype Geometrie niet voorkomen.</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
