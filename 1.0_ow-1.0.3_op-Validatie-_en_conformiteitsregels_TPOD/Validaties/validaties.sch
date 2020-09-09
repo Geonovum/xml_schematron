@@ -2938,11 +2938,19 @@
     
     <sch:pattern id="TPOD_2140">
         <sch:rule context="//ow-manifest:WorkIDRegeling">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="CONDITION"
                 value="string-length(foo:checkWorkIdRegelingTPOD_2140(text())) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2140: Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>: het WorkIDRegeling van het manifest in OW moet verwijzen naar een bestaande FRBRWork in een Regelingversie in OP </sch:assert>
+                {               
+                "code": "TPOD2140",
+                "ernst": "Blokkerend",
+                "workId": "<sch:value-of select="text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "het WorkIDRegeling van het manifest in OW moet verwijzen naar een bestaande FRBRWork in een Regelingversie in OP.",
+                "melding": "Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
