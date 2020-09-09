@@ -135,21 +135,20 @@
     <sch:pattern id="TPOD_2180">
         <sch:rule
             context="//aanlevering:AanleveringBesluit">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="CONDITION" value="count($xmlDocuments//rg:Regelingsgebied) = 1"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2180",
+                "ernst": "Blokkerend",
+                "betreft": "Regelingsgebied",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> ",
+                "regel": "Per Regeling moet er een Regelingsgebied zijn aangeleverd.",
+                "melding": "Het Regelingsgebied is niet aangetroffen.",
                 "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
                 },
-                TPOD_2180: Per Regeling moet er een Regelingsgebied zijn aangeleverd.</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 
