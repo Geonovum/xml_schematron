@@ -129,18 +129,17 @@
 
     <sch:pattern id="TPOD_2110">
         <sch:rule context="//vt:Tekstdeel">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$vrijetekststructuur"/>
             <sch:let name="CONDITION" value="(vt:idealisatie and vt:locatieaanduiding) or (not(vt:idealisatie) and not(vt:locatieaanduiding))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2110",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="vt:identificatie"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft.",
+                "melding": "Betreft Tekstdeel: <sch:value-of select="vt:identificatie"/>"
                 },
-                TPOD2110: Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft. Betreft Tekstdeel: <sch:value-of select="vt:identificatie"/>
             </sch:assert>
         </sch:rule>
     </sch:pattern>

@@ -61,5 +61,18 @@
 				</vt:Tekstdeel>
 			</ow-dc:owObject>
 		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:Tekstdeel>
+					<vt:identificatie>nl.imow-gm0037.tekstdeel.201900004</vt:identificatie>
+					<vt:divisieaanduiding>
+						<vt:DivisieRef xlink:href=""/>
+					</vt:divisieaanduiding>
+					<vt:locatieaanduiding>
+						<l:GebiedRef xlink:href=""/>
+					</vt:locatieaanduiding>
+				</vt:Tekstdeel>
+			</ow-dc:owObject>
+		</sl:stand>
 	</sl:standBestand>
 </ow-dc:owBestand>
