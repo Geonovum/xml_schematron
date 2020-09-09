@@ -130,15 +130,14 @@
             <sch:let name="CONDITION" value="string-length($dubbel[1]) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2130",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../../l:identificatie/text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie toegestaan)",
+                "melding": "Betreft gebied:<sch:value-of select="../../l:identificatie/text()"/>, Geometrieref: <sch:value-of select="$dubbel"/>"
                 },
-                TPOD2130: Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie
-                toegestaan), dit betreft gebied:<sch:value-of select="../../l:identificatie/text()"/>, Geometrieref: <sch:value-of select="$dubbel"/>.</sch:assert>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
 

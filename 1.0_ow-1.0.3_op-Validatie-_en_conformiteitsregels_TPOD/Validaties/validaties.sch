@@ -2870,13 +2870,18 @@
     
     <sch:pattern id="TPOD_2120">
         <sch:rule context="//*:identificatie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="dubbel" value="foo:vindDubbeleTPOD_2120(text())"/>
             <sch:let name="CONDITION" value="string-length($dubbel) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2120: Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen), 
-                dit betreft id:<sch:value-of select="text()"/>.
-                Let op, heel belangrijk om dit eerst te repareren voor conclusies te trekken over fout-situaties in andere validaties.
+                {               
+                "code": "TPOD2120",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen).",
+                "melding": "Betreft id: <sch:value-of select="text()"/>"
+                },
             </sch:assert>
         </sch:rule>
     </sch:pattern>
@@ -2906,8 +2911,15 @@
                 value="foo:vindDubbeleTPOD_2130(string(@xlink:href), ../../l:identificatie/text())"/>
             <sch:let name="CONDITION" value="string-length($dubbel[1]) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2130: Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie
-                toegestaan), dit betreft gebied:<sch:value-of select="../../l:identificatie/text()"/>, Geometrieref: <sch:value-of select="$dubbel"/>.</sch:assert>
+                {               
+                "code": "TPOD2130",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="../../l:identificatie/text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie toegestaan)",
+                "melding": "Betreft gebied:<sch:value-of select="../../l:identificatie/text()"/>, Geometrieref: <sch:value-of select="$dubbel"/>"
+                },
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     

@@ -124,21 +124,18 @@
 
     <sch:pattern id="TPOD_2120">
         <sch:rule context="//*:identificatie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$allen"/>
             <sch:let name="dubbel" value="foo:vindDubbeleTPOD_2120(text())"/>
             <sch:let name="CONDITION" value="string-length($dubbel) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
+                "code": "TPOD2120",
+                "ernst": "Blokkerend",
+                "identificatie": "<sch:value-of select="text()"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
+                "regel": "Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen).",
+                "melding": "Betreft id: <sch:value-of select="text()"/>"
                 },
-                TPOD2120: Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen), 
-                dit betreft id:<sch:value-of select="text()"/>.
-                Let op, heel belangrijk om dit eerst te repareren voor conclusies te trekken over fout-situaties in andere validaties.
             </sch:assert>
         </sch:rule>
     </sch:pattern>
