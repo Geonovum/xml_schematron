@@ -5245,6 +5245,7 @@
          <rechtsgebieden>
             <rechtsgebied>geen</rechtsgebied>
          </rechtsgebieden>
+         <soortRegeling>/join/id/stop/regelingtype_006</soortRegeling>
       </RegelingMetadata>
    </RegelingVersieInformatie>
 </AanleveringBesluit>
