@@ -79,10 +79,11 @@
     <sch:let name="P" value="'/join/id/stop/regelingtype_010'"/>   <!-- Programma -->
     <sch:let name="RI" value="'/join/id/stop/regelingtype_011'"/>   <!-- Reactieve interventie -->
     
-    <sch:let name="rijk" value="$SOORT_REGELING=$AMvB or $SOORT_REGELING=$MR"/>
-    <sch:let name="omgevingsplan" value="$SOORT_REGELING=$OP"/>
-    <sch:let name="omgevingsplan-en-waterschap" value="$SOORT_REGELING=$OP or $SOORT_REGELING=$WV"/>
-    <sch:let name="allen" value="
+    <!-- Bussiness Rules Groups -->
+    <sch:let name="AMvB_MR" value="$SOORT_REGELING=$AMvB or $SOORT_REGELING=$MR"/>
+    <sch:let name="Omgevingsplan" value="$SOORT_REGELING=$OP"/>
+    <sch:let name="OP-implementatie-GemeentenEnWaterschappen" value="$SOORT_REGELING=$OP or $SOORT_REGELING=$WV"/>
+    <sch:let name="OW-generiek" value="
         $SOORT_REGELING=$AMvB or 
         $SOORT_REGELING=$MR or 
         $SOORT_REGELING=$OP or 
@@ -95,7 +96,9 @@
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
-    <sch:let name="allen-behalve-rijk" value="
+    <sch:let name="OW-generiek_OZON" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
         $SOORT_REGELING=$OP or 
         $SOORT_REGELING=$OV or 
         $SOORT_REGELING=$WV or 
@@ -106,8 +109,32 @@
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
-    <sch:let name="omgevingsverordening" value="$SOORT_REGELING=$OV"/>
-    <sch:let name="regelstructuur" value="
+    <sch:let name="OP-implementatie-generiek" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$VR or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="OP-implementatie-niet-Rijk" value="
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$VR or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="OP-implementatie-Omgevingsverordening" value="$SOORT_REGELING=$OV"/>
+    <sch:let name="OP-implementatie-regelstructuur" value="
         $SOORT_REGELING=$AMvB or 
         $SOORT_REGELING=$MR or 
         $SOORT_REGELING=$OP or 
@@ -115,20 +142,43 @@
         $SOORT_REGELING=$WV or 
         $SOORT_REGELING=$VR
         "/>
-    <sch:let name="vrijetekststructuur" value="
+    <sch:let name="Regelstructuur" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$VR
+        "/>
+    <sch:let name="Regelstructuur_OZON" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$VR
+        "/>
+    <sch:let name="Vrijetekststructuur" value="
         $SOORT_REGELING=$OVi or
         $SOORT_REGELING=$PB or
         $SOORT_REGELING=$I or
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
-    <sch:let name="waterschapsverordening" value="$SOORT_REGELING=$WV"/>
+    <sch:let name="Vrijetekststructuur_OZON" value="
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="Waterschapsverordening" value="$SOORT_REGELING=$WV"/>
     
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1860">
         <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="CONDITION"
                 value="not(r:gerelateerdeRegeltekst/r:RegeltekstRef/@xlink:href eq r:identificatie)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -144,7 +194,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="CONDITION"
                 value="not(rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -160,7 +210,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//r:artikelOfLid/r:RegeltekstRef">
-            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -177,7 +227,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//r:RegelVoorIedereen/r:activiteitaanduiding/rol:ActiviteitRef">
-            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -194,7 +244,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//r:omgevingsnormaanduiding/rol:OmgevingsnormRef">
-            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -211,7 +261,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//r:gebiedsaanwijzing/ga:GebiedsaanwijzingRef">
-            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -228,7 +278,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//rol:gerelateerdeActiviteit/rol:ActiviteitRef">
-            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -246,7 +296,7 @@
         </sch:rule>
         <sch:rule
             context="//l:LocatieRef | l:GebiedRef | l:GebiedengroepRef | l:PuntRef | l:PuntengroepRef | l:LijnengroepRef | l:LijnRef">
-            <sch:let name="APPLICABLE" value="$allen"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="identifiers" value="foo:getLocationIdentifiersTPOD_1860()"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 

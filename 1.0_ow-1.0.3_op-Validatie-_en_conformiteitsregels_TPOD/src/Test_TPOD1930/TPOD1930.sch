@@ -80,10 +80,11 @@
     <sch:let name="P" value="'/join/id/stop/regelingtype_010'"/>   <!-- Programma -->
     <sch:let name="RI" value="'/join/id/stop/regelingtype_011'"/>   <!-- Reactieve interventie -->
     
-    <sch:let name="rijk" value="$SOORT_REGELING=$AMvB or $SOORT_REGELING=$MR"/>
-    <sch:let name="omgevingsplan" value="$SOORT_REGELING=$OP"/>
-    <sch:let name="omgevingsplan-en-waterschap" value="$SOORT_REGELING=$OP or $SOORT_REGELING=$WV"/>
-    <sch:let name="allen" value="
+    <!-- Bussiness Rules Groups -->
+    <sch:let name="AMvB_MR" value="$SOORT_REGELING=$AMvB or $SOORT_REGELING=$MR"/>
+    <sch:let name="Omgevingsplan" value="$SOORT_REGELING=$OP"/>
+    <sch:let name="OP-implementatie-GemeentenEnWaterschappen" value="$SOORT_REGELING=$OP or $SOORT_REGELING=$WV"/>
+    <sch:let name="OW-generiek" value="
         $SOORT_REGELING=$AMvB or 
         $SOORT_REGELING=$MR or 
         $SOORT_REGELING=$OP or 
@@ -96,7 +97,9 @@
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
-    <sch:let name="allen-behalve-rijk" value="
+    <sch:let name="OW-generiek_OZON" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
         $SOORT_REGELING=$OP or 
         $SOORT_REGELING=$OV or 
         $SOORT_REGELING=$WV or 
@@ -107,8 +110,32 @@
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
-    <sch:let name="omgevingsverordening" value="$SOORT_REGELING=$OV"/>
-    <sch:let name="regelstructuur" value="
+    <sch:let name="OP-implementatie-generiek" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$VR or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="OP-implementatie-niet-Rijk" value="
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$VR or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="OP-implementatie-Omgevingsverordening" value="$SOORT_REGELING=$OV"/>
+    <sch:let name="OP-implementatie-regelstructuur" value="
         $SOORT_REGELING=$AMvB or 
         $SOORT_REGELING=$MR or 
         $SOORT_REGELING=$OP or 
@@ -116,14 +143,38 @@
         $SOORT_REGELING=$WV or 
         $SOORT_REGELING=$VR
         "/>
-    <sch:let name="vrijetekststructuur" value="
+    <sch:let name="Regelstructuur" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$VR
+        "/>
+    <sch:let name="Regelstructuur_OZON" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR or 
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$OV or 
+        $SOORT_REGELING=$WV or 
+        $SOORT_REGELING=$VR
+        "/>
+    <sch:let name="Vrijetekststructuur" value="
         $SOORT_REGELING=$OVi or
         $SOORT_REGELING=$PB or
         $SOORT_REGELING=$I or
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
-    <sch:let name="waterschapsverordening" value="$SOORT_REGELING=$WV"/>
+    <sch:let name="Vrijetekststructuur_OZON" value="
+        $SOORT_REGELING=$OVi or
+        $SOORT_REGELING=$PB or
+        $SOORT_REGELING=$I or
+        $SOORT_REGELING=$P or
+        $SOORT_REGELING=$RI
+        "/>
+    <sch:let name="Waterschapsverordening" value="$SOORT_REGELING=$WV"/>
+    
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD_1930">
