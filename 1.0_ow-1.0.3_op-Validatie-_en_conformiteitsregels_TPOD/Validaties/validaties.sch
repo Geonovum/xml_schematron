@@ -552,8 +552,7 @@
     
     <sch:pattern id="TPOD_0620">
         <sch:rule context="//tekst:Paragraaf/tekst:Subparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'subparagraaf']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0620: Een Subparagraaf moet worden geduid met de label Subparagraaf. 
@@ -565,8 +564,7 @@
     
     <sch:pattern id="TPOD_0630">
         <sch:rule context="//tekst:Afdeling/tekst:Paragraaf">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
             <sch:let name="paragraaf" value="tekst:Kop/tekst:Nummer/text()"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0630($paragraaf, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
@@ -593,8 +591,7 @@
     
     <sch:pattern id="TPOD_0640">
         <sch:rule context="//tekst:Afdeling/tekst:Paragraaf">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
             <sch:let name="paragraaf" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0640($paragraaf, .)"/>
             
@@ -641,8 +638,7 @@
     
     <sch:pattern id="TPOD_0670">
         <sch:rule context="//tekst:Subparagraaf/tekst:Subsubparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'subsubparagraaf']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. 
@@ -654,8 +650,7 @@
     
     <sch:pattern id="TPOD_0680">
         <sch:rule context="//tekst:Paragraaf/tekst:Subparagraaf">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
             <sch:let name="subparagraaf" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0680($subparagraaf, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
@@ -682,8 +677,7 @@
     
     <sch:pattern id="TPOD_0690">
         <sch:rule context="//tekst:Paragraaf/tekst:Subparagraaf">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
             <sch:let name="subparagraaf" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0690($subparagraaf, .)"/>
             
@@ -731,8 +725,7 @@
     
     <sch:pattern id="TPOD_0720">
         <sch:rule context="//tekst:Artikel/tekst:Kop[lower-case(tekst:Label) ne 'artikel']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD_0720: Een Artikel moet worden geduid met de label Artikel. 
@@ -744,8 +737,7 @@
     
     <sch:pattern id="TPOD_0730">
         <sch:rule context="//tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0730($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
@@ -792,8 +784,7 @@
     
     <sch:pattern id="TPOD_0740">
         <sch:rule context="//tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
             <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0740($hoofdstuk, .)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
@@ -932,7 +923,7 @@
     
     <sch:pattern id="TPOD_0780">
         <sch:rule context="//tekst:Lid">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
             <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0780(.)"/>
             <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
@@ -1084,8 +1075,7 @@
     
     <sch:pattern id="TPOD_0790">
         <sch:rule context="//tekst:Lid">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
             <sch:let name="volgorde" value="foo:volgordeTPOD_0790(.)"/>
             <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -1186,16 +1176,16 @@
     </sch:pattern>
     
     
-    <!-- ============TPOD_0830_0831================================================================================================================ -->
+    <!-- ============TPOD_0830================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0830_0831">
+    <sch:pattern id="TPOD_0830">
         <sch:rule context="//tekst:Lijst">
             <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
             <sch:let name="lijstMetLettersAangeven" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($lijstMetLettersAangeven[1]) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD0830_0831",
+                "code": "TPOD0830",
                 "ernst": "Waarschuwing",
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
@@ -1218,16 +1208,48 @@
         </xsl:if>
     </xsl:function>
     
-    <!-- ============TPOD_0840_0841================================================================================================================ -->
+    <!-- ============TPOD_0831================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0840_0841">
+    <sch:pattern id="TPOD_0831">
+        <sch:rule context="//tekst:Lijst">
+            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
+            <sch:let name="lijstMetLettersAangeven" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
+            <sch:let name="CONDITION" value="string-length($lijstMetLettersAangeven[1]) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                {               
+                "code": "TPOD0831",
+                "ernst": "Waarschuwing",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "De onderdelen van de Lijst op het eerste niveau moeten worden aangegeven met letters.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
+                },
+                TPOD_0830/0831:<sch:value-of select="$lijstMetLettersAangeven"/></sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkEersteNiveauLijstLettersTPOD_0831">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
+        <xsl:if test="$ancestors = 1">
+            <xsl:for-each select="$context/tekst:Li">
+                <xsl:if test="not(matches(tekst:LiNummer, '[a-z]{1}\.')) and not(matches(tekst:LiNummer, '[a-z]{1}'))">
+                    <xsl:value-of select="@eId"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:if>
+    </xsl:function>
+    
+    <!-- ============TPOD_08401================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0840">
         <sch:rule context="//tekst:Lijst">
             <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
             <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0840(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout[1]) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD0840_0841",
+                "code": "TPOD0840",
                 "ernst": "",
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
@@ -1250,16 +1272,48 @@
         </xsl:if>
     </xsl:function>
     
-    <!-- ============TPOD_0850_0851================================================================================================================ -->
+    <!-- ============TPOD_0841================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0850_0851">
+    <sch:pattern id="TPOD_0841">
+        <sch:rule context="//tekst:Lijst">
+            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
+            <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0840(.)"> </sch:let>
+            <sch:let name="CONDITION" value="string-length($ancestorsFout[1]) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                {               
+                "code": "TPOD0841",
+                "ernst": "",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "De onderdelen van de Lijst op het tweede niveau moeten worden aangegeven met Arabische cijfers.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
+                },
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkTweedeNiveauLijstCijfersTPOD_0841">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
+        <xsl:if test="$ancestors = 2">
+            <xsl:for-each select="$context/tekst:Li">
+                <xsl:if test="not(matches(tekst:LiNummer, '[0-9]{1,2}\.')) and not(matches(tekst:LiNummer, '[0-9]{1,2}'))">
+                    <xsl:value-of select="@eId"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:if>
+    </xsl:function>
+    
+    <!-- ============TPOD_0850================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0850">
         <sch:rule context="//tekst:Lijst">
             <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
             <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0850(.)"> </sch:let>
             <sch:let name="CONDITION" value="string-length($ancestorsFout[1]) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
-                "code": "TPOD0850_0851",
+                "code": "TPOD0850",
                 "ernst": "",
                 "eId": "<sch:value-of select="@eId"/>",
                 "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
@@ -1282,7 +1336,40 @@
         </xsl:if>
     </xsl:function>
     
+    <!-- ============TPOD_0851================================================================================================================ -->
+    
+    <sch:pattern id="TPOD_0851">
+        <sch:rule context="//tekst:Lijst">
+            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
+            <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0850(.)"> </sch:let>
+            <sch:let name="CONDITION" value="string-length($ancestorsFout[1]) = 0"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
+                {               
+                "code": "TPOD0851",
+                "ernst": "",
+                "eId": "<sch:value-of select="@eId"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "De onderdelen van de Lijst op het derde niveau moeten worden aangegeven met Arabische cijfers.",
+                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
+                },
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <xsl:function name="foo:checkTweedeNiveauLijstCijfersTPOD_0851">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
+        <xsl:if test="$ancestors = 3">
+            <xsl:for-each select="$context/tekst:Li">
+                <xsl:if test="not(matches(tekst:LiNummer, '[0-9]{1,2}\.')) and not(matches(tekst:LiNummer, '[0-9]{1,2}'))">
+                    <xsl:value-of select="@eId"/>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:if>
+    </xsl:function>
+    
     <!-- ============TPOD_0880================================================================================================================ -->
+    
     <sch:pattern id="TPOD880">
     <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']">
         <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
@@ -1302,9 +1389,9 @@
     
     <!-- ============TPOD_0930================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0930_28992">
+    <sch:pattern id="TPOD_0930">
         <sch:rule context="//basisgeo:geometrie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="fout" value="foo:aantalTPOD_0930_28992(.)"/>
             <sch:let name="CONDITION" value="string-length($fout) = 0"/>
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
@@ -1319,11 +1406,8 @@
                 },
             </sch:assert>
         </sch:rule>
-    </sch:pattern>
-    
-    <sch:pattern id="TPOD_0930_4258">
         <sch:rule context="//basisgeo:geometrie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="fout" value="foo:aantalTPOD_0930_4258(.)"/>
             <sch:let name="CONDITION" value="string-length($fout) = 0"/>
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
@@ -1447,8 +1531,7 @@
     
     <sch:pattern id="TPOD_0980">
         <sch:rule context="//tekst:Hoofdstuk[tekst:Kop/tekst:Nummer/text() eq '1']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OP-implementatie-generiek"/>
             <sch:let name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)[1]) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
@@ -1593,8 +1676,7 @@
     <sch:pattern id="TPOD_1650">
         <sch:rule
             context="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde/rol:Normwaarde">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="CONDITION" value="
                 (rol:kwantitatieveWaarde or rol:kwalitatieveWaarde or rol:waardeInRegeltekst) 
                 and
@@ -1624,7 +1706,7 @@
     
     <sch:pattern id="TPOD_1700">
         <sch:rule context="rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
@@ -1644,7 +1726,7 @@
     
     <sch:pattern id="TPOD_1710">
         <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1710()"/>
             <sch:let name="circulaireActivititeiten"
                 value="foo:circulaireActivititeitenTPOD_1710(., $activiteitenLijst)"/>
@@ -1721,7 +1803,7 @@
     
     <sch:pattern id="TPOD_1730">
         <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1730()"/>
             <!-- TPOD1730  -->
             <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
@@ -1755,8 +1837,7 @@
     
     <sch:pattern id="TPOD_1740">
         <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
             <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1740()"/>
             <sch:let name="CONDITION" value="contains($activiteitenLijst, string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
@@ -1788,7 +1869,7 @@
     
     <sch:pattern id="TPOD_1750">
         <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
             <sch:let name="ref" value="rol:identificatie/text()"/>
             <sch:let name="CONDITION" value="not(foo:activiteitenGebiedenTPOD_1750($ref) = 'false')"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
@@ -1864,12 +1945,33 @@
         </sch:rule>
     </sch:pattern>
     
+    <!-- ============TPOD_1770================================================================================================================ -->
+    
+    <!-- LET OP FOUT -->
+    
+    <sch:pattern id="TPOD_1770">
+        <sch:rule context="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']">
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
+            <sch:let name="CONDITION" value="true()"/>
+            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
+                {               
+                "code": "TPOD1770",
+                "ernst": "Blokkerend",
+                "eId": "<sch:value-of select="ga:identificatie/text()"/>",
+                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
+                "regel": "Binnen het object 'Gebiedsaanwijzing' moeten de waarden van de attributen 'groep' (datatype 'Gebiedsaanwijzinggroep') hiërarchisch vallen onder het 'type' (datatype 'TypeGebiedsaanwijzing').",
+                #"melding": "Dit is wel het geval in <sch:value-of select="ga:identificatie"/>"
+                },
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
     <!-- ============TPOD_1780================================================================================================================ -->
     
     <sch:pattern id="TPOD_1780">
         <sch:rule
             context="//aanlevering:AanleveringBesluit">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
             <sch:let name="CONDITION"
                 value="count(//tekst:Hoofdstuk/descendant::tekst:Artikel)>0"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -1889,7 +1991,7 @@
     <sch:pattern id="TPOD_1790">
         <sch:rule
             context="//r:Instructieregel">
-            <sch:let name="APPLICABLE" value="Omgevingsplan"/>
+            <sch:let name="APPLICABLE" value="$Omgevingsplan"/>
             <sch:let name="CONDITION"
                 value="false()"/>    
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -1909,7 +2011,7 @@
     
     <sch:pattern id="TPOD1830">
         <sch:rule context="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie']">
-            <sch:let name="APPLICABLE" value="AMvB_MR"/>
+            <sch:let name="APPLICABLE" value="$AMvB_MR"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               
@@ -1928,7 +2030,7 @@
     
     <sch:pattern id="TPOD1840">
         <sch:rule context="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']">
-            <sch:let name="APPLICABLE" value="AMvB_MR"/>
+            <sch:let name="APPLICABLE" value="$AMvB_MR"/>
             <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
                 {               
@@ -1947,7 +2049,7 @@
     
     <sch:pattern id="TPOD1850">
         <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
             <sch:let name="fouten" value="foo:CheckFouteConstructiesTPOD_1850(.)"/>
             <sch:let name="CONDITION" value="string-length($fouten)=0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
@@ -1979,7 +2081,7 @@
     
     <sch:pattern id="TPOD_1860">
         <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
             <sch:let name="CONDITION"
                 value="not(r:gerelateerdeRegeltekst/r:RegeltekstRef/@xlink:href eq r:identificatie)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -1995,7 +2097,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
             <sch:let name="CONDITION"
                 value="not(rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -2011,7 +2113,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//r:artikelOfLid/r:RegeltekstRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -2028,7 +2130,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//r:RegelVoorIedereen/r:activiteitaanduiding/rol:ActiviteitRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -2045,7 +2147,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//r:omgevingsnormaanduiding/rol:OmgevingsnormRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -2062,7 +2164,6 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//r:gebiedsaanwijzing/ga:GebiedsaanwijzingRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -2079,7 +2180,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//rol:gerelateerdeActiviteit/rol:ActiviteitRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -2097,7 +2198,7 @@
         </sch:rule>
         <sch:rule
             context="//l:LocatieRef | l:GebiedRef | l:GebiedengroepRef | l:PuntRef | l:PuntengroepRef | l:LijnengroepRef | l:LijnRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
             <sch:let name="identifiers" value="foo:getLocationIdentifiersTPOD_1860()"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -2138,7 +2239,7 @@
     
     <sch:pattern id="TPOD_1870">
         <sch:rule context="//r:artikelOfLid">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
             <sch:let name="identifiers" value="foo:getRegelTekstIdentifiersTPOD_1870()"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',r:RegeltekstRef/@xlink:href,'.'))"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -2169,8 +2270,8 @@
     
     <sch:pattern id="TPOD_1880">
         <sch:rule context="//(rol:Omgevingswaarde|r:Omgevingswaarderegel)">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="not($waterschapsverordening)"/>
+            <sch:let name="APPLICABLE" value="$Waterschapsverordening"/>
+            <sch:let name="CONDITION" value="false()"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
                 "code": "TPOD1880",
@@ -2301,7 +2402,7 @@
     
     <sch:pattern id="TPOD_1930">
         <sch:rule context="//l:Gebiedengroep/l:groepselement">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="notFound" value="foo:notFoundTPOD_1930(.)"/>
             <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -2435,8 +2536,7 @@
     
     <sch:pattern id="TPOD_1960">
             <sch:rule context="//l:Lijn/l:geometrie/l:GeometrieRef">
-                <sch:let name="APPLICABLE"
-                    value="true()"/>
+                <sch:let name="APPLICABLE" value="$OW-generiek"/>
                 <sch:let name="href" value="string(@xlink:href)"/>
                 <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq $href]"/>
                 <sch:let name="CONDITION" value="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
@@ -2457,8 +2557,7 @@
     
     <sch:pattern id="TPOD_1970">
         <sch:rule context="//l:Punt/l:geometrie/l:GeometrieRef">
-            <sch:let name="APPLICABLE"
-                value="true()"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="href" value="string(@xlink:href)"/>
             <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq $href]"/>
             <sch:let name="CONDITION" value="$geometrie//gml:MultiPoint || $geometrie//gml:Point"/>
@@ -2479,7 +2578,7 @@
     
     <sch:pattern id="TPOD_1980">
         <sch:rule context="//l:Gebied/l:geometrie/l:GeometrieRef">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="href" value="string(@xlink:href)"/>
             <sch:let name="CONDITION" value="foo:calculateConditionTPOD_1980($href) = 1"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -2517,7 +2616,7 @@
     
     <sch:pattern id="TPOD_1990">
         <sch:rule context="//basisgeo:Geometrie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
             <sch:let name="geoLocationGeoReferenceIdentifiers"
                 value="foo:getLocationGeoReferenceIdentifiersTPOD_1990()"/>
             <sch:let name="nietGerefereerdeGeometrie"
@@ -2537,7 +2636,7 @@
         </sch:rule>
         
         <sch:rule context="//r:Regeltekst/r:identificatie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
             <sch:let name="regeltekstReferenties"
                 value="foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef)"/>
             <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($regeltekstReferenties, .)"/>
@@ -2556,7 +2655,7 @@
         </sch:rule>
         
         <sch:rule context="//(vt:FormeleDivisie|vt:Hoofdlijn)/vt:identificatie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
             <sch:let name="formeleDivisieReferenties"
                 value="foo:getReferencesTPOD_1990($xmlDocuments//(vt:FormeleDivisieRef|vt:HoofdlijnRef))"/>
             <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($formeleDivisieReferenties, .)"/>
@@ -2575,7 +2674,7 @@
         </sch:rule>
         
         <sch:rule context="//rol:Activiteit/rol:identificatie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
             <sch:let name="activiteitRefs"
                 value="foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef)"/>
             <sch:let name="nietGerefereerdeReferenties"
@@ -2596,7 +2695,7 @@
         </sch:rule>
         
         <sch:rule context="//l:identificatie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
             <sch:let name="locatieReferenties"
                 value="foo:getLocationReferenceIdentifiersTPOD_1990()"/>
             <sch:let name="nietGerefereerdeReferenties">
@@ -2673,7 +2772,7 @@
     
     <sch:pattern id="TPOD_2000">
         <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
@@ -2701,7 +2800,7 @@
     
     <sch:pattern id="TPOD_2040">
         <sch:rule context="//vt:Divisie">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$Vrijetekststructuur_OZON"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
@@ -2774,7 +2873,7 @@
     
     <sch:pattern id="TPOD_2060">
         <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
             <sch:let name="message" value="foo:checkFouteArtikelLidCombinatieTPOD_2060(.)"/>
             <sch:let name="CONDITION" value="string-length($message) = 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
@@ -2835,7 +2934,7 @@
     
     <sch:pattern id="TPOD_2080">
         <sch:rule context="//r:Instructieregel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
             <sch:let name="or" value="r:instructieregelTaakuitoefening or r:instructieregelInstrument"></sch:let>
             <sch:let name="both" value="r:instructieregelTaakuitoefening and r:instructieregelInstrument"></sch:let>
             <sch:let name="none" value="not(r:instructieregelTaakuitoefening) and not(r:instructieregelInstrument)"></sch:let>
@@ -2857,7 +2956,7 @@
     
     <sch:pattern id="TPOD_2090">
         <sch:rule context="//rol:Omgevingsnorm">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="kwl" value="count(rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"></sch:let>
             <sch:let name="kwn" value="count(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde)"></sch:let>
             <sch:let name="wir" value="count(rol:normwaarde/rol:Normwaarde/rol:waardeInRegeltekst)"></sch:let>
@@ -2880,7 +2979,7 @@
     
     <sch:pattern id="TPOD_2100">
         <sch:rule context="//rol:Omgevingsnorm/rol:eenheid">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
             <sch:let name="CONDITION" value="../rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               
@@ -2954,7 +3053,7 @@
     
     <sch:pattern id="TPOD_2130">
         <sch:rule context="//l:GeometrieRef">
-            <sch:let name="APPLICABLE" value="true()"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek"/>
             <sch:let name="dubbel"
                 value="foo:vindDubbeleTPOD_2130(string(@xlink:href), ../../l:identificatie/text())"/>
             <sch:let name="CONDITION" value="string-length($dubbel[1]) = 0"/>
@@ -3091,7 +3190,7 @@
     <sch:pattern id="TPOD_2180">
         <sch:rule
             context="//aanlevering:AanleveringBesluit">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
+            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
             <sch:let name="CONDITION" value="count($xmlDocuments//rg:Regelingsgebied) = 1"/>
             <sch:assert
                 test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
