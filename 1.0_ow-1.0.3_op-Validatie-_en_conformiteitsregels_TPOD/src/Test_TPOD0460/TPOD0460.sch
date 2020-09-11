@@ -176,21 +176,18 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0460">
-        <sch:rule context="//tekst:Titel/tekst:Kop[tekst:Label ne 'Titel']">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0460",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="../@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Titel moet worden geduid met het label Titel.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="../@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0460" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0460'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//tekst:Titel/tekst:Kop[tekst:Label ne 'Titel']"/>
+        <sch:param name="idf" value="../@eId"/>
+        <sch:param name="nameidf" value="'eId'"/>
+	    <sch:param name="regel" value="'Een Titel moet worden geduid met het label Titel.'"/>
     </sch:pattern>
 
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
+    
 </sch:schema>

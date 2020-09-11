@@ -176,21 +176,18 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0570">
-        <sch:rule context="//tekst:Paragraaf/tekst:Kop[(lower-case(tekst:Label) ne '§') and (tekst:Label ne 'Paragraaf')]">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0570",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0570" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0570'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="false()"/>
+	    <sch:param name="context" value="//tekst:Paragraaf/tekst:Kop[(lower-case(tekst:Label) ne '§') and (tekst:Label ne 'Paragraaf')]"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+	    <sch:param name="regel" value="'Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken.'"></sch:param>
     </sch:pattern>
 
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
+    
 </sch:schema>

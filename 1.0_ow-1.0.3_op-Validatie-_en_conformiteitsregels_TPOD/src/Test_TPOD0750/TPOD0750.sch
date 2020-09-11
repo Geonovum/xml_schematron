@@ -176,21 +176,18 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0750">
-        <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0750",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0750" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0750'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+	    <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
+	    <sch:param name="context" value="//tekst:Artikel"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+	    <sch:param name="regel" value="'Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen.'"></sch:param>
     </sch:pattern>
 
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
+    
 </sch:schema>

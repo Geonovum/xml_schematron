@@ -63,6 +63,7 @@
     <sch:ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
     
     <!-- ====================================== GENERIC ============================================================================= -->
+	
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING" value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
@@ -176,25 +177,17 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0470">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Titel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0470(.)"/>
-            
-            <sch:let name="CONDITION" value="string-length($fouten[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0470",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0470" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0470'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:foutenTPOD_0470(.)[1]) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Titel"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt.+'"></sch:param>
     </sch:pattern>
-    
+
     <xsl:function name="foo:foutenTPOD_0470">
         <xsl:param name="context" as="node()"/>
         <xsl:for-each select="$context/../tekst:Titel">
@@ -205,4 +198,7 @@
     </xsl:function>
     
 
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
+    
 </sch:schema>

@@ -177,6 +177,19 @@
     
     <!-- ============================================================================================================================ -->
 
+	<!-- 
+	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0420'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+    </sch:pattern>
+    -->
+
+
     <sch:pattern id="TPOD_0840_0841">
         <sch:rule context="//tekst:Lijst">
             <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
@@ -207,4 +220,7 @@
         </xsl:if>
     </xsl:function>
 
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
+    
 </sch:schema>

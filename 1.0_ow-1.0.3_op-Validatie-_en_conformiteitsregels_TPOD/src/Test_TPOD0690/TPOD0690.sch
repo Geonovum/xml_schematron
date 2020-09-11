@@ -176,37 +176,16 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0690">
-        <sch:rule context="//tekst:Paragraaf/tekst:Subparagraaf">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="subparagraaf" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0690($subparagraaf, .)"/>
-            
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
-                },
-                TPOD_0690: Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers 
-                (betreft subparagraaf: <sch:value-of select="$subparagraaf"/>,subsubparagrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)  
-                </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0690" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0690'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+	    <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0690(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
+	    <sch:param name="context" value="//tekst:Paragraaf/tekst:Subparagraaf"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+	    <sch:param name="regel" value="'Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
     </sch:pattern>
-    
-    <xsl:function name="foo:volgordeTPOD_0480">
-        <xsl:param name="context" as="node()"/>
-        <xsl:for-each select="$context/../tekst:Titel">
-            <xsl:if test="$context/@eId=@eId and not(substring-after(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer,'.'))=string(position()))">
-                <xsl:value-of select="@eId"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
     
     <xsl:function name="foo:volgordeTPOD_0690">
         <xsl:param name="subparagraaf"/>
@@ -222,4 +201,7 @@
     </xsl:function>
     
 
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
+    
 </sch:schema>

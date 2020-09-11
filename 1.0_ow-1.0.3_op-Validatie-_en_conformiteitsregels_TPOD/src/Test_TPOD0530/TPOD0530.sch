@@ -176,24 +176,17 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0530">
-        <sch:rule context="//tekst:Afdeling">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0530(.)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0530",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Afdelingen moeten oplopend worden genummerd in Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0530" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0530'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+	    <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0530(.)) = 0"/>
+	    <sch:param name="context" value="//tekst:Afdeling"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+	    <sch:param name="regel" value="'Afdelingen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
     </sch:pattern>
-        
+    
     <xsl:function name="foo:volgordeTPOD_0530">
         <xsl:param name="context" as="node()"/>
         <xsl:for-each select="$context/../tekst:Afdeling">
@@ -202,4 +195,8 @@
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
+    
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
+    
 </sch:schema>

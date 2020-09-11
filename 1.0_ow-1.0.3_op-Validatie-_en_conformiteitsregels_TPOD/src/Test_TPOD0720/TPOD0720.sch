@@ -176,23 +176,18 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0720">
-        <sch:rule context="//tekst:Artikel/tekst:Kop[lower-case(tekst:Label) ne 'artikel']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
-                },
-                TPOD_0720: Een Artikel moet worden geduid met de label Artikel. 
-                (betreft artikel: <sch:value-of select="tekst:Nummer"/>, label:<sch:value-of select="tekst:Label"/>)</sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0720" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD0720'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="false()"/>
+	    <sch:param name="context" value="//tekst:Artikel/tekst:Kop[lower-case(tekst:Label) ne 'artikel']"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+	    <sch:param name="regel" value="'Een Artikel moet worden geduid met de label Artikel.'"></sch:param>
     </sch:pattern>
 
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
+    
 </sch:schema>

@@ -177,48 +177,26 @@
 
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0741">
-        <sch:rule context="//tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
-            <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0741($hoofdstuk, .)"/>
-            <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD",
-                "ernst": "",
-                "eId": "<sch:value-of select="../@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
-                },
-                TPOD_0741: De nummering van Artikelen bevat letters en kan niet middels schematron op geldigheid
-                worden gecheckt. Dit moet handmatig gebeuren. 
-                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"/>)</sch:assert>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0741($hoofdstuk, $bevatLetters, .)"/>
-            <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD",
-                "eId": "<sch:value-of select="../@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "",
-                "melding": " <sch:value-of select="../@eId"/> "
-                },
-                TPOD_0741: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
-                voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in Arabische cijfers inclusief indien nodig een letter. 
-                (betreft hoofdstuk:<sch:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/>)</sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0741_a" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0741'"/>
+	    <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+	    <sch:param name="CONDITION" value="string-length(foo:bevatGeletterdeNummersTPOD_0741(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+	    <sch:param name="regel" value="'De nummering van Artikelen bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren.'"></sch:param>
     </sch:pattern>
-    
-    <xsl:function name="foo:volgordeTPOD_0480">
-        <xsl:param name="context" as="node()"/>
-        <xsl:for-each select="$context/../tekst:Titel">
-            <xsl:if test="$context/@eId=@eId and not(substring-after(string(tekst:Kop/tekst:Nummer),concat(../tekst:Kop/tekst:Nummer,'.'))=string(position()))">
-                <xsl:value-of select="@eId"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:function>
+
+    <sch:pattern id="TPOD0741_b" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0741'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0741(string(tekst:Kop/tekst:Nummer), foo:bevatGeletterdeNummersTPOD_0741(string(tekst:Kop/tekst:Nummer), .), .)) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in Arabische cijfers inclusief indien nodig een letter.'"></sch:param>
+    </sch:pattern>
 
     <xsl:function name="foo:bevatGeletterdeNummersTPOD_0741">
         <xsl:param name="hoofdstuk" as="xs:string"/>
@@ -291,4 +269,7 @@
         </xsl:if>
     </xsl:function>
 
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
+    
 </sch:schema>

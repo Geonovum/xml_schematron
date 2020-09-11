@@ -182,23 +182,18 @@
     <sch:let name="Waterschapsverordening" value="$SOORT_REGELING=$WV"/>
 
     <!-- ============================================================================================================================ -->
-
-    <sch:pattern id="TPOD_0490">
-        <sch:rule context="//tekst:Titel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                { 
-                "code": "TPOD0490", 
-                "ernst": "Waarschuwing", 
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>", 
-                "regel": "Achter het cijfer van een titelnummer mag geen punt worden opgenomen.", 
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>" 
-                }
-            </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0490" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0490'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+	    <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
+	    <sch:param name="context" value="//tekst:Titel"/>
+        <sch:param name="idf" value="@eId"/>
+        <sch:param name="nameidf" value="'eId'"/>
+	    <sch:param name="regel" value="'Achter het cijfer van een titelnummer mag geen punt worden opgenomen.'"/>
     </sch:pattern>
 
-
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
+    
 </sch:schema>

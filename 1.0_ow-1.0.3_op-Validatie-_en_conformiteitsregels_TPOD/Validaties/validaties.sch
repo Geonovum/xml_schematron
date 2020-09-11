@@ -178,44 +178,26 @@
     
     <!-- ============TPOD_0410================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0410">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[tekst:Label ne 'Hoofdstuk']">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:report test="false()">asa</sch:report>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0410",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="../@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Hoofdstuk moet worden geduid met het label Hoofdstuk.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="../@eId"/>."/>"
-                },
-            </sch:assert> 
-        </sch:rule>
+    <sch:pattern id="TPOD_0410" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0410'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Kop[tekst:Label ne 'Hoofdstuk']"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
     </sch:pattern>
-        
+    
     <!-- ============TPOD_0420=============================================================================================================== -->
     
-    <sch:pattern id="TPOD_0420">
-        <sch:rule context="//tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0420(.)">
-            </sch:let>
-            <sch:let name="CONDITION" value="string-length($volgorde[1]) = 0"/>
-            <sch:report test="true()"><sch:value-of select="$SOORT_REGELING"/></sch:report>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0420",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Hoofdstukken moeten oplopend worden genummerd in Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0420'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0420">
@@ -2164,6 +2146,7 @@
             </sch:assert>
         </sch:rule>
         <sch:rule context="//r:gebiedsaanwijzing/ga:GebiedsaanwijzingRef">
+            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
             <sch:let name="identifiers"
                 value="foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
             <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
@@ -3244,5 +3227,9 @@
             </sch:assert>
         </sch:rule>
     </sch:pattern>
+    
+    <sch:include href="abstract_pattern_error.sch"/>
+    <sch:include href="abstract_pattern_warning.sch"/>
+    
     
 </sch:schema>

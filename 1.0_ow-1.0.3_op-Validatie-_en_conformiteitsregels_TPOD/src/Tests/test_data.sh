@@ -17,10 +17,14 @@ else
         cp TestData_$2/*.xml Test_TPOD$1/Validaties/Opdracht
         cp TestData_$2/*.gml Test_TPOD$1/Validaties/Opdracht
         cp Test_TPOD$1/TPOD$1.sch Test_TPOD$1/Validaties/validaties.sch
+        cp abstract_pattern_error.sch Test_TPOD$1
+        cp abstract_pattern_warning.sch Test_TPOD$1
         cd Test_TPOD$1/Validaties/
         ./validate.sh
         cd ../..
         rm -f -r Test_TPOD$1/Validaties
+        rm Test_TPOD$1/abstract_pattern_error.sch
+        rm Test_TPOD$1/abstract_pattern_warning.sch
     else
         if [ -d Test_TPOD$1 ]
         then

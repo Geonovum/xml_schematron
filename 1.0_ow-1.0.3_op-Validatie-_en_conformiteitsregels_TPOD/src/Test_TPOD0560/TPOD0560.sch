@@ -176,24 +176,17 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0560">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Afdeling">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="fouten" value="foo:volgordeTPOD_0560(.)"/>
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0560",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt. ",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0560" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0560'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+	    <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0560(.)) = 0"/>
+	    <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Afdeling"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+	    <sch:param name="regel" value="'Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt.'"></sch:param>
     </sch:pattern>
-    
+
     <xsl:function name="foo:volgordeTPOD_0560">
         <xsl:param name="context" as="node()"/>
         <xsl:for-each select="$context/../tekst:Afdeling">
@@ -202,5 +195,8 @@
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
+    
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
     
 </sch:schema>

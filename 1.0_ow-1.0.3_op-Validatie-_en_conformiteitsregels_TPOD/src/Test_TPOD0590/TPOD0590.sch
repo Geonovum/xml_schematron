@@ -187,23 +187,15 @@
     
     <!-- ============================================================================================================================ -->
 
-    <sch:pattern id="TPOD_0590">
-        <sch:rule context="//tekst:Paragraaf">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0590( .)"/>
-            
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0590",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Paragrafen moeten oplopend worden genummerd in Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD0590" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0590'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0590(.)) = 0"/>
+	    <sch:param name="context" value="//tekst:Paragraaf"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+	    <sch:param name="regel" value="'Paragrafen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0590">
@@ -214,5 +206,8 @@
             </xsl:if>
         </xsl:for-each>
     </xsl:function>
+    
+    <sch:include href="../abstract_pattern_error.sch"/>
+    <sch:include href="../abstract_pattern_warning.sch"/>
     
 </sch:schema>
