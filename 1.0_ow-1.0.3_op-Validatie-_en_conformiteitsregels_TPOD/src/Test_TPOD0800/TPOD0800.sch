@@ -176,36 +176,17 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
+	 
+	<sch:pattern id="TPOD0800" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0800'"/>
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+	    <sch:param name="CONDITION" value="ends-with(string(tekst:LidNummer),'.')"/>
+        <sch:param name="context" value="//tekst:Lid"/>
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+	    <sch:param name="regel" value="'Achter het lidnummer moet een punt worden opgenomen.'"></sch:param>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_0800">
-        <sch:rule context="//tekst:Lid">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="ends-with(string(tekst:LidNummer),'.')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0800",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Achter het lidnummer moet een punt worden opgenomen.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>: <sch:value-of select="tekst:LidNummer"/>"
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-
+    
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
     

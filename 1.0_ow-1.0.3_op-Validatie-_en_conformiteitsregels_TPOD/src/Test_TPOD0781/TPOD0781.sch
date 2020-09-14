@@ -177,46 +177,25 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+	 
+    <sch:pattern id="TPOD0781_a" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0781'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+        <sch:param name="CONDITION" value="string-length(foo:bevatGeletterdeNummersTPOD_0781(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Lid"/>
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+        <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_0781">
-        <sch:rule context="//tekst:Lid">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
-            <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0781(.)"/>
-            <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0781",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
-                "melding": "De nummering van Leden ( <sch:value-of select="string(tekst:LidNummer)"/> ) bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren."
-                },
-            </sch:assert> 
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0781($bevatLetters,.)"/>
-            <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0781",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:LidNummer)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    
+    <sch:pattern id="TPOD0781_b" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0781'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0781(foo:bevatGeletterdeNummersTPOD_0781(.),.)) = 0"/>
+        <sch:param name="context" value="//tekst:Lid"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
     </sch:pattern>
     
     <xsl:function name="foo:bevatGeletterdeNummersTPOD_0781">

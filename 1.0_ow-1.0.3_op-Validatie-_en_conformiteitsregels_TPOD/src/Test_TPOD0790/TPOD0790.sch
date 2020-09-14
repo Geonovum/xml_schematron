@@ -176,36 +176,15 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
+	 
+	<sch:pattern id="TPOD0790" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0790'"/>
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+	    <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0790(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Lid"/>
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_0790">
-        <sch:rule context="//tekst:Lid">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0790(.)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0790",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het eerste lid van ieder artikel krijgt het nummer 1",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>: <sch:value-of select="tekst:LidNummer"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+	    <sch:param name="regel" value="'Het eerste lid van ieder artikel krijgt het nummer 1'"></sch:param>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0790">
