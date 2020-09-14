@@ -178,8 +178,8 @@
     <!-- ============================================================================================================================ -->
 
 	 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
+	<sch:pattern id="TPOD0810" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0810'"/>
 	    <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
 	    <sch:param name="CONDITION" value="name(*[1])='Lijstaanhef'"/>
         <sch:param name="context" value="//tekst:Lijst"/>
