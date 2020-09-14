@@ -185,6 +185,7 @@
         <sch:param name="idf" value="../@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
 	    <sch:param name="regel" value="'Een Subparagraaf moet worden geduid met de label Subparagraaf.'"></sch:param>
+	    <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <sch:include href="../abstract_pattern_error.sch"/>

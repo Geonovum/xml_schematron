@@ -172,36 +172,30 @@
 
     <!-- ============TPOD_0930================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+	 
+	<sch:pattern id="TPOD0930_a" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD0930'"/>
+	    <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+	    <sch:param name="CONDITION" value="string-length(foo:aantalTPOD_0930_28992(.)) = 0"/>
+	    <sch:param name="context" value="//basisgeo:geometrie"/>
+	    <sch:param name="idf" value="../basisgeo:id"></sch:param>
+	    <sch:param name="nameidf" value="'id'"></sch:param>
+	    <sch:param name="regel" value="'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten.'"></sch:param>
+	    <sch:param name="melding" value="concat(': ',foo:aantalTPOD_0930_28992(.))"/>
+	    <sch:param name="waarschuwing" value="''"/>
+	    
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_0930_28992">
-        <sch:rule context="//basisgeo:geometrie">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="fout" value="foo:aantalTPOD_0930_28992(.)"/>
-            <sch:let name="CONDITION" value="string-length($fout) = 0"/>
-            <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT">
-                {               
-                "code": "TPOD0930",
-                "ernst": "Blokkerend",
-                "id": "<sch:value-of select="../basisgeo:id"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten. Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.",
-                "melding": "<sch:value-of select="$fout"/>"
-                },
-                </sch:assert>
-        </sch:rule>
+    
+    <sch:pattern id="TPOD0930_b" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD0930'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:aantalTPOD_0930_4258(.)) = 0"/>
+        <sch:param name="context" value="//basisgeo:geometrie"/>
+        <sch:param name="idf" value="../basisgeo:id"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.'"></sch:param>
+        <sch:param name="melding" value="concat(': ',foo:aantalTPOD_0930_4258(.))"/>
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <sch:pattern id="TPOD_0930_4258">
@@ -233,7 +227,7 @@
                         <xsl:if test="string-length($fouteCoord) > 0">
                             <xsl:value-of
                                 select="
-                                    concat(' EPSG:28992 (=RD new), coördinaten in meters: Maximaal 3 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                                    concat(' coördinaten: ',
                                     concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 80), '.....'))"
                             />
                         </xsl:if>
@@ -253,7 +247,7 @@
                         <xsl:if test="string-length($fouteCoord) > 0">
                             <xsl:value-of
                                 select="
-                                concat(' EPSG:4258 (=ETRS89) coördinaten in graden, Maximaal 8 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                                concat(' coördinaten: ',
                                 concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 80), '.....'))"
                             />
                         </xsl:if>

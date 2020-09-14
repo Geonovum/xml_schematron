@@ -12,8 +12,8 @@
             "bestandsnaam":
                 "<sch:value-of select="base-uri(.)"/>", 
             "regel": "<sch:value-of select="$regel"/>",
-            "melding": "Dit is niet het geval bij <sch:value-of select="$nameidf"/>: <sch:value-of
-                select="$idf"/>" 
+            "melding": "Dit is niet het geval bij <sch:value-of select="$nameidf"/>: <sch:value-of select="$idf"/>"<sch:value-of select="$melding"/> ,
+            "waarschuwing":  "<sch:value-of select="$waarschuwing"/>"           
             }, 
         </sch:assert>
     </sch:rule>

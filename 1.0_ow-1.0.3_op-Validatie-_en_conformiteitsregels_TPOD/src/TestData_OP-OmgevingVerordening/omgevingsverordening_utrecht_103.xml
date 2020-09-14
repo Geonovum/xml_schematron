@@ -1174,7 +1174,36 @@
                               <Nummer>1.2</Nummer>
                               <Opschrift>Meet- en rekenbepalingen</Opschrift>
                            </Kop>
-                           <Gereserveerd/>
+                           <Inhoud>
+                              <Begrippenlijst eId="chp_1__subsec_1.1__art_1.2__list_o_1" wId="gm0037_1__chp_1__subsec_1.1__art_1.2__list_o_1">
+                                 <Begrip eId="chp_1__subsec_1.1__art_1.2__list_o_1__item_o_3"
+                                    wId="gm0037_1__chp_1__subsec_1.1__art_1.2__list_o_1__item_o_3">
+                                    <LiNummer>1</LiNummer>
+                                    <Term>Centrumgebied</Term>
+                                    <Definitie>
+                                       <Al>
+                                          <ExtIoRef eId="chp_1__subsec_1.1__art_1.2__list_o_1__item_o_2__ref_o_1"
+                                             wId="gm0037_1__chp_1__subsec_1.1__art_1.2__list_o_1__item_o_2__ref_o_1"
+                                             ref="/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520"
+                                             >/join/id/regdata/gm0037/2019/loc_DEF@2019-01-16;3520</ExtIoRef>
+                                       </Al>
+                                    </Definitie>
+                                 </Begrip>
+                                 <Begrip eId="chp_1__subsec_1.1__art_1.2__list_o_1__item_o_5"
+                                    wId="gm0037_1__chp_1__subsec_1.1__art_1.2__list_o_1__item_o_5">
+                                    <LiNummer>2</LiNummer>
+                                    <Term>Exploiteren speelautomatenhal</Term>
+                                    <Definitie>
+                                       <Al>
+                                          <ExtIoRef eId="cmp_I__list_o_1__item_o_5__ref_o_1"
+                                             wId="gm0037_1__cmp_I__list_o_1__item_o_5__ref_o_1"
+                                             ref="/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520"
+                                             >/join/id/regdata/gm0037/2019/loc_speelhal@2019-04-10;3520</ExtIoRef>
+                                       </Al>
+                                    </Definitie>
+                                 </Begrip>
+                              </Begrippenlijst>
+                           </Inhoud>
                         </Artikel>
                         <Artikel eId="chp_1__subsec_1.1__art_1.2"
                            wId="pv26_1-0__chp_1__subsec_1.1__art_1.2">
@@ -13728,11 +13757,11 @@
                               </Kop>
                               <Gereserveerd/>
                            </Subparagraaf>
-                           <Subparagraaf wId="chp_30_aaa" eId="aa">
+                           <Subparagraaf wId="chp_30_aaa" eId="sub">
                               <Kop>
                                  <Nummer>30.1.1</Nummer>
                               </Kop>
-                              <Artikel wId="chp_30_art_30_1" eId="aaa">
+                              <Artikel wId="chp_30_art_30_1" eId="chp_30_art_30_1">
                                  <Kop>
                                     <Nummer>30.1</Nummer>
                                     <Label>Artikel</Label>

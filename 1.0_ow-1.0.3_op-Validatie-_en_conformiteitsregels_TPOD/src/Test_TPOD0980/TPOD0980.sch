@@ -177,35 +177,15 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
+    <sch:pattern id="TPOD0980" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0980'"/>
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+        <sch:param name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)[1]) &gt; 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk[tekst:Kop/tekst:Nummer/text() eq '1']"/>
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_0980">
-        <sch:rule context="//tekst:Hoofdstuk[tekst:Kop/tekst:Nummer/text() eq '1']">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)[1]) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0980",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Hoofdstuk 1 moet een artikel 'begripsbepalingen' bevatten.",
-                "melding": "Dit is niet aangetroffen in Hoofdstuk <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+        <sch:param name="regel" value="'Hoofdstuk 1 moet een artikel &quot;begripsbepalingen&quot; bevatten.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <xsl:function name="foo:opschriftTPOD0980">

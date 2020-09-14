@@ -186,6 +186,7 @@
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
 	    <sch:param name="regel" value="'De onderdelen van de Lijst op het eerste niveau moeten worden aangegeven met letters.'"></sch:param>
+	    <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <xsl:function name="foo:checkEersteNiveauLijstLettersTPOD_0830">

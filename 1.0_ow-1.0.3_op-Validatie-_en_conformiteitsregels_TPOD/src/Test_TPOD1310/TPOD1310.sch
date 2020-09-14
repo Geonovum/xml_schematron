@@ -176,35 +176,18 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+	 
+	<sch:pattern id="TPOD1310" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1310'"/>
+	    <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="false()"/>
+	    <sch:param name="context" value="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid']"/>
+	    <sch:param name="idf" value="../l:identificatie"></sch:param>
+	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
+	    <sch:param name="regel" value="'Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van &quot;meter&quot; gekozen te worden.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_1310">
-        <sch:rule context="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid']">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1310",
-                "ernst": "Waarschuwing",
-                "identificatie": "<sch:value-of select="../l:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van 'meter' gekozen te worden.",
-                "melding": "Dit is niet zo in Gebied: <sch:value-of select="../l:identificatie"/> "
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
+    
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
     

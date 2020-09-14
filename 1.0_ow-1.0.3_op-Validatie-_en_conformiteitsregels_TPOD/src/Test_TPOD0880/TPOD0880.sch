@@ -176,35 +176,16 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
+	 
+	<sch:pattern id="TPOD0880" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0880'"/>
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+	    <sch:param name="CONDITION" value="((tekst:Label/text() = 'Hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen'))"/>
+	    <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD880">
-
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="((tekst:Label/text() = 'Hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0880",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="../@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Hoofdstuk 1 heeft het Opschrift Algemene bepalingen",
-                "melding": "Opschrift is hier: <sch:value-of select="tekst:Opschrift/text()"/>
-                },
-            </sch:assert>
-        </sch:rule>
+	    <sch:param name="regel" value="'Hoofdstuk 1 heeft het Opschrift Algemene bepalingen.'"></sch:param>
+	    <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <sch:include href="../abstract_pattern_error.sch"/>

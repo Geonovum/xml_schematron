@@ -185,7 +185,8 @@
         <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Titel"/>
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt.+'"></sch:param>
+        <sch:param name="regel" value="'De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt.'"></sch:param>
+	    <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <xsl:function name="foo:foutenTPOD_0470">

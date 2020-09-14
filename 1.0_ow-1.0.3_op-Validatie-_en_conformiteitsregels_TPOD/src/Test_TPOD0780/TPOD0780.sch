@@ -186,6 +186,7 @@
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
 	    <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
+	    <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <sch:pattern id="TPOD0780_b" is-a="abstractPatternWarning">
@@ -196,6 +197,7 @@
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:bevatGeletterdeNummersTPOD_0780">

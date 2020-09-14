@@ -185,6 +185,7 @@
         <sch:param name="idf" value="../@eId"/>
         <sch:param name="nameidf" value="'eId'"/>
 	    <sch:param name="regel" value="'Een Titel moet worden geduid met het label Titel.'"/>
+	    <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <sch:include href="../abstract_pattern_error.sch"/>

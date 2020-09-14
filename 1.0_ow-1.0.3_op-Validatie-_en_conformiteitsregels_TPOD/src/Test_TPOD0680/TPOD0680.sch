@@ -185,6 +185,7 @@
         <sch:param name="idf" value="../@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
 	    <sch:param name="regel" value="'De nummering van Subsubparagrafen begint met het samengestelde nummer van de Subparagraaf waarin de Subsubparagraaf voorkomt, gevolgd door een punt.'"></sch:param>
+	    <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0680">

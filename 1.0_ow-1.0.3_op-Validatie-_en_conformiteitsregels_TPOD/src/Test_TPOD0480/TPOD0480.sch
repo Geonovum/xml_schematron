@@ -197,6 +197,7 @@
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Titels moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0480">

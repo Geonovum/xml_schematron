@@ -176,41 +176,19 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+	 
+	<sch:pattern id="TPOD1730" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1730'"/>
+	    <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
+	    <sch:param name="CONDITION" value="contains(foo:activiteitenLijstTPOD_1730(), rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
+	    <sch:param name="context" value="//rol:Activiteit"/>
+	    <sch:param name="idf" value="rol:identificatie"></sch:param>
+	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
+	    <sch:param name="regel" value="'Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+	    <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
-    -->
-
     
-    <sch:pattern id="TPOD_1730">
-        <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
-            <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1730()"/>
-            <!-- TPOD1730  -->
-            <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1730",
-                "ernst": "Waarschuwing",
-                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.",
-                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> met verwijzing naar: <sch:value-of select="rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-
-    </sch:pattern>
-
     <xsl:function name="foo:activiteitenLijstTPOD_1730">
         <xsl:variable name="activiteitenLijst">
             <xsl:for-each

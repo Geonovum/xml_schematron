@@ -176,47 +176,26 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_1650">
-        <sch:rule
-            context="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde/rol:Normwaarde">
-            <sch:let name="APPLICABLE"
-                value="$SOORT_REGELING = $AMvB or $SOORT_REGELING = $MR or $SOORT_REGELING = $OP or $SOORT_REGELING = $OV or $SOORT_REGELING = $WV"/>
-            <sch:let name="CONDITION" value="
-                (rol:kwantitatieveWaarde or rol:kwalitatieveWaarde or rol:waardeInRegeltekst) 
-                and
-                not((rol:kwantitatieveWaarde and rol:kwalitatieveWaarde)
-                or
-                (rol:waardeInRegeltekst and rol:kwalitatieveWaarde)
-                or
-                (rol:kwantitatieveWaarde and rol:waardeInRegeltekst)
-                or
-                (rol:kwantitatieveWaarde and rol:waardeInRegeltekst and rol:kwalitatieveWaarde))
-                "/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1650",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../rol:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het attribuut 'normwaarde' moet bestaan uit één van de drie mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde' of 'waardeInRegeltekst'",
-                "melding": "Dit is niet het geval bij indentifivatie: <sch:value-of select="../../rol:identificatie"/> "
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD1650" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1650'"/>
+	    <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="
+            (rol:kwantitatieveWaarde or rol:kwalitatieveWaarde or rol:waardeInRegeltekst) 
+            and
+            not((rol:kwantitatieveWaarde and rol:kwalitatieveWaarde)
+            or
+            (rol:waardeInRegeltekst and rol:kwalitatieveWaarde)
+            or
+            (rol:kwantitatieveWaarde and rol:waardeInRegeltekst)
+            or
+            (rol:kwantitatieveWaarde and rol:waardeInRegeltekst and rol:kwalitatieveWaarde))
+            "/>
+	    <sch:param name="context" value="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde/rol:Normwaarde"/>
+	    <sch:param name="idf" value="../../rol:identificatie"></sch:param>
+	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
+	    <sch:param name="regel" value="'Het attribuut &quot;normwaarde&quot; moet bestaan uit één van de drie mogelijke attributen: &quot;kwalitatieveWaarde&quot; òf &quot;kwantitatieveWaarde&quot; òf &quot;waardeInRegeltekst&quot;'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <sch:include href="../abstract_pattern_error.sch"/>

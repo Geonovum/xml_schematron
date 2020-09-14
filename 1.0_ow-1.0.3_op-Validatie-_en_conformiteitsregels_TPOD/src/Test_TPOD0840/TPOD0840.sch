@@ -176,36 +176,16 @@
     <sch:let name="Waterschapsverordening" value="$SOORT_REGELING=$WV"/>
     
     <!-- ============================================================================================================================ -->
-
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+	 
+	<sch:pattern id="TPOD0840" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0840'"/>
+	    <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
+	    <sch:param name="CONDITION" value="string-length(foo:checkTweedeNiveauLijstCijfersTPOD_0840(.)[1]) = 0"/>
+        <sch:param name="context" value="//tekst:Lijst"/>
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_0840_0841">
-        <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
-            <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0840(.)"> </sch:let>
-            <sch:let name="CONDITION" value="string-length($ancestorsFout[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0840_0841",
-                "ernst": "",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De onderdelen van de Lijst op het tweede niveau moeten worden aangegeven met Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+	    <sch:param name="regel" value="'De onderdelen van de Lijst op het tweede niveau moeten worden aangegeven met Arabische cijfers.'"></sch:param>
+	    <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <xsl:function name="foo:checkTweedeNiveauLijstCijfersTPOD_0840">
