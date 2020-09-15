@@ -188,27 +188,6 @@
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
-
-    
-    <sch:pattern id="TPOD_1940">
-        <sch:rule
-            context="//l:Puntengroep/l:groepselement">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="notFound" value="foo:notFoundTPOD_1940(.)"/>
-            <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1940",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../l:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.",
-                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>: <sch:value-of select="substring($notFound,1,string-length($notFound)-2)"/>."
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    
     <xsl:function name="foo:notFoundTPOD_1940">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="identifiers"
