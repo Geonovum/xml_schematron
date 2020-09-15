@@ -176,40 +176,19 @@
     
     <!-- ============================================================================================================================ -->    
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	 
+    <sch:pattern id="TPOD1870" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1870'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="contains(foo:getRegelTekstIdentifiersTPOD_1870(), concat('.',r:RegeltekstRef/@xlink:href,'.'))"/>
+        <sch:param name="context" value="//r:artikelOfLid"/>
+        <sch:param name="idf" value="r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="nameidf" value="'RegeltekstRef'"></sch:param>
+        <sch:param name="regel" value="'Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
-    -->
-
     
-    <sch:pattern id="TPOD_1870">
-        <sch:rule context="//r:artikelOfLid">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
-            <sch:let name="identifiers" value="foo:getRegelTekstIdentifiersTPOD_1870()"/>
-            <sch:let name="CONDITION" value="contains($identifiers, concat('.',r:RegeltekstRef/@xlink:href,'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1870",
-                "ernst": "Blokkerend",
-                "RegeltekstRef": "<sch:value-of select="r:RegeltekstRef/@xlink:href"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid.",
-                "melding": "Betreft
-                <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of select="r:RegeltekstRef/@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-
     <xsl:function name="foo:getRegelTekstIdentifiersTPOD_1870">
         <xsl:variable name="identifiers">
             <xsl:for-each select="$xmlDocuments//r:Regeltekst">

@@ -176,18 +176,19 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	 
+    <sch:pattern id="TPOD1920" is-a="abstractPatternError">
+	    <sch:param name="code" value="'TPOD1920'"/>
+	    <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+	    <sch:param name="CONDITION" value="string-length(foo:notfoundFileOrObjectTypeTPOD_1920(ow-manifest:naam,.)) = 0"/>
+	    <sch:param name="context" value="/ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand"/>
+        <sch:param name="idf" value="concat(ow-manifest:objecttype,': ',ow-manifest:naam)"></sch:param>
+        <sch:param name="nameidf" value="'objecttype'"></sch:param>
+        <sch:param name="regel" value="'De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het betreffende Ow-bestand.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
+    
 
 
     <sch:pattern id="TPOD_1920">

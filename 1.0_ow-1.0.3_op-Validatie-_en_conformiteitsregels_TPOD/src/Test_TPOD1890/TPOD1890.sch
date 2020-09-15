@@ -176,36 +176,17 @@
     
     <!-- ============================================================================================================================ -->    
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
-    </sch:pattern>
-    -->
-
-    
-    <sch:pattern id="TPOD_1890">
-        <sch:rule context="//*:identificatie">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="contains(text(), concat('.', foo:CheckFouteIdentifierTPOD_1890(.), '.'))"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1890",
-                "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.",
-                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+	<sch:pattern id="TPOD1890" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1890'"/>
+	    <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+	    <sch:param name="CONDITION" value="contains(text(), concat('.', foo:CheckFouteIdentifierTPOD_1890(.), '.'))"/>
+	    <sch:param name="context" value="//*:identificatie"/>
+        <sch:param name="idf" value="."></sch:param>
+	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
+	    <sch:param name="regel" value="'De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.'"></sch:param>
+        <sch:param name="melding" value="concat(': ', local-name(..))"/>         
+	    <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:CheckFouteIdentifierTPOD_1890">

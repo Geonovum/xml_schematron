@@ -176,36 +176,17 @@
     
     <!-- ============================================================================================================================ -->    
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
-    </sch:pattern>
-    -->
-
-    
-    <sch:pattern id="TPOD_1910">
-        <sch:rule context="//sl:objectTypen/sl:objectType">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="objects" value="foo:owObjectenLijstTPOD_1910(.)"/>
-            <sch:let name="CONDITION" value="contains($objects, concat('.',text(),'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1910",
-                "ernst": "Blokkerend",
-                "objectType": "<sch:value-of select="text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand.",
-                "melding": "Het objecttype waarom het gaat: <sch:value-of select="text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+    <sch:pattern id="TPOD1910" is-a="abstractPatternError">
+	    <sch:param name="code" value="'TPOD1910'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="contains(foo:owObjectenLijstTPOD_1910(.), concat('.',text(),'.'))"/>
+        <sch:param name="context" value="//sl:objectTypen/sl:objectType"/>
+        <sch:param name="idf" value="."></sch:param>
+        <sch:param name="nameidf" value="'objectType'"></sch:param>
+        <sch:param name="regel" value="'De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:owObjectenLijstTPOD_1910">
