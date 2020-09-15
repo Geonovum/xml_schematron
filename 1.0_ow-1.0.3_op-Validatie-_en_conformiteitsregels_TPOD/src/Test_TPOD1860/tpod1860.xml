@@ -123,6 +123,31 @@
 				</r:Regeltekst>
 			</ow-dc:owObject>
 		</sl:stand>
+		<!-- RegelVoorIedereen -->
+		<sl:stand>
+			<owObject>
+				<r:RegelVoorIedereen>
+					<r:identificatie>nl.imow-gm0037.juridischeregel.201900009</r:identificatie>
+					<r:idealisatie>http://standaarden.omgevingswet.overheid.nl/activiteit/id/Exact</r:idealisatie>
+					<r:artikelOfLid>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900009"/>
+					</r:artikelOfLid>
+					<r:locatieaanduiding>
+						<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP1"/>
+					</r:locatieaanduiding>
+					<r:activiteitaanduiding>
+						<rol:ActiviteitRef xlink:href="nl.imow-gm0037.activiteit.FOUT"/>
+						<r:ActiviteitLocatieaanduiding>
+							<r:identificatie>nl.imow-gm0037.activiteitlocatieaanduiding.2019000001</r:identificatie>
+							<r:activiteitregelkwalificatie>http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Activiteitregelkwalificatie</r:activiteitregelkwalificatie>
+							<r:locatieaanduiding>
+								<l:GebiedengroepRef xlink:href="nl.imow-gm0037.gebiedengroep.2019GROEP1"/>
+							</r:locatieaanduiding>
+						</r:ActiviteitLocatieaanduiding>
+					</r:activiteitaanduiding>
+				</r:RegelVoorIedereen>
+			</owObject>
+		</sl:stand>
 		<!-- Regeltekst met gerelateerde regeltekst GOED -->
 		<sl:stand>
 			<ow-dc:owObject>

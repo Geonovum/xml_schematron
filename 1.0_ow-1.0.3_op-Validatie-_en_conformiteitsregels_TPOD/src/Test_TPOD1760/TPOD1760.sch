@@ -176,42 +176,23 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	 
+	<sch:pattern id="TPOD1760" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1760'"/>
+	    <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="
+            contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
+            or
+            contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')
+            "/>
+	    <sch:param name="context" value="//ga:Gebiedsaanwijzing"/>
+	    <sch:param name="idf" value="ga:identificatie"></sch:param>
+	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
+	    <sch:param name="regel" value="'Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt, puntengroep, lijn of lijnengroep zijn).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+	    <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
 
-
-    <sch:pattern id="TPOD_1760">
-        <sch:rule
-            context="//ga:Gebiedsaanwijzing">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION"
-                value="
-                contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
-                or
-                contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')                
-                "/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1760",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="ga:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt, puntengroep, lijn of lijnengroep zijn).",
-                "melding": "Dit is niet het geval in: <sch:value-of select="ga:identificatie/text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
     

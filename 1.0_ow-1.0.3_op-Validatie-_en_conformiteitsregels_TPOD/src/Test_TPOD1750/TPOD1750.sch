@@ -172,39 +172,18 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	 
+	<sch:pattern id="TPOD1750" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1750'"/>
+	    <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
+	    <sch:param name="CONDITION" value="not(foo:activiteitenGebiedenTPOD_1750(rol:identificatie/text()) = 'false')"/>
+	    <sch:param name="context" value="//rol:Activiteit"/>
+	    <sch:param name="idf" value="rol:identificatie"></sch:param>
+	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
+	    <sch:param name="regel" value="'Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+	    <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_1750">
-        <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
-            <sch:let name="ref" value="rol:identificatie/text()"/>
-            <sch:let name="CONDITION" value="not(foo:activiteitenGebiedenTPOD_1750($ref) = 'false')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                <sch:value-of select="foo:activiteitenGebiedenTPOD_1750($ref)"/>
-                {               
-                "code": "TPOD1750",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn).",
-                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    
 
     <xsl:function name="foo:activiteitenGebiedenTPOD_1750">
         <xsl:param name="ref"/>
@@ -238,6 +217,7 @@
         </xsl:variable>
         <xsl:value-of select="$returnValue"/>
     </xsl:function>
+    
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
     

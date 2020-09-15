@@ -176,37 +176,18 @@
     
     <!-- ============================================================================================================================ -->    
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	 
+	<sch:pattern id="TPOD1840" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1840'"/>
+        <sch:param name="businessRuleGroup" value="$AMvB_MR"/>
+        <sch:param name="CONDITION" value="false()"/>
+	    <sch:param name="context" value="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']"/>
+	    <sch:param name="idf" value="ga:identificatie"></sch:param>
+	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
+	    <sch:param name="regel" value="'Binnen het object ‘Gebiedsaanwijzing’ is de waarde &quot;beperkingengebied&quot; van attribuut &quot;type&quot; (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+	    <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD1840">
-        <sch:rule context="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']">
-            <sch:let name="APPLICABLE" value="AMvB_MR"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1840",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="ga:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘beperkingengebied’ van attribuut ‘type’ (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR) ",
-                "melding": "Dit is wel het geval in <sch:value-of select="ga:identificatie"/>"
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-
 
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
