@@ -27,6 +27,30 @@
 				<sl:objectType>Hoofdlijn</sl:objectType>
 			</sl:objectTypen>
 		</sl:inhoud>
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:Divisie  wId="pv26_1__fdvs_0">
+					<vt:identificatie>nl.imow-pv26.divisie.2019000001</vt:identificatie>
+				</vt:Divisie>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:Divisie wId="pv26_1__fdvs_0">
+					<vt:identificatie>nl.imow-pv26.divisie.2019000002</vt:identificatie>
+				</vt:Divisie>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<vt:Tekstdeel>
+					<vt:identificatie>nl.imow-pv26.tekstdeel.2019000001</vt:identificatie>
+					<vt:divisieaanduiding>
+						<vt:DivisieRef xlink:href="nl.imow-pv26.formeledivisie.2019000001"/>
+					</vt:divisieaanduiding>
+				</vt:Tekstdeel>
+			</ow-dc:owObject>
+		</sl:stand>
 		<!-- Regeltekst 1 -->
 		<sl:stand>
 			<ow-dc:owObject>

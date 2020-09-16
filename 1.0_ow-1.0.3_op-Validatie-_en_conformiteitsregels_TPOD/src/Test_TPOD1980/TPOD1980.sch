@@ -61,7 +61,7 @@
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/> <!-- AMvB -->
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>   <!-- Ministeriële Regeling -->
@@ -172,36 +172,17 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_1980">
-        <sch:rule context="//l:Gebied/l:geometrie/l:GeometrieRef">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="CONDITION" value="foo:calculateConditionTPOD_1980($href) = 1"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1980",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../l:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.",
-                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>"
-                },       
-            </sch:assert>
-        </sch:rule>
+	 
+    <sch:pattern id="TPOD1980" is-a="abstractPatternError">
+	    <sch:param name="code" value="'TPOD1980'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="foo:calculateConditionTPOD_1980(string(@xlink:href)) = 1"/>
+        <sch:param name="context" value="//l:Gebied/l:geometrie/l:GeometrieRef"/>
+        <sch:param name="idf" value="../../l:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.'"></sch:param>
+        <sch:param name="melding" value="concat(', ',@xlink:href)"/>
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <xsl:function name="foo:calculateConditionTPOD_1980">

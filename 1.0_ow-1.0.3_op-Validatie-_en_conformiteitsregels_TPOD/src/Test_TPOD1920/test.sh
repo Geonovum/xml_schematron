@@ -17,4 +17,5 @@
         cd ..
         rm -f -r Validaties
         rm abstract_pattern_error.sch
+
         rm abstract_pattern_warning.sch

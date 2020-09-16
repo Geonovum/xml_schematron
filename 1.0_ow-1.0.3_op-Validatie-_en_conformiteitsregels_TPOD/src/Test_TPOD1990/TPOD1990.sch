@@ -66,7 +66,7 @@
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/> <!-- AMvB -->
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>   <!-- Ministeriële Regeling -->
@@ -177,126 +177,68 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	 
+    <sch:pattern id="TPOD1990a" is-a="abstractPatternWarning">
+	    <sch:param name="code" value="'TPOD1990'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeGeometrieTPOD_1990(foo:getLocationGeoReferenceIdentifiersTPOD_1990(), .)) = 0"/>
+        <sch:param name="context" value="//basisgeo:Geometrie"/>
+        <sch:param name="idf" value="basisgeo:id/text()"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Iedere Geometrie heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_1990">
-        <sch:rule context="//basisgeo:Geometrie">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="geoLocationGeoReferenceIdentifiers"
-                value="foo:getLocationGeoReferenceIdentifiersTPOD_1990()"/>
-            <sch:let name="nietGerefereerdeGeometrie"
-                value="foo:nietGerefereerdeGeometrieTPOD_1990($geoLocationGeoReferenceIdentifiers, .)"/>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrie) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1990",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="basisgeo:id/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere Geometrie heeft minstens een OwObject dat ernaar verwijst",
-                "melding": "Betreft: <sch:value-of select="basisgeo:id/text()"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        
-        <sch:rule context="//r:Regeltekst/r:identificatie">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="regeltekstReferenties"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef)"/>
-            <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($regeltekstReferenties, .)"/>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1990",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere Regeltekst heeft minstens een OwObject dat ernaar verwijst",
-                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        
-        <sch:rule context="//(vt:FormeleDivisie|vt:Hoofdlijn)/vt:identificatie">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="formeleDivisieReferenties"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//(vt:FormeleDivisieRef|vt:HoofdlijnRef))"/>
-            <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($formeleDivisieReferenties, .)"/>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1990",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere FormeleDivisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst",
-                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        
-        <sch:rule context="//rol:Activiteit/rol:identificatie">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="activiteitRefs"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef)"/>
-            <sch:let name="nietGerefereerdeReferenties"
-                value="foo:nietGerefereerdeReferentiesTPOD_1990($activiteitRefs, .)"/>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1990",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere Activiteit-aanduiding heeft minstens een OwObject dat ernaar verwijst",
-                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-                />
-            </sch:assert>
-        </sch:rule>
-        
-        <sch:rule context="//l:identificatie">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="locatieReferenties"
-                value="foo:getLocationReferenceIdentifiersTPOD_1990()"/>
-            <sch:let name="nietGerefereerdeReferenties">
-                <xsl:if
-                    test="not(contains($locatieReferenties, concat('.', text(), '.')))">
-                    <xsl:value-of select="concat(string(text()), ', ')"/>
-                </xsl:if>
-            </sch:let>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1990",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst",
-                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
+    
+    <sch:pattern id="TPOD1990b" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1990'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .)) = 0"/>
+        <sch:param name="context" value="//r:Regeltekst/r:identificatie"/>
+        <sch:param name="idf" value="substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .))-2)"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Iedere Regeltekst heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
+        <sch:param name="melding" value="''"/>
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1990c" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1990'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .)) = 0"/>
+        <sch:param name="context" value="//(vt:Divisie|vt:Hoofdlijn)/vt:identificatie"/>
+        <sch:param name="idf" value="substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .))-2)"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Iedere Divisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
+        <sch:param name="melding" value="''"/>        
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1990d" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1990'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .)) = 0"/>
+        <sch:param name="context" value="//rol:Activiteit/rol:identificatie"/>
+        <sch:param name="idf" value="substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .))-2)"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Iedere Activiteit-aanduiding heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
+        <sch:param name="melding" value="''"/>
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+   
+    <sch:pattern id="TPOD1990e" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1990'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:getLocationReferenceIdentifiersTPOD_1990(text())) > 0"/>
+        <sch:param name="context" value="//l:identificatie"/>
+        <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Iedere Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
+        <sch:param name="melding" value="''"/>
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
         
     </sch:pattern>
-
+    
     <xsl:function name="foo:nietGerefereerdeGeometrieTPOD_1990">
         <xsl:param name="identifiers"/>
         <xsl:param name="context" as="node()"/>
@@ -336,14 +278,18 @@
     </xsl:function>
 
     <xsl:function name="foo:getLocationReferenceIdentifiersTPOD_1990">
+        <xsl:param name="id"/>
         <xsl:variable name="identifiers">
             <xsl:for-each
                 select="$xmlDocuments//(l:LocatieRef | l:GebiedRef | l:LijnRef | l:PuntRef | l:GebiedengroepRef | l:PuntengroepRef | l:LijnengroepRef)">
-                <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
+                <xsl:if test="string(@xlink:href)=$id">
+                    <xsl:value-of select="string(@xlink:href)"/>
+                </xsl:if>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$identifiers"/>
     </xsl:function>
+    
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
     

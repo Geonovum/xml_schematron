@@ -176,37 +176,43 @@
     
     <!-- ============================================================================================================================ -->    
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	 
+    <sch:pattern id="TPOD1970" is-a="abstractPatternError">
+	    <sch:param name="code" value="'TPOD1970'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="foo:testGeometrie_1970(.)"/>
+        <sch:param name="context" value="//l:Punt/l:geometrie/l:GeometrieRef"/>
+        <sch:param name="idf" value="../../l:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.'"></sch:param>
+        <sch:param name="melding" value="concat(', ',@xlink:href)"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
-
     
-    <sch:pattern id="TPOD_1970">
-        <sch:rule context="//l:Punt/l:geometrie/l:GeometrieRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq string(@xlink:href)]"/>
-            <sch:let name="CONDITION" value="$geometrie//gml:MultiPoint || $geometrie//gml:Point"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1970",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../l:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.",
-                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>"
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
+    <xsl:function name="foo:testGeometrie_1970"  as="xs:boolean" >
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="found">
+            <xsl:for-each select="$gmlDocuments//basisgeo:Geometrie">
+                <xsl:choose>
+                <xsl:when test="basisgeo:id/text() = string($context/@xlink:href)">
+                    <xsl:choose>
+                        <xsl:when test="(.//gml:MultiPoint || .//gml:Point)">
+                            <xsl:value-of select="1"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="0"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="0"/>
+                </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$found > 0"/>
+    </xsl:function>
+    
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
     
