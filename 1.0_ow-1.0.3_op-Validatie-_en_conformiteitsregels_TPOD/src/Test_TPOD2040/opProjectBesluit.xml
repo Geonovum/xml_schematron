@@ -1661,7 +1661,7 @@
             </grondslagen>
             <versienummer>310</versienummer>
             <voorkeursafkorting/>
-            <soortRegeling>geen</soortRegeling>
+            <soortRegeling>/join/id/stop/regelingtype_006</soortRegeling>
         </data:RegelingMetadata>
     </RegelingVersieInformatie>
 </AanleveringBesluit>

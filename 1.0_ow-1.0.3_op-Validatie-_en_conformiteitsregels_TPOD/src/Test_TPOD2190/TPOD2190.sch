@@ -178,9 +178,9 @@
     <!-- ============================================================================================================================ -->
 
 	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+	<sch:pattern id="TPOD2190" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2190'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
         <sch:param name="context" value="//tekst:Hoofdstuk"/>
         <sch:param name="idf" value="@eId"></sch:param>

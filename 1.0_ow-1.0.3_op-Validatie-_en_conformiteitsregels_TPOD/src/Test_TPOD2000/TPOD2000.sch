@@ -66,7 +66,7 @@
     <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING"
-        value="$xmlDocuments//stop:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
+        value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
 
     <sch:let name="AMvB" value="'/join/id/stop/regelingtype_001'"/> <!-- AMvB -->
     <sch:let name="MR" value="'/join/id/stop/regelingtype_002'"/>   <!-- Ministeriële Regeling -->
@@ -177,23 +177,24 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	 
+    <sch:pattern id="TPOD2000" is-a="abstractPatternError">
+	    <sch:param name="code" value="'TPOD2000'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
+        <sch:param name="context" value="//r:Regeltekst"/>
+        <sch:param name="idf" value="@wId"></sch:param>
+        <sch:param name="nameidf" value="'wId'"></sch:param>
+        <sch:param name="regel" value="'Het wId van de Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
+    
 
 
     <sch:pattern id="TPOD_2000">
         <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
+            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
             <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
             <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
                 {               

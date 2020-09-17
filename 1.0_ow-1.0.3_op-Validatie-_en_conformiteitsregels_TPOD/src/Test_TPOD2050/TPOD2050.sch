@@ -177,35 +177,16 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
+	 
+    <sch:pattern id="TPOD2050" is-a="abstractPatternError">
+	    <sch:param name="code" value="'TPOD2050'"/>
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+        <sch:param name="CONDITION" value="string-length(foo:existsTPOD_2050()) = 0"/>
+        <sch:param name="context" value="//aanlevering:AanleveringBesluit"/>
+        <sch:param name="idf" value="foo:existsTPOD_2050()"></sch:param>
+        <sch:param name="nameidf" value="'resultaat'"></sch:param>
+        <sch:param name="regel" value="'Controleren of het manifest-ow en het manifest bestaan, en de bestanden benoemd in de manifest-bestanden aanwezig zijn.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_2050">
-        <sch:rule context="//aanlevering:AanleveringBesluit">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="message" value="foo:existsTPOD_2050()"/>
-            <sch:let name="CONDITION" value="string-length($message)=0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2050",
-                "ernst": "Blokkerend",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Kijken of het manifest-ow en het manifest bestaan, en de bestanden benoemd in de manifest-bestanden aanwezig zijn.",
-                "melding": "<sch:value-of select="$message"/>"
-                },
-            </sch:assert>
-        </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:existsTPOD_2050">
@@ -225,7 +206,6 @@
             </xsl:otherwise>
         </xsl:choose>
         </xsl:variable>
-        <xsl:message select="$message"/>
         <xsl:value-of select="$message"/>
     </xsl:function>
     

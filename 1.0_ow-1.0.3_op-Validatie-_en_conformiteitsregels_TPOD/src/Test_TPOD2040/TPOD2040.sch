@@ -177,37 +177,19 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	 
+    <sch:pattern id="TPOD2040" is-a="abstractPatternWarning">
+	    <sch:param name="code" value="'TPOD2040'"/>
+        <sch:param name="businessRuleGroup" value="$Vrijetekststructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
+        <sch:param name="context" value="//vt:Divisie"/>
+        <sch:param name="idf" value="@wId"></sch:param>
+        <sch:param name="nameidf" value="'wId'"></sch:param>
+        <sch:param name="regel" value="'Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een Divisie in OP.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_2040">
-        <sch:rule context="//vt:Divisie">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2040",
-                "ernst": "Blokkerend",
-                "wId": "<sch:value-of select="@wId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een FormeleDivisie in OP",
-                "melding": "Betreft: <sch:value-of select="@wId"/> "
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-
+    
     <xsl:function name="foo:checkWIdTPOD_2040">
         <xsl:param name="identifier"/>
         <xsl:for-each select="$xmlDocuments//tekst:Divisie/@wId">

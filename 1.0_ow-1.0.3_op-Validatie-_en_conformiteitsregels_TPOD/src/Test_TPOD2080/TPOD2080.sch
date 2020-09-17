@@ -177,40 +177,19 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	 
+    <sch:pattern id="TPOD2080" is-a="abstractPatternError">
+	    <sch:param name="code" value="'TPOD2080'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
+        <sch:param name="CONDITION" value="(r:instructieregelTaakuitoefening or r:instructieregelInstrument) and not(r:instructieregelTaakuitoefening and r:instructieregelInstrument) and not(not(r:instructieregelTaakuitoefening) and not(r:instructieregelInstrument))"/>
+        <sch:param name="context" value="//r:Instructieregel"/>
+        <sch:param name="idf" value="r:artikelOfLid/r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Binnen een instructieregel dient er gekozen te worden tussen InstructieregelInstrument of InstructieregelTaakuitoefening (één van de twee moet voorkomen).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_2080">
-        <sch:rule context="//r:Instructieregel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
-            <sch:let name="or" value="r:instructieregelTaakuitoefening or r:instructieregelInstrument"></sch:let>
-            <sch:let name="both" value="r:instructieregelTaakuitoefening and r:instructieregelInstrument"></sch:let>
-            <sch:let name="none" value="not(r:instructieregelTaakuitoefening) and not(r:instructieregelInstrument)"></sch:let>
-            <sch:let name="CONDITION" value="$or and not($both) and not($none)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2080",
-                "ernst": "Blokkerend",
-                "artikelOfLid": "<sch:value-of select="r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Binnen een instructieregel dient er gekozen te worden tussen InstructieregelInstrument of InstructieregelTaakuitoefening (één van de twee moet voorkomen, niet meer, niet minder).",
-                "melding": "Betreft Instructieregel bij Regeltekst: <sch:value-of select="r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>"
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-
+    
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
     

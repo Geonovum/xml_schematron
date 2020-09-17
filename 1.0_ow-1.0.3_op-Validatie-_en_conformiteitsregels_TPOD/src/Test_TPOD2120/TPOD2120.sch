@@ -172,36 +172,17 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_2120">
-        <sch:rule context="//*:identificatie">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="dubbel" value="foo:vindDubbeleTPOD_2120(text())"/>
-            <sch:let name="CONDITION" value="string-length($dubbel) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2120",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen).",
-                "melding": "Betreft id: <sch:value-of select="text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+	 
+    <sch:pattern id="TPOD2120" is-a="abstractPatternError">
+	    <sch:param name="code" value="'TPOD2120'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:vindDubbeleTPOD_2120(text())) = 0"/>
+        <sch:param name="context" value="//*:identificatie"/>
+        <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <xsl:function name="foo:vindDubbeleTPOD_2120">

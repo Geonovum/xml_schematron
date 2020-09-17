@@ -1457,6 +1457,17 @@
 				</l:Lijn>
 			</ow-dc:owObject>
 		</sl:stand>
+		<!-- Lijn DUBBEL -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<l:Lijn>
+					<l:identificatie>nl.imow-gm0037.lijn.201900002</l:identificatie>
+					<l:geometrie>
+						<l:GeometrieRef xlink:href="B28AF779-7EDD-4A88-8B11-809798F53612LIJN"/>
+					</l:geometrie>
+				</l:Lijn>
+			</ow-dc:owObject>
+		</sl:stand>
 		<!-- Lijn -->
 		<sl:stand>
 			<ow-dc:owObject>

@@ -177,41 +177,21 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+	 
+    <sch:pattern id="TPOD2090" is-a="abstractPatternWarning">
+	    <sch:param name="code" value="'TPOD2090'"/>
+	    <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+	    <sch:param name="CONDITION" value="
+	        count(rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)=count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst)) 
+	        or count(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde)=count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst)) 
+	        or count(rol:normwaarde/rol:Normwaarde/rol:waardeInRegeltekst)=count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst))"/>
+        <sch:param name="context" value="//rol:Omgevingsnorm"/>
+        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst).'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_2090">
-        <sch:rule context="//rol:Omgevingsnorm">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="kwl" value="count(rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"></sch:let>
-            <sch:let name="kwn" value="count(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde)"></sch:let>
-            <sch:let name="wir" value="count(rol:normwaarde/rol:Normwaarde/rol:waardeInRegeltekst)"></sch:let>
-            <sch:let name="all" value="count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst))"></sch:let>
-            <sch:let name="CONDITION" value="$kwl=$all or $kwn=$all or $wir=$all"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2090",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="rol:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst).",
-                "melding": "Betreft Omgevingsnorm: <sch:value-of select="rol:identificatie"/>"
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-
+    
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
     

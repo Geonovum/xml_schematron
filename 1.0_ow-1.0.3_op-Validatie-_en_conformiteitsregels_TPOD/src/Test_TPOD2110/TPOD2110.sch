@@ -177,35 +177,17 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
+	 
+    <sch:pattern id="TPOD2110" is-a="abstractPatternError">
+	    <sch:param name="code" value="'TPOD2110'"/>
+        <sch:param name="businessRuleGroup" value="$Vrijetekststructuur"/>
+        <sch:param name="CONDITION" value="(vt:idealisatie and vt:locatieaanduiding) or (not(vt:idealisatie) and not(vt:locatieaanduiding))"/>
+        <sch:param name="context" value="//vt:Tekstdeel"/>
+        <sch:param name="idf" value="vt:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_2110">
-        <sch:rule context="//vt:Tekstdeel">
-            <sch:let name="APPLICABLE" value="$Vrijetekststructuur"/>
-            <sch:let name="CONDITION" value="(vt:idealisatie and vt:locatieaanduiding) or (not(vt:idealisatie) and not(vt:locatieaanduiding))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2110",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="vt:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft.",
-                "melding": "Betreft Tekstdeel: <sch:value-of select="vt:identificatie"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <sch:include href="../abstract_pattern_error.sch"/>

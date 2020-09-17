@@ -5,6 +5,8 @@
         mkdir Validaties/Opdracht
         cp *.xml Validaties/Opdracht
         cp TPOD2050.sch Validaties/validaties.sch
+        cp ../abstract_pattern_error.sch .
+        cp ../abstract_pattern_warning.sch .
         cd Validaties/
         #alleen manifest-ow
         echo "alleen manifest-ow"
@@ -21,4 +23,7 @@
         ./validate.sh
         cd ..
         rm -fr Validaties
+        rm abstract_pattern_error.sch
+        rm abstract_pattern_warning.sch
+        
        
