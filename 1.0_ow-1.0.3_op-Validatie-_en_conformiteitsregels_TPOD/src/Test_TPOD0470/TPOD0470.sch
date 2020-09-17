@@ -176,7 +176,6 @@
     <sch:let name="Waterschapsverordening" value="$SOORT_REGELING=$WV"/>
     
     <!-- ============================================================================================================================ -->
-
 	 
 	<sch:pattern id="TPOD0470" is-a="abstractPatternWarning">
         <sch:param name="code" value="'TPOD0470'"/>
@@ -198,7 +197,6 @@
             </xsl:for-each>
     </xsl:function>
     
-
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
     

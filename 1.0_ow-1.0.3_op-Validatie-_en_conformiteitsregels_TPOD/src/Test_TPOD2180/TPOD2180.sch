@@ -176,44 +176,23 @@
     <sch:let name="Waterschapsverordening" value="$SOORT_REGELING=$WV"/>
     <!-- ============================================================================================================================ -->
 
-	<!-- 
+	 
 	<sch:pattern id="TPOD2180" is-a="abstractPatternError">
         <sch:param name="code" value="'TPOD2180'"/>
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	    <sch:param name="CONDITION" value="count($xmlDocuments//rg:Regelingsgebied) = 1"/>
+	    <sch:param name="context" value="//aanlevering:AanleveringBesluit"/>
+	    <sch:param name="idf" value="Regelingsgebied"></sch:param>
+        <sch:param name="nameidf" value="'Betreft'"></sch:param>
+	    <sch:param name="regel" value="'Het Regelingsgebied is niet aangetroffen.'"></sch:param>
+	    <sch:param name="melding" value="''"/>         
+	    <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
-    -->
-
-
     <!-- Het is lastig een fout te triggeren op iets dat niet voorkomt, en je wilt het maar een keer testen.
     Daarom heb ik gekozen voor het manifest-ow dat maar een keer voorkomt, en dan op die plaats te controleren of ergens in een xml-document 
     Een regelingsgebied is gedeclareerd.
     Nu gaat deze validatie de mist in als het manifest-ow niet voorkomt, maar dan hebben we nog wel meer problemen.
     -->
-    <sch:pattern id="TPOD_2180">
-        <sch:rule
-            context="//aanlevering:AanleveringBesluit">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="count($xmlDocuments//rg:Regelingsgebied) = 1"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2180",
-                "ernst": "Blokkerend",
-                "betreft": "Regelingsgebied",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Per Regeling moet er een Regelingsgebied zijn aangeleverd.",
-                "melding": "Het Regelingsgebied is niet aangetroffen.",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
 
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>

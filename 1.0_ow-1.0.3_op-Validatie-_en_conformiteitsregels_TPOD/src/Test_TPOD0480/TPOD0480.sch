@@ -209,7 +209,6 @@
             </xsl:for-each>
     </xsl:function>
     
-
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>
     

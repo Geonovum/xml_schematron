@@ -186,6 +186,7 @@
         <sch:param name="idf" value="../@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0420=============================================================================================================== -->
@@ -198,6 +199,7 @@
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0420">
@@ -211,42 +213,28 @@
     
     <!-- ============TPOD_0460================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0460">
-        <sch:rule context="//tekst:Titel/tekst:Kop[tekst:Label ne 'Titel']">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0460",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="../@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Titel moet worden geduid met het label Titel.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="../@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0460" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0460'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//tekst:Titel/tekst:Kop[tekst:Label ne 'Titel']"/>
+        <sch:param name="idf" value="../@eId"/>
+        <sch:param name="nameidf" value="'eId'"/>
+        <sch:param name="regel" value="'Een Titel moet worden geduid met het label Titel.'"/>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0470================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0470">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Titel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="fouten" value="foo:foutenTPOD_0470(.)"/>
-            
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0470",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0470" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0470'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:foutenTPOD_0470(.)[1]) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Titel"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:foutenTPOD_0470">
@@ -260,22 +248,15 @@
     
     <!-- ===========TPOD_0480================================================================================================================= -->
     
-    <sch:pattern id="TPOD_0480">
-        <sch:rule context="//tekst:Titel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0480(.)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0480",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Titels moeten oplopend worden genummerd in Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0480" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'++TPOD0480'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0480(.)[1]) = 0"/>
+        <sch:param name="context" value="//tekst:Titel"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Titels moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0480">
@@ -289,61 +270,41 @@
     
     <!-- ============TPOD_0490================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0490">
-        <sch:rule context="//tekst:Titel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                { 
-                "code": "TPOD0490", 
-                "ernst": "Waarschuwing", 
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>", 
-                "regel": "Achter het cijfer van een titelnummer mag geen punt worden opgenomen.", 
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>" 
-                }
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0490" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0490'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
+        <sch:param name="context" value="//tekst:Titel"/>
+        <sch:param name="idf" value="@eId"/>
+        <sch:param name="nameidf" value="'eId'"/>
+        <sch:param name="regel" value="'Achter het cijfer van een titelnummer mag geen punt worden opgenomen.'"/>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ===========TPOD_0510================================================================================================================= -->
     
-    <sch:pattern id="TPOD_0510">
-        <sch:rule context="//tekst:Afdeling/tekst:Kop[tekst:Label ne 'Afdeling']">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0510",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="../@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Afdeling moet worden geduid met de label Afdeling.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="../@eId"/>."
-                },
-                
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0510" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0510'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//tekst:Afdeling/tekst:Kop[tekst:Label ne 'Afdeling']"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0520================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0520">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Titel/tekst:Afdeling">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0520(.)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0520",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0520" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0520'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0520(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Titel/tekst:Afdeling"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0520">
@@ -357,22 +318,15 @@
     
     <!-- ============TPOD_0530================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0530">
-        <sch:rule context="//tekst:Afdeling">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0530(.)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0530",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Afdelingen moeten oplopend worden genummerd in Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0530" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0530'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0530(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Afdeling"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Afdelingen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0530">
@@ -387,41 +341,28 @@
     
     <!-- ===========TPOD_0540================================================================================================================= -->
     
-    <sch:pattern id="TPOD_0540">
-        <sch:rule context="//tekst:Afdeling">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0540",
-                "ernst": "",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Achter het laatste cijfer van een Afdelingnummer mag geen punt worden opgenomen.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0540" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0540'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
+        <sch:param name="context" value="//tekst:Afdeling"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Achter het laatste cijfer van een Afdelingnummer mag geen punt worden opgenomen.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0560================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0560">
-        <sch:rule context="//tekst:Hoofdstuk/tekst:Afdeling">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="fouten" value="foo:volgordeTPOD_0560(.)"/>
-            <sch:let name="CONDITION" value="string-length($fouten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0560",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt. ",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0560" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0560'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0560(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Afdeling"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0560">
@@ -435,41 +376,28 @@
     
     <!-- ===========TPOD_0570================================================================================================================= -->
     
-    <sch:pattern id="TPOD_0570">
-        <sch:rule context="//tekst:Paragraaf/tekst:Kop[(lower-case(tekst:Label) ne '§') and (tekst:Label ne 'Paragraaf')]">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0570",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0570" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0570'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//tekst:Paragraaf/tekst:Kop[(lower-case(tekst:Label) ne '§') and (tekst:Label ne 'Paragraaf')]"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0580=============================================================================================================== -->
     
-    <sch:pattern id="TPOD_0580">
-        <sch:rule context="//tekst:Afdeling/tekst:Paragraaf">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0580( .)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0580",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin de Paragraaf voorkomt, gevolgd door een punt.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0580" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0580'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0580(.)[1]) = 0"/>
+        <sch:param name="context" value="//tekst:Afdeling/tekst:Paragraaf"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin de Paragraaf voorkomt, gevolgd door een punt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0580">
@@ -483,23 +411,15 @@
     
     <!-- ============TPOD_0590================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0590">
-        <sch:rule context="//tekst:Paragraaf">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0590( .)"/>
-            
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0590",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Paragrafen moeten oplopend worden genummerd in Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0590" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0590'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0590(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Paragraaf"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Paragrafen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0590">
@@ -513,47 +433,41 @@
     
     <!-- ============TPOD_0600================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0600">
-        <sch:rule context="//tekst:Paragraaf">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0600",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0600" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0600'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
+        <sch:param name="context" value="//tekst:Paragraaf"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0620================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0620">
-        <sch:rule context="//tekst:Paragraaf/tekst:Subparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'subparagraaf']">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0620: Een Subparagraaf moet worden geduid met de label Subparagraaf. 
-                (Betreft subparagraaf-nummer: <sch:value-of select="tekst:Nummer"/> en label: <sch:value-of select="tekst:Label"/>)</sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0620" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0620'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//tekst:Paragraaf/tekst:Subparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'subparagraaf']"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Subparagraaf moet worden geduid met de label Subparagraaf.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0630================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0630">
-        <sch:rule context="//tekst:Afdeling/tekst:Paragraaf">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="paragraaf" value="tekst:Kop/tekst:Nummer/text()"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0630($paragraaf, .)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0630: De nummering van Subparagrafen begint met het samengestelde nummer van de Paragraaf waarin de Subparagraaf voorkomt, gevolgd door een punt. 
-                (betreft: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0630" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0630'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0630(tekst:Kop/tekst:Nummer/text(), .)) = 0"/>
+        <sch:param name="context" value="//tekst:Afdeling/tekst:Paragraaf"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De nummering van Subparagrafen begint met het samengestelde nummer van de Paragraaf waarin de Subparagraaf voorkomt, gevolgd door een punt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0630">
@@ -571,17 +485,15 @@
     
     <!-- ============TPOD_0640================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0640">
-        <sch:rule context="//tekst:Afdeling/tekst:Paragraaf">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="paragraaf" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0640($paragraaf, .)"/>
-            
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0640: Subparagrafen moeten oplopend worden genummerd in Arabische cijfers 
-                (betreft paragraaf: <xsl:value-of select="$paragraaf"/>, subparagrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0640" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0640'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0640(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
+        <sch:param name="context" value="//tekst:Afdeling/tekst:Paragraaf"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Subparagrafen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0640">
@@ -590,7 +502,7 @@
         <xsl:variable name="volgorde">
             <xsl:for-each select="$context/tekst:Subparagraaf">
                 <xsl:if test="not(string(tekst:Kop/tekst:Nummer)=concat($paragraaf, '.', string(position())))">
-                    <xsl:value-of select="concat(string(tekst:Kop/tekst:Nummer),', ')"/>
+                    <xsl:value-of select="concat('paragraaf: ',$paragraaf, ' subparagraaf: ',string(tekst:Kop/tekst:Nummer),', ')"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
@@ -599,47 +511,41 @@
     
     <!-- ============TPOD_0650================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0650">
-        <sch:rule context="//tekst:Subparagraaf">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0650",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Achter het laatste cijfer van een Subparagraafnummer mag geen punt worden opgenomen.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0650" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0650'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
+        <sch:param name="context" value="//tekst:Subparagraaf"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Achter het laatste cijfer van een Subparagraafnummer mag geen punt worden opgenomen.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0670================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0670">
-        <sch:rule context="//tekst:Subparagraaf/tekst:Subsubparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'subsubparagraaf']">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0670: Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf. 
-                (betreft subsubparagraaf-nummer: <sch:value-of select="tekst:Nummer"/>, label: <sch:value-of select="tekst:Label"/>)</sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0670" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0670'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//tekst:Subparagraaf/tekst:Subsubparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'subsubparagraaf']"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0680================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0680">
-        <sch:rule context="//tekst:Paragraaf/tekst:Subparagraaf">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="subparagraaf" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0680($subparagraaf, .)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0680: De nummering van Subsubparagrafen begint met het samengestelde nummer van de Subparagraaf waarin de Subsubparagraaf voorkomt, gevolgd door een punt. 
-                (betreft subparagraaf: <sch:value-of select="$subparagraaf"/>, subsubparagrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/></sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0680" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'+TPOD0680'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0680(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
+        <sch:param name="context" value="//tekst:Paragraaf/tekst:Subparagraaf"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De nummering van Subsubparagrafen begint met het samengestelde nummer van de Subparagraaf waarin de Subsubparagraaf voorkomt, gevolgd door een punt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0680">
@@ -657,18 +563,15 @@
     
     <!-- ============TPOD_0690================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0690">
-        <sch:rule context="//tekst:Paragraaf/tekst:Subparagraaf">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="subparagraaf" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0690($subparagraaf, .)"/>
-            
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0690: Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers 
-                (betreft subparagraaf: <sch:value-of select="$subparagraaf"/>,subsubparagrafen: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)  
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0690" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0690'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0690(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
+        <sch:param name="context" value="//tekst:Paragraaf/tekst:Subparagraaf"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0690">
@@ -686,49 +589,43 @@
     
     <!-- ============TPOD_0700================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0700">
-        <sch:rule context="//tekst:Subsubparagraaf">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0700",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen. ",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0700" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0700'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
+        <sch:param name="context" value="//tekst:Subsubparagraaf"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0720================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0720">
-        <sch:rule context="//tekst:Artikel/tekst:Kop[lower-case(tekst:Label) ne 'artikel']">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0720: Een Artikel moet worden geduid met de label Artikel. 
-                (betreft artikel: <sch:value-of select="tekst:Nummer"/>, label:<sch:value-of select="tekst:Label"/>)</sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0720" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD0720'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//tekst:Artikel/tekst:Kop[lower-case(tekst:Label) ne 'artikel']"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Artikel moet worden geduid met de label Artikel.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0730================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0730">
-        <sch:rule context="//tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0730($hoofdstuk, .)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0730: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt.
-                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, artikels: <sch:value-of select="substring($volgorde,1,string-length($volgorde)-2)"/>)</sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0730" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0730'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0730(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-        
+    
     <xsl:function name="foo:volgordeTPOD_0730">
         <xsl:param name="hoofdstuk" as="xs:string"/>
         <xsl:param name="context" as="node()"/>
@@ -764,16 +661,15 @@
     
     <!-- ============TPOD_0740================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0740">
-        <sch:rule context="//tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
-            <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0740($hoofdstuk, .)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD_0740: Artikelnummers moeten oplopend worden genummerd in Arabische cijfers 
-                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/>)</sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0740" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0740'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0740(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Artikelnummers moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0740">
@@ -792,23 +688,26 @@
     
     <!-- ============TPOD_0741================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0741">
-        <sch:rule context="//tekst:Hoofdstuk">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
-            <sch:let name="hoofdstuk" value="string(tekst:Kop/tekst:Nummer)"/>
-            <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0741($hoofdstuk, .)"/>
-            <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
-                TPOD_0741: De nummering van Artikelen bevat letters en kan niet middels schematron op geldigheid
-                worden gecheckt. Dit moet handmatig gebeuren. 
-                (betreft hoofdstuk: <sch:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($bevatLetters, 1, string-length($bevatLetters) - 2)"/>)</sch:assert>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0741($hoofdstuk, $bevatLetters, .)"/>
-            <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
-                TPOD_0741: De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel
-                voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in Arabische cijfers inclusief indien nodig een letter. 
-                (betreft hoofdstuk:<sch:value-of select="$hoofdstuk"/>, artikelen: <sch:value-of select="substring($volgorde, 1, string-length($volgorde) - 2)"/>)</sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0741_a" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0741'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+        <sch:param name="CONDITION" value="string-length(foo:bevatGeletterdeNummersTPOD_0741(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De nummering van Artikelen bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD0741_b" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0741'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0741(string(tekst:Kop/tekst:Nummer), foo:bevatGeletterdeNummersTPOD_0741(string(tekst:Kop/tekst:Nummer), .), .)) = 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in Arabische cijfers inclusief indien nodig een letter.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:bevatGeletterdeNummersTPOD_0741">
@@ -884,52 +783,39 @@
     
     <!-- ============TPOD_0750================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0750">
-        <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0750",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:Kop/tekst:Nummer)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0750" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0750'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
+        <sch:param name="context" value="//tekst:Artikel"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0780================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0780">
-        <sch:rule context="//tekst:Lid">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
-            <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0780(.)"/>
-            <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0780",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
-                "melding": "De nummering van Leden ( <sch:value-of select="string(tekst:LidNummer)"/> ) bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren."
-                },
-            </sch:assert> 
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0780($bevatLetters,.)"/>
-            <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0780",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:LidNummer)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0780_a" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0780'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
+        <sch:param name="CONDITION" value="string-length(foo:bevatGeletterdeNummersTPOD_0780(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Lid"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD0780_b" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0780'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0780(foo:bevatGeletterdeNummersTPOD_0780(.),.)) = 0"/>
+        <sch:param name="context" value="//tekst:Lid"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:bevatGeletterdeNummersTPOD_0780">
@@ -979,33 +865,26 @@
     
     <!-- ============TPOD_0781================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0781">
-        <sch:rule context="//tekst:Lid">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
-            <sch:let name="bevatLetters" value="foo:bevatGeletterdeNummersTPOD_0781(.)"/>
-            <sch:let name="CONDITION_1" value="string-length($bevatLetters) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_1) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0781",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
-                "melding": "De nummering van Leden ( <sch:value-of select="string(tekst:LidNummer)"/> ) bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren."
-                },
-            </sch:assert> 
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0781($bevatLetters,.)"/>
-            <sch:let name="CONDITION_2" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION_2) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0781",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>:<sch:value-of select="string(tekst:LidNummer)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0781_a" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0781'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+        <sch:param name="CONDITION" value="string-length(foo:bevatGeletterdeNummersTPOD_0781(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Lid"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD0781_b" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0781'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0781(foo:bevatGeletterdeNummersTPOD_0781(.),.)) = 0"/>
+        <sch:param name="context" value="//tekst:Lid"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:bevatGeletterdeNummersTPOD_0781">
@@ -1055,22 +934,15 @@
     
     <!-- ============TPOD_0790================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0790">
-        <sch:rule context="//tekst:Lid">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="volgorde" value="foo:volgordeTPOD_0790(.)"/>
-            <sch:let name="CONDITION" value="string-length($volgorde) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0790",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het eerste lid van ieder artikel krijgt het nummer 1",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>: <sch:value-of select="tekst:LidNummer"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0790" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0790'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0790(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Lid"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Het eerste lid van ieder artikel krijgt het nummer 1'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:volgordeTPOD_0790">
@@ -1102,80 +974,55 @@
     
     <!-- ============TPOD_0800================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0800">
-        <sch:rule context="//tekst:Lid">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="ends-with(string(tekst:LidNummer),'.')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0800",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Achter het lidnummer moet een punt worden opgenomen.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>: <sch:value-of select="tekst:LidNummer"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0800" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0800'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="ends-with(string(tekst:LidNummer),'.')"/>
+        <sch:param name="context" value="//tekst:Lid"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Achter het lidnummer moet een punt worden opgenomen.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0810================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0810">
-        <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
-            <sch:let name="CONDITION" value="name(*[1])='Lijstaanhef'"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0810",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Lijst wordt altijd voorafgegaan door een inleidende tekst, oftewel de Lijstaanhef.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0810" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0810'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
+        <sch:param name="CONDITION" value="name(*[1])='Lijstaanhef'"/>
+        <sch:param name="context" value="//tekst:Lijst"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Lijst wordt altijd voorafgegaan door een inleidende tekst, oftewel de Lijstaanhef.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0820================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0820">
-        <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="count(ancestor-or-self::tekst:Lijst)&lt;4"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0820",
-                "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Lijsten mogen in ten hoogste drie niveaus gebruikt worden.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0820" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD0820'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="count(ancestor-or-self::tekst:Lijst)&lt;4"/>
+        <sch:param name="context" value="//tekst:Lijst"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Lijsten mogen in ten hoogste drie niveaus gebruikt worden.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     
     <!-- ============TPOD_0830================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0830">
-        <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
-            <sch:let name="lijstMetLettersAangeven" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
-            <sch:let name="CONDITION" value="string-length($lijstMetLettersAangeven[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0830",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De onderdelen van de Lijst op het eerste niveau moeten worden aangegeven met letters.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-                TPOD_0830/0831:<sch:value-of select="$lijstMetLettersAangeven"/></sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0830" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0830'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkEersteNiveauLijstLettersTPOD_0830(.)[1]) = 0"/>
+        <sch:param name="context" value="//tekst:Lijst"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De onderdelen van de Lijst op het eerste niveau moeten worden aangegeven met letters.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:checkEersteNiveauLijstLettersTPOD_0830">
@@ -1192,22 +1039,15 @@
     
     <!-- ============TPOD_0831================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0831">
-        <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
-            <sch:let name="lijstMetLettersAangeven" value="foo:checkEersteNiveauLijstLettersTPOD_0830(.)"> </sch:let>
-            <sch:let name="CONDITION" value="string-length($lijstMetLettersAangeven[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0831",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De onderdelen van de Lijst op het eerste niveau moeten worden aangegeven met letters.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-                TPOD_0830/0831:<sch:value-of select="$lijstMetLettersAangeven"/></sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0831" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0831'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+        <sch:param name="CONDITION" value="true()"/>
+        <sch:param name="context" value="//tekst:Lijst"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Het teken voor een Lijstitem mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:checkEersteNiveauLijstLettersTPOD_0831">
@@ -1222,24 +1062,17 @@
         </xsl:if>
     </xsl:function>
     
-    <!-- ============TPOD_08401================================================================================================================ -->
+    <!-- ============TPOD_0840================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0840">
-        <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
-            <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0840(.)"> </sch:let>
-            <sch:let name="CONDITION" value="string-length($ancestorsFout[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0840",
-                "ernst": "",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De onderdelen van de Lijst op het tweede niveau moeten worden aangegeven met Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0840" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0840'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkTweedeNiveauLijstCijfersTPOD_0840(.)[1]) = 0"/>
+        <sch:param name="context" value="//tekst:Lijst"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De onderdelen van de Lijst op het tweede niveau moeten worden aangegeven met Arabische cijfers.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:checkTweedeNiveauLijstCijfersTPOD_0840">
@@ -1256,22 +1089,15 @@
     
     <!-- ============TPOD_0841================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0841">
-        <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
-            <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0840(.)"> </sch:let>
-            <sch:let name="CONDITION" value="string-length($ancestorsFout[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0841",
-                "ernst": "",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De onderdelen van de Lijst op het tweede niveau moeten worden aangegeven met Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0841" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0841'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+        <sch:param name="CONDITION" value="true()"/>
+        <sch:param name="context" value="//tekst:Lijst"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Het teken voor een Lijstitem op het tweede niveau mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:checkTweedeNiveauLijstCijfersTPOD_0841">
@@ -1288,25 +1114,18 @@
     
     <!-- ============TPOD_0850================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0850">
-        <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-GemeentenEnWaterschappen"/>
-            <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0850(.)"> </sch:let>
-            <sch:let name="CONDITION" value="string-length($ancestorsFout[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0850",
-                "ernst": "",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De onderdelen van de Lijst op het derde niveau moeten worden aangegeven met Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0850" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0850'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkDerdeNiveauLijstCijfersTPOD_0850(.)[1]) = 0"/>
+        <sch:param name="context" value="//tekst:Lijst"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'De onderdelen van de Lijst op het derde niveau moeten worden aangegeven met Arabische cijfers.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
-    <xsl:function name="foo:checkTweedeNiveauLijstCijfersTPOD_0850">
+    <xsl:function name="foo:checkDerdeNiveauLijstCijfersTPOD_0850">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
         <xsl:if test="$ancestors = 3">
@@ -1320,25 +1139,18 @@
     
     <!-- ============TPOD_0851================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0851">
-        <sch:rule context="//tekst:Lijst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-Omgevingsverordening"/>
-            <sch:let name="ancestorsFout" value="foo:checkTweedeNiveauLijstCijfersTPOD_0850(.)"> </sch:let>
-            <sch:let name="CONDITION" value="string-length($ancestorsFout[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0851",
-                "ernst": "",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De onderdelen van de Lijst op het derde niveau moeten worden aangegeven met Arabische cijfers.",
-                "melding": "Dit is niet het geval bij eId: <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0851" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0851'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
+        <sch:param name="CONDITION" value="true()"/>
+        <sch:param name="context" value="//tekst:Lijst"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Het teken voor een Lijstitem op het derde niveau mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
-    <xsl:function name="foo:checkTweedeNiveauLijstCijfersTPOD_0851">
+    <xsl:function name="foo:checkDerdeNiveauLijstCijfersTPOD_0851">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
         <xsl:if test="$ancestors = 3">
@@ -1352,44 +1164,47 @@
     
     <!-- ============TPOD_0880================================================================================================================ -->
     
-    <sch:pattern id="TPOD880">
-    <sch:rule context="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']">
-        <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-        <sch:let name="CONDITION" value="((tekst:Label/text() = 'Hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen'))"/>
-        <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-            {               
-            "code": "TPOD0880",
-            "ernst": "Waarschuwing",
-            "eId": "<sch:value-of select="../@eId"/>",
-            "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-            "regel": "Hoofdstuk 1 heeft het Opschrift Algemene bepalingen",
-            "melding": "Opschrift is hier: <sch:value-of select="tekst:Opschrift/text()"/>
-            },
-        </sch:assert>
-    </sch:rule>
+    <sch:pattern id="TPOD0880" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0880'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="((tekst:Label/text() = 'Hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen'))"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']"/>
+        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Hoofdstuk 1 heeft het Opschrift Algemene bepalingen.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_0930================================================================================================================ -->
     
-    <sch:pattern id="TPOD_0930">
+    <sch:pattern id="TPOD0930_a" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD0930'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:aantalTPOD_0930_28992(.)) = 0"/>
+        <sch:param name="context" value="//basisgeo:geometrie"/>
+        <sch:param name="idf" value="../basisgeo:id"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten.'"></sch:param>
+        <sch:param name="melding" value="concat(': ',foo:aantalTPOD_0930_28992(.))"/>
+        <sch:param name="waarschuwing" value="''"/>
+        
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD0930_b" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD0930'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:aantalTPOD_0930_4258(.)) = 0"/>
+        <sch:param name="context" value="//basisgeo:geometrie"/>
+        <sch:param name="idf" value="../basisgeo:id"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.'"></sch:param>
+        <sch:param name="melding" value="concat(': ',foo:aantalTPOD_0930_4258(.))"/>
+        <sch:param name="waarschuwing" value="''"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD_0930_4258">
         <sch:rule context="//basisgeo:geometrie">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="fout" value="foo:aantalTPOD_0930_28992(.)"/>
-            <sch:let name="CONDITION" value="string-length($fout) = 0"/>
-            <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT">
-                {               
-                "code": "TPOD0930",
-                "ernst": "Blokkerend",
-                "id": "<sch:value-of select="../basisgeo:id"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten. Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.",
-                "melding": "<sch:value-of select="$fout"/>"
-                },
-            </sch:assert>
-        </sch:rule>
-        <sch:rule context="//basisgeo:geometrie">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
+            <sch:let name="APPLICABLE" value="true()"/>
             <sch:let name="fout" value="foo:aantalTPOD_0930_4258(.)"/>
             <sch:let name="CONDITION" value="string-length($fout) = 0"/>
             <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
@@ -1416,7 +1231,7 @@
                     <xsl:if test="string-length($fouteCoord) > 0">
                         <xsl:value-of
                             select="
-                            concat(' EPSG:28992 (=RD new), coördinaten in meters: Maximaal 3 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                            concat(' coördinaten: ',
                             concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 80), '.....'))"
                         />
                     </xsl:if>
@@ -1436,7 +1251,7 @@
                     <xsl:if test="string-length($fouteCoord) > 0">
                         <xsl:value-of
                             select="
-                            concat(' EPSG:4258 (=ETRS89) coördinaten in graden, Maximaal 8 decimalen. gml:id=', ./@gml:id, ', coördinaten: ',
+                            concat(' coördinaten: ',
                             concat(substring(substring($fouteCoord, 1, string-length($fouteCoord) - 2), 0, 80), '.....'))"
                         />
                     </xsl:if>
@@ -1464,24 +1279,15 @@
     
     <!-- ============TPOD_0940================================================================================================================ -->    
     
-    <sch:pattern id="TPOD_0940">
-        <sch:rule
-            context="//basisgeo:geometrie">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-generiek"/>
-            <sch:let name="crs" value="foo:crsTPOD_0940(.)"/>
-            <sch:let name="crsses" value="foo:crssesTPOD_0940($crs, .)"/>
-            <sch:let name="CONDITION" value="string-length($crsses) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD0940",
-                "ernst": "Blokkerend",
-                "id": "<sch:value-of select="../basisgeo:id"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs)",
-                "melding": "EPSG:28992 (=RD new) of EPSG:4258 (=ETRS89). Id=<sch:value-of select="../basisgeo:id"/> bevat een combinatie van beiden."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0940" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD0940'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:crssesTPOD_0940(foo:crsTPOD_0940(.), .)) = 0"/>
+        <sch:param name="context" value="//basisgeo:geometrie"/>
+        <sch:param name="idf" value="../basisgeo:id"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs)'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:crsTPOD_0940">
@@ -1511,21 +1317,15 @@
     
     <!-- ============TPOD_0980======================================================================================================= -->
     
-    <sch:pattern id="TPOD_0980">
-        <sch:rule context="//tekst:Hoofdstuk[tekst:Kop/tekst:Nummer/text() eq '1']">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-generiek"/>
-            <sch:let name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)[1]) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD0980",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Hoofdstuk 1 moet een artikel 'begripsbepalingen' bevatten.",
-                "melding": "Dit is niet aangetroffen in Hoofdstuk <sch:value-of select="@eId"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD0980" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD0980'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)[1]) &gt; 0"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk[tekst:Kop/tekst:Nummer/text() eq '1']"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Hoofdstuk 1 moet een artikel &quot;begripsbepalingen&quot; bevatten.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:opschriftTPOD0980">
@@ -1539,43 +1339,29 @@
     
     <!-- ============TPOD_1000================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1000">
-        <sch:rule context="//tekst:Begrip">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="tekst:Term and tekst:Definitie"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1000",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Begrip moet bestaan uit één term en één definitie.",
-                "melding": "Dit is niet het geval in Begrip met eId: <sch:value-of select="@eId"/> "
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1000" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1000'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="count(tekst:Term)=1 and count(tekst:Definitie)=1"/>
+        <sch:param name="context" value="//tekst:Begrip"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Begrip moet bestaan uit één term en één definitie.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
+    
         
     <!-- ============TPOD_1010================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1010">
-        <sch:rule context="//tekst:Begrippenlijst">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-generiek"/>
-            <sch:let name="items"
-                value="foo:checkBegripTPOD1010(.)"/>
-            <sch:let name="CONDITION"
-                value="string-length($items)=0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1010",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Begriplijst moet gesorteerd zijn",
-                "melding": "Dit geldt niet voor de Begrippenlijst met eId: <sch:value-of select="@eId"/> "
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1010" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1010'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkBegripTPOD1010(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Begrippenlijst"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een Begriplijst moet gesorteerd zijn.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:checkBegripTPOD1010">
@@ -1598,134 +1384,146 @@
     
     <!-- ============TPOD_1020================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1020">
-        <sch:rule context="//tekst:Begrippenlijst[tekst:Begrip/tekst:LiNummer]">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1020",
-                "ernst": "Waarschuwing,
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Begrippen mogen niet worden genummerd",
-                "melding": "In de Begrippenlijst met eId: <sch:value-of select="@eId"/> wordt LiNummer aangetroffen"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1020" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1020'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//tekst:Begrippenlijst[tekst:Begrip/tekst:LiNummer]"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Begrippen mogen niet worden genummerd.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_1070================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1070">
-        <sch:rule context="//tekst:Begrippenlijst[tekst:Begrip/tekst:LiNummer]">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-niet-Rijk"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1070",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="@eId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Meet- en rekenbepalingen mogen niet worden genummerd.",
-                "melding": "In de Begrippenlijst met eId: <sch:value-of select="@eId"/> wordt LiNummer aangetroffen"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1070" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1070'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="tekst:Inhoud/tekst:Begrippenlijst/tekst:Begrip/tekst:LiNummer"/>
+        <sch:param name="context" value="//tekst:Artikel[tekst:Kop/tekst:Opschrift/text() eq 'Meet- en rekenbepalingen']"/>
+        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Meet- en rekenbepalingen mogen niet worden genummerd.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_1310================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1310">
-        <sch:rule context="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid']">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1310",
-                "ernst": "Waarschuwing",
-                "identificatie": "<sch:value-of select="../l:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van 'meter' gekozen te worden.",
-                "melding": "Dit is niet zo in Gebied: <sch:value-of select="../l:identificatie"/> "
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1310" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1310'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid']"/>
+        <sch:param name="idf" value="../l:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van &quot;meter&quot; gekozen te worden.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_1650================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1650">
-        <sch:rule
-            context="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde/rol:Normwaarde">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="
-                (rol:kwantitatieveWaarde or rol:kwalitatieveWaarde or rol:waardeInRegeltekst) 
-                and
-                not((rol:kwantitatieveWaarde and rol:kwalitatieveWaarde)
-                or
-                (rol:waardeInRegeltekst and rol:kwalitatieveWaarde)
-                or
-                (rol:kwantitatieveWaarde and rol:waardeInRegeltekst)
-                or
-                (rol:kwantitatieveWaarde and rol:waardeInRegeltekst and rol:kwalitatieveWaarde))
-                "/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1650",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../rol:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het attribuut 'normwaarde' moet bestaan uit één van de drie mogelijke attributen; 'kwalitatieveWaarde' óf 'kwantitatieveWaarde' of 'waardeInRegeltekst'",
-                "melding": "Dit is niet het geval bij indentifivatie: <sch:value-of select="../../rol:identificatie"/> "
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1650" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1650'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="
+            (rol:kwantitatieveWaarde or rol:kwalitatieveWaarde or rol:waardeInRegeltekst) 
+            and
+            not((rol:kwantitatieveWaarde and rol:kwalitatieveWaarde)
+            or
+            (rol:waardeInRegeltekst and rol:kwalitatieveWaarde)
+            or
+            (rol:kwantitatieveWaarde and rol:waardeInRegeltekst)
+            or
+            (rol:kwantitatieveWaarde and rol:waardeInRegeltekst and rol:kwalitatieveWaarde))
+            "/>
+        <sch:param name="context" value="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde/rol:Normwaarde"/>
+        <sch:param name="idf" value="../../rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Het attribuut &quot;normwaarde&quot; moet bestaan uit één van de drie mogelijke attributen: &quot;kwalitatieveWaarde&quot; òf &quot;kwantitatieveWaarde&quot; òf &quot;waardeInRegeltekst&quot;'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_1700================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1700">
-        <sch:rule context="rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1700",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="rol:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Blokkerend",
-                "melding": "Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de functionele structuur.",
-                "waarschuwing": "Verwijzingen naar DSO data worden nog niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1700" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1700'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
+        <sch:param name="CONDITION" value="not(contains(foo:run1700(rol:identificatie/text(), string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href), foo:activiteitenLijstTPOD_1700()), ','))"/>
+        <sch:param name="context" value="//rol:Activiteit"/>
+        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de functionele structuur.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Verwijzingen naar DSO data worden nog niet onderzocht.'"/>
     </sch:pattern>
+    
+    <xsl:function name="foo:run1700">
+        <xsl:param name="identificatie"/>
+        <xsl:param name="bovenLiggendForContains"/>
+        <xsl:param name="activiteitenLijstForContains"/>
+        <xsl:variable name="result" select="foo:isLokaal1700($bovenLiggendForContains, $activiteitenLijstForContains, '')"/>
+        <xsl:value-of select="$result"/>
+    </xsl:function>
+    
+    <xsl:function name="foo:isLokaal1700">
+        <xsl:param name="bovenLiggendForContains"/>
+        <xsl:param name="activiteitenLijstForContains"/>
+        <xsl:param name="circulaireActiviteitenLijstForContains"/>
+        <xsl:choose>
+            <xsl:when test="contains($activiteitenLijstForContains, $bovenLiggendForContains)">
+                <!-- Is lokaal, testen ciculaire en evt toevoegen aan circulaire en dan recursive -->
+                <xsl:choose>
+                    <xsl:when test="contains($circulaireActiviteitenLijstForContains, $bovenLiggendForContains)">
+                        <!-- fout, mag niet al een keer zijn voorgekomen -->
+                        <xsl:value-of select="concat($circulaireActiviteitenLijstForContains,',',$bovenLiggendForContains)"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:for-each
+                            select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+                            <xsl:if test="rol:identificatie/text() = $bovenLiggendForContains">
+                                <!-- nieuwe bovenliggend toevoegen aan circulaire en dan recursive -->
+                                <xsl:value-of 
+                                    select="foo:isLokaal1700(
+                                    string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href), 
+                                    $activiteitenLijstForContains, 
+                                    concat($circulaireActiviteitenLijstForContains,',',$bovenLiggendForContains)
+                                    )"/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <!-- is niet lokaal, lege string -->
+            <xsl:otherwise>
+                <xsl:value-of select="$bovenLiggendForContains"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+    
+    <xsl:function name="foo:activiteitenLijstTPOD_1700">
+        <xsl:variable name="activiteitenLijst">
+            <xsl:for-each
+                select="$xmlDocuments/ow-dc:owBestand/sl:standBestand/sl:stand/ow-dc:owObject/rol:Activiteit">
+                <xsl:value-of select="rol:identificatie"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$activiteitenLijst"/>
+    </xsl:function>
+    
     
     <!-- ============TPOD_1710================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1710">
-        <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
-            <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1710()"/>
-            <sch:let name="circulaireActivititeiten"
-                value="foo:circulaireActivititeitenTPOD_1710(., $activiteitenLijst)"/>
-            <!-- TPOD1710  -->
-            <sch:let name="CONDITION" value="string-length($circulaireActivititeiten) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1710",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt. ",
-                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> ",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1710" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1710'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
+        <sch:param name="CONDITION" value="string-length(foo:circulaireActivititeitenTPOD_1710(., foo:activiteitenLijstTPOD_1710())) = 0"/>
+        <sch:param name="context" value="//rol:Activiteit"/>
+        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Een bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
     
     <xsl:function name="foo:circulaireActivititeitenTPOD_1710">
@@ -1783,26 +1581,16 @@
     
     <!-- ============TPOD_1730================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1730">
-        <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
-            <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1730()"/>
-            <!-- TPOD1730  -->
-            <sch:let name="CONDITION" value="contains($activiteitenLijst, rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1730",
-                "ernst": "Waarschuwing",
-                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.",
-                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> met verwijzing naar: <sch:value-of select="rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        
+    <sch:pattern id="TPOD1730" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1730'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
+        <sch:param name="CONDITION" value="contains(foo:activiteitenLijstTPOD_1730(), rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
+        <sch:param name="context" value="//rol:Activiteit"/>
+        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
     
     <xsl:function name="foo:activiteitenLijstTPOD_1730">
@@ -1817,24 +1605,16 @@
     
     <!-- ============TPOD_1740================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1740">
-        <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
-            <sch:let name="activiteitenLijst" value="foo:activiteitenLijstTPOD_1740()"/>
-            <sch:let name="CONDITION" value="contains($activiteitenLijst, string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1740",
-                "ernst": "Waarschuwing",
-                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt.",
-                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/> met verwijzing naar: <sch:value-of select="rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        
+    <sch:pattern id="TPOD1740" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1740'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="contains(foo:activiteitenLijstTPOD_1740(), string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
+        <sch:param name="context" value="//rol:Activiteit"/>
+        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
     
     <xsl:function name="foo:activiteitenLijstTPOD_1740">
@@ -1849,25 +1629,17 @@
     
     <!-- ============TPOD_1750================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1750">
-        <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
-            <sch:let name="ref" value="rol:identificatie/text()"/>
-            <sch:let name="CONDITION" value="not(foo:activiteitenGebiedenTPOD_1750($ref) = 'false')"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                <sch:value-of select="foo:activiteitenGebiedenTPOD_1750($ref)"/>
-                {               
-                "code": "TPOD1750",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="rol:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn).",
-                "melding": "Dit is niet het geval in: <sch:value-of select="rol:identificatie/text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1750" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1750'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
+        <sch:param name="CONDITION" value="not(foo:activiteitenGebiedenTPOD_1750(rol:identificatie/text()) = 'false')"/>
+        <sch:param name="context" value="//rol:Activiteit"/>
+        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    
     
     <xsl:function name="foo:activiteitenGebiedenTPOD_1750">
         <xsl:param name="ref"/>
@@ -1904,147 +1676,102 @@
         
     <!-- ============TPOD_1760================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1760">
-        <sch:rule
-            context="//ga:Gebiedsaanwijzing">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION"
-                value="
-                contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
-                or
-                contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')                
-                "/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1760",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="ga:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt, puntengroep, lijn of lijnengroep zijn).",
-                "melding": "Dit is niet het geval in: <sch:value-of select="ga:identificatie/text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1760" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1760'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="
+            contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
+            or
+            contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')
+            "/>
+        <sch:param name="context" value="//ga:Gebiedsaanwijzing"/>
+        <sch:param name="idf" value="ga:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt, puntengroep, lijn of lijnengroep zijn).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_1770================================================================================================================ -->
     
-    <!-- LET OP FOUT -->
-    
-    <sch:pattern id="TPOD_1770">
-        <sch:rule context="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="true()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1770",
-                "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="ga:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Binnen het object 'Gebiedsaanwijzing' moeten de waarden van de attributen 'groep' (datatype 'Gebiedsaanwijzinggroep') hiërarchisch vallen onder het 'type' (datatype 'TypeGebiedsaanwijzing').",
-                #"melding": "Dit is wel het geval in <sch:value-of select="ga:identificatie"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1770" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1770'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//ga:Gebiedsaanwijzing"/>
+        <sch:param name="idf" value="ga:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Binnen het object &quot;Gebiedsaanwijzing&quot; moeten de waarden van de attributen &quot;groep&quot; (datatype &quot;Gebiedsaanwijzinggroep&quot;) hiërarchisch vallen onder het &quot;type&quot; (datatype &quot;TypeGebiedsaanwijzing&quot;).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test wordt niet uitgevoerd omdat het binnen deze schematron nog niet mogelijk is om waardelijst-hierarchieën op te vragen via een externe API'"/>
     </sch:pattern>
     
     <!-- ============TPOD_1780================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1780">
-        <sch:rule
-            context="//aanlevering:AanleveringBesluit">
-            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
-            <sch:let name="CONDITION"
-                value="count(//tekst:Hoofdstuk/descendant::tekst:Artikel)>0"/>    
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1780",
-                "ernst": "Blokkerend",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel.",
-                "melding": "Een van beiden of beiden missen."
-                },
-                TPOD1780: Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel. </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1780" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1780'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
+        <sch:param name="CONDITION" value="count(//tekst:Hoofdstuk/descendant::tekst:Artikel) &gt; 0"/>
+        <sch:param name="context" value="//aanlevering:AanleveringBesluit"/>
+        <sch:param name="idf" value="'n.v.t.'"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_1790================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1790">
-        <sch:rule
-            context="//r:Instructieregel">
-            <sch:let name="APPLICABLE" value="$Omgevingsplan"/>
-            <sch:let name="CONDITION"
-                value="false()"/>    
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1790",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het IMOW-object 'Instructieregel' is niet van toepassing (voor Omgevingsplan).",
-                "melding": "Betreft:<sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1790" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1790'"/>
+        <sch:param name="businessRuleGroup" value="$Omgevingsplan"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//r:Instructieregel"/>
+        <sch:param name="idf" value="r:artikelOfLid/r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Het IMOW-object &quot;Instructieregel&quot; is niet van toepassing (voor Omgevingsplan).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_1830================================================================================================================ -->    
     
-    <sch:pattern id="TPOD1830">
-        <sch:rule context="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie']">
-            <sch:let name="APPLICABLE" value="$AMvB_MR"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1830",
-                "ernst": "Waarschuwing",
-                "identificatie": "<sch:value-of select="ga:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘functie’ van attribuut ‘type’ (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR)",
-                "melding": "Dit is wel het geval in <sch:value-of select="ga:identificatie"/> "
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1830" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1830'"/>
+        <sch:param name="businessRuleGroup" value="$AMvB_MR"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie']"/>
+        <sch:param name="idf" value="ga:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘functie’ van attribuut ‘type’ (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR)'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_1840================================================================================================================ -->    
     
-    <sch:pattern id="TPOD1840">
-        <sch:rule context="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']">
-            <sch:let name="APPLICABLE" value="$AMvB_MR"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1840",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="ga:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘beperkingengebied’ van attribuut ‘type’ (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR) ",
-                "melding": "Dit is wel het geval in <sch:value-of select="ga:identificatie"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1840" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1840'"/>
+        <sch:param name="businessRuleGroup" value="$AMvB_MR"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']"/>
+        <sch:param name="idf" value="ga:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Binnen het object ‘Gebiedsaanwijzing’ is de waarde &quot;beperkingengebied&quot; van attribuut &quot;type&quot; (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_1850================================================================================================================ -->    
     
-    <sch:pattern id="TPOD1850">
-        <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
-            <sch:let name="fouten" value="foo:CheckFouteConstructiesTPOD_1850(.)"/>
-            <sch:let name="CONDITION" value="string-length($fouten)=0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1850",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="r:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel.",
-                "melding": "Regeltekst waarom het gaat: <sch:value-of select="r:identificatie/text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1850" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1850'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
+        <sch:param name="CONDITION" value="string-length(foo:CheckFouteConstructiesTPOD_1850(.))=0"/>
+        <sch:param name="context" value="//r:Regeltekst"/>
+        <sch:param name="idf" value="r:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:CheckFouteConstructiesTPOD_1850">
@@ -2061,141 +1788,100 @@
     
     <!-- ============TPOD_1860================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1860">
-        <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
-            <sch:let name="CONDITION"
-                value="not(r:gerelateerdeRegeltekst/r:RegeltekstRef/@xlink:href eq r:identificatie)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1860",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="r:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.",
-                "melding": "Betreft verwijzing gerelateerdeRegeltekst naar zichzelf: <sch:value-of select="name()"/>: <sch:value-of select="r:identificatie"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        <sch:rule context="//rol:Activiteit">
-            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
-            <sch:let name="CONDITION"
-                value="not(rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1860",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="rol:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.",
-                "melding": "Betreft verwijzing gerelateerdeActiviteit naar zichzelf: <sch:value-of select="name()"/>: <sch:value-of select="rol:identificatie"/>, ",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        <sch:rule context="//r:artikelOfLid/r:RegeltekstRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
-            <sch:let name="identifiers"
-                value="foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1860",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.",
-                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>, <sch:value-of select="@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        <sch:rule context="//r:RegelVoorIedereen/r:activiteitaanduiding/rol:ActiviteitRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
-            <sch:let name="identifiers"
-                value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1860",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.",
-                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>, <sch:value-of select="@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        <sch:rule context="//r:omgevingsnormaanduiding/rol:OmgevingsnormRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
-            <sch:let name="identifiers"
-                value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1860",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.",
-                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>, <sch:value-of select="@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        <sch:rule context="//r:gebiedsaanwijzing/ga:GebiedsaanwijzingRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
-            <sch:let name="identifiers"
-                value="foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1860",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.",
-                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>, <sch:value-of select="@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        <sch:rule context="//rol:gerelateerdeActiviteit/rol:ActiviteitRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
-            <sch:let name="identifiers"
-                value="foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie)"/>
-            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1860",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../rol:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.",
-                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../rol:identificatie"/>, <sch:value-of select="@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        <sch:rule
-            context="//l:LocatieRef | l:GebiedRef | l:GebiedengroepRef | l:PuntRef | l:PuntengroepRef | l:LijnengroepRef | l:LijnRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
-            <sch:let name="identifiers" value="foo:getLocationIdentifiersTPOD_1860()"/>
-            <sch:let name="CONDITION" value="contains($identifiers, concat('.',@xlink:href,'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1860",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../*:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.",
-                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../*:identificatie"/>, <sch:value-of select="@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1860_a" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1860'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
+        <sch:param name="CONDITION" value="not(r:gerelateerdeRegeltekst/r:RegeltekstRef/@xlink:href eq r:identificatie)"/>
+        <sch:param name="context" value="//r:Regeltekst"/>
+        <sch:param name="idf" value="r:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1860_b" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1860'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
+        <sch:param name="CONDITION" value="not(rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
+        <sch:param name="context" value="//rol:Activiteit"/>
+        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1860_c" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1860'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
+        <sch:param name="CONDITION" value="contains(foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie), concat('.',string(@xlink:href),'.'))"/>
+        <sch:param name="context" value="//r:artikelOfLid/r:RegeltekstRef"/>
+        <sch:param name="idf" value="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1860_d" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1860'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
+        <sch:param name="CONDITION" value="contains(foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie), concat('.',string(@xlink:href),'.'))"/>
+        <sch:param name="context" value="//r:RegelVoorIedereen/r:activiteitaanduiding/rol:ActiviteitRef"/>
+        <sch:param name="idf" value="../../r:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
+        <sch:param name="melding" value="concat(': ',string(@xlink:href))"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1860_e" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1860'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
+        <sch:param name="CONDITION" value="contains(foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie), concat('.',string(@xlink:href),'.'))"/>
+        <sch:param name="context" value="//r:omgevingsnormaanduiding/rol:OmgevingsnormRef"/>
+        <sch:param name="idf" value="../../r:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
+        <sch:param name="melding" value="concat(': ',string(@xlink:href))"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1860_f" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1860'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
+        <sch:param name="CONDITION" value="contains(foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie), concat('.',string(@xlink:href),'.'))"/>
+        <sch:param name="context" value="//r:gebiedsaanwijzing/ga:GebiedsaanwijzingRef"/>
+        <sch:param name="idf" value="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
+        <sch:param name="melding" value="concat(': ',string(@xlink:href))"/>
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1860_g" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1860'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
+        <sch:param name="CONDITION" value="contains(foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie), concat('.',string(@xlink:href),'.'))"/>
+        <sch:param name="context" value="//rol:gerelateerdeActiviteit/rol:ActiviteitRef"/>
+        <sch:param name="idf" value="../../rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
+        <sch:param name="melding" value="concat(': ',string(@xlink:href))"/>
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1860_h" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1860'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
+        <sch:param name="CONDITION" value="contains(foo:getLocationIdentifiersTPOD_1860(), concat('.',string(@xlink:href),'.'))"/>
+        <sch:param name="context" value="//l:LocatieRef | l:GebiedRef | l:GebiedengroepRef | l:PuntRef | l:PuntengroepRef | l:LijnengroepRef | l:LijnRef"/>
+        <sch:param name="idf" value="../../*:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
+        <sch:param name="melding" value="concat(': ',string(@xlink:href))"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
     
     <xsl:function name="foo:getLocationIdentifiersTPOD_1860">
@@ -2220,24 +1906,16 @@
     
     <!-- ============TPOD_1870================================================================================================================ -->    
     
-    <sch:pattern id="TPOD_1870">
-        <sch:rule context="//r:artikelOfLid">
-            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
-            <sch:let name="identifiers" value="foo:getRegelTekstIdentifiersTPOD_1870()"/>
-            <sch:let name="CONDITION" value="contains($identifiers, concat('.',r:RegeltekstRef/@xlink:href,'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1870",
-                "ernst": "Blokkerend",
-                "RegeltekstRef": "<sch:value-of select="r:RegeltekstRef/@xlink:href"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid.",
-                "melding": "Betreft
-                <sch:value-of select="../name()"/>: <sch:value-of select="../@ow:regeltekstId"/>, <sch:value-of select="r:RegeltekstRef/@xlink:href"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1870" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1870'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="contains(foo:getRegelTekstIdentifiersTPOD_1870(), concat('.',r:RegeltekstRef/@xlink:href,'.'))"/>
+        <sch:param name="context" value="//r:artikelOfLid"/>
+        <sch:param name="idf" value="r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="nameidf" value="'RegeltekstRef'"></sch:param>
+        <sch:param name="regel" value="'Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
     
     <xsl:function name="foo:getRegelTekstIdentifiersTPOD_1870">
@@ -2251,41 +1929,30 @@
     
     <!-- ============TPOD_1880================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1880">
-        <sch:rule context="//(rol:Omgevingswaarde|r:Omgevingswaarderegel)">
-            <sch:let name="APPLICABLE" value="$Waterschapsverordening"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1880",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="rol:identificatie/text()"/><sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De IMOW-objecten 'Omgevingswaarde' zijn niet van toepassing op de Waterschapsverordening",
-                "melding": "Betreft <sch:value-of select="local-name()"/>: <sch:value-of select="rol:identificatie/text()"/><sch:value-of select="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1880" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1880'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="not($Waterschapsverordening)"/>
+        <sch:param name="context" value="//(rol:Omgevingswaarde|r:Omgevingswaarderegel)"/>
+        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'De IMOW-objecten &quot;Omgevingswaarde$=&quot; zijn niet van toepassing op de Waterschapsverordening.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_1890================================================================================================================ -->    
     
-    <sch:pattern id="TPOD_1890">
-        <sch:rule context="//*:identificatie">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="contains(text(), concat('.', foo:CheckFouteIdentifierTPOD_1890(.), '.'))"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1890",
-                "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.",
-                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1890" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1890'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="contains(text(), concat('.', foo:CheckFouteIdentifierTPOD_1890(.), '.'))"/>
+        <sch:param name="context" value="//*:identificatie"/>
+        <sch:param name="idf" value="."></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.'"></sch:param>
+        <sch:param name="melding" value="concat(': ', local-name(..))"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:CheckFouteIdentifierTPOD_1890">
@@ -2308,22 +1975,16 @@
     
     <!-- ============TPOD_1910================================================================================================================ -->    
     
-    <sch:pattern id="TPOD_1910">
-        <sch:rule context="//sl:objectTypen/sl:objectType">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="objects" value="foo:owObjectenLijstTPOD_1910(.)"/>
-            <sch:let name="CONDITION" value="contains($objects, concat('.',text(),'.'))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1910",
-                "ernst": "Blokkerend",
-                "objectType": "<sch:value-of select="text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand.",
-                "melding": "Het objecttype waarom het gaat: <sch:value-of select="text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1910" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1910'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="contains(foo:owObjectenLijstTPOD_1910(.), concat('.',text(),'.'))"/>
+        <sch:param name="context" value="//sl:objectTypen/sl:objectType"/>
+        <sch:param name="idf" value="."></sch:param>
+        <sch:param name="nameidf" value="'objectType'"></sch:param>
+        <sch:param name="regel" value="'De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:owObjectenLijstTPOD_1910">
@@ -2338,22 +1999,16 @@
     
     <!-- ============TPOD_1920================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1920">
-        <sch:rule context="/ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="nfFOOT" value="foo:notfoundFileOrObjectTypeTPOD_1920(ow-manifest:naam,.)"></sch:let>
-            <sch:let name="CONDITION" value="string-length($nfFOOT) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1920",
-                "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="ow-manifest:objecttype"/>, <sch:value-of select="ow-manifest:naam"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het betreffende Ow-bestand.",
-                "melding": "Het gaat om deze objecttypen: <sch:value-of select="$nfFOOT"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1920" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1920'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:notfoundFileOrObjectTypeTPOD_1920(ow-manifest:naam,.)) = 0"/>
+        <sch:param name="context" value="/ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand"/>
+        <sch:param name="idf" value="concat(ow-manifest:objecttype,': ',ow-manifest:naam)"></sch:param>
+        <sch:param name="nameidf" value="'objecttype'"></sch:param>
+        <sch:param name="regel" value="'De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het betreffende Ow-bestand.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:notfoundFileOrObjectTypeTPOD_1920">
@@ -2383,22 +2038,16 @@
     
     <!-- ============TPOD_1930================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1930">
-        <sch:rule context="//l:Gebiedengroep/l:groepselement">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="notFound" value="foo:notFoundTPOD_1930(.)"/>
-            <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1930",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../l:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een OwObject in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.",
-                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>: <sch:value-of select="substring($notFound,1,string-length($notFound)-2)"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1930" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1930'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:notFoundTPOD_1930(.)) = 0"/>
+        <sch:param name="context" value="//l:Gebiedengroep/l:groepselement"/>
+        <sch:param name="idf" value="../l:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een OwObject in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:notFoundTPOD_1930">
@@ -2427,23 +2076,15 @@
     
     <!-- ============TPOD_1940================================================================================================================ -->    
     
-    <sch:pattern id="TPOD_1940">
-        <sch:rule
-            context="//l:Puntengroep/l:groepselement">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="notFound" value="foo:notFoundTPOD_1940(.)"/>
-            <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1940",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../l:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.",
-                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>: <sch:value-of select="substring($notFound,1,string-length($notFound)-2)"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1940" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1940'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:notFoundTPOD_1940(.)) = 0"/>
+        <sch:param name="context" value="//l:Puntengroep/l:groepselement"/>
+        <sch:param name="idf" value="../l:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:notFoundTPOD_1940">
@@ -2472,23 +2113,16 @@
     
     <!-- ============TPOD_1950================================================================================================================ -->    
     
-    <sch:pattern id="TPOD_1950">
-        <sch:rule
-            context="//l:Lijnengroep/l:groepselement">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="notFound" value="foo:notFoundTPOD_1950(.)"/>
-            <sch:let name="CONDITION" value="string-length($notFound) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1950",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../l:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.",
-                "melding": "Betreft <sch:value-of select="../name()"/>: <sch:value-of select="../l:identificatie"/>: <sch:value-of select="substring($notFound,1,string-length($notFound)-2)"/>."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1950" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1950'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:notFoundTPOD_1950(.)) = 0"/>
+        <sch:param name="context" value="//l:Lijnengroep/l:groepselement"/>
+        <sch:param name="idf" value="../l:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:notFoundTPOD_1950">
@@ -2517,64 +2151,92 @@
     
     <!-- ============TPOD_1960================================================================================================================ -->    
     
-    <sch:pattern id="TPOD_1960">
-            <sch:rule context="//l:Lijn/l:geometrie/l:GeometrieRef">
-                <sch:let name="APPLICABLE" value="$OW-generiek"/>
-                <sch:let name="href" value="string(@xlink:href)"/>
-                <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq $href]"/>
-                <sch:let name="CONDITION" value="not($geometrie//gml:MultiPoint || $geometrie//gml:Point || $geometrie//gml:MultiSurface)"/>
-                <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                    {               
-                    "code": "TPOD1960",
-                    "ernst": "Blokkerend",
-                    "identificatie": "<sch:value-of select="../../l:identificatie"/>",
-                    "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                    "regel": "Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn.",
-                    "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>"
-                    },
-                </sch:assert>
-            </sch:rule>
+    <sch:pattern id="TPOD1960" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1960'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="foo:testGeometrie_1960(.)"/>
+        <sch:param name="context" value="//l:Lijn/l:geometrie/l:GeometrieRef"/>
+        <sch:param name="idf" value="../../l:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn.'"></sch:param>
+        <sch:param name="melding" value="concat(', ',@xlink:href)"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
+    
+    <xsl:function name="foo:testGeometrie_1960"  as="xs:boolean" >
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="found">
+            <xsl:for-each select="$gmlDocuments//basisgeo:Geometrie">
+                <xsl:choose>
+                    <xsl:when test="basisgeo:id/text() = string($context/@xlink:href)">
+                        <xsl:choose>
+                            <xsl:when test="not(.//gml:MultiPoint || .//gml:Point || .//gml:MultiSurface)">
+                                <xsl:value-of select="1"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="0"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="0"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$found > 0"/>
+    </xsl:function>
     
     <!-- ============TPOD_1970================================================================================================================ -->    
     
-    <sch:pattern id="TPOD_1970">
-        <sch:rule context="//l:Punt/l:geometrie/l:GeometrieRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="geometrie" value="$gmlDocuments//basisgeo:Geometrie[basisgeo:id/text() eq $href]"/>
-            <sch:let name="CONDITION" value="$geometrie//gml:MultiPoint || $geometrie//gml:Point"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)">
-                {               
-                "code": "TPOD1970",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../l:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.",
-                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1970" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1970'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="foo:testGeometrie_1970(.)"/>
+        <sch:param name="context" value="//l:Punt/l:geometrie/l:GeometrieRef"/>
+        <sch:param name="idf" value="../../l:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.'"></sch:param>
+        <sch:param name="melding" value="concat(', ',@xlink:href)"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
+    
+    <xsl:function name="foo:testGeometrie_1970"  as="xs:boolean" >
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="found">
+            <xsl:for-each select="$gmlDocuments//basisgeo:Geometrie">
+                <xsl:choose>
+                    <xsl:when test="basisgeo:id/text() = string($context/@xlink:href)">
+                        <xsl:choose>
+                            <xsl:when test="(.//gml:MultiPoint || .//gml:Point)">
+                                <xsl:value-of select="1"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="0"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="0"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="$found > 0"/>
+    </xsl:function>
     
     <!-- ============TPOD_1980================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1980">
-        <sch:rule context="//l:Gebied/l:geometrie/l:GeometrieRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="href" value="string(@xlink:href)"/>
-            <sch:let name="CONDITION" value="foo:calculateConditionTPOD_1980($href) = 1"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1980",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../l:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.",
-                "melding": "Betreft <sch:value-of select="../../name()"/>: <sch:value-of select="../../l:identificatie"/>, <sch:value-of select="@xlink:href"/>"
-                },       
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1980" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1980'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="foo:calculateConditionTPOD_1980(string(@xlink:href)) = 1"/>
+        <sch:param name="context" value="//l:Gebied/l:geometrie/l:GeometrieRef"/>
+        <sch:param name="idf" value="../../l:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.'"></sch:param>
+        <sch:param name="melding" value="concat(', ',@xlink:href)"/>
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:calculateConditionTPOD_1980">
@@ -2597,109 +2259,64 @@
     
     <!-- ============TPOD_1990================================================================================================================ -->
     
-    <sch:pattern id="TPOD_1990">
-        <sch:rule context="//basisgeo:Geometrie">
-            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
-            <sch:let name="geoLocationGeoReferenceIdentifiers"
-                value="foo:getLocationGeoReferenceIdentifiersTPOD_1990()"/>
-            <sch:let name="nietGerefereerdeGeometrie"
-                value="foo:nietGerefereerdeGeometrieTPOD_1990($geoLocationGeoReferenceIdentifiers, .)"/>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeGeometrie) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1990",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="basisgeo:id/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere Geometrie heeft minstens een OwObject dat ernaar verwijst",
-                "melding": "Betreft: <sch:value-of select="basisgeo:id/text()"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        
-        <sch:rule context="//r:Regeltekst/r:identificatie">
-            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
-            <sch:let name="regeltekstReferenties"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef)"/>
-            <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($regeltekstReferenties, .)"/>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1990",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere Regeltekst heeft minstens een OwObject dat ernaar verwijst",
-                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        
-        <sch:rule context="//(vt:FormeleDivisie|vt:Hoofdlijn)/vt:identificatie">
-            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
-            <sch:let name="formeleDivisieReferenties"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//(vt:FormeleDivisieRef|vt:HoofdlijnRef))"/>
-            <sch:let name="nietGerefereerdeReferenties" value="foo:nietGerefereerdeReferentiesTPOD_1990($formeleDivisieReferenties, .)"/>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1990",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere FormeleDivisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst",
-                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
-        
-        <sch:rule context="//rol:Activiteit/rol:identificatie">
-            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
-            <sch:let name="activiteitRefs"
-                value="foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef)"/>
-            <sch:let name="nietGerefereerdeReferenties"
-                value="foo:nietGerefereerdeReferentiesTPOD_1990($activiteitRefs, .)"/>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1990",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere Activiteit-aanduiding heeft minstens een OwObject dat ernaar verwijst",
-                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-                />
-            </sch:assert>
-        </sch:rule>
-        
-        <sch:rule context="//l:identificatie">
-            <sch:let name="APPLICABLE" value="$Regelstructuur_OZON"/>
-            <sch:let name="locatieReferenties"
-                value="foo:getLocationReferenceIdentifiersTPOD_1990()"/>
-            <sch:let name="nietGerefereerdeReferenties">
-                <xsl:if
-                    test="not(contains($locatieReferenties, concat('.', text(), '.')))">
-                    <xsl:value-of select="concat(string(text()), ', ')"/>
-                </xsl:if>
-            </sch:let>
-            <sch:let name="CONDITION" value="string-length($nietGerefereerdeReferenties) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1990",
-                "ernst": "Waarschuwing",
-                "eId": "<sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst",
-                "melding": "Betreft: <sch:value-of select="substring($nietGerefereerdeReferenties,1,string-length($nietGerefereerdeReferenties)-2)"/>",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD1990a" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1990'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeGeometrieTPOD_1990(foo:getLocationGeoReferenceIdentifiersTPOD_1990(), .)) = 0"/>
+        <sch:param name="context" value="//basisgeo:Geometrie"/>
+        <sch:param name="idf" value="basisgeo:id/text()"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Iedere Geometrie heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1990b" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1990'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .)) = 0"/>
+        <sch:param name="context" value="//r:Regeltekst/r:identificatie"/>
+        <sch:param name="idf" value="substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .))-2)"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Iedere Regeltekst heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
+        <sch:param name="melding" value="''"/>
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1990c" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1990'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .)) = 0"/>
+        <sch:param name="context" value="//(vt:Divisie|vt:Hoofdlijn)/vt:identificatie"/>
+        <sch:param name="idf" value="substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .))-2)"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Iedere Divisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
+        <sch:param name="melding" value="''"/>        
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1990d" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1990'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .)) = 0"/>
+        <sch:param name="context" value="//rol:Activiteit/rol:identificatie"/>
+        <sch:param name="idf" value="substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .))-2)"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Iedere Activiteit-aanduiding heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
+        <sch:param name="melding" value="''"/>
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <sch:pattern id="TPOD1990e" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD1990'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:getLocationReferenceIdentifiersTPOD_1990(text())) > 0"/>
+        <sch:param name="context" value="//l:identificatie"/>
+        <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Iedere Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
+        <sch:param name="melding" value="''"/>
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
         
     </sch:pattern>
     
@@ -2742,10 +2359,13 @@
     </xsl:function>
     
     <xsl:function name="foo:getLocationReferenceIdentifiersTPOD_1990">
+        <xsl:param name="id"/>
         <xsl:variable name="identifiers">
             <xsl:for-each
                 select="$xmlDocuments//(l:LocatieRef | l:GebiedRef | l:LijnRef | l:PuntRef | l:GebiedengroepRef | l:PuntengroepRef | l:LijnengroepRef)">
-                <xsl:value-of select="concat('.', string(@xlink:href), '.')"/>
+                <xsl:if test="string(@xlink:href)=$id">
+                    <xsl:value-of select="string(@xlink:href)"/>
+                </xsl:if>
             </xsl:for-each>
         </xsl:variable>
         <xsl:value-of select="$identifiers"/>
@@ -2753,21 +2373,16 @@
     
     <!-- ============TPOD_2000================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2000">
-        <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
-            <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2000",
-                "ernst": "Blokkerend",
-                "wId": "<sch:value-of select="@wId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het wId van de Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP",
-                "melding": "Betreft: <sch:value-of select="@wId"/> "
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2000" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2000'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
+        <sch:param name="context" value="//r:Regeltekst"/>
+        <sch:param name="idf" value="@wId"></sch:param>
+        <sch:param name="nameidf" value="'wId'"></sch:param>
+        <sch:param name="regel" value="'Het wId van de Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:checkWIdTPOD_2000">
@@ -2781,15 +2396,16 @@
     
     <!-- ============TPOD_2040================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2040">
-        <sch:rule context="//vt:Divisie">
-            <sch:let name="APPLICABLE" value="$Vrijetekststructuur_OZON"/>
-            <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                TPOD2040: Betreft <sch:value-of select="name()"/>: <sch:value-of select="@wId"/>: 
-                Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een Divisie in OP
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2040" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD2040'"/>
+        <sch:param name="businessRuleGroup" value="$Vrijetekststructuur_OZON"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
+        <sch:param name="context" value="//vt:Divisie"/>
+        <sch:param name="idf" value="@wId"></sch:param>
+        <sch:param name="nameidf" value="'wId'"></sch:param>
+        <sch:param name="regel" value="'Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een Divisie in OP.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
     
     <xsl:function name="foo:checkWIdTPOD_2040">
@@ -2803,21 +2419,15 @@
     
     <!-- ============TPOD_2050================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2050">
-        <sch:rule context="//aanlevering:AanleveringBesluit">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="message" value="foo:existsTPOD_2050()"/>
-            <sch:let name="CONDITION" value="string-length($message)=0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2050",
-                "ernst": "Blokkerend",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Kijken of het manifest-ow en het manifest bestaan, en de bestanden benoemd in de manifest-bestanden aanwezig zijn.",
-                "melding": "<sch:value-of select="$message"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2050" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2050'"/>
+        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
+        <sch:param name="CONDITION" value="string-length(foo:existsTPOD_2050()) = 0"/>
+        <sch:param name="context" value="//aanlevering:AanleveringBesluit"/>
+        <sch:param name="idf" value="foo:existsTPOD_2050()"></sch:param>
+        <sch:param name="nameidf" value="'resultaat'"></sch:param>
+        <sch:param name="regel" value="'Controleren of het manifest-ow en het manifest bestaan, en de bestanden benoemd in de manifest-bestanden aanwezig zijn.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:existsTPOD_2050">
@@ -2837,7 +2447,6 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:message select="$message"/>
         <xsl:value-of select="$message"/>
     </xsl:function>
     
@@ -2854,22 +2463,16 @@
     
     <!-- ============TPOD_2060================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2060">
-        <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
-            <sch:let name="message" value="foo:checkFouteArtikelLidCombinatieTPOD_2060(.)"/>
-            <sch:let name="CONDITION" value="string-length($message) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2060",
-                "ernst": "Blokkerend",
-                "wId": "<sch:value-of select="@wId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Als er een Regeltekst van een Lid is gemaakt mag er geen Regeltekst meer gemaakt worden van het Artikel dat boven dit Lid hangt.",
-                "melding": "<sch:value-of select="$message"/> "
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2060" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2060'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkFouteArtikelLidCombinatieTPOD_2060(.)) = 0"/>
+        <sch:param name="context" value="//tekst:Artikel"/>
+        <sch:param name="idf" value="@wId"></sch:param>
+        <sch:param name="nameidf" value="'wId'"></sch:param>
+        <sch:param name="regel" value="'Als er een Regeltekst van een Lid is gemaakt mag er geen Regeltekst meer gemaakt worden van het Artikel dat boven dit Lid hangt.'"></sch:param>
+        <sch:param name="melding" value="concat(': ',foo:checkFouteArtikelLidCombinatieTPOD_2060(.))"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:checkFouteArtikelLidCombinatieTPOD_2060">
@@ -2915,105 +2518,73 @@
     
     <!-- ============TPOD_2080================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2080">
-        <sch:rule context="//r:Instructieregel">
-            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
-            <sch:let name="or" value="r:instructieregelTaakuitoefening or r:instructieregelInstrument"></sch:let>
-            <sch:let name="both" value="r:instructieregelTaakuitoefening and r:instructieregelInstrument"></sch:let>
-            <sch:let name="none" value="not(r:instructieregelTaakuitoefening) and not(r:instructieregelInstrument)"></sch:let>
-            <sch:let name="CONDITION" value="$or and not($both) and not($none)"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2080",
-                "ernst": "Blokkerend",
-                "artikelOfLid": "<sch:value-of select="r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Binnen een instructieregel dient er gekozen te worden tussen InstructieregelInstrument of InstructieregelTaakuitoefening (één van de twee moet voorkomen, niet meer, niet minder).",
-                "melding": "Betreft Instructieregel bij Regeltekst: <sch:value-of select="r:artikelOfLid/r:RegeltekstRef/@xlink:href"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2080" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2080'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
+        <sch:param name="CONDITION" value="(r:instructieregelTaakuitoefening or r:instructieregelInstrument) and not(r:instructieregelTaakuitoefening and r:instructieregelInstrument) and not(not(r:instructieregelTaakuitoefening) and not(r:instructieregelInstrument))"/>
+        <sch:param name="context" value="//r:Instructieregel"/>
+        <sch:param name="idf" value="r:artikelOfLid/r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Binnen een instructieregel dient er gekozen te worden tussen InstructieregelInstrument of InstructieregelTaakuitoefening (één van de twee moet voorkomen).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_2090================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2090">
-        <sch:rule context="//rol:Omgevingsnorm">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="kwl" value="count(rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)"></sch:let>
-            <sch:let name="kwn" value="count(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde)"></sch:let>
-            <sch:let name="wir" value="count(rol:normwaarde/rol:Normwaarde/rol:waardeInRegeltekst)"></sch:let>
-            <sch:let name="all" value="count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst))"></sch:let>
-            <sch:let name="CONDITION" value="$kwl=$all or $kwn=$all or $wir=$all"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2090",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="rol:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst).",
-                "melding": "Betreft Omgevingsnorm: <sch:value-of select="rol:identificatie"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2090" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TPOD2090'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="
+            count(rol:normwaarde/rol:Normwaarde/rol:kwalitatieveWaarde)=count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst)) 
+            or count(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde)=count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst)) 
+            or count(rol:normwaarde/rol:Normwaarde/rol:waardeInRegeltekst)=count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst))"/>
+        <sch:param name="context" value="//rol:Omgevingsnorm"/>
+        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst).'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_2100================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2100">
-        <sch:rule context="//rol:Omgevingsnorm/rol:eenheid">
-            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
-            <sch:let name="CONDITION" value="../rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../rol:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.",
-                "melding": "Betreft Normwaarde: <sch:value-of select="../rol:identificatie"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2100" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2100'"/>
+        <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
+        <sch:param name="CONDITION" value="../rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]"/>
+        <sch:param name="context" value="//rol:Omgevingsnorm/rol:eenheid"/>
+        <sch:param name="idf" value="../rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_2110================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2110">
-        <sch:rule context="//vt:Tekstdeel">
-            <sch:let name="APPLICABLE" value="$Vrijetekststructuur"/>
-            <sch:let name="CONDITION" value="(vt:idealisatie and vt:locatieaanduiding) or (not(vt:idealisatie) and not(vt:locatieaanduiding))"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2110",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="vt:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft.",
-                "melding": "Betreft Tekstdeel: <sch:value-of select="vt:identificatie"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2110" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2110'"/>
+        <sch:param name="businessRuleGroup" value="$Vrijetekststructuur"/>
+        <sch:param name="CONDITION" value="(vt:idealisatie and vt:locatieaanduiding) or (not(vt:idealisatie) and not(vt:locatieaanduiding))"/>
+        <sch:param name="context" value="//vt:Tekstdeel"/>
+        <sch:param name="idf" value="vt:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_2120================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2120">
-        <sch:rule context="//*:identificatie">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="dubbel" value="foo:vindDubbeleTPOD_2120(text())"/>
-            <sch:let name="CONDITION" value="string-length($dubbel) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2120",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen).",
-                "melding": "Betreft id: <sch:value-of select="text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2120" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2120'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:vindDubbeleTPOD_2120(text())) = 0"/>
+        <sch:param name="context" value="//*:identificatie"/>
+        <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen).'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:vindDubbeleTPOD_2120">
@@ -3034,23 +2605,15 @@
 
     <!-- ============TPOD_2130================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2130">
-        <sch:rule context="//l:GeometrieRef">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="dubbel"
-                value="foo:vindDubbeleTPOD_2130(string(@xlink:href), ../../l:identificatie/text())"/>
-            <sch:let name="CONDITION" value="string-length($dubbel[1]) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2130",
-                "ernst": "Blokkerend",
-                "identificatie": "<sch:value-of select="../../l:identificatie/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie toegestaan)",
-                "melding": "Betreft gebied:<sch:value-of select="../../l:identificatie/text()"/>, Geometrieref: <sch:value-of select="$dubbel"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2130" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2130'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:vindDubbeleTPOD_2130(string(@xlink:href), ../../l:identificatie/text())[1]) = 0"/>
+        <sch:param name="context" value="//l:GeometrieRef"/>
+        <sch:param name="idf" value="../../l:identificatie/text()"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie toegestaan).'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:vindDubbeleTPOD_2130">
@@ -3066,22 +2629,16 @@
     
     <!-- ============TPOD_2140================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2140">
-        <sch:rule context="//ow-manifest:WorkIDRegeling">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION"
-                value="string-length(foo:checkWorkIdRegelingTPOD_2140(text())) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2140",
-                "ernst": "Blokkerend",
-                "workId": "<sch:value-of select="text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "het WorkIDRegeling van het manifest in OW moet verwijzen naar een bestaande FRBRWork in een Regelingversie in OP.",
-                "melding": "Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2140" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2140'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkWorkIdRegelingTPOD_2140(text())) > 0"/>
+        <sch:param name="context" value="//ow-manifest:WorkIDRegeling"/>
+        <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="nameidf" value="'workId'"></sch:param>
+        <sch:param name="regel" value="'Eet WorkIDRegeling van het manifest in OW moet verwijzen naar een bestaande FRBRWork in een Regelingversie in OP.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:checkWorkIdRegelingTPOD_2140">
@@ -3095,22 +2652,16 @@
     
     <!-- ============TPOD_2150================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2150">
-        <sch:rule context="//ow-manifest:DoelID">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION"
-                value="string-length(foo:checkDoelIdTPOD_2150(text())) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2150",
-                "ernst": "Blokkerend",
-                "DoelId": "<sch:value-of select="text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat aanwezig is in de bijbehorende Regeling in OP.",
-                "melding": "Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2150" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2150'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="string-length(foo:checkDoelIdTPOD_2150(text())) > 0"/>
+        <sch:param name="context" value="//ow-manifest:DoelID"/>
+        <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+        <sch:param name="regel" value="'Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat aanwezig is in de bijbehorende Regeling in OP.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <xsl:function name="foo:checkDoelIdTPOD_2150">
@@ -3124,43 +2675,29 @@
     
     <!-- ============TPOD_2160================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2160">
-        <sch:rule context="//ow-manifest:Aanlevering">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION"
-                value="count(ow-manifest:DoelID) = 1"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2160",
-                "ernst": "Blokkerend",
-                "DoelID": "<sch:value-of select="ow-manifest:DoelID/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "In het manifest-ow mag maar voor 1 doel aangeleverd worden",
-                "melding": "In dit manifest-ow komt het meermalen voor"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2160" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2160'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="count(ow-manifest:DoelID) = 1"/>
+        <sch:param name="context" value="//ow-manifest:Aanlevering"/>
+        <sch:param name="idf" value="ow-manifest:DoelID/text()"></sch:param>
+        <sch:param name="nameidf" value="'DoelID'"></sch:param>
+        <sch:param name="regel" value="'In het manifest-ow mag maar voor 1 doel aangeleverd worden.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_2170================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2170">
-        <sch:rule
-            context="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="count(rol:Normwaarde/rol:waardeInRegeltekst) &lt; 2"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2170",
-                "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="../rol:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Indien de normwaarde van het type 'waardeInRegeltekst' is, mag er maar één normwaarde voorkomen.",
-                "melding": "Betreft <sch:value-of select="../rol:identificatie"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2170" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2170'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="count(rol:Normwaarde/rol:waardeInRegeltekst) &lt; 2"/>
+        <sch:param name="context" value="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde"/>
+        <sch:param name="idf" value="../rol:identificatie"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Indien de normwaarde van het type &quot;waardeInRegeltekst&quot; is, mag er maar één normwaarde voorkomen.'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <!-- ============TPOD_2180================================================================================================================ -->
@@ -3170,62 +2707,45 @@
     Een regelingsgebied is gedeclareerd.
     Nu gaat deze validatie de mist in als het manifest-ow niet voorkomt, maar dan hebben we nog wel meer problemen.
     -->
-    <sch:pattern id="TPOD_2180">
-        <sch:rule
-            context="//aanlevering:AanleveringBesluit">
-            <sch:let name="APPLICABLE" value="$OW-generiek_OZON"/>
-            <sch:let name="CONDITION" value="count($xmlDocuments//rg:Regelingsgebied) = 1"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2180",
-                "ernst": "Blokkerend",
-                "betreft": "Regelingsgebied",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Per Regeling moet er een Regelingsgebied zijn aangeleverd.",
-                "melding": "Het Regelingsgebied is niet aangetroffen.",
-                "waarschuwing": "Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht."
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2180" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2180'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
+        <sch:param name="CONDITION" value="count($xmlDocuments//rg:Regelingsgebied) = 1"/>
+        <sch:param name="context" value="//aanlevering:AanleveringBesluit"/>
+        <sch:param name="idf" value="Regelingsgebied"></sch:param>
+        <sch:param name="nameidf" value="'Betreft'"></sch:param>
+        <sch:param name="regel" value="'Het Regelingsgebied is niet aangetroffen.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
 
     <!-- ============TPOD_2190================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2190">
-        <sch:rule context="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ow-manifest:objecttype[1]/text() eq 'Geometrie']">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2190",
-                "ernst": "Blokkerend",
-                "naam": "<sch:value-of select="ow-manifest:naam/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "In het manifest-OW mag het objecttype Geometrie niet voorkomen.",
-                "melding": "Betreft <sch:value-of select="ow-manifest:naam/text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2190" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2190'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ow-manifest:objecttype[1]/text() eq 'Geometrie']"/>
+        <sch:param name="idf" value="ow-manifest:naam/text()"></sch:param>
+        <sch:param name="nameidf" value="'naam'"></sch:param>
+        <sch:param name="regel" value="'In het manifest-OW mag het objecttype Geometrie niet voorkomen.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
+    
     
     <!-- ============TPOD_2200================================================================================================================ -->
     
-    <sch:pattern id="TPOD_2200">
-        <sch:rule context="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ends-with(ow-manifest:naam[1]/text(), '.gml')]">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2200",
-                "ernst": "Blokkerend",
-                "naam": "<sch:value-of select="ow-manifest:naam/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'",
-                "melding": "Betreft <sch:value-of select="ow-manifest:naam/text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+    <sch:pattern id="TPOD2200" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2200'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ends-with(ow-manifest:naam[1]/text(), '.gml')]"/>
+        <sch:param name="idf" value="ow-manifest:naam/text()"></sch:param>
+        <sch:param name="nameidf" value="'naam'"></sch:param>
+        <sch:param name="regel" value="'In het manifest-OW mag een bestandsnaam niet eindigen op &quot;.gml&quot;.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
     <sch:include href="abstract_pattern_error.sch"/>

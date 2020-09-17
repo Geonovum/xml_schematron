@@ -175,8 +175,7 @@
     <sch:let name="Waterschapsverordening" value="$SOORT_REGELING=$WV"/>
     
     <!-- ============================================================================================================================ -->
-
-	 
+ 
 	<sch:pattern id="TPOD0460" is-a="abstractPatternWarning">
         <sch:param name="code" value="'TPOD0460'"/>
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>

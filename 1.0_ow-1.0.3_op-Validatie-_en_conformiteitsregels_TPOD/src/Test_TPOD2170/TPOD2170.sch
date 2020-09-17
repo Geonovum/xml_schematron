@@ -176,37 +176,16 @@
     
     <!-- ============================================================================================================================ -->
 
-	<!-- 
+	 
 	<sch:pattern id="TPOD2170" is-a="abstractPatternError">
         <sch:param name="code" value="'TPOD2170'"/>
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+	    <sch:param name="CONDITION" value="count(rol:Normwaarde/rol:waardeInRegeltekst) &lt; 2"/>
+	    <sch:param name="context" value="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde"/>
+	    <sch:param name="idf" value="../rol:identificatie"></sch:param>
+	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
+	    <sch:param name="regel" value="'Indien de normwaarde van het type &quot;waardeInRegeltekst&quot; is, mag er maar één normwaarde voorkomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_2170">
-        <sch:rule
-            context="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="count(rol:Normwaarde/rol:waardeInRegeltekst) &lt; 2"/>
-            <sch:assert
-                test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2170",
-                "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="../rol:identificatie"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Indien de normwaarde van het type 'waardeInRegeltekst' is, mag er maar één normwaarde voorkomen.",
-                "melding": "Betreft <sch:value-of select="../rol:identificatie"/>"
-                },
-            </sch:assert>
-        </sch:rule>
     </sch:pattern>
 
     <sch:include href="../abstract_pattern_error.sch"/>

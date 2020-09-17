@@ -178,8 +178,8 @@
     <!-- ============================================================================================================================ -->
 
 	 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternError">
-        <sch:param name="code" value="'TPOD0420'"/>
+    <sch:pattern id="TPOD2100" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD2100'"/>
         <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
 	    <sch:param name="CONDITION" value="../rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]"/>
 	    <sch:param name="context" value="//rol:Omgevingsnorm/rol:eenheid"/>

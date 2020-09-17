@@ -189,25 +189,6 @@
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    
-
-
-    <sch:pattern id="TPOD_2000">
-        <sch:rule context="//r:Regeltekst">
-            <sch:let name="APPLICABLE" value="$Regelstructuur"/>
-            <sch:let name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2000",
-                "ernst": "Blokkerend",
-                "wId": "<sch:value-of select="@wId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het wId van de Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP",
-                "melding": "Betreft: <sch:value-of select="@wId"/> "
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
 
     <xsl:function name="foo:checkWIdTPOD_2000">
         <xsl:param name="identifier"/>

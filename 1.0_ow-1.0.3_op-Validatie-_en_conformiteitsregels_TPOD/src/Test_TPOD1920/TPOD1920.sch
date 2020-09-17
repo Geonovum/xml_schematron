@@ -188,26 +188,6 @@
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    
-
-
-    <sch:pattern id="TPOD_1920">
-        <sch:rule context="/ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="nfFOOT" value="foo:notfoundFileOrObjectTypeTPOD_1920(ow-manifest:naam,.)"></sch:let>
-            <sch:let name="CONDITION" value="string-length($nfFOOT) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD1920",
-                "ernst": "Blokkerend",
-                "eId": "<sch:value-of select="ow-manifest:objecttype"/>, <sch:value-of select="ow-manifest:naam"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het betreffende Ow-bestand.",
-                "melding": "Het gaat om deze objecttypen: <sch:value-of select="$nfFOOT"/>"
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
 
     <xsl:function name="foo:notfoundFileOrObjectTypeTPOD_1920">
         <xsl:param name="naam"/>

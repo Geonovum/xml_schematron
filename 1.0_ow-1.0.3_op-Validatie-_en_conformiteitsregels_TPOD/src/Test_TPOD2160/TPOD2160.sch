@@ -177,38 +177,18 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
+	 
 	<sch:pattern id="TPOD2160" is-a="abstractPatternError">
         <sch:param name="code" value="'TPOD2160'"/>
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+	    <sch:param name="CONDITION" value="count(ow-manifest:DoelID) = 1"/>
+	    <sch:param name="context" value="//ow-manifest:Aanlevering"/>
+	    <sch:param name="idf" value="ow-manifest:DoelID/text()"></sch:param>
+        <sch:param name="nameidf" value="'DoelID'"></sch:param>
+	    <sch:param name="regel" value="'In het manifest-ow mag maar voor 1 doel aangeleverd worden.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+	    <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_2160">
-        <sch:rule context="//ow-manifest:Aanlevering">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION"
-                value="count(ow-manifest:DoelID) = 1"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2160",
-                "ernst": "Blokkerend",
-                "DoelID": "<sch:value-of select="ow-manifest:DoelID/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "In het manifest-ow mag maar voor 1 doel aangeleverd worden",
-                "melding": "In dit manifest-ow komt het meermalen voor"
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-
 
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>

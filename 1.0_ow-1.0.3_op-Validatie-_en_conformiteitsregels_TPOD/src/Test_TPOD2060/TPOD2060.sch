@@ -189,26 +189,6 @@
         <sch:param name="melding" value="concat(': ',foo:checkFouteArtikelLidCombinatieTPOD_2060(.))"/>         
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    
-
-
-    <sch:pattern id="TPOD_2060">
-        <sch:rule context="//tekst:Artikel">
-            <sch:let name="APPLICABLE" value="$OP-implementatie-regelstructuur"/>
-            <sch:let name="message" value="foo:checkFouteArtikelLidCombinatieTPOD_2060(.)"/>
-            <sch:let name="CONDITION" value="string-length($message) = 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2060",
-                "ernst": "Blokkerend",
-                "wId": "<sch:value-of select="@wId"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Als er een Regeltekst van een Lid is gemaakt mag er geen Regeltekst meer gemaakt worden van het Artikel dat boven dit Lid hangt.",
-                "melding": "<sch:value-of select="$message"/> "
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
 
     <xsl:function name="foo:checkFouteArtikelLidCombinatieTPOD_2060">
         <xsl:param name="context" as="node()"/>

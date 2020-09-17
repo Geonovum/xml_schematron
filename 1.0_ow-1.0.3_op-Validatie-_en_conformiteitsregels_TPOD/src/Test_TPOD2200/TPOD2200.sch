@@ -177,37 +177,17 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
-	<sch:pattern id="TPOD2200" is-a="abstractPatternError">
+    <sch:pattern id="TPOD2200" is-a="abstractPatternError">
         <sch:param name="code" value="'TPOD2200'"/>
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ends-with(ow-manifest:naam[1]/text(), '.gml')]"/>
+        <sch:param name="idf" value="ow-manifest:naam/text()"></sch:param>
+        <sch:param name="nameidf" value="'naam'"></sch:param>
+        <sch:param name="regel" value="'In het manifest-OW mag een bestandsnaam niet eindigen op &quot;.gml&quot;.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_2200">
-        <sch:rule context="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ends-with(ow-manifest:naam[1]/text(), '.gml')]">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION" value="false()"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2200",
-                "ernst": "Blokkerend",
-                "naam": "<sch:value-of select="ow-manifest:naam/text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "In het manifest-OW mag een bestandsnaam niet eindigen op '.gml'",
-                "melding": "Betreft <sch:value-of select="ow-manifest:naam/text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-
 
     <sch:include href="../abstract_pattern_error.sch"/>
     <sch:include href="../abstract_pattern_warning.sch"/>

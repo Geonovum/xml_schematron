@@ -177,36 +177,17 @@
 
     <!-- ============================================================================================================================ -->
 
-	<!-- 
+	 
 	<sch:pattern id="TPOD2150" is-a="abstractPatternError">
         <sch:param name="code" value="'TPOD2150'"/>
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
-    </sch:pattern>
-    -->
-
-
-    <sch:pattern id="TPOD_2150">
-        <sch:rule context="//ow-manifest:DoelID">
-            <sch:let name="APPLICABLE" value="$OW-generiek"/>
-            <sch:let name="CONDITION"
-                value="string-length(foo:checkDoelIdTPOD_2150(text())) > 0"/>
-            <sch:assert test="($APPLICABLE and $CONDITION) or not($APPLICABLE)"> 
-                {               
-                "code": "TPOD2150",
-                "ernst": "Blokkerend",
-                "DoelId": "<sch:value-of select="text()"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat aanwezig is in de bijbehorende Regeling in OP.",
-                "melding": "Betreft <sch:value-of select="name()"/>: <sch:value-of select="text()"/>"
-                },
-            </sch:assert>
-        </sch:rule>
+	    <sch:param name="CONDITION" value="string-length(foo:checkDoelIdTPOD_2150(text())) > 0"/>
+	    <sch:param name="context" value="//ow-manifest:DoelID"/>
+	    <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="nameidf" value="'id'"></sch:param>
+	    <sch:param name="regel" value="'Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat aanwezig is in de bijbehorende Regeling in OP.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+	    <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
     <xsl:function name="foo:checkDoelIdTPOD_2150">
