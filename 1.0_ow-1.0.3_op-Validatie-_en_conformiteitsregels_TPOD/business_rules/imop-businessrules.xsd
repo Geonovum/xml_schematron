@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+  targetNamespace="https://standaarden.overheid.nl/stop/imop/businessrules/" version="1.0.3"
+  xmlns:br="https://standaarden.overheid.nl/stop/imop/businessrules/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- TOEKENNING VAN SCHEMA AAN INSTANCES -->
+  <xs:element name="Schemata">
+    <xs:annotation>
+      <xs:documentation>Root-element: de lijst van schemakoppelingen aan XML-instances</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="br:versie" />
+        <xs:element maxOccurs="unbounded" name="Documenttype">
+          <xs:annotation>
+            <xs:documentation>Documenttype (root-element) van de XML-instance 
+              waarvan de validaties worden vastgelegd.</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:group ref="br:mgDocumenttype" />
+              <xs:element maxOccurs="1" minOccurs="1" ref="br:implementatie" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attributeGroup ref="br:agRoot" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="localName" type="xs:NCName">
+    <xs:annotation>
+      <xs:documentation>localName zonder namespace-prefix van het root-element</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="namespace" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>uitgeschreven namespace van het Root-element</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="implementatie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="br:Schema" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Schema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="br:type" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="br:locatie" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type" type="br:schematypes" />
+  <xs:simpleType name="schematypes">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="schematron" />
+      <xs:enumeration value="XML-schema" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="locatie" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>de volledige URL (https://standaarden.overheid.nl/...) 
+        van het XML-schema/schematron</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <!-- SPECIFICATIE VAN BUSINESS RULES -->
+  <xs:element name="BusinessRules">
+    <xs:annotation>
+      <xs:documentation>Root element: de container van de business rules</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" ref="br:versie" />
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="br:BusinessRuleGroep" />
+      </xs:sequence>
+      <xs:attributeGroup ref="br:agRoot" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="BusinessRuleGroep">
+    <xs:annotation>
+      <xs:documentation>groepering van business rules die voor één specifieke set van documenttypes gelden</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="0" ref="br:groepsnaam" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="br:id" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="br:geldtVoor" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="br:geldendeBusinessRules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="groepsnaam" type="xs:string" />
+  <xs:element name="id" type="br:idType" />
+
+  <xs:element name="geldtVoor">
+    <xs:annotation>
+      <xs:documentation>de documenttypes waarop de business rules van de groep van toepassing zijn</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="Documenttype">
+          <xs:complexType>
+            <xs:group ref="br:mgDocumenttype" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="br:soortRegeling" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="soortRegeling" type="xs:token" />
+
+  <xs:element name="geldendeBusinessRules">
+    <xs:annotation>
+      <xs:documentation>de business rules die gelden op de documenttypes van de groep</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="br:BusinessRule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="BusinessRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="br:code" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="br:ernst" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="br:regel" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="br:melding" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="br:documentatie" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="code" type="br:dtCode" />
+  <xs:element name="ernst" type="br:dtErnst" />
+  <xs:element name="regel" type="xs:string" />
+
+  <xs:element name="melding">
+    <xs:complexType mixed="true">
+      <xs:choice>
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="br:var" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="var">
+    <xs:complexType>
+      <xs:attribute name="naam" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="documentatie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="br:link" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="link">
+    <xs:complexType mixed="true">
+      <xs:attribute name="href" type="xs:anyURI" />
+    </xs:complexType>
+  </xs:element>
+
+  <!-- GENERIEK -->
+  <xs:element name="versie" type="xs:token" />
+
+  <xs:attributeGroup name="agRoot">
+    <xs:attribute name="schemaversie" use="required" />
+  </xs:attributeGroup>
+
+  <xs:group name="mgDocumenttype">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" ref="br:localName" />
+      <xs:element maxOccurs="1" minOccurs="1" ref="br:namespace" />
+    </xs:sequence>
+  </xs:group>
+
+  <xs:simpleType name="dtErnst">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="fout" />
+      <xs:enumeration value="waarschuwing" />
+      <xs:enumeration value="informatief" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="dtCode">
+    <xs:restriction base="xs:ID">
+      <xs:pattern value="[A-Z]{4}[0-9]{4,5}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="idType">
+    <xs:restriction base="xs:ID">
+      <xs:pattern value="\c+" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

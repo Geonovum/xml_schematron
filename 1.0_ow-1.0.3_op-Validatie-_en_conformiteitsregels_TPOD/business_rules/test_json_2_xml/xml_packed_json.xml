@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d>
+<data>{"code":"TPOD0001","eId": "list_o_1","regel": "Een Lijst van het type 'ongemarkeerd' MAG GEEN lijst-items met nummering of symbolen hebben","melding": "De Lijst met eId list_o_1 van type 'ongemarkeerd' heeft LiNummer-elementen met een nummering of symbolen, dit is niet toegestaan. Pas het type van de lijst aan of verwijder de LiNummer-elementen."}</data>
+<data>{"code":"TPOD0002","eId": "list_o_2","regel": "Een regeltje","melding": "De Lijst met eId list_o_2 van type 'whatever' heeft LiNummer-elementen met een nummering of symbolen, dit is niet toegestaan. Pas het type van de lijst aan of verwijder de LiNummer-elementen."}</data>
+</d>
