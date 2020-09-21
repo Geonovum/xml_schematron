@@ -10,11 +10,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>1.0_ow-1.0.3_op-Validatie-_en_conformiteitsregels_TPOD/business_rules/genereren_business-rules/Naamloos.xml</String>
+                                    <String>1.0_ow-1.0.3_op-Validatie-_en_conformiteitsregels_TPOD/business_rules/genereren_business-rules/GenereerBusinessRulesVanValidaties.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>test</String>
+                                        <String>GenereerBusinessRulesVanValidaties</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -25,11 +25,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>1.0_ow-1.0.3_op-Validatie-_en_conformiteitsregels_TPOD/business_rules/genereren_business-rules/GenereerBusinessRulesVanValidaties.xsl</String>
+                                    <String>1.0_ow-1.0.3_op-Validatie-_en_conformiteitsregels_TPOD/business_rules/genereren_business-rules/Naamloos.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>GenereerBusinessRulesVanValidaties</String>
+                                        <String>test</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -426,10 +426,10 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>file:/C:/Users/Default.DESKTOP-NDDI22K/Documents/Geonovum/github/xml_schematron/1.0_ow-1.0.3_op-Validatie-_en_conformiteitsregels_TPOD/business_rules/genereren_business-rules/GenereerBusinessRulesVanValidaties.xsl</String>
+                                    <String>${pdu}/1.0_ow-1.0.3_op-Validatie-_en_conformiteitsregels_TPOD/business_rules/genereren_business-rules/GenereerBusinessRulesVanValidaties.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
-                                    <String>file:/C:/Users/Default.DESKTOP-NDDI22K/Documents/Geonovum/github/xml_schematron/1.0_ow-1.0.3_op-Validatie-_en_conformiteitsregels_TPOD/business_rules/genereren_business-rules/GenereerBusinessRulesVanValidaties.sch</String>
+                                    <String>${pdu}/1.0_ow-1.0.3_op-Validatie-_en_conformiteitsregels_TPOD/business_rules/genereren_business-rules/GenereerBusinessRulesVanValidaties.xsl</String>
                                 </field>
                                 <field name="defaultScenario">
                                     <Boolean>false</Boolean>

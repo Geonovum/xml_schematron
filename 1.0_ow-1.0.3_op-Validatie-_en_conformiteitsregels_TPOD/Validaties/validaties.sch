@@ -82,9 +82,18 @@
     <sch:let name="RI" value="'/join/id/stop/regelingtype_011'"/>   <!-- Reactieve interventie -->
     
     <!-- Bussiness Rules Groups -->
-    <sch:let name="AMvB_MR" value="$SOORT_REGELING=$AMvB or $SOORT_REGELING=$MR"/>
-    <sch:let name="Omgevingsplan" value="$SOORT_REGELING=$OP"/>
-    <sch:let name="OP-implementatie-GemeentenEnWaterschappen" value="$SOORT_REGELING=$OP or $SOORT_REGELING=$WV"/>
+    <sch:let name="AMvB_MR_BRG" value="/regelingtype_001 /regelingtype_002"/>
+    <sch:let name="AMvB_MR" value="
+        $SOORT_REGELING=$AMvB or 
+        $SOORT_REGELING=$MR"/>
+    <sch:let name="Omgevingsplan_BRG" value="/regelingtype_003"/>
+    <sch:let name="Omgevingsplan" value="
+        $SOORT_REGELING=$OP"/>
+    <sch:let name="OP-implementatie-GemeentenEnWaterschappen_BRG" value="/regelingtype_003 /regelingtype_005"/>
+    <sch:let name="OP-implementatie-GemeentenEnWaterschappen" value="
+        $SOORT_REGELING=$OP or 
+        $SOORT_REGELING=$WV"/>
+    <sch:let name="OW-generiek_BRG" value="/regelingtype_001 /regelingtype_002 /regelingtype_003 /regelingtype_004 /regelingtype_005 /regelingtype_006 /regelingtype_007 /regelingtype_008 /regelingtype_009 /regelingtype_010 /regelingtype_011"/>
     <sch:let name="OW-generiek" value="
         $SOORT_REGELING=$AMvB or 
         $SOORT_REGELING=$MR or 
@@ -98,6 +107,7 @@
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
+    <sch:let name="OW-generiek_OZON_BRG" value="/regelingtype_001 /regelingtype_002 /regelingtype_003 /regelingtype_004 /regelingtype_005 /regelingtype_006 /regelingtype_007 /regelingtype_008 /regelingtype_009 /regelingtype_010 /regelingtype_011"/>
     <sch:let name="OW-generiek_OZON" value="
         $SOORT_REGELING=$AMvB or 
         $SOORT_REGELING=$MR or 
@@ -111,6 +121,7 @@
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
+    <sch:let name="OP-implementatie-generiek_BRG" value="/regelingtype_001 /regelingtype_002 /regelingtype_003 /regelingtype_004 /regelingtype_005 /regelingtype_006 /regelingtype_007 /regelingtype_008 /regelingtype_009 /regelingtype_010 /regelingtype_011"/>
     <sch:let name="OP-implementatie-generiek" value="
         $SOORT_REGELING=$AMvB or 
         $SOORT_REGELING=$MR or 
@@ -124,6 +135,7 @@
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
+    <sch:let name="OP-implementatie-niet-Rijk_BRG" value="/regelingtype_003 /regelingtype_004 /regelingtype_005 /regelingtype_006 /regelingtype_007 /regelingtype_008 /regelingtype_009 /regelingtype_010 /regelingtype_011"/>
     <sch:let name="OP-implementatie-niet-Rijk" value="
         $SOORT_REGELING=$OP or 
         $SOORT_REGELING=$OV or 
@@ -135,7 +147,10 @@
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
-    <sch:let name="OP-implementatie-Omgevingsverordening" value="$SOORT_REGELING=$OV"/>
+    <sch:let name="OP-implementatie-Omgevingsverordening_BRG" value="/regelingtype_004"/>
+    <sch:let name="OP-implementatie-Omgevingsverordening" value="
+        $SOORT_REGELING=$OV"/>
+    <sch:let name="OP-implementatie-regelstructuur_BRG" value="/regelingtype_001 /regelingtype_002 /regelingtype_003 /regelingtype_004 /regelingtype_005 /regelingtype_009"/>
     <sch:let name="OP-implementatie-regelstructuur" value="
         $SOORT_REGELING=$AMvB or 
         $SOORT_REGELING=$MR or 
@@ -144,6 +159,7 @@
         $SOORT_REGELING=$WV or 
         $SOORT_REGELING=$VR
         "/>
+    <sch:let name="Regelstructuur_BRG" value="/regelingtype_001 /regelingtype_002 /regelingtype_003 /regelingtype_004 /regelingtype_005 /regelingtype_009"/>
     <sch:let name="Regelstructuur" value="
         $SOORT_REGELING=$AMvB or 
         $SOORT_REGELING=$MR or 
@@ -152,6 +168,7 @@
         $SOORT_REGELING=$WV or 
         $SOORT_REGELING=$VR
         "/>
+    <sch:let name="Regelstructuur_OZON_BRG" value="/regelingtype_001 /regelingtype_002 /regelingtype_003 /regelingtype_004 /regelingtype_005 /regelingtype_009"/>
     <sch:let name="Regelstructuur_OZON" value="
         $SOORT_REGELING=$AMvB or 
         $SOORT_REGELING=$MR or 
@@ -160,6 +177,7 @@
         $SOORT_REGELING=$WV or 
         $SOORT_REGELING=$VR
         "/>
+    <sch:let name="Vrijetekststructuur_BRG" value="/regelingtype_006 /regelingtype_007 /regelingtype_008 /regelingtype_010 /regelingtype_011"/>
     <sch:let name="Vrijetekststructuur" value="
         $SOORT_REGELING=$OVi or
         $SOORT_REGELING=$PB or
@@ -167,14 +185,17 @@
         $SOORT_REGELING=$P or
         $SOORT_REGELING=$RI
         "/>
+    <sch:let name="Vrijetekststructuur_OZON_BRG" value="/regelingtype_006 /regelingtype_007 /regelingtype_008 /regelingtype_010 /regelingtype_011"/>
     <sch:let name="Vrijetekststructuur_OZON" value="
-        $SOORT_REGELING=$OVi or
         $SOORT_REGELING=$PB or
         $SOORT_REGELING=$I or
         $SOORT_REGELING=$P or
-        $SOORT_REGELING=$RI
+        $SOORT_REGELING=$RI or
+        $SOORT_REGELING=$OVi
         "/>
-    <sch:let name="Waterschapsverordening" value="$SOORT_REGELING=$WV"/>
+    <sch:let name="Waterschapsverordening_BRG" value="/regelingtype_005"/>
+    <sch:let name="Waterschapsverordening" value="
+        $SOORT_REGELING=$WV"/>
     
     <!-- ============TPOD_0410================================================================================================================ -->
     
@@ -2748,8 +2769,44 @@
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
-    <sch:include href="abstract_pattern_error.sch"/>
-    <sch:include href="abstract_pattern_warning.sch"/>
+    <!-- ============ABSTRACT PATTERN================================================================================================================ -->
     
+    <sch:pattern id="abstractPatternError" abstract="true">
+        <sch:rule context="$context">
+            <sch:assert test="($businessRuleGroup and $CONDITION) or not($businessRuleGroup)" role="error"> 
+                { 
+                "code": "<sch:value-of
+                    select="$code"/>", 
+                "ernst": "Blokkerend", 
+                "<sch:value-of
+                    select="$nameidf"/>": "<sch:value-of select="$idf"/>", 
+                "bestandsnaam":
+                "<sch:value-of select="base-uri(.)"/>", 
+                "regel": "<sch:value-of select="$regel"/>",
+                "melding": "Dit is niet het geval bij <sch:value-of select="$nameidf"/>: <sch:value-of select="$idf"/><sch:value-of select="$melding"/>",
+                "waarschuwing":  "<sch:value-of select="$waarschuwing"/>"           
+                }, 
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+
+    <sch:pattern id="abstractPatternWarning" abstract="true">
+        <sch:rule context="$context">
+            <sch:assert test="($businessRuleGroup and $CONDITION) or not($businessRuleGroup)" role="warning"> 
+                { 
+                "code": "<sch:value-of
+                    select="$code"/>", 
+                "ernst": "Waarschuwing", 
+                "<sch:value-of
+                    select="$nameidf"/>": "<sch:value-of select="$idf"/>", 
+                "bestandsnaam":
+                "<sch:value-of select="base-uri(.)"/>", 
+                "regel": "<sch:value-of select="$regel"/>",
+                "melding": "Dit is niet het geval bij <sch:value-of select="$nameidf"/>: <sch:value-of select="$idf"/><sch:value-of select="$melding"/>",
+                "waarschuwing":  "<sch:value-of select="$waarschuwing"/>"           
+                }, 
+            </sch:assert>
+        </sch:rule>
+    </sch:pattern>
     
 </sch:schema>

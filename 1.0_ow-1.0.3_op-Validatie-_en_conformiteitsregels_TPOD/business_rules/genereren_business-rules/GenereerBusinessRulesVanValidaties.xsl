@@ -2,11 +2,12 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     exclude-result-prefixes="xs" version="2.0">
     <xsl:output indent="yes"/>
 
     <xsl:variable name="validaties" select="document('validaties.sch')"/>
-    <xsl:variable name="vars" select="$validaties/*/xsl:variable" />
+    <xsl:variable name="vars" select="$validaties/*/sch:let" />
     
     <xsl:template name="makeIndex">
         <xsl:param name="pText"/>
@@ -30,12 +31,12 @@
             <xsl:for-each-group select="$validaties/sch:schema/sch:pattern"
                 group-by="sch:param[@name eq 'businessRuleGroup']/@value" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
                 <!--  name="{substring(current-grouping-key(),2)} -->
-                <xsl:element name="businessRuleGroup">
+                <xsl:element name="BusinessRuleGroup">
                     <xsl:variable name="id" select="substring(current-grouping-key(), 2)"/>
                     <xsl:element name="groepsnaam"><xsl:value-of select="translate(substring(current-grouping-key(), 2),'_','/')"/></xsl:element>
                     <xsl:element name="id"><xsl:value-of select="$id"/></xsl:element>
                     <xsl:variable name="arrayName" select="concat($id,'_BRG')"/>
-                    <xsl:variable name="array" select="$vars[@name = $arrayName]/@select"/>
+                    <xsl:variable name="array" select="$vars[@name = $arrayName]/@value"/>
                     <xsl:variable name="vrtfDoc">
                         <xsl:call-template name="makeIndex">
                             <xsl:with-param name="pText" select="$array"/>
@@ -62,6 +63,9 @@
                                             <xsl:value-of select="'fout'"/>
                                         </xsl:otherwise>
                                     </xsl:choose>
+                                </xsl:element>
+                                <xsl:element name="regel">
+                                    <xsl:value-of select="string(sch:param[@name eq 'regel']/@value)"/>
                                 </xsl:element>
                             </xsl:element>
                         </xsl:for-each>
