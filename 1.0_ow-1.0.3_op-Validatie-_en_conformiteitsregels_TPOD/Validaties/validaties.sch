@@ -197,6 +197,28 @@
     <sch:let name="Waterschapsverordening" value="
         $SOORT_REGELING=$WV"/>
     
+    <!-- ============TEMP================= -->
+    
+    <sch:pattern id="TEMP_1">
+        <sch:rule context="/">
+        <sch:assert test="false()">
+            Verwachte foutmelding
+        </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <sch:pattern id="TEMP_2" is-a="abstractPatternWarning">
+        <sch:param name="code" value="'TEMP2'"/>
+        <sch:param name="businessRuleGroup" value="true()"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="/"/>
+        <sch:param name="idf" value="string('abc-123d')"></sch:param>
+        <sch:param name="nameidf" value="'eId'"></sch:param>
+        <sch:param name="regel" value="'Temp'"></sch:param>
+        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
+    </sch:pattern>
+        
+    
     <!-- ============TPOD_0410================================================================================================================ -->
     
     <sch:pattern id="TPOD_0410" is-a="abstractPatternWarning">
@@ -204,7 +226,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Kop[tekst:Label ne 'Hoofdstuk']"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -217,7 +239,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
         <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -239,7 +261,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//tekst:Titel/tekst:Kop[tekst:Label ne 'Titel']"/>
-        <sch:param name="idf" value="../@eId"/>
+        <sch:param name="idf" value="string(../@eId)"/>
         <sch:param name="nameidf" value="'eId'"/>
         <sch:param name="regel" value="'Een Titel moet worden geduid met het label Titel.'"/>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -252,7 +274,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:foutenTPOD_0470(.)[1]) = 0"/>
         <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Titel"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -274,7 +296,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0480(.)[1]) = 0"/>
         <sch:param name="context" value="//tekst:Titel"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Titels moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -296,7 +318,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
         <sch:param name="context" value="//tekst:Titel"/>
-        <sch:param name="idf" value="@eId"/>
+        <sch:param name="idf" value="string(@eId)"/>
         <sch:param name="nameidf" value="'eId'"/>
         <sch:param name="regel" value="'Achter het cijfer van een titelnummer mag geen punt worden opgenomen.'"/>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -309,7 +331,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//tekst:Afdeling/tekst:Kop[tekst:Label ne 'Afdeling']"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -322,7 +344,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0520(.)) = 0"/>
         <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Titel/tekst:Afdeling"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -344,7 +366,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0530(.)) = 0"/>
         <sch:param name="context" value="//tekst:Afdeling"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Afdelingen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -367,7 +389,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
         <sch:param name="context" value="//tekst:Afdeling"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Achter het laatste cijfer van een Afdelingnummer mag geen punt worden opgenomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -380,7 +402,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0560(.)) = 0"/>
         <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Afdeling"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -402,7 +424,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//tekst:Paragraaf/tekst:Kop[(lower-case(tekst:Label) ne '§') and (tekst:Label ne 'Paragraaf')]"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -415,7 +437,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0580(.)[1]) = 0"/>
         <sch:param name="context" value="//tekst:Afdeling/tekst:Paragraaf"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin de Paragraaf voorkomt, gevolgd door een punt.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -437,7 +459,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0590(.)) = 0"/>
         <sch:param name="context" value="//tekst:Paragraaf"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Paragrafen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -459,7 +481,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
         <sch:param name="context" value="//tekst:Paragraaf"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -472,7 +494,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//tekst:Paragraaf/tekst:Subparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'subparagraaf']"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Subparagraaf moet worden geduid met de label Subparagraaf.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -485,7 +507,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0630(tekst:Kop/tekst:Nummer/text(), .)) = 0"/>
         <sch:param name="context" value="//tekst:Afdeling/tekst:Paragraaf"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'De nummering van Subparagrafen begint met het samengestelde nummer van de Paragraaf waarin de Subparagraaf voorkomt, gevolgd door een punt.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -511,7 +533,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0640(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
         <sch:param name="context" value="//tekst:Afdeling/tekst:Paragraaf"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Subparagrafen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -537,7 +559,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
         <sch:param name="context" value="//tekst:Subparagraaf"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Achter het laatste cijfer van een Subparagraafnummer mag geen punt worden opgenomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -550,7 +572,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//tekst:Subparagraaf/tekst:Subsubparagraaf/tekst:Kop[lower-case(tekst:Label) ne 'subsubparagraaf']"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -563,7 +585,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0680(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
         <sch:param name="context" value="//tekst:Paragraaf/tekst:Subparagraaf"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'De nummering van Subsubparagrafen begint met het samengestelde nummer van de Subparagraaf waarin de Subsubparagraaf voorkomt, gevolgd door een punt.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -589,7 +611,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0690(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
         <sch:param name="context" value="//tekst:Paragraaf/tekst:Subparagraaf"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -615,7 +637,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
         <sch:param name="context" value="//tekst:Subsubparagraaf"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -628,7 +650,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//tekst:Artikel/tekst:Kop[lower-case(tekst:Label) ne 'artikel']"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Artikel moet worden geduid met de label Artikel.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -641,7 +663,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0730(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
         <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -687,7 +709,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0740(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
         <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Artikelnummers moeten oplopend worden genummerd in Arabische cijfers.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -714,7 +736,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
         <sch:param name="CONDITION" value="string-length(foo:bevatGeletterdeNummersTPOD_0741(string(tekst:Kop/tekst:Nummer), .)) = 0"/>
         <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'De nummering van Artikelen bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -725,7 +747,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0741(string(tekst:Kop/tekst:Nummer), foo:bevatGeletterdeNummersTPOD_0741(string(tekst:Kop/tekst:Nummer), .), .)) = 0"/>
         <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in Arabische cijfers inclusief indien nodig een letter.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -809,7 +831,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="not(ends-with(string(tekst:Kop/tekst:Nummer), '.'))"/>
         <sch:param name="context" value="//tekst:Artikel"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -822,7 +844,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
         <sch:param name="CONDITION" value="string-length(foo:bevatGeletterdeNummersTPOD_0780(.)) = 0"/>
         <sch:param name="context" value="//tekst:Lid"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -833,7 +855,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0780(foo:bevatGeletterdeNummersTPOD_0780(.),.)) = 0"/>
         <sch:param name="context" value="//tekst:Lid"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -891,7 +913,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
         <sch:param name="CONDITION" value="string-length(foo:bevatGeletterdeNummersTPOD_0781(.)) = 0"/>
         <sch:param name="context" value="//tekst:Lid"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -902,7 +924,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0781(foo:bevatGeletterdeNummersTPOD_0781(.),.)) = 0"/>
         <sch:param name="context" value="//tekst:Lid"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -960,7 +982,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0790(.)) = 0"/>
         <sch:param name="context" value="//tekst:Lid"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Het eerste lid van ieder artikel krijgt het nummer 1'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1000,7 +1022,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="ends-with(string(tekst:LidNummer),'.')"/>
         <sch:param name="context" value="//tekst:Lid"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Achter het lidnummer moet een punt worden opgenomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1013,7 +1035,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
         <sch:param name="CONDITION" value="name(*[1])='Lijstaanhef'"/>
         <sch:param name="context" value="//tekst:Lijst"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Lijst wordt altijd voorafgegaan door een inleidende tekst, oftewel de Lijstaanhef.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1026,7 +1048,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="count(ancestor-or-self::tekst:Lijst)&lt;4"/>
         <sch:param name="context" value="//tekst:Lijst"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Lijsten mogen in ten hoogste drie niveaus gebruikt worden.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1040,7 +1062,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
         <sch:param name="CONDITION" value="string-length(foo:checkEersteNiveauLijstLettersTPOD_0830(.)[1]) = 0"/>
         <sch:param name="context" value="//tekst:Lijst"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'De onderdelen van de Lijst op het eerste niveau moeten worden aangegeven met letters.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1065,7 +1087,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
         <sch:param name="CONDITION" value="true()"/>
         <sch:param name="context" value="//tekst:Lijst"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Het teken voor een Lijstitem mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1090,7 +1112,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
         <sch:param name="CONDITION" value="string-length(foo:checkTweedeNiveauLijstCijfersTPOD_0840(.)[1]) = 0"/>
         <sch:param name="context" value="//tekst:Lijst"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'De onderdelen van de Lijst op het tweede niveau moeten worden aangegeven met Arabische cijfers.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1115,7 +1137,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
         <sch:param name="CONDITION" value="true()"/>
         <sch:param name="context" value="//tekst:Lijst"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Het teken voor een Lijstitem op het tweede niveau mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1140,7 +1162,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-GemeentenEnWaterschappen"/>
         <sch:param name="CONDITION" value="string-length(foo:checkDerdeNiveauLijstCijfersTPOD_0850(.)[1]) = 0"/>
         <sch:param name="context" value="//tekst:Lijst"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'De onderdelen van de Lijst op het derde niveau moeten worden aangegeven met Arabische cijfers.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1165,7 +1187,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-Omgevingsverordening"/>
         <sch:param name="CONDITION" value="true()"/>
         <sch:param name="context" value="//tekst:Lijst"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Het teken voor een Lijstitem op het derde niveau mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1190,7 +1212,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="((tekst:Label/text() = 'Hoofdstuk') and (lower-case(tekst:Opschrift/text()) = 'algemene bepalingen'))"/>
         <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Kop[string(tekst:Nummer) = '1']"/>
-        <sch:param name="idf" value="../@eId"></sch:param>
+        <sch:param name="idf" value="string(../@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Hoofdstuk 1 heeft het Opschrift Algemene bepalingen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1203,7 +1225,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:aantalTPOD_0930_28992(.)) = 0"/>
         <sch:param name="context" value="//basisgeo:geometrie"/>
-        <sch:param name="idf" value="../basisgeo:id"></sch:param>
+        <sch:param name="idf" value="string(../basisgeo:id)"></sch:param>
         <sch:param name="nameidf" value="'id'"></sch:param>
         <sch:param name="regel" value="'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten.'"></sch:param>
         <sch:param name="melding" value="concat(': ',foo:aantalTPOD_0930_28992(.))"/>
@@ -1216,30 +1238,11 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:aantalTPOD_0930_4258(.)) = 0"/>
         <sch:param name="context" value="//basisgeo:geometrie"/>
-        <sch:param name="idf" value="../basisgeo:id"></sch:param>
+        <sch:param name="idf" value="string(../basisgeo:id)"></sch:param>
         <sch:param name="nameidf" value="'id'"></sch:param>
         <sch:param name="regel" value="'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.'"></sch:param>
         <sch:param name="melding" value="concat(': ',foo:aantalTPOD_0930_4258(.))"/>
         <sch:param name="waarschuwing" value="''"/>
-    </sch:pattern>
-    
-    <sch:pattern id="TPOD_0930_4258">
-        <sch:rule context="//basisgeo:geometrie">
-            <sch:let name="APPLICABLE" value="true()"/>
-            <sch:let name="fout" value="foo:aantalTPOD_0930_4258(.)"/>
-            <sch:let name="CONDITION" value="string-length($fout) = 0"/>
-            <sch:let name="ASSERT" value="($APPLICABLE and $CONDITION) or not($APPLICABLE)"/>
-            <sch:assert test="$ASSERT">
-                {               
-                "code": "TPOD0930",
-                "ernst": "Blokkerend",
-                "id": "<sch:value-of select="../basisgeo:id"/>",
-                "bestandsnaam": "<sch:value-of select="base-uri(.)"/>",
-                "regel": "Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten. Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.",
-                "melding": "<sch:value-of select="$fout"/>"
-                },
-            </sch:assert>
-        </sch:rule>
     </sch:pattern>
     
     <xsl:function name="foo:aantalTPOD_0930_28992">
@@ -1305,7 +1308,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:crssesTPOD_0940(foo:crsTPOD_0940(.), .)) = 0"/>
         <sch:param name="context" value="//basisgeo:geometrie"/>
-        <sch:param name="idf" value="../basisgeo:id"></sch:param>
+        <sch:param name="idf" value="string(../basisgeo:id)"></sch:param>
         <sch:param name="nameidf" value="'id'"></sch:param>
         <sch:param name="regel" value="'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs)'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1343,7 +1346,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:opschriftTPOD0980(.)[1]) &gt; 0"/>
         <sch:param name="context" value="//tekst:Hoofdstuk[tekst:Kop/tekst:Nummer/text() eq '1']"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Hoofdstuk 1 moet een artikel &quot;begripsbepalingen&quot; bevatten.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1365,7 +1368,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="count(tekst:Term)=1 and count(tekst:Definitie)=1"/>
         <sch:param name="context" value="//tekst:Begrip"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Begrip moet bestaan uit één term en één definitie.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1379,7 +1382,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:checkBegripTPOD1010(.)) = 0"/>
         <sch:param name="context" value="//tekst:Begrippenlijst"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Begriplijst moet gesorteerd zijn.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1410,7 +1413,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//tekst:Begrippenlijst[tekst:Begrip/tekst:LiNummer]"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Begrippen mogen niet worden genummerd.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1423,7 +1426,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="tekst:Inhoud/tekst:Begrippenlijst/tekst:Begrip/tekst:LiNummer"/>
         <sch:param name="context" value="//tekst:Artikel[tekst:Kop/tekst:Opschrift/text() eq 'Meet- en rekenbepalingen']"/>
-        <sch:param name="idf" value="@eId"></sch:param>
+        <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Meet- en rekenbepalingen mogen niet worden genummerd.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1436,7 +1439,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid']"/>
-        <sch:param name="idf" value="../l:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../l:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van &quot;meter&quot; gekozen te worden.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1459,7 +1462,7 @@
             (rol:kwantitatieveWaarde and rol:waardeInRegeltekst and rol:kwalitatieveWaarde))
             "/>
         <sch:param name="context" value="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde/rol:Normwaarde"/>
-        <sch:param name="idf" value="../../rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../../rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Het attribuut &quot;normwaarde&quot; moet bestaan uit één van de drie mogelijke attributen: &quot;kwalitatieveWaarde&quot; òf &quot;kwantitatieveWaarde&quot; òf &quot;waardeInRegeltekst&quot;'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1472,7 +1475,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
         <sch:param name="CONDITION" value="not(contains(foo:run1700(rol:identificatie/text(), string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href), foo:activiteitenLijstTPOD_1700()), ','))"/>
         <sch:param name="context" value="//rol:Activiteit"/>
-        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de functionele structuur.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1540,7 +1543,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
         <sch:param name="CONDITION" value="string-length(foo:circulaireActivititeitenTPOD_1710(., foo:activiteitenLijstTPOD_1710())) = 0"/>
         <sch:param name="context" value="//rol:Activiteit"/>
-        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Een bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1607,7 +1610,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
         <sch:param name="CONDITION" value="contains(foo:activiteitenLijstTPOD_1730(), rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href)"/>
         <sch:param name="context" value="//rol:Activiteit"/>
-        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1631,7 +1634,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
         <sch:param name="CONDITION" value="contains(foo:activiteitenLijstTPOD_1740(), string(rol:bovenliggendeActiviteit/rol:ActiviteitRef/@xlink:href))"/>
         <sch:param name="context" value="//rol:Activiteit"/>
-        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1655,7 +1658,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
         <sch:param name="CONDITION" value="not(foo:activiteitenGebiedenTPOD_1750(rol:identificatie/text()) = 'false')"/>
         <sch:param name="context" value="//rol:Activiteit"/>
-        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn).'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1706,7 +1709,7 @@
             contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')
             "/>
         <sch:param name="context" value="//ga:Gebiedsaanwijzing"/>
-        <sch:param name="idf" value="ga:identificatie"></sch:param>
+        <sch:param name="idf" value="string(ga:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt, puntengroep, lijn of lijnengroep zijn).'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1720,7 +1723,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//ga:Gebiedsaanwijzing"/>
-        <sch:param name="idf" value="ga:identificatie"></sch:param>
+        <sch:param name="idf" value="string(ga:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Binnen het object &quot;Gebiedsaanwijzing&quot; moeten de waarden van de attributen &quot;groep&quot; (datatype &quot;Gebiedsaanwijzinggroep&quot;) hiërarchisch vallen onder het &quot;type&quot; (datatype &quot;TypeGebiedsaanwijzing&quot;).'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1734,7 +1737,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
         <sch:param name="CONDITION" value="count(//tekst:Hoofdstuk/descendant::tekst:Artikel) &gt; 0"/>
         <sch:param name="context" value="//aanlevering:AanleveringBesluit"/>
-        <sch:param name="idf" value="'n.v.t.'"></sch:param>
+        <sch:param name="idf" value="string('n.v.t.')"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1747,7 +1750,7 @@
         <sch:param name="businessRuleGroup" value="$Omgevingsplan"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//r:Instructieregel"/>
-        <sch:param name="idf" value="r:artikelOfLid/r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="idf" value="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Het IMOW-object &quot;Instructieregel&quot; is niet van toepassing (voor Omgevingsplan).'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1761,7 +1764,7 @@
         <sch:param name="businessRuleGroup" value="$AMvB_MR"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie']"/>
-        <sch:param name="idf" value="ga:identificatie"></sch:param>
+        <sch:param name="idf" value="string(ga:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘functie’ van attribuut ‘type’ (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR)'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -1774,7 +1777,7 @@
         <sch:param name="businessRuleGroup" value="$AMvB_MR"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']"/>
-        <sch:param name="idf" value="ga:identificatie"></sch:param>
+        <sch:param name="idf" value="string(ga:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Binnen het object ‘Gebiedsaanwijzing’ is de waarde &quot;beperkingengebied&quot; van attribuut &quot;type&quot; (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR).'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1788,7 +1791,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-regelstructuur"/>
         <sch:param name="CONDITION" value="string-length(foo:CheckFouteConstructiesTPOD_1850(.))=0"/>
         <sch:param name="context" value="//r:Regeltekst"/>
-        <sch:param name="idf" value="r:identificatie"></sch:param>
+        <sch:param name="idf" value="string(r:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1814,7 +1817,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
         <sch:param name="CONDITION" value="not(r:gerelateerdeRegeltekst/r:RegeltekstRef/@xlink:href eq r:identificatie)"/>
         <sch:param name="context" value="//r:Regeltekst"/>
-        <sch:param name="idf" value="r:identificatie"></sch:param>
+        <sch:param name="idf" value="string(r:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1826,7 +1829,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
         <sch:param name="CONDITION" value="not(rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
         <sch:param name="context" value="//rol:Activiteit"/>
-        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1838,7 +1841,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
         <sch:param name="CONDITION" value="contains(foo:getIdentifiersTPOD_1860($xmlDocuments//r:Regeltekst/r:identificatie), concat('.',string(@xlink:href),'.'))"/>
         <sch:param name="context" value="//r:artikelOfLid/r:RegeltekstRef"/>
-        <sch:param name="idf" value="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="idf" value="string(../../r:artikelOfLid/r:RegeltekstRef/@xlink:href)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1850,7 +1853,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
         <sch:param name="CONDITION" value="contains(foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie), concat('.',string(@xlink:href),'.'))"/>
         <sch:param name="context" value="//r:RegelVoorIedereen/r:activiteitaanduiding/rol:ActiviteitRef"/>
-        <sch:param name="idf" value="../../r:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../../r:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
         <sch:param name="melding" value="concat(': ',string(@xlink:href))"/>         
@@ -1862,7 +1865,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
         <sch:param name="CONDITION" value="contains(foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Omgevingsnorm/rol:identificatie), concat('.',string(@xlink:href),'.'))"/>
         <sch:param name="context" value="//r:omgevingsnormaanduiding/rol:OmgevingsnormRef"/>
-        <sch:param name="idf" value="../../r:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../../r:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
         <sch:param name="melding" value="concat(': ',string(@xlink:href))"/>         
@@ -1874,7 +1877,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
         <sch:param name="CONDITION" value="contains(foo:getIdentifiersTPOD_1860($xmlDocuments//ga:Gebiedsaanwijzing/ga:identificatie), concat('.',string(@xlink:href),'.'))"/>
         <sch:param name="context" value="//r:gebiedsaanwijzing/ga:GebiedsaanwijzingRef"/>
-        <sch:param name="idf" value="../../r:artikelOfLid/r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="idf" value="string(../../r:artikelOfLid/r:RegeltekstRef/@xlink:href)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
         <sch:param name="melding" value="concat(': ',string(@xlink:href))"/>
@@ -1886,7 +1889,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
         <sch:param name="CONDITION" value="contains(foo:getIdentifiersTPOD_1860($xmlDocuments//rol:Activiteit/rol:identificatie), concat('.',string(@xlink:href),'.'))"/>
         <sch:param name="context" value="//rol:gerelateerdeActiviteit/rol:ActiviteitRef"/>
-        <sch:param name="idf" value="../../rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../../rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
         <sch:param name="melding" value="concat(': ',string(@xlink:href))"/>
@@ -1898,7 +1901,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
         <sch:param name="CONDITION" value="contains(foo:getLocationIdentifiersTPOD_1860(), concat('.',string(@xlink:href),'.'))"/>
         <sch:param name="context" value="//l:LocatieRef | l:GebiedRef | l:GebiedengroepRef | l:PuntRef | l:PuntengroepRef | l:LijnengroepRef | l:LijnRef"/>
-        <sch:param name="idf" value="../../*:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../../*:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
         <sch:param name="melding" value="concat(': ',string(@xlink:href))"/>         
@@ -1932,7 +1935,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
         <sch:param name="CONDITION" value="contains(foo:getRegelTekstIdentifiersTPOD_1870(), concat('.',r:RegeltekstRef/@xlink:href,'.'))"/>
         <sch:param name="context" value="//r:artikelOfLid"/>
-        <sch:param name="idf" value="r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="idf" value="string(r:RegeltekstRef/@xlink:href)"></sch:param>
         <sch:param name="nameidf" value="'RegeltekstRef'"></sch:param>
         <sch:param name="regel" value="'Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1955,7 +1958,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="not($Waterschapsverordening)"/>
         <sch:param name="context" value="//(rol:Omgevingswaarde|r:Omgevingswaarderegel)"/>
-        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'De IMOW-objecten &quot;Omgevingswaarde$=&quot; zijn niet van toepassing op de Waterschapsverordening.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -1969,7 +1972,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="contains(text(), concat('.', foo:CheckFouteIdentifierTPOD_1890(.), '.'))"/>
         <sch:param name="context" value="//*:identificatie"/>
-        <sch:param name="idf" value="."></sch:param>
+        <sch:param name="idf" value="string(.)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.'"></sch:param>
         <sch:param name="melding" value="concat(': ', local-name(..))"/>         
@@ -2001,7 +2004,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="contains(foo:owObjectenLijstTPOD_1910(.), concat('.',text(),'.'))"/>
         <sch:param name="context" value="//sl:objectTypen/sl:objectType"/>
-        <sch:param name="idf" value="."></sch:param>
+        <sch:param name="idf" value="string(.)"></sch:param>
         <sch:param name="nameidf" value="'objectType'"></sch:param>
         <sch:param name="regel" value="'De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2025,7 +2028,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:notfoundFileOrObjectTypeTPOD_1920(ow-manifest:naam,.)) = 0"/>
         <sch:param name="context" value="/ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand"/>
-        <sch:param name="idf" value="concat(ow-manifest:objecttype,': ',ow-manifest:naam)"></sch:param>
+        <sch:param name="idf" value="string(concat(ow-manifest:objecttype,': ',ow-manifest:naam))"></sch:param>
         <sch:param name="nameidf" value="'objecttype'"></sch:param>
         <sch:param name="regel" value="'De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het betreffende Ow-bestand.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2064,7 +2067,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:notFoundTPOD_1930(.)) = 0"/>
         <sch:param name="context" value="//l:Gebiedengroep/l:groepselement"/>
-        <sch:param name="idf" value="../l:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../l:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een OwObject in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2102,7 +2105,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:notFoundTPOD_1940(.)) = 0"/>
         <sch:param name="context" value="//l:Puntengroep/l:groepselement"/>
-        <sch:param name="idf" value="../l:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../l:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -2139,7 +2142,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:notFoundTPOD_1950(.)) = 0"/>
         <sch:param name="context" value="//l:Lijnengroep/l:groepselement"/>
-        <sch:param name="idf" value="../l:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../l:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2177,7 +2180,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="foo:testGeometrie_1960(.)"/>
         <sch:param name="context" value="//l:Lijn/l:geometrie/l:GeometrieRef"/>
-        <sch:param name="idf" value="../../l:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../../l:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn.'"></sch:param>
         <sch:param name="melding" value="concat(', ',@xlink:href)"/>         
@@ -2215,7 +2218,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="foo:testGeometrie_1970(.)"/>
         <sch:param name="context" value="//l:Punt/l:geometrie/l:GeometrieRef"/>
-        <sch:param name="idf" value="../../l:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../../l:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.'"></sch:param>
         <sch:param name="melding" value="concat(', ',@xlink:href)"/>         
@@ -2253,7 +2256,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="foo:calculateConditionTPOD_1980(string(@xlink:href)) = 1"/>
         <sch:param name="context" value="//l:Gebied/l:geometrie/l:GeometrieRef"/>
-        <sch:param name="idf" value="../../l:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../../l:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.'"></sch:param>
         <sch:param name="melding" value="concat(', ',@xlink:href)"/>
@@ -2285,7 +2288,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
         <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeGeometrieTPOD_1990(foo:getLocationGeoReferenceIdentifiersTPOD_1990(), .)) = 0"/>
         <sch:param name="context" value="//basisgeo:Geometrie"/>
-        <sch:param name="idf" value="basisgeo:id/text()"></sch:param>
+        <sch:param name="idf" value="string(basisgeo:id/text())"></sch:param>
         <sch:param name="nameidf" value="'id'"></sch:param>
         <sch:param name="regel" value="'Iedere Geometrie heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2297,7 +2300,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
         <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .)) = 0"/>
         <sch:param name="context" value="//r:Regeltekst/r:identificatie"/>
-        <sch:param name="idf" value="substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .))-2)"></sch:param>
+        <sch:param name="idf" value="string(substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//r:RegeltekstRef), .))-2))"></sch:param>
         <sch:param name="nameidf" value="'id'"></sch:param>
         <sch:param name="regel" value="'Iedere Regeltekst heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
         <sch:param name="melding" value="''"/>
@@ -2309,7 +2312,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
         <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .)) = 0"/>
         <sch:param name="context" value="//(vt:Divisie|vt:Hoofdlijn)/vt:identificatie"/>
-        <sch:param name="idf" value="substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .))-2)"></sch:param>
+        <sch:param name="idf" value="string(substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//(vt:DivisieRef|vt:HoofdlijnRef)), .))-2))"></sch:param>
         <sch:param name="nameidf" value="'id'"></sch:param>
         <sch:param name="regel" value="'Iedere Divisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
         <sch:param name="melding" value="''"/>        
@@ -2321,7 +2324,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
         <sch:param name="CONDITION" value="string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .)) = 0"/>
         <sch:param name="context" value="//rol:Activiteit/rol:identificatie"/>
-        <sch:param name="idf" value="substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .))-2)"></sch:param>
+        <sch:param name="idf" value="string(substring(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .),1,string-length(foo:nietGerefereerdeReferentiesTPOD_1990(foo:getReferencesTPOD_1990($xmlDocuments//rol:ActiviteitRef), .))-2))"></sch:param>
         <sch:param name="nameidf" value="'id'"></sch:param>
         <sch:param name="regel" value="'Iedere Activiteit-aanduiding heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
         <sch:param name="melding" value="''"/>
@@ -2333,7 +2336,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur_OZON"/>
         <sch:param name="CONDITION" value="string-length(foo:getLocationReferenceIdentifiersTPOD_1990(text())) > 0"/>
         <sch:param name="context" value="//l:identificatie"/>
-        <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="idf" value="string(text())"></sch:param>
         <sch:param name="nameidf" value="'id'"></sch:param>
         <sch:param name="regel" value="'Iedere Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst.'"></sch:param>
         <sch:param name="melding" value="''"/>
@@ -2399,7 +2402,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
         <sch:param name="CONDITION" value="string-length(foo:checkWIdTPOD_2000(@wId)) > 0"/>
         <sch:param name="context" value="//r:Regeltekst"/>
-        <sch:param name="idf" value="@wId"></sch:param>
+        <sch:param name="idf" value="string(@wId)"></sch:param>
         <sch:param name="nameidf" value="'wId'"></sch:param>
         <sch:param name="regel" value="'Het wId van de Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2422,7 +2425,7 @@
         <sch:param name="businessRuleGroup" value="$Vrijetekststructuur_OZON"/>
         <sch:param name="CONDITION" value="string-length(foo:checkWIdTPOD_2040(@wId)) > 0"/>
         <sch:param name="context" value="//vt:Divisie"/>
-        <sch:param name="idf" value="@wId"></sch:param>
+        <sch:param name="idf" value="string(@wId)"></sch:param>
         <sch:param name="nameidf" value="'wId'"></sch:param>
         <sch:param name="regel" value="'Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een Divisie in OP.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2445,7 +2448,7 @@
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:existsTPOD_2050()) = 0"/>
         <sch:param name="context" value="//aanlevering:AanleveringBesluit"/>
-        <sch:param name="idf" value="foo:existsTPOD_2050()"></sch:param>
+        <sch:param name="idf" value="string(foo:existsTPOD_2050())"></sch:param>
         <sch:param name="nameidf" value="'resultaat'"></sch:param>
         <sch:param name="regel" value="'Controleren of het manifest-ow en het manifest bestaan, en de bestanden benoemd in de manifest-bestanden aanwezig zijn.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -2489,7 +2492,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
         <sch:param name="CONDITION" value="string-length(foo:checkFouteArtikelLidCombinatieTPOD_2060(.)) = 0"/>
         <sch:param name="context" value="//tekst:Artikel"/>
-        <sch:param name="idf" value="@wId"></sch:param>
+        <sch:param name="idf" value="string(@wId)"></sch:param>
         <sch:param name="nameidf" value="'wId'"></sch:param>
         <sch:param name="regel" value="'Als er een Regeltekst van een Lid is gemaakt mag er geen Regeltekst meer gemaakt worden van het Artikel dat boven dit Lid hangt.'"></sch:param>
         <sch:param name="melding" value="concat(': ',foo:checkFouteArtikelLidCombinatieTPOD_2060(.))"/>         
@@ -2544,7 +2547,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
         <sch:param name="CONDITION" value="(r:instructieregelTaakuitoefening or r:instructieregelInstrument) and not(r:instructieregelTaakuitoefening and r:instructieregelInstrument) and not(not(r:instructieregelTaakuitoefening) and not(r:instructieregelInstrument))"/>
         <sch:param name="context" value="//r:Instructieregel"/>
-        <sch:param name="idf" value="r:artikelOfLid/r:RegeltekstRef/@xlink:href"></sch:param>
+        <sch:param name="idf" value="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"></sch:param>
         <sch:param name="nameidf" value="'id'"></sch:param>
         <sch:param name="regel" value="'Binnen een instructieregel dient er gekozen te worden tussen InstructieregelInstrument of InstructieregelTaakuitoefening (één van de twee moet voorkomen).'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2561,7 +2564,7 @@
             or count(rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde)=count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst)) 
             or count(rol:normwaarde/rol:Normwaarde/rol:waardeInRegeltekst)=count(rol:normwaarde/rol:Normwaarde/(rol:kwalitatieveWaarde|rol:kwantitatieveWaarde|rol:waardeInRegeltekst))"/>
         <sch:param name="context" value="//rol:Omgevingsnorm"/>
-        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst).'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -2574,7 +2577,7 @@
         <sch:param name="businessRuleGroup" value="$Regelstructuur"/>
         <sch:param name="CONDITION" value="../rol:normwaarde/rol:Normwaarde/rol:kwantitatieveWaarde[1]"/>
         <sch:param name="context" value="//rol:Omgevingsnorm/rol:eenheid"/>
-        <sch:param name="idf" value="../rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -2587,7 +2590,7 @@
         <sch:param name="businessRuleGroup" value="$Vrijetekststructuur"/>
         <sch:param name="CONDITION" value="(vt:idealisatie and vt:locatieaanduiding) or (not(vt:idealisatie) and not(vt:locatieaanduiding))"/>
         <sch:param name="context" value="//vt:Tekstdeel"/>
-        <sch:param name="idf" value="vt:identificatie"></sch:param>
+        <sch:param name="idf" value="string(vt:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2601,7 +2604,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:vindDubbeleTPOD_2120(text())) = 0"/>
         <sch:param name="context" value="//*:identificatie"/>
-        <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="idf" value="string(text())"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen).'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2631,7 +2634,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:vindDubbeleTPOD_2130(string(@xlink:href), ../../l:identificatie/text())[1]) = 0"/>
         <sch:param name="context" value="//l:GeometrieRef"/>
-        <sch:param name="idf" value="../../l:identificatie/text()"></sch:param>
+        <sch:param name="idf" value="string(../../l:identificatie/text())"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie toegestaan).'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -2655,7 +2658,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:checkWorkIdRegelingTPOD_2140(text())) > 0"/>
         <sch:param name="context" value="//ow-manifest:WorkIDRegeling"/>
-        <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="idf" value="string(text())"></sch:param>
         <sch:param name="nameidf" value="'workId'"></sch:param>
         <sch:param name="regel" value="'Eet WorkIDRegeling van het manifest in OW moet verwijzen naar een bestaande FRBRWork in een Regelingversie in OP.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2678,7 +2681,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="string-length(foo:checkDoelIdTPOD_2150(text())) > 0"/>
         <sch:param name="context" value="//ow-manifest:DoelID"/>
-        <sch:param name="idf" value="text()"></sch:param>
+        <sch:param name="idf" value="string(text())"></sch:param>
         <sch:param name="nameidf" value="'id'"></sch:param>
         <sch:param name="regel" value="'Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat aanwezig is in de bijbehorende Regeling in OP.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2701,7 +2704,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="count(ow-manifest:DoelID) = 1"/>
         <sch:param name="context" value="//ow-manifest:Aanlevering"/>
-        <sch:param name="idf" value="ow-manifest:DoelID/text()"></sch:param>
+        <sch:param name="idf" value="string(ow-manifest:DoelID/text())"></sch:param>
         <sch:param name="nameidf" value="'DoelID'"></sch:param>
         <sch:param name="regel" value="'In het manifest-ow mag maar voor 1 doel aangeleverd worden.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2715,7 +2718,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="count(rol:Normwaarde/rol:waardeInRegeltekst) &lt; 2"/>
         <sch:param name="context" value="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde"/>
-        <sch:param name="idf" value="../rol:identificatie"></sch:param>
+        <sch:param name="idf" value="string(../rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Indien de normwaarde van het type &quot;waardeInRegeltekst&quot; is, mag er maar één normwaarde voorkomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
@@ -2733,7 +2736,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
         <sch:param name="CONDITION" value="count($xmlDocuments//rg:Regelingsgebied) = 1"/>
         <sch:param name="context" value="//aanlevering:AanleveringBesluit"/>
-        <sch:param name="idf" value="Regelingsgebied"></sch:param>
+        <sch:param name="idf" value="string(Regelingsgebied)"></sch:param>
         <sch:param name="nameidf" value="'Betreft'"></sch:param>
         <sch:param name="regel" value="'Het Regelingsgebied is niet aangetroffen.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2747,7 +2750,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ow-manifest:objecttype[1]/text() eq 'Geometrie']"/>
-        <sch:param name="idf" value="ow-manifest:naam/text()"></sch:param>
+        <sch:param name="idf" value="string(ow-manifest:naam/text())"></sch:param>
         <sch:param name="nameidf" value="'naam'"></sch:param>
         <sch:param name="regel" value="'In het manifest-OW mag het objecttype Geometrie niet voorkomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         
@@ -2762,7 +2765,7 @@
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
         <sch:param name="CONDITION" value="false()"/>
         <sch:param name="context" value="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ends-with(ow-manifest:naam[1]/text(), '.gml')]"/>
-        <sch:param name="idf" value="ow-manifest:naam/text()"></sch:param>
+        <sch:param name="idf" value="string(ow-manifest:naam/text())"></sch:param>
         <sch:param name="nameidf" value="'naam'"></sch:param>
         <sch:param name="regel" value="'In het manifest-OW mag een bestandsnaam niet eindigen op &quot;.gml&quot;.'"></sch:param>
         <sch:param name="melding" value="''"/>         
