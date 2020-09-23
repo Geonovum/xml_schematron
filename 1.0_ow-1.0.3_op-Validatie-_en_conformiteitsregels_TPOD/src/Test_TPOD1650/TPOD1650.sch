@@ -194,7 +194,7 @@
 	    <sch:param name="context" value="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde/rol:Normwaarde"/>
 	    <sch:param name="idf" value="../../rol:identificatie"></sch:param>
 	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
-	    <sch:param name="regel" value="'Het attribuut &quot;normwaarde&quot; moet bestaan uit één van de drie mogelijke attributen: &quot;kwalitatieveWaarde&quot; òf &quot;kwantitatieveWaarde&quot; òf &quot;waardeInRegeltekst&quot;'"></sch:param>
+	    <sch:param name="regel" value="'Het attribuut \&quot;normwaarde\&quot; moet bestaan uit één van de drie mogelijke attributen: \&quot;kwalitatieveWaarde\&quot; òf \&quot;kwantitatieveWaarde\&quot; òf \&quot;waardeInRegeltekst\&quot;'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 

@@ -184,7 +184,7 @@
 	    <sch:param name="context" value="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid']"/>
 	    <sch:param name="idf" value="../l:identificatie"></sch:param>
 	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
-	    <sch:param name="regel" value="'Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van &quot;meter&quot; gekozen te worden.'"></sch:param>
+	    <sch:param name="regel" value="'Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van \&quot;meter\&quot; gekozen te worden.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     

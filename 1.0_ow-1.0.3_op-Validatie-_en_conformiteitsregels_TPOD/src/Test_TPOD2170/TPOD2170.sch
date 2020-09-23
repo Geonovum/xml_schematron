@@ -184,7 +184,7 @@
 	    <sch:param name="context" value="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde"/>
 	    <sch:param name="idf" value="../rol:identificatie"></sch:param>
 	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
-	    <sch:param name="regel" value="'Indien de normwaarde van het type &quot;waardeInRegeltekst&quot; is, mag er maar één normwaarde voorkomen.'"></sch:param>
+	    <sch:param name="regel" value="'Indien de normwaarde van het type \&quot;waardeInRegeltekst\&quot; is, mag er maar één normwaarde voorkomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 

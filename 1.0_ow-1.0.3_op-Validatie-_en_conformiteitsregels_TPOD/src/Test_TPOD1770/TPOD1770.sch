@@ -184,7 +184,7 @@
 	    <sch:param name="context" value="//ga:Gebiedsaanwijzing"/>
 	    <sch:param name="idf" value="ga:identificatie"></sch:param>
 	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
-	    <sch:param name="regel" value="'Binnen het object &quot;Gebiedsaanwijzing&quot; moeten de waarden van de attributen &quot;groep&quot; (datatype &quot;Gebiedsaanwijzinggroep&quot;) hiërarchisch vallen onder het &quot;type&quot; (datatype &quot;TypeGebiedsaanwijzing&quot;).'"></sch:param>
+	    <sch:param name="regel" value="'Binnen het object \&quot;Gebiedsaanwijzing\&quot; moeten de waarden van de attributen \&quot;groep\&quot; (datatype \&quot;Gebiedsaanwijzinggroep\&quot;) hiërarchisch vallen onder het \&quot;type\&quot; (datatype \&quot;TypeGebiedsaanwijzing\&quot;).'"></sch:param>
         <sch:param name="melding" value="''"/>         
 	    <sch:param name="waarschuwing" value="'Deze test wordt niet uitgevoerd omdat het binnen deze schematron nog niet mogelijk is om waardelijst-hierarchieën op te vragen via een externe API'"/>
     </sch:pattern>

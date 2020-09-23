@@ -184,7 +184,7 @@
         <sch:param name="context" value="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ends-with(ow-manifest:naam[1]/text(), '.gml')]"/>
         <sch:param name="idf" value="ow-manifest:naam/text()"></sch:param>
         <sch:param name="nameidf" value="'naam'"></sch:param>
-        <sch:param name="regel" value="'In het manifest-OW mag een bestandsnaam niet eindigen op &quot;.gml&quot;.'"></sch:param>
+        <sch:param name="regel" value="'In het manifest-OW mag een bestandsnaam niet eindigen op \&quot;.gml\&quot;.'"></sch:param>
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>

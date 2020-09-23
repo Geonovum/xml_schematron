@@ -185,7 +185,7 @@
 	    <sch:param name="context" value="//(rol:Omgevingswaarde|r:Omgevingswaarderegel)"/>
 	    <sch:param name="idf" value="rol:identificatie"></sch:param>
 	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
-	    <sch:param name="regel" value="'De IMOW-objecten &quot;Omgevingswaarde$=&quot; zijn niet van toepassing op de Waterschapsverordening.'"></sch:param>
+	    <sch:param name="regel" value="'De IMOW-objecten \&quot;Omgevingswaarde$=\&quot; zijn niet van toepassing op de Waterschapsverordening.'"></sch:param>
 	    <sch:param name="melding" value="''"/>         
 	    <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>

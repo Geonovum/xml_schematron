@@ -184,7 +184,7 @@
 	    <sch:param name="context" value="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']"/>
 	    <sch:param name="idf" value="ga:identificatie"></sch:param>
 	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
-	    <sch:param name="regel" value="'Binnen het object ‘Gebiedsaanwijzing’ is de waarde &quot;beperkingengebied&quot; van attribuut &quot;type&quot; (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR).'"></sch:param>
+	    <sch:param name="regel" value="'Binnen het object ‘Gebiedsaanwijzing’ is de waarde \&quot;beperkingengebied\&quot; van attribuut \&quot;type\&quot; (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR).'"></sch:param>
         <sch:param name="melding" value="''"/>         
 	    <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>

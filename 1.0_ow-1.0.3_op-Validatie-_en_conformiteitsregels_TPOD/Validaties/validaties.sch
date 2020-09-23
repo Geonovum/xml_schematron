@@ -194,30 +194,6 @@
     <sch:let name="Waterschapsverordening" value="
         $SOORT_REGELING=$WV"/>
     
-    <!-- ============TEMP================= -->
-    
-    <sch:pattern id="TEMP_1">
-        <sch:rule context="/*">
-            <sch:assert test="false()">
-                <sch:value-of select="name()"/>
-                <sch:value-of select="$SOORT_REGELING"/>
-                <sch:value-of select="$xmlDocuments"/>
-            </sch:assert>
-        </sch:rule>
-    </sch:pattern>
-    
-    <sch:pattern id="TEMP_2" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TEMP2'"/>
-        <sch:param name="businessRuleGroup" value="true()"/>
-        <sch:param name="CONDITION" value="false()"/>
-        <sch:param name="context" value="/*"/>
-        <sch:param name="idf" value="string('abc-123d')"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="name()"></sch:param>
-        <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
-    </sch:pattern>
-        
-    
     <!-- ============TPOD_0410================================================================================================================ -->
     
     <sch:pattern id="TPOD_0410" is-a="abstractPatternWarning">
@@ -236,8 +212,8 @@
     <sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
         <sch:param name="code" value="'TPOD0420'"/>
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
+        <sch:param name="CONDITION" value="false()"/>
+        <sch:param name="context" value="//tekst:Hoofdstuk/tekst:Kop[tekst:Label ne 'Hoofdstuk']"/>
         <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
         <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
@@ -1347,7 +1323,7 @@
         <sch:param name="context" value="//tekst:Hoofdstuk[tekst:Kop/tekst:Nummer/text() eq '1']"/>
         <sch:param name="idf" value="string(@eId)"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Hoofdstuk 1 moet een artikel &quot;begripsbepalingen&quot; bevatten.'"></sch:param>
+        <sch:param name="regel" value="'Hoofdstuk 1 moet een artikel \&quot;begripsbepalingen\&quot; bevatten.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
@@ -1440,7 +1416,7 @@
         <sch:param name="context" value="//l:Gebied/l:hoogte[string(da:eenheid) ne 'http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Meter_Eenheid']"/>
         <sch:param name="idf" value="string(../l:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
-        <sch:param name="regel" value="'Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van &quot;meter&quot; gekozen te worden.'"></sch:param>
+        <sch:param name="regel" value="'Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van \&quot;meter\&quot; gekozen te worden.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
@@ -1463,7 +1439,7 @@
         <sch:param name="context" value="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde/rol:Normwaarde"/>
         <sch:param name="idf" value="string(../../rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
-        <sch:param name="regel" value="'Het attribuut &quot;normwaarde&quot; moet bestaan uit één van de drie mogelijke attributen: &quot;kwalitatieveWaarde&quot; òf &quot;kwantitatieveWaarde&quot; òf &quot;waardeInRegeltekst&quot;'"></sch:param>
+        <sch:param name="regel" value="'Het attribuut \&quot;normwaarde\&quot; moet bestaan uit één van de drie mogelijke attributen: \&quot;kwalitatieveWaarde\&quot; òf \&quot;kwantitatieveWaarde\&quot; òf \&quot;waardeInRegeltekst\&quot;'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
@@ -1724,7 +1700,7 @@
         <sch:param name="context" value="//ga:Gebiedsaanwijzing"/>
         <sch:param name="idf" value="string(ga:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
-        <sch:param name="regel" value="'Binnen het object &quot;Gebiedsaanwijzing&quot; moeten de waarden van de attributen &quot;groep&quot; (datatype &quot;Gebiedsaanwijzinggroep&quot;) hiërarchisch vallen onder het &quot;type&quot; (datatype &quot;TypeGebiedsaanwijzing&quot;).'"></sch:param>
+        <sch:param name="regel" value="'Binnen het object \&quot;Gebiedsaanwijzing\&quot; moeten de waarden van de attributen \&quot;groep\&quot; (datatype \&quot;Gebiedsaanwijzinggroep\&quot;) hiërarchisch vallen onder het \&quot;type\&quot; (datatype \&quot;TypeGebiedsaanwijzing\&quot;).'"></sch:param>
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="'Deze test wordt niet uitgevoerd omdat het binnen deze schematron nog niet mogelijk is om waardelijst-hierarchieën op te vragen via een externe API'"/>
     </sch:pattern>
@@ -1751,7 +1727,7 @@
         <sch:param name="context" value="//r:Instructieregel"/>
         <sch:param name="idf" value="string(r:artikelOfLid/r:RegeltekstRef/@xlink:href)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
-        <sch:param name="regel" value="'Het IMOW-object &quot;Instructieregel&quot; is niet van toepassing (voor Omgevingsplan).'"></sch:param>
+        <sch:param name="regel" value="'Het IMOW-object \&quot;Instructieregel\&quot; is niet van toepassing (voor Omgevingsplan).'"></sch:param>
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
@@ -1778,7 +1754,7 @@
         <sch:param name="context" value="//ga:Gebiedsaanwijzing[ga:type/text() eq 'http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Beperkingengebied']"/>
         <sch:param name="idf" value="string(ga:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
-        <sch:param name="regel" value="'Binnen het object ‘Gebiedsaanwijzing’ is de waarde &quot;beperkingengebied&quot; van attribuut &quot;type&quot; (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR).'"></sch:param>
+        <sch:param name="regel" value="'Binnen het object ‘Gebiedsaanwijzing’ is de waarde \&quot;beperkingengebied\&quot; van attribuut \&quot;type\&quot; (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR).'"></sch:param>
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
@@ -1959,7 +1935,7 @@
         <sch:param name="context" value="//(rol:Omgevingswaarde|r:Omgevingswaarderegel)"/>
         <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
-        <sch:param name="regel" value="'De IMOW-objecten &quot;Omgevingswaarde$=&quot; zijn niet van toepassing op de Waterschapsverordening.'"></sch:param>
+        <sch:param name="regel" value="'De IMOW-objecten \&quot;Omgevingswaarde$=\&quot; zijn niet van toepassing op de Waterschapsverordening.'"></sch:param>
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
@@ -2719,7 +2695,7 @@
         <sch:param name="context" value="//(rol:Omgevingswaarde|rol:Omgevingsnorm)/rol:normwaarde"/>
         <sch:param name="idf" value="string(../rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
-        <sch:param name="regel" value="'Indien de normwaarde van het type &quot;waardeInRegeltekst&quot; is, mag er maar één normwaarde voorkomen.'"></sch:param>
+        <sch:param name="regel" value="'Indien de normwaarde van het type \&quot;waardeInRegeltekst\&quot; is, mag er maar één normwaarde voorkomen.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
@@ -2766,7 +2742,7 @@
         <sch:param name="context" value="//ow-manifest:Aanleveringen/ow-manifest:Aanlevering/ow-manifest:Bestand[ends-with(ow-manifest:naam[1]/text(), '.gml')]"/>
         <sch:param name="idf" value="string(ow-manifest:naam/text())"></sch:param>
         <sch:param name="nameidf" value="'naam'"></sch:param>
-        <sch:param name="regel" value="'In het manifest-OW mag een bestandsnaam niet eindigen op &quot;.gml&quot;.'"></sch:param>
+        <sch:param name="regel" value="'In het manifest-OW mag een bestandsnaam niet eindigen op \&quot;.gml\&quot;.'"></sch:param>
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>

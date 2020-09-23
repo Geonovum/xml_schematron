@@ -184,7 +184,7 @@
 	    <sch:param name="context" value="//r:Instructieregel"/>
 	    <sch:param name="idf" value="r:artikelOfLid/r:RegeltekstRef/@xlink:href"></sch:param>
 	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
-	    <sch:param name="regel" value="'Het IMOW-object &quot;Instructieregel&quot; is niet van toepassing (voor Omgevingsplan).'"></sch:param>
+	    <sch:param name="regel" value="'Het IMOW-object \&quot;Instructieregel\&quot; is niet van toepassing (voor Omgevingsplan).'"></sch:param>
         <sch:param name="melding" value="''"/>         
 	    <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>

@@ -184,7 +184,7 @@
         <sch:param name="context" value="//tekst:Hoofdstuk[tekst:Kop/tekst:Nummer/text() eq '1']"/>
         <sch:param name="idf" value="@eId"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Hoofdstuk 1 moet een artikel &quot;begripsbepalingen&quot; bevatten.'"></sch:param>
+        <sch:param name="regel" value="'Hoofdstuk 1 moet een artikel \&quot;begripsbepalingen\&quot; bevatten.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
 
