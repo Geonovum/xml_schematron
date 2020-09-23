@@ -28,7 +28,6 @@
     
     xmlns:ow-manifest="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
     
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
     <sch:ns uri="http://whatever" prefix="foo"/>
@@ -60,8 +59,6 @@
     <sch:ns uri="http://www.logius.nl/digikoppeling/gb/2010/10" prefix="tns"/>
     
     <sch:ns uri="http://www.geostandaarden.nl/bestanden-ow/manifest-ow" prefix="ow-manifest"/>
-    
-    <sch:ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
     
     
     <!-- ====================================== GENERIC ============================================================================= -->
@@ -200,10 +197,12 @@
     <!-- ============TEMP================= -->
     
     <sch:pattern id="TEMP_1">
-        <sch:rule context="/">
-        <sch:assert test="false()">
-            Verwachte foutmelding
-        </sch:assert>
+        <sch:rule context="/*">
+            <sch:assert test="false()">
+                <sch:value-of select="name()"/>
+                <sch:value-of select="$SOORT_REGELING"/>
+                <sch:value-of select="$xmlDocuments"/>
+            </sch:assert>
         </sch:rule>
     </sch:pattern>
     
@@ -211,10 +210,10 @@
         <sch:param name="code" value="'TEMP2'"/>
         <sch:param name="businessRuleGroup" value="true()"/>
         <sch:param name="CONDITION" value="false()"/>
-        <sch:param name="context" value="/"/>
+        <sch:param name="context" value="/*"/>
         <sch:param name="idf" value="string('abc-123d')"></sch:param>
         <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Temp'"></sch:param>
+        <sch:param name="regel" value="name()"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
         

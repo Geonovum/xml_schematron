@@ -45,7 +45,9 @@
                     <xsl:variable name="arrayIndexed" select="ext:node-set($vrtfDoc)/*" xmlns:ext="http://exslt.org/common"/>
                     <xsl:element name="geldtvoor">
                         <xsl:for-each select="$arrayIndexed">
-                            <xsl:element name="soortRegeling"><xsl:value-of select="concat('/join/id/stop',.)"/></xsl:element>
+                            <xsl:element name="Regelingtype">
+                                <xsl:element name="soortRegeling"><xsl:value-of select="concat('/join/id/stop',.)"/></xsl:element>
+                            </xsl:element>
                         </xsl:for-each>
                     </xsl:element>
                     <xsl:element name="geldendeBusinessRules">
