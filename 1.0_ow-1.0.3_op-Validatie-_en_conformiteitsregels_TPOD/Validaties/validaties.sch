@@ -2567,7 +2567,7 @@
         <sch:param name="context" value="//vt:Tekstdeel"/>
         <sch:param name="idf" value="string(vt:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
+        <sch:param name="regel" value="'Idealisatie (bij Tekstdeel) is verplicht als Tekstdeel een locatie heeft.'"></sch:param>
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
