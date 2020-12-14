@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+    xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.4"
+    xsi:schemaLocation="http://www.overheid.nl/imop/def# ../schemas/lvbb/lvbb-stop-aanlevering.xsd">
+    <BesluitVersie>
+        <data:ExpressionIdentificatie>
+            <data:FRBRWork></data:FRBRWork>
+            <data:FRBRExpression></data:FRBRExpression>
+            <data:soortWork></data:soortWork>
+        </data:ExpressionIdentificatie>
+        <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/waterschap/ws0659</eindverantwoordelijke>
+            <maker>/tooi/id/waterschap/ws0659</maker>
+            <officieleTitel>Waterschapsverordening Limburg Proef 1</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_a71dc533</onderwerp>
+            </onderwerpen>
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_b47c724c</rechtsgebied>
+            </rechtsgebieden>
+            <soortProcedure>/join/id/stop/proceduretype_definitief</soortProcedure>
+            <informatieobjectRefs>
+                <informatieobjectRef>/join/id/regdata/ws0659/2019/nl.imow-ws0659.gebied.gml02/nld@2019-01-04</informatieobjectRef>
+            </informatieobjectRefs>
+        </BesluitMetadata>
+        <data:Procedureverloop>
+            <data:bekendOp>2000-01-01</data:bekendOp>
+            <data:procedurestappen>
+                <data:Procedurestap>
+                    <data:soortStap></data:soortStap>
+                    <data:voltooidOp>2000-01-01</data:voltooidOp>
+                </data:Procedurestap>
+            </data:procedurestappen>
+        </data:Procedureverloop>
+        <data:ConsolidatieInformatie></data:ConsolidatieInformatie>
+        <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+            <RegelingOpschrift wId="abc" eId="abc">
+                <Al/>
+            </RegelingOpschrift>
+            <Lichaam wId="aaa" eId="aaa">
+                <Hoofdstuk wId="aaa" eId="aaaa">
+                    <Kop>
+                        <Label>aaa</Label>
+                    </Kop>
+                    <Gereserveerd/>
+                </Hoofdstuk>
+            </Lichaam>
+            <Sluiting wId="aaa" eId="aaa">
+                <Al>aaa</Al>
+            </Sluiting>
+        </BesluitCompact>
+    </BesluitVersie>
+    
+    <RegelingVersieInformatie>
+        <data:ExpressionIdentificatie>
+            <data:FRBRWork/>
+            <data:FRBRExpression/>
+            <data:soortWork/>
+        </data:ExpressionIdentificatie>
+        <data:RegelingVersieMetadata>
+            <data:versienummer>1</data:versienummer>
+        </data:RegelingVersieMetadata>
+        <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/provincie/pv26</eindverantwoordelijke>
+            <maker>/tooi/id/provincie/pv26</maker>
+            <officieleTitel>Omgevingsverordening Utrecht</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_cfc7d5ab</onderwerp>
+            </onderwerpen>
+            <overheidsdomeinen>
+                <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+            </overheidsdomeinen>
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
+            </rechtsgebieden>
+            <afkortingen>
+                <afkorting/>
+            </afkortingen>
+            <grondslagen>
+                <grondslag>
+                    <TekstReferentie>
+                        <uri/>
+                        <label/>
+                        <soortRef>AKN</soortRef>
+                    </TekstReferentie>
+                </grondslag>
+            </grondslagen>
+            <voorkeursafkorting/>
+            <soortRegeling>/join/id/stop/regelingtype_005</soortRegeling>
+        </RegelingMetadata>
+    </RegelingVersieInformatie>
+</AanleveringBesluit>

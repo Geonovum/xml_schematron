@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="21.1">
+    <meta>
+        <filters directoryPatterns="" filePatterns="\Qgithub.xpr\E" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options>
+            <serialized version="21.1" xml:space="preserve">
+                <serializableOrderedMap>
+                    <entry>
+                        <String>catalogs.v5</String>
+                        <String-array>
+                            <String>file:/C:/Users/Default.DESKTOP-NDDI22K/Documents/Geonovum/github/xml_schematron/1.0_ow-1.0.4_op-Validatie-_en_conformiteitsregels_TPOD/src/schemas/lvbb-catalog.xml</String>
+                            <String>file:/C:/Users/Default.DESKTOP-NDDI22K/Documents/Geonovum/github/xml_schematron/1.0_ow-1.0.4_op-Validatie-_en_conformiteitsregels_TPOD/src/schemas/stop/stop-catalog.xml</String>
+                            <String>file:/C:/Users/Default.DESKTOP-NDDI22K/Documents/Geonovum/github/xml_schematron/1.0_ow-1.0.4_op-Validatie-_en_conformiteitsregels_TPOD/src/schemas/extern/extern-catalog.xml</String>
+                        </String-array>
+                    </entry>
+                    <entry>
+                        <String>key.xml.catalog.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>process.namespaces.through.uri.mapping.for.xml.schema</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                </serializableOrderedMap>
+            </serialized>
+        </options>
+    </meta>
+    <projectTree name="schematron.xpr">
+        <folder path="../../"/>
+    </projectTree>
+</project>

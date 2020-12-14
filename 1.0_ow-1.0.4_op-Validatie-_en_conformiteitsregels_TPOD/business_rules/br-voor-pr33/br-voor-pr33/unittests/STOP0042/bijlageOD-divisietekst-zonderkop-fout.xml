@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bijlage eId="cmp_o_1" wId="mnre1034_1-0__cmp_o_1"
+   xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+   <!-- Divisietekst MOET een Kop bevatten in de juiste context -->
+   <Kop>
+      <Opschrift>Bijlage</Opschrift>
+   </Kop>
+   <Divisietekst eId="cmp_o_1__content_o_1" wId="mnre1034_1-0__cmp_o_1__content_o_1">
+      <Inhoud>
+         <Al>Tekst</Al>
+      </Inhoud>
+   </Divisietekst>
+   <Divisietekst eId="cmp_o_1__content_o_2" wId="mnre1034_1-0__cmp_o_1__content_o_2">
+      <Kop>
+         <Opschrift>tweede tekst </Opschrift>
+      </Kop>
+      <Inhoud>
+         <Al>Tekst</Al>
+      </Inhoud>
+   </Divisietekst>
+</Bijlage>

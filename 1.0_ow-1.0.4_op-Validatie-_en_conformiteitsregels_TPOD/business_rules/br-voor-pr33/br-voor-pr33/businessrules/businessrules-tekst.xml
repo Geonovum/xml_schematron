@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessRules schemaversie="@@@VERSIE@@@"
+  xmlns="https://standaarden.overheid.nl/stop/imop/businessrules/">
+  <!-- BR's die nog niet zijn gecontroleerd op code in de schematron of conform
+       de conventies met unit-tests worden vooraf gegaan door commentaar met TODO
+  -->
+  <BusinessRuleGroep>
+    <geldtVoor>
+      <!-- Alle tekstbevattende STOP-modules - generieke tekst validaties -->
+      <Documenttype>
+        <localName>BesluitCompact</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/tekst/</namespace>
+      </Documenttype>
+      <Documenttype>
+        <localName>BesluitKlassiek</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/tekst/</namespace>
+      </Documenttype>
+      <Documenttype>
+        <localName>RegelingKlassiek</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/tekst/</namespace>
+      </Documenttype>
+      <Documenttype>
+        <localName>RegelingCompact</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/tekst/</namespace>
+      </Documenttype>
+      <Documenttype>
+        <localName>RegelingVrijetekst</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/tekst/</namespace>
+      </Documenttype>
+      <Documenttype>
+        <localName>RegelingTijdelijkdeel</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/tekst/</namespace>
+      </Documenttype>
+    </geldtVoor>
+    <geldendeBusinessRules>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0001</code>
+        <ernst>fout</ernst>
+        <regel>Een Lijst van het type 'ongemarkeerd' MAG GEEN lijst-items met nummering of symbolen
+    hebben</regel>
+        <melding>De Lijst met eId <var naam="eId" /> van type 'ongemarkeerd' heeft
+          LiNummer-elementen met een nummering of symbolen, dit is niet toegestaan. Pas het type van
+          de lijst aan of verwijder de LiNummer-elementen.</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:Lijst" />
+          <link href="stop#xsd:tekst:Li" />
+          <link href="stop#xsd:tekst:LiNummer" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0002</code>
+        <ernst>fout</ernst>
+        <regel>Een Lijst van het type 'expliciet' MOET lijst-items hebben met nummering of
+      symbolen</regel>
+        <melding>De Lijst met eId <var naam="eId" /> van type 'expliciet' heeft geen LiNummer
+          elementen met nummering of symbolen, het gebruik van LiNummer is verplicht. Pas het type
+          van de lijst aan of voeg LiNummer's met nummering of symbolen toe aan de
+          lijst-items</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:Lijst" />
+          <link href="stop#xsd:tekst:Li" />
+          <link href="stop#xsd:tekst:LiNummer" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0005</code>
+        <ernst>fout</ernst>
+        <regel>Een alinea MOET content bevatten</regel>
+        <melding>De alinea voor element <var naam="element" /> met id <var naam="eId" /> bevat geen
+          tekst. Verwijder de lege alinea</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:Al" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0006</code>
+        <ernst>fout</ernst>
+        <regel>Een kop MOET content bevatten</regel>
+        <melding>De kop voor element <var naam="element" /> met id <var naam="eId" /> bevat geen
+          tekst. Corrigeer de kop of verplaats de inhoud naar een ander element</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:Kop" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0007</code>
+        <ernst>fout</ernst>
+        <regel>Een referentie naar een noot MOET in de context van een tabel staan</regel>
+        <melding>De referentie naar de noot met id <var naam="ref" /> staat niet in een tabel.
+          Vervang de referentie naar de noot voor de noot waarnaar verwezen wordt</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:table" />
+          <link href="stop#xsd:tekst:Nootref" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0008</code>
+        <ernst>fout</ernst>
+        <regel>Een referentie naar een noot MOET verwijzen naar een noot in dezelfde tabel</regel>
+        <melding>De referentie naar de noot met id <var naam="ref" /> verwijst niet naar een noot in
+          dezelfde tabel <var naam="eId" />. Verplaats de noot waarnaar verwezen wordt naar de tabel
+          of vervang de referentie in de tabel voor de noot waarnaar verwezen wordt</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:table" />
+          <link href="stop#xsd:tekst:Nootref" />
+          <link href="stop#xsd:tekst:Noot" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0009</code>
+        <ernst>waarschuwing</ernst>
+        <regel>Een tabel MAG NIET in een lijst worden opgenomen</regel>
+        <melding>Het lijst-item <var naam="eId" /> bevat een tabel, onderzoek of de tabel buiten de
+          lijst kan worden geplaatst, eventueel door de lijst in delen op te splitsen</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:Lijst" />
+          <link href="stop#xsd:tekst:Li" />
+          <link href="stop#xsd:tekst:table" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0010</code>
+        <ernst>fout</ernst>
+        <regel>Een interne referentie MOET verwijzen naar een in hetzelfde bestand bestaande
+      identifier</regel>
+        <melding>De @ref van element <var naam="element" /> met waarde <var naam="ref" /> verwijst
+          niet naar een bestaande identifier binnen hetzelfde bestand. Controleer de referentie,
+          corrigeer of de referentie of de identificatie van het element waarnaar wordt
+          verwezen</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:IntRef" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0011</code>
+        <ernst>fout</ernst>
+        <regel>Een IntIoRef referentie MOET verwijzen naar @wId van ExtIoRef binnen hetzelfde bestand</regel>
+        <melding>De @ref van element <var naam="element" /> met waarde <var naam="ref" /> verwijst
+          niet naar een wId van een ExtIoRef binnen hetzelfde bestand. Controleer de referentie,
+          corrigeer of de referentie of de wId identificatie van het element waarnaar wordt
+          verwezen</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:IntIoRef" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0012</code>
+        <ernst>fout</ernst>
+        <regel>De in de ExtIoRef weergegeven join-identifier MOET gelijk zijn aan de referentie</regel>
+        <melding>De JOIN identifier van ExtIoRef <var naam="eId" /> in de tekst is niet gelijk aan
+          de als referentie opgenomen JOIN-identificatie. Controleer de gebruikte JOIN-identicatie
+          en plaats de juiste verwijzing als zowel de @ref als de tekst van het element
+          ExtIoRef</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:ExtIoRef" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0013</code>
+        <ernst>fout</ernst>
+        <regel>Een @eId MAG NIET eindigen met een punt '.'</regel>
+        <melding>Het attribuut @eId of een deel van de eId <var naam="eId" /> van element <var
+            naam="element" /> eindigt op een '.', dit is niet toegestaan. Verwijder de laatste
+          punt(en) '.' voor deze eId</melding>
+        <documentatie>
+          <link href="doc:eid_wid" />
+          <link href="stop#xsd:tekst:agAKN" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0014</code>
+        <ernst>fout</ernst>
+        <regel>Een  @wId  MAG NIET eindigen met een '.'</regel>
+        <melding>Het attribuut @wId <var naam="wId" /> van element <var naam="element" /> eindigt op
+          een '.', dit is niet toegestaan. Verwijder de laatste punt '.' van deze wId</melding>
+        <documentatie>
+          <link href="doc:eid_wid" />
+          <link href="stop#xsd:tekst:agAKN" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0043</code>
+        <ernst>fout</ernst>
+        <regel>Een onderdeel binnen een @eId MAG NIET eindigen met een punt '.'</regel>
+        <melding>Het attribuut @eId of een deel van de eId <var naam="eId" /> van element <var
+            naam="element" /> eindigt op '.__', dit is niet toegestaan. Verwijder deze punt '.'
+          binnen deze eId</melding>
+        <documentatie>
+          <link href="doc:eid_wid" />
+          <link href="stop#xsd:tekst:agAKN" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0044</code>
+        <ernst>fout</ernst>
+        <regel>Een onderdeel binnen een @wId MAG NIET eindigen met een '.'</regel>
+        <melding>Het attribuut @wId <var naam="wId" /> van element <var naam="element" /> eindigt op
+          een '.__', dit is niet toegestaan. Verwijder deze punt '.' binnen deze wId</melding>
+        <documentatie>
+          <link href="doc:eid_wid" />
+          <link href="stop#xsd:tekst:agAKN" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0015</code>
+        <ernst>fout</ernst>
+        <regel>Een RegelingTijdelijkdeel MAG GEEN WijzigArtikel hebben</regel>
+        <melding>Het WijzigArtikel <var naam="eId" /> is in een RegelingTijdelijkdeel niet
+          toegestaan. Verwijder het WijzigArtikel of pas dit aan naar een Artikel indien dit
+          mogelijk is</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:RegelingTijdelijkdeel" />
+          <link href="stop#xsd:tekst:WijzigArtikel" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0016</code>
+        <ernst>fout</ernst>
+        <regel>Een RegelingCompact MAG GEEN WijzigArtikel hebben</regel>
+        <melding>Het WijzigArtikel <var naam="eId" /> is in een RegelingCompact niet toegestaan.
+          Verwijder het WijzigArtikel of pas dit aan naar een Artikel indien dit mogelijk
+          is</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:RegelingCompact" />
+          <link href="stop#xsd:tekst:WijzigArtikel" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0017</code>
+        <ernst>fout</ernst>
+        <regel>Een tekstuele mutatie ten behoeve van renvooi MAG NIET buiten een RegelingMutatie
+      voorkomen</regel>
+        <melding>Tekstuele wijziging is niet toegestaan buiten de context van een
+          tekst:RegelingMutatie. element <var naam="context" /> met id "<var naam="eId" />" bevat
+          een <var naam="element" />. Verwijder het element <var naam="element" /></melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:RegelingMutatie" />
+          <link href="stop#xsd:tekst:NieuweTekst" />
+          <link href="stop#xsd:tekst:VerwijderdeTekst" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0018</code>
+        <ernst>fout</ernst>
+        <regel>Een structuur wijziging ten behoeve van renvooi MAG NIET buiten een RegelingMutatie voorkomen</regel>
+        <melding>Een attribuut @wijzigactie is niet toegestaan op element <var naam="element" /> met
+          id "<var naam="eId" />" buiten de context van een tekst:RegelingMutatie. Verwijder het
+          attribuut @wijzigactie</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:RegelingMutatie" />
+          <link href="stop#xsd:tekst:agWijzigactie" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0022</code>
+        <ernst>fout</ernst>
+        <regel>Een eId MOET voldoen aan de AKN-naamgevingsconventie</regel>
+        <melding>De AKN-naamgeving voor eId '<var naam="AKNdeel" />' is niet correct voor element
+            <var naam="element" /> met id '<var naam="wId" />', Dit moet zijn: '<var naam="waarde"
+           />'. Pas de naamgeving voor dit element en alle onderliggende elementen aan. Controleer
+          ook de naamgeving van de bijbehorende wId en onderliggende elementen.</melding>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0023</code>
+        <ernst>fout</ernst>
+        <regel>Een wId MOET voldoen aan de AKN-naamgevingsconventie</regel>
+        <melding>De AKN-naamgeving voor wId '<var naam="AKNdeel" />' is niet correct voor element
+            <var naam="element" /> met id '<var naam="wId" />', Dit moet zijn: '<var naam="waarde"
+           />'. Pas de naamgeving voor dit element en alle onderliggende elementen aan. Controleer
+          ook de naamgeving van de bijbehorende eId en onderliggende elementen.</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0020</code>
+        <ernst>fout</ernst>
+        <regel>Een eId buiten een AKN-component MOET uniek zijn</regel>
+        <melding>[STOP0020] eId ' (...) ' binnen het bereik is niet uniek. Controleer de opbouw van
+          de eId en corrigeer deze</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0029</code>
+        <ernst>fout</ernst>
+        <regel>Een tabel MOET ten minste twee kolommen hebben</regel>
+        <melding>[STOP0029] De tabel met (...) heeft slechts 1 kolom, dit is niet toegestaan. Pas de
+          tabel aan, of plaats de inhoud van de tabel naar een element Kadertekst</melding>
+      </BusinessRule>
+      <BusinessRule>
+        <code>STOP0030</code>
+        <ernst>fout</ernst>
+        <regel>De maatgeving van een kolom MOET voldoen aan de standaard</regel>
+        <melding>[STOP0030] De colspec met @colname: (...) van de tabel met id (...) kent een
+          @colwidth van 1 karakter dat ongelijk is aan *. Corrigeer de @colwidth waarde conform de
+          standaard (bij voorbeeld: '3*') </melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0031</code>
+        <ernst>fout</ernst>
+        <regel>Een kolombreedte MOET tenminste 2 karakters lang zijn</regel>
+        <melding>[STOP0031] De colspec met @colname: (...) van de tabel met id (...) kent een
+          @colwidth zonder een aangegeven eenheid of '*'. Corrigeer de @colwidth waarde conform de
+          standaard (bij voorbeeld: '3*')</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0032</code>
+        <ernst>fout</ernst>
+        <regel>Bij horizontale overspanning MOET de waarde van @nameend groter zijn aan @namest</regel>
+        <melding>[STOP0032] De entry met @namest (...) , van de (...) e rij, van (...) , van de
+          tabel met wId: (...) , kent een @namest groter dan de @nameend. Corrigeer de gegevens voor
+          de overspanning</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0033</code>
+        <ernst>fout</ernst>
+        <regel>Bij horizontale overspanning MOET de eerste cel ook de start van de overspanning
+      zijn</regel>
+        <melding>[STOP0033] De entry met @namest (...) , van de (...) e rij, van (...) , van de
+          tabel met id: (...) , kent een @namest die ongelijk is aan @colname. Controleer en
+          corrigeer deze waarden</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0034</code>
+        <ernst>waarschuwing</ernst>
+        <regel>De verticale overspanning MAG NIET gelden voor alle kolommen in een rij</regel>
+        <melding>[STOP0034] Alle cellen van de (...) e rij van (...) in tabel (...) hebben een
+          @morerows attribuut. </melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0035</code>
+        <ernst>fout</ernst>
+        <regel>De verticale overspanning MAG NIET voor alle cellen in een rij een @morerows met waarde
+      '1' hebben</regel>
+        <melding>[STOP0035] Alle cellen van de (...) e rij van tabel (...) hebben een @morerows
+          attribuut met de waarde '1'. Verwijder de attributen @morerows voor de cellen in de
+          rij</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0036</code>
+        <ernst>fout</ernst>
+        <regel>De referentie van een cel MOET correct verwijzen naar een kolom</regel>
+        <melding>[STOP0036] De entry met @ (...) (...) van de (...) e rij, van (...) , van de tabel
+          met id: (...) , verwijst niet naar een bestaande kolom. Controleer en corrigeer de
+          identifier voor de kolom (@colname)</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0037</code>
+        <ernst>fout</ernst>
+        <regel>Het aantal colspec's MOET gelijk zijn aan het opgegeven aantal kolommen.</regel>
+        <melding>[STOP0037] Het aantal colspec's ( (...) ) voor (...) in tabel (...) komt niet
+          overeen met het aantal kolommen ( (...) ). </melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0038</code>
+        <ernst>fout</ernst>
+        <regel>Het totale aantal cellen MOET overeenkomen met het aantal mogelijke cellen</regel>
+        <melding>[STOP0038] Het aantal cellen ( (...) ) in (...) van tabel " (...) " komt niet
+          overeen met de verwachting (resultaat: (...) van verwachting (...) ). </melding>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0041</code>
+        <ernst>fout</ernst>
+        <regel>Divisietekst MOET een Kop bevatten in de juiste context</regel>
+        <melding>Een Kop voor Divisietekst met eId <var naam="eId" /> is verplicht. Voeg een valide
+          Kop aan deze Divisietekst toe, wijzig Divisietekst naar Inleidendetekst, of wijzig het
+          bovenliggende element Divisie naar Divisietekst</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:Divisietekst" />
+        </documentatie>
+      </BusinessRule>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0042</code>
+        <ernst>waarschuwing</ernst>
+        <regel>Divisietekst MOET een Kop bevatten in de juiste context</regel>
+        <melding>Een Kop voor Divisietekst met eId <var naam="eId" /> is verplicht. Voeg een valide
+          Kop aan deze Divisietekst toe, wijzig Divisietekst naar Inleidendetekst, of wijzig het
+          bovenliggende element Divisie naar Divisietekst</melding>
+        <documentatie>
+          <link href="stop#xsd:tekst:Divisietekst" />
+        </documentatie>
+      </BusinessRule>
+    </geldendeBusinessRules>
+  </BusinessRuleGroep>
+  <!-- Tekstbevattende STOP-modules - Alleen van toepassing voor Besluiten
+       Vooral betrekking hebbend op wijzigingsbepalingen -->
+  <BusinessRuleGroep>
+    <geldtVoor>
+      <Documenttype>
+        <localName>BesluitKlassiek</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/tekst/</namespace>
+      </Documenttype>
+      <Documenttype>
+        <localName>BesluitCompact</localName>
+        <namespace>https://standaarden.overheid.nl/stop/imop/tekst/</namespace>
+      </Documenttype>
+    </geldtVoor>
+    <geldendeBusinessRules>
+      <!--  -->
+      <BusinessRule>
+        <code>STOP0019</code>
+        <ernst>fout</ernst>
+        <regel>Wijziging in een tabel MAG NIET wanneer overspanning wordt gebruikt in de tabel</regel>
+        <melding>De Wijzigacties in de tabel <var naam="eId" /> met horizontale of verticale
+          overspanning kunnen niet worden verwerkt in renvooi. Vervang de volledige tabel</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0021</code>
+        <ernst>fout</ernst>
+        <regel>Een wId buiten een AKN-component MOET uniek zijn</regel>
+        <melding>[STOP0021] wId ' (...) ' binnen het bereik is niet uniek. Controleer de opbouw van
+          de wId en corrigeer deze</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0024</code>
+        <ernst>fout</ernst>
+        <regel>Een initiële regeling MOET een attribuut @componentnaam hebben met correcte
+        naamgeving</regel>
+        <melding>[STOP0024] De initiële regeling (...) heeft geen attribuut @componentnaam, dit
+          attribuut is voor een initiële regeling verplicht. Voeg het attribuut toe bij voorbeeld
+          met als waarde "main"</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0025</code>
+        <ernst>informatief</ernst>
+        <regel>Een initiële regeling MOET een attribuut @wordt hebben met de AKN-identificatie</regel>
+        <melding>[STOP0025] De initiële regeling (...) heeft geen attribuut @wordt, dit attribuut is
+          voor een initiële regeling verplicht. Voeg het attribuut toe met als waarde de juiste AKN
+          versie-identifier</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0026</code>
+        <ernst>fout</ernst>
+        <regel>Een componentnaam binnen een besluit MOET uniek zijn</regel>
+        <melding>[STOP0026] De componentnaam (...) binnen (...) is niet uniek. Pas de componentnaam
+          aan om deze uniek te maken</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0028</code>
+        <ernst>fout</ernst>
+        <regel>Een wId binnen een AKN-component MOET uniek zijn</regel>
+        <melding> [STOP0028] De wId ' (...) ' binnen component (...) moet uniek zijn. Controleer de
+          opbouw van de wId en corrigeer deze</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0027</code>
+        <ernst>fout</ernst>
+        <regel>Een eId binnen een AKN-component MOET uniek zijn</regel>
+        <melding> [STOP0027] De eId ' (...) ' binnen component (...) moet uniek zijn. Controleer de
+          opbouw van de wId en corrigeer deze</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0039</code>
+        <ernst>informatief</ernst>
+        <regel>Een element RegelingInstructies MAG alleen voorkomen in een BesluitKlassiek</regel>
+        <melding>[STOP0039] Het element (...) in element (...) met wId (...) is niet toegestaan. Dit
+          element is uitsluitend toegestaan binnen een BesluitKlassiek om wijzigingen te kunnen
+          bekendmaken voor regelingen die niet volgens de STOP-standaard beschikbaar zijn.</melding>
+      </BusinessRule>
+      <!-- TODO -->
+      <BusinessRule>
+        <code>STOP0040</code>
+        <ernst>informatief</ernst>
+        <regel>Een element RegelingMutatie binnen een WijzigArtikel mag alleen voorkomen in een
+        BesluitKlassiek</regel>
+        <melding>[STOP0040] Het element (...) met wId (...) binnen (...) is niet toegestaan. Neem de
+          RegelingMutatie op in een WijzigBijlage.</melding>
+      </BusinessRule>
+    </geldendeBusinessRules>
+  </BusinessRuleGroep>
+</BusinessRules>

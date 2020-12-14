@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <InformatieObjectVersie  xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/">
+    <ExpressionIdentificatie 
+      xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+      <FRBRWork>/join/id/regdata/gm555/2019/gio993859238</FRBRWork>
+      <FRBRExpression>/join/id/regdata/gm555/2019/gio993859238/nld@2019-12-20;1</FRBRExpression>
+      <soortWork>/join/id/stop/work_007</soortWork>
+    </ExpressionIdentificatie>
+    <InformatieObjectVersieMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+      <heeftBestanden>
+        <heeftBestand>
+          <Bestand>
+            <bestandsnaam>01-BG-Vuurwerkverbodsgebied-v1-Inhoud.gml</bestandsnaam>
+            <hash>3f9ce2e244fea47f3ba109fed5092eab2e62d3417079f15e04bcd4a1c92e2a1e47fea3e9221a1030a527b1e89a051056ffc653fb51d8b53b28b0ae93dd8c62c9</hash>
+          </Bestand>
+        </heeftBestand>
+      </heeftBestanden>
+    </InformatieObjectVersieMetadata>
+  </InformatieObjectVersie>
+
+

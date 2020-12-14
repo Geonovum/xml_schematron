@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessRules xmlns="https://standaarden.overheid.nl/stop/imop/businessrules/"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               schemaversie="1.0.3"
+               xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/businessrules/ https://standaarden.overheid.nl/stop/1.0.3/imop-businessrules.xsd">
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>OP-implementatie-niet-Rijk</groepsnaam>
+      <id>OP-implementatie-niet-Rijk</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_005</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_006</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_007</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_008</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_009</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_010</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_011</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD_0410</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD_0420</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0460</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een Titel moet worden geduid met het label Titel.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0470</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'De nummering van Titels moet beginnen met het nummer van het Hoofdstuk waarin de Titel voorkomt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0480</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Titels moeten oplopend worden genummerd in Arabische cijfers.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0490</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Achter het cijfer van een titelnummer mag geen punt worden opgenomen.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0510</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0520</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Als tussen Hoofdstuk en Afdeling Titel voorkomt dan moet de nummering van Afdelingen beginnen met het samengestelde nummer van de Titel waarin de Afdeling voorkomt, gevolgd door een punt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0530</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Afdelingen moeten oplopend worden genummerd in Arabische cijfers.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0540</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Achter het laatste cijfer van een Afdelingnummer mag geen punt worden opgenomen.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0560</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Als tussen Hoofdstuk en Afdeling geen Titel voorkomt dan moet de nummering van Afdelingen beginnen met het nummer van het Hoofdstuk waarin de Afdeling voorkomt, gevolgd door een punt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0570</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een Paragraaf moet worden geduid met de label Paragraaf of het paragraaf-teken.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0580</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'De nummering van Paragrafen begint met het samengestelde nummer van de Afdeling waarin de Paragraaf voorkomt, gevolgd door een punt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0590</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Paragrafen moeten oplopend worden genummerd in Arabische cijfers.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0600</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Achter het cijfer van een paragraafnummer mag geen punt worden opgenomen.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0620</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een Subparagraaf moet worden geduid met de label Subparagraaf.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0630</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'De nummering van Subparagrafen begint met het samengestelde nummer van de Paragraaf waarin de Subparagraaf voorkomt, gevolgd door een punt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0640</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Subparagrafen moeten oplopend worden genummerd in Arabische cijfers.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0650</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Achter het laatste cijfer van een Subparagraafnummer mag geen punt worden opgenomen.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0670</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een Subsubparagraaf moet worden geduid met de label Subsubparagraaf.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0680</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'De nummering van Subsubparagrafen begint met het samengestelde nummer van de Subparagraaf waarin de Subsubparagraaf voorkomt, gevolgd door een punt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0690</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Subsubparagrafen moeten oplopend worden genummerd in Arabische cijfers.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0700</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Achter het laatste cijfer van een Subsubparagraafnummer mag geen punt worden opgenomen.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0720</code>
+            <ernst>fout</ernst>
+            <regel>'Een Artikel moet worden geduid met de label Artikel.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0730</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0750</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Achter het laatste cijfer van een Artikelnummer mag geen punt worden opgenomen.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0790</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Het eerste lid van ieder artikel krijgt het nummer 1'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0800</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Achter het lidnummer moet een punt worden opgenomen.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0820</code>
+            <ernst>fout</ernst>
+            <regel>'Lijsten mogen in ten hoogste drie niveaus gebruikt worden.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0880</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Hoofdstuk 1 heeft het Opschrift Algemene bepalingen.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0980</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Hoofdstuk 1 moet een artikel "begripsbepalingen" bevatten.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1000</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een Begrip moet bestaan uit één term en één definitie.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1070</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Meet- en rekenbepalingen mogen niet worden genummerd.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2050</code>
+            <ernst>fout</ernst>
+            <regel>'Controleren of het manifest-ow en het manifest bestaan, en de bestanden benoemd in de manifest-bestanden aanwezig zijn.'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>OP-implementatie-GemeentenEnWaterschappen</groepsnaam>
+      <id>OP-implementatie-GemeentenEnWaterschappen</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_005</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD0740</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Artikelnummers moeten oplopend worden genummerd in Arabische cijfers.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0780_a</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0780_b</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0810</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een Lijst wordt altijd voorafgegaan door een inleidende tekst, oftewel de Lijstaanhef.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0830</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'De onderdelen van de Lijst op het eerste niveau moeten worden aangegeven met letters.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0840</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'De onderdelen van de Lijst op het tweede niveau moeten worden aangegeven met Arabische cijfers.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0850</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'De onderdelen van de Lijst op het derde niveau moeten worden aangegeven met Arabische cijfers.'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>OP-implementatie-Omgevingsverordening</groepsnaam>
+      <id>OP-implementatie-Omgevingsverordening</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD0741_a</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'De nummering van Artikelen bevat letters en kan niet middels schematron op geldigheid worden gecheckt. Dit moet handmatig gebeuren.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0741_b</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'De nummering van Artikelen begint met het nummer van het Hoofdstuk waarin het Artikel voorkomt, gevolgd door een punt, daarna oplopende nummering van de Artikelen in Arabische cijfers inclusief indien nodig een letter.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0781_a</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0781_b</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Leden moeten per artikel oplopend genummerd worden in Arabische cijfers (en indien nodig, een letter).'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0831</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Het teken voor een Lijstitem mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0841</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Het teken voor een Lijstitem op het tweede niveau mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0851</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Het teken voor een Lijstitem op het derde niveau mag zelf bepaald worden door het bevoegd gezag, ook als een lijst binnen een lid wordt gebruikt.'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>OW-generiek</groepsnaam>
+      <id>OW-generiek</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_001</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_002</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_005</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_006</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_007</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_008</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_009</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_010</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_011</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD0930_a</code>
+            <ernst>fout</ernst>
+            <regel>'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:28992 (=RD new) dan moeten coördinaten in eenheden van meters worden opgegeven waarbij de waarde maximaal drie decimalen achter de komma mag bevatten.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD0930_b</code>
+            <ernst>fout</ernst>
+            <regel>'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs): EPSG:28992 (=RD) of EPSG:4258 (=ETRS89). Indien gebruik wordt gemaakt van EPSG:4258 (=ETRS89) dan moeten coördinaten in eenheden van decimale graden worden opgegeven waarbij de waarde maximaal acht decimalen achter de komma mag bevatten.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1310</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Locatie heeft het attribuut hoogte, indien het attribuut hoogte gevuld wordt dient hier binnen de eenheid de URI van "meter" gekozen te worden.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1650</code>
+            <ernst>fout</ernst>
+            <regel>'Het attribuut "normwaarde" moet bestaan uit één van de drie mogelijke attributen: "kwalitatieveWaarde" òf "kwantitatieveWaarde" òf "waardeInRegeltekst"'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1760</code>
+            <ernst>fout</ernst>
+            <regel>'Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt, puntengroep, lijn of lijnengroep zijn).'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1770</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Binnen het object "Gebiedsaanwijzing" moeten de waarden van de attributen "groep" (datatype "Gebiedsaanwijzinggroep") hiërarchisch vallen onder het "type" (datatype "TypeGebiedsaanwijzing").'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1880</code>
+            <ernst>fout</ernst>
+            <regel>'De IMOW-objecten "Omgevingswaarde$=" zijn niet van toepassing op de Waterschapsverordening.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1890</code>
+            <ernst>fout</ernst>
+            <regel>'De identificatie van het OwObject moet de naam van het OwObject-element zelf bevatten, en in het geval van een Juridische regel, de term juridischeregel.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1910</code>
+            <ernst>fout</ernst>
+            <regel>'De objecttypen in ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen dienen overeen te komen met de daadwerkelijke objecten in het betreffende Ow-bestand.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1920</code>
+            <ernst>fout</ernst>
+            <regel>'De objecttypen in manifest-ow dienen overeen te komen met de objecttypen in het betreffende Ow-bestand.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1930</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een OwObject in een Gebiedengroep moet een bestaand (ander) OwObject van het type Gebied zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1940</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1950</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een OwObject in een Puntengroep moet een bestaand (ander) OwObject van het type Punt zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1960</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een gmlObject vanuit een Lijn moet een lijn-geometrie zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1970</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een gmlObject vanuit een Punt moet een punt-geometrie zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1980</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een gmlObject vanuit een Gebied moet een gebied-geometrie zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2090</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Alle normwaarden van een norm moeten hetzelfde type zijn (kwalitatief, kwantitatief, of waardeInRegeltekst).'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2120</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere OW-identificatie dient slechts 1 keer voor te komen per aanlevering (c.q. je mag niet binnen dezelfde aanlevering een ID aanmaken, en vervolgens het ID wijzigen).'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2130</code>
+            <ernst>fout</ernst>
+            <regel>'Er zijn meerdere locaties die naar 1 geometrie verwijzen (altijd 1 locatie per geometrie toegestaan).'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2140</code>
+            <ernst>fout</ernst>
+            <regel>'Eet WorkIDRegeling van het manifest in OW moet verwijzen naar een bestaande FRBRWork in een Regelingversie in OP.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2150</code>
+            <ernst>fout</ernst>
+            <regel>'Het DoelID van het manifest-ow moet verwijzen naar een bestaand doel dat aanwezig is in de bijbehorende Regeling in OP.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2160</code>
+            <ernst>fout</ernst>
+            <regel>'In het manifest-ow mag maar voor 1 doel aangeleverd worden.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2170</code>
+            <ernst>fout</ernst>
+            <regel>'Indien de normwaarde van het type "waardeInRegeltekst" is, mag er maar één normwaarde voorkomen.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2190</code>
+            <ernst>fout</ernst>
+            <regel>'In het manifest-OW mag het objecttype Geometrie niet voorkomen.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2200</code>
+            <ernst>fout</ernst>
+            <regel>'In het manifest-OW mag een bestandsnaam niet eindigen op ".gml".'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>OP-implementatie-generiek</groepsnaam>
+      <id>OP-implementatie-generiek</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_001</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_002</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_005</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_006</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_007</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_008</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_009</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_010</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_011</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD0940</code>
+            <ernst>fout</ernst>
+            <regel>'Een geometrie moet zijn opgebouwd middels één coordinate reference system (crs)'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1010</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een Begriplijst moet gesorteerd zijn.'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>OP-implementatie-regelstructuur</groepsnaam>
+      <id>OP-implementatie-regelstructuur</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_001</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_002</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_005</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_009</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD1020</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Begrippen mogen niet worden genummerd.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1700</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Voor elke hiërarchie van nieuwe activiteiten geldt dat de hoogste activiteit in de hiërarchie een bovenliggende activiteit moet hebben die reeds bestaat in de functionele structuur.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1710</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Een bovenliggende activiteit mag niet naar een activiteit verwijzen die lager in de hiërarchie ligt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1730</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Gerelateerde activiteiten moeten bestaan indien er naar verwezen wordt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1750</code>
+            <ernst>fout</ernst>
+            <regel>'Een Activiteit moet een gebied of gebiedengroep betreffen (en mag geen punt, puntengroep, lijn of lijnengroep zijn).'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1780</code>
+            <ernst>fout</ernst>
+            <regel>'Een omgevingsdocument met een artikelstructuur moet bestaan uit tenminste een hoofdstuk en een artikel.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1850</code>
+            <ernst>fout</ernst>
+            <regel>'Alle Juridische regels binnen één Regeltekst moeten van hetzelfde type zijn, respectievelijk; RegelVoorIedereen, Instructieregel of Omgevingswaarderegel.'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>Regelstructuur/OZON</groepsnaam>
+      <id>Regelstructuur_OZON</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_001</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_002</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_005</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_009</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD1740</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Bovenliggende activiteiten moeten bestaan indien er naar verwezen wordt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1870</code>
+            <ernst>fout</ernst>
+            <regel>'Een verwijzing naar ArtikelOfLid moet verwijzen naar een bestaand artikel of lid.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1990a</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Iedere Geometrie heeft minstens een OwObject dat ernaar verwijst.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1990b</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Iedere Regeltekst heeft minstens een OwObject dat ernaar verwijst.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1990c</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Iedere Divisie of Hoofdlijn heeft minstens een OwObject dat ernaar verwijst.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1990d</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Iedere Activiteit-aanduiding heeft minstens een OwObject dat ernaar verwijst.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1990e</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Iedere Locatie-aanduiding heeft minstens een OwObject dat ernaar verwijst.'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>Omgevingsplan</groepsnaam>
+      <id>Omgevingsplan</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD1790</code>
+            <ernst>fout</ernst>
+            <regel>'Het IMOW-object "Instructieregel" is niet van toepassing (voor Omgevingsplan).'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>AMvB/MR</groepsnaam>
+      <id>AMvB_MR</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_001</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_002</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD1830</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Binnen het object ‘Gebiedsaanwijzing’ is de waarde ‘functie’ van attribuut ‘type’ (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR)'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1840</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Binnen het object ‘Gebiedsaanwijzing’ is de waarde "beperkingengebied" van attribuut "type" (datatype TypeGebiedsaanwijzing) niet toegestaan. (voor AMvB/MR).'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>OW-generiek/OZON</groepsnaam>
+      <id>OW-generiek_OZON</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_001</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_002</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_005</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_006</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_007</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_008</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_009</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_010</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_011</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD1860_a</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1860_b</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1860_c</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1860_d</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1860_e</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1860_f</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1860_g</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD1860_h</code>
+            <ernst>fout</ernst>
+            <regel>'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2180</code>
+            <ernst>fout</ernst>
+            <regel>'Het Regelingsgebied is niet aangetroffen.'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>Regelstructuur</groepsnaam>
+      <id>Regelstructuur</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_001</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_002</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_003</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_005</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_009</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD2000</code>
+            <ernst>fout</ernst>
+            <regel>'Het wId van de Regeltekst in OW moet verwijzen naar een bestaande wId van een Artikel of Lid in OP.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2060</code>
+            <ernst>fout</ernst>
+            <regel>'Als er een Regeltekst van een Lid is gemaakt mag er geen Regeltekst meer gemaakt worden van het Artikel dat boven dit Lid hangt.'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2080</code>
+            <ernst>fout</ernst>
+            <regel>'Binnen een instructieregel dient er gekozen te worden tussen InstructieregelInstrument of InstructieregelTaakuitoefening (één van de twee moet voorkomen).'</regel>
+         </BusinessRule>
+         <BusinessRule>
+            <code>TPOD2100</code>
+            <ernst>fout</ernst>
+            <regel>'Eenheid mag alleen voorkomen bij een Norm met de normwaarden van het type kwantitatief.'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>Vrijetekststructuur/OZON</groepsnaam>
+      <id>Vrijetekststructuur_OZON</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_006</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_007</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_008</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_010</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_011</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD2040</code>
+            <ernst>waarschuwing</ernst>
+            <regel>'Het wId van de Divisie in OW moet verwijzen naar een bestaande wId van een Divisie in OP.'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+   <BusinessRuleGroup xmlns="">
+      <groepsnaam>Vrijetekststructuur</groepsnaam>
+      <id>Vrijetekststructuur</id>
+      <geldtvoor>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_006</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_007</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_008</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_010</soortRegeling>
+         </Regelingtype>
+         <Regelingtype>
+            <soortRegeling>/join/id/stop/regelingtype_011</soortRegeling>
+         </Regelingtype>
+      </geldtvoor>
+      <geldendeBusinessRules>
+         <BusinessRule>
+            <code>TPOD2110</code>
+            <ernst>fout</ernst>
+            <regel>'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'</regel>
+         </BusinessRule>
+      </geldendeBusinessRules>
+   </BusinessRuleGroup>
+</BusinessRules>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+    xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaversie="1.0.4">
+    <BesluitVersie>
+        <data:ExpressionIdentificatie>
+            <data:FRBRWork></data:FRBRWork>
+            <data:FRBRExpression></data:FRBRExpression>
+            <data:soortWork></data:soortWork>
+        </data:ExpressionIdentificatie>
+        <data:BesluitMetadata>
+            <data:eindverantwoordelijke></data:eindverantwoordelijke>
+            <data:maker></data:maker>
+            <data:officieleTitel></data:officieleTitel>
+            <data:onderwerpen>
+                <data:onderwerp></data:onderwerp>
+            </data:onderwerpen>
+            <data:soortProcedure></data:soortProcedure>
+        </data:BesluitMetadata>
+        <data:Procedureverloop>
+            <data:bekendOp>2010-01-01</data:bekendOp>
+            <data:procedurestappen>
+                <data:Procedurestap>
+                    <data:soortStap></data:soortStap>
+                    <data:voltooidOp>2010-01-01</data:voltooidOp>
+                </data:Procedurestap>
+            </data:procedurestappen>
+        </data:Procedureverloop>
+        <data:ConsolidatieInformatie></data:ConsolidatieInformatie>
+        <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+            <RegelingOpschrift wId="aaa" eId="aaa">
+                <Al></Al>
+            </RegelingOpschrift>
+            <Lichaam wId="bbb" eId="bbb">
+                <Artikel wId="cccc" eId="cccc">
+                    <Kop><Label>aaa</Label></Kop>
+                </Artikel>
+            </Lichaam>
+        </BesluitCompact>
+    </BesluitVersie>
+    <RegelingVersieInformatie>
+        <data:ExpressionIdentificatie>
+            <data:FRBRWork></data:FRBRWork>
+            <data:FRBRExpression></data:FRBRExpression>
+            <data:soortWork></data:soortWork>
+        </data:ExpressionIdentificatie>
+        <data:RegelingVersieMetadata>
+            <data:versienummer>1</data:versienummer>
+        </data:RegelingVersieMetadata>
+        <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+            <eindverantwoordelijke>/tooi/id/provincie/pv26</eindverantwoordelijke>
+            <maker>/tooi/id/provincie/pv26</maker>
+            <officieleTitel>Omgevingsverordening Utrecht</officieleTitel>
+            <onderwerpen>
+                <onderwerp>/tooi/def/concept/c_cfc7d5ab</onderwerp>
+            </onderwerpen>
+            <overheidsdomeinen>
+                <overheidsdomein>/tooi/def/concept/c_3708ac5e</overheidsdomein>
+            </overheidsdomeinen>
+            <rechtsgebieden>
+                <rechtsgebied>/tooi/def/concept/c_8ad05f6d</rechtsgebied>
+            </rechtsgebieden>
+            <afkortingen>
+                <afkorting/>
+            </afkortingen>
+            <grondslagen>
+                <grondslag>
+                    <TekstReferentie>
+                        <uri/>
+                        <label/>
+                        <soortRef>AKN</soortRef>
+                    </TekstReferentie>
+                </grondslag>
+            </grondslagen>
+            <voorkeursafkorting/>
+            <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+        </RegelingMetadata>
+    </RegelingVersieInformatie>
+</AanleveringBesluit>

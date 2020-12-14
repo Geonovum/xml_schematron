@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AanleveringBesluit xmlns="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+   schemaversie="1.0.4">
+   <BesluitVersie>
+      <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <FRBRWork></FRBRWork>
+         <FRBRExpression></FRBRExpression>
+         <soortWork></soortWork>
+      </ExpressionIdentificatie>
+      <BesluitMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <eindverantwoordelijke></eindverantwoordelijke>
+         <maker></maker>
+         <officieleTitel></officieleTitel>
+         <onderwerpen>
+            <onderwerp></onderwerp>
+         </onderwerpen>
+         <soortProcedure></soortProcedure>
+      </BesluitMetadata>
+      <Procedureverloop xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <bekendOp>2012-01-01</bekendOp>
+         <procedurestappen>
+            <Procedurestap>
+               <soortStap></soortStap>
+               <voltooidOp>2012-01-01</voltooidOp>
+            </Procedurestap>
+         </procedurestappen>
+      </Procedureverloop>
+      <ConsolidatieInformatie xmlns="https://standaarden.overheid.nl/stop/imop/data/"></ConsolidatieInformatie>
+      <BesluitCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <RegelingOpschrift wId="aaa" eId="aaa">
+            <Al></Al>
+         </RegelingOpschrift>
+         <Aanhef wId="bbbb" eId="bbbb">
+            <Al></Al>
+         </Aanhef>
+         <Lichaam wId="cccc" eId="ccccc">
+            <Afdeling wId="ddd" eId="ddd">
+               <Kop><Label>aaa</Label></Kop>
+            </Afdeling>
+         </Lichaam>
+            <WijzigBijlage eId="cmp_A" wId="pv26_1-0__cmp_A">
+               <Kop>
+                  <Label>aaa</Label>
+               </Kop>
+            <RegelingCompact componentnaam="initieel_reg"
+                             wordt="/akn/nl/act/pv26/2020/OVPU001/nld@2020-06-09;1-0">
+               <RegelingOpschrift wId="eeee" eId="eeeee">
+                  <Al></Al>
+               </RegelingOpschrift>
+               <Lichaam eId="body" wId="body">
+                  <Hoofdstuk wId="chp_1" eId="aaa_1">
+                     <Kop>
+                        <Label>Een Hoofdstuk</Label>
+                        <Nummer>1</Nummer>
+                     </Kop>
+                     <Gereserveerd/>
+                  </Hoofdstuk>
+                  <Hoofdstuk wId="chp_11" eId="aaa_2">
+                     <Kop>
+                        <Label>Geen Hoofdstuk</Label>
+                        <Nummer>11</Nummer>
+                     </Kop>
+                     <Gereserveerd/>
+                  </Hoofdstuk>
+                  <Hoofdstuk wId="chp_14" eId="aaa_3">
+                     <Kop>
+                        <Label>Nummer overgeslagen</Label>
+                        <Nummer>14</Nummer>
+                     </Kop>
+                     <Gereserveerd/>
+                  </Hoofdstuk>
+                  <Hoofdstuk wId="chp_AA" eId="aaa_4">
+                     <Kop>
+                        <Label>Nummer geen Arabisch cijfer</Label>
+                        <Nummer>AA</Nummer>
+                     </Kop>
+                     <Gereserveerd/>
+                  </Hoofdstuk>
+                  <Hoofdstuk wId="chp_5" eId="aaa_5">
+                     <Kop>
+                        <Label>Een Hoofdstuk</Label>
+                        <Nummer>5</Nummer>
+                     </Kop>
+                     <Titel wId="chp_5_wrong_titel_label" eId="a2_5_1">
+                        <Kop>
+                           <Label>Titel</Label>
+                           <Nummer>5.1</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Titel>
+                     <Titel wId="chp_5_wrong_titel_label" eId="a2_5_2">
+                        <Kop>
+                           <Label>Titel</Label>
+                           <Nummer>5.2</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Titel>
+                     <Titel wId="chp_5_wrong_titel_label" eId="a2_5_3">
+                        <Kop>
+                           <Label>Titel</Label>
+                           <Nummer>5.4</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Titel>
+                     <Titel wId="chp_5_wrong_titel_label" eId="a2_5_4">
+                        <Kop>
+                           <Label>Titel</Label>
+                           <Nummer>5.4.</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Titel>
+                  </Hoofdstuk>
+                  <Hoofdstuk wId="chp_6" eId="aaa_6">
+                     <Kop>
+                        <Label>Een Hoofdstuk</Label>
+                        <Nummer>5</Nummer>
+                     </Kop>
+                     <Titel wId="chp_6_wrong_titel_label" eId="a2_6_2">
+                        <Kop>
+                           <Label>Fout Titellabel</Label>
+                           <Nummer>6.1</Nummer>
+                        </Kop>
+                        <Gereserveerd/>
+                     </Titel>
+                  </Hoofdstuk>
+               </Lichaam>
+            </RegelingCompact>
+         </WijzigBijlage>
+      </BesluitCompact>
+   </BesluitVersie>
+   <RegelingVersieInformatie>
+      <ExpressionIdentificatie xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <FRBRWork></FRBRWork>
+         <FRBRExpression></FRBRExpression>
+         <soortWork></soortWork>
+      </ExpressionIdentificatie>
+      <RegelingVersieMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <versienummer>1</versienummer>
+      </RegelingVersieMetadata>
+      <RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/">
+         <soortRegeling>/join/id/stop/regelingtype_004</soortRegeling>
+         <afkortingen>
+            <afkorting></afkorting>
+         </afkortingen>
+         <alternatieveTitels>
+            <alternatieveTitel></alternatieveTitel>
+         </alternatieveTitels>
+         <eindverantwoordelijke>aaa</eindverantwoordelijke>
+         <grondslagen>
+            <grondslag>
+               <TekstReferentie>
+                  <uri></uri>
+                  <label></label>
+                  <soortRef>AKN</soortRef>
+               </TekstReferentie>
+            </grondslag>
+         </grondslagen>
+         <heeftCiteertitelInformatie></heeftCiteertitelInformatie>
+         <maker></maker>
+         <officieleTitel></officieleTitel>
+         <onderwerpen>
+            <onderwerp></onderwerp>
+         </onderwerpen>
+      </RegelingMetadata>
+   </RegelingVersieInformatie>
+</AanleveringBesluit>

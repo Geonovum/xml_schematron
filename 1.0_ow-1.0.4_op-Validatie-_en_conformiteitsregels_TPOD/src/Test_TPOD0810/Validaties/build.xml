@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="">
+    
+    <target name="compile">
+        <!-- expand inclusions -->
+        <echo message="Compiling"></echo>
+        <xslt basedir="."  force="true"
+            style="xsl/iso_dsdl_include.xsl" in="validaties.sch"  out="tmp/dsdl_include_1.sch"> 
+            <classpath>
+                <pathelement location="lib/saxon9he.jar"/>
+            </classpath>
+        </xslt>
+        
+        <!-- expand abstract patterns -->
+        <xslt basedir="."  force="true"
+            style="xsl/iso_abstract_expand.xsl" in="tmp/dsdl_include_1.sch"  out="tmp/abstract_expand_2.sch"> 
+            <classpath>
+                <pathelement location="saxon9he.jar"/>
+            </classpath>
+        </xslt>
+        <delete file="tmp/dsdl_include_1.sch"></delete>
+        
+        <!-- compile it -->
+        <xslt basedir="."  force="true"
+            style="xsl/iso_svrl_for_xslt2.xsl" in="tmp/abstract_expand_2.sch"  out="Opdracht/target.xsl"> 
+            <classpath>
+                <pathelement location="lib/saxon9he.jar"/>
+            </classpath>
+        </xslt>
+    </target>
+    <delete file="tmp/abstract_expand_2.sch"></delete>
+    
+    <!-- validate -->
+    <target  name="validate">
+        <echo message="Validating "></echo>
+        
+        <taskdef resource="net/sf/antcontrib/antlib.xml">
+            <classpath>
+                <pathelement location="lib/ant-contrib.jar"/>
+            </classpath>
+        </taskdef>
+
+        <foreach param="file" target="do_validate">
+            <path>
+                <fileset dir="Opdracht" includes="**/*.xml"/>
+            </path>
+        </foreach>
+
+        <foreach param="file" target="do_validate">
+            <path>
+                <fileset dir="Opdracht" includes="**/*.gml"/>
+            </path>
+        </foreach>
+    </target>
+   
+    <target name="do_validate">
+        <echo message="${file}"></echo>
+        <xslt basedir="Opdracht"  force="true"
+            style="target.xsl" in="${file}"  out="xsl/instance.svrlt"> 
+            <classpath>
+                <pathelement location="lib/saxon9he.jar"/>
+            </classpath>
+            
+        </xslt>
+        
+        <xslt basedir="." force="true"
+            style="xsl/error_messages.xsl" in="xsl/instance.svrlt" out="tmp/errors.txt"> 
+            <classpath>
+                <pathelement location="lib/saxon9he.jar"/>
+            </classpath>
+        </xslt>
+        
+        <loadfile property="contents" srcFile="tmp/errors.txt" />
+		<property name="contents" value="Geen fouten gevonden"/>
+        <echo message="${contents}" level="error" />
+        <delete file="tmp/errors.txt"></delete>
+        <delete file="xsl/instance.svrlt"></delete>
+        
+    </target>
+   
+    <target name="cleanup">
+        <delete file="Opdracht/target.xsl"></delete>
+    </target>
+    
+    <target name="all" depends="compile, validate, cleanup"/>
+</project>
