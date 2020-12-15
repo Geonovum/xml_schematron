@@ -64,19 +64,7 @@
     
     <!-- ====================================== GENERIC ============================================================================= -->
 
-	<!-- 
-	<sch:pattern id="TPOD_0420" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'TPOD0420'"/>
-        <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
-        <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0420(.)[1]) = 0"/>
-        <sch:param name="context" value="//tekst:Hoofdstuk"/>
-        <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'Een Hoofdstuk moet worden geduid met het label Hoofdstuk.'"></sch:param>
-    </sch:pattern>
-    -->
-
-    <sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
+	<sch:let name="xmlDocuments" value="collection('.?select=*.xml')"/>
     <sch:let name="gmlDocuments" value="collection('.?select=*.gml')"/>
     <sch:let name="SOORT_REGELING" value="$xmlDocuments//aanlevering:RegelingVersieInformatie/data:RegelingMetadata/data:soortRegeling/text()"/>
     
@@ -190,7 +178,7 @@
     <!-- ============================================================================================================================ -->
 
     <sch:pattern id="TPOD0480" is-a="abstractPatternWarning">
-        <sch:param name="code" value="'++TPOD0480'"/>
+        <sch:param name="code" value="'TPOD0480'"/>
         <sch:param name="businessRuleGroup" value="$OP-implementatie-niet-Rijk"/>
         <sch:param name="CONDITION" value="string-length(foo:volgordeTPOD_0480(.)[1]) = 0"/>
         <sch:param name="context" value="//tekst:Titel"/>

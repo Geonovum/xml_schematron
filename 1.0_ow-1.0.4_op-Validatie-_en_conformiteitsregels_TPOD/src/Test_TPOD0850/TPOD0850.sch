@@ -183,8 +183,8 @@
         <sch:param name="CONDITION" value="string-length(foo:checkDerdeNiveauLijstCijfersTPOD_0850(.)[1]) = 0"/>
         <sch:param name="context" value="//tekst:Lijst"/>
         <sch:param name="idf" value="@eId"></sch:param>
-        <sch:param name="nameidf" value="'eId'"></sch:param>
-        <sch:param name="regel" value="'De onderdelen van de Lijst op het derde niveau moeten worden aangegeven met Arabische cijfers.'"></sch:param>
+        <sch:param name="nameidf" value="concat('bij lijstnummer: ',foo:checkDerdeNiveauLijstCijfersTPOD_0850(.)[1],' op lijst: ')"></sch:param>
+        <sch:param name="regel" value="'De onderdelen van de Lijst op het derde niveau moeten worden aangegeven met Romeinse cijfers.'"></sch:param>
         <sch:param name="melding" value="''"/>         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
@@ -193,8 +193,8 @@
         <xsl:variable name="ancestors" select="count($context/ancestor-or-self::tekst:Lijst)"/>
         <xsl:if test="$ancestors = 3">
             <xsl:for-each select="$context/tekst:Li">
-                <xsl:if test="not(matches(tekst:LiNummer, '[0-9]{1,2}\.')) and not(matches(tekst:LiNummer, '[0-9]{1,2}'))">
-                    <xsl:value-of select="@eId"/>
+                <xsl:if test="not(matches(tekst:LiNummer, '^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\.$')) and not(matches(tekst:LiNummer, '^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$'))">
+                    <xsl:value-of select="tekst:LiNummer"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:if>

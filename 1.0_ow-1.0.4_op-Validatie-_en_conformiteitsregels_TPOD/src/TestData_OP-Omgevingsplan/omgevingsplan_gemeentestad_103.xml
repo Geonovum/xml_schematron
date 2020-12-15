@@ -1049,41 +1049,49 @@
                                     <Lid wId="subchp_2.5__art_2.16" eId="aaa">
                                         <LidNummer>3.</LidNummer>
                                         <Inhoud>
-                                            <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                            <Lijst type="expliciet" wId="aaa" eId="aaa_1">
                                                 <!-- 1 -->
                                                 <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
-                                                <Li wId="aaa" eId="aaa">
+                                                <Li wId="aaa" eId="aaa_1_1">
                                                     <LiNummer>1</LiNummer>
                                                     <Al>Lijst 1</Al>
                                                 </Li>
-                                                <Li wId="aaa" eId="aaa">
+                                                <Li wId="aaa" eId="aaa_1_2">
                                                     <LiNummer>2</LiNummer>
-                                                    <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                                    <Lijst type="expliciet" wId="aaa" eId="aaa_2">
                                                         <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
                                                         <!-- 2 -->
-                                                        <Li wId="aaa" eId="aaa">
+                                                        <Li wId="aaa" eId="aaa_2_1">
                                                             <LiNummer>1</LiNummer>
                                                             <Al>Lijst 2</Al>
                                                         </Li>
-                                                        <Li wId="aaa" eId="aaa">
+                                                        <Li wId="aaa" eId="aaa_2_2">
                                                             <LiNummer>2</LiNummer>
                                                             <Al>bla bla</Al>
                                                         </Li>
-                                                        <Li wId="aaa" eId="aaa">
+                                                        <Li wId="aaa" eId="aaa_2_3">
                                                             <LiNummer>3</LiNummer>
-                                                            <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                                            <Lijst type="expliciet" wId="aaa" eId="aaa_3">
                                                                 <!-- 3 -->
                                                                 <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
-                                                                <Li wId="aaa" eId="aaa">
-                                                                    <LiNummer>a</LiNummer>
+                                                                <Li wId="aaa" eId="aaa_3_1">
+                                                                    <LiNummer>IX</LiNummer>
                                                                     <Al>bla bla bla</Al>
                                                                 </Li>
-                                                                <Li wId="aaa" eId="aaa">
+                                                                <Li wId="aaa" eId="aaa_3_2">
                                                                     <LiNummer>2</LiNummer>
-                                                                    <Lijst type="expliciet" wId="aaa" eId="aaa">
+                                                                    <Al>bla bla bla</Al>
+                                                                </Li>
+                                                                <Li wId="aaa" eId="aaa_3_3">
+                                                                    <LiNummer>IV</LiNummer>
+                                                                    <Al>bla bla bla</Al>
+                                                                </Li>
+                                                                <Li wId="aaa" eId="aaa_3_4">
+                                                                    <LiNummer>4</LiNummer>
+                                                                    <Lijst type="expliciet" wId="aaa" eId="aaa_4">
                                                                         <!-- 4 -->
                                                                         <Lijstaanhef>Lijst met 4 niveaus</Lijstaanhef>
-                                                                        <Li wId="aaa" eId="aaa">
+                                                                        <Li wId="aaa" eId="aaa_4_1">
                                                                             <LiNummer>1</LiNummer>
                                                                             <Al>bla bla bla bla</Al>
                                                                         </Li>
@@ -1093,13 +1101,44 @@
                                                         </Li>
                                                     </Lijst>
                                                 </Li>
+                                                <Li wId="aaa" eId="aaa_1_3">
+                                                    <LiNummer>a</LiNummer>
+                                                    <Al>Lijst 1</Al>
+                                                </Li>
+                                                <Li wId="aaa" eId="aaa_1_4">
+                                                    <LiNummer>aa</LiNummer>
+                                                    <Al>Lijst 1</Al>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Lid>
+                                    <Lid wId="subchp_2.5__art_2.16" eId="aaa">
+                                        <LidNummer>4.</LidNummer>
+                                        <Inhoud>
+                                            <Lijst type="expliciet" wId="aaa" eId="aaaaa_1">
+                                                <Li wId="aaa" eId="aaaaa_1_a">
+                                                    <LiNummer>a</LiNummer>
+                                                    <Al>Lijst 1</Al>
+                                                </Li>
+                                                <Li wId="aaa" eId="aaaaa_1_aa">
+                                                    <LiNummer>aa</LiNummer>
+                                                    <Al>Lijst 1</Al>
+                                                </Li>
+                                                <Li wId="aaa" eId="aaaaa_1_a1">
+                                                    <LiNummer>a1</LiNummer>
+                                                    <Al>Lijst 1</Al>
+                                                </Li>
+                                                <Li wId="aaa" eId="aaaaa_1_4">
+                                                    <LiNummer>4</LiNummer>
+                                                    <Al>Lijst 1</Al>
+                                                </Li>
                                             </Lijst>
                                         </Inhoud>
                                     </Lid>
                                     <Lid wId="subchp_2.5__art_2.16" eId="aaa">
                                         <LidNummer>4a.</LidNummer>
                                         <Inhoud>
-                                            <Lijst type="expliciet" wId="abc" eId="abc">
+                                            <Lijst type="expliciet" wId="abc" eId="abc_4a">
                                                 <!-- 1 -->
                                                 <Lijstaanhef>Lijst met 3 niveaus</Lijstaanhef>
                                                 <Li wId="abc" eId="abc">
