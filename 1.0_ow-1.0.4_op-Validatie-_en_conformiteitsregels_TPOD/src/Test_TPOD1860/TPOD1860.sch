@@ -175,31 +175,72 @@
     <sch:let name="Waterschapsverordening" value="$SOORT_REGELING=$WV"/>
     
     <!-- ============================================================================================================================ -->
-
 	 
-	<sch:pattern id="TPOD1860_a" is-a="abstractPatternError">
-        <sch:param name="code" value="'TPOD1860'"/>
-	    <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
-	    <sch:param name="CONDITION" value="not(r:gerelateerdeRegeltekst/r:RegeltekstRef/@xlink:href eq r:identificatie)"/>
-	    <sch:param name="context" value="//r:Regeltekst"/>
-	    <sch:param name="idf" value="r:identificatie"></sch:param>
-	    <sch:param name="nameidf" value="'identificatie'"></sch:param>
-	    <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
-	    <sch:param name="melding" value="''"/>         
-	    <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
-    </sch:pattern>
-    
-    <sch:pattern id="TPOD1860_b" is-a="abstractPatternError">
+    <sch:pattern id="TPOD1860_a" is-a="abstractPatternError">
         <sch:param name="code" value="'TPOD1860'"/>
         <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
-        <sch:param name="CONDITION" value="not(rol:gerelateerdeActiviteit/rol:ActiviteitRef/@xlink:href eq rol:identificatie)"/>
-        <sch:param name="context" value="//rol:Activiteit"/>
-        <sch:param name="idf" value="rol:identificatie"></sch:param>
+        <sch:param name="CONDITION" value="foo:regeltekstReferencesTPOD_1860(.) = 'true'"/>
+        <sch:param name="context" value="//r:Regeltekst"/>
+        <sch:param name="idf" value="string(r:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
+    
+    <xsl:function name="foo:regeltekstReferencesTPOD_1860">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="resultValue">
+            <xsl:for-each
+                select="$xmlDocuments//r:Regeltekst/r:identificatie">
+                <xsl:variable name="identificatie" select="."/>
+                <xsl:for-each select="$context/r:gerelateerdeRegeltekst/r:RegeltekstRef">
+                    <xsl:if test="@xlink:href eq $identificatie">
+                        <xsl:value-of select="true()"/>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="returnValue">
+            <xsl:if test="string-length($resultValue)>0">
+                <xsl:value-of select="true()"/>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$returnValue"/>
+    </xsl:function>
+    
+    <sch:pattern id="TPOD1860_b" is-a="abstractPatternError">
+        <sch:param name="code" value="'TPOD1860'"/>
+        <sch:param name="businessRuleGroup" value="$OW-generiek_OZON"/>
+        <sch:param name="CONDITION" value="foo:activiteitReferencesTPOD_1860(.) = 'true'"/>
+        <sch:param name="context" value="//rol:Activiteit"/>
+        <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
+        <sch:param name="nameidf" value="'identificatie'"></sch:param>
+        <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
+        <sch:param name="melding" value="''"/>         
+        <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
+    </sch:pattern>
+    
+    <xsl:function name="foo:activiteitReferencesTPOD_1860">
+        <xsl:param name="context" as="node()"/>
+        <xsl:variable name="resultValue">
+            <xsl:for-each
+                select="$xmlDocuments//rol:Activiteit/rol:identificatie">
+                <xsl:variable name="identificatie" select="."/>
+                <xsl:for-each select="$context/rol:gerelateerdeActiviteit/rol:ActiviteitRef">
+                    <xsl:if test="@xlink:href eq $identificatie">
+                        <xsl:value-of select="true()"/>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="returnValue">
+            <xsl:if test="string-length($resultValue)>0">
+                <xsl:value-of select="true()"/>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$returnValue"/>
+    </xsl:function>
     
     <sch:pattern id="TPOD1860_c" is-a="abstractPatternError">
         <sch:param name="code" value="'TPOD1860'"/>
