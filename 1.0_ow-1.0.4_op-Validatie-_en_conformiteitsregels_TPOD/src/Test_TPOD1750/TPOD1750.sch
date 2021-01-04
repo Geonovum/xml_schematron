@@ -187,7 +187,7 @@
 
     <xsl:function name="foo:activiteitenGebiedenTPOD_1750">
         <xsl:param name="ref"/>
-        <xsl:variable name="returnValue">
+        <xsl:variable name="resultValue">
             <xsl:for-each
                 select="$xmlDocuments//r:RegelVoorIedereen/r:activiteitaanduiding[string(rol:ActiviteitRef/@xlink:href) = $ref]/r:ActiviteitLocatieaanduiding/r:locatieaanduiding">
                 <xsl:for-each select="*">
@@ -214,6 +214,11 @@
                     </xsl:choose>
                 </xsl:for-each>
             </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="returnValue">
+            <xsl:if test="string-length($resultValue)>0">
+                <xsl:value-of select="false()"/>
+            </xsl:if>
         </xsl:variable>
         <xsl:value-of select="$returnValue"/>
     </xsl:function>

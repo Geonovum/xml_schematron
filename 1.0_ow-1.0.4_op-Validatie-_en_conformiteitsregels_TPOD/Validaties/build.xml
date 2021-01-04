@@ -79,7 +79,7 @@
     </target>
    
     <target name="cleanup">
-        <delete file="Opdracht/target.xsl"></delete>
+<!--		            <delete file="Opdracht/target.xsl"></delete>-->
     </target>
     
     <target name="all" depends="compile, validate, cleanup"/>

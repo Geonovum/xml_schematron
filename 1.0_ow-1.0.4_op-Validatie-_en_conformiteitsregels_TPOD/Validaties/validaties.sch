@@ -1643,7 +1643,7 @@
     
     <xsl:function name="foo:activiteitenGebiedenTPOD_1750">
         <xsl:param name="ref"/>
-        <xsl:variable name="returnValue">
+        <xsl:variable name="resultValue">
             <xsl:for-each
                 select="$xmlDocuments//r:RegelVoorIedereen/r:activiteitaanduiding[string(rol:ActiviteitRef/@xlink:href) = $ref]/r:ActiviteitLocatieaanduiding/r:locatieaanduiding">
                 <xsl:for-each select="*">
@@ -1671,6 +1671,11 @@
                 </xsl:for-each>
             </xsl:for-each>
         </xsl:variable>
+        <xsl:variable name="returnValue">
+            <xsl:if test="string-length($resultValue)>0">
+                <xsl:value-of select="false()"/>
+            </xsl:if>
+        </xsl:variable>
         <xsl:value-of select="$returnValue"/>
     </xsl:function>
         
@@ -1679,19 +1684,52 @@
     <sch:pattern id="TPOD1760" is-a="abstractPatternError">
         <sch:param name="code" value="'TPOD1760'"/>
         <sch:param name="businessRuleGroup" value="$OW-generiek"/>
-        <sch:param name="CONDITION" value="
-            contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:LocatieRef/@xlink:href, '.gebied.')
-            or
-            contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebiedengroep.') or contains(ga:locatieaanduiding/l:GebiedRef/@xlink:href, '.gebied.')
-            "/>
+        <sch:param name="CONDITION" value="not(foo:gebiedsaanwijzingGebiedenTPOD_1760() = 'false')"/>
         <sch:param name="context" value="//ga:Gebiedsaanwijzing"/>
         <sch:param name="idf" value="string(ga:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
-        <sch:param name="regel" value="'Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt, puntengroep, lijn of lijnengroep zijn).'"></sch:param>
+        <sch:param name="regel" value="'Een gebiedsaanwijzing moet een gebied of gebiedengroep zijn (en mag geen punt, puntengroep, lijn, lijnengroep of anderszins zijn).'"></sch:param>
         <sch:param name="melding" value="''"/>         
         <sch:param name="waarschuwing" value="''"/>
     </sch:pattern>
     
+    <xsl:function name="foo:gebiedsaanwijzingGebiedenTPOD_1760">
+        <xsl:variable name="resultValue">
+            <xsl:for-each
+                select="$xmlDocuments//ga:Gebiedsaanwijzing/ga:locatieaanduiding">
+                <xsl:for-each select="*">
+                    <xsl:choose>
+                        <xsl:when test="./local-name() = 'LocatieRef'">
+                            <xsl:if
+                                test="not(contains(string(@xlink:href), '.gebiedengroep.') or contains(string(@xlink:href), '.gebied.'))">
+                                <xsl:value-of select="false()"/>
+                            </xsl:if>
+                        </xsl:when>
+                        <xsl:when test="./local-name() = 'GebiedengroepRef'">
+                            <xsl:if test="not((contains(string(./@xlink:href), '.gebiedengroep.')))">
+                                <xsl:value-of select="false()"/>
+                            </xsl:if>
+                        </xsl:when>
+                        <xsl:when test="./local-name() = 'GebiedRef'">
+                            <xsl:if test="not((contains(string(./@xlink:href), '.gebied.')))">
+                                <xsl:value-of select="false()"/>
+                            </xsl:if>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="false()"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="returnValue">
+            <xsl:if test="string-length($resultValue)>0">
+                <xsl:value-of select="false()"/>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:value-of select="$returnValue"/>
+    </xsl:function>
+
     <!-- ============TPOD_1770================================================================================================================ -->
     
     <sch:pattern id="TPOD1770" is-a="abstractPatternWarning">
