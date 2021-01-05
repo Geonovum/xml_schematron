@@ -156,6 +156,7 @@
 					<r:identificatie>nl.imow-gm0037.regeltekst.2019000010</r:identificatie>
 					<r:gerelateerdeRegeltekst>
 						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002"/>
+						<r:RegeltekstRef xlink:href="nl.imow-gm0037.regeltekst.201900002FOUT"/>
 					</r:gerelateerdeRegeltekst>
 				</r:Regeltekst>
 			</ow-dc:owObject>

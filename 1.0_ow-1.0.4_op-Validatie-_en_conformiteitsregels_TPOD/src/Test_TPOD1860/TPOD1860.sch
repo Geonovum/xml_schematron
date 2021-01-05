@@ -184,27 +184,47 @@
         <sch:param name="idf" value="string(r:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
-        <sch:param name="melding" value="''"/>         
+        <sch:param name="melding" value="': een of meer gerelateerde regelteksten verwijzen naar zichzelf of een niet bestaande regeltekst.'"/>         
         <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
     
     <xsl:function name="foo:regeltekstReferencesTPOD_1860">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="resultValue">
-            <xsl:for-each
-                select="$xmlDocuments//r:Regeltekst/r:identificatie">
-                <xsl:variable name="identificatie" select="."/>
-                <xsl:for-each select="$context/r:gerelateerdeRegeltekst/r:RegeltekstRef">
-                    <xsl:if test="@xlink:href eq $identificatie">
-                        <xsl:value-of select="true()"/>
-                    </xsl:if>
+        <xsl:variable name="grandResultValue">
+            <xsl:for-each select="$context/r:gerelateerdeRegeltekst/r:RegeltekstRef">
+                <xsl:variable name="resultValue">
+                <xsl:variable name="href" select="@xlink:href"/>
+                <xsl:for-each select="$xmlDocuments//r:Regeltekst/r:identificatie">
+                    <xsl:variable name="identificatie" select="."/>
+                    <xsl:choose>
+                        <xsl:when test="($href eq $identificatie) and not($href eq $context/r:identificatie)">
+                            <xsl:value-of select="true()"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="false()"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </xsl:for-each>
+                </xsl:variable>
+                <xsl:choose>
+                    <xsl:when test="contains($resultValue,'true')">
+                        <xsl:value-of select="true()"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="false()"/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:for-each>
         </xsl:variable>
         <xsl:variable name="returnValue">
-            <xsl:if test="string-length($resultValue)>0">
-                <xsl:value-of select="true()"/>
-            </xsl:if>
+            <xsl:choose>
+                <xsl:when test="contains($grandResultValue,'false')">
+                    <xsl:value-of select="false()"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="true()"/>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:variable>
         <xsl:value-of select="$returnValue"/>
     </xsl:function>
@@ -217,27 +237,47 @@
         <sch:param name="idf" value="string(rol:identificatie)"></sch:param>
         <sch:param name="nameidf" value="'identificatie'"></sch:param>
         <sch:param name="regel" value="'Iedere verwijzing naar een ander OwObject moet een bestaand (ander) OwObject zijn.'"></sch:param>
-        <sch:param name="melding" value="''"/>         
+        <sch:param name="melding" value="': een of meer gerelateerde activiteiten verwijzen naar zichzelf of een niet bestaande activiteit.'"/>         
         <sch:param name="waarschuwing" value="'Deze test is op de aangeleverde dataset uitgevoerd, verwijzingen naar DSO data zijn niet onderzocht.'"/>
     </sch:pattern>
     
     <xsl:function name="foo:activiteitReferencesTPOD_1860">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="resultValue">
-            <xsl:for-each
-                select="$xmlDocuments//rol:Activiteit/rol:identificatie">
-                <xsl:variable name="identificatie" select="."/>
-                <xsl:for-each select="$context/rol:gerelateerdeActiviteit/rol:ActiviteitRef">
-                    <xsl:if test="@xlink:href eq $identificatie">
+        <xsl:variable name="grandResultValue">
+            <xsl:for-each select="$context/rol:gerelateerdeActiviteit/rol:ActiviteitRef">
+                <xsl:variable name="resultValue">
+                    <xsl:variable name="href" select="@xlink:href"/>
+                    <xsl:for-each select="$xmlDocuments//rol:Activiteit/rol:identificatie">
+                        <xsl:variable name="identificatie" select="."/>
+                        <xsl:choose>
+                            <xsl:when test="($href eq $identificatie) and not($href eq $context/rol:identificatie)">
+                                <xsl:value-of select="true()"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="false()"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>
+                </xsl:variable>
+                <xsl:choose>
+                    <xsl:when test="contains($resultValue,'true')">
                         <xsl:value-of select="true()"/>
-                    </xsl:if>
-                </xsl:for-each>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="false()"/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:for-each>
         </xsl:variable>
         <xsl:variable name="returnValue">
-            <xsl:if test="string-length($resultValue)>0">
-                <xsl:value-of select="true()"/>
-            </xsl:if>
+            <xsl:choose>
+                <xsl:when test="contains($grandResultValue,'false')">
+                    <xsl:value-of select="false()"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="true()"/>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:variable>
         <xsl:value-of select="$returnValue"/>
     </xsl:function>
