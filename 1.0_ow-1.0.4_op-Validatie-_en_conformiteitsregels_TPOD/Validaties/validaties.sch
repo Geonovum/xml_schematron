@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*******************************************************************************
+* File:                  validaties.sch
+* Versie:                           v1.0.6
+* Opgeleverd:   PI16 Sprint 6 05-01-2021
+* Auteur:                          Geonovum 2021
+*
+* Info:
+* Schematron Validation Document gebaseerd op IMOP v1.0.4 en IMOW v1.0.3
+*
+* History:
+* v0.98.3-kern                11-03-2020        Bert Verhees     Initial version.
+* v0.98.3.1-kern             25-03-2020        Bert Verhees     Doorontwikkeling.
+* v0.98.3.2-kern             03-04-2020        Bert Verhees     Doorontwikkeling.
+* v0.98.3.3-kern             20-04-2020        Bert Verhees     Doorontwikkeling.
+* v1.0.0              01-06-2020        Bert Verhees     Doorontwikkeling.
+* v1.0.1              29-06-2020        Bert Verhees     Doorontwikkeling.
+* v1.0.2              27-07-2020        Bert Verhees     Doorontwikkeling.
+* v1.0.3              07-09-2020        Bert Verhees     Doorontwikkeling.
+* v1.0.4              21-09-2020        Bert Verhees     Doorontwikkeling.
+* v1.0.5              16-12-2020        Bert Verhees     Doorontwikkeling.
+* v1.0.6              05-01-2021        Bert Verhees     Doorontwikkeling
+*
+* ******************************************************************************/
+
+Opmerkingen / hints: Document is in ontwikkeling en aangepast op IMOP v1.0.4 en IMOW v1.0.3
+
+-->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
     xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand"
     xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
