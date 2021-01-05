@@ -211,13 +211,13 @@
     
     <xsl:function name="foo:bestandenTPOD_2050">
         <xsl:variable name="bestandsnaam">
-        <xsl:for-each select="$xmlDocuments/lvbb:manifest/lvbb:bestand">
-            <xsl:if test="not(document(lvbb:bestandsnaam/text()))">
-                <xsl:value-of select="concat(lvbb:bestandsnaam/text(), ', ')"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:variable>
-     <xsl:value-of select="concat('Volgende bestanden uit manifest.xml zijn niet aangetroffen: ',$bestandsnaam)"/>
+            <xsl:for-each select="$xmlDocuments/lvbb:manifest/lvbb:bestand">
+                <xsl:if test="((lvbb:contentType='application/xml')or(lvbb:contentType='application/gml+xml')) and (not(unparsed-text-available(lvbb:bestandsnaam/text())))">
+                    <xsl:value-of select="concat(lvbb:bestandsnaam/text(), ', ')" />
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="concat('Volgende tekst-bestanden uit manifest.xml zijn niet aangetroffen: ',$bestandsnaam)"/>
     </xsl:function>
     
     
