@@ -2173,9 +2173,11 @@ Opmerkingen / hints: Document is in ontwikkeling en aangepast op IMOP v1.0.4 en 
                         </xsl:if>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:if
-                            test="not(document($naam)//ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen[sl:objectType = $objecttype])">
-                            <xsl:value-of select="concat($naam, ': ', ., ', ')"/>
+                        <xsl:if test="unparsed-text-available($naam)">
+                            <xsl:if
+                                test="not(document($naam)//ow-dc:owBestand/sl:standBestand/sl:inhoud/sl:objectTypen[sl:objectType = $objecttype])">
+                                <xsl:value-of select="concat($naam, ': ', ., ', ')"/>
+                            </xsl:if>
                         </xsl:if>
                     </xsl:otherwise>
                 </xsl:choose>
