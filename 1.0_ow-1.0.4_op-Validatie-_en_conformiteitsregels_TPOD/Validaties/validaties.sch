@@ -2609,7 +2609,9 @@ Opmerkingen / hints: Document is in ontwikkeling en aangepast op IMOP v1.0.4 en 
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
-        <xsl:value-of select="concat('Volgende tekst-bestanden uit manifest.xml zijn niet aangetroffen: ',$bestandsnaam)"/>
+        <xsl:if test="not(normalize-space($bestandsnaam)='')">
+            <xsl:value-of select="concat('Volgende tekst-bestanden uit manifest.xml zijn niet aangetroffen: ',$bestandsnaam)"/>
+        </xsl:if>
     </xsl:function>
     
     <!-- ============TPOD_2060================================================================================================================ -->
